@@ -1,0 +1,1 @@
+mode de passation (contract et empty) existe dans BD migration mais n'existe pas dans paramettrage

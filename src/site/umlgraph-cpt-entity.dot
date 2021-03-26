@@ -1,0 +1,250 @@
+digraph G {
+	fontsize = 10
+	node [
+		fontsize = 10
+		fontname="arial"
+		shape=plaintext
+	]
+
+	edge [
+		fontsize = 10
+	]
+subgraph clustercpt {
+	label = "cpt"  
+	CptDepDecision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CptDepDecision </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cddStatus : String </td></tr>
+	<tr><td align="left"> + cddDate : Date </td></tr>
+	<tr><td align="left"> + cddRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	CptDepMemo [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CptDepMemo </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdmMemo : String </td></tr>
+	<tr><td align="left"> + cdmUser : String </td></tr>
+	<tr><td align="left"> + cdmDate : Date </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	CptDepState [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CptDepState </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdsStatus : String </td></tr>
+	<tr><td align="left"> + cdsDate : Date </td></tr>
+	<tr><td align="left"> + cdsRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	CptDepense [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CptDepense </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdpConcurent : String </td></tr>
+	<tr><td align="left"> + cdpClotStatus : String </td></tr>
+	<tr><td align="left"> + cdpNature : String </td></tr>
+	<tr><td align="left"> + cdpRc : String </td></tr>
+	<tr><td align="left"> + cdpIce : String </td></tr>
+	<tr><td align="left"> + cdpIf : String </td></tr>
+	<tr><td align="left"> + cdpCnss : String </td></tr>
+	<tr><td align="left"> + cdpRib : String </td></tr>
+	<tr><td align="left"> + cdpPdf : String </td></tr>
+	<tr><td align="left"> + cdpCurStatusDate : Date </td></tr>
+	<tr><td align="left"> + cdpCurDecision : String </td></tr>
+	<tr><td align="left"> + cdpStatus : String </td></tr>
+	<tr><td align="left"> + cdpDateRem : Date </td></tr>
+	<tr><td align="left"> + cdpDateEnr : Date </td></tr>
+	<tr><td align="left"> + cdpNumEnr : String </td></tr>
+	<tr><td align="left"> + cdpDateEng : Date </td></tr>
+	<tr><td align="left"> + cdpSignEng : String </td></tr>
+	<tr><td align="left"> + cdpDateApp : Date </td></tr>
+	<tr><td align="left"> + cdpSignApp : String </td></tr>
+	<tr><td align="left"> + cdpInterMor : BigDecimal </td></tr>
+	<tr><td align="left"> + cdpRevPrix : BigDecimal </td></tr>
+	<tr><td align="left"> + cdpRevPrixDate : Date </td></tr>
+	<tr><td align="left"> + cdpNumGid : String </td></tr>
+	<tr><td align="left"> + cdpNumDep : String </td></tr>
+	<tr><td align="left"> + cdpNumVisa : String </td></tr>
+	<tr><td align="left"> + cdpDateVisa : Date </td></tr>
+	<tr><td align="left"> + cdpNumNoti : String </td></tr>
+	<tr><td align="left"> + cdpDateNoti : Date </td></tr>
+	<tr><td align="left"> + cdpNumLett : String </td></tr>
+	<tr><td align="left"> + cdpDateLett : Date </td></tr>
+	<tr><td align="left"> + cdpCurStatus : String </td></tr>
+	<tr><td align="left"> + cdpDatDem : String </td></tr>
+	<tr><td align="left"> + cdpDatOuvPli : String </td></tr>
+	<tr><td align="left"> + cdpMpr : BigDecimal </td></tr>
+	<tr><td align="left"> + cdpCp : BigDecimal </td></tr>
+	<tr><td align="left"> + cdpCe : BigDecimal </td></tr>
+	<tr><td align="left"> + cdpMc : BigDecimal </td></tr>
+	<tr><td align="left"> + cdpMom : BigDecimal </td></tr>
+	<tr><td align="left"> + cdpFluTau : String </td></tr>
+	<tr><td align="left"> + cdpDepCon : String </td></tr>
+	<tr><td align="left"> + cdpNrDep : String </td></tr>
+	<tr><td align="left"> + cdpPres : String </td></tr>
+	<tr><td align="left"> + cdpNrCon : String </td></tr>
+	<tr><td align="left"> + cdpNrDemAch : String </td></tr>
+	<tr><td align="left"> + cdpDateRevision : Date </td></tr>
+	<tr><td align="left"> + cdpNaturPrix : String </td></tr>
+	<tr><td align="left"> + cdpRevisionPrix : BigDecimal </td></tr>
+	<tr><td align="left"> + cdpDateOrderService : Date </td></tr>
+	<tr><td align="left"> + cdpId : String </td></tr>
+	<tr><td align="left"> + cdpAchId : AchAchat </td></tr>
+	<tr><td align="left"> + cdpAloId : AchAchatLot </td></tr>
+	<tr><td align="left"> + cdpBenId : ParTypeBenif </td></tr>
+	<tr><td align="left"> + cdpOrdId : ParOrdonateur </td></tr>
+	<tr><td align="left"> + cdpEntId : ParEntity </td></tr>
+	<tr><td align="left"> + cdpCurAenId : AchEntity </td></tr>
+	<tr><td align="left"> + cdpPexId : ParExercice </td></tr>
+	<tr><td align="left"> + cdpBdtId : PlaBudgetType </td></tr>
+	<tr><td align="left"> + cdpParId : BudParagraphe </td></tr>
+	<tr><td align="left"> + cdpLinId : BudLigne </td></tr>
+	<tr><td align="left"> + cdpArtId : BudArticle </td></tr>
+	<tr><td align="left"> + cprPrcId : PlaClassPrestation </td></tr>
+	<tr><td align="left"> + cdpPrtId : PlaTypePrestation </td></tr>
+	<tr><td align="left"> + cdpAmpId : AchModePass </td></tr>
+	<tr><td align="left"> + cdpAtdId : AchTypeDepense </td></tr>
+	<tr><td align="left"> + cdpAstId : AchSstypeDepense </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	CptEntity [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CptEntity </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cenName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	CptOrdreService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CptOrdreService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cosName : String </td></tr>
+	<tr><td align="left"> + cosCode : String </td></tr>
+	<tr><td align="left"> + cosDate : Date </td></tr>
+	<tr><td align="left"> + cosDateEff : Date </td></tr>
+	<tr><td align="left"> + cosRem : String </td></tr>
+	<tr><td align="left"> + cosPhaId : AchDelaiPhase </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	CptRpDecision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CptRpDecision </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cddStatus : String </td></tr>
+	<tr><td align="left"> + cddDate : Date </td></tr>
+	<tr><td align="left"> + cddRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	CptRpState [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CptRpState </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdsStatus : String </td></tr>
+	<tr><td align="left"> + cdsDate : Date </td></tr>
+	<tr><td align="left"> + cdsRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	CptTypeOrdre [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CptTypeOrdre </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ctoCode : String </td></tr>
+	<tr><td align="left"> + ctoName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+edge [arrowhead = "empty"]
+edge [arrowhead = "none"]
+
+
+edge [arrowtail="none" arrowhead = "none" headlabel="cddCdpId" taillabel="0..n idCdpCddId" labeldistance="2.0" labelangle="-30"]
+
+CptDepDecision -> CptDepense
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cddCenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepDecision -> CptEntity
+
+edge [arrowtail="none" arrowhead = "none" headlabel="cdmCdpId" taillabel="0..n idCdpCdmId" labeldistance="2.0" labelangle="-30"]
+
+CptDepMemo -> CptDepense
+
+edge [arrowtail="none" arrowhead = "none" headlabel="cdsCdpId" taillabel="0..n idCdpCdsId" labeldistance="2.0" labelangle="-30"]
+
+CptDepState -> CptDepense
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdsCenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepState -> CptEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdpCurCenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> CptEntity
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCdpCosId" taillabel="cosCdpId" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> CptOrdreService
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdpTyoId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> CptTypeOrdre
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cosCtoId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptOrdreService -> CptTypeOrdre
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cddCenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptRpDecision -> CptEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdsCenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptRpState -> CptEntity
+}

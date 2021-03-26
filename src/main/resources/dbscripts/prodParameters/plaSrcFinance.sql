@@ -1,0 +1,18 @@
+INSERT INTO pla_src_finance (srf_id, srf_code, srf_name, srf_desc, "version")
+VALUES
+(1, '1', 'FINANCEMENT DE L’ETAT', 'FINANCEMENT DE L’ETAT', 0),
+(2, '2', 'FINANCEMENT DES HABOUS', 'FINANCEMENT DES HABOUS', 0),
+(3, '3', 'FINANCEMENT DES BIENFAITEURS', 'FINANCEMENT DES BIENFAITEURS', 0),
+(4, '4', 'FINANCEMENT ROYAL', 'FINANCEMENT ROYAL', 0);
+
+
+
+
+
+
+
+
+
+
+
+

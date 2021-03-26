@@ -1,0 +1,2550 @@
+import "classpath:/model-comPar.btdesign"
+import "classpath:/model-par.btdesign"
+import "classpath:/model-pla.btdesign"
+import "classpath:/model-ach.btdesign"
+import "classpath:/model-bud.btdesign"
+import "classpath:/model-tec.btdesign"
+
+ApplicationPart Ach{
+	Module ach{
+		
+		Entity AchAchat{
+			databaseTable="ach_achat"
+			hint="idSequence=achtahca_hca_X,noJsonIgnore=version"
+			
+			Long id    databaseColumn="ach_id" 
+			String achNature length="28" nullable databaseColumn="ach_nature" hint="visible=true" 
+			String achCode length="24" nullable databaseColumn="ach_code"  hint="visible=true,toString" 
+			String achName length="700" nullable databaseColumn="ach_name"  hint="visible=true,toString" 
+			Date achDemDate  nullable databaseColumn="ach_dem_date"  hint="visible=true" 
+			String achIsAlloti length="1"  databaseColumn="ach_is_alloti" 
+			Integer achLotNbr  nullable databaseColumn="ach_lot_nbr" 
+			Date achDateDebut  nullable databaseColumn="ach_date_debut" 
+			Date achDateFin  nullable databaseColumn="ach_date_fin" 
+			Integer achDelaiExe  nullable databaseColumn="ach_delai_exe" 
+			String achDelaiUnit length="1" nullable databaseColumn="ach_delai_unit" 
+			String achVisite length="1" nullable databaseColumn="ach_visite" 
+			String achLieuVisite length="64" nullable databaseColumn="ach_lieu_visite" 
+			Date achDateVisite  nullable databaseColumn="ach_date_visite" 
+			
+			Date achEnvTrait  nullable databaseColumn="ach_env_trait" 
+			String achCurStatus length="1" nullable databaseColumn="ach_cur_status"  hint="visible=true" 
+			Date achCurStatusDate  nullable databaseColumn="ach_cur_status_date" hint="visible=true" 
+			String achCurDecision length="1" nullable databaseColumn="ach_cur_decision" 	hint="visible=true" 	
+			String achNumAo length="64" nullable databaseColumn="ach_num_ao" 
+			Date achDateOuv  nullable databaseColumn="ach_date_ouv" 
+			String achLieuOuv length="128" nullable databaseColumn="ach_lieu_ouv" 
+			String achLieuRetDos length="128" nullable databaseColumn="ach_lieu_ret_dos" 
+			String achLieuDepPlis length="128" nullable databaseColumn="ach_lieu_dep_plis" 
+			String achLieuDepEch length="128" nullable databaseColumn="ach_lieu_dep_ech" 
+			Date achDateDep  nullable databaseColumn="ach_date_dep" 
+			String achPubUrl1 length="128" nullable databaseColumn="ach_pub_url1" 
+			String achPubUrl2 length="128" nullable databaseColumn="ach_pub_url2" 
+			BigDecimal achPrixAquis  nullable databaseColumn="ach_prix_aquis" 
+			String achIsQc length="1" nullable databaseColumn="ach_is_qc" 
+			String achNumRc length="32" nullable databaseColumn="ach_num_rc" 
+			String achTrvSecteur length="32" nullable databaseColumn="ach_trv_secteur" 
+			String achTrvClasse length="32" nullable databaseColumn="ach_trv_classe" 
+			String achTrvQualif length="32" nullable databaseColumn="ach_trv_qualif" 
+			String achGeoActivite length="32" nullable databaseColumn="ach_geo_activite" 
+			String achGeoQualif length="32" nullable databaseColumn="ach_geo_qualif" 
+			String achGeoCategorie length="32" nullable databaseColumn="ach_geo_categorie"
+			BigDecimal achPlafond  nullable databaseColumn="ach_plafond"
+			BigDecimal achMonPenJou  nullable databaseColumn="ach_mon_pen_jou"
+			String achMethode length="1" nullable databaseColumn="ach_methode"
+			String achNumCon length="32" nullable databaseColumn="ach_num_con"  hint="visible=true" 
+			String achEnvPub length="1" nullable databaseColumn="ach_env_pub"
+
+			BigDecimal achArchTaux  nullable databaseColumn="ach_arch_taux"
+			BigDecimal achMontEstimation  nullable databaseColumn="ach_mont_estimation"
+			BigDecimal achTVA  nullable databaseColumn="ach_tva"
+			BigDecimal achRevisionPrix  nullable databaseColumn="ach_revision_prix"
+			
+			String achNaturePrix length="1" nullable databaseColumn="ach_nature_prix"			
+			String achAvecPenalite length="1" nullable databaseColumn="ach_avec_penalite"
+			String achRetenueGaran length="1" nullable databaseColumn="ach_retenue_garan"
+			BigDecimal achMontCautProv  nullable databaseColumn="ach_mont_caut_prov"
+			String achDeductibleDecompte length="1" nullable databaseColumn="ach_deductible_decompte"
+			String achTypeBord length="2" nullable databaseColumn="ach_type_bord"
+			
+			String achIndicSupp length="1" nullable databaseColumn="ach_indic_supp"
+			String achInitiPar length="300" nullable databaseColumn="ach_initi_par"
+			
+			String achAvancement length="1" nullable databaseColumn="ach_avancement"
+			BigDecimal achMontAvancement  nullable databaseColumn="ach_mont_avancement"
+			
+			String achHeureOuv length="28" nullable databaseColumn="ach_heure_ouv" 
+			String achHeureVisite length="28"  nullable databaseColumn="ach_heure_visite" 
+			Date achDateDepEch nullable databaseColumn="ach_date_dep_ech" 
+			String achContAgreAssu length="1" nullable databaseColumn="ach_cont_agre_assu"
+			String achObesevation length="300" nullable databaseColumn="ach_observation"
+			
+			String achHeureDep length="28" nullable databaseColumn="ach_heure_dep"
+			Integer achNbrPhases nullable databaseColumn="ach_nbr_phases"
+			
+			String achDepId length="28" nullable databaseColumn="ach_dep_id"
+
+				- @TecCatIndex achCatId databaseColumn="ach_cat_id" nullable  fetch="lazy" cascade="refresh"	
+			
+				- @ParEntity achEntId  databaseColumn="ach_ent_id"  /*<-> idEntAchId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+				- @PlaBudgetType achBdtId  databaseColumn="ach_bdt_id"  /*<-> idBdtAchId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+				- @ParExercice achPexId  databaseColumn="ach_pex_id"  /*<-> idPexAchId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+				- @AchModePass achAmpId  databaseColumn="ach_amp_id"  /*<-> idAmpAchId*/  nullable fetch="lazy" cascade="refresh"  							
+			
+				- @AchTypeDepense achAtdId  databaseColumn="ach_atd_id"  /*<-> idAtdAchId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+				- @AchSstypeDepense achAstId  databaseColumn="ach_ast_id"  /*<-> idAstAchId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+				- @PlaCreditOp achCopId  databaseColumn="ach_cop_id"  /*<-> idCopAchId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @PlaCreditPrs achCprId  databaseColumn="ach_cpr_id"  /*<-> idCprAchId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @AchEntity achCurAenId  databaseColumn="ach_cur_aen_id"  /*<-> idAenCurAchId*/  nullable  fetch="lazy" cascade="refresh"  hint="visible=true" 							
+				
+				//- @AchAchatDecision achAdcId  databaseColumn="ach_adc_id"  /*<-> idAdcAchId*/  nullable  fetch="lazy" cascade="refresh"  					
+			
+				- @BudMorasseOp achMopId  databaseColumn="ach_mop_id"  /*<-> idMopAchId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+				- @BudMorassePres achMprId  databaseColumn="ach_mpr_id"  /*<-> idMprAchId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+			
+			- List<@AchAchatAttach> idAchAaaId <-> aaaAchId
+			- List<@AchAchatDecision> idAchAdcId <-> adcAchId  orderby="createdDate asc"
+			- List<@AchAchatLot> idAchAloId <-> aloAchId
+			- List<@AchAchatMemo> idAchAamId <-> aamAchId orderby="createdDate asc"
+			- List<@AchAchatState> idAchAstId <-> astAchId  orderby="createdDate asc"
+			- List<@AchDemPub> idAchAdpId <-> adpAchId orderby="createdDate asc"
+			- List<@AchAgrementList> idAchAalId <-> aalAchId
+			- List<@AchCommission> idAchAcoId <-> acoAchId
+			
+			- List<@AchAchatAvenant> idAchAvnId <-> achAchId
+			
+			- List<@AchDelaiPhase> idAchPhaId <-> phaAchId
+						
+			- List<@AchPrestations> idAchPresId <-> presAchId
+			
+			Repository AchAchatRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchAchat> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchAchat> findByCondition(PagingParameter pagingParameter);
+				@AchAchat findByDepId(String num) condition="achDepId = :num";
+			}
+			
+		}
+		
+		Service AchAchatService {
+			
+			findById => AchAchatRepository.findById;
+			findAll => AchAchatRepository.findAll;
+			save => AchAchatRepository.save;
+			delete => AchAchatRepository.delete;
+			PagedResult<@AchAchat> search(@AchAchatDTO aua);
+			PagedResult<@AchAchat> findAll(PagingParameter pagingParameter);
+			
+			@AchAchat findByDepId(String num) => AchAchatRepository.findByDepId;
+			
+			PagedResult<@AchAchat> getAllSGM(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@AchAchat> getAllSM(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@AchAchat> getAllCI(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@AchAchat> getAllTM(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@AchAchat> getAllAr(PagingParameter pagingParameter) hint="gap";//archive
+			PagedResult<@AchAchat> filterSGM(@AchAchatDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@AchAchat> filterSM(@AchAchatDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@AchAchat> filterCI(@AchAchatDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@AchAchat> filterTM(@AchAchatDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@AchAchat> filterAr(@AchAchatDTO aua,PagingParameter pagingParameter) hint="gap";//archive
+			
+			List<@AchAchat> findByAchCode(String achCode) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchName(String achName) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchDemDate(Date achDemDate) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchIsAlloti(String achIsAlloti) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchLotNbr(Integer achLotNbr) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchDateDebut(Date achDateDebut) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchDateFin(Date achDateFin) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchDelaiExe(Integer achDelaiExe) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchDelaiUnit(String achDelaiUnit) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchVisite(String achVisite) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchLieuVisite(String achLieuVisite) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchDateVisite(Date achDateVisite) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchEnvTrait(Date achEnvTrait) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchCurStatus(String achCurStatus) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchCurStatusDate(Date achCurStatusDate) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchCurDecision(String achCurDecision) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchNumAo(String achNumAo) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchDateOuv(Date achDateOuv) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchLieuOuv(String achLieuOuv) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchLieuRetDos(String achLieuRetDos) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchLieuDepPlis(String achLieuDepPlis) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchLieuDepEch(String achLieuDepEch) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchDateDep(Date achDateDep) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchPubUrl1(String achPubUrl1) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchPubUrl2(String achPubUrl2) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchPrixAquis(BigDecimal achPrixAquis) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchIsQc(String achIsQc) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchNumRc(String achNumRc) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchTrvSecteur(String achTrvSecteur) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchTrvClasse(String achTrvClasse) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchTrvQualif(String achTrvQualif) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchGeoActivite(String achGeoActivite) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchGeoQualif(String achGeoQualif) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchGeoCategorie(String achGeoCategorie) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchat> findByAchEntId(Long id) hint="gen,order=asc,prop=id,conditions=achEntId.id&$id,nullable";
+			List<@AchAchat> findByAchBdtId(Long id) hint="gen,order=asc,prop=id,conditions=achBdtId.id&$id,nullable";
+			List<@AchAchat> findByAchPexId(Long id) hint="gen,order=asc,prop=id,conditions=achPexId.id&$id,nullable";
+			List<@AchAchat> findByAchAmpId(Long id) hint="gen,order=asc,prop=id,conditions=achAmpId.id&$id,nullable";
+			List<@AchAchat> findByAchAtdId(Long id) hint="gen,order=asc,prop=id,conditions=achAtdId.id&$id,nullable";
+			List<@AchAchat> findByAchAstId(Long id) hint="gen,order=asc,prop=id,conditions=achAstId.id&$id,nullable";
+			List<@AchAchat> findByAchCopId(Long id) hint="gen,order=asc,prop=id,conditions=achCopId.id&$id,nullable";
+			List<@AchAchat> findByAchCprId(Long id) hint="gen,order=asc,prop=id,conditions=achCprId.id&$id,nullable";
+			List<@AchAchat> findByAchCurAenId(Long id) hint="gen,order=asc,prop=id,conditions=achCurAenId.id&$id,nullable";
+			List<@AchAchat> findByAchMopId(Long id) hint="gen,order=asc,prop=id,conditions=achMopId.id&$id,nullable";
+			List<@AchAchat> findByAchMprId(Long id) hint="gen,order=asc,prop=id,conditions=achMprId.id&$id,nullable";
+		
+		}
+		
+		DataTransferObject AchAchatDTO {
+			hint="for=search,entity=AchAchat"
+			String achNature
+			String achCode hint="" 
+			String achNumCon
+			String achName hint="" 
+			String achDemDate hint=""
+			String achDateDebut hint=""
+			String achBdtId1 hint="ref=achBdtId,view=ComboBox"
+			//String achCopId1 hint="ref=achCopId,field=copOrdId,view=ComboBox"
+			String achAtdId1 hint="ref=achAtdId,view=ComboBox"
+			String achPexId1 hint="ref=achPexId,view=ComboBox"
+			String achCopId1 hint="ref=achCopId,view=ComboBox"
+			String achCprId1 hint="ref=achCprId,view=ComboBox"
+			String achNumAo hint=""
+			String achDateOuv hint=""
+			String achAmpId1 hint="ref=achAmpId,view=ComboBox"
+			String achCopCode hint="ref=achCopId,field=copCode"
+			String achCopDesc hint="ref=achCopId,field=copDesc"
+			//String achCprType hint="ref=achCprId,field"
+		}
+		
+		DataTransferObject AchAchatMergeDTO {
+			hint="for=merge,entity=AchAchat"
+			String achNature hint="type=enum,items=N&Centrale:A&DAI:G&GOU:E&DEP" 
+			String achCode hint="tab=Tab1" 
+			String achNumCon
+			String achName hint="tab=Tab1" 
+			String achDemDate hint="hidden" 
+			String achIsAlloti hint="tab=Tab1,type=enum,items=N&Lot unique:Y&Alloti" 
+			String achLotNbr hint="tab=Tab1" 
+			String achDateDebut hint="tab=Tab1" 
+			String achDateFin hint="hidden,tab=Tab1" 
+			String achDelaiExe hint="tab=Tab1" 
+			String achDelaiUnit hint="tab=Tab1,type=enum,items=J&Days:M&Months" 
+			String achVisite hint="tab=Tab2,type=enum,items=Y&Yes:N&No" 
+			String achLieuVisite hint="tab=Tab2" 
+			String achDateVisite hint="tab=Tab2" 
+			String achEnvTrait hint="hidden" 
+			String achCurStatus hint="type=enum,items=O&On going:M&Made:R&Rejected:A&Approved:C&Canceled:V&Valid going:r&Non verified:v&Verified,hidden" 
+			String achCurStatusDate hint="hidden" 
+			String achCurDecision hint="type=enum,items=O&OK:N&NOK,hidden" 
+			String achMethode hint="type=enum,items=A&Ancien:N&Nouveau"
+			String achMonPenJou			
+			String achNumAo hint="tab=Tab2" 
+			String achDateOuv hint="tab=Tab2" 
+			String achLieuOuv hint="tab=Tab2" 
+			String achLieuRetDos hint="tab=Tab2" 
+			String achLieuDepPlis hint="tab=Tab2" 
+			String achLieuDepEch hint="tab=Tab2" 
+			String achDateDep hint="tab=Tab2" 
+			String achIsQc hint="tab=Tab3" 
+			String achPubUrl1 hint="tab=Tab4" 
+			String achPubUrl2 hint="tab=Tab4" 
+			String achPrixAquis hint="tab=Tab1" 
+			String achArchTaux hint="tab=Tab1" 
+			String achMontEstimation hint="tab=Tab1" 
+			String achTVA hint="tab=Tab1" 
+			String achRevisionPrix hint="tab=Tab1" 
+			String achNaturePrix hint="tab=Tab1"
+			String achRetenueGaran hint="tab=Tab1" 
+			String achMontCautProv hint="tab=Tab1" 
+			String achDeductibleDecompte hint="tab=Tab1" 
+			String achTypeBord hint="tab=Tab1"
+			String achIndicSupp hint="tab=Tab1"
+			String achInitiPar hint="tab=Tab1"
+			String achAvecPenalite hint="tab=Tab1"
+			String achCatId hint="tab=Tab1,type=system,view=ComboBox"
+			
+
+			String achNumRc hint="tab=Tab2" 
+			String achTrvSecteur hint="tab=Tab3" 
+			String achTrvClasse hint="tab=Tab3" 
+			String achTrvQualif hint="tab=Tab3" 
+			String achGeoActivite hint="tab=Tab3" 
+			String achGeoQualif hint="tab=Tab3" 
+			String achGeoCategorie hint="tab=Tab3" 
+			String achEntId hint="type=system,view=ComboBox,hidden"
+			String achBdtId hint="type=system,view=ComboBox"
+			String achPexId hint="type=system,view=ComboBox"
+			String achAmpId hint="type=system,view=ComboBox"
+			String achAtdId hint="type=system,view=ComboBox"
+			String achAstId hint="type=system,view=ComboBox"
+			String achCopId hint="type=system,view=ComboBox,hidden"
+			String achCprId hint="type=system,view=ComboBox"
+			String achCurAenId hint="type=system,view=ComboBox,hidden"
+			String achAdcId hint="type=system,view=ComboBox,hidden"
+			String achEnvPub hint="hidden"
+			String achAvancement hint=""
+			String achMontAvancement hint=""
+			
+			String achMopId hint="type=system,view=Search"
+			String achMprId hint="type=system,view=Search"
+			String idAchAalId hint="type=system,view=InModal"
+			String achHeureOuv
+			String achHeureVisite
+			String achDateDepEch
+			String achContAgreAssu
+			String achObesevation
+			String achHeureDep
+			String idAchPresId hint="type=system,view=ComboBox,hidden"
+		}
+		
+	/* ------------------------------------------------------------------------------------------------------*/
+		
+		Entity AchAchatExel{
+			databaseTable="ach_achat_exel"
+			hint="idSequence=aaehcatta_tahca_hca_X"
+			
+			Long id    databaseColumn="aae_id" 
+			String aaeNr length="64" nullable databaseColumn="aae_nr"  hint="visible=true,toString" 
+			String aaeDesignation length="700" nullable databaseColumn="aae_designation"  hint="visible=true,toString" 
+			String aaeUnite length="24" nullable databaseColumn="aae_unite"  hint="visible=true,toString" 
+			BigDecimal aaeQuantite  nullable databaseColumn="aae_quantite" hint="visible=true,toString"
+			BigDecimal aaeQuantiteBen  nullable databaseColumn="aae_quantite_ben"
+			BigDecimal aaeQuantiteMod  nullable databaseColumn="aae_quantite_mod"
+			BigDecimal aaeQuantiteRet  nullable databaseColumn="aae_quantite_ret"
+			BigDecimal aaeQuantitePay  nullable databaseColumn="aae_quantite_pay"
+			BigDecimal aaeQuantiteRea  nullable databaseColumn="aae_quantite_rea"
+			BigDecimal aaePuHt  nullable databaseColumn="aae_pu_ht" hint="visible=true,toString"
+			BigDecimal aaePrixTotal  nullable databaseColumn="aae_prix_total" 
+			BigDecimal aaeMarges nullable databaseColumn="aae_marges"   
+			BigDecimal aaeFraisFct  nullable databaseColumn="aae_frais_fct"
+			BigDecimal aaeFraisGen  nullable databaseColumn="aae_frais_gen" 
+			Integer aaeMainOeuvre  nullable databaseColumn="aae_main_oeuvre"
+			BigDecimal aaeMntMatFr  nullable databaseColumn="aae_mnt_mat_fr"   //Montant des matériaux et fournitures
+			BigDecimal aaeTaxes  nullable databaseColumn="aae_taxes"   //Taxes
+			
+				- @AchAchat aaeAchId  databaseColumn="aae_ach_id"  /*<-> idAchAaeId*/  fetch="lazy" cascade="refresh"  							
+				- @AchAchatLot aaeAloId  databaseColumn="aae_alo_id"  <-> aloAaeId nullable  fetch="lazy" cascade="refresh"
+				- @TecAttachement aaeAttId  databaseColumn="aae_att_id"  nullable  fetch="lazy" cascade="refresh"
+				- @AchAchatAvenant aaeAvnId databaseColumn="aae_avn_id"  nullable  fetch="lazy" cascade="refresh"
+			
+			Repository AchAchatExelRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchAchatExel> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchAchatExel> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchAchatExelService {
+			
+			findById => AchAchatExelRepository.findById;
+			findAll => AchAchatExelRepository.findAll;
+			save => AchAchatExelRepository.save;
+			delete => AchAchatExelRepository.delete;
+			PagedResult<@AchAchatExel> search(@AchAchatExelDTO aua);
+			PagedResult<@AchAchatExel> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject AchAchatExelDTO {
+			hint="for=search,entity=AchAchatExel"						
+			String aaeNr
+			String aaeAchId1 hint="ref=aaeAchId,view=ComboBox"
+			String aaeAloId1 hint="ref=aaeAloId,view=ComboBox,LinkedTo=aaeAchId1"
+			String aaeAvnId1 hint="ref=aaeAvnId,view=ComboBox,LinkedTo=aaeAchId1"
+			String aaeDepId1 hint="ref=aaeAchId,view=ComboBox,url=/cptresources/cptDepense/ajax,entity=cptDepense"
+			String aaeAttId1 hint="ref=aaeAttId,view=ComboBox"
+		}
+		
+		DataTransferObject AchAchatExelMergeDTO {
+			hint="for=merge,entity=AchAchatExel"
+			String aaeNr hint="" 
+			String aaeDesignation hint="" 
+			String aaeUnite hint=""
+			String aaeQuantite hint=""
+			String aaeQuantiteBen hint="" 
+			String aaeQuantiteMod hint=""
+			String aaeQuantiteRet hint=""
+			String aaeQuantitePay hint=""
+			String aaeQuantiteRea hint=""
+			String aaePuHt hint="" 
+			String aaePrixTotal hint=""
+			String aaeMarges hint=""
+			String aaeFraisFct hint=""
+			String aaeFraisGen hint=""
+			String aaeMainOeuvre hint=""
+			String aaeMntMatFr
+			String aaeTaxes
+			String aaeAchId hint="type=system,view=ComboBox"
+			String aaeAloId hint="type=system,view=ComboBox"
+			String aaeAttId hint="type=system,view=ComboBox"
+			
+		}
+		
+	/* ------------------------------------------------------------------------------------------------------*/
+				
+		Entity AchAchatAttach{
+			databaseTable="ach_achat_attach"
+			hint="idSequence=aaahcatta_tahca_hca_X"
+			
+			Long id    databaseColumn="aaa_id" 
+			String aaaName length="64" nullable databaseColumn="aaa_name"  hint="visible=true,toString" 
+			String aaaUser length="64" nullable databaseColumn="aaa_user"  hint="visible=true,toString" 
+			Date aaaDate  nullable databaseColumn="aaa_date"  hint="visible=true,toString" 
+			String aaaDoc  nullable databaseColumn="aaa_doc" 
+			
+				- @AchAchat aaaAchId  databaseColumn="aaa_ach_id"  <-> idAchAaaId  fetch="lazy" cascade="refresh"
+			
+			Repository AchAchatAttachRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchAchatAttach> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchAchatAttach> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchAchatAttachService {
+			
+			findById => AchAchatAttachRepository.findById;
+			findAll => AchAchatAttachRepository.findAll;
+			save => AchAchatAttachRepository.save;
+			delete => AchAchatAttachRepository.delete;
+			PagedResult<@AchAchatAttach> search(@AchAchatAttachDTO aua);
+			PagedResult<@AchAchatAttach> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject AchAchatAttachDTO {
+			hint="for=search,entity=AchAchatAttach"
+			String aaaName hint="" 
+			String aaaUser hint="" 
+			String aaaDate hint="" 
+		}
+		
+		DataTransferObject AchAchatAttachMergeDTO {
+			hint="for=merge,entity=AchAchatAttach"
+			String aaaName hint="" 
+			String aaaUser hint="" 
+			String aaaDate hint="" 
+			String aaaDoc hint="" 
+			String aaaAchId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchAchatDecision{
+			databaseTable="ach_achat_decision"
+			hint="idSequence=adcnoisiced_tahca_hca_X"
+			
+			Long id    databaseColumn="adc_id" 
+			String adcStatus length="1" nullable databaseColumn="adc_status"  hint="visible=true,toString" 
+			Date adcDate  nullable databaseColumn="adc_date"  hint="visible=true" 
+			String adcRem length="256" nullable databaseColumn="adc_rem"  hint="visible=true" 
+			
+				- @AchAchat adcAchId  databaseColumn="adc_ach_id"  <-> idAchAdcId  fetch="lazy" cascade="refresh"  							
+			
+				- @AchEntity adcAenId  databaseColumn="adc_aen_id"  /*<-> idAenAdcId*/  fetch="lazy" cascade="refresh"  	  hint="visible=true,toString" 						
+			
+			
+			Repository AchAchatDecisionRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchAchatDecision> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchAchatDecision> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchAchatDecisionService {
+			
+			findById => AchAchatDecisionRepository.findById;
+			findAll => AchAchatDecisionRepository.findAll;
+			save => AchAchatDecisionRepository.save;
+			delete => AchAchatDecisionRepository.delete;
+			PagedResult<@AchAchatDecision> search(@AchAchatDecisionDTO aua);
+			PagedResult<@AchAchatDecision> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject AchAchatDecisionDTO {
+			hint="for=search,entity=AchAchatDecision"
+			String adcStatus hint="" 
+			String adcDate hint="" 
+			String adcRem hint="" 
+		}
+		
+		DataTransferObject AchAchatDecisionMergeDTO {
+			hint="for=merge,entity=AchAchatDecision"
+			String adcStatus hint="type=enum,items=O&OK:N&NOK" 
+			String adcDate hint="" 
+			String adcRem hint="" 
+			String adcAchId hint="type=system,view=Search"
+			String adcAenId hint="type=system,view=ComboBox"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchAchatLot{
+			databaseTable="ach_achat_lot"
+			hint="idSequence=alotol_tahca_hca_X,noJsonIgnore=version"
+			
+			Long id    databaseColumn="alo_id" 
+			String aloCode length="24" nullable databaseColumn="alo_code"  hint="visible=true,toString" 
+			String aloName length="700" nullable databaseColumn="alo_name"  hint="visible=true,toString" 
+			Integer aloOrder  nullable databaseColumn="alo_order"  
+			BigDecimal aloAmtEstim  nullable databaseColumn="alo_amt_estim" 
+			BigDecimal aloAmtCaut  nullable databaseColumn="alo_amt_caut" 
+			String aloBdeFile length="1" nullable databaseColumn="alo_bde_file" 
+			String aloConcurent length="100" nullable databaseColumn="alo_concurent" 
+			BigDecimal aloMontant  nullable databaseColumn="alo_montant"
+			
+				- @AchAchat aloAchId nullable databaseColumn="alo_ach_id"  <-> idAchAloId  fetch="lazy" cascade="refresh"  hint="visible=true,toString"							
+			
+			//- List<@AchBde> idAloAchId <-> achAloId
+			
+			- List<@AchAchatExel> aloAaeId <-> aaeAloId 
+			
+			- @AchAchatAvenant aloAvnId nullable databaseColumn="alo_avn_id"  <-> idAvnAloId  fetch="lazy" cascade="refresh" 
+			
+			Repository AchAchatLotRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchAchatLot> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchAchatLot> findByCondition(PagingParameter pagingParameter);
+				int executeQuery(String qry) hint="gen";
+			}
+			
+		}
+		
+		Service AchAchatLotService {
+			
+			findById => AchAchatLotRepository.findById;
+			findAll => AchAchatLotRepository.findAll;
+			save => AchAchatLotRepository.save;
+			delete => AchAchatLotRepository.delete;
+			PagedResult<@AchAchatLot> search(@AchAchatLotDTO aua);
+			PagedResult<@AchAchatLot> findAll(PagingParameter pagingParameter);
+			
+			
+			List<@AchAchatLot> findByAloBdeFile(String aloBdeFile) hint="gen,order=asc,prop=id,nullable";
+			executeQuery => AchAchatLotRepository.executeQuery;
+		}
+		
+		DataTransferObject AchAchatLotDTO {
+			hint="for=search,entity=AchAchatLot"
+			String aloCode hint="" 
+			String aloName hint="" 
+			String aloOrder hint="" 
+		}
+		
+		DataTransferObject AchAchatLotMergeDTO {
+			hint="for=merge,entity=AchAchatLot"
+			String aloCode hint="" 
+			String aloName hint="" 
+			String aloOrder hint="" 
+			String aloAmtEstim hint="" 
+			String aloAmtCaut hint="" 
+			String aloBdeFile hint="" 
+			String aloAchId hint="type=system,view=Search"
+			String aloConcurent
+			String aloMontant
+			//String aloAaeId hint="type=system,view=InModal,tab=test"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchAchatMemo{
+			databaseTable="ach_achat_memo"
+			hint="idSequence=aamomem_tahca_hca_X"
+			
+			Long id    databaseColumn="aam_id" 
+			String aamMemo length="512" nullable databaseColumn="aam_memo"  hint="visible=true,toString" 
+			String aamUser length="64" nullable databaseColumn="aam_user"  hint="visible=true,toString" 
+			Date aamDate  nullable databaseColumn="aam_date"  hint="visible=true,toString" 
+			
+				- @AchAchat aamAchId  databaseColumn="aam_ach_id"  <-> idAchAamId  fetch="lazy" cascade="refresh"
+			
+			Repository AchAchatMemoRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchAchatMemo> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchAchatMemo> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchAchatMemoService {
+			
+			findById => AchAchatMemoRepository.findById;
+			findAll => AchAchatMemoRepository.findAll;
+			save => AchAchatMemoRepository.save;
+			delete => AchAchatMemoRepository.delete;
+			PagedResult<@AchAchatMemo> search(@AchAchatMemoDTO aua);
+			PagedResult<@AchAchatMemo> findAll(PagingParameter pagingParameter);
+		}
+		
+		DataTransferObject AchAchatMemoDTO {
+			hint="for=search,entity=AchAchatMemo"
+			String aamMemo hint="" 
+			String aamUser hint="" 
+			String aamDate hint="" 
+		}
+		
+		DataTransferObject AchAchatMemoMergeDTO {
+			hint="for=merge,entity=AchAchatMemo"
+			String aamMemo hint="" 
+			String aamUser hint="" 
+			String aamDate hint="" 
+			String aamAchId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchAchatState{
+			databaseTable="ach_achat_state"
+			hint="idSequence=astetats_tahca_hca_X"
+			
+			Long id    databaseColumn="ast_id" 
+			String astStatus length="1" nullable databaseColumn="ast_status"  hint="visible=true,toString" 
+			Date astDate  nullable databaseColumn="ast_date"  hint="visible=true,toString" 
+			String astRem length="256" nullable databaseColumn="ast_rem"  hint="visible=true,toString" 
+			
+				- @AchAchat astAchId  databaseColumn="ast_ach_id"  <-> idAchAstId  fetch="lazy" cascade="refresh"  							
+			
+				- @AchEntity astAenId  databaseColumn="ast_aen_id"  /*<-> idAenAstId*/  fetch="lazy" cascade="refresh"
+			
+			Repository AchAchatStateRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchAchatState> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchAchatState> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchAchatStateService {
+			findById => AchAchatStateRepository.findById;
+			findAll => AchAchatStateRepository.findAll;
+			save => AchAchatStateRepository.save;
+			delete => AchAchatStateRepository.delete;
+			PagedResult<@AchAchatState> search(@AchAchatStateDTO aua);
+			PagedResult<@AchAchatState> findAll(PagingParameter pagingParameter);
+		}
+		
+		DataTransferObject AchAchatStateDTO {
+			hint="for=search,entity=AchAchatState"
+			String astStatus hint="" 
+			String astDate hint="" 
+			String astRem hint="" 
+		}
+		
+		DataTransferObject AchAchatStateMergeDTO {
+			hint="for=merge,entity=AchAchatState"
+			String astStatus hint="type=enum,items=O&On going:M&Made:R&Rejected:A&Approved:C&Canceled" 
+			String astDate hint="" 
+			String astRem hint="" 
+			String astAchId hint="type=system,view=Search"
+			String astAenId hint="type=system,view=ComboBox"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchAgrementCat{
+			databaseTable="ach_agrement_cat"
+			hint="idSequence=aactac_tnemerga_hca_X"
+			
+			Long id    databaseColumn="aac_id" 
+			String aacCode length="32" nullable databaseColumn="aac_code"  hint="visible=true,toString" 
+			String aacName length="32" nullable databaseColumn="aac_name"  hint="visible=true,toString" 
+			
+			//- List<@AchAgrementList> idAacAalId <-> aalAacId
+			
+			Repository AchAgrementCatRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchAgrementCat> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchAgrementCat> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchAgrementCatService {
+			
+			findById => AchAgrementCatRepository.findById;
+			findAll => AchAgrementCatRepository.findAll;
+			save => AchAgrementCatRepository.save;
+			delete => AchAgrementCatRepository.delete;
+			PagedResult<@AchAgrementCat> search(@AchAgrementCatDTO aua);
+			PagedResult<@AchAgrementCat> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject AchAgrementCatDTO {
+			hint="for=search,entity=AchAgrementCat"
+			String aacCode hint="" 
+			String aacName hint="" 
+		}
+		
+		DataTransferObject AchAgrementCatMergeDTO {
+			hint="for=merge,entity=AchAgrementCat"
+			String aacCode hint="" 
+			String aacName hint="" 
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchAgrementList{
+			databaseTable="ach_agrement_list"
+			hint="idSequence=aaltsil_tnemerga_hca_X"
+			
+			Long id    databaseColumn="aal_id" 
+			String aalCertif length="64" nullable databaseColumn="aal_certif"  hint="visible=true,toString" 
+			
+				- @AchAgrementCat aalAacId  databaseColumn="aal_aac_id"  /*<-> idAacAalId*/  fetch="lazy" cascade="refresh"
+				- @AchAchat aalAchId  databaseColumn="aal_ach_id"  <-> idAchAalId  fetch="lazy" cascade="refresh"
+			
+			Repository AchAgrementListRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchAgrementList> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchAgrementList> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchAgrementListService {
+			
+			findById => AchAgrementListRepository.findById;
+			findAll => AchAgrementListRepository.findAll;
+			save => AchAgrementListRepository.save;
+			delete => AchAgrementListRepository.delete;
+			PagedResult<@AchAgrementList> search(@AchAgrementListDTO aua);
+			PagedResult<@AchAgrementList> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject AchAgrementListDTO {
+			hint="for=search,entity=AchAgrementList"
+			String aalCertif hint="" 
+		}
+		
+		DataTransferObject AchAgrementListMergeDTO {
+			hint="for=merge,entity=AchAgrementList"
+			String aalCertif hint="" 
+			String aalAacId hint="type=system,view=ComboBox"
+			String aalAchId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity AchAspPresence{
+			databaseTable="ach_asp_presence"
+			hint="idSequence=appecneserp_psa_hca_X,noJsonIgnore=version"
+			
+			Long id    databaseColumn="app_id" 
+			String appPresent length="1" nullable databaseColumn="app_present"  hint="visible=true,toString" 
+			
+				- @AchSeancePv appAspId  databaseColumn="app_asp_id"  <-> idAspAppId  fetch="lazy" cascade="refresh" 
+				- @AchCommMember appAcmId  databaseColumn="app_acm_id"  /*<-> idAcmAppId*/  fetch="lazy" cascade="refresh" hint="visible=true"
+			
+			Repository AchAspPresenceRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchAspPresence> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchAspPresence> findByCondition(PagingParameter pagingParameter);
+			}
+		}
+		
+		Service AchAspPresenceService {
+			findById => AchAspPresenceRepository.findById;
+			findAll => AchAspPresenceRepository.findAll;
+			save => AchAspPresenceRepository.save;
+			delete => AchAspPresenceRepository.delete;
+			PagedResult<@AchAspPresence> search(@AchAspPresenceDTO aua);
+			PagedResult<@AchAspPresence> findAll(PagingParameter pagingParameter);
+			
+			List<@AchAspPresence> findByAppPresent(String appPresent) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAspPresence> findByAppAspId(Long id) hint="gen,order=asc,prop=id,conditions=appAspId.id&$id,nullable";
+			List<@AchAspPresence> findByAppAcmId(Long id) hint="gen,order=asc,prop=id,conditions=appAcmId.id&$id,nullable";
+		}
+		
+		DataTransferObject AchAspPresenceDTO {
+			hint="for=search,entity=AchAspPresence"
+			String appPresent hint="" 
+		}
+		
+		DataTransferObject AchAspPresenceMergeDTO {
+			hint="for=merge,entity=AchAspPresence"
+			String appPresent  hint="type=boolean,yes=Y,no=N";
+			String appAspId hint="type=system,view=Search"
+			String appAcmId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity AchAspPublication{
+			databaseTable="ach_asp_publication"
+			hint="idSequence=aapnoitacilbup_psa_hca_X,noJsonIgnore=version"
+			
+			Long id    databaseColumn="aap_id" 
+			String aapRem length="256" nullable databaseColumn="aap_rem"  hint="visible=true,toString" 
+			String aapInserted length="1" nullable databaseColumn="aap_inserted"  hint="visible=true,toString" 
+			
+				- @AchSeancePv aapAspId  databaseColumn="aap_asp_id"  <-> idAspAapId  fetch="lazy" cascade="refresh" 
+				- @AchPublication aapApbId  databaseColumn="aap_apb_id"  /*<-> idApbAapId*/  fetch="lazy" cascade="refresh"  hint="visible=true,toString"
+			
+			Repository AchAspPublicationRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchAspPublication> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchAspPublication> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchAspPublicationService {
+			findById => AchAspPublicationRepository.findById;
+			findAll => AchAspPublicationRepository.findAll;
+			save => AchAspPublicationRepository.save;
+			delete => AchAspPublicationRepository.delete;
+			PagedResult<@AchAspPublication> search(@AchAspPublicationDTO aua);
+			PagedResult<@AchAspPublication> findAll(PagingParameter pagingParameter);
+			
+			List<@AchAspPublication> findByAapRem(String aapRem) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAspPublication> findByAapInserted(String aapInserted) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAspPublication> findByAapAspId(Long id) hint="gen,order=asc,prop=id,conditions=aapAspId.id&$id,nullable";
+			List<@AchAspPublication> findByAapApbId(Long id) hint="gen,order=asc,prop=id,conditions=aapApbId.id&$id,nullable";
+		}
+		
+		DataTransferObject AchAspPublicationDTO {
+			hint="for=search,entity=AchAspPublication"
+			String aapRem hint="" 
+			String aapInserted hint="" 
+		}
+		
+		DataTransferObject AchAspPublicationMergeDTO {
+			hint="for=merge,entity=AchAspPublication"
+			String aapRem hint="" 
+			String aapInserted  hint="type=boolean,yes=Y,no=N";
+			String aapAspId hint="type=system,view=Search"
+			String aapApbId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchAspReserve{
+			databaseTable="ach_asp_reserve"
+			hint="idSequence=areevreser_psa_hca_X"
+			
+			Long id    databaseColumn="are_id" 
+			String areObjet length="256" nullable databaseColumn="are_objet"  hint="visible=true,toString" 
+			
+				- @AchSeancePv areAspId  databaseColumn="are_asp_id"  <-> idAspAreId fetch="lazy" cascade="refresh" 
+				- @AchCommMember areAcmId  databaseColumn="are_acm_id"  /*<-> idAcmAreId*/  fetch="lazy" cascade="refresh" hint="visible=true"
+			
+			Repository AchAspReserveRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchAspReserve> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchAspReserve> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchAspReserveService {
+			
+			findById => AchAspReserveRepository.findById;
+			findAll => AchAspReserveRepository.findAll;
+			save => AchAspReserveRepository.save;
+			delete => AchAspReserveRepository.delete;
+			PagedResult<@AchAspReserve> search(@AchAspReserveDTO aua);
+			PagedResult<@AchAspReserve> findAll(PagingParameter pagingParameter);
+			
+			List<@AchAspReserve> findByAreObjet(String areObjet) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAspReserve> findByAreAspId(Long id) hint="gen,order=asc,prop=id,conditions=areAspId.id&$id,nullable";
+			List<@AchAspReserve> findByAreAcmId(Long id) hint="gen,order=asc,prop=id,conditions=areAcmId.id&$id,nullable";
+		}
+		
+		DataTransferObject AchAspReserveDTO {
+			hint="for=search,entity=AchAspReserve"
+			String areObjet hint="" 
+		}
+		
+		DataTransferObject AchAspReserveMergeDTO {
+			hint="for=merge,entity=AchAspReserve"
+			String areObjet hint="" 
+			String areAspId hint="type=system,view=Search"
+			String areAcmId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchBde{
+			databaseTable="ach_bde"
+			hint="idSequence=abeedb_hca_X"
+			
+			Long id    databaseColumn="abe_id" 
+			Integer abeNum   databaseColumn="abe_num"  hint="visible=true,toString" 
+			String abeLabel length="256"  databaseColumn="abe_label"  hint="visible=true,toString" 
+			String abeUnit length="1"  databaseColumn="abe_unit"  hint="visible=true,toString" 
+			Integer abeQte   databaseColumn="abe_qte" 
+			BigDecimal abePuHt   databaseColumn="abe_pu_ht" 
+			BigDecimal abeTva   databaseColumn="abe_tva" 
+			
+				- @AchAchatLot achAloId  databaseColumn="ach_alo_id"  /*<-> idAloAchId*/  fetch="lazy" cascade="refresh"
+			
+			Repository AchBdeRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchBde> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchBde> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchBdeService {
+			
+			findById => AchBdeRepository.findById;
+			findAll => AchBdeRepository.findAll;
+			save => AchBdeRepository.save;
+			delete => AchBdeRepository.delete;
+			PagedResult<@AchBde> search(@AchBdeDTO aua);
+			PagedResult<@AchBde> findAll(PagingParameter pagingParameter);
+			
+			List<@AchBde> findByAbeNum(Integer abeNum) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBde> findByAbeLabel(String abeLabel) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBde> findByAbeUnit(String abeUnit) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBde> findByAbeQte(Integer abeQte) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBde> findByAbePuHt(BigDecimal abePuHt) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBde> findByAbeTva(BigDecimal abeTva) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBde> findByAchAloId(Long id) hint="gen,order=asc,prop=id,conditions=achAloId.id&$id,nullable";
+		}
+		
+		DataTransferObject AchBdeDTO {
+			hint="for=search,entity=AchBde"
+			String abeNum hint="" 
+			String abeLabel hint="" 
+			String abeUnit hint="" 
+		}
+		
+		DataTransferObject AchBdeMergeDTO {
+			hint="for=merge,entity=AchBde"
+			String abeNum hint="" 
+			String abeLabel hint="" 
+			String abeUnit hint="" 
+			String abeQte hint="" 
+			String abePuHt hint="" 
+			String abeTva hint="" 
+			String achAloId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchCommMember{
+			databaseTable="ach_comm_member"
+			hint="idSequence=acmrebmem_mmoc_hca_X,noJsonIgnore=version"
+			
+			Long id    databaseColumn="acm_id" 
+			String acmNom length="32" nullable databaseColumn="acm_nom"  hint="visible=true,toString" 
+			String acmPrenom length="32" nullable databaseColumn="acm_prenom"  hint="visible=true,toString" 
+			String acmRemarque length="128" nullable databaseColumn="acm_remarque"  hint="visible=true,toString" 
+			String acmFct length="64" nullable databaseColumn="acm_fct" 
+			
+				- @AchMemberGroup acmAmgId  databaseColumn="acm_amg_id"  <-> idAmgAcmId  fetch="lazy" cascade="refresh"  							
+			
+			//- List<@AchAspPresence> idAcmAppId <-> appAcmId
+			//- List<@AchAspReserve> idAcmAreId <-> areAcmId
+			//- List<@AchHasAcm> idAcmAhmId <-> ahmAcmId
+			//- List<@AchSsCommission> idAcmAscId <-> ascAcmId
+			
+			Repository AchCommMemberRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchCommMember> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchCommMember> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchCommMemberService {
+			
+			findById => AchCommMemberRepository.findById;
+			findAll => AchCommMemberRepository.findAll;
+			save => AchCommMemberRepository.save;
+			delete => AchCommMemberRepository.delete;
+			PagedResult<@AchCommMember> search(@AchCommMemberDTO aua);
+			PagedResult<@AchCommMember> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject AchCommMemberDTO {
+			hint="for=search,entity=AchCommMember"
+			String acmNom hint="" 
+			String acmPrenom hint="" 
+			String acmFct hint="" 
+		}
+		
+		DataTransferObject AchCommMemberMergeDTO {
+			hint="for=merge,entity=AchCommMember"
+			String acmNom hint="" 
+			String acmPrenom hint="" 
+			String acmRemarque hint="" 
+			String acmFct hint="" 
+			String acmAmgId hint="type=system,view=ComboBox"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchCommission{
+			databaseTable="ach_commission"
+			hint="idSequence=aconoissimmoc_hca_X,noJsonIgnore=version"
+			
+			Long id    databaseColumn="aco_id" 
+			String acoStatus length="1"  databaseColumn="aco_status"  hint="visible=true,toString" 
+			Date acoDecisionDate  nullable databaseColumn="aco_decision_date"  hint="visible=true,toString" 
+			String acoDecisionNum length="32" nullable databaseColumn="aco_decision_num"  hint="visible=true,toString" 
+			
+				- @AchAchat acoAchId  databaseColumn="aco_ach_id"  <-> idAchAcoId  /* key */  fetch="lazy" cascade="refresh"  	 hint="visible=true,toString" 						
+			
+			- List<@AchHasAcm> idAcoAhmId <-> ahmAcoId
+			
+			Repository AchCommissionRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchCommission> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchCommission> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchCommissionService {
+			
+			findById => AchCommissionRepository.findById;
+			findAll => AchCommissionRepository.findAll;
+			save => AchCommissionRepository.save;
+			delete => AchCommissionRepository.delete;
+			PagedResult<@AchCommission> search(@AchCommissionDTO aua);
+			PagedResult<@AchCommission> findAll(PagingParameter pagingParameter);
+			
+			List<@AchCommission> findByAcoStatus(String acoStatus) hint="gen,order=asc,prop=id,nullable";
+			List<@AchCommission> findByAcoDecisionDate(Date acoDecisionDate) hint="gen,order=asc,prop=id,nullable";
+			List<@AchCommission> findByAcoDecisionNum(String acoDecisionNum) hint="gen,order=asc,prop=id,nullable";
+			List<@AchCommission> findByAcoAchId(Long id) hint="gen,order=asc,prop=id,conditions=acoAchId.id&$id,nullable";
+		}
+		
+		DataTransferObject AchCommissionDTO {
+			hint="for=search,entity=AchCommission"
+			String acoAchId1 hint="ref=acoAchId,view=ComboBox"
+			String acoStatus hint="" 
+			String acoDecisionDate hint="" 
+			String acoDecisionNum hint="" 
+		}
+		
+		DataTransferObject AchCommissionMergeDTO {
+			hint="for=merge,entity=AchCommission"
+			String acoStatus hint="" 
+			String acoDecisionDate hint="" 
+			String acoDecisionNum hint="" 
+			String acoAchId hint="type=system,view=Search"
+			String idAcoAhmId hint="type=system,view=InModal,tab=AcoAhm_list"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchConcurent{
+			databaseTable="ach_concurent"
+			hint="idSequence=acrtnerucnoc_hca_X"
+			
+			Long id    databaseColumn="acr_id" 
+			String acrName length="255" nullable databaseColumn="acr_name"  hint="visible=true,toString" 
+			String acrCnss length="24" nullable databaseColumn="acr_cnss"   
+			String acrRc length="24" nullable databaseColumn="acr_rc" 
+			String acrIf length="24" nullable databaseColumn="acr_if"   
+			String acrIce length="24" nullable databaseColumn="acr_ice"   
+			String acrBank length="255" nullable databaseColumn="acr_bank"  
+			String acrRib length="120" nullable databaseColumn="acr_rib"   
+			String acrAdress length="255" nullable databaseColumn="acr_adress"   
+			String acrTel length="14" nullable databaseColumn="acr_tel"  hint="visible=true"
+			String acrFax length="14" nullable databaseColumn="acr_fax"  
+			String acrEmail length="24" nullable databaseColumn="acr_email"  
+			String acrActiv length="1" nullable databaseColumn="acr_activ"   
+			String acrObservation length="85" nullable databaseColumn="acr_observation"  hint="visible=true" 
+			String acrGerant length="255" nullable databaseColumn="acr_gerant"  hint="visible=true"
+			String acrImage length="85" nullable databaseColumn="acr_image"  hint="visible=true"
+			
+			//- List<@AchSoumission> idAcrAsoId <-> asoAcrId
+			
+			Repository AchConcurentRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchConcurent> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchConcurent> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchConcurentService {
+			
+			findById => AchConcurentRepository.findById;
+			findAll => AchConcurentRepository.findAll;
+			save => AchConcurentRepository.save;
+			delete => AchConcurentRepository.delete;
+			PagedResult<@AchConcurent> search(@AchConcurentDTO aua);
+			PagedResult<@AchConcurent> findAll(PagingParameter pagingParameter);
+			
+			List<@AchConcurent> findByAcrName(String acrName) hint="gen,order=asc,prop=id,nullable";
+		}
+		
+		DataTransferObject AchConcurentDTO {
+			hint="for=search,entity=AchConcurent"
+			String acrName hint=""
+			String acrBank hint=""
+			String acrAdress hint="" 
+			String acrTel hint=""
+			String acrEmail hint="" 
+			String acrActiv hint=""
+		}
+		
+		DataTransferObject AchConcurentMergeDTO {
+			hint="for=merge,entity=AchConcurent"
+			String acrName hint=""
+			String acrCnss hint="" 
+			String acrRc hint=""
+			String acrIf hint="" 
+			String acrIce hint="" 
+			String acrBank hint="" 
+			String acrRib hint="" 
+			String acrAdress hint="" 
+			String acrTel hint="" 
+			String acrFax hint=""
+			String acrEmail hint="" 
+			String acrActiv hint=""
+			String acrObservation hint=""
+			String acrGerant hint=""
+			String acrImage hint=""  
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchDemPub{
+			databaseTable="ach_dem_pub"
+			hint="idSequence=adpbup_med_hca_X,noJsonIgnore=version"
+			
+			Long id    databaseColumn="adp_id" 
+			String adpStatus length="1" nullable databaseColumn="adp_status"  hint="visible=true,toString" 
+			Date adpDate  nullable databaseColumn="adp_date"  hint="visible=true,toString" 
+			Date adpDateLimit  nullable databaseColumn="adp_date_limit"  hint="visible=true,toString" 
+			
+				- @AchAchat adpAchId  databaseColumn="adp_ach_id"  <-> idAchAdpId  fetch="lazy" cascade="refresh" hint="visible=true,toString" 							
+			
+				- List<@AchPublication> idAdpApbId <-> apbAdpId
+			
+			Repository AchDemPubRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchDemPub> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchDemPub> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchDemPubService {
+			
+			findById => AchDemPubRepository.findById;
+			findAll => AchDemPubRepository.findAll;
+			save => AchDemPubRepository.save;
+			delete => AchDemPubRepository.delete;
+			PagedResult<@AchDemPub> search(@AchDemPubDTO aua);
+			PagedResult<@AchDemPub> findAll(PagingParameter pagingParameter);
+			
+			List<@AchDemPub> findByAdpStatus(String adpStatus) hint="gen,order=asc,prop=id,nullable";
+			List<@AchDemPub> findByAdpDate(Date adpDate) hint="gen,order=asc,prop=id,nullable";
+			List<@AchDemPub> findByAdpDateLimit(Date adpDateLimit) hint="gen,order=asc,prop=id,nullable";
+			List<@AchDemPub> findByAdpAchId(Long id) hint="gen,order=asc,prop=id,conditions=adpAchId.id&$id,nullable";
+		}
+		
+		DataTransferObject AchDemPubDTO {
+			hint="for=search,entity=AchDemPub"
+			String adpStatus hint="" 
+			String adpDate hint="" 
+			String adpDateLimit hint="" 
+		}
+		
+		DataTransferObject AchDemPubMergeDTO {
+			hint="for=merge,entity=AchDemPub"
+			String adpStatus hint="" 
+			String adpDate hint="" 
+			String adpDateLimit hint="" 
+			String adpAchId hint="type=system,view=Search"
+			String idAdpApbId hint="type=system,view=InModal,tab=Publications"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchEntity{
+			databaseTable="ach_entity"
+			hint="idSequence=aenytitne_hca_X"
+			
+			Long id    databaseColumn="aen_id" 
+			String aenName length="64" nullable databaseColumn="aen_name"  hint="visible=true,toString" 
+			
+			//- List<@AchAchat> idAenCurAchId <-> achCurAenId
+			//- List<@AchAchatDecision> idAenAdcId <-> adcAenId
+			//- List<@AchAchatState> idAenAstId <-> astAenId
+			
+			Repository AchEntityRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchEntity> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchEntity> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchEntityService {
+			
+			findById => AchEntityRepository.findById;
+			findAll => AchEntityRepository.findAll;
+			save => AchEntityRepository.save;
+			delete => AchEntityRepository.delete;
+			PagedResult<@AchEntity> search(@AchEntityDTO aua);
+			PagedResult<@AchEntity> findAll(PagingParameter pagingParameter);
+			
+			void init() hint="gap";
+		}
+		
+		DataTransferObject AchEntityDTO {
+			hint="for=search,entity=AchEntity"
+			String aenName hint="" 
+		}
+		
+		DataTransferObject AchEntityMergeDTO {
+			hint="for=merge,entity=AchEntity"
+			String aenName hint="" 
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchHasAcm{
+			databaseTable="ach_has_acm"
+			hint="idSequence=ahmmca_sah_hca_X,noJsonIgnore=version"
+			
+			Long id    databaseColumn="ahm_id" 
+			String ahmStatus length="1"  databaseColumn="ahm_status"  hint="visible=true,toString" 
+			
+				- @AchCommMember ahmAcmId  databaseColumn="ahm_acm_id"  /* <-> idAcmAhmId */ fetch="lazy" cascade="refresh" nullable 
+				- @AchCommission ahmAcoId  databaseColumn="ahm_aco_id"  <-> idAcoAhmId  fetch="lazy" cascade="refresh" nullable 
+			
+			Repository AchHasAcmRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchHasAcm> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchHasAcm> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchHasAcmService {
+			
+			findById => AchHasAcmRepository.findById;
+			findAll => AchHasAcmRepository.findAll;
+			save => AchHasAcmRepository.save;
+			delete => AchHasAcmRepository.delete;
+			PagedResult<@AchHasAcm> search(@AchHasAcmDTO aua);
+			PagedResult<@AchHasAcm> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject AchHasAcmDTO {
+			hint="for=search,entity=AchHasAcm"
+			String ahmStatus hint=""
+			String ahmAcmId1 hint="ref=ahmAcmId,view=ComboBox"
+			String ahmAcoId1 hint="ref=ahmAcoId,view=ComboBox" 
+		}
+		
+		DataTransferObject AchHasAcmMergeDTO {
+			hint="for=merge,entity=AchHasAcm"
+			String ahmStatus hint="type=enum,items=P&President:Q&Suppléant du président:A&Membre1:B&Suppléant du Membre1 :C&Membre2:D&Suppléant du Membre2" 
+			String ahmAcmId hint="type=system,view=ComboBox"
+			String ahmAcoId hint="hidden,type=system,view=ComboBox"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchJournal{
+			databaseTable="ach_journal"
+			hint="idSequence=acjlanruoj_hca_X,noJsonIgnore=version"
+			
+			Long id    databaseColumn="acj_id" 
+			String acjName length="64" nullable databaseColumn="acj_name"  hint="visible=true,toString" 
+			String acjLang length="1" nullable databaseColumn="acj_lang"  hint="visible=true,toString" 
+			
+			//- List<@AchPublication> idAcjApbId <-> apbAcjId
+			
+			Repository AchJournalRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchJournal> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchJournal> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchJournalService {
+			
+			findById => AchJournalRepository.findById;
+			findAll => AchJournalRepository.findAll;
+			save => AchJournalRepository.save;
+			delete => AchJournalRepository.delete;
+			PagedResult<@AchJournal> search(@AchJournalDTO aua);
+			PagedResult<@AchJournal> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject AchJournalDTO {
+			hint="for=search,entity=AchJournal"
+			String acjName hint="" 
+			String acjLang hint="" 
+		}
+		
+		DataTransferObject AchJournalMergeDTO {
+			hint="for=merge,entity=AchJournal"
+			String acjName hint="" 
+			String acjLang  hint="type=enum,items=A&Arabe:F&Francais" 
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchMemberGroup{
+			databaseTable="ach_member_group"
+			hint="idSequence=amgpuorg_rebmem_hca_X"
+			
+			Long id    databaseColumn="amg_id" 
+			String amgName length="32" nullable databaseColumn="amg_name"  hint="visible=true,toString" 
+			
+			- List<@AchCommMember> idAmgAcmId <-> acmAmgId
+			
+			Repository AchMemberGroupRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchMemberGroup> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchMemberGroup> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchMemberGroupService {
+			
+			findById => AchMemberGroupRepository.findById;
+			findAll => AchMemberGroupRepository.findAll;
+			save => AchMemberGroupRepository.save;
+			delete => AchMemberGroupRepository.delete;
+			PagedResult<@AchMemberGroup> search(@AchMemberGroupDTO aua);
+			PagedResult<@AchMemberGroup> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject AchMemberGroupDTO {
+			hint="for=search,entity=AchMemberGroup"
+			String amgName hint="" 
+		}
+		
+		DataTransferObject AchMemberGroupMergeDTO {
+			hint="for=merge,entity=AchMemberGroup"
+			String amgName hint="" 
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchModePass{
+			databaseTable="ach_mode_pass"
+			hint="idSequence=ampssap_edom_hca_X"
+			
+			Long id    databaseColumn="amp_id" 
+			String ampCode length="24" nullable databaseColumn="amp_code"  hint="visible=true,toString" 
+			String ampName length="64" nullable databaseColumn="amp_name"  hint="visible=true,toString" 
+			
+			//- List<@AchAchat> idAmpAchId <-> achAmpId
+			
+			Repository AchModePassRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchModePass> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchModePass> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchModePassService {
+			
+			findById => AchModePassRepository.findById;
+			findAll => AchModePassRepository.findAll;
+			save => AchModePassRepository.save;
+			delete => AchModePassRepository.delete;
+			PagedResult<@AchModePass> search(@AchModePassDTO aua);
+			PagedResult<@AchModePass> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject AchModePassDTO {
+			hint="for=search,entity=AchModePass"
+			String ampCode hint="" 
+			String ampName hint="" 
+		}
+		
+		DataTransferObject AchModePassMergeDTO {
+			hint="for=merge,entity=AchModePass"
+			String ampCode hint="" 
+			String ampName hint="" 
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchProgPrev{
+			databaseTable="ach_prog_prev"
+			hint="idSequence=appverp_gorp_hca_X"
+			
+			Long id    databaseColumn="app_id" 
+			String appCode length="24" nullable databaseColumn="app_code"  hint="visible=true,toString" 
+			String appName length="64" nullable databaseColumn="app_name"  hint="visible=true,toString" 
+			
+				- @ParExercice appPexId  databaseColumn="app_pex_id"  /*<-> idPexAppId*/  fetch="lazy" cascade="refresh"
+				- @ParOrdonateur appOrdId  databaseColumn="app_ord_id"  /*<-> idOrdAppId*/  fetch="lazy" cascade="refresh"  							
+			
+			Repository AchProgPrevRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchProgPrev> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchProgPrev> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchProgPrevService {
+			
+			findById => AchProgPrevRepository.findById;
+			findAll => AchProgPrevRepository.findAll;
+			save => AchProgPrevRepository.save;
+			delete => AchProgPrevRepository.delete;
+			PagedResult<@AchProgPrev> search(@AchProgPrevDTO aua);
+			PagedResult<@AchProgPrev> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject AchProgPrevDTO {
+			hint="for=search,entity=AchProgPrev"
+			String appCode hint="" 
+			String appName hint=""
+			String appPexId1 hint="ref=appPexId,view=ComboBox"
+			String appOrdId1 hint="ref=appOrdId,view=ComboBox" 
+		}
+		
+		DataTransferObject AchProgPrevMergeDTO {
+			hint="for=merge,entity=AchProgPrev"
+			String appCode hint="" 
+			String appName hint="" 
+			String appPexId hint="type=system,view=Search"
+			String appOrdId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity AchPublication{
+			databaseTable="ach_publication"
+			hint="idSequence=apbnoitacilbup_hca_X,noJsonIgnore=version"
+			
+			Long id    databaseColumn="apb_id" 
+			String apbType length="1" nullable databaseColumn="apb_type"  hint="visible=true,toString" 
+			String apbNumBord length="32" nullable databaseColumn="apb_num_bord"  hint="visible=true,toString" 
+			Date apbDateEnv  nullable databaseColumn="apb_date_env"  hint="visible=true,toString" 
+			String apbUrl length="128" nullable databaseColumn="apb_url" 
+			String apbIsPub length="1" nullable databaseColumn="apb_is_pub" 
+			Date apbDatePub  nullable databaseColumn="apb_date_pub" 
+			String apbRem length="256" nullable databaseColumn="apb_rem" 
+			String apbNumPub length="32" nullable databaseColumn="apb_num_pub" 
+			
+				- @AchDemPub apbAdpId  databaseColumn="apb_adp_id"  <-> idAdpApbId nullable fetch="lazy" cascade="refresh"
+				- @AchJournal apbAcjId  databaseColumn="apb_acj_id"  /*<-> idAcjApbId*/  nullable  fetch="lazy" cascade="refresh"
+				- @AchConcurent apbAccId  databaseColumn="apb_acc_id"  /*<-> idAccApbId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+			//- List<@AchAspPublication> idApbAapId <-> aapApbId
+			
+			Repository AchPublicationRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchPublication> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchPublication> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchPublicationService {
+			
+			findById => AchPublicationRepository.findById;
+			findAll => AchPublicationRepository.findAll;
+			save => AchPublicationRepository.save;
+			delete => AchPublicationRepository.delete;
+			PagedResult<@AchPublication> search(@AchPublicationDTO aua);
+			PagedResult<@AchPublication> findAll(PagingParameter pagingParameter);
+			
+			List<@AchPublication> findByApbType(String apbType) hint="gen,order=asc,prop=id,nullable";
+			List<@AchPublication> findByApbNumBord(String apbNumBord) hint="gen,order=asc,prop=id,nullable";
+			List<@AchPublication> findByApbDateEnv(Date apbDateEnv) hint="gen,order=asc,prop=id,nullable";
+			List<@AchPublication> findByApbUrl(String apbUrl) hint="gen,order=asc,prop=id,nullable";
+			List<@AchPublication> findByApbIsPub(String apbIsPub) hint="gen,order=asc,prop=id,nullable";
+			List<@AchPublication> findByApbDatePub(Date apbDatePub) hint="gen,order=asc,prop=id,nullable";
+			List<@AchPublication> findByApbRem(String apbRem) hint="gen,order=asc,prop=id,nullable";
+			List<@AchPublication> findByApbNumPub(String apbNumPub) hint="gen,order=asc,prop=id,nullable";
+			List<@AchPublication> findByApbAdpId(Long id) hint="gen,order=asc,prop=id,conditions=apbAdpId.id&$id,nullable";
+			List<@AchPublication> findByApbAcjId(Long id) hint="gen,order=asc,prop=id,conditions=apbAcjId.id&$id,nullable";
+		}
+		
+		DataTransferObject AchPublicationDTO {
+			hint="for=search,entity=AchPublication"
+			String apbType hint="" 
+			String apbNumBord hint="" 
+			String apbDateEnv hint=""
+			String apbNumPub hint="" 
+			String apbAdpId1 hint="ref=apbAdpId,view=ComboBox"
+			String apbAcjId1 hint="ref=apbAcjId,view=ComboBox"
+			String apbDatePub hint=""
+		}
+		
+		DataTransferObject AchPublicationMergeDTO {
+			hint="for=merge,entity=AchPublication"
+			String apbType hint="" 
+			String apbNumBord hint="" 
+			String apbDateEnv hint="" 
+			String apbUrl hint="" 
+			String apbIsPub hint="" 
+			String apbDatePub hint="" 
+			String apbRem hint="" 
+			String apbNumPub hint="" 
+			String apbAdpId hint="type=system,view=Search"
+			String apbAcjId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchSeancePv{
+			databaseTable="ach_seance_pv"
+			hint="idSequence=aspvp_ecnaes_hca_X,noJsonIgnore=version"
+			
+			Long id    databaseColumn="asp_id" 
+			Date aspDate  nullable databaseColumn="asp_date"  hint="" 
+			Date aspDateDem  nullable databaseColumn="asp_date_dem"  hint=""
+			Date aspDatePre  nullable databaseColumn="asp_date_pre"  hint=""
+			Date aspDatePub  nullable databaseColumn="asp_date_pub"  hint=""
+			Date aspDateLis  nullable databaseColumn="asp_date_lis"  hint=""
+			Date aspDateVer  nullable databaseColumn="asp_date_ver"  hint=""
+			Date aspDateOuv  nullable databaseColumn="asp_date_ouv"  hint=""
+			Date aspDateOff  nullable databaseColumn="asp_date_off"  hint=""
+			Date aspDateFin  nullable databaseColumn="asp_date_fin"  hint=""
+			String aspNum length="16" nullable databaseColumn="asp_num"  hint="" 
+			String aspLocal length="32" nullable databaseColumn="asp_local"  hint="" 
+			String aspEtat length="32" nullable databaseColumn="asp_etat"  hint="visible=true,toString" 
+			
+				- @AchAchat aspAchId  databaseColumn="asp_ach_id"  /*<-> idAchAspId*/  fetch="lazy" cascade="refresh" hint="visible=true,toString"						
+			
+			- List<@AchAspPresence> idAspAppId <-> appAspId
+			- List<@AchAspPublication> idAspAapId <-> aapAspId
+			- List<@AchAspReserve> idAspAreId <-> areAspId
+		    - List<@AchSoumission> idAspAsoId <-> asoAspId
+			- List<@AchSsCommission> idAspAscId <-> ascAspId
+			
+			
+			Repository AchSeancePvRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchSeancePv> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchSeancePv> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchSeancePvService {
+			
+			findById => AchSeancePvRepository.findById;
+			findAll => AchSeancePvRepository.findAll;
+			save => AchSeancePvRepository.save;
+			delete => AchSeancePvRepository.delete;
+			PagedResult<@AchSeancePv> search(@AchSeancePvDTO aua);
+			PagedResult<@AchSeancePv> findAll(PagingParameter pagingParameter);
+			
+			List<@AchSeancePv> findByAspDate(Date aspDate) hint="gen,order=asc,prop=id,nullable";
+			List<@AchSeancePv> findByAspNum(String aspNum) hint="gen,order=asc,prop=id,nullable";
+			List<@AchSeancePv> findByAspLocal(String aspLocal) hint="gen,order=asc,prop=id,nullable";
+			List<@AchSeancePv> findByAspEtat(String aspEtat) hint="gen,order=asc,prop=id,nullable";
+			List<@AchSeancePv> findByAspAchId(Long id) hint="gen,order=asc,prop=id,conditions=aspAchId.id&$id,nullable";
+		}
+		
+		DataTransferObject AchSeancePvDTO {
+			hint="for=search,entity=AchSeancePv"
+			String aspAchId1 hint="ref=aspAchId,view=ComboBox"			
+			String aspEtat hint=""
+			String aspDateDem hint=""
+			String aspDateOuv hint=""
+		}
+		
+		DataTransferObject AchSeancePvMergeDTO {
+			hint="for=merge,entity=AchSeancePv"
+			String aspAchId hint="type=system,view=Search"
+			String aspEtat  hint="type=enum,items=D&Demande:M&Presence:P&Publication:L&Lis:V&Ver:O&Ouv:F&Offre"  
+			String aspDateDem hint=""
+			String aspDatePre hint=""
+			String aspDatePub hint=""
+			String aspDateLis hint=""
+			String aspDateVer hint=""
+			String aspDateOuv hint=""
+			String aspDateOff hint=""
+			String aspDateFin hint=""
+			
+			String idAspAppId hint="type=system,view=InModal,tab=Presence"
+			String idAspAapId hint="type=system,view=InModal,tab=Publication"
+			String idAspAreId hint="type=system,view=InModal,tab=Reserve"
+			String idAspAsoId hint="type=system,view=InModal,tab=Soumission"
+			String idAspAscId hint="type=system,view=InModal,tab=SsCommission"
+			
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchSoumission{
+			databaseTable="ach_soumission"
+			hint="idSequence=asonoissimuos_hca_X"
+			
+			Long id    databaseColumn="aso" 
+			
+			String asoType length="1" nullable databaseColumn="aso_type"  
+			String asoStatus length="1" nullable databaseColumn="aso_status"  hint="visible=true,toString" 
+			String asoMotifElim length="264" nullable databaseColumn="aso_motif_elim"  hint="visible=true,toString" 
+			String asoReserve length="264" nullable databaseColumn="aso_reserve" 
+			BigDecimal asoMontant  nullable databaseColumn="aso_montant"
+			Date asoDate  nullable databaseColumn="aso_date"  
+			BigDecimal asoArchTaux  nullable databaseColumn="aso_arch_taux"
+			String asoEtat length="1" nullable databaseColumn="aso_etat"
+			
+				- @AchConcurent asoAcrId  databaseColumn="aso_acr_id"  /*<-> idAcrAsoId*/  fetch="lazy" cascade="refresh"	hint="visible=true"
+		        - @AchAchat asoAchId  databaseColumn="aso_ach_id"  /*<-> idAchAsoId*/  fetch="lazy" cascade="refresh" hint="visible=true"
+				- @AchSeancePv asoAspId  nullable databaseColumn="aso_asp_id"   <-> idAspAsoId  fetch="lazy" cascade="refresh"
+						
+			Repository AchSoumissionRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchSoumission> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchSoumission> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchSoumissionService {
+			
+			findById => AchSoumissionRepository.findById;
+			findAll => AchSoumissionRepository.findAll;
+			save => AchSoumissionRepository.save;
+			delete => AchSoumissionRepository.delete;
+			PagedResult<@AchSoumission> search(@AchSoumissionDTO aua);
+			PagedResult<@AchSoumission> findAll(PagingParameter pagingParameter);
+			
+			List<@AchSoumission> findByAsoType(String asoType) hint="gen,order=asc,prop=id,nullable";
+			List<@AchSoumission> findByAsoStatus(String asoStatus) hint="gen,order=asc,prop=id,nullable";
+			List<@AchSoumission> findByAsoMotifElim(String asoMotifElim) hint="gen,order=asc,prop=id,nullable";
+			List<@AchSoumission> findByAsoReserve(String asoReserve) hint="gen,order=asc,prop=id,nullable";
+			List<@AchSoumission> findByAsoMontant(BigDecimal asoMontant) hint="gen,order=asc,prop=id,nullable";
+			List<@AchSoumission> findByAsoAcrId(Long id) hint="gen,order=asc,prop=id,conditions=asoAcrId.id&$id,nullable";
+			@AchSoumission findByAsoAchId(@AchAchat asoAchId,String asoStatus) hint="gen,order=asc,prop=id,nullable";
+		  List<@AchSoumission> findByAsoAspId(Long id) hint="gen,order=asc,prop=id,conditions=asoAspId.id&$id,nullable";
+
+		}
+		
+		DataTransferObject AchSoumissionDTO {
+			hint="for=search,entity=AchSoumission"
+			
+			String asoDate hint=""
+			String asoAchId1 hint="ref=asoAchId,view=ComboBox"
+			String asoAcrId1 hint="ref=asoAcrId,view=ComboBox" 
+			String asoType hint="" 
+			String asoStatus hint="" 
+			//String asoMotifElim hint="" 
+		}
+		
+		DataTransferObject AchSoumissionMergeDTO {
+			hint="for=merge,entity=AchSoumission"
+			String asoAchId hint="type=system,view=ComboBox"
+			String asoAcrId hint="type=system,view=ComboBox"
+			String asoMontant hint=""
+			String asoMotifElim hint=""
+			String asoAspId hint="hidden"
+			String asoDate hint=""
+			//String asoType hint="" 
+			String asoStatus hint="type=boolean";
+			String asoEtat hint="type=boolean";
+			String asoArchTaux
+			//String asoReserve hint=""
+			//String asoAcrId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchSsCommission{
+			databaseTable="ach_ss_commission"
+			hint="idSequence=ascnoissimmoc_ss_hca_X"
+			
+			Long id    databaseColumn="asc_id" 
+			
+				- @AchSeancePv ascAspId  databaseColumn="asc_asp_id"  <-> idAspAscId  fetch="lazy" cascade="refresh" 
+				- @AchCommMember ascAcmId  databaseColumn="asc_acm_id"  /*<-> idAcmAscId*/  fetch="lazy" cascade="refresh"
+				
+			Repository AchSsCommissionRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchSsCommission> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchSsCommission> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchSsCommissionService {
+			
+			findById => AchSsCommissionRepository.findById;
+			findAll => AchSsCommissionRepository.findAll;
+			save => AchSsCommissionRepository.save;
+			delete => AchSsCommissionRepository.delete;
+			PagedResult<@AchSsCommission> search(@AchSsCommissionDTO aua);
+			PagedResult<@AchSsCommission> findAll(PagingParameter pagingParameter);
+			
+			List<@AchSsCommission> findByAscAspId(Long id) hint="gen,order=asc,prop=id,conditions=ascAspId.id&$id,nullable";
+			List<@AchSsCommission> findByAscAcmId(Long id) hint="gen,order=asc,prop=id,conditions=ascAcmId.id&$id,nullable";
+		}
+		
+		DataTransferObject AchSsCommissionDTO {
+			hint="for=search,entity=AchSsCommission"
+			String ascAspId1 hint="ref=ascAspId,view=ComboBox"
+			String ascAcmId1 hint="ref=ascAcmId,view=ComboBox"
+		}
+		
+		DataTransferObject AchSsCommissionMergeDTO {
+			hint="for=merge,entity=AchSsCommission"
+			String ascAspId hint="type=system,view=Search"
+			String ascAcmId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity AchSstypeDepense{
+			databaseTable="ach_sstype_depense"
+			hint="idSequence=astesneped_epytss_hca_X"
+			
+			Long id    databaseColumn="ast_id" 
+			String astCode length="24" nullable databaseColumn="ast_code"  hint="visible=true,toString" 
+			String astName length="256" nullable databaseColumn="ast_name"  hint="visible=true,toString" 
+			
+				- @AchTypeDepense astAtdId  databaseColumn="ast_atd_id"  <-> idAtdAstId  fetch="lazy" cascade="refresh"  							
+			
+			//- List<@AchAchat> idAstAchId <-> achAstId
+			
+			Repository AchSstypeDepenseRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchSstypeDepense> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchSstypeDepense> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchSstypeDepenseService {
+			
+			findById => AchSstypeDepenseRepository.findById;
+			findAll => AchSstypeDepenseRepository.findAll;
+			save => AchSstypeDepenseRepository.save;
+			delete => AchSstypeDepenseRepository.delete;
+			PagedResult<@AchSstypeDepense> search(@AchSstypeDepenseDTO aua);
+			PagedResult<@AchSstypeDepense> findAll(PagingParameter pagingParameter);
+			
+			List<@AchSstypeDepense> findByAstCode(String astCode) hint="gen,order=asc,prop=id,nullable";
+			List<@AchSstypeDepense> findByAstName(String astName) hint="gen,order=asc,prop=id,nullable";
+			List<@AchSstypeDepense> findByAstAtdId(Long id) hint="gen,order=asc,prop=id,conditions=astAtdId.id&$id,nullable";
+		}
+		
+		DataTransferObject AchSstypeDepenseDTO {
+			hint="for=search,entity=AchSstypeDepense"
+			String astCode hint="" 
+			String astName hint="" 
+		}
+		
+		DataTransferObject AchSstypeDepenseMergeDTO {
+			hint="for=merge,entity=AchSstypeDepense"
+			String astCode hint="" 
+			String astName hint="" 
+			String astAtdId hint="type=system,view=ComboBox"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity AchTypeDepense{
+			databaseTable="ach_type_depense"
+			hint="idSequence=atdesneped_epyt_hca_X"
+			
+			Long id    databaseColumn="atd_id" 
+			String atdCode length="24" nullable databaseColumn="atd_code"  hint="visible=true,toString" 
+			String atdName length="64" nullable databaseColumn="atd_name"  hint="visible=true,toString" 
+			
+			//- List<@AchAchat> idAtdAchId <-> achAtdId
+			- List<@AchSstypeDepense> idAtdAstId <-> astAtdId
+			
+			Repository AchTypeDepenseRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchTypeDepense> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchTypeDepense> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchTypeDepenseService {
+			
+			findById => AchTypeDepenseRepository.findById;
+			findAll => AchTypeDepenseRepository.findAll;
+			save => AchTypeDepenseRepository.save;
+			delete => AchTypeDepenseRepository.delete;
+			PagedResult<@AchTypeDepense> search(@AchTypeDepenseDTO aua);
+			PagedResult<@AchTypeDepense> findAll(PagingParameter pagingParameter);
+			
+			List<@AchTypeDepense> findByAtdCode(String atdCode) hint="gen,order=asc,prop=id,nullable";
+			List<@AchTypeDepense> findByAtdName(String atdName) hint="gen,order=asc,prop=id,nullable";
+		}
+		
+		DataTransferObject AchTypeDepenseDTO {
+			hint="for=search,entity=AchTypeDepense"
+			String atdCode hint="" 
+			String atdName hint="" 
+		}
+		
+		DataTransferObject AchTypeDepenseMergeDTO {
+			hint="for=merge,entity=AchTypeDepense"
+			String atdCode hint="" 
+			String atdName hint="" 
+		}
+		
+		//----------------------------------------------------------------------------------------------------------/
+				
+		Entity AchTypeDoc{
+			databaseTable="ach_type_doc"
+			hint="idSequence=atdcod_epyt_hca_X"
+			
+			Long id    databaseColumn="atd_id" 
+			String atdCode length="24" nullable databaseColumn="atd_code"  hint="visible=true,toString" 
+			String atdName length="64" nullable databaseColumn="atd_name"  hint="visible=true,toString" 
+			
+			
+			Repository AchTypeDocRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchTypeDoc> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchTypeDoc> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchTypeDocService {
+			
+			findById => AchTypeDocRepository.findById;
+			findAll => AchTypeDocRepository.findAll;
+			save => AchTypeDocRepository.save;
+			delete => AchTypeDocRepository.delete;
+			PagedResult<@AchTypeDoc> search(@AchTypeDocDTO aua);
+			PagedResult<@AchTypeDoc> findAll(PagingParameter pagingParameter);
+			
+			List<@AchTypeDoc> findByAtdCode(String atdCode) hint="gen,order=asc,prop=id,nullable";
+			List<@AchTypeDoc> findByAtdName(String atdName) hint="gen,order=asc,prop=id,nullable";
+		}
+		
+		DataTransferObject AchTypeDocDTO {
+			hint="for=search,entity=AchTypeDoc"
+			String atdCode hint="" 
+			String atdName hint="" 
+		}
+		
+		DataTransferObject AchTypeDocMergeDTO {
+			hint="for=merge,entity=AchTypeDoc"
+			String atdCode hint="" 
+			String atdName hint="" 
+		}
+	//-----------------------------------------------------------------------------------------------------------
+	//-----------------------------------------------------------------------------------------------------------		
+		Entity AchTypBen{
+			databaseTable="ach_typ_ben"
+			hint="idSequence=atbneb_pyt_hca_X"
+			
+			Long id    databaseColumn="atb_id" 
+			String atbCode length="24" nullable databaseColumn="atb_code"  hint="visible=true,toString" 
+			String atbName length="64" nullable databaseColumn="atb_name"  hint="visible=true,toString" 
+			
+			
+			Repository AchTypBenRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchTypBen> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchTypBen> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchTypBenService {
+			
+			findById => AchTypBenRepository.findById;
+			findAll => AchTypBenRepository.findAll;
+			save => AchTypBenRepository.save;
+			delete => AchTypBenRepository.delete;
+			PagedResult<@AchTypBen> search(@AchTypBenDTO aua);
+			PagedResult<@AchTypBen> findAll(PagingParameter pagingParameter);
+			
+			List<@AchTypBen> findByAtbCode(String atbCode) hint="gen,order=asc,prop=id,nullable";
+			List<@AchTypBen> findByAtbName(String atbName) hint="gen,order=asc,prop=id,nullable";
+		}
+		
+		DataTransferObject AchTypBenDTO {
+			hint="for=search,entity=AchTypBen"
+			String atbCode hint="" 
+			String atbName hint="" 
+		}
+		
+		DataTransferObject AchTypBenMergeDTO {
+			hint="for=merge,entity=AchTypBen"
+			String atbCode hint="" 
+			String atbName hint="" 
+		}
+		
+		//-----------------------------------------------------------------------------------------------
+		
+		Entity AchAchatBord{
+			databaseTable="ach_achat_bord"
+			hint="idSequence=aabdrob_tahca_hca_X"
+			
+			Long id    databaseColumn="aab_id" 
+			String aabName length="64" nullable databaseColumn="aab_name"  hint="visible=true,toString" 
+			String aabUser length="64" nullable databaseColumn="aab_user"  hint="visible=true,toString" 
+			Date aabDate  nullable databaseColumn="aab_date"  hint="visible=true,toString" 
+			String aabDoc  nullable databaseColumn="aab_doc" 
+			
+				- @AchAchat aabAchId  databaseColumn="aab_ach_id"  /*<-> idAchAabId*/  fetch="lazy" cascade="refresh"  							
+			
+				- @AchBordType aabAbtId  databaseColumn="aab_abt_id"  /*<-> idAbtAabId*/  fetch="lazy" cascade="refresh"  							
+			
+			//- List<@AchBordDet> idAabAbdId <-> abdAabId
+			
+			Repository AchAchatBordRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchAchatBord> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchAchatBord> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchAchatBordService {
+			
+			findById => AchAchatBordRepository.findById;
+			findAll => AchAchatBordRepository.findAll;
+			save => AchAchatBordRepository.save;
+			delete => AchAchatBordRepository.delete;
+			PagedResult<@AchAchatBord> search(@AchAchatBordDTO aua);
+			PagedResult<@AchAchatBord> findAll(PagingParameter pagingParameter);
+			
+			List<@AchAchatBord> findByAabName(String aabName) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchatBord> findByAabUser(String aabUser) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchatBord> findByAabDate(Date aabDate) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchatBord> findByAabDoc(String aabDoc) hint="gen,order=asc,prop=id,nullable";
+			List<@AchAchatBord> findByAabAchId(Long id) hint="gen,order=asc,prop=id,conditions=aabAchId.id&$id,nullable";
+			List<@AchAchatBord> findByAabAbtId(Long id) hint="gen,order=asc,prop=id,conditions=aabAbtId.id&$id,nullable";
+		}
+		
+		DataTransferObject AchAchatBordDTO {
+			hint="for=search,entity=AchAchatBord"
+			String aabName hint="" 
+			String aabUser hint="" 
+			String aabDate hint=""
+			String aabAchId1 hint="ref=aabAchId,view=ComboBox"
+			String aabAbtId1 hint="ref=aabAbtId,view=ComboBox" 
+		}
+		
+		DataTransferObject AchAchatBordMergeDTO {
+			hint="for=merge,entity=AchAchatBord"
+			String aabName hint="" 
+			String aabUser hint="" 
+			String aabDate hint="" 
+			String aabDoc hint="" 
+			String aabAchId hint="type=system,view=Search"
+			String aabAbtId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity AchBordDet{
+			databaseTable="ach_bord_det"
+			hint="idSequence=abdted_drob_hca_X"
+			
+			Long id    databaseColumn="abd_id" 
+			String abdCNum length="45" nullable databaseColumn="abd_c_num"  hint="visible=true,toString" 
+			String abdCArticle length="45" nullable databaseColumn="abd_c_article"  hint="visible=true,toString" 
+			String abdCUnit length="45" nullable databaseColumn="abd_c_unit"  hint="visible=true,toString" 
+			BigDecimal abdCUnitPrice  nullable databaseColumn="abd_c_unit_price" 
+			String abdDNum length="45" nullable databaseColumn="abd_d_num" 
+			String abdDPres length="45" nullable databaseColumn="abd_d_pres" 
+			String abdDUnit length="45" nullable databaseColumn="abd_d_unit" 
+			String abdDAmt length="45" nullable databaseColumn="abd_d_amt" 
+			BigDecimal abdDUnitPrice  nullable databaseColumn="abd_d_unit_price" 
+			String abdBNum length="45" nullable databaseColumn="abd_b_num" 
+			String abdBPres length="45" nullable databaseColumn="abd_b_pres" 
+			String abdBUnit length="45" nullable databaseColumn="abd_b_unit" 
+			BigDecimal abdBUnitPrice  nullable databaseColumn="abd_b_unit_price" 
+			String abdENum length="45" nullable databaseColumn="abd_e_num" 
+			String abdEPres length="45" nullable databaseColumn="abd_e_pres" 
+			String abdEUnit length="45" nullable databaseColumn="abd_e_unit" 
+			String abdEAmt length="45" nullable databaseColumn="abd_e_amt" 
+			BigDecimal abdEUnitPrice  nullable databaseColumn="abd_e_unit_price" 
+			BigDecimal abdDTotalPrice  nullable databaseColumn="abd_d_total_price" 
+			BigDecimal abdETotalPrice  nullable databaseColumn="abd_e_total_price" 
+			String abdFNum length="45" nullable databaseColumn="abd_f_num" 
+			String abdFPres length="45" nullable databaseColumn="abd_f_pres" 
+			BigDecimal abdFIncPrice  nullable databaseColumn="abd_f_inc_price" 
+			String abdGNum length="45" nullable databaseColumn="abd_g_num" 
+			String abdGPres length="45" nullable databaseColumn="abd_g_pres" 
+			BigDecimal abdGIncAmt  nullable databaseColumn="abd_g_inc_amt" 
+			BigDecimal abdGIncPrice  nullable databaseColumn="abd_g_inc_price" 
+			BigDecimal abdGTotalPrice  nullable databaseColumn="abd_g_total_price" 
+			String abdHNum length="45" nullable databaseColumn="abd_h_num" 
+			BigDecimal abdHMatSuppAmt  nullable databaseColumn="abd_h_mat_supp_amt" 
+			String abdHLabor length="45" nullable databaseColumn="abd_h_labor" 
+			BigDecimal abdHHardOperCost  nullable databaseColumn="abd_h_hard_oper_cost" 
+			BigDecimal abdHGenCost  nullable databaseColumn="abd_h_gen_cost" 
+			BigDecimal abdHTaxes  nullable databaseColumn="abd_h_taxes" 
+			BigDecimal abdHMarges  nullable databaseColumn="abd_h_marges" 
+			BigDecimal abdHTotal  nullable databaseColumn="abd_h_total" 
+			
+				- @AchAchatBord abdAabId  databaseColumn="abd_aab_id"  /*<-> idAabAbdId*/  fetch="lazy" cascade="refresh"
+			
+			Repository AchBordDetRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchBordDet> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchBordDet> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchBordDetService {
+			
+			findById => AchBordDetRepository.findById;
+			findAll => AchBordDetRepository.findAll;
+			save => AchBordDetRepository.save;
+			delete => AchBordDetRepository.delete;
+			PagedResult<@AchBordDet> search(@AchBordDetDTO aua);
+			PagedResult<@AchBordDet> findAll(PagingParameter pagingParameter);
+			
+			List<@AchBordDet> findByAbdCNum(String abdCNum) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdCArticle(String abdCArticle) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdCUnit(String abdCUnit) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdCUnitPrice(BigDecimal abdCUnitPrice) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdDNum(String abdDNum) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdDPres(String abdDPres) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdDUnit(String abdDUnit) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdDAmt(String abdDAmt) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdDUnitPrice(BigDecimal abdDUnitPrice) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdBNum(String abdBNum) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdBPres(String abdBPres) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdBUnit(String abdBUnit) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdBUnitPrice(BigDecimal abdBUnitPrice) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdENum(String abdENum) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdEPres(String abdEPres) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdEUnit(String abdEUnit) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdEAmt(String abdEAmt) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdEUnitPrice(BigDecimal abdEUnitPrice) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdDTotalPrice(BigDecimal abdDTotalPrice) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdETotalPrice(BigDecimal abdETotalPrice) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdFNum(String abdFNum) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdFPres(String abdFPres) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdFIncPrice(BigDecimal abdFIncPrice) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdGNum(String abdGNum) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdGPres(String abdGPres) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdGIncAmt(BigDecimal abdGIncAmt) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdGIncPrice(BigDecimal abdGIncPrice) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdGTotalPrice(BigDecimal abdGTotalPrice) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdHNum(String abdHNum) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdHMatSuppAmt(BigDecimal abdHMatSuppAmt) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdHLabor(String abdHLabor) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdHHardOperCost(BigDecimal abdHHardOperCost) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdHGenCost(BigDecimal abdHGenCost) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdHTaxes(BigDecimal abdHTaxes) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdHMarges(BigDecimal abdHMarges) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdHTotal(BigDecimal abdHTotal) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordDet> findByAbdAabId(Long id) hint="gen,order=asc,prop=id,conditions=abdAabId.id&$id,nullable";
+		}
+		
+		DataTransferObject AchBordDetDTO {
+			hint="for=search,entity=AchBordDet"
+			String abdCNum hint="" 
+			String abdCArticle hint="" 
+			String abdDNum hint="" 
+			String abdDPres hint=""
+			String abdENum hint="" 
+			String abdEPres hint="" 
+		}
+		
+		DataTransferObject AchBordDetMergeDTO {
+			hint="for=merge,entity=AchBordDet"
+			String abdCNum hint="" 
+			String abdCArticle hint="" 
+			String abdCUnit hint="" 
+			String abdCUnitPrice hint="" 
+			String abdDNum hint="" 
+			String abdDPres hint="" 
+			String abdDUnit hint="" 
+			String abdDAmt hint="" 
+			String abdDUnitPrice hint="" 
+			String abdBNum hint="" 
+			String abdBPres hint="" 
+			String abdBUnit hint="" 
+			String abdBUnitPrice hint="" 
+			String abdENum hint="" 
+			String abdEPres hint="" 
+			String abdEUnit hint="" 
+			String abdEAmt hint="" 
+			String abdEUnitPrice hint="" 
+			String abdDTotalPrice hint="" 
+			String abdETotalPrice hint="" 
+			String abdFNum hint="" 
+			String abdFPres hint="" 
+			String abdFIncPrice hint="" 
+			String abdGNum hint="" 
+			String abdGPres hint="" 
+			String abdGIncAmt hint="" 
+			String abdGIncPrice hint="" 
+			String abdGTotalPrice hint="" 
+			String abdHNum hint="" 
+			String abdHMatSuppAmt hint="" 
+			String abdHLabor hint="" 
+			String abdHHardOperCost hint="" 
+			String abdHGenCost hint="" 
+			String abdHTaxes hint="" 
+			String abdHMarges hint="" 
+			String abdHTotal hint="" 
+			String abdAabId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity AchBordType{
+			databaseTable="ach_bord_type"
+			hint="idSequence=abtepyt_drob_hca_X"
+			
+			Long id    databaseColumn="abt_id" 
+			String abtCode length="32" nullable databaseColumn="abt_code"  hint="visible=true,toString" 
+			String abtName length="32" nullable databaseColumn="abt_name"  hint="visible=true,toString" 
+			String abtDesc length="256" nullable databaseColumn="abt_desc"  hint="visible=true,toString" 
+			
+			//- List<@AchAchatBord> idAbtAabId <-> aabAbtId
+			
+			Repository AchBordTypeRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchBordType> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchBordType> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchBordTypeService {
+			
+			findById => AchBordTypeRepository.findById;
+			findAll => AchBordTypeRepository.findAll;
+			save => AchBordTypeRepository.save;
+			delete => AchBordTypeRepository.delete;
+			PagedResult<@AchBordType> search(@AchBordTypeDTO aua);
+			PagedResult<@AchBordType> findAll(PagingParameter pagingParameter);
+			
+			List<@AchBordType> findByAbtCode(String abtCode) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordType> findByAbtName(String abtName) hint="gen,order=asc,prop=id,nullable";
+			List<@AchBordType> findByAbtDesc(String abtDesc) hint="gen,order=asc,prop=id,nullable";
+		}
+		
+		DataTransferObject AchBordTypeDTO {
+			hint="for=search,entity=AchBordType"
+			String abtCode hint="" 
+			String abtName hint="" 
+			String abtDesc hint="" 
+		}
+		
+		DataTransferObject AchBordTypeMergeDTO {
+			hint="for=merge,entity=AchBordType"
+			String abtCode hint="" 
+			String abtName hint="" 
+			String abtDesc hint="" 
+		}
+	
+		
+		
+		Entity AchAchatAvenant{
+			databaseTable="ach_achat_avenant"
+			hint="idSequence=eva_achtahca_hca_X,noJsonIgnore=version"
+			
+			Long id    databaseColumn="ach_id" 
+			String achNumAvenant length="64" nullable databaseColumn="ach_num_avenant"  hint="visible=true,toString" 
+			String achLoiFin length="24" nullable databaseColumn="ach_loi_fin"  hint="visible=true,toString" 
+			Date achDateEff  nullable databaseColumn="ach_date_eff"  hint="visible=true" 
+			String achObjet length="250" nullable databaseColumn="ach_objet"   hint="visible=true" 
+			String achSomVal length="1" nullable databaseColumn="ach_som_val" 
+			String achBenif length="1" nullable databaseColumn="ach_benif"
+			String achModRegl length="1" nullable databaseColumn="ach_mod_regl"
+			String achDelai length="1" nullable databaseColumn="ach_delai"
+			String achBord length="1" nullable databaseColumn="ach_bord"
+			String achErrMat length="1" nullable databaseColumn="ach_err_mat"
+			
+			
+			- @AchAchat achAchId  databaseColumn="ach_ach_id"  <-> idAchAvnId nullable fetch="lazy" cascade="refresh"  							
+			
+				
+			String achSomValAct length="24" nullable databaseColumn="ach_som_val_act" 
+			String achBenifAct length="24" nullable databaseColumn="ach_benif_act"
+			String achModReglAct length="24" nullable databaseColumn="ach_mod_regl_act"
+			String achDelaiAct length="24" nullable databaseColumn="ach_delai_act"
+			String achBordAct length="24" nullable databaseColumn="ach_bord_act"
+			String achErrMatAct length="24" nullable databaseColumn="ach_err_mat_act"
+			
+			String achSomValMod length="24" nullable databaseColumn="ach_som_val_mod" 
+			String achBenifMod length="24" nullable databaseColumn="ach_benif_mod"
+			String achModReglMod length="24" nullable databaseColumn="ach_mod_regl_mod"
+			String achDelaiMod length="24" nullable databaseColumn="ach_delai_mod"
+			String achBordMod length="24" nullable databaseColumn="ach_bord_mod"
+			String achErrMatMod length="24" nullable databaseColumn="ach_err_mat_mod"
+			
+			String achNumDecision length="64" nullable databaseColumn="ach_num_decision"  hint="visible=true" 
+			String achMotifAug length="300" nullable databaseColumn="ach_motif_aug"  hint="visible=true" 
+			String achAvenantType length="1" nullable databaseColumn="ach_avenant_type"  hint="visible=true" 
+			
+			- List<@AchAchatLot> idAvnAloId <-> aloAvnId
+			
+			Repository AchAchatAvenantRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchAchatAvenant> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchAchatAvenant> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service AchAchatAvenantService {
+			
+			findById => AchAchatAvenantRepository.findById;
+			findAll => AchAchatAvenantRepository.findAll;
+			save => AchAchatAvenantRepository.save;
+			delete => AchAchatAvenantRepository.delete;
+			PagedResult<@AchAchatAvenant> search(@AchAchatAvenantDTO aua);
+			PagedResult<@AchAchatAvenant> findAll(PagingParameter pagingParameter);			
+		}
+		
+		DataTransferObject AchAchatAvenantDTO {
+			hint="for=search,entity=AchAchatAvenant"
+			String achNumAvenant
+			String achLoiFin
+			String achDateEff
+			String achObjet 
+			String achSomVal
+			String achBenif 
+			String achModRegl
+			String achDelai 
+			String achBord 
+			String achErrMat
+		}
+		
+		DataTransferObject AchAchatAvenantMergeDTO {
+			hint="for=merge,entity=AchAchatAvenant"
+			String achAchId hint="type=system,view=ComboBox"
+			String achNumAvenant
+			String achLoiFin
+			String achDateEff
+			String achObjet 
+			String achSomVal hint="type=enum,items=M&Modifiee:N&Non modifie" 
+			String achBenif  hint="type=enum,items=M&Modifiee:N&Non modifie" 
+			String achModRegl hint="type=enum,items=M&Modifiee:N&Non modifie" 
+			String achDelai  hint="type=enum,items=M&Modifiee:N&Non modifie" 
+			String achBord  hint="type=enum,items=M&Modifiee:N&Non modifie" 
+			String achErrMat hint="type=enum,items=M&Modifiee:N&Non modifie" 
+						
+			String achSomValAct
+			String achBenifAct
+			String achModReglAct
+			String achDelaiAct
+			String achBordAct
+			String achErrMatAct
+			
+			String achSomValMod
+			String achBenifMod
+			String achModReglMod
+			String achDelaiMod
+			String achBordMod
+			String achErrMatMod
+			String achNumDecision
+			String achMotifAug
+			String achAvenantType hint="type=enum,items=H&Hors Bordereaux:A&Augmentation" 
+		}
+		
+		Entity AchDelaiPhase{
+			databaseTable="ach_delai_phase"
+			hint="idSequence=phaedb_hca_X"
+			
+			Long id    databaseColumn="pha_id" 
+			
+			String phaLabel length="256"  databaseColumn="pha_label"  hint="visible=true,toString" 
+			Integer phaDelaiExe  nullable databaseColumn="pha_delai_exe" 
+			String phaDelaiUnit length="1" nullable databaseColumn="pha_delai_unit" 
+			BigDecimal phaMontant  nullable databaseColumn="pha_montant"
+			
+			
+				- @AchAchat phaAchId  databaseColumn="pha_ach_id"  <-> idAchPhaId  fetch="lazy" cascade="refresh"
+			
+			Repository AchDelaiPhaseRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchDelaiPhase> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchDelaiPhase> findByCondition(PagingParameter pagingParameter);
+				List<@AchDelaiPhase> findByAchId(Long id) condition="phaAchId.id = :id";
+			}
+			
+		}
+		
+		Service AchDelaiPhaseService {
+			
+			findById => AchDelaiPhaseRepository.findById;
+			findAll => AchDelaiPhaseRepository.findAll;
+			save => AchDelaiPhaseRepository.save;
+			delete => AchDelaiPhaseRepository.delete;
+			PagedResult<@AchDelaiPhase> search(@AchDelaiPhaseDTO aua);
+			PagedResult<@AchDelaiPhase> findAll(PagingParameter pagingParameter);
+			List<@AchDelaiPhase> findByAchId(Long id)=> AchDelaiPhaseRepository.findByAchId;			
+		}
+		
+		DataTransferObject AchDelaiPhaseDTO {
+			hint="for=search,entity=AchDelaiPhase"			
+		}
+		
+		DataTransferObject AchDelaiPhaseMergeDTO {
+			hint="for=merge,entity=AchDelaiPhase"
+			String phaLabel hint="" 
+			String phaDelaiUnit hint="" 
+			String phaDelaiExe hint=""
+			String phaMontant 			
+			String phaAchId hint="type=system,view=ComboBox"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity AchPrestations{
+			databaseTable="ach_prestations"
+			hint="idSequence=presdb_hca_X"
+			
+			Long id    databaseColumn="pres_id" 
+			
+				- @PlaCreditPrs presCprId  databaseColumn="pres_cpr_id"  /*<-> idCprAchId*/ nullable fetch="lazy" cascade="refresh"  							
+				- @BudMorassePres presMprId  databaseColumn="pres_mpr_id"  /*<-> idCprAchId*/ nullable fetch="lazy" cascade="refresh"  							
+				- @AchAchat presAchId  databaseColumn="pres_ach_id"  <-> idAchPresId  fetch="lazy" cascade="refresh"
+				- @PlaCreditOp presCopId  databaseColumn="pres_cop_id"  /*<-> idCopAchId*/ nullable fetch="lazy" cascade="refresh"  										
+				- @BudMorasseOp presMopId  databaseColumn="pres_mop_id"  /*<-> idMopAchId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+			
+			Repository AchPrestationsRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@AchPrestations> findAll(PagingParameter pagingParameter);
+				PagedResult<@AchPrestations> findByCondition(PagingParameter pagingParameter);
+				List<@AchPrestations> findByAchId(Long id) condition="presAchId.id = :id";
+				List<@AchPrestations> findByCopCpjId(Long cpjId) condition="presCopId.copCpjId.id = :cpjId";
+			}
+			
+		}
+		
+		Service AchPrestationsService {
+			
+			findById => AchPrestationsRepository.findById;
+			findAll => AchPrestationsRepository.findAll;
+			save => AchPrestationsRepository.save;
+			delete => AchPrestationsRepository.delete;
+			PagedResult<@AchPrestations> search(@AchPrestationsDTO aua);
+			PagedResult<@AchPrestations> findAll(PagingParameter pagingParameter);	
+			List<@AchPrestations> findByAchId(Long id)=> AchPrestationsRepository.findByAchId;			
+			List<@AchPrestations> findByCopCpjId(Long cpjId)=> AchPrestationsRepository.findByCopCpjId;	
+		}
+		
+		DataTransferObject AchPrestationsDTO {
+			hint="for=search,entity=AchPrestations"			
+		}
+		
+		DataTransferObject AchPrestationsMergeDTO {
+			hint="for=merge,entity=AchPrestations"			
+			String presCprId hint="type=system,view=ComboBox"
+			String presMprId hint="type=system,view=ComboBox"
+			String presAchId hint="type=system,view=ComboBox"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+	
+	}
+	
+	
+}

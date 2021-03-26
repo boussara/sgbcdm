@@ -1,0 +1,1916 @@
+package ma.brs.easyatm.monResources.rest;
+
+import java.math.BigDecimal;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.log4j.Logger;
+import org.sculptor.framework.accessapi.ConditionalCriteriaBuilder;
+import org.sculptor.framework.accessapi.ConditionalCriteriaBuilder.ConditionRoot;
+import org.sculptor.framework.context.ServiceContext;
+import org.sculptor.framework.context.ServiceContextStore;
+import org.sculptor.framework.domain.PagedResult;
+import org.sculptor.framework.domain.PagingParameter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.remoting.rmi.RmiProxyFactoryBean;
+import org.springframework.security.core.Authentication;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import ma.brs.common.menu.DBMenuManager;
+import ma.brs.easyatm.adm.serviceapi.AdmAppFunctionService;
+import ma.brs.easyatm.common.sec.EatmUser;
+import ma.brs.easyatm.core.interfaces.INeInfo;
+import ma.brs.easyatm.ejr.serviceapi.EjrCassetteService;
+import ma.brs.easyatm.ejr.serviceapi.EjrDeviceService;
+//import ma.brs.easyatm.core.XFSIM;
+import ma.brs.easyatm.mon.domain.MonIssue;
+import ma.brs.easyatm.mon.domain.MonIssueProperties;
+import ma.brs.easyatm.mon.domain.MonNeDevice;
+import ma.brs.easyatm.mon.domain.MonNeDeviceProperties;
+import ma.brs.easyatm.mon.domain.MonNeSubdevice;
+import ma.brs.easyatm.mon.domain.MonPlaHasNe;
+import ma.brs.easyatm.mon.domain.MonPlannedAct;
+import ma.brs.easyatm.mon.domain.MonServiceClass;
+import ma.brs.easyatm.mon.serviceapi.DeviceStateEnum;
+import ma.brs.easyatm.mon.serviceapi.MonIssueDTO;
+import ma.brs.easyatm.mon.serviceapi.MonIssueService;
+import ma.brs.easyatm.mon.serviceapi.MonNeDeviceService;
+import ma.brs.easyatm.mon.serviceapi.MonNeSubdeviceService;
+import ma.brs.easyatm.mon.serviceapi.MonPlaHasNeService;
+import ma.brs.easyatm.mon.serviceapi.MonServiceClassService;
+import ma.brs.easyatm.mon.serviceapi.MonXfsValLanService;
+import ma.brs.easyatm.mon.serviceapi.MonXfsValueService;
+/*import ma.brs.easyatm.mon.serviceimpl.sys.SysCpuManager;
+import ma.brs.easyatm.mon.serviceimpl.sys.SysPingManager;
+import ma.brs.easyatm.mon.serviceimpl.sys.SysRamManager;
+import ma.brs.easyatm.mon.serviceimpl.sys.SysStoManager;
+import ma.brs.easyatm.mon.serviceimpl.sys.SysSystemManager;
+import ma.brs.easyatm.mon.serviceimpl.xfs.XfsSstNe;
+import ma.brs.easyatm.mon.serviceimpl.xfs.devices.XfsSstDevice;
+import ma.brs.easyatm.mon.serviceimpl.xfs.subdev.XfsSstSubDevice;*/
+import ma.brs.easyatm.par.domain.ParEntity;
+import ma.brs.easyatm.par.serviceapi.ParEntityService;
+import ma.brs.easyatm.snmp.domain.XfsSstCdmDTO;
+import ma.brs.easyatm.snmp.domain.XfsSstIdcDTO;
+import ma.brs.easyatm.snmp.domain.XfsSstPinDTO;
+import ma.brs.easyatm.snmp.domain.XfsSstPtrDTO;
+import ma.brs.easyatm.snmp.domain.XfsSstSiuDTO;
+import ma.brs.easyatm.snmp.domain.XfsSstTtuDTO;
+import ma.brs.easyatm.snmp.domain.xfs.status.XfsGenValuesDTO;
+import ma.brs.easyatm.snmp.domain.xfs.subdev.XfsSstSubDeviceDTO;
+import ma.brs.easyatm.snmp.domain.xfs.subdev.spec.XfsSstCdmSubDeviceDTO;
+import ma.brs.easyatm.sys.domain.SysCpu;
+import ma.brs.easyatm.sys.domain.SysRam;
+import ma.brs.easyatm.sys.domain.SysStorage;
+import ma.brs.easyatm.sys.domain.SysSystem;
+import ma.brs.easyatm.sys.serviceapi.SysStorageService;
+import ma.brs.easyatm.sys.serviceapi.SysSystemService;
+import ma.brs.easyatm.top.domain.TopNe;
+import ma.brs.easyatm.top.serviceapi.TopNeService;
+
+@Controller
+@RequestMapping("/monitoring/neinfos")
+
+public class NeInfosController {
+
+	private static final Logger logger = Logger.getLogger(NeInfosController.class);
+
+	int fsize = 0;
+
+	/*@Autowired
+	private XFSIM xFSIM;*/
+	
+	//@Autowired
+	private INeInfo iNeInfo=null;
+
+	@Autowired
+	private DBMenuManager dBMenuManager;
+
+	@Autowired
+	private TopNeService topNeService;
+
+	@Autowired
+	private MonNeDeviceService monNeDeviceService;
+	
+	@Autowired
+	private MonNeSubdeviceService monNeSubdeviceService;
+
+	@Autowired
+	private MonServiceClassService monServiceClassService;
+	
+	@Autowired
+	private MonXfsValueService monXfsValueService;
+	
+	@Autowired
+	private MonXfsValLanService monXfsValLanService;
+
+	@Autowired
+	private MonIssueService monIssueService;
+
+	@Autowired
+	private MonPlaHasNeService monPlaHasNeService;
+
+	@Autowired
+	private SysSystemService sysSystemService;
+
+	@Autowired
+	private SysStorageService sysStorageService;
+
+	@Autowired
+	private ParEntityService parEntityService;
+	
+	@Autowired
+	private EjrCassetteService ejrCassetteService;
+	
+	@Autowired
+	private EjrDeviceService ejrDeviceService;
+	
+	public NeInfosController() {
+		super();		
+		
+	}
+	
+	
+	
+	
+	public INeInfo getiNeInfo() {
+		
+		String ip="192.168.2.92";
+		
+		
+		String port="1199";
+		
+		
+		String app="EasyAtm-snmp";
+					
+		if(iNeInfo==null){
+			RmiProxyFactoryBean bean=new RmiProxyFactoryBean();
+			bean.setLookupStubOnStartup(false);
+			bean.setRefreshStubOnConnectFailure(true);
+			bean.setServiceInterface(INeInfo.class);
+			bean.setServiceUrl("rmi://"+ ip +":"+ port +"/"+ app +"/NeInfo");	        
+			bean.afterPropertiesSet();
+			if(bean!=null)
+				iNeInfo=(INeInfo)bean.getObject();
+		}
+        			
+		return iNeInfo;
+	}
+
+	@RequestMapping(value = "/nesum/{neId}", method = RequestMethod.GET)
+	public String neSummary(@PathVariable("neId") Long neId, ModelMap uiModel, Authentication authentication) {
+
+		uiModel.addAttribute("menuitem", module());
+		
+		TopNe ne = null;
+
+		ne = topNeService.findById(serviceContext(), neId, "");
+		if (ne == null) {
+			return "error";
+		}
+
+		EatmUser user = (EatmUser) authentication.getPrincipal();
+		
+		boolean nullPropertie = (ne.getNeRegId()==null  || ne.getNeBanId()==null || ne.getNeMrkId()==null);
+		
+		if (nullPropertie ) {
+			String errorMessage = "null  ";
+			if( ne.getNeRegId()==null ){
+				errorMessage+="|reg";
+			}
+			if( ne.getNeBanId()==null ){
+				errorMessage+="|ban";
+			}
+			if(ne.getNeMrkId()==null){
+				errorMessage+="|Mrk";
+			}
+			
+			uiModel.addAttribute("errorMessage", errorMessage);
+			return "error";
+		}
+		
+		/*boolean userHasNeAuth = (user.getRegions().contains(ne.getNeRegId().getId()) 
+				&& user.getEntities().contains(ne.getNeBanId().getId())
+				&& user.getMarks().contains(ne.getNeMrkId().getId()));// && user.getTypes().contains(ne.getNeNetId().getNetId());
+		
+		
+		if (!userHasNeAuth ) {
+			uiModel.addAttribute("errorMessage", "user dont have all authorities");
+			return "error";
+		}*/
+
+		uiModel.addAttribute("ne", ne);
+
+		return "main/monresources/neinfos/nesum";
+	}
+
+	@RequestMapping(value = "/nesum/{neId}/state", method = RequestMethod.GET)
+	public void neCategoriesStates(@PathVariable("neId") Long neId, ModelMap uiModel) {
+		TopNe ne = null;
+		ne = topNeService.findById(serviceContext(), neId, "");
+		if (ne == null) {
+			uiModel.addAttribute("error", "ne Not found");
+			return;
+		}
+
+		int hwState = DeviceStateEnum.NORMAL.getId();
+		int supplyState = DeviceStateEnum.NORMAL.getId();
+		int cashState = DeviceStateEnum.NORMAL.getId();
+		int secState = DeviceStateEnum.NORMAL.getId();
+
+		List<MonNeDevice> devicesList = monNeDeviceService.findByNdeNeId(serviceContext(), ne);
+
+		for (MonNeDevice device : devicesList) {
+			hwState = ((device.getNdeHwState().intValue() != DeviceStateEnum.NA.getId())
+					&& (hwState < device.getNdeHwState().intValue())) ? device.getNdeHwState().intValue() : hwState;
+			supplyState = ((device.getNdeSuppState().intValue() != DeviceStateEnum.NA.getId())
+					&& (supplyState < device.getNdeSuppState().intValue())) ? device.getNdeSuppState().intValue()
+							: supplyState;
+			cashState = ((device.getNdeCashState().intValue() != DeviceStateEnum.NA.getId())
+					&& (cashState < device.getNdeCashState().intValue())) ? device.getNdeCashState().intValue()
+							: cashState;
+			secState = ((device.getNdeSecState().intValue() != DeviceStateEnum.NA.getId())
+					&& (secState < device.getNdeSecState().intValue())) ? device.getNdeSecState().intValue() : secState;
+		}
+
+		uiModel.addAttribute("hwState", hwState);
+		uiModel.addAttribute("supplyState", supplyState);
+		uiModel.addAttribute("cashState", cashState);
+		uiModel.addAttribute("secState", secState);
+
+		uiModel.addAttribute("ne", ne);
+
+	}
+
+	@RequestMapping(value = "/nesum/{neId}/devices", method = RequestMethod.GET)
+	public void getDevices(@PathVariable("neId") Long neId, ModelMap uiModel) {
+		TopNe ne = null;
+		ne = topNeService.findById(serviceContext(), neId, "");
+		if (ne == null) {
+			uiModel.addAttribute("error", "ne Not found");
+			return;
+		}
+
+		List<MonNeDevice> devicesList = monNeDeviceService.findByNdeNeId(serviceContext(), ne);
+		List<MonNeDevice> configDevicesList = new ArrayList<MonNeDevice>();
+		List<MonNeDevice> notconfigDevicesList = new ArrayList<MonNeDevice>();
+
+		List<MonServiceClass> srvClassList = monServiceClassService.findAll(serviceContext());
+		List<Long> srvClassStateList = new ArrayList<>();
+		long neStateId = 0;
+
+		for (int i = 0; i < srvClassList.size(); i++)
+			srvClassStateList.add(0l);
+
+		for (MonNeDevice device : devicesList) {
+			long currentState = srvClassStateList.get(device.getNdeSrvId().getId().intValue() - 1);
+			currentState = currentState < device.getNdeDstId().getId() ? device.getNdeDstId().getId() : currentState;
+			srvClassStateList.set(device.getNdeSrvId().getId().intValue() - 1, currentState);
+			neStateId = neStateId < currentState ? currentState : neStateId;
+			device.setNdeNeId(null);
+			if (device.getNdeDstId().getId() == DeviceStateEnum.NOTCONFIG.getId()) {
+				notconfigDevicesList.add(device);
+			} else {
+				configDevicesList.add(device);
+			}
+			device.setNdeDstId(null);
+			device.setNdeSrvId(null);
+		}
+
+		// uiModel.addAttribute("srvClassList", srvClassList);
+		// uiModel.addAttribute("srvClassStateList", srvClassStateList);
+		
+		
+		
+
+		uiModel.addAttribute("configdevices", configDevicesList);
+		uiModel.addAttribute("notconfigdevices", notconfigDevicesList);
+		// uiModel.addAttribute("neStateId", neStateId);
+
+	}
+
+	@RequestMapping(value = "/nesum/{neId}/issues", method = RequestMethod.GET)
+	public void getNeIssues(@PathVariable("neId") Long neId, @RequestParam int page, ModelMap uiModel,
+			HttpServletRequest request) {
+
+		int pageSize=8;
+		if(request.getParameter("pageSize")!=null && !request.getParameter("pageSize").trim().equals(""))
+			pageSize=Integer.parseInt(request.getParameter("pageSize"));
+		
+		PagingParameter pagingParameter = PagingParameter.pageAccess(pageSize, page, true);
+		
+
+		TopNe ne = null;
+
+		ne = topNeService.findById(serviceContext(), neId, "");
+		if (ne == null) {
+			uiModel.addAttribute("error", "ne not Found");
+			return;
+		}
+
+		PagedResult<MonIssue> result = monIssueService.findCurrentMonIssuesByNe(serviceContext(), ne, pagingParameter);
+
+		uiModel.addAttribute("neOpenIss", result.getValues());
+		uiModel.addAttribute("totalPages", result.getTotalPages());
+		uiModel.addAttribute("totalElements", result.getTotalRows());		
+		uiModel.addAttribute("page", result.getPage());
+
+		dBMenuManager.populateCrud(uiModel, request, MonIssuesOpen.APFCODE);
+
+	}
+
+	@RequestMapping(value = "/nesum/{neId}/cash", method = RequestMethod.GET)
+	public String getCash(@PathVariable("neId") Long neId, ModelMap uiModel, HttpServletRequest request) {
+
+		TopNe ne = null;
+		ne = topNeService.findById(serviceContext(), neId, "");
+
+		if (ne == null) {
+			uiModel.addAttribute("errorMessage", "neId not found");
+			return "error";
+		}
+		
+		
+		//List<EjrCassette> cassettes=ejrCassetteService.findByAtm(serviceContext(), ne);
+		
+		/*Map<String, Object> result=getiNeInfo().getCash(neId, ne);
+		
+		uiModel.addAttribute("lastStatusDate", result.get("lastStatusDate"));
+		uiModel.addAttribute("cdmDeviceName", result.get("cdmDeviceName"));
+		uiModel.addAttribute("cassettes",result.get("cassettes"));*/
+		
+		/*XfsSstNe sstNe = xFSIM.getXfsSstNeMap().get(ne.getId());
+		if (sstNe != null) {
+			uiModel.addAttribute("lastStatusDate", sstNe.getLastStatusDate());
+			for (String deviceId : sstNe.getXfsDeviceList().keySet()) {
+				if (deviceId.startsWith("CDM_")) {
+					XfsSstDevice cdmDevice = sstNe.getXfsDeviceList().get(deviceId);
+					if (!cdmDevice.getXfsSubDeviceList().isEmpty()) {
+						uiModel.addAttribute("cdmDeviceName", cdmDevice.getDeviceName());
+						uiModel.addAttribute("cassettes",
+								new ArrayList<XfsSstSubDevice>(cdmDevice.getXfsSubDeviceList().values()));
+					}
+				}
+			}
+		}*/
+		
+		/*********************************************************************************Test*****************************************************************/
+		List<XfsSstSubDeviceDTO> cass=new ArrayList<XfsSstSubDeviceDTO>();
+		
+		/*XfsSstSubDeviceDTO a=new XfsSstSubDeviceDTO("cassette1",1);
+		cass.add(a);
+		a=new XfsSstSubDeviceDTO("cassette2",2);
+		cass.add(a);
+		a=new XfsSstSubDeviceDTO("cassette3",3);
+		cass.add(a);
+		a=new XfsSstSubDeviceDTO("cassette4",4);
+		cass.add(a);*/
+		
+		XfsSstCdmSubDeviceDTO b=new XfsSstCdmSubDeviceDTO();
+		/*b.setXfsCDMSubDeviceCUName("DeviceCUName 1");
+		XfsGenValuesDTO v=new XfsGenValuesDTO();
+		v.setStatus("CUStatusFull");
+		v.setSeverity(0);
+		XfsGenValuesDTO v2=new XfsGenValuesDTO();
+		v2.setStatus("BillCassette");
+		v2.setSeverity(2);
+		b.setXfsCDMSubDeviceCUType(v2);
+		b.setXfsCDMSubDeviceCULogicalStatus(v);
+		b.setXfsCDMSubDeviceCUAppLock(true);
+		b.setXfsCDMSubDeviceCUCurrencyID("540");
+		b.setXfsCDMSubDeviceCUValues(5);
+		b.setXfsCDMSubDeviceCULInitialCount(8);
+		b.setXfsCDMSubDeviceCULRejectCount(3);
+		b.setXfsCDMSubDeviceCULCount(3);
+		cass.add(b);
+		
+		b=new XfsSstCdmSubDeviceDTO();
+		b.setXfsCDMSubDeviceCUName("DeviceCUName 2");
+		v=new XfsGenValuesDTO();
+		v.setStatus("CUStatusMissing");
+		v.setSeverity(2);
+		v2=new XfsGenValuesDTO();
+		v2.setStatus("CoinDispenser");
+		v2.setSeverity(2);
+		b.setXfsCDMSubDeviceCUType(v2);//
+		b.setXfsCDMSubDeviceCULogicalStatus(v);
+		b.setXfsCDMSubDeviceCUAppLock(true);
+		b.setXfsCDMSubDeviceCUCurrencyID("540");
+		b.setXfsCDMSubDeviceCUValues(12);
+		b.setXfsCDMSubDeviceCULInitialCount(18);
+		b.setXfsCDMSubDeviceCULRejectCount(4);
+		b.setXfsCDMSubDeviceCULCount(6);
+		cass.add(b);*/
+		
+		/*
+		for(EjrCassette cas:cassettes) {
+			b=new XfsSstCdmSubDeviceDTO();
+			b.setXfsCDMSubDeviceCUName("Cassette "+cas.getCasOrder());
+			v=new XfsGenValuesDTO();
+			v.setStatus(cas.getCasStatus()+"");
+			v.setSeverity(2);
+			v2=new XfsGenValuesDTO();
+			v2.setStatus("BillCassette");
+			v2.setSeverity(2);
+			b.setXfsCDMSubDeviceCUType(v2);//
+			b.setXfsCDMSubDeviceCULogicalStatus(v);
+			b.setXfsCDMSubDeviceCUAppLock(true);
+			b.setXfsCDMSubDeviceCUCurrencyID("540");
+			b.setXfsCDMSubDeviceCUValues(10000);
+			b.setXfsCDMSubDeviceCULInitialCount(0);
+			b.setXfsCDMSubDeviceCULRejectCount(0);
+			b.setXfsCDMSubDeviceCULCount(cas.getCasNotes());
+			cass.add(b);
+		}*/
+		
+		/*
+		b=new XfsSstCdmSubDeviceDTO();
+		b.setXfsCDMSubDeviceCUName("DeviceCUName 2");
+		v=new XfsGenValuesDTO();
+		v.setStatus("CUStatusMissing");
+		v.setSeverity(2);
+		v2=new XfsGenValuesDTO();
+		v2.setStatus(monNeSubdeviceService.findByName(serviceContext(), "Type of cash unit").getNsdValId().getValDescription());
+		v2.setSeverity(2);
+		b.setXfsCDMSubDeviceCUType(v2);//
+		v2=new XfsGenValuesDTO();
+		v2.setStatus(monNeSubdeviceService.findByName(serviceContext(), "Logical cash unit status").getNsdValId().getValDescription());
+		b.setXfsCDMSubDeviceCULogicalStatus(v2);
+		b.setXfsCDMSubDeviceCUAppLock(true);
+		b.setXfsCDMSubDeviceCUCurrencyID("540");
+		b.setXfsCDMSubDeviceCUValues(monNeSubdeviceService.findByName(serviceContext(), "Items value").getNsdValue().intValue());
+		b.setXfsCDMSubDeviceCULInitialCount(monNeSubdeviceService.findByName(serviceContext(), "Initial count").getNsdValue().intValue());
+		b.setXfsCDMSubDeviceCULRejectCount(monNeSubdeviceService.findByName(serviceContext(), "Rejected").getNsdValue().intValue());
+		b.setXfsCDMSubDeviceCULCount(monNeSubdeviceService.findByName(serviceContext(), "Count").getNsdValue().intValue());
+		cass.add(b);
+		
+		monNeSubdeviceService.findByName(serviceContext(), "Type of cash unit").getNsdValId().getValDescription();*/
+		
+		
+		
+		XfsGenValuesDTO v=new XfsGenValuesDTO();
+		XfsGenValuesDTO v2=new XfsGenValuesDTO();
+		
+		MonNeDevice device = null;
+		device = monNeDeviceService.findByNdeNeIdAndNdeName(serviceContext(), ne, "CDM30").get(0);
+		List<MonNeSubdevice> tmps=monNeSubdeviceService.findByNdeAndName(serviceContext(),device, "Sub-devices Number");
+		
+		if(tmps!=null && tmps.size()!=0)
+			for(MonNeSubdevice subdev:tmps) {			
+				if(subdev.getNsdNsdIds()!=null && subdev.getNsdNsdIds().size()!=0) {
+					b=new XfsSstCdmSubDeviceDTO();					
+					v=new XfsGenValuesDTO();
+					v.setStatus("CUStatusMissing");
+					v.setSeverity(2);
+					for(MonNeSubdevice subdevdev:subdev.getNsdNsdIds()) {
+						if(subdevdev.getNsdName().equals("Physical location")) 
+							b.setXfsCDMSubDeviceCUName(subdevdev.getNsdStrValue());
+						
+						v2=new XfsGenValuesDTO();
+						if(subdevdev.getNsdName().equals("Type of cash unit")) {
+							v2.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdevdev.getNsdValId()).get(0).getVllDescription());
+							v2.setSeverity(2);
+							b.setXfsCDMSubDeviceCUType(v2);//
+						}
+						if(subdevdev.getNsdName().equals("Logical cash unit status")) {
+							v2=new XfsGenValuesDTO();
+							v2.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdevdev.getNsdValId()).get(0).getVllDescription());
+							b.setXfsCDMSubDeviceCULogicalStatus(v2);
+						}
+						b.setXfsCDMSubDeviceCUAppLock(true);
+						b.setXfsCDMSubDeviceCUCurrencyID("540");
+						if(subdevdev.getNsdName().equals("Items value")) {
+							b.setXfsCDMSubDeviceCUValues(subdevdev.getNsdValue().intValue());
+						}
+						if(subdevdev.getNsdName().equals("Initial count")) {
+							b.setXfsCDMSubDeviceCULInitialCount(subdevdev.getNsdValue().intValue());
+						}
+						if(subdevdev.getNsdName().equals("Rejected")) {
+							b.setXfsCDMSubDeviceCULRejectCount(subdevdev.getNsdValue().intValue());
+						}
+						if(subdevdev.getNsdName().equals("Count")) {
+							b.setXfsCDMSubDeviceCULCount(subdevdev.getNsdValue().intValue());
+						}
+					}
+					cass.add(b);
+				}
+			}
+		
+		
+		uiModel.addAttribute("lastStatusDate", new Date());
+		uiModel.addAttribute("cdmDeviceName", "cdmDeviceName");
+		uiModel.addAttribute("cassettes",cass);
+		
+
+		return "main/monresources/neinfos/cash :: cash";
+
+	}
+
+	@RequestMapping(value = "/nesum/{neId}/plannedactions", method = RequestMethod.GET)
+	public void getPlannedActions(@PathVariable("neId") Long neId, ModelMap uiModel, HttpServletRequest request) {
+
+		TopNe ne = null;
+		ne = topNeService.findById(serviceContext(), neId, "");
+
+		if (ne == null) {
+			uiModel.addAttribute("errorMessage", "neId not found");
+			return;
+		}
+
+		List<MonPlaHasNe> monPlaHasNeList = monPlaHasNeService.findByPhnNeId(serviceContext(), ne);
+		List<MonPlannedAct> monPlannedActList = new ArrayList<MonPlannedAct>();
+		for (MonPlaHasNe item : monPlaHasNeList) {
+			monPlannedActList.add(item.getPhnPlaId());
+		}
+		dBMenuManager.populateCrud(uiModel, request, MonPlannedActResource.APFCODE);
+		uiModel.addAttribute("monplannedacts", monPlannedActList);
+	}
+
+	@RequestMapping(value = "/devsum/{neId}/{ndeId}", method = RequestMethod.GET)
+	public String getDeviceSummary(@PathVariable("neId") Long neId, @PathVariable("ndeId") Long ndeId, ModelMap uiModel,
+			HttpServletRequest request) {
+		// Check device
+		MonNeDevice device = null;
+		device = monNeDeviceService.findById(serviceContext(), ndeId, "");
+
+		if (device == null) {
+			logger.error("deviceSum --> device is null");
+			return "resourceNotFound";
+		}
+		device.getNdeSrvId().getId();		
+		//Map<String, Object> result=getiNeInfo().getDeviceSummary(neId, device.getNdeName(),device.getNdeSrvId().getId());
+		Map<String, Object> result=getDeviceSummaryTest(device);
+
+		// Check SSt
+		
+		if("resourceNotFound".equals(result.get("error")))
+			return "resourceNotFound";
+		
+		
+				
+		
+		/*XfsSstNe sstNe = xFSIM.getXfsSstNeMap().get(neId);
+		if (sstNe == null) {
+			logger.error("deviceSum --> xfsSstNe is null");
+			return "resourceNotFound";
+		}
+
+		// Check synch state
+		boolean isSynchroOk = true;
+		logger.info("deviceSum --> get xfsSstDevice: " + sstNe.getSrvMapById().get(device.getNdeSrvId().getId()) + "_"
+				+ device.getNdeName());
+		XfsSstDevice xfsSstDevice = sstNe.getXfsDeviceList()
+				.get(sstNe.getSrvMapById().get(device.getNdeSrvId().getId()) + "_" + device.getNdeName());
+
+		if (xfsSstDevice == null) {
+			logger.error("deviceSum --> xfsSstDevice is null");
+			isSynchroOk = false;
+		} else {
+			List<XfsSstSubDevice> xfsSstSubDeviceList = null;
+			if (xfsSstDevice.getXfsSubDeviceList() != null) {
+				xfsSstSubDeviceList = new ArrayList<XfsSstSubDevice>(xfsSstDevice.getXfsSubDeviceList().values());
+			}
+			uiModel.addAttribute("xfsSstDevice", xfsSstDevice);
+			uiModel.addAttribute("xfsSstSubDevices", xfsSstSubDeviceList);
+		}
+		
+		
+
+		uiModel.addAttribute("monnedevice", device);
+		uiModel.addAttribute("lastStatusDate", xFSIM.getXfsSstNeMap().get(neId).getLastStatusDate());
+		uiModel.addAttribute("isSynchroOk", isSynchroOk);
+		uiModel.addAttribute("serviceClass", sstNe.getSrvMapById().get(device.getNdeSrvId()));
+		uiModel.addAttribute("neOpenIss", monIssueService.findCurrentMonIssuesByDevice(serviceContext(), device));
+		uiModel.addAttribute("date_format", "dd-MM-yyyy HH:mm:SS");*/		
+		
+		uiModel.addAttribute("xfsSstDevice",result.get("xfsSstDevice"));
+		uiModel.addAttribute("xfsSstSubDevices", result.get("xfsSstSubDevices"));
+		
+		
+		uiModel.addAttribute("monnedevice", device);
+		uiModel.addAttribute("lastStatusDate", result.get("lastStatusDate"));
+		uiModel.addAttribute("isSynchroOk", result.get("isSynchroOk"));
+		uiModel.addAttribute("serviceClass",result.get("serviceClass"));
+		uiModel.addAttribute("neOpenIss", monIssueService.findCurrentMonIssuesByDevice(serviceContext(), device));
+		uiModel.addAttribute("date_format", result.get("date_format"));
+		// Redirecting
+		boolean isSynchroOk =(boolean)result.get("isSynchroOk");
+		if (!isSynchroOk) {
+			return "main/monresources/devsum/devsumsynchpb :: details";
+		}
+
+		//String className = sstNe.getSrvMapById().get(device.getNdeSrvId().getId());*/
+		String className = result.get("className").toString();
+				
+		logger.error("deviceSum--> Go to :" + "neinfos/devsum" + className);
+
+		// return "neinfos/devsum";
+		return "main/monresources/devsum/devsum" + className + " :: details";
+
+	}
+
+	@RequestMapping(value = "/devsum/{neId}/{ndeId}/issues", method = RequestMethod.GET)
+	public void getDeviceIssues(@PathVariable("neId") Long neId, @RequestParam int page,
+			@PathVariable("ndeId") Long ndeId, ModelMap uiModel, HttpServletRequest request) {
+
+		int pageSize=10;
+		if(request.getParameter("pageSize")!=null && !request.getParameter("pageSize").trim().equals(""))
+			pageSize=Integer.parseInt(request.getParameter("pageSize"));
+		
+		PagingParameter pagingParameter = PagingParameter.pageAccess(pageSize, page, true);
+
+		MonNeDevice device = null;		
+		device = monNeDeviceService.findById(serviceContext(), ndeId, "");
+
+		/*XfsSstNe sstNe = xFSIM.getXfsSstNeMap().get(neId);
+
+		String className = sstNe.getSrvMapById().get(device.getNdeSrvId().getId());
+		className = className.toLowerCase();*/		
+		device.getNdeSrvId().getId();
+		String className="Test";
+		/*className =getiNeInfo().getDeviceIssues(neId, device.getNdeSrvId().getId());*/
+
+		PagedResult<MonIssue> result = monIssueService.findCurrentMonIssuesByDevice(serviceContext(), device,
+				pagingParameter);
+
+		uiModel.addAttribute("serviceClass", className);
+		uiModel.addAttribute("devOpenIss", result.getValues());
+		uiModel.addAttribute("totalPages", result.getTotalPages());
+		uiModel.addAttribute("totalElements", result.getTotalRows());
+		uiModel.addAttribute("page", result.getPage());
+
+		dBMenuManager.populateCrud(uiModel, request, MonIssuesOpen.APFCODE);
+
+	}
+
+	@RequestMapping(value = "/nesum/{neId}/plannedactions/reboot", method = RequestMethod.GET)
+	public void rebootNe(@PathVariable("neId") Long neId, ModelMap uiModel, HttpServletRequest httpServletRequest,
+			HttpServletResponse response) {
+
+		TopNe topNe = null;
+		topNe = topNeService.findById(serviceContext(), neId, "");
+
+		if (topNe == null) {
+			uiModel.addAttribute("errorMessage", "neId not found");
+		}
+
+		Map<String, Object> result=getiNeInfo().rebootNe(neId);
+		uiModel.addAttribute("errorMessage", result.get("errorMessage"));
+
+		uiModel.addAttribute("reboot", result.get("reboot"));
+		
+		/*XfsSstNe sstNe = xFSIM.getXfsSstNeMap().get(topNe.getId());
+		if (sstNe == null)
+			uiModel.addAttribute("errorMessage", "sstNe null");
+
+		uiModel.addAttribute("reboot", sstNe.reboot());*/
+	}
+
+	@RequestMapping(value = "/nesum/{neId}/plannedactions/shutdown", method = RequestMethod.GET)
+	public void shutdownNe(@PathVariable("neId") Long neId, ModelMap uiModel, HttpServletRequest httpServletRequest,
+			HttpServletResponse response) {
+
+		TopNe topNe = null;
+		topNe = topNeService.findById(serviceContext(), neId, "");
+
+		if (topNe == null) {
+			uiModel.addAttribute("errorMessage", "neId not found");
+		}
+
+		Map<String, Object> result=getiNeInfo().shutdownNe(neId);
+		
+		uiModel.addAttribute("errorMessage",result.get("errorMessage"));
+
+		uiModel.addAttribute("shutdown", result.get("shutdown"));
+		
+		/*XfsSstNe sstNe = xFSIM.getXfsSstNeMap().get(topNe.getId());
+		if (sstNe == null)
+			uiModel.addAttribute("errorMessage", "sstNe null");
+
+		uiModel.addAttribute("shutdown", sstNe.shutdown());*/
+	}
+
+	@RequestMapping(value = "/nesum/{neId}/plannedactions/ping")
+	public void pingNe(@PathVariable("neId") Long neId, ModelMap uiModel, HttpServletRequest request) {
+
+		
+		Map<String, Object> result=getiNeInfo().pingNe(neId,255,5);		
+		
+		
+		if (neId == null) {
+			logger.error("pingNe --> neId null ");
+			uiModel.addAttribute("ping",result.get("ping1"));			
+		}
+
+		TopNe ne = null;
+		ne = topNeService.findById(serviceContext(), neId, "");
+
+		if (ne == null) {
+			uiModel.addAttribute("errorMessage", "neId not found");
+			logger.error("pingNe --> Ne not found :" + neId);
+		}
+		
+		uiModel.addAttribute("ping",result.get("ping2"));
+
+	}
+
+	private SysSystem getsysForNe(Long neId) {
+		TopNe ne = null;
+
+		ne = topNeService.findById(serviceContext(), neId, "");		
+		if (ne == null) {
+			return null;
+		}
+
+		// -------- Populate SysInfo, RAM, CPU and Storage
+		// system information
+		SysSystem sys = sysSystemService.findSysSystem4TopNe(serviceContext(), ne);		
+		return sys;
+	}
+
+	@RequestMapping(value = "/nesum/{neId}/sysinfos", method = RequestMethod.GET)
+	public void getSystemInformation(@PathVariable("neId") Long neId, ModelMap uiModel, HttpServletRequest request) {
+
+		SysSystem sys = getsysForNe(neId);
+
+		Map<String, Object> result=getiNeInfo().getSystemInformation(sys);
+		uiModel.addAttribute("nowSys", result.get("nowSys"));
+		
+		/*SysSystemManager sysManager = new SysSystemManager(sys);
+
+		SysSystem nowSys = sysManager.getSysSystemNow();
+
+		if (nowSys != null) {
+			nowSys.setSysNeId(null);
+			nowSys.setSysSevId(null);
+			uiModel.addAttribute("nowSys", nowSys);
+		}*/
+
+	}
+
+	@RequestMapping(value = "/nesum/{neId}/sysinfos/ram", method = RequestMethod.GET)
+	public void getSystemRAMInformation(@PathVariable("neId") Long neId, ModelMap uiModel, HttpServletRequest request) {		
+		SysSystem sys = getsysForNe(neId);		
+		if (sys == null)
+			return;
+		// RAM
+
+		/*Map<String, Object> result=getiNeInfo().getSystemRAMInformation(sys);		
+		uiModel.addAttribute("nowRam", result.get("nowRam"));
+		uiModel.addAttribute("ramManagerError", result.get("ramManagerError"));*/
+		/*SysRamManager ramManager = new SysRamManager(sys);
+		SysRam nowRam = ramManager.getSysRamNow();
+		if (nowRam != null) {
+			nowRam.setRamSysId(null);
+			uiModel.addAttribute("nowRam", nowRam);
+		} else {
+
+			uiModel.addAttribute("ramManagerError", "sys is Null");
+		}*/
+		
+		
+		/*********************************************************************************Test*****************************************************************/
+		
+		Random r = new Random();
+		int val=(r.nextInt((4000 - 1000) + 1) + 1000);
+		
+		SysRam sr=new SysRam();
+		sr.setRamSize(new BigDecimal("4000"));
+		sr.setRamUsed(new BigDecimal(""+val));
+		sr.setRamTime(new Date());
+		sr.setRamSysId(null);
+		
+		uiModel.addAttribute("nowRam", sr);
+		uiModel.addAttribute("ramManagerError", "");
+
+	}
+
+	@RequestMapping(value = "/nesum/{neId}/sysinfos/cpu", method = RequestMethod.GET)
+	public void getSystemCPUInformation(@PathVariable("neId") Long neId, ModelMap uiModel, HttpServletRequest request) {
+		SysSystem sys = getsysForNe(neId);
+		if (sys == null)
+			return;
+
+		// CPU
+		/*Map<String, Object> result=getiNeInfo().getSystemCPUInformation(sys);
+		uiModel.addAttribute("nowCpu", result.get("nowCpu"));
+		uiModel.addAttribute("ramManagerError", result.get("ramManagerError"));*/
+		/*SysCpuManager ramManager = new SysCpuManager(sys);
+		SysCpu nowCpu = ramManager.getSysCpuNow();
+		if (nowCpu != null) {
+			nowCpu.setCpuSysId(null);
+			uiModel.addAttribute("nowCpu", nowCpu);
+
+		} else {
+
+			uiModel.addAttribute("ramManagerError", "sys is Null");
+		}*/
+		/*********************************************************************************Test*****************************************************************/
+		Random r = new Random();
+		int val=(r.nextInt((100 - 10) + 1) + 10);
+		
+		SysCpu cpu=new SysCpu();
+		cpu.setCpuSize(new BigDecimal("100"));
+		cpu.setCpuUsed(new BigDecimal(""+val));
+		cpu.setCpuTime(new Date());
+		cpu.setCpuSysId(null);
+		
+		uiModel.addAttribute("nowCpu", cpu);
+		uiModel.addAttribute("ramManagerError", "");
+	}
+
+	@RequestMapping(value = "/nesum/{neId}/sysinfos/sto", method = RequestMethod.GET)
+	public void getSystemSTOInformation(@PathVariable("neId") Long neId, ModelMap uiModel, HttpServletRequest request) {
+		SysSystem sys = getsysForNe(neId);
+		if (sys == null)
+			return;
+
+		// Disc Storage
+		/*List<SysStorage> storageList = sysStorageService.findSysStorages4Sys(serviceContext(), sys);
+		
+		Map<String, Object> result=getiNeInfo().getSystemSTOInformation(sys,storageList);
+		uiModel.addAttribute("stos", result.get("stos"));*/
+		
+		/*if (storageList == null || storageList.isEmpty()) {
+
+			SysStoManager sysStoManager = new SysStoManager(sys);
+			storageList = sysStoManager.getSysStoragesNow();
+		}
+		if (storageList != null)
+			for (SysStorage sto : storageList)
+				sto.setStoSysId(null);
+
+		uiModel.addAttribute("stos", storageList);*/
+		
+		/*********************************************************************************Test*****************************************************************/
+		
+		Random r = new Random();
+		int val=(r.nextInt((50 - 10) + 1) + 10);
+		
+		List<SysStorage> storageList=new ArrayList<SysStorage>();
+		
+		SysStorage a=new SysStorage();
+		a.setStoFree(new BigDecimal(""+(50-val)));
+		a.setStoFreeGo(new BigDecimal("10"));
+		a.setStoName("disk1");
+		a.setStoSize(new BigDecimal("50"));
+		a.setStoSizeGo(new BigDecimal("10"));
+		a.setStoTime(new Date());
+		a.setStoUsed(new BigDecimal(""+val));
+		a.setStoUsedGo(new BigDecimal("40"));
+		a.setStoSysId(null);
+		
+		storageList.add(a);
+		
+		uiModel.addAttribute("stos", storageList);
+		
+		
+	}
+
+	// -----------------------------------------------------------------------
+	// ModelAttributes declaration
+	// -----------------------------------------------------------------------
+
+	public List<ParEntity> getBankList(Authentication authentication) {
+
+		EatmUser user = (EatmUser) authentication.getPrincipal();
+		return parEntityService.findAllParEntitysTypeBank(serviceContext(), user.getEntities());
+	}
+
+	protected ServiceContext serviceContext() {
+		return ServiceContextStore.get();
+	}
+
+	public String module() {
+		return "monresources";
+	}
+	
+	@Autowired
+	AdmAppFunctionService admAppFunctionService;
+	
+	@RequestMapping(value = "/nesum/deviceStates", method = RequestMethod.GET)
+	public void getDeviceStates(ModelMap uiModel) {
+			
+		ConditionRoot<MonNeDevice> cr = ConditionalCriteriaBuilder.criteriaFor(MonNeDevice.class);
+		cr.select(MonNeDeviceProperties.ndeType()).select(MonNeDeviceProperties.id()).count().withProperty(MonNeDeviceProperties.ndeHwState()).eq(4).groupBy(MonNeDeviceProperties.ndeType());
+		
+		
+		List<Object[]> statesList=monNeDeviceService.findByConditionForCharts(cr.build(),null);
+				
+		
+		uiModel.addAttribute("cashState", statesList.get(0)[1]);
+		
+		cr = ConditionalCriteriaBuilder.criteriaFor(MonNeDevice.class);
+		cr.select(MonNeDeviceProperties.ndeType()).select(MonNeDeviceProperties.id()).count().groupBy(MonNeDeviceProperties.ndeType()).withProperty(MonNeDeviceProperties.ndeHwState()).eq(4);		
+		statesList=monNeDeviceService.findByConditionForCharts(cr.build(),null);
+				
+		
+		uiModel.addAttribute("hwState", statesList.get(0)[1]);
+		
+		
+		cr = ConditionalCriteriaBuilder.criteriaFor(MonNeDevice.class);
+		cr.select(MonNeDeviceProperties.ndeType()).select(MonNeDeviceProperties.id()).count().withProperty(MonNeDeviceProperties.ndeSecState()).eq(4).groupBy(MonNeDeviceProperties.ndeType());		
+		statesList=monNeDeviceService.findByConditionForCharts(cr.build(),null);
+				
+		
+		uiModel.addAttribute("secState", statesList.get(0)[1]);
+		
+		cr = ConditionalCriteriaBuilder.criteriaFor(MonNeDevice.class);
+		cr.select(MonNeDeviceProperties.ndeType()).select(MonNeDeviceProperties.id()).count().withProperty(MonNeDeviceProperties.ndeSuppState()).eq(4).groupBy(MonNeDeviceProperties.ndeType());		
+		statesList=monNeDeviceService.findByConditionForCharts(cr.build(),null);
+				
+		if(statesList.size()!=0)
+			uiModel.addAttribute("suppState", statesList.get(0)[1]);
+		else
+			uiModel.addAttribute("suppState", null);
+	}
+
+	
+	@RequestMapping(value = "/nesum/{neId}/search_issues", method = RequestMethod.GET)
+	public void getNeIssuesDTO(@PathVariable("neId") Long neId, @RequestParam int page, ModelMap uiModel,
+			HttpServletRequest request) {
+		SimpleDateFormat st = new SimpleDateFormat("dd-MM-yyyy");
+		int pageSize=8;
+		if(request.getParameter("pageSize")!=null && !request.getParameter("pageSize").trim().equals(""))
+			pageSize=Integer.parseInt(request.getParameter("pageSize"));
+		
+		PagingParameter pagingParameter = PagingParameter.pageAccess(pageSize, page, true);
+		
+
+		TopNe ne = null;
+
+		ne = topNeService.findById(serviceContext(), neId, "");
+		if (ne == null) {
+			uiModel.addAttribute("error", "ne not Found");
+			return;
+		}
+
+		MonIssueDTO dto=new MonIssueDTO();
+		dto.addCriteriaInfo("=", MonIssueProperties.issNeId().id(), ne.getId());
+		if("critical".equals(request.getParameter("param")))
+			dto.addCriteriaInfo("=", MonIssueProperties.issSevId().sevCode(), "CRI");
+		if("open".equals(request.getParameter("param")))
+			dto.addCriteriaInfo("is null", MonIssueProperties.issEndDate(), null);
+		if("closed".equals(request.getParameter("param")))
+			dto.addCriteriaInfo("is not null", MonIssueProperties.issEndDate(), null);
+		if("unsigned".equals(request.getParameter("param")))
+			dto.addCriteriaInfo("is null", MonIssueProperties.issAckUser(),null);
+		if("today".equals(request.getParameter("param"))){
+				dto.addCriteriaInfo(">=", MonIssueProperties.createdDate(), morning(st.format(new Date())));
+				dto.addCriteriaInfo("<=", MonIssueProperties.createdDate(), late(st.format(new Date())));
+		}
+		
+		dto.addOrderByInfo("desc", MonIssueProperties.createdDate());
+		
+		PagedResult<MonIssue> result = monIssueService.search(serviceContext(), dto, pagingParameter);
+
+		uiModel.addAttribute("neOpenIss", result.getValues());
+		uiModel.addAttribute("totalPages", result.getTotalPages());
+		uiModel.addAttribute("totalElements", result.getTotalRows());		
+		uiModel.addAttribute("page", result.getPage());
+
+		dBMenuManager.populateCrud(uiModel, request, MonIssuesOpen.APFCODE);
+
+	}
+	
+	
+	public Date morning(Object o) {
+		SimpleDateFormat st = new SimpleDateFormat("dd-MM-yyyy");
+		Date val = null;
+		try {
+			val = st.parse(o.toString());
+			Calendar calendar = Calendar.getInstance();
+			calendar.setTime(val);
+			val = calendar.getTime();
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return val;
+	}
+
+	public Date late(Object o) {
+		SimpleDateFormat st = new SimpleDateFormat("dd-MM-yyyy");
+		Date val = null;
+		try {
+			val = st.parse(o.toString());
+			Calendar calendar = Calendar.getInstance();
+			calendar.setTime(val);
+			calendar.set(Calendar.MILLISECOND, 999);
+			calendar.set(Calendar.SECOND, 59);
+			calendar.set(Calendar.MINUTE, 59);
+			calendar.set(Calendar.HOUR, 23);
+			val = calendar.getTime();
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return val;
+	}
+	
+	///////
+	
+	public Map<String, Object> getDeviceSummaryTest(MonNeDevice device){		
+		Map<String, Object> result   =null;
+		
+		if(device.getNdeSrvId().getSrvCode().equals("CDM"))
+			result=getDeviceSummaryTestCDM(device);
+		else if(device.getNdeSrvId().getSrvCode().equals("PTR"))
+			result=getDeviceSummaryTestPTR(device);
+		else if(device.getNdeSrvId().getSrvCode().equals("PIN"))
+			result=getDeviceSummaryTestPIN(device);
+		else if(device.getNdeSrvId().getSrvCode().equals("IDC"))
+			result=getDeviceSummaryTestIDC(device);
+		else if(device.getNdeSrvId().getSrvCode().equals("TTU"))
+			result=getDeviceSummaryTestTTU(device);		
+		else if(device.getNdeSrvId().getSrvCode().equals("SIU"))
+			result=getDeviceSummaryTestSIU(device);
+		
+		result.put("lastStatusDate",new Date());
+		result.put("isSynchroOk",true);
+		result.put("serviceClass","serviceClass");		
+		result.put("date_format", "dd-MM-yyyy HH:mm:SS");
+		
+		result.put("error", "");
+		
+		
+		
+		
+		return result;
+		
+		
+	}
+	
+	public Map<String, Object> getDeviceSummaryTestCDM(MonNeDevice device){
+		Map<String, Object> result   = new HashMap<String, Object>();
+		
+		result.put("className", "cdm");
+		
+		XfsSstCdmDTO cdm=new XfsSstCdmDTO();
+		
+		List<XfsSstSubDeviceDTO> cass=new ArrayList<XfsSstSubDeviceDTO>();
+		
+		/*XfsSstSubDeviceDTO a=new XfsSstSubDeviceDTO("cassette1",1);
+		cass.add(a);
+		a=new XfsSstSubDeviceDTO("cassette2",2);
+		cass.add(a);
+		a=new XfsSstSubDeviceDTO("cassette3",3);
+		cass.add(a);
+		a=new XfsSstSubDeviceDTO("cassette4",4);
+		cass.add(a);*/
+		
+		XfsSstCdmSubDeviceDTO b=new XfsSstCdmSubDeviceDTO();
+		/*b.setXfsCDMSubDeviceCUName("DeviceCUName 1");
+		XfsGenValuesDTO v=new XfsGenValuesDTO();
+		v.setStatus("CUStatusFull");
+		v.setSeverity(0);
+		XfsGenValuesDTO v2=new XfsGenValuesDTO();
+		v2.setStatus("BillCassette");
+		v2.setSeverity(2);
+		b.setXfsCDMSubDeviceCUType(v2);
+		b.setXfsCDMSubDeviceCULogicalStatus(v);
+		b.setXfsCDMSubDeviceCUAppLock(true);
+		b.setXfsCDMSubDeviceCUCurrencyID("540");
+		b.setXfsCDMSubDeviceCUValues(5);
+		b.setXfsCDMSubDeviceCULInitialCount(8);
+		b.setXfsCDMSubDeviceCULRejectCount(3);
+		b.setXfsCDMSubDeviceCULCount(3);
+		cass.add(b);
+		
+		b=new XfsSstCdmSubDeviceDTO();
+		b.setXfsCDMSubDeviceCUName("DeviceCUName 2");
+		v=new XfsGenValuesDTO();
+		v.setStatus("CUStatusMissing");
+		v.setSeverity(2);
+		v2=new XfsGenValuesDTO();
+		v2.setStatus("CoinDispenser");
+		v2.setSeverity(2);
+		b.setXfsCDMSubDeviceCUType(v2);//
+		b.setXfsCDMSubDeviceCULogicalStatus(v);
+		b.setXfsCDMSubDeviceCUAppLock(true);
+		b.setXfsCDMSubDeviceCUCurrencyID("540");
+		b.setXfsCDMSubDeviceCUValues(12);
+		b.setXfsCDMSubDeviceCULInitialCount(18);
+		b.setXfsCDMSubDeviceCULRejectCount(4);
+		b.setXfsCDMSubDeviceCULCount(6);*/
+		
+		
+		/*b=new XfsSstCdmSubDeviceDTO();
+		b.setXfsCDMSubDeviceCUName("DeviceCUName 2");
+		XfsGenValuesDTO v=new XfsGenValuesDTO();
+		v.setStatus("CUStatusMissing");
+		v.setSeverity(2);
+		XfsGenValuesDTO v2=new XfsGenValuesDTO();
+		v2.setStatus(monNeSubdeviceService.findByName(serviceContext(), "Type of cash unit").getNsdValId().getValDescription());
+		v2.setSeverity(2);
+		b.setXfsCDMSubDeviceCUType(v2);//
+		v2=new XfsGenValuesDTO();
+		v2.setStatus(monNeSubdeviceService.findByName(serviceContext(), "Logical cash unit status").getNsdValId().getValDescription());
+		b.setXfsCDMSubDeviceCULogicalStatus(v2);
+		b.setXfsCDMSubDeviceCUAppLock(true);
+		b.setXfsCDMSubDeviceCUCurrencyID("540");
+		b.setXfsCDMSubDeviceCUValues(monNeSubdeviceService.findByName(serviceContext(), "Items value").getNsdValue().intValue());
+		b.setXfsCDMSubDeviceCULInitialCount(monNeSubdeviceService.findByName(serviceContext(), "Initial count").getNsdValue().intValue());
+		b.setXfsCDMSubDeviceCULRejectCount(monNeSubdeviceService.findByName(serviceContext(), "Rejected").getNsdValue().intValue());
+		b.setXfsCDMSubDeviceCULCount(monNeSubdeviceService.findByName(serviceContext(), "Count").getNsdValue().intValue());		
+		cass.add(b);*/
+		
+		XfsGenValuesDTO v=new XfsGenValuesDTO();
+		XfsGenValuesDTO v2=new XfsGenValuesDTO();
+		
+		List<MonNeSubdevice> tmps=monNeSubdeviceService.findByNdeAndName(serviceContext(),device, "Sub-devices Number");
+		
+		if(tmps!=null && tmps.size()!=0)
+			for(MonNeSubdevice subdev:tmps) {			
+				if(subdev.getNsdNsdIds()!=null && subdev.getNsdNsdIds().size()!=0) {
+					b=new XfsSstCdmSubDeviceDTO();					
+					v=new XfsGenValuesDTO();
+					v.setStatus("CUStatusMissing");
+					v.setSeverity(2);
+					for(MonNeSubdevice subdevdev:subdev.getNsdNsdIds()) {
+						if(subdevdev.getNsdName().equals("Physical location")) 
+							b.setXfsCDMSubDeviceCUName(subdevdev.getNsdStrValue());
+						
+						v2=new XfsGenValuesDTO();
+						if(subdevdev.getNsdName().equals("Type of cash unit")) {
+							v2.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdevdev.getNsdValId()).get(0).getVllDescription());
+							v2.setSeverity(2);
+							b.setXfsCDMSubDeviceCUType(v2);//
+						}
+						if(subdevdev.getNsdName().equals("Logical cash unit status")) {
+							v2=new XfsGenValuesDTO();
+							v2.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdevdev.getNsdValId()).get(0).getVllDescription());
+							b.setXfsCDMSubDeviceCULogicalStatus(v2);
+						}
+						b.setXfsCDMSubDeviceCUAppLock(true);
+						b.setXfsCDMSubDeviceCUCurrencyID("540");
+						if(subdevdev.getNsdName().equals("Items value")) {
+							b.setXfsCDMSubDeviceCUValues(subdevdev.getNsdValue().intValue());
+						}
+						if(subdevdev.getNsdName().equals("Initial count")) {
+							b.setXfsCDMSubDeviceCULInitialCount(subdevdev.getNsdValue().intValue());
+						}
+						if(subdevdev.getNsdName().equals("Rejected")) {
+							b.setXfsCDMSubDeviceCULRejectCount(subdevdev.getNsdValue().intValue());
+						}
+						if(subdevdev.getNsdName().equals("Count")) {
+							b.setXfsCDMSubDeviceCULCount(subdevdev.getNsdValue().intValue());
+						}
+					}
+					cass.add(b);
+				}
+			}
+		
+		cdm.setDeviceName("Cash Dispenser");
+		cdm.setDeviceType("Cash");
+		cdm.setSubDeviceNbr(1);
+		//cdm.setDeviceState(deviceState);
+		
+		cdm.setCashState(DeviceStateEnum.NORMAL);				
+		cdm.setHwState(DeviceStateEnum.NORMAL);		
+		cdm.setSecState(DeviceStateEnum.NORMAL);		
+		cdm.setSuplState(DeviceStateEnum.NORMAL);					
+		
+		
+		cdm.setXfsCDMStatusGuidancePosLeft("NA");
+		cdm.setXfsCDMStatusGuidancePosRight("NA");
+		cdm.setXfsCDMStatusGuidancePosCenter("NA");
+		cdm.setXfsCDMStatusGuidancePosTop("NA");
+		cdm.setXfsCDMStatusGuidancePosBottom("NA");
+		cdm.setXfsCDMStatusGuidancePosFront("NA");
+		cdm.setXfsCDMStatusGuidancePosRear("NA");		
+		cdm.setXfsCDMStatusPowerSaveRecoveryTime(12);		
+		cdm.setXfsCDMStatusExtraStatus("NA");	
+		
+		
+		
+		XfsGenValuesDTO gv=new XfsGenValuesDTO();
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(),monXfsValueService.findById(serviceContext(), 2902L, "")).get(0).getVllDescription());
+		gv.setSeverity(2);
+		
+		
+		cdm.setXfsCDMStatusDevice(gv);
+		
+		cdm.setXfsCDMStatusExtraStatus("extra");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(),monXfsValueService.findById(serviceContext(), 2902L, "")).get(0).getVllDescription());
+		gv.setSeverity(2);
+		cdm.setXfsCDMStatusDevicePosition(gv);
+		
+		gv=new XfsGenValuesDTO();
+		
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(),monNeSubdeviceService.findByName(serviceContext(), "Safe door").getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(monNeSubdeviceService.findByName(serviceContext(), "Safe door").getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusSafeDoor(gv);
+		gv=new XfsGenValuesDTO();
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(),monNeSubdeviceService.findByName(serviceContext(), "Dispenser Status").getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(monNeSubdeviceService.findByName(serviceContext(), "Dispenser Status").getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusDispenser(gv);
+		gv=new XfsGenValuesDTO();
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(),monNeSubdeviceService.findByName(serviceContext(), "Intermediate stacker Status").getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(monNeSubdeviceService.findByName(serviceContext(), "Intermediate stacker Status").getNsdValId().getValSevId().getSevCode()));		
+		cdm.setXfsCDMStatusIntermediateStacker(gv);
+		gv=new XfsGenValuesDTO();
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(),monXfsValueService.findById(serviceContext(), 1016L, "")).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(monXfsValueService.findById(serviceContext(), 1016L, "").getValSevId().getSevCode()));				
+		cdm.setXfsCDMStatusShutterCenter(gv);
+		cdm.setXfsCDMStatusOutputPositionCenter(gv);
+		gv=new XfsGenValuesDTO();
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(),monXfsValueService.findById(serviceContext(), 1007L, "")).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(monXfsValueService.findById(serviceContext(), 1007L, "").getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusTransportCenter(gv);
+		gv.setStatus(monXfsValueService.findById(serviceContext(), 1011L, "").getValDescription());
+		gv.setSeverity(Integer.parseInt(monXfsValueService.findById(serviceContext(), 1011L, "").getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusTransportStatusCenter(gv);
+		gv=new XfsGenValuesDTO();
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(),monXfsValueService.findById(serviceContext(), 1016L, "")).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(monXfsValueService.findById(serviceContext(), 1016L, "").getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusShutterLeft(gv);		
+		cdm.setXfsCDMStatusOutputPositionLeft(gv);
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(),monXfsValueService.findById(serviceContext(), 1007L, "")).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(monXfsValueService.findById(serviceContext(), 1007L, "").getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusTransportLeft(gv);
+		gv.setStatus(monXfsValueService.findById(serviceContext(), 1011L, "").getValDescription());
+		gv.setSeverity(Integer.parseInt(monXfsValueService.findById(serviceContext(), 1011L, "").getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusTransportStatusLeft(gv);
+		gv=new XfsGenValuesDTO();
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(),monXfsValueService.findById(serviceContext(), 1016L, "")).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(monXfsValueService.findById(serviceContext(), 1016L, "").getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusShutterRight(gv);		
+		cdm.setXfsCDMStatusOutputPositionRight(gv);
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(),monXfsValueService.findById(serviceContext(), 1007L, "")).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(monXfsValueService.findById(serviceContext(), 1007L, "").getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusTransportRight(gv);
+		gv.setStatus(monXfsValueService.findById(serviceContext(), 1011L, "").getValDescription());
+		gv.setSeverity(Integer.parseInt(monXfsValueService.findById(serviceContext(), 1011L, "").getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusTransportStatusRight(gv);
+		gv=new XfsGenValuesDTO();
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(),monXfsValueService.findById(serviceContext(), 1016L, "")).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(monXfsValueService.findById(serviceContext(), 1016L, "").getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusShutterTop(gv);
+		cdm.setXfsCDMStatusOutputPositionTop(gv);
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(),monXfsValueService.findById(serviceContext(), 1007L, "")).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(monXfsValueService.findById(serviceContext(), 1007L, "").getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusTransportTop(gv);
+		gv.setStatus(monXfsValueService.findById(serviceContext(), 1011L, "").getValDescription());
+		gv.setSeverity(Integer.parseInt(monXfsValueService.findById(serviceContext(), 1011L, "").getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusTransportStatusTop(gv);
+		gv=new XfsGenValuesDTO();
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(),monXfsValueService.findById(serviceContext(), 1016L, "")).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(monXfsValueService.findById(serviceContext(), 1016L, "").getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusShutterBottom(gv);
+		cdm.setXfsCDMStatusOutputPositionBottom(gv);
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(),monXfsValueService.findById(serviceContext(), 1007L, "")).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(monXfsValueService.findById(serviceContext(), 1007L, "").getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusTransportBottom(gv);
+		gv.setStatus(monXfsValueService.findById(serviceContext(), 1011L, "").getValDescription());
+		gv.setSeverity(Integer.parseInt(monXfsValueService.findById(serviceContext(), 1011L, "").getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusTransportStatusBottom(gv);
+		gv=new XfsGenValuesDTO();
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(),monXfsValueService.findById(serviceContext(), 1016L, "")).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(monXfsValueService.findById(serviceContext(), 1016L, "").getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusShutterFront(gv);
+		cdm.setXfsCDMStatusOutputPositionFront(gv);
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(),monXfsValueService.findById(serviceContext(), 1007L, "")).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(monXfsValueService.findById(serviceContext(), 1007L, "").getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusTransportFront(gv);
+		gv.setStatus(monXfsValueService.findById(serviceContext(), 1011L, "").getValDescription());
+		gv.setSeverity(Integer.parseInt(monXfsValueService.findById(serviceContext(), 1011L, "").getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusTransportStatusFront(gv);
+		gv=new XfsGenValuesDTO();
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(),monXfsValueService.findById(serviceContext(), 1016L, "")).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(monXfsValueService.findById(serviceContext(), 1016L, "").getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusShutterRear(gv);
+		cdm.setXfsCDMStatusOutputPositionRear(gv);
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(),monXfsValueService.findById(serviceContext(), 1007L, "")).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(monXfsValueService.findById(serviceContext(), 1007L, "").getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusTransportRear(gv);
+		gv.setStatus(monXfsValueService.findById(serviceContext(), 1011L, "").getValDescription());
+		gv.setSeverity(Integer.parseInt(monXfsValueService.findById(serviceContext(), 1011L, "").getValSevId().getSevCode()));
+		cdm.setXfsCDMStatusTransportStatusRear(gv);
+		
+		result.put("xfsSstDevice",cdm);
+		result.put("xfsSstSubDevices", cass);
+		
+		return result;
+	}
+	
+	public Map<String, Object> getDeviceSummaryTestPTR(MonNeDevice device){
+		Map<String, Object> result   = new HashMap<String, Object>();
+		
+		result.put("className", "ptr");
+		
+		XfsSstPtrDTO cdm=new XfsSstPtrDTO();
+		
+		List<XfsSstSubDeviceDTO> cass=new ArrayList<XfsSstSubDeviceDTO>();
+		
+		
+		cdm.setDeviceName("Printer");
+		cdm.setDeviceType("Printer");
+		cdm.setSubDeviceNbr(1);
+		//cdm.setDeviceState(deviceState);
+		
+		cdm.setCashState(DeviceStateEnum.NA);				
+		cdm.setHwState(DeviceStateEnum.NORMAL);		
+		cdm.setSecState(DeviceStateEnum.NA);		
+		cdm.setSuplState(DeviceStateEnum.NORMAL);					
+		
+		
+		
+		
+		XfsGenValuesDTO gv=new XfsGenValuesDTO();
+		gv.setStatus(monXfsValueService.findById(serviceContext(), 2902L, "").getValDescription());
+		gv.setSeverity(2);
+		
+		
+		cdm.setXfsPTRStatusDevice(gv);
+		
+		cdm.setXfsPTRStatusExtraStatus("extra");
+		gv.setStatus(monXfsValueService.findById(serviceContext(), 2902L, "").getValDescription());
+		gv.setSeverity(2);
+		cdm.setXfsPTRStatusDevicePosition(gv);
+		
+		gv=new XfsGenValuesDTO();
+		MonNeSubdevice subdev=monNeSubdeviceService.findByName(serviceContext(), "The print media");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsPTRStatusMedia(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Media on stacker");
+		gv.setStatus("Good");
+		gv.setSeverity(DeviceStateEnum.NORMAL.getId());
+		cdm.setXfsPTRStatusMediaOnStacker(subdev.getNsdValue().intValue());
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Stamping ink in the printer");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));		
+		cdm.setXfsPTRStatusInk(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Printer imaging lamp");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsPTRStatusLamp(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Auxiliary paper supply");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsPTRStatusPaperSupplyAux(gv);
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Second auxiliary paper supply");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsPTRStatusPaperSupplyAux2(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "External paper supply");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsPTRStatusPaperSupplyExternal(gv);
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Lower paper supply");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsPTRStatusPaperSupplyLower(gv);
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Parking station");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsPTRStatusPaperSupplyPark(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "The only paper supply or the upper paper supply");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsPTRStatusPaperSupplyUpper(gv);
+		
+		cdm.setXfsPTRStatusPowerSaveRecoveryTime(0);
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Toner or ink or ribbon");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsPTRStatusToner(gv);
+		
+		result.put("xfsSstDevice",cdm);
+		result.put("xfsSstSubDevices", cass);
+		
+		return result;
+	}
+	
+	public Map<String, Object> getDeviceSummaryTestPIN(MonNeDevice device){
+		Map<String, Object> result   = new HashMap<String, Object>();
+		
+		result.put("className", "pin");
+		
+		XfsSstPinDTO cdm=new XfsSstPinDTO();
+		
+		List<XfsSstSubDeviceDTO> cass=new ArrayList<XfsSstSubDeviceDTO>();
+		
+		
+		cdm.setDeviceName("PIN");
+		cdm.setDeviceType("PINPAD");
+		cdm.setSubDeviceNbr(1);
+		//cdm.setDeviceState(deviceState);
+		
+		cdm.setCashState(DeviceStateEnum.NA);				
+		cdm.setHwState(DeviceStateEnum.NORMAL);		
+		cdm.setSecState(DeviceStateEnum.NORMAL);		
+		cdm.setSuplState(DeviceStateEnum.NA);					
+		
+		
+		
+		
+		XfsGenValuesDTO gv=new XfsGenValuesDTO();
+		gv.setStatus("CoinDispenser");
+		gv.setSeverity(2);
+		
+		
+		cdm.setXfsPINStatusDevice(gv);
+		
+		cdm.setXfsPINStatusExtraStatus("extra");
+		cdm.setXfsPINStatusDevicePosition(gv);
+		
+		gv=new XfsGenValuesDTO();
+		MonNeSubdevice subdev=monNeSubdeviceService.findByName(serviceContext(), "Encryptor module");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsPINStatusEncStat(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Automatic beep tone on key press");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsPINStatusAutoBeepMode(subdev.getNsdValue().intValue());
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Public verification or encryption key");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));		
+		cdm.setXfsPINStatusCertificateState(gv);
+		
+		cdm.setXfsPINStatusPowerSaveRecoveryTime(0);
+		
+		
+		result.put("xfsSstDevice",cdm);
+		result.put("xfsSstSubDevices", cass);
+		
+		return result;
+	}
+
+	public Map<String, Object> getDeviceSummaryTestTTU(MonNeDevice device){
+		Map<String, Object> result   = new HashMap<String, Object>();
+		
+		result.put("className", "ttu");
+		
+		XfsSstTtuDTO cdm=new XfsSstTtuDTO();
+		
+		List<XfsSstSubDeviceDTO> cass=new ArrayList<XfsSstSubDeviceDTO>();
+		
+		
+		cdm.setDeviceName("TTU");
+		cdm.setDeviceType("TTU");
+		cdm.setSubDeviceNbr(1);
+		//cdm.setDeviceState(deviceState);
+		
+		cdm.setCashState(DeviceStateEnum.NA);				
+		cdm.setHwState(DeviceStateEnum.NORMAL);		
+		cdm.setSecState(DeviceStateEnum.NORMAL);		
+		cdm.setSuplState(DeviceStateEnum.NORMAL);					
+		
+		
+		
+		
+		XfsGenValuesDTO gv=new XfsGenValuesDTO();
+		gv.setStatus(monXfsValueService.findById(serviceContext(), 2902L, "").getValDescription());
+		gv.setSeverity(2);
+		
+		
+		cdm.setXfsTTUStatusDevice(gv);
+		
+		cdm.setXfsTTUStatusExtraStatus("extra");
+		gv.setStatus(monXfsValueService.findById(serviceContext(), 2902L, "").getValDescription());
+		gv.setSeverity(2);
+		cdm.setXfsTTUStatusDevicePosition(gv);
+		
+		gv=new XfsGenValuesDTO();
+		MonNeSubdevice subdev=monNeSubdeviceService.findByName(serviceContext(), "Horizontal display size");
+		gv.setStatus("Good");
+		gv.setSeverity(DeviceStateEnum.NORMAL.getId());
+		cdm.setXfsTTUStatusDisplaySizeX(subdev.getNsdValue().intValue());
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Vertical display size");
+		gv.setStatus("Good");
+		gv.setSeverity(DeviceStateEnum.NORMAL.getId());
+		cdm.setXfsTTUStatusDisplaySizeY(subdev.getNsdValue().intValue());
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of keyboard in the text terminal unit");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));		
+		cdm.setXfsTTUStatusKeyboard(gv);
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of the keyboard lock of the text terminal unit");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));		
+		cdm.setXfsTTUStatusKeyLock(gv);
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Seconds required to resume");
+		gv.setStatus("Good");
+		gv.setSeverity(DeviceStateEnum.NORMAL.getId());		
+		cdm.setXfsTTUStatusPowerSaveRecoveryTime(subdev.getNsdValue().intValue());
+		
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of LED 1");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsTTUStatusLed1(gv);
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of LED 2");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsTTUStatusLed2(gv);
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of LED 3");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsTTUStatusLed3(gv);
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of LED 4");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsTTUStatusLed4(gv);
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of LED 5");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsTTUStatusLed5(gv);
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of LED 6");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsTTUStatusLed6(gv);
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of LED 7");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsTTUStatusLed7(gv);
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of LED 8");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsTTUStatusLed8(gv);
+		
+		
+		result.put("xfsSstDevice",cdm);
+		result.put("xfsSstSubDevices", cass);
+		
+		return result;
+	}
+
+	public Map<String, Object> getDeviceSummaryTestIDC(MonNeDevice device){
+		Map<String, Object> result   = new HashMap<String, Object>();
+		
+		result.put("className", "idc");
+		
+		XfsSstIdcDTO cdm=new XfsSstIdcDTO();
+		
+		List<XfsSstSubDeviceDTO> cass=new ArrayList<XfsSstSubDeviceDTO>();
+		
+		
+		cdm.setDeviceName("IDC");
+		cdm.setDeviceType("IDC");
+		cdm.setSubDeviceNbr(1);
+		//cdm.setDeviceState(deviceState);
+		
+		cdm.setCashState(DeviceStateEnum.NA);				
+		cdm.setHwState(DeviceStateEnum.NORMAL);		
+		cdm.setSecState(DeviceStateEnum.NORMAL);		
+		cdm.setSuplState(DeviceStateEnum.NA);					
+		
+		
+		
+		
+		XfsGenValuesDTO gv=new XfsGenValuesDTO();
+		gv.setStatus(monXfsValueService.findById(serviceContext(), 2902L, "").getValDescription());
+		gv.setSeverity(2);
+		
+		
+		cdm.setXfsIDCStatusDevice(gv);
+		
+		cdm.setXfsIDCStatusExtraStatus("extra");
+		gv.setStatus(monXfsValueService.findById(serviceContext(), 2902L, "").getValDescription());
+		gv.setSeverity(2);
+		cdm.setXfsIDCStatusDevicePosition(gv);
+		
+		gv=new XfsGenValuesDTO();
+		MonNeSubdevice subdev=monNeSubdeviceService.findByName(serviceContext(), "Back image reader");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsIDCStatusBackImageModule(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Cards retained");
+		gv.setStatus("Good");
+		gv.setSeverity(DeviceStateEnum.NORMAL.getId());
+		cdm.setXfsIDCStatusCardRetained(subdev.getNsdValue().intValue());
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Chip card module reader");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));		
+		cdm.setXfsIDCStatusChipModule(gv);
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Chip controlled by this service");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));		
+		cdm.setXfsIDCStatusChipPower(gv);
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Front image reader");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));		
+		cdm.setXfsIDCStatusFrontImageModule(gv);
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Magnetic card reader");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));		
+		cdm.setXfsIDCStatusMagReadModule(gv);
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Magnetic card writer");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));		
+		cdm.setXfsIDCStatusMagWriteModule(gv);
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "The media state");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));		
+		cdm.setXfsIDCStatusMedia(gv);
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "ID card unit retain bin");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));		
+		cdm.setXfsIDCStatusRetainBin(gv);
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Security unit.");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));		
+		cdm.setXfsIDCStatusSecurity(gv);
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Seconds required to resume");
+		gv.setStatus("Good");
+		gv.setSeverity(DeviceStateEnum.NORMAL.getId());		
+		cdm.setXfsIDCStatusPowerSaveRecoveryTime(subdev.getNsdValue().intValue());
+		
+		
+		result.put("xfsSstDevice",cdm);
+		result.put("xfsSstSubDevices", cass);
+		
+		return result;
+	}
+
+	public Map<String, Object> getDeviceSummaryTestSIU(MonNeDevice device){
+		Map<String, Object> result   = new HashMap<String, Object>();
+		
+		result.put("className", "siu");
+		
+		XfsSstSiuDTO cdm=new XfsSstSiuDTO();
+		
+		List<XfsSstSubDeviceDTO> cass=new ArrayList<XfsSstSubDeviceDTO>();
+		
+		
+		cdm.setDeviceName("SIU");
+		cdm.setDeviceType("SIU");
+		cdm.setSubDeviceNbr(1);
+		//cdm.setDeviceState(deviceState);
+		
+		cdm.setCashState(DeviceStateEnum.NA);				
+		cdm.setHwState(DeviceStateEnum.NORMAL);		
+		cdm.setSecState(DeviceStateEnum.NORMAL);		
+		cdm.setSuplState(DeviceStateEnum.NA);					
+		
+		
+		
+		
+		XfsGenValuesDTO gv=new XfsGenValuesDTO();
+		gv.setStatus("CoinDispenser");
+		gv.setSeverity(2);
+		
+		
+		cdm.setXfsSIUStatusDevice(gv);
+		
+		cdm.setXfsSIUStatusExtraStatus("extra");
+		
+		
+		gv=new XfsGenValuesDTO();
+		MonNeSubdevice subdev=monNeSubdeviceService.findByName(serviceContext(), "State of the ambient light sensor");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusAmbLightSensors(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of the Audible Alarm device");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusAudibleAlarmAux(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of the audio indicator");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));		
+		cdm.setXfsSIUStatusAudioIndicators(subdev.getNsdValue().intValue());
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Bill Acceptor unit guidance light");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusBillAcceptorGuideLights(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of the cabinet doors");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusCabinetDoors(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Card Unit (IDC) guidance light");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusCardUnitGuideLights(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Cheque Processing unit guidance light");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusChequeUnitGuidelights(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Coin Acceptor unit guidance light");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusCoinAcceptorGuideLights(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Coin Dispenser unit guidance light");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusCoinDispenserGuideLights(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Document Printer unit guidance light");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusDocumentPrinterGuideLights(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of the Audio Jack Controller");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusEnhancedAudioControlAux(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of the headphone connected to the Audio Jack");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusEnhancedAudioSensors(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Envelope Depository unit guidance light");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusEnvDepositoryGuideLights(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Envelope Dispenser unit guidance light");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusEnvDispenserGuideLights(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of the fascia light");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusFasciaLightIndicators(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of the internal heating");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusHeatingIndicators(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of the heat sensor");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusHeatSensors(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of the internal tamper sensor");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusIntTamperSensors(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Dispenser unit guidance light");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusNotesDispenserGuideLights(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of the open/closed indicator");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusOpenCloseIndicators(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of the operator switch sensor");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusOperatorSwitchSensors(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Passbook Printer unit guidance light");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusPassbookPrinterGuideLights(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "PIN pad unit guidance light");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusPinpadGuideLights(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of the proximity sensor");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusProximitySensors(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Receipt Printer unit guidance light");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusReceiptPrinterGuideLights(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of the Remote Status Monitor device");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusRemoteStatusMonitorAux(subdev.getNsdValue().intValue());
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of the safe doors");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusSafeDoors(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Scanner unit guidance light");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusScannerGuideLights(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of the seismic sensor");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusSeismicSensors(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of the tamper sensor");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusTamperSensors(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of the Uninterruptable Power Supply device");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusUPSAux(subdev.getNsdValue().intValue());
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "State of the vandal shield");
+		gv.setStatus(monXfsValLanService.findMonXfsValLans4Val(serviceContext(), subdev.getNsdValId()).get(0).getVllDescription());
+		gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		cdm.setXfsSIUStatusVandalShieldDoors(gv);
+		gv=new XfsGenValuesDTO();
+		subdev=monNeSubdeviceService.findByName(serviceContext(), "Audio volume control");
+		gv.setStatus("Good");
+		gv.setSeverity(DeviceStateEnum.NORMAL.getId());
+		if(subdev.getNsdValId()!=null) {
+			gv.setStatus(subdev.getNsdValId().getValDescription());
+			gv.setSeverity(Integer.parseInt(subdev.getNsdValId().getValSevId().getSevCode()));
+		}
+		cdm.setXfsSIUStatusVolumeAux(subdev.getNsdValue().intValue());
+		
+		gv=new XfsGenValuesDTO();
+		//subdev=monNeSubdeviceService.findByName(serviceContext(), "Audio volume control");
+		gv.setStatus("Good");
+		gv.setSeverity(DeviceStateEnum.NA.getId());
+		cdm.setXfsSIUStatusBootSwitchSensors(gv);
+		gv=new XfsGenValuesDTO();
+		//subdev=monNeSubdeviceService.findByName(serviceContext(), "Audio volume control");
+		gv.setStatus("NA");
+		gv.setSeverity(DeviceStateEnum.NA.getId());
+		cdm.setXfsSIUStatusCabinetFrontDoors(gv);
+		gv=new XfsGenValuesDTO();
+		//subdev=monNeSubdeviceService.findByName(serviceContext(), "Audio volume control");
+		gv.setStatus("NA");
+		gv.setSeverity(DeviceStateEnum.NA.getId());
+		cdm.setXfsSIUStatusCabinetFrontDoors(gv);
+		gv=new XfsGenValuesDTO();
+		//subdev=monNeSubdeviceService.findByName(serviceContext(), "Audio volume control");
+		gv.setStatus("NA");
+		gv.setSeverity(DeviceStateEnum.NA.getId());
+		cdm.setXfsSIUStatusCabinetLeftDoors(gv);
+		gv=new XfsGenValuesDTO();
+		//subdev=monNeSubdeviceService.findByName(serviceContext(), "Audio volume control");
+		gv.setStatus("NA");
+		gv.setSeverity(DeviceStateEnum.NA.getId());
+		cdm.setXfsSIUStatusCabinetRearDoors(gv);
+		gv=new XfsGenValuesDTO();
+		//subdev=monNeSubdeviceService.findByName(serviceContext(), "Audio volume control");
+		gv.setStatus("NA");
+		gv.setSeverity(DeviceStateEnum.NA.getId());
+		cdm.setXfsSIUStatusCabinetRightDoors(gv);
+		gv=new XfsGenValuesDTO();
+		//subdev=monNeSubdeviceService.findByName(serviceContext(), "Audio volume control");
+		gv.setStatus("NA");
+		gv.setSeverity(DeviceStateEnum.NA.getId());
+		cdm.setXfsSIUStatusConsumerDisplayBacklightIndicators(gv);
+		cdm.setXfsSIUStatusConsumerDisplaySensors(gv);
+		cdm.setXfsSIUStatusEnvDepositoryGuideLights(gv);
+		cdm.setXfsSIUStatusEnvDispenserGuideLights(gv);
+		cdm.setXfsSIUStatusGeneralInputPortSensors("0");
+		cdm.setXfsSIUStatusGeneralOutputPortIndicators("0");
+		cdm.setXfsSIUStatusHandsetSensors(gv);
+		cdm.setXfsSIUStatusNotesDispenserGuideLights(gv);
+		cdm.setXfsSIUStatusOperatorCallButtonSensors(gv);		
+		cdm.setXfsSIUStatusSignageDisplayIndicators(gv);
+		cdm.setXfsSIUStatusSpare1GuideLights(gv);
+		cdm.setXfsSIUStatusSpare2GuideLights(gv);
+		cdm.setXfsSIUStatusSpare3GuideLights(gv);
+		cdm.setXfsSIUStatusTransactionIndicators("0");
+		
+		
+		
+		
+		cdm.setXfsSIUStatusPowerSaveRecoveryTime(0);
+		
+		
+		result.put("xfsSstDevice",cdm);
+		result.put("xfsSstSubDevices", cass);
+		
+		return result;
+	}
+	
+}

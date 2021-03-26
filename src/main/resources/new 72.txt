@@ -1,0 +1,1561 @@
+package ma.brs.easyatm.ejr.serviceimpl.ejrproc;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileFilter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.math.BigDecimal;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.apache.log4j.Logger;
+import org.sculptor.framework.context.ServiceContext;
+
+import ma.brs.easyatm.common.ApplicationContextHolder;
+import ma.brs.easyatm.ejr.domain.EjrAlimentation;
+import ma.brs.easyatm.ejr.domain.EjrArreteCentral;
+import ma.brs.easyatm.ejr.domain.EjrCasNotif;
+import ma.brs.easyatm.ejr.domain.EjrCashCounter;
+import ma.brs.easyatm.ejr.domain.EjrCassette;
+import ma.brs.easyatm.ejr.domain.EjrCoffreEvent;
+import ma.brs.easyatm.ejr.domain.EjrTransType;
+import ma.brs.easyatm.ejr.serviceapi.EjrAlimentationService;
+import ma.brs.easyatm.ejr.serviceapi.EjrCasNotifService;
+import ma.brs.easyatm.ejr.serviceapi.EjrCashCounterCsts;
+import ma.brs.easyatm.ejr.serviceapi.EjrCashCounterService;
+import ma.brs.easyatm.ejr.serviceapi.EjrCassetteService;
+import ma.brs.easyatm.ejr.serviceapi.EjrProcStatusCsts;
+import ma.brs.easyatm.ejr.serviceapi.EjrTransTypeService;
+import ma.brs.easyatm.ejr.serviceimpl.common.EjPattern;
+import ma.brs.easyatm.ejr.serviceimpl.common.EjPatternDef;
+import ma.brs.easyatm.ejr.serviceimpl.common.MsgResponse;
+import ma.brs.easyatm.ejr.serviceimpl.ejrproc.cam.AnalyzerCamCst;
+import ma.brs.easyatm.top.domain.TopNe;
+
+public class EjrFileProcessor {
+
+	private static final Logger logger = Logger.getLogger(EjrFileProcessor.class);
+	
+	private TopNe topNe=null;
+	
+	
+	EjrTransTypeService ejrTransTypeService;
+	EjrCashCounterService ejrCashCounterService;
+	EjrCasNotifService ejrCasNotifService;
+	EjrCassetteService ejrCassetteService;
+	EjrAlimentationService ejrAlimentationService;
+		
+	protected int lastLine=-1;
+	protected String lineBefore="";
+	protected Date lastEventDate=null;
+	protected Date lastRetraitDate=null;
+	protected BufferedReader fileReader = null;
+	protected List<String> lines= null;
+	protected String lastDateFormat ="";
+	protected String lineToProcess="";
+	private static final SimpleDateFormat fileDateFormat = new SimpleDateFormat("yyyy/MM/dd");	
+	
+	public static final int PROCESS_OK=0;
+	public static final int PROCESS_NOK_SYSTEM_ERROR=-2;
+	public static final int PROCESS_NOK_FILE_EMPTY=-3;
+	public static final int PROCESS_OK_END_OF_FILE=-4;
+	public static final int PROCESS_NOK_INCORRECT_DATE_FORMAT=-5;
+	
+	public static final int DEFAULT_CAS1_VAL = 100;
+	public static final int DEFAULT_CAS2_VAL = 200;
+	public static final int DEFAULT_CAS3_VAL = 0;
+	public static final int DEFAULT_CAS4_VAL = 0;
+	
+	public static final int ETAT_INCONNU=0;
+    public static final int ETAT_UP=1;
+    public static final int ETAT_DOWN=2;
+    
+    public static final int EVENT_INCONNU=0;
+    public static final int EVENT_OUVERT=1;
+    public static final int EVENT_FERME=2;
+
+    public static final int NOTIF_NOT_NEEDED=0;
+    public static final int NOTIF_NEEDED=1;
+    public static final int NOTIF_SENT=2;
+	
+    //WinErrMapManager
+    public static final int TYPE_ERREUR_UNKNOWN=0;
+    public static final int TYPE_ERREUR_ERROR=1;
+    public static final int TYPE_ERREUR_WARNING=2;
+    
+    //WincorErrorManager
+    public static final char ACTIF='A';
+    public static final char INACTIF='I';
+    
+    //CasNotifManager
+    public static final int SEUIL_ZERO=0;
+    public static final int SEUIL_WARN=1;
+    public static final int SEUIL_ERROR=2;
+
+    public static final Character ETAT_INSTANCE='I';
+    public static final Character ETAT_NOTIFIEE='N';
+    public static final Character ETAT_INACTIVE='S';
+    
+    //CashCounterManager
+    public static final char CASH_COUNTER_TYPE_INCONNU='I';
+    public static final char CASH_COUNTER_TYPE_S='S'; // Detail
+    public static final char CASH_COUNTER_TYPE_P='P'; // Sommaire
+    public static final char CASH_COUNTER_TYPE_C='C'; // Estime
+    public static final char CASH_COUNTER_TYPE_egal='=';
+
+    public static final char CASH_COUNTER_ETAT_M='M';
+    public static final char CASH_COUNTER_ETAT_O='O';
+
+    public static final int CASH_TRAITE_INST=0;
+    public static final int CASH_TRAITE_OK=1;
+    public static final int CASH_TRAITE_KO=2;
+
+    public static final char CASH_CLEAR_NO='N';
+    public static final char CASH_CLEAR_YES='Y';
+    
+    //CountClearManager
+    public static final int CLEAR_TYPE_UNKNOWN=0;
+    public static final int CLEAR_TYPE_CASH=1;
+    public static final int CLEAR_TYPE_CARD=2;
+    public static final int CLEAR_TYPE_RETRACT=3;
+    public static final int CLEAR_TYPE_DEPOSIT=4;
+    
+    
+    protected int SEUIL_CAS_WAR = 200;
+    protected int SEUIL_CAS_ERR = 100;
+    protected int seuil_cas_atteint=0;
+    
+    public int glpValCas1=200;
+    public int glpValCas2=100;
+    public int glpValCas3=200;
+    public int glpValCas4=100;
+    
+    
+	protected Map<Long, EjrTransType> transTypeMap = null;
+	
+	protected static ArrayList<EjPattern> ejArr = new ArrayList<EjPattern>();
+	protected static ArrayList<EjPattern> ejArrStart = new ArrayList<EjPattern>();
+	protected static ArrayList<EjPattern> ejArrAmt = new ArrayList<EjPattern>();
+	protected static ArrayList<EjPattern> ejArrCutOff = new ArrayList<EjPattern>();
+	protected static ArrayList<EjPattern> ejArrSupMode = new ArrayList<EjPattern>();
+	
+	
+	private String currentFile="";
+	
+	protected boolean forceEnd;
+	protected String lastProcessedLine="";
+	
+	public TransactionBlock lastTransactionBlock;
+	
+	public boolean cashCleard=false;
+	protected String lastCashFileName="";
+	protected int lastCashLine=0;
+	
+	/*------------------------------------------------------------------------------*/
+	/*------------------------------------------------------------------------------*/
+	/*------------------------------------------------------------------------------*/
+	public EjrFileProcessor() {
+		ejrTransTypeService=ApplicationContextHolder.getContext().getBean(EjrTransTypeService.class);
+		ejrCashCounterService=ApplicationContextHolder.getContext().getBean(EjrCashCounterService.class);
+		ejrCasNotifService=ApplicationContextHolder.getContext().getBean(EjrCasNotifService.class);
+		ejrCassetteService=ApplicationContextHolder.getContext().getBean(EjrCassetteService.class);
+		ejrAlimentationService=ApplicationContextHolder.getContext().getBean(EjrAlimentationService.class);
+	}
+	
+	public void init (ServiceContext ctx, TopNe ne) {
+		this.topNe=ne;
+		
+		this.transTypeMap = new HashMap<Long, EjrTransType>();
+		List<EjrTransType> transTypeList = ejrTransTypeService.findAll(ctx);
+		for (EjrTransType item:transTypeList) {
+			this.transTypeMap.put(item.getId(), item);
+		}
+		
+	}
+	
+	public int getLastLine()
+    {
+        return lastLine;
+    }
+	
+	protected boolean isForceEnd()
+	{
+		return forceEnd;
+	}
+	
+	
+	
+	public String getCurrentFile() {
+		return currentFile;
+	}
+
+	public void setCurrentFile(String currentFile) {
+		this.currentFile = currentFile;
+	}
+	
+
+    public boolean isCoeNotifNedded(EjrCoffreEvent coe)
+    {
+       if ((coe==null)||(coe.getCoeDate()==null))
+           return false;
+
+       if (!coe.getCoeType().equals(""+EjrFileProcessor.EVENT_OUVERT))
+           return false;
+
+       // Jour Chomé
+       /*if(CommonUtil.getInsatance().estJourChome(coe.getCoeDate())){
+           return true;
+       }*/
+
+
+       SimpleDateFormat dateF = new SimpleDateFormat("yyyy-MM-dd");
+       SimpleDateFormat timeF = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+       // Get Min and Max Time
+       String minCoeTime="08:00:00";
+       String maxCoeTime="17:00:00";
+
+       /*String prop = Propriete.getInsatance().get("mail.coeev.mintime");
+       if ((prop!=null)&&(prop.length()>0))
+           minCoeTime = prop;
+
+       prop = Propriete.getInsatance().get("mail.coeev.maxtime");
+       if ((prop!=null)&&(prop.length()>0))
+           maxCoeTime = prop;*/
+       
+
+       Date minDate = null;
+       Date maxDate = null;
+       try {
+           minDate = timeF.parse(dateF.format(coe.getCoeDate()) + " " + minCoeTime);
+       } catch (ParseException ex) {
+           System.err.println("Invalid date format : "+dateF.format(coe.getCoeDate()) + " " + minCoeTime);
+           ex.printStackTrace();
+           return false;
+       }
+       try {
+           maxDate = timeF.parse(dateF.format(coe.getCoeDate()) + " " + maxCoeTime);
+       } catch (ParseException ex) {
+           System.err.println("Invalid date format : "+dateF.format(coe.getCoeDate()) + " " + maxCoeTime);
+           ex.printStackTrace();
+           return false;
+       }
+
+       return ((coe.getCoeDate().before(minDate))||(coe.getCoeDate().after(maxDate)));
+    }
+    
+    
+
+
+	public void addPattern(EjPatternDef ejPatDef) {
+		Pattern p = Pattern.compile(ejPatDef.getEjPattern());
+		EjPattern ejP = new EjPattern();
+		ejP.setPattern(p);
+		ejP.setMsgType(ejPatDef.getTraType());
+		
+		if (ejPatDef.getTrx()==1)
+			ejArr.add(ejP);
+		if (ejPatDef.getCutOff()==1)
+			ejArrCutOff.add(ejP);
+		if (ejPatDef.getSupMode()==1)
+			ejArrSupMode.add(ejP);
+		if (ejPatDef.getStart()== 1)
+			ejArrStart.add(ejP);
+		if (ejPatDef.getAmount()== 1)
+			ejArrAmt.add(ejP);
+	}
+	
+	public  MsgResponse getResponse(String msg) {
+		MsgResponse mResponse = new MsgResponse();
+		int i;
+		for (i = 0; i < ejArr.size(); i++) {
+			Matcher m = ejArr.get(i).getPattern().matcher(msg);
+			if (m.find()) {
+				mResponse.setMatcher(m);
+				mResponse.setMsgType(ejArr.get(i).getMsgType());
+				mResponse.setLine(msg);
+				break;
+			}
+		}
+		if (i >= ejArr.size()) {
+			mResponse.setMsgType(AnalyzerCamCst.UNKNOWN_MSG);
+			mResponse.setLine(msg);
+			// System.out.println("UNSUPPORTED MESSAGE : " + msg);
+		}
+
+		return mResponse;
+
+	}
+	
+	public  MsgResponse getStartResponse(String msg) {
+		MsgResponse mResponse = new MsgResponse();
+		int i;
+		for (i = 0; i < ejArrStart.size(); i++) {
+			Matcher m = ejArrStart.get(i).getPattern().matcher(msg);
+			if (m.find()) {
+				mResponse.setMatcher(m);
+				mResponse.setMsgType(ejArrStart.get(i).getMsgType());
+				mResponse.setLine(msg);
+				break;
+			}
+		}
+		if (i >= ejArrStart.size()) {
+			mResponse.setMsgType(AnalyzerCamCst.UNKNOWN_MSG);
+			mResponse.setLine(msg);
+			// System.out.println("UNSUPPORTED MESSAGE : " + msg);
+		}
+
+		return mResponse;
+
+	}
+	
+	public  MsgResponse getAmountResponse(String msg) {
+		MsgResponse mResponse = new MsgResponse();
+		int i;
+		for (i = 0; i < ejArrAmt.size(); i++) {
+			Matcher m = ejArrAmt.get(i).getPattern().matcher(msg);
+			if (m.find()) {
+				mResponse.setMatcher(m);
+				mResponse.setMsgType(ejArrAmt.get(i).getMsgType());
+				mResponse.setLine(msg);
+				break;
+			}
+		}
+		if (i >= ejArrAmt.size()) {
+			mResponse.setMsgType(AnalyzerCamCst.UNKNOWN_MSG);
+			mResponse.setLine(msg);
+			// System.out.println("UNSUPPORTED MESSAGE : " + msg);
+		}
+
+		return mResponse;
+
+	}
+	
+	public  MsgResponse getCutOffResponse(String msg) {
+		MsgResponse mResponse = new MsgResponse();
+		int i;
+		for (i = 0; i < ejArrCutOff.size(); i++) {
+			Matcher m = ejArrCutOff.get(i).getPattern().matcher(msg);
+			if (m.find()) {
+				mResponse.setMatcher(m);
+				mResponse.setMsgType(ejArrCutOff.get(i).getMsgType());
+				mResponse.setLine(msg);
+				break;
+			}
+		}
+		if (i >= ejArrCutOff.size()) {
+			mResponse.setMsgType(AnalyzerCamCst.UNKNOWN_MSG);
+			mResponse.setLine(msg);
+			// System.out.println("UNSUPPORTED MESSAGE : " + msg);
+		}
+
+		return mResponse;
+
+	}
+	
+	public  MsgResponse getSupModeResponse(String msg) {
+		MsgResponse mResponse = new MsgResponse();
+		int i;
+		for (i = 0; i < ejArrSupMode.size(); i++) {
+			Matcher m = ejArrSupMode.get(i).getPattern().matcher(msg);
+			if (m.find()) {
+				mResponse.setMatcher(m);
+				mResponse.setMsgType(ejArrSupMode.get(i).getMsgType());
+				mResponse.setLine(msg);
+				break;
+			}
+		}
+		if (i >= ejArrSupMode.size()) {
+			mResponse.setMsgType(AnalyzerCamCst.UNKNOWN_MSG);
+			mResponse.setLine(msg);
+			// System.out.println("UNSUPPORTED MESSAGE : " + msg);
+		}
+
+		return mResponse;
+
+	}
+	
+	public TopNe getTopNe(){
+		return this.topNe;
+	}
+	
+	public void setTopNe(TopNe topNe){
+		this.topNe = topNe;
+	}
+	
+	public EjrCashCounterService getEjrCashCounterService() {
+		return ejrCashCounterService;
+	}
+
+	public void setEjrCashCounterService(EjrCashCounterService ejrCashCounterService) {
+		this.ejrCashCounterService = ejrCashCounterService;
+	}
+
+	/*------------------------------------------------------------------------------*/
+	/*------------------------------------------------------------------------------*/
+	/*------------------------------------------------------------------------------*/
+	public int processFile(ServiceContext ctx, InputStream is, Date elogDate){
+		if(this.topNe==null){
+			logger.error("processFile --> Ne is null !!!");
+			return EjrFileProcessor.PROCESS_NOK_SYSTEM_ERROR;			
+		}
+		if(is==null){
+			logger.error("processFile --> Input Stream is null !!!");
+			return EjrFileProcessor.PROCESS_NOK_SYSTEM_ERROR;			
+		}
+//		if(elogDate==null){
+//			logger.error("processFile --> Elog Date is null !!!");
+//			return EjrFileProcessor.PROCESS_NOK_SYSTEM_ERROR;			
+//		}
+		
+		System.out.println("****************** processFile method: elogDate=" + elogDate);
+		// Init variables
+		this.lastLine=-1;
+		this.lineBefore="";
+		this.lastEventDate=elogDate;
+		this.fileReader = null;
+		this.lastDateFormat="";
+		String strDate = null;
+		
+		try {
+			strDate = fileDateFormat.format(elogDate);
+		} catch (Exception e){
+			logger.error("processFile --> Exception while openneing the file :",e);
+			return EjrFileProcessor.PROCESS_NOK_SYSTEM_ERROR;
+		}
+				
+		// Open the file
+		InputStreamReader myIpsr = null;
+		try{
+			myIpsr = new InputStreamReader(is);
+			fileReader = new BufferedReader(myIpsr);
+		} catch (Exception e) {
+			logger.error("processFile --> Exception while openneing the file :",e);
+			return EjrFileProcessor.PROCESS_NOK_SYSTEM_ERROR;
+		} 
+		
+		// Check if empty		
+		boolean error=false;
+		boolean fileempty=false;		
+        try {
+        	fileReader.mark(1);
+            if (fileReader.read() == -1){
+            	logger.error("processFile --> Empty elog file !!!");
+            	fileempty=true;
+            }
+            else{
+            	fileReader.reset();
+            }            
+        } catch (IOException ex) {
+        	logger.error("processFile --> Exception while testing if file is empty :",ex);
+        	error=true;        	
+        }              
+        if((fileempty)||(error))
+        {
+        	if(fileReader!=null)
+        	{
+        		try{
+        			fileReader.close();
+        		} catch (Exception e) {
+        			logger.error("processFile --> Exception while closing reader :",e);
+				}        		
+        	}
+        	if(fileempty){
+            	return EjrFileProcessor.PROCESS_NOK_FILE_EMPTY;
+            }
+            if(error){
+            	return EjrFileProcessor.PROCESS_NOK_SYSTEM_ERROR;
+            }
+        }
+        
+     // Boucle sur les lignes
+        String line="";
+        int indice =0;
+        int res=PROCESS_OK;
+        while((res==EjrFileProcessor.PROCESS_OK) && (line != null))
+        {
+            try 
+            {
+                if (line!=null)
+                    lineBefore=line;                
+                line = this.fileReader.readLine();
+                indice ++;
+            } catch (IOException ex) {
+                logger.error("Error reading log file :"+elogDate+" at line :"+indice+" with reason :"+ex.getMessage());
+                line = null;
+                res=EjrFileProcessor.PROCESS_OK_END_OF_FILE;
+            }
+
+            if (line==null)
+            {
+                if (indice < this.lastLine)
+                {
+                    this.lastLine=0;
+                }
+                res=EjrFileProcessor.PROCESS_OK_END_OF_FILE;
+            }
+            
+            if ((indice>this.lastLine) && (line!=null))
+            {
+                res = processLine(ctx, line, elogDate, strDate);
+                if (res == EjrFileProcessor.PROCESS_OK)
+                {
+                    this.lastLine+=1;
+                    indice = this.lastLine;
+                }
+            }
+        }
+		
+        // Close the file
+        if(fileReader!=null)
+    	{
+    		try{
+    			fileReader.close();
+    		} catch (Exception e) {
+    			logger.error("processFile --> Exception while closing reader :",e);
+			}        		
+    	}
+        
+        if(res==EjrFileProcessor.PROCESS_OK_END_OF_FILE){
+        	res=EjrFileProcessor.PROCESS_OK;
+        }
+		
+		return res;
+	}
+	
+	/*------------------------------------------------------------------------------*/
+	/*------------------------------------------------------------------------------*/
+	/*------------------------------------------------------------------------------*/
+	public int processFile(ServiceContext ctx, String filepath, Date elogDate){
+		if(this.topNe==null){
+			logger.error("processFile --> Ne is null !!!");
+			return EjrFileProcessor.PROCESS_NOK_SYSTEM_ERROR;			
+		}
+		if(filepath==null){
+			logger.error("processFile --> Input Stream is null !!!");
+			return EjrFileProcessor.PROCESS_NOK_SYSTEM_ERROR;			
+		}
+//		if(elogDate==null){
+//			logger.error("processFile --> Elog Date is null !!!");
+//			return EjrFileProcessor.PROCESS_NOK_SYSTEM_ERROR;			
+//		}
+		
+		logger.error("processFile :"+filepath+ " elogDate=" + elogDate);
+		// Init variables
+		this.lastLine=-1;
+		this.lineBefore="";
+		this.lastEventDate=elogDate;
+		this.fileReader = null;
+		this.lastDateFormat="";
+		this.lines = null;
+		String strDate;
+		
+		try {
+			strDate = fileDateFormat.format(elogDate);
+		} catch (Exception e){
+			logger.error("processFile --> Exception while openneing the file :",e);
+			return EjrFileProcessor.PROCESS_NOK_SYSTEM_ERROR;
+		}
+		// Open the file
+		Charset charset = Charset.forName("ISO-8859-1");
+		try {
+			this.lines = Files.readAllLines(Paths.get (filepath), charset);
+
+		} catch (IOException e) {
+			logger.error("processFile --> IOException while openneing the file :", e);
+			return EjrFileProcessor.PROCESS_NOK_SYSTEM_ERROR;
+		}catch (Exception e) {
+			logger.error("processFile --> Exception while openneing the file :", e);
+			return EjrFileProcessor.PROCESS_NOK_SYSTEM_ERROR;
+		}
+		logger.error("processFile size :"+this.lines.size());
+		
+		// Check if empty		
+		boolean error=false;
+		boolean fileempty=false;		
+        if ((this.lines==null)||(this.lines.size()==0)) {   	
+            	logger.error("processFile --> Empty elog file !!!");
+            	fileempty=true;                  	
+        } 
+        
+        if((fileempty)||(error))
+        {       	
+        	if(fileempty){
+            	return EjrFileProcessor.PROCESS_NOK_FILE_EMPTY;
+            }
+            if(error){
+            	return EjrFileProcessor.PROCESS_NOK_SYSTEM_ERROR;
+            }
+        }
+        
+     // Boucle sur les lignes
+        String line="";
+        int indice =0;
+        int i =0;
+        int res=PROCESS_OK;
+        while((res==EjrFileProcessor.PROCESS_OK) && (!this.lines.isEmpty()))
+        {
+            try 
+            {
+                if (line!=null)
+                    lineBefore=line;                
+                line = this.lines.remove(0);
+                i++;
+                indice ++;
+            } catch (Exception ex) {
+                logger.error("Error reading log file :"+elogDate+" at line :"+indice+" with reason :"+ex.getMessage());
+                line = null;
+                res=EjrFileProcessor.PROCESS_OK_END_OF_FILE;
+            }
+
+            if (line==null)
+            {
+                if (indice < this.lastLine)
+                {
+                    this.lastLine=0;
+                }
+                res=EjrFileProcessor.PROCESS_OK_END_OF_FILE;
+            }
+            
+            if ((indice>this.lastLine) && (line!=null))
+            {
+                res = processLine(ctx, line, elogDate, strDate);
+                if (res == EjrFileProcessor.PROCESS_OK)
+                {
+                    this.lastLine+=1;
+                    indice = this.lastLine;
+                }
+            }
+        }
+		
+      /*  // Close the file
+        if(fileReader!=null)
+    	{
+    		try{
+    			fileReader.close();
+    		} catch (Exception e) {
+    			logger.error("processFile --> Exception while closing reader :",e);
+			}        		
+    	}*/
+        
+        if(res==EjrFileProcessor.PROCESS_OK_END_OF_FILE){
+        	res=EjrFileProcessor.PROCESS_OK;
+        }
+		
+		return res;
+	}
+	/*------------------------------------------------------------------------------*/
+	/*------------------------------------------------------------------------------*/
+	/*------------------------------------------------------------------------------*/
+	protected int processLine(ServiceContext ctx, String line, Date elogDate, String strFileDate){
+		logger.error("processLine --> Not applicable in generic class !!!");
+		return EjrFileProcessor.PROCESS_NOK_SYSTEM_ERROR;
+	}
+	
+	protected void initProc(ServiceContext ctx, TopNe ne){
+		logger.error("initProc --> Not applicable in generic class !!!");
+	}
+	
+	protected Date processCutoffCash(ServiceContext ctx, EjrArreteCentral art, Date evDate,String line)
+    {
+        if((line==null)||(line.length()==0)||(evDate==null))
+            return null;
+    
+
+        // 2719800396950042900433000000000000000000000000000000000000000000000000000000400008000000000000000000000000000000
+
+        // Date
+        Date cacDate = evDate;
+
+        // Traiter la ligne
+        int cas[] = {0,0,0,0};
+        int disp[] = {0,0,0,0};
+        int rej[] = {0,0,0,0};
+        int cassettes=0;
+        int dispes=0;
+        int rejets=0;
+        // Cassette
+        boolean poursuivre = true;
+        String newLine=line.trim();
+        for(int i=0;i<4;i++)
+        {
+            try{
+                cas[i]=Integer.parseInt(newLine.substring(i*5+12, i*5+17));
+            } catch (Exception ex){
+                logger.error("Error parsing CASHPWCS Cassette line with reason :"+ex.getMessage());
+                poursuivre=false;
+                break;
+            }
+            cassettes+=cas[i];
+        }
+        if(!poursuivre)
+            return null;
+
+        // Rejets
+        for(int i=0;i<4;i++)
+        {
+            try{
+                rej[i]=Integer.parseInt(newLine.substring(i*5+32, i*5+37));
+            } catch (Exception ex){
+                logger.error("Error parsing CASHPWCS Dispensed line with reason :"+ex.getMessage());
+                poursuivre=false;
+                break;
+            }
+            
+            rejets+=rej[i];
+        }
+        if(!poursuivre)
+            return null;
+
+        // Dispensed
+        for(int i=0;i<4;i++)
+        {
+            try{
+                disp[i]=Integer.parseInt(newLine.substring(i*5+52, i*5+57));
+            } catch (Exception ex){
+                logger.error("Error parsing CASHPWCS Rejets line with reason :"+ex.getMessage());
+                poursuivre=false;
+                break;
+            }
+            dispes+=disp[i];
+        } 
+        
+        if(!poursuivre)
+            return null;
+
+//        if((cassettes+rejets+dispes)==0){
+//            logger.error("No cash set in line CASHPWCS !!!");
+//            return null;
+//        }
+            
+
+
+        // Preparer l'objet cash counter
+        EjrCashCounter obj= new EjrCashCounter();
+        obj.setCacNeId(topNe);
+        obj.setCacBanId(topNe.getNeBanId());
+        obj.setCacType(EjrCashCounterCsts.CASH_COUNTER_TYPE_S); // Supply counters
+        obj.setCacDate(evDate);
+        obj.setCacProcStatus(EjrProcStatusCsts.PROC_STATUS_INSTANCE);
+
+        //Retrouver Last interruption cash counter
+        EjrCashCounter cash = ejrCashCounterService.findLastEjrCashCounter4Interrupt(ctx, topNe);
+        // Positionner les valeurs
+        if (cas[0]!=65535) {
+        	obj.setCacCas1Tot(cas[0]+rej[0]+disp[0]);
+        	obj.setCacCas1Cas(cas[0]);
+        }
+        else {
+        	if (cash!=null) {
+        		obj.setCacCas1Tot(cash.getCacCas1Tot());
+        		obj.setCacCas1Cas(cash.getCacCas1Tot() - rej[0]-disp[0]); 
+        	}
+        }
+        obj.setCacCas1Disp(disp[0]);
+        obj.setCacCas1Rej(rej[0]);
+
+        if (cas[1]!=65535) {
+        	obj.setCacCas2Tot(cas[1]+rej[1]+disp[1]);
+        	obj.setCacCas2Cas(cas[1]);
+        }
+        else {
+        	if (cash!=null) {
+        		obj.setCacCas2Tot(cash.getCacCas2Tot());
+        		obj.setCacCas2Cas(cash.getCacCas2Tot() - rej[1]-disp[1]); 
+        	}
+        }
+        obj.setCacCas2Disp(disp[1]);
+        obj.setCacCas2Rej(rej[1]);
+
+        if (cas[2]!=65535) {
+        	obj.setCacCas3Tot(cas[2]+rej[2]+disp[2]);
+        	obj.setCacCas3Cas(cas[2]);
+        }
+        else {
+        	if (cash!=null) {
+        		obj.setCacCas3Tot(cash.getCacCas3Tot());
+        		obj.setCacCas3Cas(cash.getCacCas3Tot() - rej[2]-disp[2]);
+        	}
+        }
+        obj.setCacCas3Disp(disp[2]);
+        obj.setCacCas3Rej(rej[2]);
+
+        if (cas[3]!=65535) {
+        	obj.setCacCas4Tot(cas[3]+rej[3]+disp[3]);
+        	obj.setCacCas4Cas(cas[3]);
+        }
+        else {
+        	if (cash!=null) {
+        		obj.setCacCas4Tot(cash.getCacCas4Tot());
+        		obj.setCacCas4Cas(cash.getCacCas4Tot() - rej[3]-disp[3]);
+        	}
+        }
+        obj.setCacCas4Disp(disp[3]);
+        obj.setCacCas4Rej(rej[3]);
+
+        // Autres champs calcules
+        obj.setCacCas1Val(EjrFileProcessor.DEFAULT_CAS1_VAL);
+        obj.setCacCas2Val(EjrFileProcessor.DEFAULT_CAS2_VAL);
+        obj.setCacCas3Val(EjrFileProcessor.DEFAULT_CAS3_VAL);
+        obj.setCacCas4Val(EjrFileProcessor.DEFAULT_CAS4_VAL);
+        obj.setCacCas1Etat(EjrCashCounterCsts.CASH_COUNTER_ETAT_O);
+        obj.setCacCas2Etat(EjrCashCounterCsts.CASH_COUNTER_ETAT_O);
+        obj.setCacCas3Etat(EjrCashCounterCsts.CASH_COUNTER_ETAT_O);
+        obj.setCacCas4Etat(EjrCashCounterCsts.CASH_COUNTER_ETAT_O);
+
+        obj.setCacArcId(art);
+
+        // Inserer l'objet
+        ejrCashCounterService.save(ctx, obj);
+
+        this.lastEventDate=evDate;
+
+        // Update cassette
+       // updateCass(obj);
+
+        // Date
+        return cacDate;
+    }
+	/*------------------------------------------------------------------------------*/
+	/*------------------------------------------------------------------------------*/
+	/*------------------------------------------------------------------------------*/
+    protected  boolean containsKeyWord(String line)
+    {
+		return false;
+    }
+    
+    /*------------------------------------------------------------------------------*/
+	/*------------------------------------------------------------------------------*/
+	/*------------------------------------------------------------------------------*/
+    protected Date buildTraDate(String fileDateS, String dateString)
+    {
+        SimpleDateFormat f1 = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
+        SimpleDateFormat f2 = new SimpleDateFormat("MM/yy/dd HH:mm:ss");
+        SimpleDateFormat f3=  new SimpleDateFormat("yyyyMMdd");
+        
+        Date evDate1=null;
+        Date evDate2=null;
+        try {
+            evDate1 = f1.parse(dateString);
+        } catch (ParseException ex) {
+            logger.error("Incorrect date format :"+dateString+" for format :"+f1);
+            ex.printStackTrace();
+        }
+        try {
+            evDate2 = f2.parse(dateString);
+        } catch (ParseException ex) {
+            logger.error("Incorrect date format :"+dateString+" for format :"+f2);
+            ex.printStackTrace();
+        }
+
+        if ((evDate1==null)&&(evDate2==null))
+            return null;
+        else if (evDate2==null)
+            return evDate1;
+        else if (evDate1==null)
+            return evDate2;
+        else
+        {
+             if((fileDateS==null)||(fileDateS.length()<1))
+                return evDate1;
+            try {
+                long delta1 = evDate1.getTime()-(f3.parse(fileDateS).getTime());
+                long delta2 = evDate2.getTime()-(f3.parse(fileDateS).getTime());
+                if(Math.abs(delta2)<Math.abs(delta1)) return evDate2;
+                else                                  return evDate1;
+            } catch (ParseException ex) {
+                logger.debug("Exception raised during parse date !!!"+ex.getMessage());
+            }
+        }
+
+        return evDate1;
+    }
+    
+    /*------------------------------------------------------------------------------*/
+   	/*------------------------------------------------------------------------------*/
+   	/*------------------------------------------------------------------------------*/
+    protected boolean isCardPickedUp(String responseCode)
+    {
+        if ((responseCode==null)||(responseCode.length()<3))
+            return false;
+        
+        String res = responseCode.trim();
+        if (res.compareTo("200")==0)
+            return true;
+        if (res.compareTo("201")==0)
+            return true;
+        if (res.compareTo("202")==0)
+            return true;
+        else if (res.compareTo("204")==0)
+            return true;
+        else if (res.compareTo("205")==0)
+            return true;
+        else if (res.compareTo("206")==0)
+            return true;
+        else if (res.compareTo("207")==0)
+            return true;
+        else if (res.compareTo("208")==0)
+            return true;
+        else if (res.compareTo("209")==0)
+            return true;
+        else if (res.compareTo("210")==0)
+            return true;
+        else if (res.compareTo("280")==0)
+            return true;
+        else if (res.compareTo("299")==0)
+            return true;
+        
+        return false;
+    }
+    
+    /*------------------------------------------------------------------------------*/
+   	/*------------------------------------------------------------------------------*/
+   	/*------------------------------------------------------------------------------*/
+    public Date getDateFromFName(String fName){    
+    	Date fileDate=null;
+    	logger.error("getDateFromFName --> Called in generic class !!!");
+    	return fileDate;
+    }
+    
+    public Map<Date, File> sortFiles(File[] files){
+    	return null;
+    }
+    
+    public FileFilter createFileFilter(final String year){
+    	return null;
+    }
+    
+    public String formatLastDate(Date lastDate)	{
+    	return null;
+    }
+    
+    protected int getSeuilCas(int ancVal,int nouvVal)
+    {
+        if ((ancVal==0)&&(nouvVal==0))
+           return SEUIL_ZERO;
+
+        if (nouvVal<this.SEUIL_CAS_ERR)
+            return SEUIL_ERROR;
+        else if (nouvVal<this.SEUIL_CAS_WAR)
+            return SEUIL_WARN;
+
+        return SEUIL_ZERO;
+    }
+
+    protected int updateCass(ServiceContext ctx,EjrCashCounter obj){
+        // update cassettes
+      logger.info("Update Cassettes: "+obj.getCacDate());
+      List<EjrCassette> listCass= ejrCassetteService.findByAtm(ctx,obj.getCacNeId());
+      if((listCass==null)||(listCass.isEmpty())){
+    	  EjrCassette cass=new EjrCassette();
+    	  cass.setCasDate(obj.getCacDate());
+    	  cass.setCasNeId(obj.getCacNeId());
+    	  cass.setCasOrder(1);
+    	  cass.setCasNotes(0);    	  
+    	  cass.setCasStatus(0);          
+          ejrCassetteService.save(ctx, cass);
+          cass=new EjrCassette();
+    	  cass.setCasDate(obj.getCacDate());
+    	  cass.setCasNeId(obj.getCacNeId());
+    	  cass.setCasOrder(2);
+    	  cass.setCasNotes(0);    	  
+    	  cass.setCasStatus(0);
+    	  ejrCassetteService.save(ctx, cass);
+    	  cass=new EjrCassette();
+    	  cass.setCasDate(obj.getCacDate());
+    	  cass.setCasNeId(obj.getCacNeId());
+    	  cass.setCasOrder(3);
+    	  cass.setCasNotes(0);    	  
+    	  cass.setCasStatus(0);
+    	  ejrCassetteService.save(ctx, cass);
+    	  cass=new EjrCassette();
+    	  cass.setCasDate(obj.getCacDate());
+    	  cass.setCasNeId(obj.getCacNeId());
+    	  cass.setCasOrder(4);
+    	  cass.setCasNotes(0);    	  
+    	  cass.setCasStatus(0);
+    	  ejrCassetteService.save(ctx, cass);
+          listCass= ejrCassetteService.findByAtm(ctx,obj.getCacNeId());
+      }
+
+      int newTotal = 0;
+      int oldTotal = 0;
+      int i=0;
+      
+      Iterator it=listCass.iterator();
+      while(it.hasNext())
+      {
+
+          EjrCassette cass=(EjrCassette)it.next();
+        //   log.debug("Avant cass["+i+"]="+cass.getCasNotes());
+          if (cass.getCasNotes()!=null)
+              oldTotal+=cass.getCasNotes();
+
+          int nbr=0;
+          if(cass.getCasOrder()==1)
+              nbr=obj.getCacCas1Tot()-obj.getCacCas1Disp()-obj.getCacCas1Rej();
+          else if(cass.getCasOrder()==2)
+              nbr=obj.getCacCas2Tot()-obj.getCacCas2Disp()-obj.getCacCas2Rej();
+          else if(cass.getCasOrder()==3)
+              nbr=obj.getCacCas3Tot()-obj.getCacCas3Disp()-obj.getCacCas3Rej();
+          else if(cass.getCasOrder()==4)
+              nbr=obj.getCacCas4Tot()-obj.getCacCas4Disp()-obj.getCacCas4Rej();
+          
+          if(nbr<0)
+              nbr=0;
+
+          newTotal+=nbr;            
+
+          cass.setCasNotes(nbr);
+          cass.setCasDate(obj.getCacDate());
+          
+          int stat=SEUIL_ZERO;
+          
+          if(nbr<=SEUIL_CAS_ERR)
+        	  stat=SEUIL_ERROR;
+          else if(nbr>SEUIL_CAS_ERR && nbr <= SEUIL_CAS_WAR)
+        	  stat=SEUIL_WARN;
+          
+          cass.setCasStatus(stat);
+          
+          logger.info("Update Cassettes: cass.getCasStatus()="+cass.getCasStatus());
+          
+          if(newTotal==0)
+        	  getTopNe().setNeCashOut("4");
+          else if(newTotal<=SEUIL_CAS_ERR)
+        	  getTopNe().setNeCashOut("3");
+          else if(newTotal>SEUIL_CAS_ERR && newTotal <= SEUIL_CAS_WAR) 
+        	  getTopNe().setNeCashOut("2");
+          else
+        	  getTopNe().setNeCashOut("1");
+          
+          
+          ejrCassetteService.save(ctx, cass);          
+          //log.debug("Apres cass["+i+"]="+cass.getCasNotes());
+          i++;
+      }
+          
+      
+      
+            
+      
+      this.updateCasSeuil(ctx,oldTotal, newTotal);
+
+      return PROCESS_OK;
+    }
+    
+    protected int updateCasSeuil(ServiceContext ctx,int oldTotal,int newTotal)
+    {
+        int ancSeuil=seuil_cas_atteint;
+        int nouvSeuil=SEUIL_ZERO;
+
+       if (newTotal==0)
+           nouvSeuil=SEUIL_ERROR;
+
+       logger.info("updateCasSeuil etape 1");
+       
+       // Seuil de cassettes
+       int tempSeuil = this.getSeuilCas(oldTotal,newTotal);
+
+       if (tempSeuil>nouvSeuil)
+            nouvSeuil=tempSeuil;
+
+       if (nouvSeuil==ancSeuil)
+           return ancSeuil;
+
+       logger.info("updateCasSeuil etape 2");
+       
+       logger.debug("updateCasSeuil for gab ("+getTopNe().getNeCode()+") :"+ancSeuil+" -> "+nouvSeuil);
+        int effectiveSeuil = ancSeuil;
+        
+        switch(ancSeuil)
+        {
+            case SEUIL_ZERO :
+                effectiveSeuil = this.updateCasZeroSeuil(ctx,ancSeuil, nouvSeuil);
+                break;
+            default :
+                effectiveSeuil = this.updateCasAvecSeuil(ctx,ancSeuil, nouvSeuil);
+                break;
+        }
+        
+        logger.info("updateCasSeuil etape 3");
+
+        if (effectiveSeuil!=ancSeuil)
+           this.seuil_cas_atteint=nouvSeuil;
+        
+        return this.seuil_cas_atteint;
+    }
+
+    private int updateCasZeroSeuil(ServiceContext ctx,int ancSeuil,int nouvSeuil)
+    {
+        EjrCasNotif casNotif = null;
+        List<EjrCasNotif> casNotifs = ejrCasNotifService.findByAtm(ctx,getTopNe());//listActiveForGab ??
+        if ((casNotifs!=null)&&(casNotifs.size()!=0))
+        {
+            logger.error("Actual seuil ="+ancSeuil+" pour Gab ("+getTopNe().getNeCode()+") et il y a des notifd actives !!!");
+            return ancSeuil;
+        }
+        casNotif = new EjrCasNotif();
+        
+        casNotif.setCanNeId(getTopNe());
+        casNotif.setCanSeuil(nouvSeuil);
+        casNotif.setCanDate(new Date());
+        casNotif.setCanEtat(""+ETAT_INSTANCE);
+        ejrCasNotifService.save(ctx,casNotif);
+        logger.info("1- Nouvelle notification insérée pour Gab ("+getTopNe().getNeCode()+") avec seuil ="+nouvSeuil);
+
+       return nouvSeuil;
+    }
+    
+    private int updateCasAvecSeuil(ServiceContext ctx,int ancSeuil,int nouvSeuil)
+    {
+        // Retrouver la notif
+        EjrCasNotif casNotif = null;
+        List<EjrCasNotif> casNotifs = ejrCasNotifService.findByAtm(ctx,getTopNe());//listActiveForGab ??
+        if ((casNotifs==null)||(casNotifs.size()!=1))
+        {
+           logger.error("Actual seuil ="+ancSeuil+" pour Gab ("+getTopNe().getNeCode()+") et il n y a pas de notifs actives !!!");
+           return ancSeuil;
+        }
+        
+        // Son seuil 
+        casNotif = casNotifs.get(0);
+        if(casNotif.getCanSeuil()!=ancSeuil)
+        {
+            logger.error("Actual seuil ="+ancSeuil+" pour Gab ("+getTopNe().getNeCode()+") et notif active avec seuil :"+casNotif.getCanSeuil());
+           return ancSeuil;
+        }
+
+        // Selon les cas
+        if(nouvSeuil==SEUIL_ZERO)
+        {
+            if (casNotif.getCanEtat().compareTo(""+ETAT_INSTANCE)==0)
+            {
+               
+               ejrCasNotifService.delete(ctx,casNotif);
+               logger.info("2- Notif supprimée pour Gab ("+getTopNe().getNeCode()+") avec seuil :"+ancSeuil);
+            }
+            else
+            {
+                casNotif.setCanEtat(""+ETAT_INACTIVE);
+                casNotif.setCanDate(new Date());               
+                ejrCasNotifService.save(ctx,casNotif);
+                logger.info("3- Notif anunllée pour Gab ("+getTopNe().getNeCode()+") avec seuil :"+ancSeuil);
+            }             
+            return nouvSeuil;
+        }
+        else if (casNotif.getCanEtat().compareTo(""+ETAT_INSTANCE)==0)
+        {
+            casNotif.setCanSeuil(nouvSeuil);
+            casNotif.setCanDate(new Date());
+            ejrCasNotifService.save(ctx,casNotif);
+            logger.info("4- Notif non encore envoyée et seuil change pour Gab ("+getTopNe().getNeCode()+")");
+            return nouvSeuil;
+        }
+        else
+        {
+            // Deja notifiée
+        	
+            casNotif.setCanEtat(""+ETAT_INACTIVE);
+            casNotif.setCanDate(new Date());
+            ejrCasNotifService.save(ctx,casNotif);
+            logger.info("5- Notif anunllée pour Gab ("+getTopNe().getNeCode()+") avec seuil :"+ancSeuil);
+            
+            casNotif = new EjrCasNotif();
+            
+            casNotif.setCanNeId(getTopNe());
+            casNotif.setCanSeuil(nouvSeuil);
+            casNotif.setCanDate(new Date());
+            casNotif.setCanEtat(""+ETAT_INSTANCE);
+            ejrCasNotifService.save(ctx,casNotif);
+            
+            logger.info("6- Nouvelle notification insérée pour Gab ("+getTopNe().getNeCode()+") avec seuil ="+nouvSeuil);
+            return nouvSeuil;
+        }
+    }
+    
+
+    protected int calculCashAlim(ServiceContext ctx,EjrCashCounter cash){
+
+        logger.info("calculCashAlim!!!!!!");
+        EjrCashCounter lastCash = ejrCashCounterService.getCashBeforeDate(ctx, getTopNe(), cash.getCacDate());
+        EjrAlimentation alim=null;
+        if (lastCash == null)
+        {
+           logger.info("lastCash is null!!!!");
+            alim = new EjrAlimentation();
+            alim.setAliNeId(getTopNe());
+            //alim.setAliTraite(""+ALIM_TRAITE_INST);
+            double totalVal=0.0;
+            double totalValRej=0.0;
+            double totalValRetrait=0.0;
+            double totalValRetract=0.0;
+            int totalNbr = 0;
+            if (cash.getCacCas1Etat()==""+CASH_COUNTER_ETAT_O)
+            {
+               totalNbr = cash.getCacCas1Tot();
+               alim.setAliCas1Nb(totalNbr);
+               totalVal += totalNbr*cash.getCacCas1Val();
+               totalValRej+= cash.getCacCas1Rej()*cash.getCacCas1Val();
+               totalValRetrait+= cash.getCacCas1Disp()*cash.getCacCas1Val();
+               //rej.setRejCas1Nbr(cash.getCacCas1Rej());
+            }
+            else
+                alim.setAliCas1Nb(0);
+
+            if (cash.getCacCas2Etat()==""+CASH_COUNTER_ETAT_O)
+            {
+               totalNbr = cash.getCacCas2Tot();
+               alim.setAliCas2Nb(totalNbr);
+               totalVal += totalNbr*cash.getCacCas2Val();
+               totalValRej+= cash.getCacCas2Rej()*cash.getCacCas2Val();
+               totalValRetrait+= cash.getCacCas2Disp()*cash.getCacCas2Val();
+               //rej.setRejCas2Nbr(cash.getCacCas2Rej());
+            }
+            else
+                alim.setAliCas2Nb(0);
+
+            if (cash.getCacCas3Etat()==""+CASH_COUNTER_ETAT_O)
+            {
+               totalNbr = cash.getCacCas3Tot();
+               alim.setAliCas3Nb(totalNbr);
+               totalVal += totalNbr*cash.getCacCas3Val();
+               totalValRej+= cash.getCacCas3Rej()*cash.getCacCas3Val();
+               totalValRetrait+= cash.getCacCas3Disp()*cash.getCacCas3Val();
+               //rej.setRejCas3Nbr(cash.getCacCas3Rej());
+            }
+            else
+                alim.setAliCas3Nb(0);
+            if (cash.getCacCas4Etat()==""+CASH_COUNTER_ETAT_O)
+            {
+               totalNbr = cash.getCacCas4Tot();
+               alim.setAliCas4Nb(totalNbr);
+               totalVal += totalNbr*cash.getCacCas4Val();
+               totalValRej+= cash.getCacCas4Rej()*cash.getCacCas4Val();
+               totalValRetrait+= cash.getCacCas4Disp()*cash.getCacCas4Val();
+               //rej.setRejCas4Nbr(cash.getCacCas4Rej());
+            }
+            else
+                alim.setAliCas4Nb(0);
+
+            alim.setAliDate(cash.getCacDate());
+            alim.setAliAmount(new BigDecimal(totalVal));
+            
+            /*rej.setRejMontant(new Float(totalValRej));
+            rej.setRejDate(cash.getCacDate());             
+            RejetManager.insert(rej);*/
+
+            if (!alim.getAliAmount().equals(BigDecimal.ZERO))
+            {
+              logger.info("MontantAlim: "+alim.getAliAmount());
+              ejrAlimentationService.save(ctx,alim);
+              
+              /*
+               * BrsSolde solde=new BrsSolde(cash.getCacGabId(),new Float(totalVal),new Float(totalValRetrait),new Float(totalValRetract),new Float(totalValRej),cash.getCacDate(),cash.getCacDate(),cash.getCacDate(),cash.getCacDate(),cash.getCacDate(),new Float(0.0),new Float(totalVal-totalValRetrait),cash.getCacDate());
+               SoldeManager.insert(solde);*/
+            }
+               
+            else
+                alim=null;
+        }         
+        else /*if (
+                (cash.getCacCas1Tot().intValue()!=lastCash.getCacCas1Tot().intValue())
+           ||   (cash.getCacCas2Tot().intValue()!=lastCash.getCacCas2Tot().intValue())
+           ||   (cash.getCacCas3Tot().intValue()!=lastCash.getCacCas3Tot().intValue())
+           ||   (cash.getCacCas4Tot().intValue()!=lastCash.getCacCas4Tot().intValue())
+           )*/
+        {
+            logger.info("calculCashAlim,lastCash not null: "+lastCash.getCacDate());
+            //log.debug("ALIMENTATION : "+lastCash.getCacId());
+            alim = new EjrAlimentation();
+            alim.setAliNeId(getTopNe());
+            //alim.setAliTraite(AlimentationManager.ALIM_TRAITE_INST);
+            int[] cassettes=this.getCasNotes(ctx);
+
+            double totalVal=0.0;
+            double totalValRej=0.0;
+            double totalValRetrait=0.0;
+            
+            int totalNbr = 0;
+            if (cash.getCacCas1Etat()==""+CASH_COUNTER_ETAT_O)
+            {
+                /*if(cassettes[0]==0){
+                    cassettes[0]= (cash.getCacCas1Disp()+cash.getCacCas1Rej())-(lastCash.getCacCas1Tot()-lastCash.getCacCas1Rej()-lastCash.getCacCas1Disp());
+                }*/
+              // totalNbr = (cash.getCacCas1Tot()-cash.getCacCas1Disp()-cash.getCacCas1Rej()); // New remaining
+               //totalNbr -=(cassettes[0]+lastCash.getCacCas1Rej()); // Old remaining
+               /*totalNbr = (cash.getCacCas1Tot()-cash.getCacCas1Disp()); // New remaining
+               logger.info("totalNbr1:"+totalNbr);
+               totalNbr -=(lastCash.getCacCas1Tot()-lastCash.getCacCas1Disp()); // Old remaining
+               logger.info("totalNbr1:"+totalNbr);
+               logger.info("cassettes[0]:"+cassettes[0]);
+               if(cassettes[0]>0)
+                   totalNbr +=(lastCash.getCacCas1Tot()-lastCash.getCacCas1Disp()-lastCash.getCacCas1Rej()-cassettes[0]);
+               else if(cash.getCacCas1Disp()>=lastCash.getCacCas1Disp())
+                   totalNbr+=cash.getCacCas1Disp()-lastCash.getCacCas1Disp();
+               else if(cash.getCacCas1Disp()==0)
+                    totalNbr+=(lastCash.getCacCas1Tot()-lastCash.getCacCas1Disp()-lastCash.getCacCas1Rej());
+               else
+                   totalNbr+=cash.getCacCas1Disp();*/
+
+            	int lastCas1Nbr=lastCash.getCacCas1Tot()-lastCash.getCacCas1Disp()-lastCash.getCacCas1Rej();
+                int curCas1Nbr=cash.getCacCas1Tot()-cash.getCacCas1Disp()-cash.getCacCas1Rej();
+                
+                totalValRej+= (cash.getCacCas1Rej())*cash.getCacCas1Val();
+                totalValRetrait+= (cash.getCacCas1Disp()-lastCash.getCacCas1Disp())*cash.getCacCas1Val();
+                
+                //rej.setRejCas1Nbr(cash.getCacCas1Rej());
+                
+                alim.setAliCas1Nb(0);
+                
+                if(curCas1Nbr > lastCas1Nbr)
+                    totalNbr=curCas1Nbr - lastCas1Nbr;
+            	
+               logger.info("totalNbr1:"+totalNbr);
+
+               alim.setAliCas1Nb(totalNbr);
+               totalVal += totalNbr*cash.getCacCas1Val();
+            }
+            else
+                alim.setAliCas1Nb(0);
+
+            if (cash.getCacCas2Etat()==""+CASH_COUNTER_ETAT_O)
+            {
+                //totalNbr = (cash.getCacCas2Tot()-cash.getCacCas2Disp()-cash.getCacCas2Rej());
+                //totalNbr -= (cassettes[1]+lastCash.getCacCas2Rej());
+               /*totalNbr = (cash.getCacCas2Tot()-cash.getCacCas2Disp()); // New remaining
+               logger.debug("totalNbr2:"+totalNbr);
+               totalNbr -=(lastCash.getCacCas2Tot()-lastCash.getCacCas2Disp()); // Old remaining
+               logger.debug("totalNbr2:"+totalNbr);
+               logger.debug("cassettes[1]:"+cassettes[1]);
+               if(cassettes[1]>0)
+                   totalNbr +=(lastCash.getCacCas2Tot()-lastCash.getCacCas2Disp()-lastCash.getCacCas2Rej()-cassettes[1]);
+               else if(cash.getCacCas2Disp()>=lastCash.getCacCas2Disp())
+                   totalNbr+=cash.getCacCas2Disp()-lastCash.getCacCas2Disp();
+               else if(cash.getCacCas2Disp()==0)
+                    totalNbr+=(lastCash.getCacCas2Tot()-lastCash.getCacCas2Disp()-lastCash.getCacCas2Rej());
+               else
+                   totalNbr+=cash.getCacCas2Disp();*/
+            	
+            	int lastCas2Nbr=lastCash.getCacCas2Tot()-lastCash.getCacCas2Disp()-lastCash.getCacCas2Rej();
+                int curCas2Nbr=cash.getCacCas2Tot()-cash.getCacCas2Disp()-cash.getCacCas2Rej();
+                
+                totalValRej+= (cash.getCacCas2Rej())*cash.getCacCas2Val();
+                totalValRetrait+= (cash.getCacCas2Disp()-lastCash.getCacCas2Disp())*cash.getCacCas2Val();
+                
+                //rej.setRejCas2Nbr(cash.getCacCas2Rej());
+                
+                alim.setAliCas2Nb(0);
+                
+                if(curCas2Nbr > lastCas2Nbr)
+                    totalNbr=curCas2Nbr - lastCas2Nbr;
+                
+               logger.debug("totalNbr2:"+totalNbr);
+               alim.setAliCas2Nb(totalNbr);
+               totalVal += totalNbr*cash.getCacCas2Val();
+            }
+            else
+                alim.setAliCas2Nb(0);
+
+            if (cash.getCacCas3Etat()==""+CASH_COUNTER_ETAT_O)
+            {
+               //totalNbr = (cash.getCacCas3Tot()-cash.getCacCas3Disp()-cash.getCacCas3Rej());
+               //totalNbr -= (cassettes[2]+lastCash.getCacCas3Rej());
+               /*totalNbr = (cash.getCacCas3Tot()-cash.getCacCas3Disp()); // New remaining
+               totalNbr -=(lastCash.getCacCas3Tot()-lastCash.getCacCas3Disp()); // Old remaining
+               if(cassettes[2]>0)
+                   totalNbr +=(lastCash.getCacCas3Tot()-lastCash.getCacCas3Disp()-lastCash.getCacCas3Rej()-cassettes[2]);
+               else if(cash.getCacCas3Disp()>=lastCash.getCacCas3Disp())
+                   totalNbr+=cash.getCacCas3Disp()-lastCash.getCacCas3Disp();
+               else if(cash.getCacCas3Disp()==0)
+                    totalNbr+=(lastCash.getCacCas3Tot()-lastCash.getCacCas3Disp()-lastCash.getCacCas3Rej());
+               else
+                   totalNbr+=cash.getCacCas3Disp();*/
+            	
+            	int lastCas3Nbr=lastCash.getCacCas3Tot()-lastCash.getCacCas3Disp()-lastCash.getCacCas3Rej();
+                int curCas3Nbr=cash.getCacCas3Tot()-cash.getCacCas3Disp()-cash.getCacCas3Rej();
+                
+                totalValRej+= (lastCash.getCacCas3Rej())*cash.getCacCas3Val();
+                totalValRetrait+= (cash.getCacCas3Disp()-lastCash.getCacCas3Disp())*cash.getCacCas3Val();
+                
+                //rej.setRejCas3Nbr(cash.getCacCas3Rej());
+                
+                alim.setAliCas3Nb(0);
+                
+                if(curCas3Nbr > lastCas3Nbr)
+                    totalNbr=curCas3Nbr - lastCas3Nbr;
+
+               alim.setAliCas3Nb(totalNbr);
+               totalVal += totalNbr*cash.getCacCas3Val();
+            }
+            else
+                alim.setAliCas3Nb(0);
+
+            if (cash.getCacCas4Etat()==""+CASH_COUNTER_ETAT_O)
+            {
+               //totalNbr = (cash.getCacCas4Tot()-cash.getCacCas4Disp()-cash.getCacCas4Rej());
+       	//totalNbr -=(cassettes[3]+lastCash.getCacCas4Rej());
+               /*totalNbr = (cash.getCacCas4Tot()-cash.getCacCas4Disp()); // New remaining
+               totalNbr -=(lastCash.getCacCas4Tot()-lastCash.getCacCas4Disp()); // Old remaining
+               if(cassettes[3]>0)
+                   totalNbr +=(lastCash.getCacCas4Tot()-lastCash.getCacCas4Disp()-lastCash.getCacCas4Rej()-cassettes[3]);
+               else if(cash.getCacCas4Disp()>=lastCash.getCacCas4Disp())
+                   totalNbr+=cash.getCacCas4Disp()-lastCash.getCacCas4Disp();
+               else if(cash.getCacCas4Disp()==0)
+                    totalNbr+=(lastCash.getCacCas4Tot()-lastCash.getCacCas4Disp()-lastCash.getCacCas4Rej());
+               else
+                   totalNbr+=cash.getCacCas4Disp();*/
+            	
+            	int lastCas4Nbr=lastCash.getCacCas4Tot()-lastCash.getCacCas4Disp()-lastCash.getCacCas4Rej();
+                int curCas4Nbr=cash.getCacCas4Tot()-cash.getCacCas4Disp()-cash.getCacCas4Rej();
+                
+                
+                totalValRej+= (cash.getCacCas4Rej())*cash.getCacCas4Val();
+                totalValRetrait+= (cash.getCacCas4Disp()-lastCash.getCacCas4Disp())*cash.getCacCas4Val();
+                
+                //rej.setRejCas4Nbr(cash.getCacCas4Rej());
+                
+                alim.setAliCas4Nb(0);
+                
+                if(curCas4Nbr > lastCas4Nbr)
+                    totalNbr=curCas4Nbr - lastCas4Nbr;
+
+               alim.setAliCas4Nb(totalNbr);
+               totalVal += totalNbr*cash.getCacCas4Val();
+            }
+            else
+                alim.setAliCas4Nb(0);
+
+            alim.setAliDate(cash.getCacDate());
+            alim.setAliAmount(new BigDecimal(totalVal));
+            
+            /*
+            BrsSolde lastSolde = SoldeManager.getLastSolde(cash.getCacGabId());
+             BrsSolde solde=new BrsSolde(cash.getCacGabId(),new Float(totalVal),new Float(totalValRetrait),new Float(0.0),new Float(totalValRej),cash.getCacDate(),cash.getCacDate(),cash.getCacDate(),cash.getCacDate(),cash.getCacDate(),new Float(lastSolde.getSolTheorique()),new Float(lastSolde.getSolTheorique()+totalVal-totalValRetrait),lastSolde.getSolInitDate());
+             
+             if(cash.getCacType().equals(CashCounterManager.CASH_COUNTER_TYPE_P)){
+                 solde.setSolRetraits(0.0f);
+                 solde.setSolRejets(0.0f);
+                 solde.setSolRetracts(0.0f);
+                 solde.setSolInitial(0.0f);
+                 totalVal += cash.getCacCas1Tot()*cash.getCacCas1Val();
+                 totalVal += cash.getCacCas2Tot()*cash.getCacCas2Val();
+                 totalVal += cash.getCacCas3Tot()*cash.getCacCas3Val();
+                 totalVal += cash.getCacCas4Tot()*cash.getCacCas4Val();
+                 solde.setSolAlim(new Float(totalVal));
+                 solde.setSolTheorique(solde.getSolAlim());
+                 solde.setSolInitDate(cash.getCacDate());
+             }
+             
+             solde.setSolRetracts(calculRetracts(lastSolde,solde));
+             
+             System.out.println("solde==>"+solde);
+             
+             SoldeManager.insert(solde);
+                          
+             
+             
+
+             rej.setRejMontant(new Float(totalValRej));
+             rej.setRejDate(cash.getCacDate());   
+             System.out.println("rej.getRejCas2Nbr()="+rej.getRejCas2Nbr());
+             RejetManager.insert(rej); 
+            
+            */
+
+            if (!alim.getAliAmount().equals(BigDecimal.ZERO)){
+                logger.info("CalculCashAlim!!LastCash not null;AliMontant: "+alim.getAliAmount());
+                ejrAlimentationService.save(ctx,alim);
+            }               
+            else
+                alim=null;
+        }
+
+        return CASH_TRAITE_OK;
+    }
+
+
+   protected int[] getCasNotes(ServiceContext ctx)
+   {
+       int[] notes = new int[4];
+       notes[0]=0;
+       notes[1]=0;
+       notes[2]=0;
+       notes[3]=0;
+
+       List<EjrCassette> cassettes= ejrCassetteService.findByAtm(ctx, getTopNe());
+       if((cassettes==null)||(cassettes.isEmpty()))
+           return notes;
+
+       Iterator it = cassettes.iterator();
+       while(it.hasNext())
+       {
+           EjrCassette cas = (EjrCassette) it.next();
+           if (cas.getCasOrder()==1)
+               notes[0]=cas.getCasNotes();
+           if (cas.getCasOrder()==2)
+               notes[1]=cas.getCasNotes();
+           if (cas.getCasOrder()==3)
+               notes[2]=cas.getCasNotes();
+           if (cas.getCasOrder()==4)
+               notes[3]=cas.getCasNotes();
+       }
+
+       return notes;
+   }
+
+    
+
+public class TransactionBlock{	
+	
+	private List<String> lines=new ArrayList();
+	private boolean finished;
+	private Date fileDate;
+		
+	
+	public List<String> getLines() {
+		return lines;
+	}
+	public void setLines(List<String> lines) {
+		this.lines = lines;
+	}	
+	
+	public TransactionBlock() {
+		super();
+		finished=false;
+	}
+	public boolean isFinished() {
+		return finished;
+	}
+	public void setFinished(boolean finished) {
+		this.finished = finished;
+	}
+	public Date getFileDate() {
+		return fileDate;
+	}
+	public void setFileDate(Date fileDate) {
+		this.fileDate = fileDate;
+	}
+	
+	
+	
+	
+	
+	
+		
+}
+}
+

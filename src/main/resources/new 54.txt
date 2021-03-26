@@ -1,0 +1,50 @@
+INSERT into PAR_PROCESSOR (PRC_ID,PRC_CODE,PRC_NAME,PRC_ORDER,PRC_CRON,PRC_PRC_ID,PRC_APM_ID,CREATED_DATE,CREATED_BY,LAST_UPDATED,LAST_UPDATED_BY,VERSION) values ('7100','710','Integrating VISA','710',null,null,'7',null,null,null,null,'1');
+
+INSERT into PAR_PROCESSOR (PRC_ID,PRC_CODE,PRC_NAME,PRC_ORDER,PRC_CRON,PRC_PRC_ID,PRC_APM_ID,CREATED_DATE,CREATED_BY,LAST_UPDATED,LAST_UPDATED_BY,VERSION) values ('810','810','Integrating SMS','810',null,null,'8',null,null,null,null,'1');
+INSERT into PAR_PROCESSOR (PRC_ID,PRC_CODE,PRC_NAME,PRC_ORDER,PRC_CRON,PRC_PRC_ID,PRC_APM_ID,CREATED_DATE,CREATED_BY,LAST_UPDATED,LAST_UPDATED_BY,VERSION) values ('820','820','Visa Sms End Of Day','820',null,null,'8',null,null,null,null,'1');
+
+
+INSERT into PAR_PROCESSOR (PRC_ID,PRC_CODE,PRC_NAME,PRC_ORDER,PRC_CRON,PRC_PRC_ID,PRC_APM_ID,VERSION) values ('510','510','Integrating MDS','510',null,null,'5','1'); 
+
+
+update VISA_PRESENTMENT set  pre_iss_ent_id=51;
+
+select * from VISA_SMS_FINANCIAL_TRA where fit_mti_id is null;
+
+delete from VISA_SMS_FINANCIAL_TRA where fit_ret_ref_num not like '818307%' and fit_ret_ref_num not like '818306%' and fit_ret_ref_num not like '818222%' and fit_ret_ref_num not like '812418%';
+
+
+
+update VISA_SMS_FINANCIAL_TRA set fit_card_num=concat('111111',SUBSTR(fit_card_num, 7));
+select concat('111111',SUBSTR(fit_card_num, 7)),fit_card_num from VISA_SMS_FINANCIAL_TRA;
+
+
+
+update IPM_PRESENTMENT set pre_pan=concat('111111',SUBSTR(pre_pan, 7));
+
+
+delete from mat_trans_match;
+
+delete from mat_transaction where mtr_vpre_id is not null and mtr_vpre_id not in (select pre_id from visa_presentment);
+delete from mat_transaction where mtr_mpre_id is not null and mtr_mpre_id not in (select pre_id from ipm_presentment);
+delete from mat_transaction where mtr_fre_id is not null and mtr_fre_id not in (select fre_id from MDS_REC_FREC);
+delete from mat_transaction where mtr_fit_id is not null and mtr_fit_id not in (select fit_id from VISA_SMS_FINANCIAL_TRA);
+delete from mat_transaction where mtr_ath_id is not null and mtr_ath_id not in (select ath_id from SWT_AUTHORIZATION);
+
+
+
+
+
+
+
+update mat_transaction set mtr_matched='T' where mtr_amount='2000';
+update mat_transaction set mtr_matched='M' where mtr_amount='100';
+
+
+
+
+
+
+
+update mat_transaction set mtr_matched='M',mtr_matching_info='0003000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+where mtr_flw_id=28 and mtr_amount=400;

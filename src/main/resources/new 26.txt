@@ -1,0 +1,4 @@
+select 
+from ach_achat 
+where ach_cur_aen_id=4 
+order by ach_dem_date desc

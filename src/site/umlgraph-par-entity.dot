@@ -1,0 +1,290 @@
+digraph G {
+	fontsize = 10
+	node [
+		fontsize = 10
+		fontname="arial"
+		shape=plaintext
+	]
+
+	edge [
+		fontsize = 10
+	]
+subgraph clusterpar {
+	label = "par"  
+	ParAgentExe [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParAgentExe </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aexNom : String </td></tr>
+	<tr><td align="left"> + aexPrenom : String </td></tr>
+	<tr><td align="left"> + aexStatus : String </td></tr>
+	<tr><td align="left"> + aexNum : String </td></tr>
+	<tr><td align="left"> + aexUsaId : AdmUserAccount </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommanditaire [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommanditaire </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cmdCode : String </td></tr>
+	<tr><td align="left"> + cmdName : String </td></tr>
+	<tr><td align="left"> + cmdDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommune [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommune </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + comCode : String </td></tr>
+	<tr><td align="left"> + comName : String </td></tr>
+	<tr><td align="left"> + comType : String </td></tr>
+	<tr><td align="left"> + comStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommuneAnc [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommuneAnc </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + comCode : String </td></tr>
+	<tr><td align="left"> + comName : String </td></tr>
+	<tr><td align="left"> + comType : String </td></tr>
+	<tr><td align="left"> + comStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommuneOld [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommuneOld </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + comCode : String </td></tr>
+	<tr><td align="left"> + comName : String </td></tr>
+	<tr><td align="left"> + comType : String </td></tr>
+	<tr><td align="left"> + comStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParConvention [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParConvention </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cvtCode : String </td></tr>
+	<tr><td align="left"> + cvtName : String </td></tr>
+	<tr><td align="left"> + cvtDesc : String </td></tr>
+	<tr><td align="left"> + cvtBeginDate : Date </td></tr>
+	<tr><td align="left"> + cvtEndDate : Date </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParExercice [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParExercice </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + pexCode : String </td></tr>
+	<tr><td align="left"> + pexName : String </td></tr>
+	<tr><td align="left"> + pexDesc : String </td></tr>
+	<tr><td align="left"> + pexStartDate : Date </td></tr>
+	<tr><td align="left"> + pexEndDate : Date </td></tr>
+	<tr><td align="left"> + pexStatus : String </td></tr>
+	<tr><td align="left"> + pexPlaId : List&lt;PlaPlan&gt; </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParOrdonateur [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParOrdonateur </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ordNom : String </td></tr>
+	<tr><td align="left"> + ordPrenom : String </td></tr>
+	<tr><td align="left"> + ordType : String </td></tr>
+	<tr><td align="left"> + ordStatus : String </td></tr>
+	<tr><td align="left"> + ordNature : String </td></tr>
+	<tr><td align="left"> + ordUsaId : AdmUserAccount </td></tr>
+	<tr><td align="left"> + idOrdSmrId : List&lt;BudSsMorasse&gt; </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParProvince [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParProvince </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prvCode : String </td></tr>
+	<tr><td align="left"> + prvName : String </td></tr>
+	<tr><td align="left"> + prvStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParProvinceAnc [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParProvinceAnc </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prvCode : String </td></tr>
+	<tr><td align="left"> + prvName : String </td></tr>
+	<tr><td align="left"> + prvStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParProvinceOld [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParProvinceOld </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prvCode : String </td></tr>
+	<tr><td align="left"> + prvName : String </td></tr>
+	<tr><td align="left"> + prvStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParRegion [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParRegion </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + regCode : String </td></tr>
+	<tr><td align="left"> + regName : String </td></tr>
+	<tr><td align="left"> + regStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParRegionAnc [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParRegionAnc </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + regCode : String </td></tr>
+	<tr><td align="left"> + regName : String </td></tr>
+	<tr><td align="left"> + regStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParRegionOld [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParRegionOld </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + regCode : String </td></tr>
+	<tr><td align="left"> + regName : String </td></tr>
+	<tr><td align="left"> + regStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParTypeBenif [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParTypeBenif </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + benCode : String </td></tr>
+	<tr><td align="left"> + benName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+edge [arrowhead = "empty"]
+edge [arrowhead = "none"]
+
+
+edge [arrowtail="none" arrowhead = "none" headlabel="aexOrdId" taillabel="0..n idOrdAexId" labeldistance="2.0" labelangle="-30"]
+
+ParAgentExe -> ParOrdonateur
+
+edge [arrowtail="none" arrowhead = "none" headlabel="comPrvId" taillabel="0..n idPrvComId" labeldistance="2.0" labelangle="-30"]
+
+ParCommune -> ParProvince
+
+edge [arrowtail="none" arrowhead = "open" headlabel="comRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParCommune -> ParRegion
+
+edge [arrowtail="none" arrowhead = "none" headlabel="comPrvId" taillabel="0..n idPrvComId" labeldistance="2.0" labelangle="-30"]
+
+ParCommuneAnc -> ParProvinceAnc
+
+edge [arrowtail="none" arrowhead = "open" headlabel="comRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParCommuneAnc -> ParRegionAnc
+
+edge [arrowtail="none" arrowhead = "none" headlabel="comPrvId" taillabel="0..n idPrvComId" labeldistance="2.0" labelangle="-30"]
+
+ParCommuneOld -> ParProvinceOld
+
+edge [arrowtail="none" arrowhead = "open" headlabel="comRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParCommuneOld -> ParRegionOld
+
+edge [arrowtail="none" arrowhead = "none" headlabel="ordOrdId" taillabel="0..n idOrdOrdId" labeldistance="2.0" labelangle="-30"]
+
+ParOrdonateur -> ParOrdonateur
+
+edge [arrowtail="none" arrowhead = "none" headlabel="ordRegId" taillabel="0..n idRegOrdId" labeldistance="2.0" labelangle="-30"]
+
+ParOrdonateur -> ParRegion
+
+edge [arrowtail="none" arrowhead = "open" headlabel="prvRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParProvince -> ParRegion
+
+edge [arrowtail="none" arrowhead = "open" headlabel="prvRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParProvinceAnc -> ParRegionAnc
+
+edge [arrowtail="none" arrowhead = "open" headlabel="prvRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParProvinceOld -> ParRegionOld
+}

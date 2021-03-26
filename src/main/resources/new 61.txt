@@ -1,0 +1,69 @@
+delete from bud_ss_morasse where smr_id=215025;
+delete from bud_ss_morasse_det where smd_smr_id=215025;
+delete from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025);
+delete from bud_mpr_has_chp where mhc_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025));
+delete from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025));
+delete from ach_achat_decision where adc_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025)));
+delete from ach_dem_pub where adp_ach_id in  (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025)));
+delete from ach_publication where apb_adp_id in (select adp_id from ach_dem_pub where adp_ach_id in  (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025))));
+delete from ach_achat_lot where alo_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025)));
+delete from ach_achat_exel where aae_alo_id in (select alo_id from ach_achat_lot where alo_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025))));
+delete from ach_achat_state where ast_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025)));
+delete from ach_soumission where aso_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025)));
+delete from ach_achat_memo where aam_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025)));
+delete from ach_commission where aco_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025)));
+delete from ach_has_acm where ahm_aco_id in (select aco_id from ach_commission where aco_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025))));
+
+delete from bud_dem_modif_mpres where dmp_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025));
+delete from bud_dmp_has_chp where dhc_dmp_id in (select dmp_id from bud_dem_modif_mpres where dmp_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025)));
+
+delete from bud_dem_planif where dep_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025);
+
+delete from bud_dem_planif_mpres where dpp_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025));
+delete from bud_dem_planif_mpres_has_pex where mhp_dpp_id in (select dpp_id from bud_dem_planif_mpres where dpp_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025)));
+
+delete from bud_dem_planif_npres where dpd_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025);
+delete from bud_dem_planif_npres_has_pex  where nhp_dpd_id in (select dpd_id from bud_dem_planif_npres where dpd_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025));
+
+delete from bud_dem_mvt_mpres where dmm_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025));
+delete from bud_dmm_has_chp where mhc_dmm_id in (select dmm_id from bud_dem_mvt_mpres where dmm_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025)));
+
+delete from bud_morasse_mvm_det where mod_smd_id in ((select smd_id from bud_ss_morasse_det where smd_smr_id=215025));
+delete from bud_dem_mvt where dmv_smr_dest in (select smr_id from bud_ss_morasse where smr_id=215025);
+delete from bud_mvt_state where cds_dmv_id in (select dmv_id from bud_dem_mvt where dmv_smr_dest in (select smr_id from bud_ss_morasse where smr_id=215025));
+delete from bud_dem_mvt_log where dml_dmv_id in (select dmv_id from bud_dem_mvt where dmv_smr_dest in (select smr_id from bud_ss_morasse where smr_id=215025));
+delete from bud_mvt_decision where cdd_dmv_id in (select dmv_id from bud_dem_mvt where dmv_smr_dest in (select smr_id from bud_ss_morasse where smr_id=215025));
+delete from bud_dem_mvt_mpres where dmm_dmv_id in (select dmv_id from bud_dem_mvt where dmv_smr_dest in (select smr_id from bud_ss_morasse where smr_id=215025));
+delete from bud_dmm_has_chp where mhc_dmm_id in (select dmm_id from bud_dem_mvt_mpres where dmm_dmv_id in (select dmv_id from bud_dem_mvt where dmv_smr_dest in (select smr_id from bud_ss_morasse where smr_id=215025)));
+
+delete from bud_dem_mvt where dmv_smr_src in (select smr_id from bud_ss_morasse where smr_id=215025);
+delete from bud_mvt_state where cds_dmv_id in (select dmv_id from bud_dem_mvt where dmv_smr_src in (select smr_id from bud_ss_morasse where smr_id=215025));
+delete from bud_dem_mvt_log where dml_dmv_id in (select dmv_id from bud_dem_mvt where dmv_smr_src in (select smr_id from bud_ss_morasse where smr_id=215025));
+delete from bud_mvt_decision where cdd_dmv_id in (select dmv_id from bud_dem_mvt where dmv_smr_src in (select smr_id from bud_ss_morasse where smr_id=215025));
+delete from bud_dem_mvt_mpres where dmm_dmv_id in (select dmv_id from bud_dem_mvt where dmv_smr_src in (select smr_id from bud_ss_morasse where smr_id=215025));
+delete from bud_dmm_has_chp where mhc_dmm_id in (select dmm_id from bud_dem_mvt_mpres where dmm_dmv_id in (select dmv_id from bud_dem_mvt where dmv_smr_src in (select smr_id from bud_ss_morasse where smr_id=215025)));
+
+
+
+delete from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025)));
+delete from cpt_dep_decision where cdd_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025))));
+delete from cpt_dep_state where cds_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025))));
+
+delete from cpt_ordre_service where cos_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025))));
+delete from tec_pv where tpv_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025))));
+delete from tec_etape where tet_etp_id in (select tpv_id from tec_pv where tpv_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025)))));
+
+delete from tec_attachement where tat_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025))));
+delete from tec_decision where ted_cdp_id in (select tat_id from tec_attachement where tat_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025)))));
+delete from tec_state where tes_cdp_id in (select tat_id from tec_attachement where tat_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025)))));
+delete from tec_penalite_retard where tpr_att_id in (select tat_id from tec_attachement where tat_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025)))));
+delete from tec_cal_rev where tcr_att_id in (select tat_id from tec_attachement where tat_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025)))));
+delete from tec_cal_rev where tcr_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025))));
+delete from tec_nantissement where tna_att_id in (select tat_id from tec_attachement where tat_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025)))));
+delete from tec_retenue_garantie where trg_att_id in (select tat_id from tec_attachement where tat_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025)))));
+delete from tec_retenue_garantie_part where rgp_trg_id in (select trg_id from tec_retenue_garantie where trg_att_id in (select tat_id from tec_attachement where tat_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025))))));
+
+
+select * from ach_achat_decision,ach_achat where adc_id=213945 and adc_ach_id=ach_id;
+
+update ach_achat set ach_adc_id=null where ach_mpr_id in (select mpr_id from bud_morasse_pres where mpr_smd_id in (select smd_id from bud_ss_morasse_det where smd_smr_id=215025));

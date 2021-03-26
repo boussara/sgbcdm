@@ -1,0 +1,158 @@
+digraph G {
+	fontsize = 10
+	node [
+		fontsize = 10
+		fontname="arial"
+		shape=plaintext
+	]
+
+	edge [
+		fontsize = 10
+	]
+ach [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="20" port="p" bgcolor="#CCCCFF">
+<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Module&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ach </font></td></tr>
+	</table>
+</td></tr>	
+</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+adm [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="20" port="p" bgcolor="#CCCCFF">
+<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Module&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> adm </font></td></tr>
+	</table>
+</td></tr>	
+</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+bud [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="20" port="p" bgcolor="#CCCCFF">
+<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Module&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> bud </font></td></tr>
+	</table>
+</td></tr>	
+</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+clot [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="20" port="p" bgcolor="#CCCCFF">
+<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Module&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> clot </font></td></tr>
+	</table>
+</td></tr>	
+</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+common [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="20" port="p" bgcolor="#CCCCFF">
+<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Module&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> common </font></td></tr>
+	</table>
+</td></tr>	
+</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+communPar [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="20" port="p" bgcolor="#CCCCFF">
+<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Module&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> communPar </font></td></tr>
+	</table>
+</td></tr>	
+</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+cpt [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="20" port="p" bgcolor="#CCCCFF">
+<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Module&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> cpt </font></td></tr>
+	</table>
+</td></tr>	
+</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+log [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="20" port="p" bgcolor="#CCCCFF">
+<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Module&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> log </font></td></tr>
+	</table>
+</td></tr>	
+</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+mhai [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="20" port="p" bgcolor="#CCCCFF">
+<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Module&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> mhai </font></td></tr>
+	</table>
+</td></tr>	
+</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+par [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="20" port="p" bgcolor="#CCCCFF">
+<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Module&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> par </font></td></tr>
+	</table>
+</td></tr>	
+</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+pla [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="20" port="p" bgcolor="#CCCCFF">
+<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Module&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> pla </font></td></tr>
+	</table>
+</td></tr>	
+</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+tec [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="20" port="p" bgcolor="#CCCCFF">
+<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Module&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> tec </font></td></tr>
+	</table>
+</td></tr>	
+</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+adm -> communPar
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+communPar -> adm
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+par -> adm
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+par -> bud
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+par -> pla
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+bud -> par
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+bud -> pla
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+bud -> communPar
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+pla -> mhai
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+pla -> par
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+pla -> communPar
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+mhai -> par
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ach -> tec
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ach -> communPar
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ach -> pla
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ach -> par
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ach -> bud
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+tec -> cpt
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+cpt -> ach
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+cpt -> par
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+cpt -> communPar
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+cpt -> pla
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+cpt -> bud
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+clot -> cpt
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+clot -> bud
+}

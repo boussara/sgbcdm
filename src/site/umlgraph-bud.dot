@@ -1,0 +1,3574 @@
+digraph G {
+	fontsize = 10
+	node [
+		fontsize = 10
+		fontname="arial"
+		shape=plaintext
+	]
+
+	edge [
+		fontsize = 10
+	]
+subgraph clusterbud {
+	label = "bud"  
+	BudArticleService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudArticleService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByBdtAndPexAndChp</td></tr>			
+	<tr><td align="left">findByModId</td></tr>			
+	<tr><td align="left">findByMorAndChp</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudChapitreService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudChapitreService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudCodeEcoService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudCodeEcoService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudCodeFncService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudCodeFncService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemModifMpresService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemModifMpresService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemModifService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemModifService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtDestService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtDestService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByDmvId</td></tr>			
+	<tr><td align="left">findByMddMod</td></tr>			
+	<tr><td align="left">findByMddSmd</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtLogService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtLogService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtMemoService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtMemoService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtMpresService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtMpresService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByDmmNewCp</td></tr>			
+	<tr><td align="left">findByDmmNewCe</td></tr>			
+	<tr><td align="left">findByDmmOldCp</td></tr>			
+	<tr><td align="left">findByDmmOldCe</td></tr>			
+	<tr><td align="left">findByDmmMprId</td></tr>			
+	<tr><td align="left">findByDmmSmdId</td></tr>			
+	<tr><td align="left">findByDmmDmvId</td></tr>			
+	<tr><td align="left">findByDmmModId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByDmvCode</td></tr>			
+	<tr><td align="left">findByDmvName</td></tr>			
+	<tr><td align="left">findByDmvDesc</td></tr>			
+	<tr><td align="left">findByDmvType</td></tr>			
+	<tr><td align="left">findByDmvNum</td></tr>			
+	<tr><td align="left">findByDmvDate</td></tr>			
+	<tr><td align="left">findByDmvNumCour</td></tr>			
+	<tr><td align="left">findByDmvMorsrcType</td></tr>			
+	<tr><td align="left">findByDmvMorsrcId</td></tr>			
+	<tr><td align="left">findByDmvMordestType</td></tr>			
+	<tr><td align="left">findByDmvMordestId</td></tr>			
+	<tr><td align="left">findByDmvMotif</td></tr>			
+	<tr><td align="left">findByDmvStatus</td></tr>			
+	<tr><td align="left">findByDmvObs</td></tr>			
+	<tr><td align="left">findByDmvChpId</td></tr>			
+	<tr><td align="left">findByDmvPexId</td></tr>			
+	<tr><td align="left">findByDmvBdtId</td></tr>			
+	<tr><td align="left">findByDmvTvrId</td></tr>			
+	<tr><td align="left">findByDmvOrdId</td></tr>			
+	<tr><td align="left">findByDmvDepId</td></tr>			
+	<tr><td align="left">findByDmvDmvId</td></tr>			
+	<tr><td align="left">findByDmvNumVisa</td></tr>			
+	<tr><td align="left">findByDmvDateVisa</td></tr>			
+	<tr><td align="left">findByDmvMorSrc</td></tr>			
+	<tr><td align="left">findByDmvSmrSrc</td></tr>			
+	<tr><td align="left">findByDmvMorDest</td></tr>			
+	<tr><td align="left">findByDmvSmrDest</td></tr>			
+	<tr><td align="left">getAllVir</td></tr>			
+	<tr><td align="left">getAllDeleg</td></tr>			
+	<tr><td align="left">getAllReduc</td></tr>			
+	<tr><td align="left">filterVir</td></tr>			
+	<tr><td align="left">filterDeleg</td></tr>			
+	<tr><td align="left">filterReduc</td></tr>			
+	<tr><td align="left">getAllMvtVirSGM</td></tr>			
+	<tr><td align="left">getAllMvtVirSP</td></tr>			
+	<tr><td align="left">getAllMvtVirTM</td></tr>			
+	<tr><td align="left">filterMvtVirSGM</td></tr>			
+	<tr><td align="left">filterMvtVirSP</td></tr>			
+	<tr><td align="left">filterMvtVirTM</td></tr>			
+	<tr><td align="left">getAllMvtDelegSGM</td></tr>			
+	<tr><td align="left">getAllMvtDelegSP</td></tr>			
+	<tr><td align="left">getAllMvtDelegTM</td></tr>			
+	<tr><td align="left">filterMvtDelegSGM</td></tr>			
+	<tr><td align="left">filterMvtDelegSP</td></tr>			
+	<tr><td align="left">filterMvtDelegTM</td></tr>			
+	<tr><td align="left">getAllMvtReducSGM</td></tr>			
+	<tr><td align="left">getAllMvtReducSP</td></tr>			
+	<tr><td align="left">getAllMvtReducTM</td></tr>			
+	<tr><td align="left">filterMvtReducSGM</td></tr>			
+	<tr><td align="left">filterMvtReducSP</td></tr>			
+	<tr><td align="left">filterMvtReducTM</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtSrcService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtSrcService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByDmvId</td></tr>			
+	<tr><td align="left">findByMdsMod</td></tr>			
+	<tr><td align="left">findByMdsSmd</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifMpresHasPexService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifMpresHasPexService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifMpresService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifMpresService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifNpresHasPexService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifNpresHasPexService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifNpresService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifNpresService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByDepAexId</td></tr>			
+	<tr><td align="left">migrateOp</td></tr>			
+	<tr><td align="left">linkPrs</td></tr>			
+	<tr><td align="left">createDmmForDpp</td></tr>			
+	<tr><td align="left">createDmmForDpd</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDmmHasChpService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDmmHasChpService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByMhcOldCredit</td></tr>			
+	<tr><td align="left">findByMhcNewCredit</td></tr>			
+	<tr><td align="left">findByMhcDmmId</td></tr>			
+	<tr><td align="left">findByMhcChpId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDmpHasChpService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDmpHasChpService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudLigneService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudLigneService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByModId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorasseDetService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorasseDetService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByMorId</td></tr>			
+	<tr><td align="left">findByArtParLig</td></tr>			
+	<tr><td align="left">findByArtRegParLig</td></tr>			
+	<tr><td align="left">findByMorIdType</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorasseMvmDetService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorasseMvmDetService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorasseOpService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorasseOpService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByModId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorassePresService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorassePresService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByMprStatus</td></tr>			
+	<tr><td align="left">findByModId</td></tr>			
+	<tr><td align="left">findByMopId</td></tr>			
+	<tr><td align="left">findByMprAexId</td></tr>			
+	<tr><td align="left">findByMprPmprId</td></tr>			
+	<tr><td align="left">findBySmdId</td></tr>			
+	<tr><td align="left">findByPmprMopIdAndSmrId</td></tr>			
+	<tr><td align="left">findByCprId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorasseService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorasseService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByBdtAndPex</td></tr>			
+	<tr><td align="left">findByExeBdt</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMprHasChpService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMprHasChpService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByMhcOldCredit</td></tr>			
+	<tr><td align="left">findByMhcNewCredit</td></tr>			
+	<tr><td align="left">findByMhcMprId</td></tr>			
+	<tr><td align="left">findByMhcChpId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMvtDecisionService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMvtDecisionService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByCddStatus</td></tr>			
+	<tr><td align="left">findByCddDate</td></tr>			
+	<tr><td align="left">findByCddRem</td></tr>			
+	<tr><td align="left">findByCddEntId</td></tr>			
+	<tr><td align="left">findByCddDmvId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMvtStateService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMvtStateService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByCdsStatus</td></tr>			
+	<tr><td align="left">findByCdsDate</td></tr>			
+	<tr><td align="left">findByCdsRem</td></tr>			
+	<tr><td align="left">findByCdsEntId</td></tr>			
+	<tr><td align="left">findByCdsDmvId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudParagrapheService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudParagrapheService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByModId</td></tr>			
+	<tr><td align="left">findByPphCode</td></tr>			
+	<tr><td align="left">findByPphName</td></tr>			
+	<tr><td align="left">findByPphDesc</td></tr>			
+	<tr><td align="left">findByPphArtId</td></tr>			
+	<tr><td align="left">findByPphCfnId</td></tr>			
+	<tr><td align="left">findByPphPphId</td></tr>			
+	<tr><td align="left">findByPphPexId</td></tr>			
+	<tr><td align="left">findByPphBdtId</td></tr>			
+	<tr><td align="left">findByPphChpId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudPartieService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudPartieService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudRegionService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudRegionService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudSmdLogService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudSmdLogService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudSsMorasseDetService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudSsMorasseDetService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByMorId</td></tr>			
+	<tr><td align="left">findByArtParLig</td></tr>			
+	<tr><td align="left">findByArtPar</td></tr>			
+	<tr><td align="left">findBySmdModId</td></tr>			
+	<tr><td align="left">findBySmrIdModId</td></tr>			
+	<tr><td align="left">findBySmdSmrId</td></tr>			
+	<tr><td align="left">assignModToSmd</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudSsMorasseService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudSsMorasseService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByBdtAndPex</td></tr>			
+	<tr><td align="left">flushSpecial</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudSsTitreService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudSsTitreService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudTitreService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudTitreService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudTypeVirService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudTypeVirService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudArticle [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudArticle </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + artCode : Integer </td></tr>
+	<tr><td align="left"> + artName : String </td></tr>
+	<tr><td align="left"> + artDesc : String </td></tr>
+	<tr><td align="left"> + artPexId : ParExercice </td></tr>
+	<tr><td align="left"> + artBdtId : PlaBudgetType </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudArticleDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudArticleDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + artPexId1 : String </td></tr>
+	<tr><td align="left"> + artCode : String </td></tr>
+	<tr><td align="left"> + artName : String </td></tr>
+	<tr><td align="left"> + min_artCode : String </td></tr>
+	<tr><td align="left"> + artMorId : String </td></tr>
+	<tr><td align="left"> + artChpId : String </td></tr>
+	<tr><td align="left"> + artPexId : String </td></tr>
+	<tr><td align="left"> + artBdtId : String </td></tr>
+	<tr><td align="left"> + artModId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudArticleMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudArticleMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + artCode : String </td></tr>
+	<tr><td align="left"> + artName : String </td></tr>
+	<tr><td align="left"> + artDesc : String </td></tr>
+	<tr><td align="left"> + artBdtId : String </td></tr>
+	<tr><td align="left"> + artChpId : String </td></tr>
+	<tr><td align="left"> + artPexId : String </td></tr>
+	<tr><td align="left"> + artMorId : String </td></tr>
+	<tr><td align="left"> + artModId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudChapitre [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudChapitre </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + chpCode : String </td></tr>
+	<tr><td align="left"> + chpName : String </td></tr>
+	<tr><td align="left"> + chpDesc : String </td></tr>
+	<tr><td align="left"> + chpBdtId : PlaBudgetType </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudChapitreDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudChapitreDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + chpCode : String </td></tr>
+	<tr><td align="left"> + chpName : String </td></tr>
+	<tr><td align="left"> + chpDesc : String </td></tr>
+	<tr><td align="left"> + chpBdtId : String </td></tr>
+	<tr><td align="left"> + chpPrtId : String </td></tr>
+	<tr><td align="left"> + chpTtrId : String </td></tr>
+	<tr><td align="left"> + chpStrId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudChapitreMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudChapitreMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + chpCode : String </td></tr>
+	<tr><td align="left"> + chpName : String </td></tr>
+	<tr><td align="left"> + chpDesc : String </td></tr>
+	<tr><td align="left"> + chpBdtId : String </td></tr>
+	<tr><td align="left"> + chpPrtId : String </td></tr>
+	<tr><td align="left"> + chpTtrId : String </td></tr>
+	<tr><td align="left"> + chpStrId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudCodeEco [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudCodeEco </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cecCode : String </td></tr>
+	<tr><td align="left"> + cecName : String </td></tr>
+	<tr><td align="left"> + cecDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudCodeEcoDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudCodeEcoDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cecCode : String </td></tr>
+	<tr><td align="left"> + cecName : String </td></tr>
+	<tr><td align="left"> + cecDesc : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudCodeEcoMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudCodeEcoMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cecCode : String </td></tr>
+	<tr><td align="left"> + cecName : String </td></tr>
+	<tr><td align="left"> + cecDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudCodeFnc [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudCodeFnc </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cfnCode : String </td></tr>
+	<tr><td align="left"> + cfnName : String </td></tr>
+	<tr><td align="left"> + cfnDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudCodeFncDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudCodeFncDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cfnCode : String </td></tr>
+	<tr><td align="left"> + cfnName : String </td></tr>
+	<tr><td align="left"> + cfnDesc : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudCodeFncMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudCodeFncMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cfnCode : String </td></tr>
+	<tr><td align="left"> + cfnName : String </td></tr>
+	<tr><td align="left"> + cfnDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemModif [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemModif </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + demStatus : String </td></tr>
+	<tr><td align="left"> + demDesc : String </td></tr>
+	<tr><td align="left"> + demDate : Date </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemModifDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemModifDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + demStatus : String </td></tr>
+	<tr><td align="left"> + demDesc : String </td></tr>
+	<tr><td align="left"> + demSmdId : String </td></tr>
+	<tr><td align="left"> + demMopId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemModifMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemModifMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + demStatus : String </td></tr>
+	<tr><td align="left"> + demDesc : String </td></tr>
+	<tr><td align="left"> + demDate : String </td></tr>
+	<tr><td align="left"> + demSmdId : String </td></tr>
+	<tr><td align="left"> + demMopId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemModifMpres [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemModifMpres </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dmpNewCp : BigDecimal </td></tr>
+	<tr><td align="left"> + dmpNewCe : BigDecimal </td></tr>
+	<tr><td align="left"> + dmpOldCp : BigDecimal </td></tr>
+	<tr><td align="left"> + dmpOldCe : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemModifMpresDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemModifMpresDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dmpNewCp : String </td></tr>
+	<tr><td align="left"> + dmpNewCe : String </td></tr>
+	<tr><td align="left"> + dmpOldCp : String </td></tr>
+	<tr><td align="left"> + min_dmpNewCp : String </td></tr>
+	<tr><td align="left"> + min_dmpNewCe : String </td></tr>
+	<tr><td align="left"> + min_dmpOldCp : String </td></tr>
+	<tr><td align="left"> + dmpDemId : String </td></tr>
+	<tr><td align="left"> + dmpMprId : String </td></tr>
+	<tr><td align="left"> + dmpSmdId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemModifMpresMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemModifMpresMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dmpNewCp : String </td></tr>
+	<tr><td align="left"> + dmpNewCe : String </td></tr>
+	<tr><td align="left"> + dmpOldCp : String </td></tr>
+	<tr><td align="left"> + dmpOldCe : String </td></tr>
+	<tr><td align="left"> + dmpDemId : String </td></tr>
+	<tr><td align="left"> + dmpMprId : String </td></tr>
+	<tr><td align="left"> + dmpSmdId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvt [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvt </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dmvCode : String </td></tr>
+	<tr><td align="left"> + dmvName : String </td></tr>
+	<tr><td align="left"> + dmvDesc : String </td></tr>
+	<tr><td align="left"> + dmvType : String </td></tr>
+	<tr><td align="left"> + dmvNum : String </td></tr>
+	<tr><td align="left"> + dmvDate : Date </td></tr>
+	<tr><td align="left"> + dmvNumCour : String </td></tr>
+	<tr><td align="left"> + dmvMorsrcType : String </td></tr>
+	<tr><td align="left"> + dmvMorsrcId : Long </td></tr>
+	<tr><td align="left"> + dmvMordestType : String </td></tr>
+	<tr><td align="left"> + dmvMordestId : Long </td></tr>
+	<tr><td align="left"> + dmvMotif : String </td></tr>
+	<tr><td align="left"> + dmvStatus : String </td></tr>
+	<tr><td align="left"> + dmvObs : String </td></tr>
+	<tr><td align="left"> + dmvNumVisa : String </td></tr>
+	<tr><td align="left"> + dmvDateVisa : Date </td></tr>
+	<tr><td align="left"> + dmvPexId : ParExercice </td></tr>
+	<tr><td align="left"> + dmvBdtId : PlaBudgetType </td></tr>
+	<tr><td align="left"> + dmvOrdId : ParOrdonateur </td></tr>
+	<tr><td align="left"> + dmvEntId : ParEntity </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dmvCode : String </td></tr>
+	<tr><td align="left"> + dmvName : String </td></tr>
+	<tr><td align="left"> + dmvDesc : String </td></tr>
+	<tr><td align="left"> + dmvType : String </td></tr>
+	<tr><td align="left"> + dmvNum : String </td></tr>
+	<tr><td align="left"> + dmvDate : String </td></tr>
+	<tr><td align="left"> + dmvNumCour : String </td></tr>
+	<tr><td align="left"> + dmvMorsrcType : String </td></tr>
+	<tr><td align="left"> + dmvMordestType : String </td></tr>
+	<tr><td align="left"> + dmvMotif : String </td></tr>
+	<tr><td align="left"> + dmvStatus : String </td></tr>
+	<tr><td align="left"> + dmvObs : String </td></tr>
+	<tr><td align="left"> + min_dmvDate : String </td></tr>
+	<tr><td align="left"> + dmvChpId : String </td></tr>
+	<tr><td align="left"> + dmvPexId : String </td></tr>
+	<tr><td align="left"> + dmvBdtId : String </td></tr>
+	<tr><td align="left"> + dmvTvrId : String </td></tr>
+	<tr><td align="left"> + dmvOrdId : String </td></tr>
+	<tr><td align="left"> + dmvDepId : String </td></tr>
+	<tr><td align="left"> + dmvDmvId : String </td></tr>
+	<tr><td align="left"> + dmvMorSrc : String </td></tr>
+	<tr><td align="left"> + dmvSmrSrc : String </td></tr>
+	<tr><td align="left"> + dmvMorDest : String </td></tr>
+	<tr><td align="left"> + dmvSmrDest : String </td></tr>
+	<tr><td align="left"> + dmvEntId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtDest [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtDest </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mddMorType : String </td></tr>
+	<tr><td align="left"> + mddModId : Long </td></tr>
+	<tr><td align="left"> + mddCreditCe : BigDecimal </td></tr>
+	<tr><td align="left"> + mddCreditCp : BigDecimal </td></tr>
+	<tr><td align="left"> + mddMotif : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtDestDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtDestDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mddMorType : String </td></tr>
+	<tr><td align="left"> + mddCreditCe : String </td></tr>
+	<tr><td align="left"> + min_mddCreditCe : String </td></tr>
+	<tr><td align="left"> + mddDmvId : String </td></tr>
+	<tr><td align="left"> + mddMod : String </td></tr>
+	<tr><td align="left"> + mddSmd : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtDestMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtDestMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mddMorType : String </td></tr>
+	<tr><td align="left"> + mddModId : String </td></tr>
+	<tr><td align="left"> + mddCreditCe : String </td></tr>
+	<tr><td align="left"> + mddCreditCp : String </td></tr>
+	<tr><td align="left"> + mddMotif : String </td></tr>
+	<tr><td align="left"> + mddDmvId : String </td></tr>
+	<tr><td align="left"> + mddMod : String </td></tr>
+	<tr><td align="left"> + mddSmd : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtLog [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtLog </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dmlTypeAction : String </td></tr>
+	<tr><td align="left"> + dmlMsg : String </td></tr>
+	<tr><td align="left"> + dmlDate : Date </td></tr>
+	<tr><td align="left"> + dmlUser : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtLogDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtLogDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dmlTypeAction : String </td></tr>
+	<tr><td align="left"> + dmlMsg : String </td></tr>
+	<tr><td align="left"> + dmlDate : String </td></tr>
+	<tr><td align="left"> + min_dmlDate : String </td></tr>
+	<tr><td align="left"> + dmlDmvId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtLogMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtLogMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dmlTypeAction : String </td></tr>
+	<tr><td align="left"> + dmlMsg : String </td></tr>
+	<tr><td align="left"> + dmlDate : String </td></tr>
+	<tr><td align="left"> + dmlUser : String </td></tr>
+	<tr><td align="left"> + dmlDmvId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtMemo [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtMemo </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dmmMemo : String </td></tr>
+	<tr><td align="left"> + dmmUser : String </td></tr>
+	<tr><td align="left"> + dmmDate : Date </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtMemoDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtMemoDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dmmMemo : String </td></tr>
+	<tr><td align="left"> + dmmUser : String </td></tr>
+	<tr><td align="left"> + dmmDate : String </td></tr>
+	<tr><td align="left"> + min_dmmDate : String </td></tr>
+	<tr><td align="left"> + dmmDmvId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtMemoMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtMemoMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dmmMemo : String </td></tr>
+	<tr><td align="left"> + dmmUser : String </td></tr>
+	<tr><td align="left"> + dmmDate : String </td></tr>
+	<tr><td align="left"> + dmmDmvId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dmvCode : String </td></tr>
+	<tr><td align="left"> + dmvName : String </td></tr>
+	<tr><td align="left"> + dmvDesc : String </td></tr>
+	<tr><td align="left"> + dmvType : String </td></tr>
+	<tr><td align="left"> + dmvNum : String </td></tr>
+	<tr><td align="left"> + dmvDate : String </td></tr>
+	<tr><td align="left"> + dmvNumCour : String </td></tr>
+	<tr><td align="left"> + dmvMorsrcType : String </td></tr>
+	<tr><td align="left"> + dmvMorsrcId : String </td></tr>
+	<tr><td align="left"> + dmvMordestType : String </td></tr>
+	<tr><td align="left"> + dmvMordestId : String </td></tr>
+	<tr><td align="left"> + dmvMotif : String </td></tr>
+	<tr><td align="left"> + dmvStatus : String </td></tr>
+	<tr><td align="left"> + dmvObs : String </td></tr>
+	<tr><td align="left"> + dmvChpId : String </td></tr>
+	<tr><td align="left"> + dmvPexId : String </td></tr>
+	<tr><td align="left"> + dmvBdtId : String </td></tr>
+	<tr><td align="left"> + dmvTvrId : String </td></tr>
+	<tr><td align="left"> + dmvOrdId : String </td></tr>
+	<tr><td align="left"> + dmvDepId : String </td></tr>
+	<tr><td align="left"> + dmvDmvId : String </td></tr>
+	<tr><td align="left"> + dmvNumVisa : String </td></tr>
+	<tr><td align="left"> + dmvDateVisa : String </td></tr>
+	<tr><td align="left"> + dmvMorSrc : String </td></tr>
+	<tr><td align="left"> + dmvSmrSrc : String </td></tr>
+	<tr><td align="left"> + dmvMorDest : String </td></tr>
+	<tr><td align="left"> + dmvSmrDest : String </td></tr>
+	<tr><td align="left"> + dmvEntId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtMpres [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtMpres </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dmmNewCp : BigDecimal </td></tr>
+	<tr><td align="left"> + dmmNewCe : BigDecimal </td></tr>
+	<tr><td align="left"> + dmmOldCp : BigDecimal </td></tr>
+	<tr><td align="left"> + dmmOldCe : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtMpresDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtMpresDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dmmNewCp : String </td></tr>
+	<tr><td align="left"> + dmmNewCe : String </td></tr>
+	<tr><td align="left"> + dmmOldCp : String </td></tr>
+	<tr><td align="left"> + min_dmmNewCp : String </td></tr>
+	<tr><td align="left"> + min_dmmNewCe : String </td></tr>
+	<tr><td align="left"> + min_dmmOldCp : String </td></tr>
+	<tr><td align="left"> + dmmMprId : String </td></tr>
+	<tr><td align="left"> + dmmSmdId : String </td></tr>
+	<tr><td align="left"> + dmmDmvId : String </td></tr>
+	<tr><td align="left"> + dmmModId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtMpresMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtMpresMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dmmNewCp : String </td></tr>
+	<tr><td align="left"> + dmmNewCe : String </td></tr>
+	<tr><td align="left"> + dmmOldCp : String </td></tr>
+	<tr><td align="left"> + dmmOldCe : String </td></tr>
+	<tr><td align="left"> + dmmMprId : String </td></tr>
+	<tr><td align="left"> + dmmSmdId : String </td></tr>
+	<tr><td align="left"> + dmmDmvId : String </td></tr>
+	<tr><td align="left"> + dmmModId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtSrc [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtSrc </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mdsMorType : String </td></tr>
+	<tr><td align="left"> + mdsModId : Long </td></tr>
+	<tr><td align="left"> + mdsCreditCe : BigDecimal </td></tr>
+	<tr><td align="left"> + mdsCreditCp : BigDecimal </td></tr>
+	<tr><td align="left"> + mdsMotif : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtSrcDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtSrcDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mdsMorType : String </td></tr>
+	<tr><td align="left"> + mdsCreditCe : String </td></tr>
+	<tr><td align="left"> + min_mdsCreditCe : String </td></tr>
+	<tr><td align="left"> + mdsDmvId : String </td></tr>
+	<tr><td align="left"> + mdsMod : String </td></tr>
+	<tr><td align="left"> + mdsSmd : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtSrcMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtSrcMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mdsMorType : String </td></tr>
+	<tr><td align="left"> + mdsModId : String </td></tr>
+	<tr><td align="left"> + mdsCreditCe : String </td></tr>
+	<tr><td align="left"> + mdsCreditCp : String </td></tr>
+	<tr><td align="left"> + mdsMotif : String </td></tr>
+	<tr><td align="left"> + mdsDmvId : String </td></tr>
+	<tr><td align="left"> + mdsMod : String </td></tr>
+	<tr><td align="left"> + mdsSmd : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanif [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanif </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + depStatus : String </td></tr>
+	<tr><td align="left"> + depDesc : String </td></tr>
+	<tr><td align="left"> + depCopId : PlaCreditOp </td></tr>
+	<tr><td align="left"> + depAexId : ParAgentExe </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + depStatus : String </td></tr>
+	<tr><td align="left"> + depDesc : String </td></tr>
+	<tr><td align="left"> + depSmdId : String </td></tr>
+	<tr><td align="left"> + depCopId : String </td></tr>
+	<tr><td align="left"> + depMopId : String </td></tr>
+	<tr><td align="left"> + depAexId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + depStatus : String </td></tr>
+	<tr><td align="left"> + depDesc : String </td></tr>
+	<tr><td align="left"> + depSmdId : String </td></tr>
+	<tr><td align="left"> + depCopId : String </td></tr>
+	<tr><td align="left"> + depMopId : String </td></tr>
+	<tr><td align="left"> + depAexId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifMpres [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifMpres </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dppNewCp : BigDecimal </td></tr>
+	<tr><td align="left"> + dppNewCe : BigDecimal </td></tr>
+	<tr><td align="left"> + dppOldCp : BigDecimal </td></tr>
+	<tr><td align="left"> + dppOldCe : BigDecimal </td></tr>
+	<tr><td align="left"> + planifStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifMpresDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifMpresDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dppNewCp : String </td></tr>
+	<tr><td align="left"> + dppNewCe : String </td></tr>
+	<tr><td align="left"> + min_dppNewCp : String </td></tr>
+	<tr><td align="left"> + min_dppNewCe : String </td></tr>
+	<tr><td align="left"> + dppDepId : String </td></tr>
+	<tr><td align="left"> + dppMprId : String </td></tr>
+	<tr><td align="left"> + dppSmdId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifMpresHasPex [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifMpresHasPex </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mhpNewCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + mhpOldCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + planifStatus : String </td></tr>
+	<tr><td align="left"> + mhpChpId : PlaCprHasPex </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifMpresHasPexDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifMpresHasPexDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mhpNewCredit : String </td></tr>
+	<tr><td align="left"> + mhpOldCredit : String </td></tr>
+	<tr><td align="left"> + min_mhpNewCredit : String </td></tr>
+	<tr><td align="left"> + min_mhpOldCredit : String </td></tr>
+	<tr><td align="left"> + mhpDppId : String </td></tr>
+	<tr><td align="left"> + mhpChpId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifMpresHasPexMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifMpresHasPexMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mhpNewCredit : String </td></tr>
+	<tr><td align="left"> + mhpOldCredit : String </td></tr>
+	<tr><td align="left"> + mhpDppId : String </td></tr>
+	<tr><td align="left"> + mhpChpId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifMpresMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifMpresMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dppNewCp : String </td></tr>
+	<tr><td align="left"> + dppNewCe : String </td></tr>
+	<tr><td align="left"> + dppDepId : String </td></tr>
+	<tr><td align="left"> + dppMprId : String </td></tr>
+	<tr><td align="left"> + dppSmdId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifNpres [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifNpres </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dpdCreditCp : BigDecimal </td></tr>
+	<tr><td align="left"> + dpdCreditCe : BigDecimal </td></tr>
+	<tr><td align="left"> + planifStatus : String </td></tr>
+	<tr><td align="left"> + dpdCprId : PlaCreditPrs </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifNpresDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifNpresDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dpdCreditCp : String </td></tr>
+	<tr><td align="left"> + dpdCreditCe : String </td></tr>
+	<tr><td align="left"> + min_dpdCreditCp : String </td></tr>
+	<tr><td align="left"> + min_dpdCreditCe : String </td></tr>
+	<tr><td align="left"> + dpdDepId : String </td></tr>
+	<tr><td align="left"> + dpdCprId : String </td></tr>
+	<tr><td align="left"> + dpdSmdId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifNpresHasPex [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifNpresHasPex </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + nhpNewCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + planifStatus : String </td></tr>
+	<tr><td align="left"> + nhpChpId : PlaCprHasPex </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifNpresHasPexDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifNpresHasPexDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + nhpNewCredit : String </td></tr>
+	<tr><td align="left"> + min_nhpNewCredit : String </td></tr>
+	<tr><td align="left"> + nhpDpdId : String </td></tr>
+	<tr><td align="left"> + nhpChpId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifNpresHasPexMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifNpresHasPexMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + nhpNewCredit : String </td></tr>
+	<tr><td align="left"> + nhpDppId : String </td></tr>
+	<tr><td align="left"> + nhpChpId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifNpresMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifNpresMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dpdCreditCp : String </td></tr>
+	<tr><td align="left"> + dpdCreditCe : String </td></tr>
+	<tr><td align="left"> + dpdDepId : String </td></tr>
+	<tr><td align="left"> + dpdCprId : String </td></tr>
+	<tr><td align="left"> + dpdSmdId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDmmHasChp [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDmmHasChp </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mhcOldCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + mhcNewCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + mhcChpId : PlaCprHasPex </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDmmHasChpDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDmmHasChpDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mhcOldCredit : String </td></tr>
+	<tr><td align="left"> + mhcNewCredit : String </td></tr>
+	<tr><td align="left"> + min_mhcOldCredit : String </td></tr>
+	<tr><td align="left"> + min_mhcNewCredit : String </td></tr>
+	<tr><td align="left"> + mhcDmmId : String </td></tr>
+	<tr><td align="left"> + mhcChpId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDmmHasChpMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDmmHasChpMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mhcOldCredit : String </td></tr>
+	<tr><td align="left"> + mhcNewCredit : String </td></tr>
+	<tr><td align="left"> + mhcDmmId : String </td></tr>
+	<tr><td align="left"> + mhcChpId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDmpHasChp [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDmpHasChp </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dhcOldCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + dhcNewCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + dhcChpId : PlaCprHasPex </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDmpHasChpDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDmpHasChpDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dhcOldCredit : String </td></tr>
+	<tr><td align="left"> + dhcNewCredit : String </td></tr>
+	<tr><td align="left"> + min_dhcOldCredit : String </td></tr>
+	<tr><td align="left"> + min_dhcNewCredit : String </td></tr>
+	<tr><td align="left"> + dhcDmpId : String </td></tr>
+	<tr><td align="left"> + dhcChpId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDmpHasChpMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDmpHasChpMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dhcOldCredit : String </td></tr>
+	<tr><td align="left"> + dhcNewCredit : String </td></tr>
+	<tr><td align="left"> + dhcDmpId : String </td></tr>
+	<tr><td align="left"> + dhcChpId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudLigne [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudLigne </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + linCode : Integer </td></tr>
+	<tr><td align="left"> + linName : String </td></tr>
+	<tr><td align="left"> + linDesc : String </td></tr>
+	<tr><td align="left"> + linPexId : ParExercice </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudLigneDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudLigneDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + linPexId1 : String </td></tr>
+	<tr><td align="left"> + linCode : String </td></tr>
+	<tr><td align="left"> + linName : String </td></tr>
+	<tr><td align="left"> + linDesc : String </td></tr>
+	<tr><td align="left"> + min_linCode : String </td></tr>
+	<tr><td align="left"> + linPphId : String </td></tr>
+	<tr><td align="left"> + linCecId : String </td></tr>
+	<tr><td align="left"> + linLinId : String </td></tr>
+	<tr><td align="left"> + linPexId : String </td></tr>
+	<tr><td align="left"> + linModId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudLigneMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudLigneMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + linCode : String </td></tr>
+	<tr><td align="left"> + linName : String </td></tr>
+	<tr><td align="left"> + linDesc : String </td></tr>
+	<tr><td align="left"> + linPexId : String </td></tr>
+	<tr><td align="left"> + linCecId : String </td></tr>
+	<tr><td align="left"> + linPphId : String </td></tr>
+	<tr><td align="left"> + linLinId : String </td></tr>
+	<tr><td align="left"> + linModId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorasse [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorasse </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + morCode : String </td></tr>
+	<tr><td align="left"> + morName : String </td></tr>
+	<tr><td align="left"> + morDesc : String </td></tr>
+	<tr><td align="left"> + morStatus : String </td></tr>
+	<tr><td align="left"> + morBdtId : PlaBudgetType </td></tr>
+	<tr><td align="left"> + morPexId : ParExercice </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorasseDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorasseDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + morPexId1 : String </td></tr>
+	<tr><td align="left"> + morBdtId1 : String </td></tr>
+	<tr><td align="left"> + morCode : String </td></tr>
+	<tr><td align="left"> + morName : String </td></tr>
+	<tr><td align="left"> + morBdtId : String </td></tr>
+	<tr><td align="left"> + morPexId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorasseDet [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorasseDet </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + modCode : Integer </td></tr>
+	<tr><td align="left"> + modName : String </td></tr>
+	<tr><td align="left"> + modRowType : String </td></tr>
+	<tr><td align="left"> + modArticle : Integer </td></tr>
+	<tr><td align="left"> + modParag : Integer </td></tr>
+	<tr><td align="left"> + modSsParag : Integer </td></tr>
+	<tr><td align="left"> + modLigne : Integer </td></tr>
+	<tr><td align="left"> + modSsLigne : Integer </td></tr>
+	<tr><td align="left"> + modRegion : String </td></tr>
+	<tr><td align="left"> + modCreditCp : BigDecimal </td></tr>
+	<tr><td align="left"> + modCreditCe : BigDecimal </td></tr>
+	<tr><td align="left"> + modAsmStatus : String </td></tr>
+	<tr><td align="left"> + modCpSum : BigDecimal </td></tr>
+	<tr><td align="left"> + modCeSum : BigDecimal </td></tr>
+	<tr><td align="left"> + modCpEng : BigDecimal </td></tr>
+	<tr><td align="left"> + modCeEng : BigDecimal </td></tr>
+	<tr><td align="left"> + modCpPla : BigDecimal </td></tr>
+	<tr><td align="left"> + modCePla : BigDecimal </td></tr>
+	<tr><td align="left"> + modCpBud : BigDecimal </td></tr>
+	<tr><td align="left"> + modCeBud : BigDecimal </td></tr>
+	<tr><td align="left"> + modOrder : Long </td></tr>
+	<tr><td align="left"> + modPexId : ParExercice </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorasseDetDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorasseDetDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + modCode : String </td></tr>
+	<tr><td align="left"> + modName : String </td></tr>
+	<tr><td align="left"> + modRowType : String </td></tr>
+	<tr><td align="left"> + min_modCode : String </td></tr>
+	<tr><td align="left"> + modPexId : String </td></tr>
+	<tr><td align="left"> + modChpId : String </td></tr>
+	<tr><td align="left"> + modCfnId : String </td></tr>
+	<tr><td align="left"> + modCecId : String </td></tr>
+	<tr><td align="left"> + modMorId : String </td></tr>
+	<tr><td align="left"> + modModId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorasseDetMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorasseDetMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + modCode : String </td></tr>
+	<tr><td align="left"> + modName : String </td></tr>
+	<tr><td align="left"> + modRowType : String </td></tr>
+	<tr><td align="left"> + modArticle : String </td></tr>
+	<tr><td align="left"> + modRegion : String </td></tr>
+	<tr><td align="left"> + modParag : String </td></tr>
+	<tr><td align="left"> + modSsParag : String </td></tr>
+	<tr><td align="left"> + modLigne : String </td></tr>
+	<tr><td align="left"> + modSsLigne : String </td></tr>
+	<tr><td align="left"> + modCreditCp : String </td></tr>
+	<tr><td align="left"> + modCreditCe : String </td></tr>
+	<tr><td align="left"> + modCpSum : String </td></tr>
+	<tr><td align="left"> + modCeSum : String </td></tr>
+	<tr><td align="left"> + modCpEng : String </td></tr>
+	<tr><td align="left"> + modCeEng : String </td></tr>
+	<tr><td align="left"> + modAsmStatus : String </td></tr>
+	<tr><td align="left"> + modPexId : String </td></tr>
+	<tr><td align="left"> + modChpId : String </td></tr>
+	<tr><td align="left"> + modCfnId : String </td></tr>
+	<tr><td align="left"> + modCecId : String </td></tr>
+	<tr><td align="left"> + modMorId : String </td></tr>
+	<tr><td align="left"> + modModId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorasseMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorasseMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + morCode : String </td></tr>
+	<tr><td align="left"> + morName : String </td></tr>
+	<tr><td align="left"> + morDesc : String </td></tr>
+	<tr><td align="left"> + morStatus : String </td></tr>
+	<tr><td align="left"> + morBdtId : String </td></tr>
+	<tr><td align="left"> + morPexId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorasseMvmDet [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorasseMvmDet </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + modCode : Integer </td></tr>
+	<tr><td align="left"> + modName : String </td></tr>
+	<tr><td align="left"> + modRowType : String </td></tr>
+	<tr><td align="left"> + modArticle : Integer </td></tr>
+	<tr><td align="left"> + modParag : Integer </td></tr>
+	<tr><td align="left"> + modSsParag : Integer </td></tr>
+	<tr><td align="left"> + modLigne : Integer </td></tr>
+	<tr><td align="left"> + modSsLigne : Integer </td></tr>
+	<tr><td align="left"> + modRegion : String </td></tr>
+	<tr><td align="left"> + modCreditCp : BigDecimal </td></tr>
+	<tr><td align="left"> + modCreditCe : BigDecimal </td></tr>
+	<tr><td align="left"> + modAsmStatus : String </td></tr>
+	<tr><td align="left"> + modCpSum : BigDecimal </td></tr>
+	<tr><td align="left"> + modCeSum : BigDecimal </td></tr>
+	<tr><td align="left"> + modCpEng : BigDecimal </td></tr>
+	<tr><td align="left"> + modCeEng : BigDecimal </td></tr>
+	<tr><td align="left"> + modCpPla : BigDecimal </td></tr>
+	<tr><td align="left"> + modCePla : BigDecimal </td></tr>
+	<tr><td align="left"> + modCpBud : BigDecimal </td></tr>
+	<tr><td align="left"> + modCeBud : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorasseMvmDetDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorasseMvmDetDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + modCode : String </td></tr>
+	<tr><td align="left"> + modName : String </td></tr>
+	<tr><td align="left"> + modRowType : String </td></tr>
+	<tr><td align="left"> + min_modCode : String </td></tr>
+	<tr><td align="left"> + modModId : String </td></tr>
+	<tr><td align="left"> + modSmdId : String </td></tr>
+	<tr><td align="left"> + modDmvId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorasseMvmDetMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorasseMvmDetMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + modCode : String </td></tr>
+	<tr><td align="left"> + modName : String </td></tr>
+	<tr><td align="left"> + modRowType : String </td></tr>
+	<tr><td align="left"> + modArticle : String </td></tr>
+	<tr><td align="left"> + modRegion : String </td></tr>
+	<tr><td align="left"> + modParag : String </td></tr>
+	<tr><td align="left"> + modSsParag : String </td></tr>
+	<tr><td align="left"> + modLigne : String </td></tr>
+	<tr><td align="left"> + modSsLigne : String </td></tr>
+	<tr><td align="left"> + modCreditCp : String </td></tr>
+	<tr><td align="left"> + modCreditCe : String </td></tr>
+	<tr><td align="left"> + modCpSum : String </td></tr>
+	<tr><td align="left"> + modCeSum : String </td></tr>
+	<tr><td align="left"> + modCpEng : String </td></tr>
+	<tr><td align="left"> + modCeEng : String </td></tr>
+	<tr><td align="left"> + modCpBud : String </td></tr>
+	<tr><td align="left"> + modCeBud : String </td></tr>
+	<tr><td align="left"> + modCpPla : String </td></tr>
+	<tr><td align="left"> + modCePla : String </td></tr>
+	<tr><td align="left"> + modAsmStatus : String </td></tr>
+	<tr><td align="left"> + modModId : String </td></tr>
+	<tr><td align="left"> + modSmdId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorasseOp [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorasseOp </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mopCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + mopCreditPla : BigDecimal </td></tr>
+	<tr><td align="left"> + mopCreditBud : BigDecimal </td></tr>
+	<tr><td align="left"> + mopCopId : PlaCreditOp </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorasseOpDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorasseOpDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mopCredit : String </td></tr>
+	<tr><td align="left"> + min_mopCredit : String </td></tr>
+	<tr><td align="left"> + mopCopId : String </td></tr>
+	<tr><td align="left"> + mopModId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorasseOpMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorasseOpMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mopCredit : String </td></tr>
+	<tr><td align="left"> + mopCopId : String </td></tr>
+	<tr><td align="left"> + mopModId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorassePres [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorassePres </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mprStatus : String </td></tr>
+	<tr><td align="left"> + mprCreditCp : BigDecimal </td></tr>
+	<tr><td align="left"> + mprCreditCe : BigDecimal </td></tr>
+	<tr><td align="left"> + mprCpPla : BigDecimal </td></tr>
+	<tr><td align="left"> + mprCePla : BigDecimal </td></tr>
+	<tr><td align="left"> + mprCpBud : BigDecimal </td></tr>
+	<tr><td align="left"> + mprCeBud : BigDecimal </td></tr>
+	<tr><td align="left"> + mprCprId : PlaCreditPrs </td></tr>
+	<tr><td align="left"> + mprAexId : ParAgentExe </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorassePresDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorassePresDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mprCreditCp : String </td></tr>
+	<tr><td align="left"> + mprCreditCe : String </td></tr>
+	<tr><td align="left"> + min_mprCreditCp : String </td></tr>
+	<tr><td align="left"> + min_mprCreditCe : String </td></tr>
+	<tr><td align="left"> + mprCprId : String </td></tr>
+	<tr><td align="left"> + mprModId : String </td></tr>
+	<tr><td align="left"> + mprMopId : String </td></tr>
+	<tr><td align="left"> + mprAexId : String </td></tr>
+	<tr><td align="left"> + mprPmprId : String </td></tr>
+	<tr><td align="left"> + mprSmdId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorassePresMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorassePresMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mprCreditCp : String </td></tr>
+	<tr><td align="left"> + mprCreditCe : String </td></tr>
+	<tr><td align="left"> + mprCprId : String </td></tr>
+	<tr><td align="left"> + mprModId : String </td></tr>
+	<tr><td align="left"> + mprMopId : String </td></tr>
+	<tr><td align="left"> + mprAexId : String </td></tr>
+	<tr><td align="left"> + mprPmprId : String </td></tr>
+	<tr><td align="left"> + mprSmdId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMprHasChp [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMprHasChp </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mhcOldCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + mhcNewCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + mhcChpId : PlaCprHasPex </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMprHasChpDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMprHasChpDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mhcOldCredit : String </td></tr>
+	<tr><td align="left"> + mhcNewCredit : String </td></tr>
+	<tr><td align="left"> + min_mhcOldCredit : String </td></tr>
+	<tr><td align="left"> + min_mhcNewCredit : String </td></tr>
+	<tr><td align="left"> + mhcMprId : String </td></tr>
+	<tr><td align="left"> + mhcChpId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMprHasChpMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMprHasChpMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mhcOldCredit : String </td></tr>
+	<tr><td align="left"> + mhcNewCredit : String </td></tr>
+	<tr><td align="left"> + mhcMprId : String </td></tr>
+	<tr><td align="left"> + mhcChpId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMvtDecision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMvtDecision </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cddStatus : String </td></tr>
+	<tr><td align="left"> + cddDate : Date </td></tr>
+	<tr><td align="left"> + cddRem : String </td></tr>
+	<tr><td align="left"> + cddEntId : ParEntity </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMvtDecisionDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMvtDecisionDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cddStatus : String </td></tr>
+	<tr><td align="left"> + cddDate : String </td></tr>
+	<tr><td align="left"> + cddRem : String </td></tr>
+	<tr><td align="left"> + min_cddDate : String </td></tr>
+	<tr><td align="left"> + cddEntId : String </td></tr>
+	<tr><td align="left"> + cddDmvId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMvtDecisionMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMvtDecisionMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cddStatus : String </td></tr>
+	<tr><td align="left"> + cddDate : String </td></tr>
+	<tr><td align="left"> + cddRem : String </td></tr>
+	<tr><td align="left"> + cddEntId : String </td></tr>
+	<tr><td align="left"> + cddDmvId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMvtState [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMvtState </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdsStatus : String </td></tr>
+	<tr><td align="left"> + cdsDate : Date </td></tr>
+	<tr><td align="left"> + cdsRem : String </td></tr>
+	<tr><td align="left"> + cdsEntId : ParEntity </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMvtStateDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMvtStateDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdsStatus : String </td></tr>
+	<tr><td align="left"> + cdsDate : String </td></tr>
+	<tr><td align="left"> + cdsRem : String </td></tr>
+	<tr><td align="left"> + min_cdsDate : String </td></tr>
+	<tr><td align="left"> + cdsEntId : String </td></tr>
+	<tr><td align="left"> + cdsDmvId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMvtStateMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMvtStateMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdsStatus : String </td></tr>
+	<tr><td align="left"> + cdsDate : String </td></tr>
+	<tr><td align="left"> + cdsRem : String </td></tr>
+	<tr><td align="left"> + cdsEntId : String </td></tr>
+	<tr><td align="left"> + cdsDmvId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudParagraphe [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudParagraphe </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + pphCode : Integer </td></tr>
+	<tr><td align="left"> + pphName : String </td></tr>
+	<tr><td align="left"> + pphDesc : String </td></tr>
+	<tr><td align="left"> + pphPexId : ParExercice </td></tr>
+	<tr><td align="left"> + pphBdtId : PlaBudgetType </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudParagrapheDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudParagrapheDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + pphPexId1 : String </td></tr>
+	<tr><td align="left"> + pphCode : String </td></tr>
+	<tr><td align="left"> + pphName : String </td></tr>
+	<tr><td align="left"> + pphDesc : String </td></tr>
+	<tr><td align="left"> + min_pphCode : String </td></tr>
+	<tr><td align="left"> + pphArtId : String </td></tr>
+	<tr><td align="left"> + pphCfnId : String </td></tr>
+	<tr><td align="left"> + pphPphId : String </td></tr>
+	<tr><td align="left"> + pphPexId : String </td></tr>
+	<tr><td align="left"> + pphBdtId : String </td></tr>
+	<tr><td align="left"> + pphChpId : String </td></tr>
+	<tr><td align="left"> + pphModId : String </td></tr>
+	<tr><td align="left"> + pphRegId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudParagrapheMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudParagrapheMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + pphCode : String </td></tr>
+	<tr><td align="left"> + pphName : String </td></tr>
+	<tr><td align="left"> + pphDesc : String </td></tr>
+	<tr><td align="left"> + pphCfnId : String </td></tr>
+	<tr><td align="left"> + pphBdtId : String </td></tr>
+	<tr><td align="left"> + pphChpId : String </td></tr>
+	<tr><td align="left"> + pphPexId : String </td></tr>
+	<tr><td align="left"> + pphArtId : String </td></tr>
+	<tr><td align="left"> + pphRegId : String </td></tr>
+	<tr><td align="left"> + pphPphId : String </td></tr>
+	<tr><td align="left"> + pphModId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudPartie [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudPartie </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prtCode : String </td></tr>
+	<tr><td align="left"> + prtName : String </td></tr>
+	<tr><td align="left"> + prtDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudPartieDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudPartieDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prtCode : String </td></tr>
+	<tr><td align="left"> + prtName : String </td></tr>
+	<tr><td align="left"> + prtDesc : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudPartieMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudPartieMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prtCode : String </td></tr>
+	<tr><td align="left"> + prtName : String </td></tr>
+	<tr><td align="left"> + prtDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudRegion [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudRegion </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + regCode : String </td></tr>
+	<tr><td align="left"> + regName : String </td></tr>
+	<tr><td align="left"> + regDesc : String </td></tr>
+	<tr><td align="left"> + regPexId : ParExercice </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudRegionDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudRegionDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + regPexId1 : String </td></tr>
+	<tr><td align="left"> + regCode : String </td></tr>
+	<tr><td align="left"> + regName : String </td></tr>
+	<tr><td align="left"> + regDesc : String </td></tr>
+	<tr><td align="left"> + regArtId : String </td></tr>
+	<tr><td align="left"> + regPexId : String </td></tr>
+	<tr><td align="left"> + regModId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudRegionMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudRegionMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + regCode : String </td></tr>
+	<tr><td align="left"> + regName : String </td></tr>
+	<tr><td align="left"> + regDesc : String </td></tr>
+	<tr><td align="left"> + regPexId : String </td></tr>
+	<tr><td align="left"> + regArtId : String </td></tr>
+	<tr><td align="left"> + regModId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudSmdLog [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudSmdLog </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + smlTypeAction : String </td></tr>
+	<tr><td align="left"> + smlMsg : String </td></tr>
+	<tr><td align="left"> + smlDate : Date </td></tr>
+	<tr><td align="left"> + smlUser : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudSmdLogDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudSmdLogDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + smlTypeAction : String </td></tr>
+	<tr><td align="left"> + smlMsg : String </td></tr>
+	<tr><td align="left"> + smlDate : String </td></tr>
+	<tr><td align="left"> + min_smlDate : String </td></tr>
+	<tr><td align="left"> + smlSmdId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudSmdLogMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudSmdLogMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + smlTypeAction : String </td></tr>
+	<tr><td align="left"> + smlMsg : String </td></tr>
+	<tr><td align="left"> + smlDate : String </td></tr>
+	<tr><td align="left"> + smlUser : String </td></tr>
+	<tr><td align="left"> + smlSmdId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudSsMorasse [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudSsMorasse </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + smrCode : String </td></tr>
+	<tr><td align="left"> + smrName : String </td></tr>
+	<tr><td align="left"> + smrDesc : String </td></tr>
+	<tr><td align="left"> + smrStatus : String </td></tr>
+	<tr><td align="left"> + smrBdtId : PlaBudgetType </td></tr>
+	<tr><td align="left"> + smrPexId : ParExercice </td></tr>
+	<tr><td align="left"> + smrOrdId : ParOrdonateur </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudSsMorasseDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudSsMorasseDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + smrPexId1 : String </td></tr>
+	<tr><td align="left"> + smrBdtId1 : String </td></tr>
+	<tr><td align="left"> + smrMorId1 : String </td></tr>
+	<tr><td align="left"> + smrCode : String </td></tr>
+	<tr><td align="left"> + smrName : String </td></tr>
+	<tr><td align="left"> + smrBdtId : String </td></tr>
+	<tr><td align="left"> + smrPexId : String </td></tr>
+	<tr><td align="left"> + smrOrdId : String </td></tr>
+	<tr><td align="left"> + smrMorId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudSsMorasseDet [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudSsMorasseDet </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + smdCode : String </td></tr>
+	<tr><td align="left"> + smdName : String </td></tr>
+	<tr><td align="left"> + smdCreditCp : BigDecimal </td></tr>
+	<tr><td align="left"> + smdCreditCe : BigDecimal </td></tr>
+	<tr><td align="left"> + smdCpSum : BigDecimal </td></tr>
+	<tr><td align="left"> + smdCeSum : BigDecimal </td></tr>
+	<tr><td align="left"> + smdCpEng : BigDecimal </td></tr>
+	<tr><td align="left"> + smdCeEng : BigDecimal </td></tr>
+	<tr><td align="left"> + smdCpPla : BigDecimal </td></tr>
+	<tr><td align="left"> + smdCePla : BigDecimal </td></tr>
+	<tr><td align="left"> + smdCpBud : BigDecimal </td></tr>
+	<tr><td align="left"> + smdCeBud : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudSsMorasseDetDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudSsMorasseDetDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + smdCode : String </td></tr>
+	<tr><td align="left"> + smdName : String </td></tr>
+	<tr><td align="left"> + smdCreditCp : String </td></tr>
+	<tr><td align="left"> + min_smdCreditCp : String </td></tr>
+	<tr><td align="left"> + smdSmrId : String </td></tr>
+	<tr><td align="left"> + smdModId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudSsMorasseDetMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudSsMorasseDetMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + smdCode : String </td></tr>
+	<tr><td align="left"> + smdName : String </td></tr>
+	<tr><td align="left"> + smdCreditCp : String </td></tr>
+	<tr><td align="left"> + smdCreditCe : String </td></tr>
+	<tr><td align="left"> + smdCpSum : String </td></tr>
+	<tr><td align="left"> + smdCeSum : String </td></tr>
+	<tr><td align="left"> + smdCpEng : String </td></tr>
+	<tr><td align="left"> + smdCeEng : String </td></tr>
+	<tr><td align="left"> + smdSmrId : String </td></tr>
+	<tr><td align="left"> + smdModId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudSsMorasseMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudSsMorasseMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + smrCode : String </td></tr>
+	<tr><td align="left"> + smrName : String </td></tr>
+	<tr><td align="left"> + smrDesc : String </td></tr>
+	<tr><td align="left"> + smrStatus : String </td></tr>
+	<tr><td align="left"> + smrBdtId : String </td></tr>
+	<tr><td align="left"> + smrPexId : String </td></tr>
+	<tr><td align="left"> + smrOrdId : String </td></tr>
+	<tr><td align="left"> + smrMorId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudSsTitre [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudSsTitre </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + strCode : String </td></tr>
+	<tr><td align="left"> + strName : String </td></tr>
+	<tr><td align="left"> + strDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudSsTitreDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudSsTitreDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + strCode : String </td></tr>
+	<tr><td align="left"> + strName : String </td></tr>
+	<tr><td align="left"> + strDesc : String </td></tr>
+	<tr><td align="left"> + strTtrId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudSsTitreMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudSsTitreMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + strCode : String </td></tr>
+	<tr><td align="left"> + strName : String </td></tr>
+	<tr><td align="left"> + strDesc : String </td></tr>
+	<tr><td align="left"> + strTtrId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudTitre [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudTitre </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ttrCode : String </td></tr>
+	<tr><td align="left"> + ttrName : String </td></tr>
+	<tr><td align="left"> + ttrDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudTitreDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudTitreDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ttrCode : String </td></tr>
+	<tr><td align="left"> + ttrName : String </td></tr>
+	<tr><td align="left"> + ttrDesc : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudTitreMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudTitreMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ttrCode : String </td></tr>
+	<tr><td align="left"> + ttrName : String </td></tr>
+	<tr><td align="left"> + ttrDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudTypeVir [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudTypeVir </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tvrCode : String </td></tr>
+	<tr><td align="left"> + tvrName : String </td></tr>
+	<tr><td align="left"> + tvrDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudTypeVirDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudTypeVirDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tvrCode : String </td></tr>
+	<tr><td align="left"> + tvrName : String </td></tr>
+	<tr><td align="left"> + tvrDesc : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudTypeVirMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudTypeVirMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tvrCode : String </td></tr>
+	<tr><td align="left"> + tvrName : String </td></tr>
+	<tr><td align="left"> + tvrDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+edge [arrowhead = "empty"]
+edge [arrowhead = "none"]
+
+
+edge [arrowtail="none" arrowhead = "none" headlabel="artChpId" taillabel="0..n idChpArtId" labeldistance="2.0" labelangle="-30"]
+
+BudArticle -> BudChapitre
+
+edge [arrowtail="none" arrowhead = "none" headlabel="artMorId" taillabel="0..n morArts" labeldistance="2.0" labelangle="-30"]
+
+BudArticle -> BudMorasse
+
+edge [arrowtail="none" arrowhead = "open" headlabel="artModId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudArticle -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idArtRegId" taillabel="regArtId" labeldistance="2.0" labelangle="-30"]
+
+BudArticle -> BudRegion
+
+edge [arrowtail="none" arrowhead = "open" headlabel="chpPrtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudChapitre -> BudPartie
+
+edge [arrowtail="none" arrowhead = "open" headlabel="chpStrId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudChapitre -> BudSsTitre
+
+edge [arrowtail="none" arrowhead = "open" headlabel="chpTtrId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudChapitre -> BudTitre
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDemDmpId" taillabel="dmpDemId" labeldistance="2.0" labelangle="-30"]
+
+BudDemModif -> BudDemModifMpres
+
+edge [arrowtail="none" arrowhead = "open" headlabel="demMopId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemModif -> BudMorasseOp
+
+edge [arrowtail="none" arrowhead = "open" headlabel="demSmdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemModif -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDmpDhcId" taillabel="dhcDmpId" labeldistance="2.0" labelangle="-30"]
+
+BudDemModifMpres -> BudDmpHasChp
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmpMprId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemModifMpres -> BudMorassePres
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmpSmdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemModifMpres -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmvChpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudChapitre
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmvDmvId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudDemMvt
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDmvMddId" taillabel="mddDmvId" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudDemMvtDest
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDmvDmlId" taillabel="dmlDmvId" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudDemMvtLog
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDmvDmmId" taillabel="dmmDmvId" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudDemMvtMemo
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n dmmIds" taillabel="dmmDmvId" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudDemMvtMpres
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDmvMdsId" taillabel="mdsDmvId" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudDemMvtSrc
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmvDepId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudDemPlanif
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmvMorDest" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudMorasse
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmvMorSrc" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudMorasse
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDmvModId" taillabel="modDmvId" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudMorasseMvmDet
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDmvCddId" taillabel="cddDmvId" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudMvtDecision
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDmvCdsId" taillabel="cdsDmvId" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudMvtState
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmvSmrDest" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudSsMorasse
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmvSmrSrc" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudSsMorasse
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmvTvrId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudTypeVir
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mddMod" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvtDest -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mddSmd" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvtDest -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDmmMhcId" taillabel="mhcDmmId" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvtMpres -> BudDmmHasChp
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmmModId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvtMpres -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmmMprId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvtMpres -> BudMorassePres
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmmSmdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvtMpres -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mdsMod" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvtSrc -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mdsSmd" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvtSrc -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDepDppId" taillabel="dppDepId" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanif -> BudDemPlanifMpres
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDepDpdId" taillabel="dpdDepId" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanif -> BudDemPlanifNpres
+
+edge [arrowtail="none" arrowhead = "open" headlabel="depMopId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanif -> BudMorasseOp
+
+edge [arrowtail="none" arrowhead = "open" headlabel="depSmdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanif -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDppMhpId" taillabel="mhpDppId" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanifMpres -> BudDemPlanifMpresHasPex
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dppMprId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanifMpres -> BudMorassePres
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dppSmdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanifMpres -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDpdNhpId" taillabel="nhpDpdId" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanifNpres -> BudDemPlanifNpresHasPex
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dpdSmdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanifNpres -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="linCecId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudLigne -> BudCodeEco
+
+edge [arrowtail="none" arrowhead = "none" headlabel="linLinId" taillabel="0..n idLinLinId" labeldistance="2.0" labelangle="-30"]
+
+BudLigne -> BudLigne
+
+edge [arrowtail="none" arrowhead = "open" headlabel="linModId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudLigne -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "none" headlabel="linPphId" taillabel="0..n idPphLinId" labeldistance="2.0" labelangle="-30"]
+
+BudLigne -> BudParagraphe
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idMorModId" taillabel="modMorId" labeldistance="2.0" labelangle="-30"]
+
+BudMorasse -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="modChpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudMorasseDet -> BudChapitre
+
+edge [arrowtail="none" arrowhead = "open" headlabel="modCecId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudMorasseDet -> BudCodeEco
+
+edge [arrowtail="none" arrowhead = "open" headlabel="modCfnId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudMorasseDet -> BudCodeFnc
+
+edge [arrowtail="none" arrowhead = "none" headlabel="modModId" taillabel="0..n idModModId" labeldistance="2.0" labelangle="-30"]
+
+BudMorasseDet -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idModMopId" taillabel="mopModId" labeldistance="2.0" labelangle="-30"]
+
+BudMorasseDet -> BudMorasseOp
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idModMprId" taillabel="mprModId" labeldistance="2.0" labelangle="-30"]
+
+BudMorasseDet -> BudMorassePres
+
+edge [arrowtail="none" arrowhead = "open" headlabel="modModId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudMorasseMvmDet -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="modSmdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudMorasseMvmDet -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idMopMprId" taillabel="mprMopId" labeldistance="2.0" labelangle="-30"]
+
+BudMorasseOp -> BudMorassePres
+
+edge [arrowtail="none" arrowhead = "none" headlabel="mprPmprId" taillabel="0..n SMprs" labeldistance="2.0" labelangle="-30"]
+
+BudMorassePres -> BudMorassePres
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idMprMhcId" taillabel="mhcMprId" labeldistance="2.0" labelangle="-30"]
+
+BudMorassePres -> BudMprHasChp
+
+edge [arrowtail="none" arrowhead = "none" headlabel="mprSmdId" taillabel="0..n idSmdMprId" labeldistance="2.0" labelangle="-30"]
+
+BudMorassePres -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="pphArtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudParagraphe -> BudArticle
+
+edge [arrowtail="none" arrowhead = "open" headlabel="pphChpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudParagraphe -> BudChapitre
+
+edge [arrowtail="none" arrowhead = "open" headlabel="pphCfnId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudParagraphe -> BudCodeFnc
+
+edge [arrowtail="none" arrowhead = "open" headlabel="pphModId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudParagraphe -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "none" headlabel="pphPphId" taillabel="0..n idPphPphId" labeldistance="2.0" labelangle="-30"]
+
+BudParagraphe -> BudParagraphe
+
+edge [arrowtail="none" arrowhead = "none" headlabel="pphRegId" taillabel="0..n idRegPphId" labeldistance="2.0" labelangle="-30"]
+
+BudParagraphe -> BudRegion
+
+edge [arrowtail="none" arrowhead = "open" headlabel="regModId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudRegion -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="smlSmdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudSmdLog -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="smrMorId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudSsMorasse -> BudMorasse
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idSmrSmdId" taillabel="smdSmrId" labeldistance="2.0" labelangle="-30"]
+
+BudSsMorasse -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="smdModId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudSsMorasseDet -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="strTtrId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudSsTitre -> BudTitre
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudArticleService -> BudArticle
+BudArticleService -> BudArticleDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudChapitreService -> BudChapitre
+BudChapitreService -> BudChapitreDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudCodeEcoService -> BudCodeEco
+BudCodeEcoService -> BudCodeEcoDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudCodeFncService -> BudCodeFncDTO
+BudCodeFncService -> BudCodeFnc
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudDemModifService -> BudDemModifDTO
+BudDemModifService -> BudDemModif
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudDemModifMpresService -> BudDemModifMpresDTO
+BudDemModifMpresService -> BudDemModifMpres
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudDmpHasChpService -> BudDmpHasChp
+BudDmpHasChpService -> BudDmpHasChpDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudDemMvtService -> BudDemMvtDTO
+BudDemMvtService -> BudDemMvt
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudDemMvtDestService -> BudDemMvtDest
+BudDemMvtDestService -> BudDemMvtDestDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudDemMvtLogService -> BudDemMvtLogDTO
+BudDemMvtLogService -> BudDemMvtLog
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudDemMvtMemoService -> BudDemMvtMemo
+BudDemMvtMemoService -> BudDemMvtMemoDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudDemMvtMpresService -> BudDemMvtMpresDTO
+BudDemMvtMpresService -> BudDemMvtMpres
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudDmmHasChpService -> BudDmmHasChpDTO
+BudDmmHasChpService -> BudDmmHasChp
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudDemMvtSrcService -> BudDemMvtSrc
+BudDemMvtSrcService -> BudDemMvtSrcDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudDemPlanifService -> BudDemPlanifMpres
+BudDemPlanifService -> BudDemPlanif
+BudDemPlanifService -> BudDemPlanifNpres
+BudDemPlanifService -> BudDemMvt
+BudDemPlanifService -> BudDemPlanifDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudDemPlanifMpresService -> BudDemPlanifMpres
+BudDemPlanifMpresService -> BudDemPlanifMpresDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudDemPlanifMpresHasPexService -> BudDemPlanifMpresHasPex
+BudDemPlanifMpresHasPexService -> BudDemPlanifMpresHasPexDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudDemPlanifNpresService -> BudDemPlanifNpresDTO
+BudDemPlanifNpresService -> BudDemPlanifNpres
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudDemPlanifNpresHasPexService -> BudDemPlanifNpresHasPexDTO
+BudDemPlanifNpresHasPexService -> BudDemPlanifNpresHasPex
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudLigneService -> BudLigne
+BudLigneService -> BudLigneDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudMorasseService -> BudMorasse
+BudMorasseService -> BudMorasseDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudMorasseDetService -> BudMorasseDetDTO
+BudMorasseDetService -> BudMorasseDet
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudMorasseOpService -> BudMorasseOp
+BudMorasseOpService -> BudMorasseOpDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudMorassePresService -> BudMorassePresDTO
+BudMorassePresService -> BudMorassePres
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudMprHasChpService -> BudMprHasChpDTO
+BudMprHasChpService -> BudMprHasChp
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudParagrapheService -> BudParagraphe
+BudParagrapheService -> BudParagrapheDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudPartieService -> BudPartieDTO
+BudPartieService -> BudPartie
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudRegionService -> BudRegion
+BudRegionService -> BudRegionDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudSsMorasseService -> BudSsMorasse
+BudSsMorasseService -> BudSsMorasseDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudSsMorasseDetService -> BudSsMorasseDetDTO
+BudSsMorasseDetService -> BudSsMorasseDet
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudSmdLogService -> BudSmdLog
+BudSmdLogService -> BudSmdLogDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudSsTitreService -> BudSsTitre
+BudSsTitreService -> BudSsTitreDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudTitreService -> BudTitreDTO
+BudTitreService -> BudTitre
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudTypeVirService -> BudTypeVir
+BudTypeVirService -> BudTypeVirDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudMorasseMvmDetService -> BudMorasseMvmDetDTO
+BudMorasseMvmDetService -> BudMorasseMvmDet
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudMvtDecisionService -> BudMvtDecisionDTO
+BudMvtDecisionService -> BudMvtDecision
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+BudMvtStateService -> BudMvtState
+BudMvtStateService -> BudMvtStateDTO
+}

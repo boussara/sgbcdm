@@ -1,0 +1,2 @@
+/root/server/apache-tomcat-8.5.16/bin/shutdown.sh    arreter le serveur
+/root/server/apache-tomcat-8.5.16/bin/startup.sh     lancer le serveur

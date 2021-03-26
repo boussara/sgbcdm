@@ -1,0 +1,122 @@
+select distinct created_date from tec_attachement order by created_date;
+
+
+delete from tec_decision where ted_cdp_id in (select tat_id from tec_attachement where created_date < to_date('2019-02-05','YYYY-MM-DD'));
+delete from tec_state where tes_cdp_id in (select tat_id from tec_attachement where created_date < to_date('2019-02-05','YYYY-MM-DD'));
+delete from tec_nantissement where tna_att_id in (select tat_id from tec_attachement where created_date < to_date('2019-02-05','YYYY-MM-DD'));
+delete from tec_attachement where created_date < to_date('2019-02-05','YYYY-MM-DD');
+and tat_id not in (select trg_att_id from tec_retenue_garantie )
+and tat_id not in (select aae_att_id from ach_achat_exel);
+
+
+
+select * from cpt_depense where  cdp_id_dep='7';
+
+select b.cdp_id_dep,b.cnt from (select cdp_id_dep,count(*) as cnt from cpt_depense group by cdp_id_dep) b
+where b.cdp_id_dep is not null and  b.cdp_id_dep<>''
+order by b.cnt desc;
+
+select c.cdp_id_dep,c.cnt from (
+select cdp_id_dep,count(*) as cnt from cpt_depense b where cdp_id_dep is not null and cdp_id_dep<>'' and cdp_id not in (select max(cdp_id) from cpt_depense where 
+cdp_id_dep is not null and cdp_id_dep<>'' and cdp_id_dep=b.cdp_id_dep) group by cdp_id_dep) c
+order by c.cnt desc;
+
+delete from tec_etape;
+delete from tec_pv;
+delete from cpt_depense b where cdp_id_dep is not null and cdp_id_dep<>'' and cdp_id not in (select max(cdp_id) from cpt_depense where 
+cdp_id_dep is not null and cdp_id_dep<>'' and cdp_id_dep=b.cdp_id_dep);
+
+delete from tec_decision where ted_cdp_id in (select tat_id from tec_attachement  where tat_cdp_id in (select cdp_id from cpt_depense b where cdp_id_dep is not null and cdp_id_dep<>'' and cdp_id not in (select max(cdp_id) from cpt_depense where 
+cdp_id_dep is not null and cdp_id_dep<>'' and cdp_id_dep=b.cdp_id_dep)));
+delete from tec_state where tes_cdp_id in (select tat_id from tec_attachement  where tat_cdp_id in (select cdp_id from cpt_depense b where cdp_id_dep is not null and cdp_id_dep<>'' and cdp_id not in (select max(cdp_id) from cpt_depense where 
+cdp_id_dep is not null and cdp_id_dep<>'' and cdp_id_dep=b.cdp_id_dep)));
+delete from tec_attachement  where tat_cdp_id in (select cdp_id from cpt_depense b where cdp_id_dep is not null and cdp_id_dep<>'' and cdp_id not in (select max(cdp_id) from cpt_depense where 
+cdp_id_dep is not null and cdp_id_dep<>'' and cdp_id_dep=b.cdp_id_dep));
+
+
+
+
+
+psql -h 192.168.1.20 -p 5432 -U postgres -d asd -f "/root/server/asd_19_02_2019.sql"
+
+
+pg_dump -U sgbcdm -h localhost -d s17 -F p -f /root/server/test_19022019.sql --inserts --column-inserts
+
+
+999
+99
+999
+999
+999
+999
+
+psql -h localhost -p 5432 -U postgres -d habous -f "E:\Old_habous_21-02-2019\sgbcdm-asd-20-02-2019.sql"
+
+psql -h localhost -p 5432 -U postgres -d sgbcdm2019 -f "F:\habous_25-02-2019\sgbcdm-asd-22-02-2019.sql"
+
+
+
+psql -h localhost -p 5432 -U postgres -d sgbcdm2019_2 -f "F:\sgbcdm2019.sql"
+
+
+pg_dump -U postgres -h localhost -d habous29102019 -F p -f "C:\Users\E330\Desktop\temp\tmmp\habous29102019.sql" --inserts --column-inserts
+
+pg_dump -U postgres -h localhost -d habous29122019 -F p -f "C:\Users\E330\Desktop\temp\tmmp\habous31122019.sql" --inserts --column-inserts
+
+pg_dump -U postgres -h localhost -d habous29122019 -F p -f "C:\Users\E330\Desktop\temp\habous01012020.sql" --inserts --column-inserts
+
+
+psql -h localhost -p 5432 -U postgres -d habous14012020 -f "C:\Users\E330\Desktop\Habous\habous14012020.sql"
+
+pg_dump -U postgres -h localhost -d habous83 -F p -f "C:\Users\E330\Desktop\temp\habous21012020.sql" --inserts --column-inserts
+
+
+
+psql -h 192.168.1.20 -p 5432 -U postgres -d sgbcdm2020 -f "/root/server/habous21012020.sql"
+
+pg_dump -U postgres -h localhost -d habous84 -F p -f "C:\Users\E330\Desktop\temp\habous05022020.sql" --inserts --column-inserts
+
+
+
+pg_dump -U postgres -h localhost -d sgbcdm022020FromServer -F p -f "C:\Users\E330\Desktop\temp\sgbcdm24022020.sql" --inserts --column-inserts
+
+
+
+pg_dump -U postgres -h localhost -d habous85 -F p -f "C:\Users\E330\Desktop\temp\habous85_26032020.sql" --inserts --column-inserts
+
+
+
+pg_dump -U postgres -h localhost -d habous85 -F p -f "C:\Users\E330\Desktop\temp\habous85_28042020.sql" --inserts --column-inserts
+
+
+pg_dump -U sgbcdm -h 192.168.1.20 -d sgbcdm28042020 -F p -f "/root/server/habous03052020.sql"  --inserts --column-inserts
+
+
+psql -h localhost -p 5432 -U postgres -d habous03052020 -f "C:\Users\E330\Desktop\temp\habous03052020.sql"
+
+
+psql -h localhost -p 5432 -U postgres -d test_habous7_14052020 -f "C:\Users\E330\Desktop\Habous\test\test_habous7_14052020.sql"
+
+pg_dump -U postgres -h localhost -d test_habous7_14052020 -F p -f "C:\Users\E330\Desktop\temp\habous7_14052020.sql" --inserts --column-inserts
+
+
+pg_dump -U postgres -h localhost -d habous15072020 -F p -f "C:\Users\E330\Desktop\Habous\15-07-2020\habous15072020_2.sql" --inserts --column-inserts
+
+pg_dump -U postgres -h localhost -d habous77 -F p -f "C:\Users\E330\Desktop\Habous\habous21102020.sql" --inserts --column-inserts
+
+pg_dump -U postgres -h localhost -d habous80 -F p -f "C:\Users\E330\Desktop\Habous\habous05112020.sql" --inserts --column-inserts
+
+
+pg_dump -U postgres -h localhost -d prod30112020 -F p -f "C:\Users\E330\Desktop\Habous\prod30112020_15122020.sql" --inserts --column-inserts
+
+pg_dump -U postgres -h localhost -d prod30112020 -F p -f "C:\Users\E330\Desktop\Habous\prod30112020_18122020.sql" --inserts --column-inserts
+
+pg_dump -U postgres -h localhost -d prod30112020 -F p -f "C:\Users\E330\Desktop\Habous\prod30112020_20122020.sql" --inserts --column-inserts
+
+pg_dump -U postgres -h localhost -d prod30112020 -F p -f "C:\Users\E330\Desktop\Habous\prod30112020_02022020.sql" --inserts --column-inserts
+
+
+pg_dump -U postgres -h localhost -d habous05012021 -F p -f "C:\Users\E330\Desktop\Habous\habous05012021.sql" --inserts --column-inserts
+
+
+pg_dump -U postgres -h localhost -d prod25022021 -F p -f "C:\Users\E330\Desktop\Habous\prod01032021.sql" --inserts --column-inserts

@@ -1,0 +1,2 @@
+select * from MON_ISSUE monissue0_ 
+where monissue0_.ISS_NE_ID=234055 and monissue0_.ISS_STATUS='A' limit 7

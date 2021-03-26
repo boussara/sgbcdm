@@ -1,0 +1,222 @@
+ALTER TABLE tec_attachement ADD COLUMN tat_cat_id BIGINT;
+
+-- Reference from TecAttachement.tatCatId to TecCatIndex
+ALTER TABLE tec_attachement ADD CONSTRAINT FK_tec_attachement_tat_cat_id
+	FOREIGN KEY (tat_cat_id) REFERENCES tec_cat_index (tci_id);
+CREATE INDEX IX_tec_attachement_tat_cat_id ON tec_attachement (tat_cat_id);
+
+
+update tec_attachement set tat_cat_id=29539;
+
+http://localhost:8484/sgbcdm-web/rest/tecresources/tecCatIndex/29322
+
+
+select *
+from pla_credit_prj_reg placreditp0_ 
+cross join pla_plan plaplan1_ 
+cross join par_exercice parexercic2_ 
+cross join pla_budget_type plabudgett3_ 
+cross join pla_project plaproject4_ 
+cross join pla_credit_prg placreditp5_ 
+cross join pla_program plaprogram6_ 
+cross join par_exercice parexercic8_ 
+cross join pla_budget_type plabudgett10_ 
+cross join pla_plan plaplan12_ 
+cross join pla_credit_prj placreditp13_ 
+cross join pla_project plaproject14_ 
+cross join pla_plan plaplan16_ 
+cross join par_exercice parexercic18_ 
+cross join pla_budget_type plabudgett20_ 
+cross join par_region parregion21_ 
+where placreditp0_.crp_pla_id=plaplan1_.pla_id 
+and placreditp0_.crp_pex_id=parexercic2_.pex_id 
+and placreditp0_.crp_bdt_id=plabudgett3_.bdt_id 
+and placreditp0_.crp_prj_id=plaproject4_.prj_id 
+and placreditp0_.crp_cpg_id=placreditp5_.cpg_id 
+and placreditp5_.cpg_prg_id=plaprogram6_.prg_id 
+and placreditp5_.cpg_pex_id=parexercic8_.pex_id 
+and placreditp5_.cpg_bdt_id=plabudgett10_.bdt_id 
+and placreditp5_.cpg_pla_id=plaplan12_.pla_id 
+and placreditp0_.crp_cpj_id=placreditp13_.cpj_id 
+and placreditp13_.cpj_prj_id=plaproject14_.prj_id 
+and placreditp13_.cpj_pla_id=plaplan16_.pla_id 
+and placreditp13_.cpj_pex_id=parexercic18_.pex_id 
+and placreditp13_.cpj_bdt_id=plabudgett20_.bdt_id 
+and placreditp0_.crp_reg_id=parregion21_.reg_id 
+and plaplan1_.pla_code='PL3' 
+and parexercic2_.pex_code='2019' 
+and plabudgett3_.bdt_code='BG' 
+and plaproject4_.prj_code='SPA11' 
+and plaprogram6_.prg_code='PR1' 
+and parexercic8_.pex_code='2019' 
+and plabudgett10_.bdt_code='BG' 
+and plaplan12_.pla_code='PL3' 
+and plaproject14_.prj_code='SPA11' 
+and plaplan16_.pla_code='PL3' 
+and parexercic18_.pex_code='2019' 
+and plabudgett20_.bdt_code='BG' 
+and parregion21_.reg_code='R1'
+
+select *
+from pla_credit_prj_reg placreditp0_ cross join pla_plan plaplan1_ cross join par_exercice parexercic2_ cross join pla_budget_type plabudgett3_ cross join pla_project plaproject4_ cross join pla_credit_prg placreditp5_ cross join pla_program plaprogram6_ cross join par_exercice parexercic8_ cross join pla_budget_type plabudgett10_ cross join pla_plan plaplan12_ cross join pla_credit_prj placreditp13_ cross join pla_project plaproject14_ cross join pla_plan plaplan16_ cross join par_exercice parexercic18_ cross join pla_budget_type plabudgett20_ cross join par_region parregion21_ where placreditp0_.crp_pla_id=plaplan1_.pla_id and placreditp0_.crp_pex_id=parexercic2_.pex_id and placreditp0_.crp_bdt_id=plabudgett3_.bdt_id and placreditp0_.crp_prj_id=plaproject4_.prj_id and placreditp0_.crp_cpg_id=placreditp5_.cpg_id and placreditp5_.cpg_prg_id=plaprogram6_.prg_id and placreditp5_.cpg_pex_id=parexercic8_.pex_id and placreditp5_.cpg_bdt_id=plabudgett10_.bdt_id and placreditp5_.cpg_pla_id=plaplan12_.pla_id and placreditp0_.crp_cpj_id=placreditp13_.cpj_id and placreditp13_.cpj_prj_id=plaproject14_.prj_id and placreditp13_.cpj_pla_id=plaplan16_.pla_id and placreditp13_.cpj_pex_id=parexercic18_.pex_id and placreditp13_.cpj_bdt_id=plabudgett20_.bdt_id and placreditp0_.crp_reg_id=parregion21_.reg_id and plaplan1_.pla_code='PL3' and parexercic2_.pex_code='2019' and plabudgett3_.bdt_code='BG' and plaproject4_.prj_code='SPA11' and plaprogram6_.prg_code='PR1' and parexercic8_.pex_code='2019' and plabudgett10_.bdt_code='BG' and plaplan12_.pla_code='PL3' and plaproject14_.prj_code='SPA11' and plaplan16_.pla_code='PL3' and parexercic18_.pex_code='2019' and plabudgett20_.bdt_code='BG' and parregion21_.reg_code='R2'
+
+
+select * 
+from pla_credit_op placredito0_ where placredito0_.cop_code='OP1' and placredito0_.cop_crp_id=165943
+
+delete from bud_mpr_has_chp  where mhc_mpr_id in (select mpr_id from bud_morasse_pres where mpr_mod_id in (select mod_id from bud_morasse_det where mod_mor_id=69474));
+delete from bud_morasse_pres where mpr_mod_id in (select mod_id from bud_morasse_det where mod_mor_id=69474);
+
+delete from bud_morasse_op where mop_mod_id in (select mod_id from bud_morasse_det where mod_mor_id=69474);
+
+delete from bud_morasse_pres where mpr_mop_id in (select mop_id from bud_morasse_op where mop_mod_id in (select mod_id from bud_morasse_det where mod_mor_id=69474));
+
+delete from bud_mpr_has_chp  where mhc_mpr_id in (select mpr_id from bud_morasse_pres where mpr_mop_id in (select mop_id from bud_morasse_op where mop_mod_id in (select mod_id from bud_morasse_det where mod_mor_id=69474)));
+
+
+
+
+update bud_morasse_det set mod_credit_cp=0.0,mod_credit_ce=0.0;
+
+
+select * 
+from bud_morasse_pres budmorasse0_ cross join bud_morasse_op budmorasse1_ 
+where budmorasse0_.mpr_mop_id=budmorasse1_.mop_id and budmorasse1_.mop_cop_id=170202 and budmorasse0_.mpr_cpr_id=172387
+
+
+update bud_morasse_det set mod_region=substring(mod_order::varchar(255),4,2)::int8 where mod_row_type='L';
+update bud_morasse_det set mod_region=substring(mod_order::varchar(255),4,2)::int8 where mod_row_type='P';
+
+
+
+select * 
+from bud_morasse_op
+where mop_id=234409
+
+
+select * 
+from bud_morasse_pres budmorasse0_ 
+where budmorasse0_.mpr_mop_id=234409;budmorasse1_.mop_id and budmorasse1_.mop_cop_id=170165 and budmorasse0_.mpr_cpr_id=171817
+
+
+
+
+
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197743, 'DEP AZILAL', '', 'A', 'admin', '2019-06-18 18:13:07.541', '2019-06-18 18:13:07.541', 'admin', 2, 69178, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197212, 'DEP EL HOCIEMA', 'DEP EL HOCIEMA', 'A', 'admin', '2019-06-17 23:36:19.493', '2019-06-17 23:36:19.493', 'admin', 2, 69151, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197213, 'DEP LARACH', 'DEP LARACH', 'A', 'admin', '2019-06-17 23:38:12.333', '2019-06-17 23:38:12.333', 'admin', 2, 69151, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197214, 'DEP FEHS ANJRA', 'DEP FEHS ANJRA', 'A', 'admin', '2019-06-17 23:40:04.259', '2019-06-17 23:40:04.259', 'admin', 2, 69151, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197744, 'DEP FQIH BEN SALEH', '', 'A', 'admin', '2019-06-18 18:14:40.828', '2019-06-18 18:14:40.828', 'admin', 2, 69178, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197215, 'DEP CHEFCHAOUN', 'DEP CHEFCHAOUN', 'A', 'admin', '2019-06-17 23:41:02.076', '2019-06-17 23:41:02.076', 'admin', 2, 69151, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197216, 'DEP M''DIQ FNIDEQ', 'DEP M''DIQ FNIDEQ', 'A', 'admin', '2019-06-17 23:42:33.778', '2019-06-17 23:42:33.778', 'admin', 2, 69151, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197217, 'DEP TETOUAN', 'DEP TETOUAN', 'A', 'admin', '2019-06-17 23:43:57.194', '2019-06-17 23:43:57.194', 'admin', 2, 69151, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197745, 'DEP KHENIFRA', '', 'A', 'admin', '2019-06-18 18:15:25.497', '2019-06-18 18:15:25.497', 'admin', 2, 69178, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197218, 'DEP TANGER', 'DEP TANGER', 'A', 'admin', '2019-06-17 23:44:55.357', '2019-06-17 23:44:55.357', 'admin', 2, 69151, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197219, 'DEP OUAZZANE', 'DEP OUAZZANE', 'A', 'admin', '2019-06-18 00:51:41.093', '2019-06-18 00:51:41.093', 'admin', 2, 69151, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (199052, 'DEP ESSAOUIRA', '', 'A', 'admin', '2019-06-19 13:53:44.463', '2019-06-19 13:53:44.463', 'admin', 2, 69191, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197220, 'Oussama', 'Chkokot', 'A', 'admin', '2019-06-18 00:53:34.293', '2019-06-18 00:53:34.293', 'admin', 2, 6446, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197249, 'DEP ES SEMARA', '', 'A', 'admin', '2019-06-18 15:06:23.967', '2019-06-18 15:06:23.967', 'admin', 2, 69220, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197284, 'DEP SIDI IFNI', '', 'A', 'admin', '2019-06-18 17:20:16.458', '2019-06-18 17:20:16.458', 'admin', 2, 69211, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197285, 'DEP TIZNIT', '', 'A', 'admin', '2019-06-18 17:21:10.222', '2019-06-18 17:21:10.222', 'admin', 2, 69211, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197747, 'DEP OUJDA', '', 'A', 'admin', '2019-06-19 10:32:09.64', '2019-06-19 10:32:09.64', 'admin', 2, 69156, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197286, 'DEP GUELMIM', '', 'A', 'admin', '2019-06-18 17:22:13.331', '2019-06-18 17:22:13.331', 'admin', 2, 69211, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197287, 'DEP ASSA ZAG', '', 'A', 'admin', '2019-06-18 17:23:00.209', '2019-06-18 17:23:00.209', 'admin', 2, 69211, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (199053, 'DEP BENGRIR', '', 'A', 'admin', '2019-06-19 13:54:35.231', '2019-06-19 13:54:35.231', 'admin', 2, 69191, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197748, 'DEP NADOR', '', 'A', 'admin', '2019-06-19 10:33:46.946', '2019-06-19 10:33:46.946', 'admin', 2, 69156, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (199059, 'DEP EL HAOUZ', '', 'A', 'admin', '2019-06-19 14:00:50.428', '2019-06-19 14:00:50.428', 'admin', 2, 69191, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197749, 'DEP JERADA', '', 'A', 'admin', '2019-06-19 10:34:32.231', '2019-06-19 10:34:32.231', 'admin', 2, 69156, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (199054, 'DEP MARRAKECH', '', 'A', 'admin', '2019-06-19 13:55:32.356', '2019-06-19 13:55:32.356', 'admin', 2, 69191, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197750, 'DEP FIGUIG', '', 'A', 'admin', '2019-06-19 10:35:10.78', '2019-06-19 10:35:10.78', 'admin', 2, 69156, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (197751, 'DEP GUERCIF', '', 'A', 'admin', '2019-06-19 10:35:55.506', '2019-06-19 10:35:55.506', 'admin', 2, 69156, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (199055, 'DEP KELAAT SRAGHNA', '', 'A', 'admin', '2019-06-19 13:56:17.143', '2019-06-19 13:56:17.143', 'admin', 2, 69191, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (199051, 'DEP CHICHAOUA', '', 'A', 'admin', '2019-06-19 13:52:53.408', '2019-06-19 13:52:53.408', 'admin', 2, 69191, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (199060, 'DEP SAFI', '', 'A', 'admin', '2019-06-19 14:01:45.323', '2019-06-19 14:01:45.323', 'admin', 2, 69191, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (199057, 'DEP YOUSSOUFIA', '', 'A', 'admin', '2019-06-19 13:58:12.095', '2019-06-19 13:58:12.095', 'admin', 2, 69191, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (199058, 'DEP RHAMNA', '', 'A', 'admin', '2019-06-19 14:00:00.166', '2019-06-19 14:00:00.166', 'admin', 2, 69191, 120);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (210982, 'DRAI', 'FES MEKNES', 'A', 'admin', '2019-07-09 18:06:33.394', '2019-07-09 18:06:33.394', 'admin', 0, 69163, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (210984, 'DRAI', 'BENI MELLAL KHENIFRA', 'A', 'admin', '2019-07-09 18:21:13.215', '2019-07-09 18:21:13.215', 'admin', 0, 69178, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (210986, 'DRAI', 'CASABLANCA SETTAT', 'A', 'admin', '2019-07-09 18:29:01.424', '2019-07-09 18:29:01.424', 'admin', 0, 69183, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (210988, 'DRAI', 'MARRAKECH SAFI', 'A', 'admin', '2019-07-09 18:32:40.788', '2019-07-09 18:32:40.788', 'admin', 0, 69191, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (210990, 'DRAI', 'DRAA TAFILALET', 'A', 'admin', '2019-07-09 18:39:23.971', '2019-07-09 18:39:23.971', 'admin', 0, 69199, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (210992, 'DRAI', 'GULEMIM OUED NOUN', 'A', 'admin', '2019-07-09 18:43:47.785', '2019-07-09 18:43:47.785', 'admin', 0, 69211, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (210994, 'DRAI', 'LAAYOUNE SAKIA EL HAMRA', 'A', 'admin', '2019-07-09 18:47:16.327', '2019-07-09 18:47:16.327', 'admin', 0, 69216, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (210998, 'DEP MOULAY YACOUB', '', 'A', 'admin', '2019-07-10 10:32:21.414', '2019-07-10 10:32:21.414', 'admin', 2, 69163, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (210995, 'DEP TAZA', '', 'A', 'admin', '2019-07-10 10:25:06.718', '2019-07-10 10:25:06.718', 'admin', 2, 69149, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (210997, 'DEP SEFROU', '', 'A', 'admin', '2019-07-10 10:28:59.118', '2019-07-10 10:28:59.118', 'admin', 2, 69163, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (210999, 'DEP MEKNES', '', 'A', 'admin', '2019-07-10 10:36:58.635', '2019-07-10 10:36:58.635', 'admin', 2, 69163, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (210996, 'DEP TAOUNATE', '', 'A', 'admin', '2019-07-10 10:35:02.592', '2019-07-10 10:35:02.592', 'admin', 4, 69149, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211000, 'DEP IFRANE', '', 'A', 'admin', '2019-07-10 10:40:06.069', '2019-07-10 10:40:06.069', 'admin', 2, 69163, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211001, 'DEP FES', '', 'A', 'admin', '2019-07-10 10:41:33.589', '2019-07-10 10:41:33.589', 'admin', 2, 69163, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (297454, 'DRAI', 'RABAT SALE KENITRA', 'A', 'admin', '2019-07-10 10:45:29.018', '2019-07-10 10:45:29.018', 'admin', 5, 69172, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211002, 'DEP BOULMANE', '', 'A', 'admin', '2019-07-10 10:43:41.577', '2019-07-10 10:43:41.577', 'admin', 2, 69163, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211003, 'dm1', 'dm1 central', 'A', 'admin', '2019-07-10 10:46:08.051', '2019-07-10 10:46:08.051', 'admin', 0, 69163, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211004, 'DEP KENITRA', '', 'A', 'admin', '2019-07-10 10:49:27.466', '2019-07-10 10:49:27.466', 'admin', 2, 69172, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211005, 'DEP KHEMISSET', '', 'A', 'admin', '2019-07-10 10:50:46.356', '2019-07-10 10:50:46.356', 'admin', 2, 69172, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211006, 'DEP SIDI KACEM', '', 'A', 'admin', '2019-07-10 10:52:56.152', '2019-07-10 10:52:56.152', 'admin', 2, 69172, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211007, 'DEP SIDI SLIMANE', '', 'A', 'admin', '2019-07-10 10:54:02.255', '2019-07-10 10:54:02.255', 'admin', 2, 69172, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211008, 'DEP TEMARA', '', 'A', 'admin', '2019-07-10 10:55:49.71', '2019-07-10 10:55:49.71', 'admin', 2, 69172, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211009, 'DEP EL JADIDA', '', 'A', 'admin', '2019-07-10 11:04:51.926', '2019-07-10 11:04:51.926', 'admin', 2, 69183, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211030, 'DEP INZGANE AIT MELLOUL', '', 'A', 'admin', '2019-07-10 12:11:55.053', '2019-07-10 12:11:55.053', 'admin', 2, 69205, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211010, 'DEP AIN SBAA', '', 'A', 'admin', '2019-07-10 11:05:57.929', '2019-07-10 11:05:57.929', 'admin', 2, 69183, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211011, 'DEP CASABLANCA', '', 'A', 'admin', '2019-07-10 11:07:29.251', '2019-07-10 11:07:29.251', 'admin', 2, 69183, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211012, 'DEP NOUACEUR', '', 'A', 'admin', '2019-07-10 11:08:28.86', '2019-07-10 11:08:28.86', 'admin', 2, 69183, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211031, 'DEP SOUSS', '', 'A', 'admin', '2019-07-10 12:16:50.155', '2019-07-10 12:16:50.155', 'admin', 2, 69205, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211013, 'DEP BERCHID', '', 'A', 'admin', '2019-07-10 11:09:25.265', '2019-07-10 11:09:25.265', 'admin', 2, 69183, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211014, 'DEP SIDI BNOUR', '', 'A', 'admin', '2019-07-10 11:11:13.645', '2019-07-10 11:11:13.645', 'admin', 2, 69183, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211015, 'DEP MOHAMMEDIA', '', 'A', 'admin', '2019-07-10 11:12:11.556', '2019-07-10 11:12:11.556', 'admin', 2, 69183, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211016, 'DEP MERS SULTAN', '', 'A', 'admin', '2019-07-10 11:13:07.162', '2019-07-10 11:13:07.162', 'admin', 2, 69183, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211017, 'DEP SETTAT', '', 'A', 'admin', '2019-07-10 11:14:01.812', '2019-07-10 11:14:01.812', 'admin', 2, 69183, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211018, 'DEP BEN MSIK', '', 'A', 'admin', '2019-07-10 11:15:09.561', '2019-07-10 11:15:09.561', 'admin', 2, 69183, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211019, 'DEP BENSLIMANE', '', 'A', 'admin', '2019-07-10 11:16:02.918', '2019-07-10 11:16:02.918', 'admin', 2, 69183, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211020, 'DEP TINGHIR', '', 'A', 'admin', '2019-07-10 11:19:43.738', '2019-07-10 11:19:43.738', 'admin', 2, 69199, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211021, 'DEP MIDELT', '', 'A', 'admin', '2019-07-10 11:21:03.816', '2019-07-10 11:21:03.816', 'admin', 2, 69199, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211022, 'DEP ERRACHIDIA', '', 'A', 'admin', '2019-07-10 11:23:00.221', '2019-07-10 11:23:00.221', 'admin', 2, 69199, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211023, 'DEP ZAGORA', '', 'A', 'admin', '2019-07-10 11:24:31.606', '2019-07-10 11:24:31.606', 'admin', 2, 69199, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211024, 'DEP OUARZAZATE', '', 'A', 'admin', '2019-07-10 11:26:06.496', '2019-07-10 11:26:06.496', 'admin', 2, 69199, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211025, 'DEP TAROUDANT', '', 'A', 'admin', '2019-07-10 11:28:06.315', '2019-07-10 11:28:06.315', 'admin', 2, 69199, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211026, 'DEP TATA', '', 'A', 'admin', '2019-07-10 11:30:19.676', '2019-07-10 11:30:19.676', 'admin', 2, 69205, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211027, 'DEP CHTOUKA AIT BAHA', '', 'A', 'admin', '2019-07-10 11:31:26.886', '2019-07-10 11:31:26.886', 'admin', 2, 69205, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211028, 'DEP AIT BAHA', '', 'A', 'admin', '2019-07-10 11:32:36.666', '2019-07-10 11:32:36.666', 'admin', 2, 69205, 99619);
+INSERT INTO public.par_agent_exe (aex_id, aex_nom, aex_prenom, aex_status, created_by, created_date, last_updated, last_updated_by, version, aex_ord_id, aex_usa_id) VALUES (211029, 'DEP AGADIR', '', 'A', 'admin', '2019-07-10 12:02:21.29', '2019-07-10 12:02:21.29', 'admin', 2, 69205, 99619);
+
+
+
+
+delete from bud_morasse_op where mop_mod_id in (select mod_id from bud_morasse_det where mod_mor_id=69474);
+
+delete from bud_morasse_pres where mpr_mop_id in (select mop_id from bud_morasse_op where mop_mod_id in (select mod_id from bud_morasse_det where mod_mor_id=69474));
+
+delete from bud_mpr_has_chp  where mhc_mpr_id in (select mpr_id from bud_morasse_pres where mpr_mop_id in (select mop_id from bud_morasse_op where mop_smd_id in (select smd_id from bud_ss_morasse_det where smd_mor_id=69474)));
+
+
+
+delete from ach_achat where ach_pex_id=19;
+delete from ach_achat_lot where alo_ach_id in (select ach_id from ach_achat where ach_pex_id=19);
+delete from ach_achat_exel where aae_alo_id in (select alo_id from ach_achat_lot where alo_ach_id in (select ach_id from ach_achat where ach_pex_id=19));
+
+update cpt_depense set cdp_alo_id=null;
+
+update ach_achat set ach_adc_id=null;
+
+delete from ach_achat where ach_pex_id=19;
+delete from ach_achat_state where ast_ach_id in (select ach_id from ach_achat where ach_pex_id=19);
+delete from ach_achat_decision  where adc_ach_id in (select ach_id from ach_achat where ach_pex_id=19);
+delete from ach_soumission where aso_ach_id in (select ach_id from ach_achat where ach_pex_id=19);
+delete from ach_commission where aco_ach_id in (select ach_id from ach_achat where ach_pex_id=19);
+delete from ach_has_acm where ahm_aco_id in (select aco_id from ach_commission where aco_ach_id in (select ach_id from ach_achat where ach_pex_id=19));
+delete from ach_dem_pub where adp_ach_id in (select ach_id from ach_achat where ach_pex_id=19);
+delete from ach_publication where apb_adp_id in (select adp_id from ach_dem_pub where adp_ach_id in (select ach_id from ach_achat where ach_pex_id=19));
+
+delete from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_pex_id=19);
+delete from cpt_dep_state where cds_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_pex_id=19));
+delete from cpt_dep_decision where cdd_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_pex_id=19));
+delete from cpt_ordre_service where cos_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_pex_id=19));
+delete from tec_pv where tpv_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_pex_id=19));
+delete from tec_etape where tet_etp_id in (select tpv_id from tec_pv where tpv_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_pex_id=19)));
+
+delete from tec_attachement where tat_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_pex_id=19));
+delete from tec_decision where ted_cdp_id in (select tat_id  from tec_attachement where tat_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_pex_id=19)));
+delete from tec_state  where tes_cdp_id in (select tat_id  from tec_attachement where tat_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_pex_id=19)));
+delete from tec_cal_rev where tcr_att_id in (select tat_id  from tec_attachement where tat_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_pex_id=19)));
+delete from tec_nantissement where tna_att_id in (select tat_id  from tec_attachement where tat_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_pex_id=19)));
+delete from tec_penalite_retard where tpr_att_id in (select tat_id  from tec_attachement where tat_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_pex_id=19)));

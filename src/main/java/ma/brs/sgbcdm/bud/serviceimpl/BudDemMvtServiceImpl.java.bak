@@ -1,0 +1,121 @@
+package ma.brs.sgbcdm.bud.serviceimpl;
+
+import ma.brs.sgbcdm.ach.domain.AchAchat;
+import ma.brs.sgbcdm.bud.domain.BudDemMvt;
+import ma.brs.sgbcdm.bud.domain.BudDemMvtProperties;
+import ma.brs.sgbcdm.bud.serviceapi.BudDemMvtCts;
+import ma.brs.sgbcdm.bud.serviceapi.BudDemMvtDTO;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.sculptor.framework.accessapi.ConditionalCriteria;
+import org.sculptor.framework.context.ServiceContext;
+import org.sculptor.framework.domain.LeafProperty;
+import org.sculptor.framework.domain.PagedResult;
+import org.sculptor.framework.domain.PagingParameter;
+import org.sculptor.framework.errorhandling.ApplicationException;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+/**
+ * Implementation of BudDemMvtService.
+ */
+@Service("budDemMvtService")
+public class BudDemMvtServiceImpl extends BudDemMvtServiceImplBase {
+
+	private static final Logger logger = Logger.getLogger(BudDemMvtServiceImpl.class);
+
+	public BudDemMvtServiceImpl() {
+	}
+
+	@Transactional(readOnly = true)
+	public PagedResult<BudDemMvt> getAllVir(ServiceContext ctx, PagingParameter pagingParameter) {
+
+		ConditionalCriteria conditionalCriteria =ConditionalCriteria.equal(BudDemMvtProperties.dmvType(), BudDemMvtCts.VIREMENT);
+				
+		List<ConditionalCriteria> conditions = new ArrayList<ConditionalCriteria>();
+		conditions.add(conditionalCriteria);
+		conditions.add(ConditionalCriteria.orderAsc(new LeafProperty<BudDemMvt>("dmvDate", BudDemMvt.class)));
+		
+		PagedResult<BudDemMvt> res=getBudDemMvtRepository().findByCondition(conditions, pagingParameter);
+		
+		return res;
+	}
+
+	@Transactional(readOnly = true)
+	public PagedResult<BudDemMvt> getAllDeleg(ServiceContext ctx, PagingParameter pagingParameter) {
+
+		ConditionalCriteria conditionalCriteria =ConditionalCriteria.equal(BudDemMvtProperties.dmvType(), BudDemMvtCts.DELEGATION);
+				
+		List<ConditionalCriteria> conditions = new ArrayList<ConditionalCriteria>();
+		conditions.add(conditionalCriteria);
+		conditions.add(ConditionalCriteria.orderAsc(new LeafProperty<BudDemMvt>("dmvDate", BudDemMvt.class)));
+		
+		PagedResult<BudDemMvt> res=getBudDemMvtRepository().findByCondition(conditions, pagingParameter);
+		
+		return res;
+	}
+
+	@Transactional(readOnly = true)
+	public PagedResult<BudDemMvt> getAllReduc(ServiceContext ctx, PagingParameter pagingParameter) {
+
+		ConditionalCriteria conditionalCriteria =ConditionalCriteria.equal(BudDemMvtProperties.dmvType(), BudDemMvtCts.REDUCTION);
+				
+		List<ConditionalCriteria> conditions = new ArrayList<ConditionalCriteria>();
+		conditions.add(conditionalCriteria);
+		conditions.add(ConditionalCriteria.orderAsc(new LeafProperty<BudDemMvt>("dmvDate", BudDemMvt.class)));
+		
+		PagedResult<BudDemMvt> res=getBudDemMvtRepository().findByCondition(conditions, pagingParameter);
+		
+		return res;
+	}
+
+	@Transactional(readOnly = false, rollbackFor = ApplicationException.class)
+	public PagedResult<BudDemMvt> filterVir(ServiceContext ctx, BudDemMvtDTO aua, PagingParameter pagingParameter) {
+		
+		ConditionalCriteria conditionalCriteria =ConditionalCriteria.equal(BudDemMvtProperties.dmvType(), BudDemMvtCts.VIREMENT);
+				
+				
+		List<ConditionalCriteria> conditions = new ArrayList<ConditionalCriteria>();
+		conditions.add(conditionalCriteria);
+		conditions.addAll(prepareCondition(aua));
+		conditions.add(ConditionalCriteria.orderAsc(new LeafProperty<BudDemMvt>("dmvDate", BudDemMvt.class)));
+		PagedResult<BudDemMvt> res=getBudDemMvtRepository().findByCondition(conditions, pagingParameter);
+		
+		return res;
+		
+	}
+
+	@Transactional(readOnly = false, rollbackFor = ApplicationException.class)
+	public PagedResult<BudDemMvt> filterDeleg(ServiceContext ctx, BudDemMvtDTO aua, PagingParameter pagingParameter) {
+
+		ConditionalCriteria conditionalCriteria =ConditionalCriteria.equal(BudDemMvtProperties.dmvType(), BudDemMvtCts.DELEGATION);
+				
+				
+		List<ConditionalCriteria> conditions = new ArrayList<ConditionalCriteria>();
+		conditions.add(conditionalCriteria);
+		conditions.addAll(prepareCondition(aua));
+		conditions.add(ConditionalCriteria.orderAsc(new LeafProperty<BudDemMvt>("dmvDate", BudDemMvt.class)));
+		PagedResult<BudDemMvt> res=getBudDemMvtRepository().findByCondition(conditions, pagingParameter);
+		
+		return res;
+	}
+
+	@Transactional(readOnly = false, rollbackFor = ApplicationException.class)
+	public PagedResult<BudDemMvt> filterReduc(ServiceContext ctx, BudDemMvtDTO aua, PagingParameter pagingParameter) {
+
+		ConditionalCriteria conditionalCriteria =ConditionalCriteria.equal(BudDemMvtProperties.dmvType(), BudDemMvtCts.REDUCTION);
+				
+				
+		List<ConditionalCriteria> conditions = new ArrayList<ConditionalCriteria>();
+		conditions.add(conditionalCriteria);
+		conditions.addAll(prepareCondition(aua));
+		conditions.add(ConditionalCriteria.orderAsc(new LeafProperty<BudDemMvt>("dmvDate", BudDemMvt.class)));
+		PagedResult<BudDemMvt> res=getBudDemMvtRepository().findByCondition(conditions, pagingParameter);
+		
+		return res;
+	}
+
+}

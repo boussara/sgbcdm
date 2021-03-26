@@ -1,0 +1,1244 @@
+digraph G {
+	fontsize = 10
+	node [
+		fontsize = 10
+		fontname="arial"
+		shape=plaintext
+	]
+
+	edge [
+		fontsize = 10
+	]
+subgraph clusterpar {
+	label = "par"  
+	ParAgentExeService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParAgentExeService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByUserId</td></tr>			
+	<tr><td align="left">findByNum</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommanditaireService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommanditaireService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommuneAncService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommuneAncService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByComPrvId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommuneOldService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommuneOldService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByComPrvId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommuneService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommuneService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByComPrvId</td></tr>			
+	<tr><td align="left">findByStatus</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParConventionService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParConventionService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParExerciceService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParExerciceService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByCode</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParOrdonateurService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParOrdonateurService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByUserId</td></tr>			
+	<tr><td align="left">findByNum</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParProvinceAncService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParProvinceAncService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByPrvRegId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParProvinceOldService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParProvinceOldService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByPrvRegId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParProvinceService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParProvinceService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByPrvRegId</td></tr>			
+	<tr><td align="left">findByStatus</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParRegionAncService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParRegionAncService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParRegionOldService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParRegionOldService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParRegionService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParRegionService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByStatus</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParTypeBenifService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParTypeBenifService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByBenCode</td></tr>			
+	<tr><td align="left">findByBenName</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParAgentExe [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParAgentExe </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aexNom : String </td></tr>
+	<tr><td align="left"> + aexPrenom : String </td></tr>
+	<tr><td align="left"> + aexStatus : String </td></tr>
+	<tr><td align="left"> + aexNum : String </td></tr>
+	<tr><td align="left"> + aexUsaId : AdmUserAccount </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParAgentExeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParAgentExeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aexOrdId1 : String </td></tr>
+	<tr><td align="left"> + aexNom : String </td></tr>
+	<tr><td align="left"> + aexPrenom : String </td></tr>
+	<tr><td align="left"> + aexStatus : String </td></tr>
+	<tr><td align="left"> + aexOrdId : String </td></tr>
+	<tr><td align="left"> + aexUsaId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParAgentExeMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParAgentExeMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aexNom : String </td></tr>
+	<tr><td align="left"> + aexPrenom : String </td></tr>
+	<tr><td align="left"> + aexStatus : String </td></tr>
+	<tr><td align="left"> + aexOrdId : String </td></tr>
+	<tr><td align="left"> + aexUsaId : String </td></tr>
+	<tr><td align="left"> + aexNum : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommanditaire [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommanditaire </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cmdCode : String </td></tr>
+	<tr><td align="left"> + cmdName : String </td></tr>
+	<tr><td align="left"> + cmdDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommanditaireDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommanditaireDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cmdCode : String </td></tr>
+	<tr><td align="left"> + cmdName : String </td></tr>
+	<tr><td align="left"> + cmdDesc : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommanditaireMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommanditaireMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cmdCode : String </td></tr>
+	<tr><td align="left"> + cmdName : String </td></tr>
+	<tr><td align="left"> + cmdDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommune [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommune </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + comCode : String </td></tr>
+	<tr><td align="left"> + comName : String </td></tr>
+	<tr><td align="left"> + comType : String </td></tr>
+	<tr><td align="left"> + comStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommuneAnc [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommuneAnc </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + comCode : String </td></tr>
+	<tr><td align="left"> + comName : String </td></tr>
+	<tr><td align="left"> + comType : String </td></tr>
+	<tr><td align="left"> + comStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommuneAncDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommuneAncDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + comCode : String </td></tr>
+	<tr><td align="left"> + comName : String </td></tr>
+	<tr><td align="left"> + comType : String </td></tr>
+	<tr><td align="left"> + comRegId : String </td></tr>
+	<tr><td align="left"> + comPrvId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommuneAncMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommuneAncMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + comCode : String </td></tr>
+	<tr><td align="left"> + comName : String </td></tr>
+	<tr><td align="left"> + comType : String </td></tr>
+	<tr><td align="left"> + comStatus : String </td></tr>
+	<tr><td align="left"> + comRegId : String </td></tr>
+	<tr><td align="left"> + comPrvId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommuneDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommuneDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + comCode : String </td></tr>
+	<tr><td align="left"> + comName : String </td></tr>
+	<tr><td align="left"> + comType : String </td></tr>
+	<tr><td align="left"> + comRegId : String </td></tr>
+	<tr><td align="left"> + comPrvId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommuneMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommuneMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + comCode : String </td></tr>
+	<tr><td align="left"> + comName : String </td></tr>
+	<tr><td align="left"> + comType : String </td></tr>
+	<tr><td align="left"> + comStatus : String </td></tr>
+	<tr><td align="left"> + comRegId : String </td></tr>
+	<tr><td align="left"> + comPrvId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommuneOld [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommuneOld </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + comCode : String </td></tr>
+	<tr><td align="left"> + comName : String </td></tr>
+	<tr><td align="left"> + comType : String </td></tr>
+	<tr><td align="left"> + comStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommuneOldDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommuneOldDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + comCode : String </td></tr>
+	<tr><td align="left"> + comName : String </td></tr>
+	<tr><td align="left"> + comType : String </td></tr>
+	<tr><td align="left"> + comRegId : String </td></tr>
+	<tr><td align="left"> + comPrvId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommuneOldMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommuneOldMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + comCode : String </td></tr>
+	<tr><td align="left"> + comName : String </td></tr>
+	<tr><td align="left"> + comType : String </td></tr>
+	<tr><td align="left"> + comStatus : String </td></tr>
+	<tr><td align="left"> + comRegId : String </td></tr>
+	<tr><td align="left"> + comPrvId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParConvention [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParConvention </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cvtCode : String </td></tr>
+	<tr><td align="left"> + cvtName : String </td></tr>
+	<tr><td align="left"> + cvtDesc : String </td></tr>
+	<tr><td align="left"> + cvtBeginDate : Date </td></tr>
+	<tr><td align="left"> + cvtEndDate : Date </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParConventionDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParConventionDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cvtCode : String </td></tr>
+	<tr><td align="left"> + cvtName : String </td></tr>
+	<tr><td align="left"> + cvtDesc : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParConventionMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParConventionMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cvtCode : String </td></tr>
+	<tr><td align="left"> + cvtName : String </td></tr>
+	<tr><td align="left"> + cvtDesc : String </td></tr>
+	<tr><td align="left"> + cvtBeginDate : String </td></tr>
+	<tr><td align="left"> + cvtEndDate : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParExercice [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParExercice </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + pexCode : String </td></tr>
+	<tr><td align="left"> + pexName : String </td></tr>
+	<tr><td align="left"> + pexDesc : String </td></tr>
+	<tr><td align="left"> + pexStartDate : Date </td></tr>
+	<tr><td align="left"> + pexEndDate : Date </td></tr>
+	<tr><td align="left"> + pexStatus : String </td></tr>
+	<tr><td align="left"> + pexPlaId : List&lt;PlaPlan&gt; </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParExerciceDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParExerciceDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + pexCode : String </td></tr>
+	<tr><td align="left"> + pexName : String </td></tr>
+	<tr><td align="left"> + pexDesc : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParExerciceMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParExerciceMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + pexCode : String </td></tr>
+	<tr><td align="left"> + pexName : String </td></tr>
+	<tr><td align="left"> + pexDesc : String </td></tr>
+	<tr><td align="left"> + pexStartDate : String </td></tr>
+	<tr><td align="left"> + pexEndDate : String </td></tr>
+	<tr><td align="left"> + pexStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParOrdonateur [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParOrdonateur </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ordNom : String </td></tr>
+	<tr><td align="left"> + ordPrenom : String </td></tr>
+	<tr><td align="left"> + ordType : String </td></tr>
+	<tr><td align="left"> + ordStatus : String </td></tr>
+	<tr><td align="left"> + ordNature : String </td></tr>
+	<tr><td align="left"> + ordUsaId : AdmUserAccount </td></tr>
+	<tr><td align="left"> + idOrdSmrId : List&lt;BudSsMorasse&gt; </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParOrdonateurDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParOrdonateurDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ordNom : String </td></tr>
+	<tr><td align="left"> + ordPrenom : String </td></tr>
+	<tr><td align="left"> + ordType : String </td></tr>
+	<tr><td align="left"> + ordRegId : String </td></tr>
+	<tr><td align="left"> + ordOrdId : String </td></tr>
+	<tr><td align="left"> + ordUsaId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParOrdonateurMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParOrdonateurMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ordNom : String </td></tr>
+	<tr><td align="left"> + ordPrenom : String </td></tr>
+	<tr><td align="left"> + ordType : String </td></tr>
+	<tr><td align="left"> + ordStatus : String </td></tr>
+	<tr><td align="left"> + ordRegId : String </td></tr>
+	<tr><td align="left"> + ordOrdId : String </td></tr>
+	<tr><td align="left"> + ordUsaId : String </td></tr>
+	<tr><td align="left"> + ordNature : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParProvince [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParProvince </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prvCode : String </td></tr>
+	<tr><td align="left"> + prvName : String </td></tr>
+	<tr><td align="left"> + prvStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParProvinceAnc [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParProvinceAnc </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prvCode : String </td></tr>
+	<tr><td align="left"> + prvName : String </td></tr>
+	<tr><td align="left"> + prvStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParProvinceAncDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParProvinceAncDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prvCode : String </td></tr>
+	<tr><td align="left"> + prvName : String </td></tr>
+	<tr><td align="left"> + prvStatus : String </td></tr>
+	<tr><td align="left"> + prvRegId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParProvinceAncMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParProvinceAncMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prvCode : String </td></tr>
+	<tr><td align="left"> + prvName : String </td></tr>
+	<tr><td align="left"> + prvStatus : String </td></tr>
+	<tr><td align="left"> + prvRegId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParProvinceDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParProvinceDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prvCode : String </td></tr>
+	<tr><td align="left"> + prvName : String </td></tr>
+	<tr><td align="left"> + prvStatus : String </td></tr>
+	<tr><td align="left"> + prvRegId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParProvinceMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParProvinceMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prvCode : String </td></tr>
+	<tr><td align="left"> + prvName : String </td></tr>
+	<tr><td align="left"> + prvStatus : String </td></tr>
+	<tr><td align="left"> + prvRegId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParProvinceOld [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParProvinceOld </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prvCode : String </td></tr>
+	<tr><td align="left"> + prvName : String </td></tr>
+	<tr><td align="left"> + prvStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParProvinceOldDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParProvinceOldDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prvCode : String </td></tr>
+	<tr><td align="left"> + prvName : String </td></tr>
+	<tr><td align="left"> + prvStatus : String </td></tr>
+	<tr><td align="left"> + prvRegId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParProvinceOldMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParProvinceOldMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prvCode : String </td></tr>
+	<tr><td align="left"> + prvName : String </td></tr>
+	<tr><td align="left"> + prvStatus : String </td></tr>
+	<tr><td align="left"> + prvRegId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParRegion [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParRegion </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + regCode : String </td></tr>
+	<tr><td align="left"> + regName : String </td></tr>
+	<tr><td align="left"> + regStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParRegionAnc [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParRegionAnc </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + regCode : String </td></tr>
+	<tr><td align="left"> + regName : String </td></tr>
+	<tr><td align="left"> + regStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParRegionAncDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParRegionAncDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + regCode : String </td></tr>
+	<tr><td align="left"> + regName : String </td></tr>
+	<tr><td align="left"> + regStatus : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParRegionAncMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParRegionAncMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + regCode : String </td></tr>
+	<tr><td align="left"> + regName : String </td></tr>
+	<tr><td align="left"> + regStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParRegionDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParRegionDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + regCode : String </td></tr>
+	<tr><td align="left"> + regName : String </td></tr>
+	<tr><td align="left"> + regStatus : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParRegionMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParRegionMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + regCode : String </td></tr>
+	<tr><td align="left"> + regName : String </td></tr>
+	<tr><td align="left"> + regStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParRegionOld [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParRegionOld </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + regCode : String </td></tr>
+	<tr><td align="left"> + regName : String </td></tr>
+	<tr><td align="left"> + regStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParRegionOldDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParRegionOldDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + regCode : String </td></tr>
+	<tr><td align="left"> + regName : String </td></tr>
+	<tr><td align="left"> + regStatus : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParRegionOldMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParRegionOldMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + regCode : String </td></tr>
+	<tr><td align="left"> + regName : String </td></tr>
+	<tr><td align="left"> + regStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParTypeBenif [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParTypeBenif </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + benCode : String </td></tr>
+	<tr><td align="left"> + benName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParTypeBenifDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParTypeBenifDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + benCode : String </td></tr>
+	<tr><td align="left"> + benName : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParTypeBenifMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParTypeBenifMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + benCode : String </td></tr>
+	<tr><td align="left"> + benName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+edge [arrowhead = "empty"]
+edge [arrowhead = "none"]
+
+
+edge [arrowtail="none" arrowhead = "none" headlabel="aexOrdId" taillabel="0..n idOrdAexId" labeldistance="2.0" labelangle="-30"]
+
+ParAgentExe -> ParOrdonateur
+
+edge [arrowtail="none" arrowhead = "none" headlabel="comPrvId" taillabel="0..n idPrvComId" labeldistance="2.0" labelangle="-30"]
+
+ParCommune -> ParProvince
+
+edge [arrowtail="none" arrowhead = "open" headlabel="comRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParCommune -> ParRegion
+
+edge [arrowtail="none" arrowhead = "none" headlabel="comPrvId" taillabel="0..n idPrvComId" labeldistance="2.0" labelangle="-30"]
+
+ParCommuneAnc -> ParProvinceAnc
+
+edge [arrowtail="none" arrowhead = "open" headlabel="comRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParCommuneAnc -> ParRegionAnc
+
+edge [arrowtail="none" arrowhead = "none" headlabel="comPrvId" taillabel="0..n idPrvComId" labeldistance="2.0" labelangle="-30"]
+
+ParCommuneOld -> ParProvinceOld
+
+edge [arrowtail="none" arrowhead = "open" headlabel="comRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParCommuneOld -> ParRegionOld
+
+edge [arrowtail="none" arrowhead = "none" headlabel="ordOrdId" taillabel="0..n idOrdOrdId" labeldistance="2.0" labelangle="-30"]
+
+ParOrdonateur -> ParOrdonateur
+
+edge [arrowtail="none" arrowhead = "none" headlabel="ordRegId" taillabel="0..n idRegOrdId" labeldistance="2.0" labelangle="-30"]
+
+ParOrdonateur -> ParRegion
+
+edge [arrowtail="none" arrowhead = "open" headlabel="prvRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParProvince -> ParRegion
+
+edge [arrowtail="none" arrowhead = "open" headlabel="prvRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParProvinceAnc -> ParRegionAnc
+
+edge [arrowtail="none" arrowhead = "open" headlabel="prvRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParProvinceOld -> ParRegionOld
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ParAgentExeService -> ParAgentExe
+ParAgentExeService -> ParAgentExeDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ParCommanditaireService -> ParCommanditaire
+ParCommanditaireService -> ParCommanditaireDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ParCommuneService -> ParCommune
+ParCommuneService -> ParCommuneDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ParCommuneAncService -> ParCommuneAnc
+ParCommuneAncService -> ParCommuneAncDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ParConventionService -> ParConventionDTO
+ParConventionService -> ParConvention
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ParOrdonateurService -> ParOrdonateur
+ParOrdonateurService -> ParOrdonateurDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ParProvinceService -> ParProvince
+ParProvinceService -> ParProvinceDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ParProvinceAncService -> ParProvinceAnc
+ParProvinceAncService -> ParProvinceAncDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ParRegionService -> ParRegionDTO
+ParRegionService -> ParRegion
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ParRegionAncService -> ParRegionAncDTO
+ParRegionAncService -> ParRegionAnc
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ParExerciceService -> ParExercice
+ParExerciceService -> ParExerciceDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ParTypeBenifService -> ParTypeBenifDTO
+ParTypeBenifService -> ParTypeBenif
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ParCommuneOldService -> ParCommuneOldDTO
+ParCommuneOldService -> ParCommuneOld
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ParRegionOldService -> ParRegionOld
+ParRegionOldService -> ParRegionOldDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ParProvinceOldService -> ParProvinceOld
+ParProvinceOldService -> ParProvinceOldDTO
+}

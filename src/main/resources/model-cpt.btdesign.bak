@@ -1,0 +1,610 @@
+import "classpath:/model-comPar.btdesign"
+import "classpath:/model-ach.btdesign"
+import "classpath:/model-par.btdesign"
+import "classpath:/model-pla.btdesign"
+import "classpath:/model-bud.btdesign"
+import "classpath:/model-tec.btdesign"
+
+ApplicationPart Cpt{
+	Module cpt{
+		
+		Entity CptDepDecision{
+			databaseTable="cpt_dep_decision"
+			hint="idSequence=cddnoisiced_ped_tpc_X"
+			
+			Long id    databaseColumn="cdd_id" 
+			String cddStatus length="1" nullable databaseColumn="cdd_status"  hint="visible=true,toString" 
+			Date cddDate  nullable databaseColumn="cdd_date"  hint="visible=true,toString" 
+			String cddRem length="256" nullable databaseColumn="cdd_rem"  hint="visible=true,toString" 
+			
+				- @CptEntity cddCenId  databaseColumn="cdd_cen_id"  /*<-> idCenCddId*/  fetch="lazy" cascade="refresh"
+				- @CptDepense cddCdpId  databaseColumn="cdd_cdp_id"  <-> idCdpCddId  fetch="lazy" cascade="refresh"  							
+			
+			
+			Repository CptDepDecisionRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@CptDepDecision> findAll(PagingParameter pagingParameter);
+				PagedResult<@CptDepDecision> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service CptDepDecisionService {
+			
+			findById => CptDepDecisionRepository.findById;
+			findAll => CptDepDecisionRepository.findAll;
+			save => CptDepDecisionRepository.save;
+			delete => CptDepDecisionRepository.delete;
+			PagedResult<@CptDepDecision> search(@CptDepDecisionDTO aua);
+			PagedResult<@CptDepDecision> findAll(PagingParameter pagingParameter);
+			
+			List<@CptDepDecision> findByCddStatus(String cddStatus) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepDecision> findByCddDate(Date cddDate) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepDecision> findByCddRem(String cddRem) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepDecision> findByCddCenId(Long id) hint="gen,order=asc,prop=id,conditions=cddCenId.id&$id,nullable";
+			List<@CptDepDecision> findByCddCdpId(Long id) hint="gen,order=asc,prop=id,conditions=cddCdpId.id&$id,nullable";
+		}
+		
+		DataTransferObject CptDepDecisionDTO {
+			hint="for=search,entity=CptDepDecision"
+			String cddStatus hint="" 
+			String cddDate hint="" 
+			String cddRem hint="" 
+		}
+		
+		DataTransferObject CptDepDecisionMergeDTO {
+			hint="for=merge,entity=CptDepDecision"
+			String cddStatus hint="" 
+			String cddDate hint="" 
+			String cddRem hint="" 
+			String cddCenId hint="type=system,view=Search"
+			String cddCdpId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity CptDepState{
+			databaseTable="cpt_dep_state"
+			hint="idSequence=cdsetats_ped_tpc_X"
+			
+			Long id    databaseColumn="cds_id" 
+			String cdsStatus length="1" nullable databaseColumn="cds_status"  hint="visible=true,toString" 
+			Date cdsDate  nullable databaseColumn="cds_date"  hint="visible=true,toString" 
+			String cdsRem length="256" nullable databaseColumn="cds_rem"  hint="visible=true,toString" 
+			
+				- @CptEntity cdsCenId  databaseColumn="cds_cen_id"  /*<-> idCenCdsId*/  fetch="lazy" cascade="refresh"  							
+			
+				- @CptDepense cdsCdpId <-> idCdpCdsId databaseColumn="cds_cdp_id"  /*<-> idCdpCdsId*/  fetch="lazy" cascade="refresh"  							
+			
+			
+			Repository CptDepStateRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@CptDepState> findAll(PagingParameter pagingParameter);
+				PagedResult<@CptDepState> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service CptDepStateService {
+			
+			findById => CptDepStateRepository.findById;
+			findAll => CptDepStateRepository.findAll;
+			save => CptDepStateRepository.save;
+			delete => CptDepStateRepository.delete;
+			PagedResult<@CptDepState> search(@CptDepStateDTO aua);
+			PagedResult<@CptDepState> findAll(PagingParameter pagingParameter);
+			
+			List<@CptDepState> findByCdsStatus(String cdsStatus) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepState> findByCdsDate(Date cdsDate) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepState> findByCdsRem(String cdsRem) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepState> findByCdsCenId(Long id) hint="gen,order=asc,prop=id,conditions=cdsCenId.id&$id,nullable";
+			List<@CptDepState> findByCdsCdpId(Long id) hint="gen,order=asc,prop=id,conditions=cdsCdpId.id&$id,nullable";
+		}
+		
+		DataTransferObject CptDepStateDTO {
+			hint="for=search,entity=CptDepState"
+			String cdsStatus hint="" 
+			String cdsDate hint="" 
+			String cdsRem hint="" 
+		}
+		
+		DataTransferObject CptDepStateMergeDTO {
+			hint="for=merge,entity=CptDepState"
+			String cdsStatus hint="" 
+			String cdsDate hint="" 
+			String cdsRem hint="" 
+			String cdsCenId hint="type=system,view=Search"
+			String cdsCdpId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity CptDepense{
+			databaseTable="cpt_depense"
+			hint="idSequence=cdpesneped_tpc_X"
+			
+			Long id    databaseColumn="cdp_id"
+			String cdpConcurent length="255" nullable databaseColumn="cdp_concurent"  hint="visible=true,toString"
+			String cdpRc length="24" nullable databaseColumn="cdp_rc"  
+			String cdpIce length="24" nullable databaseColumn="cdp_ice"  
+			String cdpIf length="255" nullable databaseColumn="cdp_if"   
+			String cdpCnss length="24" nullable databaseColumn="cdp_cnss" 
+			String cdpRib length="255" nullable databaseColumn="cdp_rib"
+			String cdpPdf length="45" nullable databaseColumn="cdp_pdf"
+			Date cdpCurStatusDate  nullable databaseColumn="cdp_cur_status_date" hint="visible=true" 
+			String cdpCurDecision length="1" nullable databaseColumn="cdp_cur_decision" 	
+			String cdpStatus length="1" nullable databaseColumn="cdp_status" 
+			Date cdpDateRem  nullable databaseColumn="cdp_date_rem" 
+			Date cdpDateEnr  nullable databaseColumn="cdp_date_enr" 
+			String cdpNumEnr length="45" nullable databaseColumn="cdp_num_enr" 
+			Date cdpDateEng  nullable databaseColumn="cdp_date_eng" 
+			String cdpSignEng length="45" nullable databaseColumn="cdp_sign_eng" 
+			Date cdpDateApp  nullable databaseColumn="cdp_date_app" 
+			String cdpSignApp length="45" nullable databaseColumn="cdp_sign_app" 
+			BigDecimal cdpInterMor  nullable databaseColumn="cdp_inter_mor" 
+			BigDecimal cdpRevPrix  nullable databaseColumn="cdp_rev_prix" 
+			Date cdpRevPrixDate  nullable databaseColumn="cdp_rev_prix_date" 
+			String cdpNumGid length="32" nullable databaseColumn="cdp_num_gid"
+			String cdpNumDep length="45" nullable databaseColumn="cdp_num_dep" hint="visible=true,toString"
+			String cdpNumVisa length="45" nullable databaseColumn="cdp_num_visa" 
+			Date cdpDateVisa  nullable databaseColumn="cdp_date_visa"
+			String cdpNumNoti length="45" nullable databaseColumn="cdp_num_noti" 
+			Date cdpDateNoti  nullable databaseColumn="cdp_date_noti"
+			String cdpNumLett length="45" nullable databaseColumn="cdp_num_lett" 
+			Date cdpDateLett  nullable databaseColumn="cdp_date_lett"
+			String cdpCurStatus length="1" nullable databaseColumn="cdp_cur_status" hint="visible=true"
+			String cdpDatDem length="45" nullable databaseColumn="cdp_dat_dem" 
+			String cdpDatOuvPli length="45" nullable databaseColumn="cdp_dat_ouv_pli"
+			BigDecimal cdpMpr  nullable databaseColumn="cdp_mpr" 
+			BigDecimal cdpCp  nullable databaseColumn="cdp_cp" 
+			BigDecimal cdpCe  nullable databaseColumn="cdp_ce" 
+			BigDecimal cdpMc  nullable databaseColumn="cdp_mc"
+			BigDecimal cdpMom  nullable databaseColumn="cdp_mom" 
+			String cdpFluTau length="45" nullable databaseColumn="cdp_flu_tau"
+			String cdpDepCon length="45" nullable databaseColumn="cdp_dep_con" 
+			String cdpNrDep length="45" nullable databaseColumn="cdp_nr_dep"
+			String cdpPres length="45" nullable databaseColumn="cdp_pres"
+			String cdpNrCon length="45" nullable databaseColumn="cdp_nr_con"
+			String cdpNrDemAch length="45" nullable databaseColumn="cdp_nr_dem_ach"
+			Date cdpDateRevision  nullable databaseColumn="cdp_date_revision" 
+			String cdpNaturPrix length="15" nullable databaseColumn="cdp_natur_prix" 
+			BigDecimal cdpRevisionPrix  nullable databaseColumn="cdp_revision_prix"
+			Date cdpDateOrderService  nullable databaseColumn="cdp_date_order_service" 
+			
+			- @CptTypeOrdre cdpTyoId  databaseColumn="cdp_tyo_id"  /*<-> idTyoCdpId*/  fetch="lazy" cascade="refresh" nullable
+			- @AchAchat cdpAchId  databaseColumn="cdp_ach_id"  /*<-> idAchCdpId*/  fetch="lazy" cascade="refresh" hint="visible=true,toString"
+			- @AchAchatLot cdpAloId  databaseColumn="cdp_alo_id"  /*<-> idAloCdpId*/  nullable  fetch="lazy" cascade="refresh"
+			- @ParTypeBenif cdpBenId  databaseColumn="cdp_ben_id"  /*<-> idBenCdpId*/  nullable  fetch="lazy" cascade="refresh"
+			- @ParOrdonateur cdpOrdId  databaseColumn="cdp_ord_id"  /*<-> idOrdCdpId*/  nullable  fetch="lazy" cascade="refresh"
+			- @ParEntity cdpEntId  databaseColumn="cdp_ent_id"  /*<-> idEntAchId*/  nullable  fetch="lazy" cascade="refresh"
+			- @AchEntity cdpCurAenId  databaseColumn="cdp_cur_aen_id"  /*<-> idAenCurAchId*/  nullable  fetch="lazy" cascade="refresh"  
+			- @CptEntity cdpCurCenId  databaseColumn="cdp_cur_cen_id"  /*<-> idAenCurAchId*/  nullable  fetch="lazy" cascade="refresh"  hint="visible=true" 
+  			//- @AchConcurent cdpAcrId  databaseColumn="cdp_acr_id"  /*<-> idAcrCdpId*/  fetch="lazy" cascade="refresh"	
+			
+			- @ParExercice cdpPexId  databaseColumn="cdp_pex_id"  /*<-> idPexCdpId*/  nullable  fetch="lazy" cascade="refresh" // Exercice
+			- @PlaBudgetType cdpBdtId  databaseColumn="cdp_bdt_id"  /*<-> idBdtCdpId*/ nullable fetch="lazy" cascade="refresh" // type Budget
+			- @BudParagraphe cdpParId  databaseColumn="cdp_par_id"  /*<-> idParCdpId*/  nullable  fetch="lazy" cascade="refresh" // Paragraphe
+			- @BudLigne cdpLinId  databaseColumn="cdp_lin_id"  /*<-> idLinCdpId*/  nullable  fetch="lazy" cascade="refresh"  // Ligne
+			- @BudArticle cdpArtId  databaseColumn="cdp_art_id"  /*<-> idArtCdpId*/  nullable  fetch="lazy" cascade="refresh" // Article
+			- @PlaClassPrestation cprPrcId  databaseColumn="cpr_prc_id"  /*<-> idPrcCprId*/ nullable fetch="lazy" cascade="refresh" // Nature Prestation
+			- @PlaTypePrestation cdpPrtId  databaseColumn="cdp_prt_id"  /*<-> idPrtCdpId*/  nullable  fetch="lazy" cascade="refresh"// Type prestation
+			- @AchModePass cdpAmpId  databaseColumn="cdp_amp_id"  /*<-> idAmpCdpId*/  nullable  fetch="lazy" cascade="refresh" // Mode passation
+			- @AchTypeDepense cdpAtdId  databaseColumn="cdp_atd_id"  /*<-> idAtdCdpId*/  nullable  fetch="lazy" cascade="refresh"  // Type depense ,Achat
+			- @AchSstypeDepense cdpAstId  databaseColumn="cdp_ast_id"  /*<-> idAstCdpId*/  nullable  fetch="lazy" cascade="refresh" // Sous Type depense ,Achat
+				
+			// @BudMorassePres
+			//- @PlaTypePrestation cdpNprId  databaseColumn="cdp_npr_id"    nullable  fetch="lazy" cascade="refresh" // Nature prestation
+			//- @BudSsParagraphe cdpSprId  databaseColumn="cdp_spr_id"    nullable  fetch="lazy" cascade="refresh" // Sous Paragraphe
+			- List<@CptDepDecision> idCdpCddId <-> cddCdpId orderby="createdDate asc"
+			- List<@CptDepMemo> idCdpCdmId <-> cdmCdpId orderby="createdDate asc"
+			
+			- List<@CptDepState> idCdpCdsId <-> cdsCdpId orderby="createdDate asc"
+			//- List<@CptOrdreService> idCdpCosId <-> cosCdpId
+			//- List<@TecAttachement> idCdpTatId <-> tatCdpId
+			//- List<@TecPv> idCdpTpvId <-> tpvCdpId
+			
+			String cdpId length="24" nullable databaseColumn="cdp_id_dep" 
+			
+			Repository CptDepenseRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@CptDepense> findAll(PagingParameter pagingParameter);
+				PagedResult<@CptDepense> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service CptDepenseService {
+			
+			findById => CptDepenseRepository.findById;
+			findAll => CptDepenseRepository.findAll;
+			save => CptDepenseRepository.save;
+			delete => CptDepenseRepository.delete;
+			PagedResult<@CptDepense> search(@CptDepenseDTO aua);
+			PagedResult<@CptDepense> findAll(PagingParameter pagingParameter);
+			
+			List<@CptDepense> findBycdpConcurent(String cdpConcurent) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpRc(String cdpRc) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpIce(String cdpIce) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpIf(String cdpIf) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpCnss(String cdpCnss) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpRib(String cdpRib) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpPdf(String cdpPdf) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpStatus(String cdpStatus) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpDateRem(Date cdpDateRem) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpDateEnr(Date cdpDateEnr) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpNumEnr(String cdpNumEnr) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpDateEng(Date cdpDateEng) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpSignEng(String cdpSignEng) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpDateApp(Date cdpDateApp) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpSignApp(String cdpSignApp) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpInterMor(BigDecimal cdpInterMor) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpRevPrix(BigDecimal cdpRevPrix) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpRevPrixDate(Date cdpRevPrixDate) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpNumGid(String cdpNumGid) hint="gen,order=asc,prop=id,nullable";
+			
+			List<@CptDepense> findByCdpNumNoti(Date cdpNumNoti) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpDateNoti(Date cdpDateNoti) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpNumLett(String cdpNumLett) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCcdpDateLett(Date cdpDateLett) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpDateRevision(Date cdpDateRevision) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpNaturPrix(Date cdpNaturPrix) hint="gen,order=asc,prop=id,nullable";
+			List<@CptDepense> findByCdpRevisionPrix(String cdpRevisionPrix) hint="gen,order=asc,prop=id,nullable";
+			
+	
+			//List<@CptDepense> findByCdpAcrId(Long id) hint="gen,order=asc,prop=id,conditions=cdpAcrId.id&$id,nullable";
+			
+			List<@CptDepense> findByCdpTyoId(Long id) hint="gen,order=asc,prop=id,conditions=cdpTyoId.id&$id,nullable";
+			List<@CptDepense> findByCdpAchId(Long id) hint="gen,order=asc,prop=id,conditions=cdpAchId.id&$id,nullable";
+			List<@CptDepense> findByCdpAloId(Long id) hint="gen,order=asc,prop=id,conditions=cdpAloId.id&$id,nullable";
+			List<@CptDepense> findByCdpBenId(Long id) hint="gen,order=asc,prop=id,conditions=cdpBenId.id&$id,nullable";
+			List<@CptDepense> findByCdpOrdId(Long id) hint="gen,order=asc,prop=id,conditions=cdpOrdId.id&$id,nullable";
+			
+			PagedResult<@CptDepense> getAllDepEng(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@CptDepense> getAllDepEnr(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@CptDepense> getAllDepApp(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@CptDepense> getAllDepDemande(PagingParameter pagingParameter) hint="gap";
+			
+			PagedResult<@CptDepense> getAllDepSGM(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@CptDepense> getAllDepSM(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@CptDepense> getAllDepSB(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@CptDepense> getAllDepCI(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@CptDepense> getAllDepTM(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@CptDepense> getAllOrdreService(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@CptDepense> getAllOrdreServiceSB(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@CptDepense> getAllOrdreServiceSGM(PagingParameter pagingParameter) hint="gap";
+			
+			
+			PagedResult<@CptDepense> filterDepEng(@CptDepenseDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@CptDepense> filterDepEnr(@CptDepenseDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@CptDepense> filterDepApp(@CptDepenseDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@CptDepense> filterDepDemande(@CptDepenseDTO aua,PagingParameter pagingParameter) hint="gap";
+			
+			PagedResult<@CptDepense> filterDepSGM(@CptDepenseDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@CptDepense> filterDepSM(@CptDepenseDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@CptDepense> filterDepSB(@CptDepenseDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@CptDepense> filterDepCI(@CptDepenseDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@CptDepense> filterDepTM(@CptDepenseDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@CptDepense> filterOrdreService(@CptDepenseDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@CptDepense> filterOrdreServiceSB(@CptDepenseDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@CptDepense> filterOrdreServiceSGM(@CptDepenseDTO aua,PagingParameter pagingParameter) hint="gap";
+			
+		}
+		
+		DataTransferObject CptDepenseDTO {
+			hint="for=search,entity=CptDepense"
+			String cdpConcurent hint=""
+			String cdpAchId1 hint="ref=cdpAchId,view=ComboBox"
+			String cdpAloId1 hint="ref=cdpAloId,view=ComboBox,LinkedTo=cdpAchId1"
+			String cdpNumDep hint="" 
+			String cdpDateEng hint=""
+			String cdpDateApp hint=""
+			String cdpDateEnr hint="" 
+			String cdpNumVisa hint=""
+			String cdpDateVisa hint=""
+			String cdpNrDemAch hint="" 
+		}
+		
+		DataTransferObject CptDepenseMergeDTO {
+			hint="for=merge,entity=CptDepense"
+			String cdpAchId hint="type=system,view=ComboBox"
+			String cdpTyoId hint="type=system,view=ComboBox"
+			String cdpConcurent hint=""
+			String cdpRc hint="" 
+			String cdpIce hint="" 
+			String cdpIf hint="" 
+			String cdpCnss hint="" 
+			String cdpRib hint=""
+			String cdpPdf hint=""  
+			String cdpStatus hint="type=enum,items=O&On going:M&Made:R&Rejected:A&Approved:C&Canceled:D&Demande,hidden" 
+			String cdpDateRem hint="" 
+			String cdpDateEnr hint="" 
+			String cdpNumEnr hint="" 
+			String cdpDateEng hint="" 
+			String cdpSignEng hint="" 
+			String cdpDateApp hint="" 
+			String cdpSignApp hint="" 
+			String cdpInterMor hint="" 
+			String cdpRevPrix hint="" 
+			String cdpRevPrixDate hint="" 
+			String cdpNumGid hint="" 
+			String cdpNumDep hint="" 
+			String cdpNumVisa hint=""  
+			String cdpDateVisa hint=""  
+			String cdpCurStatus hint="type=enum,items=O&On going:M&Made:R&Rejected:A&Approved:C&Canceled:D&Demande,hidden"  
+			String cdpCurStatusDate hint=""  
+			String cdpCurDecision hint="type=enum,items=O&OK:N&NOK,hidden"
+			String cdpMpr hint="" 
+			String cdpCp hint=""
+			String cdpCe hint="" 
+			String cdpMc hint="" 
+			String cdpMom hint=""
+			String cdpFluTau hint="" 
+			String cdpDepCon hint=""
+			String cdpDatDem hint="" 
+			String cdpDatOuvPli hint="" 
+			String cdpNrDemAch hint=""  
+			String cdpNrCon hint=""  
+			String cdpPres hint=""
+			String cdpNrDep hint=""
+			String cdpNumNoti hint=""  
+			String cdpDateNoti hint=""
+			String cdpNumLett hint=""
+			String cdpDateLett hint=""
+			String cdpDateRevision hint=""  
+			String cdpNaturPrix hint=""
+			String cdpRevisionPrix hint=""
+			String cdpDateOrderService hint=""
+			String cdpAloId hint="type=system,view=Search"
+			String cdpBenId hint="type=system,view=Search"
+			String cdpEntId hint="type=system,view=Search"
+			String cdpCurAenId hint="type=system,view=Search"
+			String cdpCurCenId hint="type=system,view=Search"
+			String cdpOrdId hint="type=system,view=ComboBox"
+			String cdpBdtId hint="type=system,view=ComboBox"
+			String cdpParId hint="type=system,view=ComboBox"
+			String cdpLinId hint="type=system,view=ComboBox"
+			String cdpArtId hint="type=system,view=ComboBox"
+			String cdpPrtId hint="type=system,view=ComboBox"
+			String cdpAmpId hint="type=system,view=ComboBox"
+			String cdpAtdId hint="type=system,view=ComboBox"
+			String cdpAstId hint="type=system,view=ComboBox"
+		    String cdpPexId hint="type=system,view=ComboBox"
+		    String cprPrcId hint="type=system,view=ComboBox"
+		    
+			String cdpId
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity CptEntity{
+			databaseTable="cpt_entity"
+			hint="idSequence=cenytitne_tpc_X"
+			
+			Long id    databaseColumn="cen_id" 
+			String cenName length="64" nullable databaseColumn="cen_name"  hint="visible=true,toString" 
+			
+			//- List<@CptDepDecision> idCenCddId <-> cddCenId
+			//- List<@CptDepState> idCenCdsId <-> cdsCenId
+			
+			Repository CptEntityRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@CptEntity> findAll(PagingParameter pagingParameter);
+				PagedResult<@CptEntity> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service CptEntityService {
+			
+			findById => CptEntityRepository.findById;
+			findAll => CptEntityRepository.findAll;
+			save => CptEntityRepository.save;
+			delete => CptEntityRepository.delete;
+			PagedResult<@CptEntity> search(@CptEntityDTO aua);
+			PagedResult<@CptEntity> findAll(PagingParameter pagingParameter);
+			
+			List<@CptEntity> findByCenName(String cenName) hint="gen,order=asc,prop=id,nullable";
+		}
+		
+		DataTransferObject CptEntityDTO {
+			hint="for=search,entity=CptEntity"
+			String cenName hint="" 
+		}
+		
+		DataTransferObject CptEntityMergeDTO {
+			hint="for=merge,entity=CptEntity"
+			String cenName hint="" 
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity CptOrdreService{
+			databaseTable="cpt_ordre_service"
+			hint="idSequence=cosecivres_erdro_tpc_X"
+			
+			Long id    databaseColumn="cos_id" 
+			String cosName length="64" nullable databaseColumn="cos_name"  hint="visible=true,toString" 
+			String cosCode length="32" nullable databaseColumn="cos_code"  hint="visible=true,toString" 
+			Date cosDate  nullable databaseColumn="cos_date"  hint="visible=true,toString" 
+			Date cosDateEff  nullable databaseColumn="cos_date_eff" 
+			String cosRem length="256" nullable databaseColumn="cos_rem" 
+			
+				- @CptTypeOrdre cosCtoId  databaseColumn="cos_cto_id"  /*<-> idCtoCosId*/  fetch="lazy" cascade="refresh"  							
+			
+				- @CptDepense cosCdpId  databaseColumn="cos_cdp_id"  /*<-> idCdpCosId*/  fetch="lazy" cascade="refresh"  							
+			
+			
+			Repository CptOrdreServiceRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@CptOrdreService> findAll(PagingParameter pagingParameter);
+				PagedResult<@CptOrdreService> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service CptOrdreServiceService {
+			
+			findById => CptOrdreServiceRepository.findById;
+			findAll => CptOrdreServiceRepository.findAll;
+			save => CptOrdreServiceRepository.save;
+			delete => CptOrdreServiceRepository.delete;
+			PagedResult<@CptOrdreService> search(@CptOrdreServiceDTO aua);
+			PagedResult<@CptOrdreService> findAll(PagingParameter pagingParameter);
+			
+			List<@CptOrdreService> findByCosName(String cosName) hint="gen,order=asc,prop=id,nullable";
+			List<@CptOrdreService> findByCosCode(String cosCode) hint="gen,order=asc,prop=id,nullable";
+			List<@CptOrdreService> findByCosDate(Date cosDate) hint="gen,order=asc,prop=id,nullable";
+			List<@CptOrdreService> findByCosDateEff(Date cosDateEff) hint="gen,order=asc,prop=id,nullable";
+			List<@CptOrdreService> findByCosRem(String cosRem) hint="gen,order=asc,prop=id,nullable";
+			List<@CptOrdreService> findByCosCtoId(Long id) hint="gen,order=asc,prop=id,conditions=cosCtoId.id&$id,nullable";
+			List<@CptOrdreService> findByCosCdpId(Long id) hint="gen,order=asc,prop=id,conditions=cosCdpId.id&$id,nullable";
+		}
+		
+		DataTransferObject CptOrdreServiceDTO {
+			hint="for=search,entity=CptOrdreService"
+			String cosName hint="" 
+			String cosCode hint="" 
+			String cosDate hint="" 
+		}
+		
+		DataTransferObject CptOrdreServiceMergeDTO {
+			hint="for=merge,entity=CptOrdreService"
+			String cosName hint="" 
+			String cosCode hint="" 
+			String cosDate hint="" 
+			String cosDateEff hint="" 
+			String cosRem hint="" 
+			String cosCtoId hint="type=system,view=Search"
+			String cosCdpId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity CptTypeOrdre{
+			databaseTable="cpt_type_ordre"
+			hint="idSequence=ctoerdro_epyt_tpc_X"
+			
+			Long id    databaseColumn="cto_id" 
+			String ctoCode length="16" nullable databaseColumn="cto_code"  hint="visible=true,toString" 
+			String ctoName length="64" nullable databaseColumn="cto_name"  hint="visible=true,toString" 
+			
+			//- List<@CptOrdreService> idCtoCosId <-> cosCtoId
+			
+			Repository CptTypeOrdreRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@CptTypeOrdre> findAll(PagingParameter pagingParameter);
+				PagedResult<@CptTypeOrdre> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service CptTypeOrdreService {
+			
+			findById => CptTypeOrdreRepository.findById;
+			findAll => CptTypeOrdreRepository.findAll;
+			save => CptTypeOrdreRepository.save;
+			delete => CptTypeOrdreRepository.delete;
+			PagedResult<@CptTypeOrdre> search(@CptTypeOrdreDTO aua);
+			PagedResult<@CptTypeOrdre> findAll(PagingParameter pagingParameter);
+			
+			List<@CptTypeOrdre> findByCtoCode(String ctoCode) hint="gen,order=asc,prop=id,nullable";
+			List<@CptTypeOrdre> findByCtoName(String ctoName) hint="gen,order=asc,prop=id,nullable";
+		}
+		
+		DataTransferObject CptTypeOrdreDTO {
+			hint="for=search,entity=CptTypeOrdre"
+			String ctoCode hint="" 
+			String ctoName hint="" 
+		}
+		
+		DataTransferObject CptTypeOrdreMergeDTO {
+			hint="for=merge,entity=CptTypeOrdre"
+			String ctoCode hint="" 
+			String ctoName hint="" 
+		}
+    
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	  
+	    Entity CptDepMemo{
+	      databaseTable="cpt_dep_memo"
+	      hint="idSequence=cdmomem_ped_tpc_X"
+	      
+	      Long id    databaseColumn="cdm_id" 
+	      String cdmMemo length="512" nullable databaseColumn="cdm_memo"  hint="visible=true,toString" 
+	      String cdmUser length="64" nullable databaseColumn="cdm_user"  hint="visible=true,toString" 
+	      Date cdmDate  nullable databaseColumn="cdm_date"  hint="visible=true,toString" 
+	      
+	        - @CptDepense cdmCdpId  databaseColumn="cdm_ach_id"  <-> idCdpCdmId   fetch="lazy" cascade="refresh"               
+	      
+	      
+	      Repository CptDepMemoRepository {
+	        findById;
+	        save;
+	        delete;
+	        findAll;
+	        findByCondition;
+	        PagedResult<@CptDepMemo> findAll(PagingParameter pagingParameter);
+	        PagedResult<@CptDepMemo> findByCondition(PagingParameter pagingParameter);
+	      }
+	      
+	    }
+	    
+	    Service CptDepMemoService {
+	      
+	      findById => CptDepMemoRepository.findById;
+	      findAll => CptDepMemoRepository.findAll;
+	      save => CptDepMemoRepository.save;
+	      delete => CptDepMemoRepository.delete;
+	      PagedResult<@CptDepMemo> search(@CptDepMemoDTO aua);
+	      PagedResult<@CptDepMemo> findAll(PagingParameter pagingParameter);
+	      
+	    }
+	    
+	    DataTransferObject CptDepMemoDTO {
+	      hint="for=search,entity=CptDepMemo"
+	      String cdmMemo hint="" 
+	      String cdmUser hint="" 
+	      String cdmDate hint="" 
+	    }
+	    
+	    DataTransferObject CptDepMemoMergeDTO {
+	      hint="for=merge,entity=CptDepMemo"
+	      String cdmMemo hint="" 
+	      String cdmUser hint="" 
+	      String cdmDate hint="" 
+	      String cdmDepId hint="type=system,view=Search"
+	    }
+	    
+		
+	}
+}

@@ -1,0 +1,33 @@
+Création de serveur test  
+
+Dans l'onglet connection  
+	Host : localhost
+	Port : 5432
+	Maintenance database : postgres
+	username : postgres
+Dans l'onglet SSH Tunnel
+	Use SSH tunnelling : Yes
+	Tunnel Host : 192.168.1.15
+	Tunnel Port : 22
+	Username    : root
+
+SSH password : Munisys11@
+Database password : postgres
+Database name : habous7
+
+Création de serveur production 
+
+Dans l'onglet connection  
+	Host : 192.168.1.20
+	Port : 5432
+	Maintenance database : postgres
+	username : postgres
+Dans l'onglet SSH Tunnel
+	Use SSH tunnelling : Yes
+	Tunnel Host : 192.168.1.20
+	Tunnel Port : 22
+	Username    : root
+
+SSH password : Munisys11@
+Database password : postgres
+Database name : habous

@@ -1,0 +1,20 @@
+C:\Program Files\ibm\gsk8\lib64
+C:\Program Files\ibm\gsk8\bin
+C:\Program Files\IBM Informix Software Bundle\bin
+C:\oraclexe\app\oracle\product\11.2.0\server\bin
+
+C:\Program Files (x86)\Common Files\Oracle\Java\javapath
+C:\app\E330\virtual\product\12.2.0\dbhome_1\bin
+%SystemRoot%\system32
+%SystemRoot%
+%SystemRoot%\System32\Wbem
+%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\
+C:\Program Files\Lenovo\Bluetooth Software\
+C:\Program Files\Lenovo\Bluetooth Software\syswow64
+
+C:\Program Files (x86)\Bitvise SSH Client
+D:\apache-maven-3.3.3\bin
+C:\Users\E330\AppData\Local\UiPath\app-18.4.1
+c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\
+c:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\
+D:\apache-maven-3.6.1\bin

@@ -1,0 +1,90 @@
+digraph G {
+	fontsize = 10
+	node [
+		fontsize = 10
+		fontname="arial"
+		shape=plaintext
+	]
+
+	edge [
+		fontsize = 10
+	]
+subgraph clusterlog {
+	label = "log"  
+	LogLogType [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> LogLogType </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + lotCode : String </td></tr>
+	<tr><td align="left"> + lotName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	LogMsgDetail [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> LogMsgDetail </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + lmdMsg : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	LogNwsLog [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> LogNwsLog </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + logDate : Date </td></tr>
+	<tr><td align="left"> + logModCode : String </td></tr>
+	<tr><td align="left"> + logFuncCode : String </td></tr>
+	<tr><td align="left"> + logMsgDetail : String </td></tr>
+	<tr><td align="left"> + logUpdData : String </td></tr>
+	<tr><td align="left"> + logUpdRef : String </td></tr>
+	<tr><td align="left"> + logUpdOld : String </td></tr>
+	<tr><td align="left"> + logUpdNew : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	LogNwsSession [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> LogNwsSession </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + sesUser : String </td></tr>
+	<tr><td align="left"> + sesIp : String </td></tr>
+	<tr><td align="left"> + sesStart : Date </td></tr>
+	<tr><td align="left"> + sesEnd : Date </td></tr>
+	<tr><td align="left"> + sesStatus : Long </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+edge [arrowhead = "empty"]
+edge [arrowhead = "none"]
+
+
+edge [arrowtail="none" arrowhead = "open" headlabel="lmdLogId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+LogMsgDetail -> LogNwsLog
+
+edge [arrowtail="none" arrowhead = "open" headlabel="logLotId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+LogNwsLog -> LogLogType
+
+edge [arrowtail="none" arrowhead = "none" headlabel="logSesId" taillabel="0..n sesLogId" labeldistance="2.0" labelangle="-30"]
+
+LogNwsLog -> LogNwsSession
+}

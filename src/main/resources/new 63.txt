@@ -1,0 +1,24 @@
+1===indexBuffer=20==Primary Account Number                        2 16
+2===indexBuffer=38==Processing Code                               0 6
+3===indexBuffer=44==Transaction Amount                            0 12
+4===indexBuffer=56==Reconciliation Amount                         0 12
+5===indexBuffer=68==Cardholder Billing Amount                     0 12
+8===indexBuffer=80==Conversion Rate Reconciliation                0 8
+9===indexBuffer=88==Conversion Rate Cardholder Billing            0 8
+11===indexBuffer=96==Date and Time, Local Transaction              0 12
+21===indexBuffer=108==Point of Service Data Code                    0 12
+22===indexBuffer=120==Card Sequence Number                          0 3
+23===indexBuffer=123==Function Code                                 0 3
+25===indexBuffer=126==MCC                                           0 4
+30===indexBuffer=130==Acquirer Reference Data                       2 23
+32===indexBuffer=155==Forwarding Institution Identification Code    2 6
+36===indexBuffer=163==Retrieval Reference Number                    0 12
+37===indexBuffer=175==Approval Code                                 0 6
+41===indexBuffer=181==Card Acceptor ID Code                         0 15
+42===indexBuffer=196==Card Acceptor Location                        2 65
+47===indexBuffer=263==Additional Data                               3 255
+48===indexBuffer=521==Currency Code Transaction                     0 3
+49===indexBuffer=524==Currency Code Reconciliation                  0 3
+50===indexBuffer=527==Currency Code Billing                         0 3
+54===indexBuffer=530==ICC System Related Data                       3 107
+62===indexBuffer=640==Transaction Life Cycle ID                     3 160

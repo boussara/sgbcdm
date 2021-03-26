@@ -1,0 +1,216 @@
+
+
+
+	ApplicationPart Log{
+		Module log{
+			
+			Entity LogLogType{
+				databaseTable="LOG_LOG_TYPE"
+				hint="idSequence=EPYT_GOL_GOLLOT_X"
+				
+				Long id    databaseColumn="LOT_ID" 
+				String lotCode length="10" nullable databaseColumn="LOT_CODE"  hint="visible=true,toString" 
+				String lotName length="64" nullable databaseColumn="LOT_NAME"  hint="visible=true,toString" 
+				
+				//- List<@LogNwsLog> lotLogId <-> logLotId
+				
+				Repository LogLogTypeRepository {
+					findById;
+					save;
+					delete;
+					findAll;
+					findByCondition;
+					PagedResult<@LogLogType> findAll(PagingParameter pagingParameter);
+					PagedResult<@LogLogType> findByCondition(PagingParameter pagingParameter);
+				}
+				
+			}
+			
+			Service LogLogTypeService {
+				hint="ver_old"
+				findById => LogLogTypeRepository.findById;
+				findAll => LogLogTypeRepository.findAll;
+				save => LogLogTypeRepository.save;
+				delete => LogLogTypeRepository.delete;
+				PagedResult<@LogLogType> search(@LogLogTypeDTO aua);
+				PagedResult<@LogLogType> findAll(PagingParameter pagingParameter);
+				@LogLogType findLogLogTypeByLotCode(String code) 
+				hint="gen,conditions=lotCode&${code},orderBy=id,nullable";
+			}
+			
+			DataTransferObject LogLogTypeDTO {
+				hint="for=search,entity=LogLogType"
+				String lotCode hint="" 
+				String lotName hint="" 
+			}
+			
+			DataTransferObject LogLogTypeMergeDTO {
+				hint="for=merge,entity=LogLogType"
+				String lotCode hint="" 
+				String lotName hint="" 
+			}
+			
+			Entity LogMsgDetail{
+				databaseTable="LOG_MSG_DETAIL"
+				hint="idSequence=LIATED_GSM_GOLLMD_X"
+				
+				Long id    databaseColumn="LMD_ID" 
+				String lmdMsg length="128" nullable databaseColumn="LMD_MSG"  hint="visible=true,toString" 
+				
+					- @LogNwsLog lmdLogId  /*<-> logLmdId*/ nullable fetch="lazy" 							
+				
+				
+				Repository LogMsgDetailRepository {
+					findById;
+					save;
+					delete;
+					findAll;
+					findByCondition;
+					PagedResult<@LogMsgDetail> findAll(PagingParameter pagingParameter);
+					PagedResult<@LogMsgDetail> findByCondition(PagingParameter pagingParameter);
+				}
+				
+			}
+			
+			Service LogMsgDetailService {
+				
+				findById => LogMsgDetailRepository.findById;
+				findAll => LogMsgDetailRepository.findAll;
+				save => LogMsgDetailRepository.save;
+				delete => LogMsgDetailRepository.delete;
+				PagedResult<@LogMsgDetail> search(@LogMsgDetailDTO aua);
+				PagedResult<@LogMsgDetail> findAll(PagingParameter pagingParameter);
+			}
+			
+			DataTransferObject LogMsgDetailDTO {
+				hint="for=search,entity=LogMsgDetail"
+				String lmdMsg hint="" 
+			}
+			
+			DataTransferObject LogMsgDetailMergeDTO {
+				hint="for=merge,entity=LogMsgDetail"
+				String lmdMsg hint="" 
+				String lmdLogId hint="type=system,view=ComboBox"
+			}
+			
+			Entity LogNwsLog{
+				databaseTable="LOG_NWS_LOG"
+				hint="idSequence=GOL_SWN_GOLLOG_X"
+				
+				Long id    databaseColumn="LOG_ID" 
+				- @LogLogType logLotId  /*<-> lotLogId*/ hint="visible=true,"
+				- @LogNwsSession logSesId  <-> sesLogId hint="visible=true,"
+				
+				Date logDate  nullable databaseColumn="LOG_DATE"  hint="visible=true,toString" 
+				String logModCode length="10" nullable databaseColumn="LOG_MOD_CODE"  hint="visible=true,toString" 
+				String logFuncCode length="10" nullable databaseColumn="LOG_FUNC_CODE"  hint="visible=true,toString" 
+				String logMsgDetail length="64" nullable databaseColumn="LOG_MSG_DETAIL" hint="visible=true,toString" 
+				String logUpdData length="32" nullable databaseColumn="LOG_UPD_DATA"  hint="visible=true"
+				String logUpdRef length="32" nullable databaseColumn="LOG_UPD_REF"  hint="visible=true"
+				String logUpdOld length="32" nullable databaseColumn="LOG_UPD_OLD"  hint="visible=true"
+				String logUpdNew length="32" nullable databaseColumn="LOG_UPD_NEW" hint="visible=true"
+										
+				
+				//- List<@LogMsgDetail> logLmdId <-> lmdLogId
+				
+				Repository LogNwsLogRepository {
+					findById;
+					save;
+					delete;
+					findAll;
+					findByCondition;
+					PagedResult<@LogNwsLog> findAll(PagingParameter pagingParameter);
+					PagedResult<@LogNwsLog> findByCondition(PagingParameter pagingParameter);
+				}
+				
+			}
+			
+			Service LogNwsLogService {
+				
+				findById => LogNwsLogRepository.findById;
+				findAll => LogNwsLogRepository.findAll;
+				save => LogNwsLogRepository.save;
+				delete => LogNwsLogRepository.delete;
+				PagedResult<@LogNwsLog> search(@LogNwsLogDTO aua);
+				PagedResult<@LogNwsLog> findAll(PagingParameter pagingParameter);
+			}
+			
+			DataTransferObject LogNwsLogDTO {
+				hint="for=search,entity=LogNwsLog"
+				String logDate hint="" 
+				String logModCode hint="" 
+				String logFuncCode hint="" 
+			}
+			
+			DataTransferObject LogNwsLogMergeDTO {
+				hint="for=merge,entity=LogNwsLog"
+				//String logSesId hint="type=system,view=hidden"
+				String logLotId hint="type=system,view=ComboBox"
+				String logDate hint="" 
+				String logModCode hint="" 
+				String logFuncCode hint="" 
+				String logMsgDetail hint="" 
+				String logUpdData hint="" 
+				String logUpdRef hint="" 
+				String logUpdOld hint="" 
+				String logUpdNew hint="" 				
+			}
+			
+			Entity LogNwsSession{
+				databaseTable="LOG_NWS_SESSION"
+				hint="idSequence=NOISSES_SWN_GOLSES_X"
+				
+				Long id    databaseColumn="SES_ID" 
+				String sesUser length="32" nullable databaseColumn="SES_USER"  hint="visible=true,toString" 
+				String sesIp length="32" nullable databaseColumn="SES_IP"  hint="visible=true" 
+				Date sesStart  nullable databaseColumn="SES_START"  hint="visible=true" 
+				Date sesEnd  nullable databaseColumn="SES_END"   hint="visible=true"
+				Long sesStatus  nullable databaseColumn="SES_STATUS"  hint="visible=true"
+				
+				- List<@LogNwsLog> sesLogId <-> logSesId
+				
+				Repository LogNwsSessionRepository {
+					findById;
+					save;
+					delete;
+					findAll;
+					findByCondition;
+					PagedResult<@LogNwsSession> findAll(PagingParameter pagingParameter);
+					PagedResult<@LogNwsSession> findByCondition(PagingParameter pagingParameter);
+				}
+				
+			}
+			
+			Service LogNwsSessionService {
+				hint="ver_old"
+				findById => LogNwsSessionRepository.findById;
+				findAll => LogNwsSessionRepository.findAll;
+				save => LogNwsSessionRepository.save;
+				delete => LogNwsSessionRepository.delete;
+				PagedResult<@LogNwsSession> search(@LogNwsSessionDTO aua);
+				PagedResult<@LogNwsSession> findAll(PagingParameter pagingParameter);
+				List<@LogNwsSession> findOpenedLogNwsSession4User(String userlogin)
+				hint="gen,conditions=[sesUser:${userlogin}&sesEnd:Null],orderBy=id,nullable";
+			}
+			
+			DataTransferObject LogNwsSessionDTO {
+				hint="for=search,entity=LogNwsSession"
+				String sesUser hint="" 
+				String sesIp hint="" 
+				String sesStart hint="" 
+				String sesEnd hint="" 
+				String sesStatus
+			}
+			
+			DataTransferObject LogNwsSessionMergeDTO {
+				hint="for=merge,entity=LogNwsSession"
+				String sesUser hint="" 
+				String sesIp hint="" 
+				String sesStart hint="" 
+				String sesEnd hint="" 
+				String sesStatus hint="type=enum,values=AllSesStatus,items=1&Successful:2&Unsuccessful" 
+				String sesLogId hint="tab=Lister_les_logs,type=system,view=InModal"
+			}
+			
+		}
+	}

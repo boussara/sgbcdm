@@ -1,0 +1,10 @@
+732013327511
+734614909556
+734712402838
+
+11/
+10/
+
+oracle/Bureau/reconcile/auth_cmi
+
+cardholder_auth_inter

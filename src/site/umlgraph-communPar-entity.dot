@@ -1,0 +1,104 @@
+digraph G {
+	fontsize = 10
+	node [
+		fontsize = 10
+		fontname="arial"
+		shape=plaintext
+	]
+
+	edge [
+		fontsize = 10
+	]
+subgraph clustercommunPar {
+	label = "communPar"  
+	ParEntity [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParEntity </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + entAbrevName : String </td></tr>
+	<tr><td align="left"> + entName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParEntityType [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParEntityType </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + etyName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParJRParameters [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParJRParameters </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + pjrName : String </td></tr>
+	<tr><td align="left"> + pjrCode : String </td></tr>
+	<tr><td align="left"> + pjrClass : String </td></tr>
+	<tr><td align="left"> + pjrLst : String </td></tr>
+	<tr><td align="left"> + pjrObl : String </td></tr>
+	<tr><td align="left"> + pjrComment : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParParameters [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParParameters </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + parKey : String </td></tr>
+	<tr><td align="left"> + parValue : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParReport [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParReport </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + repCode : String </td></tr>
+	<tr><td align="left"> + repTitle : String </td></tr>
+	<tr><td align="left"> + repFile : String </td></tr>
+	<tr><td align="left"> + repApmId : AdmAppModule </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+edge [arrowhead = "empty"]
+edge [arrowhead = "none"]
+
+
+edge [arrowtail="none" arrowhead = "open" headlabel="entEntId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParEntity -> ParEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="entEtyId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParEntity -> ParEntityType
+
+edge [arrowtail="none" arrowhead = "none" headlabel="pjrRepId" taillabel="0..n repPjrId" labeldistance="2.0" labelangle="-30"]
+
+ParJRParameters -> ParReport
+
+edge [arrowtail="none" arrowhead = "open" headlabel="parEntId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParParameters -> ParEntity
+}

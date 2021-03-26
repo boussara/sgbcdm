@@ -1,0 +1,4660 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style type="text/css" media="screen,print">   
+		@import url("DomainModelDoc.css");
+		</style> 
+<title>Summary Documentation of adm module(Sgbcdm)</title> 
+</head>
+<body>
+<div id="wrap">
+		<a name="module_adm"></a>
+<h1>Summary Documentation of adm module <a href="DomainModelDoc.html">(Sgbcdm)</a></h1>
+
+
+<p></p>
+<div id="menu">
+		<ul>
+			<li><a href="DomainModelDoc-adm.html#AdmAppFuncGrp">AdmAppFuncGrp</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmAppFuncGrpDTO">AdmAppFuncGrpDTO</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmAppFuncGrpMergeDTO">AdmAppFuncGrpMergeDTO</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmAppFuncGrpService">AdmAppFuncGrpService</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmAppFunction">AdmAppFunction</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmAppFunctionDTO">AdmAppFunctionDTO</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmAppFunctionMergeDTO">AdmAppFunctionMergeDTO</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmAppFunctionService">AdmAppFunctionService</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmAppModule">AdmAppModule</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmAppModuleDTO">AdmAppModuleDTO</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmAppModuleMergeDTO">AdmAppModuleMergeDTO</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmAppModuleService">AdmAppModuleService</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmParameters">AdmParameters</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmParametersDTO">AdmParametersDTO</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmParametersMergeDTO">AdmParametersMergeDTO</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmParametersService">AdmParametersService</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmUserAccount">AdmUserAccount</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmUserAccountDTO">AdmUserAccountDTO</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmUserAccountMergeDTO">AdmUserAccountMergeDTO</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmUserAccountService">AdmUserAccountService</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmUserEntity">AdmUserEntity</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmUserEntityDTO">AdmUserEntityDTO</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmUserEntityMergeDTO">AdmUserEntityMergeDTO</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmUserEntityService">AdmUserEntityService</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmUserPassHist">AdmUserPassHist</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmUserPassHistDTO">AdmUserPassHistDTO</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmUserPassHistMergeDTO">AdmUserPassHistMergeDTO</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmUserPassHistService">AdmUserPassHistService</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmUserRole">AdmUserRole</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmUserRoleDTO">AdmUserRoleDTO</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmUserRoleMergeDTO">AdmUserRoleMergeDTO</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmUserRoleService">AdmUserRoleService</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmUsrApf">AdmUsrApf</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmUsrApfDTO">AdmUsrApfDTO</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmUsrApfMergeDTO">AdmUsrApfMergeDTO</a></li>
+			<li><a href="DomainModelDoc-adm.html#AdmUsrApfService">AdmUsrApfService</a></li>
+			<li><a href="DomainModelDoc-adm.html#TempDTO">TempDTO</a></li>
+		</ul>
+</div>
+<div id="module_graph">
+    <hr/>
+    <p><b>All in adm</b></p>
+	<a href="umlgraph-adm.dot.png">
+	<img src="umlgraph-adm.dot.png" />
+	</a>
+	<hr/>
+	<p><b>Persistent Domain in adm</b></p>
+	<a href="umlgraph-adm-entity.dot.png">
+	<img src="umlgraph-adm-entity.dot.png" />
+	</a>
+</div>
+
+<div id="services">
+<hr/>
+<a name="AdmAppFuncGrpService"></a>
+<h3>AdmAppFuncGrpService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmAppFuncGrp">AdmAppFuncGrp</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-adm.html#AdmAppFuncGrp">AdmAppFuncGrp</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-adm.html#AdmAppFuncGrp">AdmAppFuncGrp</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmAppFuncGrp">AdmAppFuncGrp</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByAfgApmId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmAppModule">AdmAppModule</a>
+ apmId</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-adm.html#AdmAppFuncGrp">AdmAppFuncGrp</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmAppFuncGrp">AdmAppFuncGrp</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmAppFuncGrp">AdmAppFuncGrp</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmAppFuncGrp">AdmAppFuncGrp</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmAppFuncGrpDTO">AdmAppFuncGrpDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmAppFuncGrp">AdmAppFuncGrp</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="AdmAppFunctionService"></a>
+<h3>AdmAppFunctionService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmAppFunction">AdmAppFunction</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-adm.html#AdmAppFunction">AdmAppFunction</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-adm.html#AdmAppFunction">AdmAppFunction</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmAppFunction">AdmAppFunction</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByApfAfgId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmAppFuncGrp">AdmAppFuncGrp</a>
+ afgId</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-adm.html#AdmAppFunction">AdmAppFunction</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByApfApmId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmAppModule">AdmAppModule</a>
+ apmId</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-adm.html#AdmAppFunction">AdmAppFunction</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByApfCode</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ code</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmAppFunction">AdmAppFunction</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmAppFunction">AdmAppFunction</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByUrl</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ uri</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmAppFunction">AdmAppFunction</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmAppFunction">AdmAppFunction</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmAppFunction">AdmAppFunction</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmAppFunctionDTO">AdmAppFunctionDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmAppFunction">AdmAppFunction</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="AdmAppModuleService"></a>
+<h3>AdmAppModuleService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmAppModule">AdmAppModule</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-adm.html#AdmAppModule">AdmAppModule</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-adm.html#AdmAppModule">AdmAppModule</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmAppModule">AdmAppModule</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmAppModule">AdmAppModule</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmAppModule">AdmAppModule</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmAppModule">AdmAppModule</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmAppModuleDTO">AdmAppModuleDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmAppModule">AdmAppModule</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="AdmParametersService"></a>
+<h3>AdmParametersService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmParameters">AdmParameters</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-adm.html#AdmParameters">AdmParameters</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-adm.html#AdmParameters">AdmParameters</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmParameters">AdmParameters</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmParameters">AdmParameters</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmParameters">AdmParameters</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmParameters">AdmParameters</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmParametersDTO">AdmParametersDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmParameters">AdmParameters</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="AdmUserAccountService"></a>
+<h3>AdmUserAccountService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmUserAccount">AdmUserAccount</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-adm.html#AdmUserAccount">AdmUserAccount</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-adm.html#AdmUserAccount">AdmUserAccount</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUserAccount">AdmUserAccount</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUserAccount">AdmUserAccount</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findUserAccountByUsaLogin</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ usaLogin</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUserAccount">AdmUserAccount</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmUserAccount">AdmUserAccount</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUserAccount">AdmUserAccount</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmUserAccountDTO">AdmUserAccountDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUserAccount">AdmUserAccount</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="AdmUserEntityService"></a>
+<h3>AdmUserEntityService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmUserEntity">AdmUserEntity</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-adm.html#AdmUserEntity">AdmUserEntity</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-adm.html#AdmUserEntity">AdmUserEntity</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUserEntity">AdmUserEntity</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUserEntity">AdmUserEntity</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmUserEntity">AdmUserEntity</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUserEntity">AdmUserEntity</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmUserEntityDTO">AdmUserEntityDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUserEntity">AdmUserEntity</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="AdmUserPassHistService"></a>
+<h3>AdmUserPassHistService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmUserPassHist">AdmUserPassHist</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-adm.html#AdmUserPassHist">AdmUserPassHist</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-adm.html#AdmUserPassHist">AdmUserPassHist</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUserPassHist">AdmUserPassHist</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUserPassHist">AdmUserPassHist</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmUserPassHist">AdmUserPassHist</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUserPassHist">AdmUserPassHist</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmUserPassHistDTO">AdmUserPassHistDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUserPassHist">AdmUserPassHist</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="AdmUserRoleService"></a>
+<h3>AdmUserRoleService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmUserRole">AdmUserRole</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-adm.html#AdmUserRole">AdmUserRole</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-adm.html#AdmUserRole">AdmUserRole</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUserRole">AdmUserRole</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUserRole">AdmUserRole</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmUserRole">AdmUserRole</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUserRole">AdmUserRole</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmUserRoleDTO">AdmUserRoleDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUserRole">AdmUserRole</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="AdmUsrApfService"></a>
+<h3>AdmUsrApfService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmUsrApf">AdmUsrApf</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-adm.html#AdmUsrApf">AdmUsrApf</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-adm.html#AdmUsrApf">AdmUsrApf</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUsrApf">AdmUsrApf</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUsrApf">AdmUsrApf</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByuspUsr</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmUserRole">AdmUserRole</a>
+ usrId</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-adm.html#AdmUsrApf">AdmUsrApf</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByuspUsrUspApfId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmUserRole">AdmUserRole</a>
+ usrId</li>
+<li><a href="DomainModelDoc-adm.html#AdmAppFunction">AdmAppFunction</a>
+ apfId</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUsrApf">AdmUsrApf</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmUsrApf">AdmUsrApf</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUsrApf">AdmUsrApf</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-adm.html#AdmUsrApfDTO">AdmUsrApfDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-adm.html#AdmUsrApf">AdmUsrApf</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+</div>
+<div id="consumers">
+</div>
+<div id="domainObjects">
+<a name="AdmAppFuncGrp"></a>
+<h3>AdmAppFuncGrp</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>afgApfId</td>
+	<td>List&lt;<a href="DomainModelDoc-adm.html#AdmAppFunction">AdmAppFunction</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>afgApmId</td>
+	<td><a href="DomainModelDoc-adm.html#AdmAppModule">AdmAppModule</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>afgCode</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>afgMenuId</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>afgName</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmAppFuncGrpDTO"></a>
+<h3>AdmAppFuncGrpDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>afgApmId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>afgCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>afgMenuId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>afgName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_afgMenuId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmAppFuncGrpMergeDTO"></a>
+<h3>AdmAppFuncGrpMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>afgApmId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>afgCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>afgMenuId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>afgName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmAppFunction"></a>
+<h3>AdmAppFunction</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>apfActive</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apfAfgId</td>
+	<td><a href="DomainModelDoc-adm.html#AdmAppFuncGrp">AdmAppFuncGrp</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apfApmId</td>
+	<td><a href="DomainModelDoc-adm.html#AdmAppModule">AdmAppModule</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apfCode</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apfMenuId</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apfName</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apfPci</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apfUrl</td>
+	<td>String</td>
+	<td>128</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apfUspId</td>
+	<td>List&lt;<a href="DomainModelDoc-adm.html#AdmUsrApf">AdmUsrApf</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmAppFunctionDTO"></a>
+<h3>AdmAppFunctionDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>apfAfgId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apfApmId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apfApmId1</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apfCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apfName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmAppFunctionMergeDTO"></a>
+<h3>AdmAppFunctionMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>apfActive</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apfAfgId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apfApmId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apfCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apfMenuId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apfName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apfPci</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apfUrl</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmAppModule"></a>
+<h3>AdmAppModule</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>apmAfgId</td>
+	<td>List&lt;<a href="DomainModelDoc-adm.html#AdmAppFuncGrp">AdmAppFuncGrp</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apmApfId</td>
+	<td>List&lt;<a href="DomainModelDoc-adm.html#AdmAppFunction">AdmAppFunction</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apmCode</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apmMenuId</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apmName</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmAppModuleDTO"></a>
+<h3>AdmAppModuleDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>apmCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apmName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmAppModuleMergeDTO"></a>
+<h3>AdmAppModuleMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>apmCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apmMenuId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>apmName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmParameters"></a>
+<h3>AdmParameters</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>parAttemptNbr</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>parLockTime</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>parPassExpr</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>parPassHistNbr</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>parSesTime</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmParametersDTO"></a>
+<h3>AdmParametersDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_parAttemptNbr</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_parPassExpr</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_parPassHistNbr</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>parAttemptNbr</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>parPassExpr</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>parPassHistNbr</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmParametersMergeDTO"></a>
+<h3>AdmParametersMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>parAttemptNbr</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>parLockTime</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>parPassExpr</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>parPassHistNbr</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>parSesTime</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmUserAccount"></a>
+<h3>AdmUserAccount</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>usaActif</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaCivility</td>
+	<td>String</td>
+	<td>5</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaEntId</td>
+	<td><a href="DomainModelDoc-communPar.html#ParEntity">ParEntity</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaFirst</td>
+	<td>String</td>
+	<td>128</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaLast</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaLockDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaLocked</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaLogin</td>
+	<td>String</td>
+	<td>32</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaPassDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaPassword</td>
+	<td>String</td>
+	<td>128</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaPbk</td>
+	<td>Blob</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaPci</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaPvk</td>
+	<td>Blob</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaUnsucLog</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaUsr</td>
+	<td>List&lt;<a href="DomainModelDoc-adm.html#AdmUserRole">AdmUserRole</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmUserAccountDTO"></a>
+<h3>AdmUserAccountDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaActif</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaCivility</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaEntId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaFirst</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaLast</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmUserAccountMergeDTO"></a>
+<h3>AdmUserAccountMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>usaActif</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaCivility</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaEntId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaFirst</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaLast</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaLocked</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaLogin</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaPasswordConfirm</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaPasswordNew</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaPasswordOld</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaPci</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usaUsr</td>
+	<td>String []</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmUserEntity"></a>
+<h3>AdmUserEntity</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>uenEntId</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uenType</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uenUsaId</td>
+	<td><a href="DomainModelDoc-adm.html#AdmUserAccount">AdmUserAccount</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmUserEntityDTO"></a>
+<h3>AdmUserEntityDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_uenEntId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uenEntId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uenType</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uenUsaId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmUserEntityMergeDTO"></a>
+<h3>AdmUserEntityMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>uenEntId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uenType</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uenUsaId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmUserPassHist"></a>
+<h3>AdmUserPassHist</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>uphDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uphPassword</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uphUsaId</td>
+	<td><a href="DomainModelDoc-adm.html#AdmUserAccount">AdmUserAccount</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmUserPassHistDTO"></a>
+<h3>AdmUserPassHistDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_uphDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uphDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uphPassword</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uphUsaId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmUserPassHistMergeDTO"></a>
+<h3>AdmUserPassHistMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>uphDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uphPassword</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uphUsaId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmUserRole"></a>
+<h3>AdmUserRole</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>usrDescription</td>
+	<td>String</td>
+	<td>128</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usrName</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usrUsa</td>
+	<td>List&lt;<a href="DomainModelDoc-adm.html#AdmUserAccount">AdmUserAccount</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usrUspId</td>
+	<td>List&lt;<a href="DomainModelDoc-adm.html#AdmUsrApf">AdmUsrApf</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmUserRoleDTO"></a>
+<h3>AdmUserRoleDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usrName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmUserRoleMergeDTO"></a>
+<h3>AdmUserRoleMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>entities</td>
+	<td>List&lt;<a href="DomainModelDoc-adm.html#TempDTO">TempDTO</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>taille</td>
+	<td>List&lt;Integer&gt;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usrDescription</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usrName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>usrUspId</td>
+	<td>String []</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmUsrApf"></a>
+<h3>AdmUsrApf</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>uspApfId</td>
+	<td><a href="DomainModelDoc-adm.html#AdmAppFunction">AdmAppFunction</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspApfMenuId</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspAsPDF</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspCreate</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspDelete</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspExport</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspRead</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspReport</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspUpdate</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspUsrId</td>
+	<td><a href="DomainModelDoc-adm.html#AdmUserRole">AdmUserRole</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspValidate</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspVerify</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmUsrApfDTO"></a>
+<h3>AdmUsrApfDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspApfId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspCreate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspRead</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspUpdate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspUsrId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="AdmUsrApfMergeDTO"></a>
+<h3>AdmUsrApfMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>all</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>uspApfId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspAsPDF</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspCreate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspDelete</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspExport</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspRead</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspReport</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspUpdate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspUsrId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspValidate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspVerify</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="TempDTO"></a>
+<h3>TempDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>ongletTitre</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>taille</td>
+	<td>List&lt;Integer&gt;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uspUsrId</td>
+	<td>List&lt;<a href="DomainModelDoc-adm.html#AdmUsrApf">AdmUsrApf</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+</div>
+
+</div>
+</body>
+</html>	

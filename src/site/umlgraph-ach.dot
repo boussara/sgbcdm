@@ -1,0 +1,3570 @@
+digraph G {
+	fontsize = 10
+	node [
+		fontsize = 10
+		fontname="arial"
+		shape=plaintext
+	]
+
+	edge [
+		fontsize = 10
+	]
+subgraph clusterach {
+	label = "ach"  
+	AchAchatAttachService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatAttachService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatAvenantService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatAvenantService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatBordService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatBordService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByAabName</td></tr>			
+	<tr><td align="left">findByAabUser</td></tr>			
+	<tr><td align="left">findByAabDate</td></tr>			
+	<tr><td align="left">findByAabDoc</td></tr>			
+	<tr><td align="left">findByAabAchId</td></tr>			
+	<tr><td align="left">findByAabAbtId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatDecisionService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatDecisionService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatExelService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatExelService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatLotService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatLotService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByAloBdeFile</td></tr>			
+	<tr><td align="left">executeQuery</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatMemoService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatMemoService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByDepId</td></tr>			
+	<tr><td align="left">getAllSGM</td></tr>			
+	<tr><td align="left">getAllSM</td></tr>			
+	<tr><td align="left">getAllCI</td></tr>			
+	<tr><td align="left">getAllTM</td></tr>			
+	<tr><td align="left">getAllAr</td></tr>			
+	<tr><td align="left">filterSGM</td></tr>			
+	<tr><td align="left">filterSM</td></tr>			
+	<tr><td align="left">filterCI</td></tr>			
+	<tr><td align="left">filterTM</td></tr>			
+	<tr><td align="left">filterAr</td></tr>			
+	<tr><td align="left">findByAchCode</td></tr>			
+	<tr><td align="left">findByAchName</td></tr>			
+	<tr><td align="left">findByAchDemDate</td></tr>			
+	<tr><td align="left">findByAchIsAlloti</td></tr>			
+	<tr><td align="left">findByAchLotNbr</td></tr>			
+	<tr><td align="left">findByAchDateDebut</td></tr>			
+	<tr><td align="left">findByAchDateFin</td></tr>			
+	<tr><td align="left">findByAchDelaiExe</td></tr>			
+	<tr><td align="left">findByAchDelaiUnit</td></tr>			
+	<tr><td align="left">findByAchVisite</td></tr>			
+	<tr><td align="left">findByAchLieuVisite</td></tr>			
+	<tr><td align="left">findByAchDateVisite</td></tr>			
+	<tr><td align="left">findByAchEnvTrait</td></tr>			
+	<tr><td align="left">findByAchCurStatus</td></tr>			
+	<tr><td align="left">findByAchCurStatusDate</td></tr>			
+	<tr><td align="left">findByAchCurDecision</td></tr>			
+	<tr><td align="left">findByAchNumAo</td></tr>			
+	<tr><td align="left">findByAchDateOuv</td></tr>			
+	<tr><td align="left">findByAchLieuOuv</td></tr>			
+	<tr><td align="left">findByAchLieuRetDos</td></tr>			
+	<tr><td align="left">findByAchLieuDepPlis</td></tr>			
+	<tr><td align="left">findByAchLieuDepEch</td></tr>			
+	<tr><td align="left">findByAchDateDep</td></tr>			
+	<tr><td align="left">findByAchPubUrl1</td></tr>			
+	<tr><td align="left">findByAchPubUrl2</td></tr>			
+	<tr><td align="left">findByAchPrixAquis</td></tr>			
+	<tr><td align="left">findByAchIsQc</td></tr>			
+	<tr><td align="left">findByAchNumRc</td></tr>			
+	<tr><td align="left">findByAchTrvSecteur</td></tr>			
+	<tr><td align="left">findByAchTrvClasse</td></tr>			
+	<tr><td align="left">findByAchTrvQualif</td></tr>			
+	<tr><td align="left">findByAchGeoActivite</td></tr>			
+	<tr><td align="left">findByAchGeoQualif</td></tr>			
+	<tr><td align="left">findByAchGeoCategorie</td></tr>			
+	<tr><td align="left">findByAchEntId</td></tr>			
+	<tr><td align="left">findByAchBdtId</td></tr>			
+	<tr><td align="left">findByAchPexId</td></tr>			
+	<tr><td align="left">findByAchAmpId</td></tr>			
+	<tr><td align="left">findByAchAtdId</td></tr>			
+	<tr><td align="left">findByAchAstId</td></tr>			
+	<tr><td align="left">findByAchCopId</td></tr>			
+	<tr><td align="left">findByAchCprId</td></tr>			
+	<tr><td align="left">findByAchCurAenId</td></tr>			
+	<tr><td align="left">findByAchMopId</td></tr>			
+	<tr><td align="left">findByAchMprId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatStateService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatStateService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAgrementCatService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAgrementCatService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAgrementListService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAgrementListService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAspPresenceService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAspPresenceService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByAppPresent</td></tr>			
+	<tr><td align="left">findByAppAspId</td></tr>			
+	<tr><td align="left">findByAppAcmId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAspPublicationService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAspPublicationService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByAapRem</td></tr>			
+	<tr><td align="left">findByAapInserted</td></tr>			
+	<tr><td align="left">findByAapAspId</td></tr>			
+	<tr><td align="left">findByAapApbId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAspReserveService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAspReserveService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByAreObjet</td></tr>			
+	<tr><td align="left">findByAreAspId</td></tr>			
+	<tr><td align="left">findByAreAcmId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchBdeService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchBdeService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByAbeNum</td></tr>			
+	<tr><td align="left">findByAbeLabel</td></tr>			
+	<tr><td align="left">findByAbeUnit</td></tr>			
+	<tr><td align="left">findByAbeQte</td></tr>			
+	<tr><td align="left">findByAbePuHt</td></tr>			
+	<tr><td align="left">findByAbeTva</td></tr>			
+	<tr><td align="left">findByAchAloId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchBordDetService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchBordDetService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByAbdCNum</td></tr>			
+	<tr><td align="left">findByAbdCArticle</td></tr>			
+	<tr><td align="left">findByAbdCUnit</td></tr>			
+	<tr><td align="left">findByAbdCUnitPrice</td></tr>			
+	<tr><td align="left">findByAbdDNum</td></tr>			
+	<tr><td align="left">findByAbdDPres</td></tr>			
+	<tr><td align="left">findByAbdDUnit</td></tr>			
+	<tr><td align="left">findByAbdDAmt</td></tr>			
+	<tr><td align="left">findByAbdDUnitPrice</td></tr>			
+	<tr><td align="left">findByAbdBNum</td></tr>			
+	<tr><td align="left">findByAbdBPres</td></tr>			
+	<tr><td align="left">findByAbdBUnit</td></tr>			
+	<tr><td align="left">findByAbdBUnitPrice</td></tr>			
+	<tr><td align="left">findByAbdENum</td></tr>			
+	<tr><td align="left">findByAbdEPres</td></tr>			
+	<tr><td align="left">findByAbdEUnit</td></tr>			
+	<tr><td align="left">findByAbdEAmt</td></tr>			
+	<tr><td align="left">findByAbdEUnitPrice</td></tr>			
+	<tr><td align="left">findByAbdDTotalPrice</td></tr>			
+	<tr><td align="left">findByAbdETotalPrice</td></tr>			
+	<tr><td align="left">findByAbdFNum</td></tr>			
+	<tr><td align="left">findByAbdFPres</td></tr>			
+	<tr><td align="left">findByAbdFIncPrice</td></tr>			
+	<tr><td align="left">findByAbdGNum</td></tr>			
+	<tr><td align="left">findByAbdGPres</td></tr>			
+	<tr><td align="left">findByAbdGIncAmt</td></tr>			
+	<tr><td align="left">findByAbdGIncPrice</td></tr>			
+	<tr><td align="left">findByAbdGTotalPrice</td></tr>			
+	<tr><td align="left">findByAbdHNum</td></tr>			
+	<tr><td align="left">findByAbdHMatSuppAmt</td></tr>			
+	<tr><td align="left">findByAbdHLabor</td></tr>			
+	<tr><td align="left">findByAbdHHardOperCost</td></tr>			
+	<tr><td align="left">findByAbdHGenCost</td></tr>			
+	<tr><td align="left">findByAbdHTaxes</td></tr>			
+	<tr><td align="left">findByAbdHMarges</td></tr>			
+	<tr><td align="left">findByAbdHTotal</td></tr>			
+	<tr><td align="left">findByAbdAabId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchBordTypeService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchBordTypeService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByAbtCode</td></tr>			
+	<tr><td align="left">findByAbtName</td></tr>			
+	<tr><td align="left">findByAbtDesc</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchCommMemberService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchCommMemberService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchCommissionService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchCommissionService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByAcoStatus</td></tr>			
+	<tr><td align="left">findByAcoDecisionDate</td></tr>			
+	<tr><td align="left">findByAcoDecisionNum</td></tr>			
+	<tr><td align="left">findByAcoAchId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchConcurentService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchConcurentService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByAcrName</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchDelaiPhaseService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchDelaiPhaseService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByAchId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchDemPubService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchDemPubService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByAdpStatus</td></tr>			
+	<tr><td align="left">findByAdpDate</td></tr>			
+	<tr><td align="left">findByAdpDateLimit</td></tr>			
+	<tr><td align="left">findByAdpAchId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchEntityService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchEntityService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">init</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchHasAcmService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchHasAcmService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchJournalService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchJournalService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchMemberGroupService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchMemberGroupService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchModePassService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchModePassService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchPrestationsService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchPrestationsService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByAchId</td></tr>			
+	<tr><td align="left">findByCopCpjId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchProgPrevService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchProgPrevService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchPublicationService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchPublicationService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByApbType</td></tr>			
+	<tr><td align="left">findByApbNumBord</td></tr>			
+	<tr><td align="left">findByApbDateEnv</td></tr>			
+	<tr><td align="left">findByApbUrl</td></tr>			
+	<tr><td align="left">findByApbIsPub</td></tr>			
+	<tr><td align="left">findByApbDatePub</td></tr>			
+	<tr><td align="left">findByApbRem</td></tr>			
+	<tr><td align="left">findByApbNumPub</td></tr>			
+	<tr><td align="left">findByApbAdpId</td></tr>			
+	<tr><td align="left">findByApbAcjId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchSeancePvService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchSeancePvService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByAspDate</td></tr>			
+	<tr><td align="left">findByAspNum</td></tr>			
+	<tr><td align="left">findByAspLocal</td></tr>			
+	<tr><td align="left">findByAspEtat</td></tr>			
+	<tr><td align="left">findByAspAchId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchSoumissionService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchSoumissionService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByAsoType</td></tr>			
+	<tr><td align="left">findByAsoStatus</td></tr>			
+	<tr><td align="left">findByAsoMotifElim</td></tr>			
+	<tr><td align="left">findByAsoReserve</td></tr>			
+	<tr><td align="left">findByAsoMontant</td></tr>			
+	<tr><td align="left">findByAsoAcrId</td></tr>			
+	<tr><td align="left">findByAsoAchId</td></tr>			
+	<tr><td align="left">findByAsoAspId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchSsCommissionService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchSsCommissionService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByAscAspId</td></tr>			
+	<tr><td align="left">findByAscAcmId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchSstypeDepenseService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchSstypeDepenseService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByAstCode</td></tr>			
+	<tr><td align="left">findByAstName</td></tr>			
+	<tr><td align="left">findByAstAtdId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchTypBenService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchTypBenService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByAtbCode</td></tr>			
+	<tr><td align="left">findByAtbName</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchTypeDepenseService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchTypeDepenseService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByAtdCode</td></tr>			
+	<tr><td align="left">findByAtdName</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchTypeDocService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchTypeDocService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByAtdCode</td></tr>			
+	<tr><td align="left">findByAtdName</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchat [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchat </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + achNature : String </td></tr>
+	<tr><td align="left"> + achCode : String </td></tr>
+	<tr><td align="left"> + achName : String </td></tr>
+	<tr><td align="left"> + achDemDate : Date </td></tr>
+	<tr><td align="left"> + achIsAlloti : String </td></tr>
+	<tr><td align="left"> + achLotNbr : Integer </td></tr>
+	<tr><td align="left"> + achDateDebut : Date </td></tr>
+	<tr><td align="left"> + achDateFin : Date </td></tr>
+	<tr><td align="left"> + achDelaiExe : Integer </td></tr>
+	<tr><td align="left"> + achDelaiUnit : String </td></tr>
+	<tr><td align="left"> + achVisite : String </td></tr>
+	<tr><td align="left"> + achLieuVisite : String </td></tr>
+	<tr><td align="left"> + achDateVisite : Date </td></tr>
+	<tr><td align="left"> + achEnvTrait : Date </td></tr>
+	<tr><td align="left"> + achCurStatus : String </td></tr>
+	<tr><td align="left"> + achCurStatusDate : Date </td></tr>
+	<tr><td align="left"> + achCurDecision : String </td></tr>
+	<tr><td align="left"> + achNumAo : String </td></tr>
+	<tr><td align="left"> + achDateOuv : Date </td></tr>
+	<tr><td align="left"> + achLieuOuv : String </td></tr>
+	<tr><td align="left"> + achLieuRetDos : String </td></tr>
+	<tr><td align="left"> + achLieuDepPlis : String </td></tr>
+	<tr><td align="left"> + achLieuDepEch : String </td></tr>
+	<tr><td align="left"> + achDateDep : Date </td></tr>
+	<tr><td align="left"> + achPubUrl1 : String </td></tr>
+	<tr><td align="left"> + achPubUrl2 : String </td></tr>
+	<tr><td align="left"> + achPrixAquis : BigDecimal </td></tr>
+	<tr><td align="left"> + achIsQc : String </td></tr>
+	<tr><td align="left"> + achNumRc : String </td></tr>
+	<tr><td align="left"> + achTrvSecteur : String </td></tr>
+	<tr><td align="left"> + achTrvClasse : String </td></tr>
+	<tr><td align="left"> + achTrvQualif : String </td></tr>
+	<tr><td align="left"> + achGeoActivite : String </td></tr>
+	<tr><td align="left"> + achGeoQualif : String </td></tr>
+	<tr><td align="left"> + achGeoCategorie : String </td></tr>
+	<tr><td align="left"> + achPlafond : BigDecimal </td></tr>
+	<tr><td align="left"> + achMonPenJou : BigDecimal </td></tr>
+	<tr><td align="left"> + achMethode : String </td></tr>
+	<tr><td align="left"> + achNumCon : String </td></tr>
+	<tr><td align="left"> + achEnvPub : String </td></tr>
+	<tr><td align="left"> + achArchTaux : BigDecimal </td></tr>
+	<tr><td align="left"> + achMontEstimation : BigDecimal </td></tr>
+	<tr><td align="left"> + achTVA : BigDecimal </td></tr>
+	<tr><td align="left"> + achRevisionPrix : BigDecimal </td></tr>
+	<tr><td align="left"> + achNaturePrix : String </td></tr>
+	<tr><td align="left"> + achAvecPenalite : String </td></tr>
+	<tr><td align="left"> + achRetenueGaran : String </td></tr>
+	<tr><td align="left"> + achMontCautProv : BigDecimal </td></tr>
+	<tr><td align="left"> + achDeductibleDecompte : String </td></tr>
+	<tr><td align="left"> + achTypeBord : String </td></tr>
+	<tr><td align="left"> + achIndicSupp : String </td></tr>
+	<tr><td align="left"> + achInitiPar : String </td></tr>
+	<tr><td align="left"> + achAvancement : String </td></tr>
+	<tr><td align="left"> + achMontAvancement : BigDecimal </td></tr>
+	<tr><td align="left"> + achHeureOuv : String </td></tr>
+	<tr><td align="left"> + achHeureVisite : String </td></tr>
+	<tr><td align="left"> + achDateDepEch : Date </td></tr>
+	<tr><td align="left"> + achContAgreAssu : String </td></tr>
+	<tr><td align="left"> + achObesevation : String </td></tr>
+	<tr><td align="left"> + achHeureDep : String </td></tr>
+	<tr><td align="left"> + achNbrPhases : Integer </td></tr>
+	<tr><td align="left"> + achDepId : String </td></tr>
+	<tr><td align="left"> + achCatId : TecCatIndex </td></tr>
+	<tr><td align="left"> + achEntId : ParEntity </td></tr>
+	<tr><td align="left"> + achBdtId : PlaBudgetType </td></tr>
+	<tr><td align="left"> + achPexId : ParExercice </td></tr>
+	<tr><td align="left"> + achCopId : PlaCreditOp </td></tr>
+	<tr><td align="left"> + achCprId : PlaCreditPrs </td></tr>
+	<tr><td align="left"> + achMopId : BudMorasseOp </td></tr>
+	<tr><td align="left"> + achMprId : BudMorassePres </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatAttach [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatAttach </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aaaName : String </td></tr>
+	<tr><td align="left"> + aaaUser : String </td></tr>
+	<tr><td align="left"> + aaaDate : Date </td></tr>
+	<tr><td align="left"> + aaaDoc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatAttachDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatAttachDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aaaName : String </td></tr>
+	<tr><td align="left"> + aaaUser : String </td></tr>
+	<tr><td align="left"> + aaaDate : String </td></tr>
+	<tr><td align="left"> + min_aaaDate : String </td></tr>
+	<tr><td align="left"> + aaaAchId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatAttachMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatAttachMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aaaName : String </td></tr>
+	<tr><td align="left"> + aaaUser : String </td></tr>
+	<tr><td align="left"> + aaaDate : String </td></tr>
+	<tr><td align="left"> + aaaDoc : String </td></tr>
+	<tr><td align="left"> + aaaAchId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatAvenant [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatAvenant </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + achNumAvenant : String </td></tr>
+	<tr><td align="left"> + achLoiFin : String </td></tr>
+	<tr><td align="left"> + achDateEff : Date </td></tr>
+	<tr><td align="left"> + achObjet : String </td></tr>
+	<tr><td align="left"> + achSomVal : String </td></tr>
+	<tr><td align="left"> + achBenif : String </td></tr>
+	<tr><td align="left"> + achModRegl : String </td></tr>
+	<tr><td align="left"> + achDelai : String </td></tr>
+	<tr><td align="left"> + achBord : String </td></tr>
+	<tr><td align="left"> + achErrMat : String </td></tr>
+	<tr><td align="left"> + achSomValAct : String </td></tr>
+	<tr><td align="left"> + achBenifAct : String </td></tr>
+	<tr><td align="left"> + achModReglAct : String </td></tr>
+	<tr><td align="left"> + achDelaiAct : String </td></tr>
+	<tr><td align="left"> + achBordAct : String </td></tr>
+	<tr><td align="left"> + achErrMatAct : String </td></tr>
+	<tr><td align="left"> + achSomValMod : String </td></tr>
+	<tr><td align="left"> + achBenifMod : String </td></tr>
+	<tr><td align="left"> + achModReglMod : String </td></tr>
+	<tr><td align="left"> + achDelaiMod : String </td></tr>
+	<tr><td align="left"> + achBordMod : String </td></tr>
+	<tr><td align="left"> + achErrMatMod : String </td></tr>
+	<tr><td align="left"> + achNumDecision : String </td></tr>
+	<tr><td align="left"> + achMotifAug : String </td></tr>
+	<tr><td align="left"> + achAvenantType : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatAvenantDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatAvenantDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + achNumAvenant : String </td></tr>
+	<tr><td align="left"> + achLoiFin : String </td></tr>
+	<tr><td align="left"> + achDateEff : String </td></tr>
+	<tr><td align="left"> + achObjet : String </td></tr>
+	<tr><td align="left"> + achSomVal : String </td></tr>
+	<tr><td align="left"> + achBenif : String </td></tr>
+	<tr><td align="left"> + achModRegl : String </td></tr>
+	<tr><td align="left"> + achDelai : String </td></tr>
+	<tr><td align="left"> + achBord : String </td></tr>
+	<tr><td align="left"> + achErrMat : String </td></tr>
+	<tr><td align="left"> + min_achDateEff : String </td></tr>
+	<tr><td align="left"> + achAchId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatAvenantMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatAvenantMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + achAchId : String </td></tr>
+	<tr><td align="left"> + achNumAvenant : String </td></tr>
+	<tr><td align="left"> + achLoiFin : String </td></tr>
+	<tr><td align="left"> + achDateEff : String </td></tr>
+	<tr><td align="left"> + achObjet : String </td></tr>
+	<tr><td align="left"> + achSomVal : String </td></tr>
+	<tr><td align="left"> + achBenif : String </td></tr>
+	<tr><td align="left"> + achModRegl : String </td></tr>
+	<tr><td align="left"> + achDelai : String </td></tr>
+	<tr><td align="left"> + achBord : String </td></tr>
+	<tr><td align="left"> + achErrMat : String </td></tr>
+	<tr><td align="left"> + achSomValAct : String </td></tr>
+	<tr><td align="left"> + achBenifAct : String </td></tr>
+	<tr><td align="left"> + achModReglAct : String </td></tr>
+	<tr><td align="left"> + achDelaiAct : String </td></tr>
+	<tr><td align="left"> + achBordAct : String </td></tr>
+	<tr><td align="left"> + achErrMatAct : String </td></tr>
+	<tr><td align="left"> + achSomValMod : String </td></tr>
+	<tr><td align="left"> + achBenifMod : String </td></tr>
+	<tr><td align="left"> + achModReglMod : String </td></tr>
+	<tr><td align="left"> + achDelaiMod : String </td></tr>
+	<tr><td align="left"> + achBordMod : String </td></tr>
+	<tr><td align="left"> + achErrMatMod : String </td></tr>
+	<tr><td align="left"> + achNumDecision : String </td></tr>
+	<tr><td align="left"> + achMotifAug : String </td></tr>
+	<tr><td align="left"> + achAvenantType : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatBord [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatBord </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aabName : String </td></tr>
+	<tr><td align="left"> + aabUser : String </td></tr>
+	<tr><td align="left"> + aabDate : Date </td></tr>
+	<tr><td align="left"> + aabDoc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatBordDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatBordDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aabName : String </td></tr>
+	<tr><td align="left"> + aabUser : String </td></tr>
+	<tr><td align="left"> + aabDate : String </td></tr>
+	<tr><td align="left"> + aabAchId1 : String </td></tr>
+	<tr><td align="left"> + aabAbtId1 : String </td></tr>
+	<tr><td align="left"> + min_aabDate : String </td></tr>
+	<tr><td align="left"> + aabAchId : String </td></tr>
+	<tr><td align="left"> + aabAbtId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatBordMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatBordMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aabName : String </td></tr>
+	<tr><td align="left"> + aabUser : String </td></tr>
+	<tr><td align="left"> + aabDate : String </td></tr>
+	<tr><td align="left"> + aabDoc : String </td></tr>
+	<tr><td align="left"> + aabAchId : String </td></tr>
+	<tr><td align="left"> + aabAbtId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + achNature : String </td></tr>
+	<tr><td align="left"> + achCode : String </td></tr>
+	<tr><td align="left"> + achNumCon : String </td></tr>
+	<tr><td align="left"> + achName : String </td></tr>
+	<tr><td align="left"> + achDemDate : String </td></tr>
+	<tr><td align="left"> + achDateDebut : String </td></tr>
+	<tr><td align="left"> + achBdtId1 : String </td></tr>
+	<tr><td align="left"> + achAtdId1 : String </td></tr>
+	<tr><td align="left"> + achPexId1 : String </td></tr>
+	<tr><td align="left"> + achCopId1 : String </td></tr>
+	<tr><td align="left"> + achCprId1 : String </td></tr>
+	<tr><td align="left"> + achNumAo : String </td></tr>
+	<tr><td align="left"> + achDateOuv : String </td></tr>
+	<tr><td align="left"> + achAmpId1 : String </td></tr>
+	<tr><td align="left"> + achCopCode : String </td></tr>
+	<tr><td align="left"> + achCopDesc : String </td></tr>
+	<tr><td align="left"> + min_achDemDate : String </td></tr>
+	<tr><td align="left"> + min_achDateDebut : String </td></tr>
+	<tr><td align="left"> + min_achDateOuv : String </td></tr>
+	<tr><td align="left"> + achCatId : String </td></tr>
+	<tr><td align="left"> + achEntId : String </td></tr>
+	<tr><td align="left"> + achBdtId : String </td></tr>
+	<tr><td align="left"> + achPexId : String </td></tr>
+	<tr><td align="left"> + achAmpId : String </td></tr>
+	<tr><td align="left"> + achAtdId : String </td></tr>
+	<tr><td align="left"> + achAstId : String </td></tr>
+	<tr><td align="left"> + achCopId : String </td></tr>
+	<tr><td align="left"> + achCprId : String </td></tr>
+	<tr><td align="left"> + achCurAenId : String </td></tr>
+	<tr><td align="left"> + achMopId : String </td></tr>
+	<tr><td align="left"> + achMprId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatDecision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatDecision </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + adcStatus : String </td></tr>
+	<tr><td align="left"> + adcDate : Date </td></tr>
+	<tr><td align="left"> + adcRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatDecisionDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatDecisionDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + adcStatus : String </td></tr>
+	<tr><td align="left"> + adcDate : String </td></tr>
+	<tr><td align="left"> + adcRem : String </td></tr>
+	<tr><td align="left"> + min_adcDate : String </td></tr>
+	<tr><td align="left"> + adcAchId : String </td></tr>
+	<tr><td align="left"> + adcAenId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatDecisionMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatDecisionMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + adcStatus : String </td></tr>
+	<tr><td align="left"> + adcDate : String </td></tr>
+	<tr><td align="left"> + adcRem : String </td></tr>
+	<tr><td align="left"> + adcAchId : String </td></tr>
+	<tr><td align="left"> + adcAenId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatExel [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatExel </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aaeNr : String </td></tr>
+	<tr><td align="left"> + aaeDesignation : String </td></tr>
+	<tr><td align="left"> + aaeUnite : String </td></tr>
+	<tr><td align="left"> + aaeQuantite : BigDecimal </td></tr>
+	<tr><td align="left"> + aaeQuantiteBen : BigDecimal </td></tr>
+	<tr><td align="left"> + aaeQuantiteMod : BigDecimal </td></tr>
+	<tr><td align="left"> + aaeQuantiteRet : BigDecimal </td></tr>
+	<tr><td align="left"> + aaeQuantitePay : BigDecimal </td></tr>
+	<tr><td align="left"> + aaeQuantiteRea : BigDecimal </td></tr>
+	<tr><td align="left"> + aaePuHt : BigDecimal </td></tr>
+	<tr><td align="left"> + aaePrixTotal : BigDecimal </td></tr>
+	<tr><td align="left"> + aaeMarges : BigDecimal </td></tr>
+	<tr><td align="left"> + aaeFraisFct : BigDecimal </td></tr>
+	<tr><td align="left"> + aaeFraisGen : BigDecimal </td></tr>
+	<tr><td align="left"> + aaeMainOeuvre : Integer </td></tr>
+	<tr><td align="left"> + aaeMntMatFr : BigDecimal </td></tr>
+	<tr><td align="left"> + aaeTaxes : BigDecimal </td></tr>
+	<tr><td align="left"> + aaeAttId : TecAttachement </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatExelDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatExelDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aaeNr : String </td></tr>
+	<tr><td align="left"> + aaeAchId1 : String </td></tr>
+	<tr><td align="left"> + aaeAloId1 : String </td></tr>
+	<tr><td align="left"> + aaeAvnId1 : String </td></tr>
+	<tr><td align="left"> + aaeDepId1 : String </td></tr>
+	<tr><td align="left"> + aaeAttId1 : String </td></tr>
+	<tr><td align="left"> + aaeAchId : String </td></tr>
+	<tr><td align="left"> + aaeAloId : String </td></tr>
+	<tr><td align="left"> + aaeAttId : String </td></tr>
+	<tr><td align="left"> + aaeAvnId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatExelMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatExelMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aaeNr : String </td></tr>
+	<tr><td align="left"> + aaeDesignation : String </td></tr>
+	<tr><td align="left"> + aaeUnite : String </td></tr>
+	<tr><td align="left"> + aaeQuantite : String </td></tr>
+	<tr><td align="left"> + aaeQuantiteBen : String </td></tr>
+	<tr><td align="left"> + aaeQuantiteMod : String </td></tr>
+	<tr><td align="left"> + aaeQuantiteRet : String </td></tr>
+	<tr><td align="left"> + aaeQuantitePay : String </td></tr>
+	<tr><td align="left"> + aaeQuantiteRea : String </td></tr>
+	<tr><td align="left"> + aaePuHt : String </td></tr>
+	<tr><td align="left"> + aaePrixTotal : String </td></tr>
+	<tr><td align="left"> + aaeMarges : String </td></tr>
+	<tr><td align="left"> + aaeFraisFct : String </td></tr>
+	<tr><td align="left"> + aaeFraisGen : String </td></tr>
+	<tr><td align="left"> + aaeMainOeuvre : String </td></tr>
+	<tr><td align="left"> + aaeMntMatFr : String </td></tr>
+	<tr><td align="left"> + aaeTaxes : String </td></tr>
+	<tr><td align="left"> + aaeAchId : String </td></tr>
+	<tr><td align="left"> + aaeAloId : String </td></tr>
+	<tr><td align="left"> + aaeAttId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatLot [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatLot </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aloCode : String </td></tr>
+	<tr><td align="left"> + aloName : String </td></tr>
+	<tr><td align="left"> + aloOrder : Integer </td></tr>
+	<tr><td align="left"> + aloAmtEstim : BigDecimal </td></tr>
+	<tr><td align="left"> + aloAmtCaut : BigDecimal </td></tr>
+	<tr><td align="left"> + aloBdeFile : String </td></tr>
+	<tr><td align="left"> + aloConcurent : String </td></tr>
+	<tr><td align="left"> + aloMontant : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatLotDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatLotDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aloCode : String </td></tr>
+	<tr><td align="left"> + aloName : String </td></tr>
+	<tr><td align="left"> + aloOrder : String </td></tr>
+	<tr><td align="left"> + min_aloOrder : String </td></tr>
+	<tr><td align="left"> + aloAchId : String </td></tr>
+	<tr><td align="left"> + aloAvnId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatLotMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatLotMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aloCode : String </td></tr>
+	<tr><td align="left"> + aloName : String </td></tr>
+	<tr><td align="left"> + aloOrder : String </td></tr>
+	<tr><td align="left"> + aloAmtEstim : String </td></tr>
+	<tr><td align="left"> + aloAmtCaut : String </td></tr>
+	<tr><td align="left"> + aloBdeFile : String </td></tr>
+	<tr><td align="left"> + aloAchId : String </td></tr>
+	<tr><td align="left"> + aloConcurent : String </td></tr>
+	<tr><td align="left"> + aloMontant : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatMemo [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatMemo </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aamMemo : String </td></tr>
+	<tr><td align="left"> + aamUser : String </td></tr>
+	<tr><td align="left"> + aamDate : Date </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatMemoDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatMemoDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aamMemo : String </td></tr>
+	<tr><td align="left"> + aamUser : String </td></tr>
+	<tr><td align="left"> + aamDate : String </td></tr>
+	<tr><td align="left"> + min_aamDate : String </td></tr>
+	<tr><td align="left"> + aamAchId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatMemoMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatMemoMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aamMemo : String </td></tr>
+	<tr><td align="left"> + aamUser : String </td></tr>
+	<tr><td align="left"> + aamDate : String </td></tr>
+	<tr><td align="left"> + aamAchId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + achNature : String </td></tr>
+	<tr><td align="left"> + achCode : String </td></tr>
+	<tr><td align="left"> + achNumCon : String </td></tr>
+	<tr><td align="left"> + achName : String </td></tr>
+	<tr><td align="left"> + achDemDate : String </td></tr>
+	<tr><td align="left"> + achIsAlloti : String </td></tr>
+	<tr><td align="left"> + achLotNbr : String </td></tr>
+	<tr><td align="left"> + achDateDebut : String </td></tr>
+	<tr><td align="left"> + achDateFin : String </td></tr>
+	<tr><td align="left"> + achDelaiExe : String </td></tr>
+	<tr><td align="left"> + achDelaiUnit : String </td></tr>
+	<tr><td align="left"> + achVisite : String </td></tr>
+	<tr><td align="left"> + achLieuVisite : String </td></tr>
+	<tr><td align="left"> + achDateVisite : String </td></tr>
+	<tr><td align="left"> + achEnvTrait : String </td></tr>
+	<tr><td align="left"> + achCurStatus : String </td></tr>
+	<tr><td align="left"> + achCurStatusDate : String </td></tr>
+	<tr><td align="left"> + achCurDecision : String </td></tr>
+	<tr><td align="left"> + achMethode : String </td></tr>
+	<tr><td align="left"> + achMonPenJou : String </td></tr>
+	<tr><td align="left"> + achNumAo : String </td></tr>
+	<tr><td align="left"> + achDateOuv : String </td></tr>
+	<tr><td align="left"> + achLieuOuv : String </td></tr>
+	<tr><td align="left"> + achLieuRetDos : String </td></tr>
+	<tr><td align="left"> + achLieuDepPlis : String </td></tr>
+	<tr><td align="left"> + achLieuDepEch : String </td></tr>
+	<tr><td align="left"> + achDateDep : String </td></tr>
+	<tr><td align="left"> + achIsQc : String </td></tr>
+	<tr><td align="left"> + achPubUrl1 : String </td></tr>
+	<tr><td align="left"> + achPubUrl2 : String </td></tr>
+	<tr><td align="left"> + achPrixAquis : String </td></tr>
+	<tr><td align="left"> + achArchTaux : String </td></tr>
+	<tr><td align="left"> + achMontEstimation : String </td></tr>
+	<tr><td align="left"> + achTVA : String </td></tr>
+	<tr><td align="left"> + achRevisionPrix : String </td></tr>
+	<tr><td align="left"> + achNaturePrix : String </td></tr>
+	<tr><td align="left"> + achRetenueGaran : String </td></tr>
+	<tr><td align="left"> + achMontCautProv : String </td></tr>
+	<tr><td align="left"> + achDeductibleDecompte : String </td></tr>
+	<tr><td align="left"> + achTypeBord : String </td></tr>
+	<tr><td align="left"> + achIndicSupp : String </td></tr>
+	<tr><td align="left"> + achInitiPar : String </td></tr>
+	<tr><td align="left"> + achAvecPenalite : String </td></tr>
+	<tr><td align="left"> + achCatId : String </td></tr>
+	<tr><td align="left"> + achNumRc : String </td></tr>
+	<tr><td align="left"> + achTrvSecteur : String </td></tr>
+	<tr><td align="left"> + achTrvClasse : String </td></tr>
+	<tr><td align="left"> + achTrvQualif : String </td></tr>
+	<tr><td align="left"> + achGeoActivite : String </td></tr>
+	<tr><td align="left"> + achGeoQualif : String </td></tr>
+	<tr><td align="left"> + achGeoCategorie : String </td></tr>
+	<tr><td align="left"> + achEntId : String </td></tr>
+	<tr><td align="left"> + achBdtId : String </td></tr>
+	<tr><td align="left"> + achPexId : String </td></tr>
+	<tr><td align="left"> + achAmpId : String </td></tr>
+	<tr><td align="left"> + achAtdId : String </td></tr>
+	<tr><td align="left"> + achAstId : String </td></tr>
+	<tr><td align="left"> + achCopId : String </td></tr>
+	<tr><td align="left"> + achCprId : String </td></tr>
+	<tr><td align="left"> + achCurAenId : String </td></tr>
+	<tr><td align="left"> + achAdcId : String </td></tr>
+	<tr><td align="left"> + achEnvPub : String </td></tr>
+	<tr><td align="left"> + achAvancement : String </td></tr>
+	<tr><td align="left"> + achMontAvancement : String </td></tr>
+	<tr><td align="left"> + achMopId : String </td></tr>
+	<tr><td align="left"> + achMprId : String </td></tr>
+	<tr><td align="left"> + idAchAalId : String [] </td></tr>
+	<tr><td align="left"> + achHeureOuv : String </td></tr>
+	<tr><td align="left"> + achHeureVisite : String </td></tr>
+	<tr><td align="left"> + achDateDepEch : String </td></tr>
+	<tr><td align="left"> + achContAgreAssu : String </td></tr>
+	<tr><td align="left"> + achObesevation : String </td></tr>
+	<tr><td align="left"> + achHeureDep : String </td></tr>
+	<tr><td align="left"> + idAchPresId : String [] </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatState [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatState </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + astStatus : String </td></tr>
+	<tr><td align="left"> + astDate : Date </td></tr>
+	<tr><td align="left"> + astRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatStateDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatStateDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + astStatus : String </td></tr>
+	<tr><td align="left"> + astDate : String </td></tr>
+	<tr><td align="left"> + astRem : String </td></tr>
+	<tr><td align="left"> + min_astDate : String </td></tr>
+	<tr><td align="left"> + astAchId : String </td></tr>
+	<tr><td align="left"> + astAenId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatStateMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatStateMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + astStatus : String </td></tr>
+	<tr><td align="left"> + astDate : String </td></tr>
+	<tr><td align="left"> + astRem : String </td></tr>
+	<tr><td align="left"> + astAchId : String </td></tr>
+	<tr><td align="left"> + astAenId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAgrementCat [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAgrementCat </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aacCode : String </td></tr>
+	<tr><td align="left"> + aacName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAgrementCatDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAgrementCatDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aacCode : String </td></tr>
+	<tr><td align="left"> + aacName : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAgrementCatMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAgrementCatMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aacCode : String </td></tr>
+	<tr><td align="left"> + aacName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAgrementList [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAgrementList </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aalCertif : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAgrementListDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAgrementListDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aalCertif : String </td></tr>
+	<tr><td align="left"> + aalAacId : String </td></tr>
+	<tr><td align="left"> + aalAchId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAgrementListMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAgrementListMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aalCertif : String </td></tr>
+	<tr><td align="left"> + aalAacId : String </td></tr>
+	<tr><td align="left"> + aalAchId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAspPresence [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAspPresence </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + appPresent : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAspPresenceDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAspPresenceDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + appPresent : String </td></tr>
+	<tr><td align="left"> + appAspId : String </td></tr>
+	<tr><td align="left"> + appAcmId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAspPresenceMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAspPresenceMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + appPresent : String </td></tr>
+	<tr><td align="left"> + appAspId : String </td></tr>
+	<tr><td align="left"> + appAcmId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAspPublication [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAspPublication </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aapRem : String </td></tr>
+	<tr><td align="left"> + aapInserted : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAspPublicationDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAspPublicationDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aapRem : String </td></tr>
+	<tr><td align="left"> + aapInserted : String </td></tr>
+	<tr><td align="left"> + aapAspId : String </td></tr>
+	<tr><td align="left"> + aapApbId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAspPublicationMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAspPublicationMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aapRem : String </td></tr>
+	<tr><td align="left"> + aapInserted : String </td></tr>
+	<tr><td align="left"> + aapAspId : String </td></tr>
+	<tr><td align="left"> + aapApbId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAspReserve [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAspReserve </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + areObjet : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAspReserveDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAspReserveDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + areObjet : String </td></tr>
+	<tr><td align="left"> + areAspId : String </td></tr>
+	<tr><td align="left"> + areAcmId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAspReserveMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAspReserveMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + areObjet : String </td></tr>
+	<tr><td align="left"> + areAspId : String </td></tr>
+	<tr><td align="left"> + areAcmId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchBde [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchBde </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + abeNum : Integer </td></tr>
+	<tr><td align="left"> + abeLabel : String </td></tr>
+	<tr><td align="left"> + abeUnit : String </td></tr>
+	<tr><td align="left"> + abeQte : Integer </td></tr>
+	<tr><td align="left"> + abePuHt : BigDecimal </td></tr>
+	<tr><td align="left"> + abeTva : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchBdeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchBdeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + abeNum : String </td></tr>
+	<tr><td align="left"> + abeLabel : String </td></tr>
+	<tr><td align="left"> + abeUnit : String </td></tr>
+	<tr><td align="left"> + min_abeNum : String </td></tr>
+	<tr><td align="left"> + achAloId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchBdeMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchBdeMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + abeNum : String </td></tr>
+	<tr><td align="left"> + abeLabel : String </td></tr>
+	<tr><td align="left"> + abeUnit : String </td></tr>
+	<tr><td align="left"> + abeQte : String </td></tr>
+	<tr><td align="left"> + abePuHt : String </td></tr>
+	<tr><td align="left"> + abeTva : String </td></tr>
+	<tr><td align="left"> + achAloId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchBordDet [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchBordDet </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + abdCNum : String </td></tr>
+	<tr><td align="left"> + abdCArticle : String </td></tr>
+	<tr><td align="left"> + abdCUnit : String </td></tr>
+	<tr><td align="left"> + abdCUnitPrice : BigDecimal </td></tr>
+	<tr><td align="left"> + abdDNum : String </td></tr>
+	<tr><td align="left"> + abdDPres : String </td></tr>
+	<tr><td align="left"> + abdDUnit : String </td></tr>
+	<tr><td align="left"> + abdDAmt : String </td></tr>
+	<tr><td align="left"> + abdDUnitPrice : BigDecimal </td></tr>
+	<tr><td align="left"> + abdBNum : String </td></tr>
+	<tr><td align="left"> + abdBPres : String </td></tr>
+	<tr><td align="left"> + abdBUnit : String </td></tr>
+	<tr><td align="left"> + abdBUnitPrice : BigDecimal </td></tr>
+	<tr><td align="left"> + abdENum : String </td></tr>
+	<tr><td align="left"> + abdEPres : String </td></tr>
+	<tr><td align="left"> + abdEUnit : String </td></tr>
+	<tr><td align="left"> + abdEAmt : String </td></tr>
+	<tr><td align="left"> + abdEUnitPrice : BigDecimal </td></tr>
+	<tr><td align="left"> + abdDTotalPrice : BigDecimal </td></tr>
+	<tr><td align="left"> + abdETotalPrice : BigDecimal </td></tr>
+	<tr><td align="left"> + abdFNum : String </td></tr>
+	<tr><td align="left"> + abdFPres : String </td></tr>
+	<tr><td align="left"> + abdFIncPrice : BigDecimal </td></tr>
+	<tr><td align="left"> + abdGNum : String </td></tr>
+	<tr><td align="left"> + abdGPres : String </td></tr>
+	<tr><td align="left"> + abdGIncAmt : BigDecimal </td></tr>
+	<tr><td align="left"> + abdGIncPrice : BigDecimal </td></tr>
+	<tr><td align="left"> + abdGTotalPrice : BigDecimal </td></tr>
+	<tr><td align="left"> + abdHNum : String </td></tr>
+	<tr><td align="left"> + abdHMatSuppAmt : BigDecimal </td></tr>
+	<tr><td align="left"> + abdHLabor : String </td></tr>
+	<tr><td align="left"> + abdHHardOperCost : BigDecimal </td></tr>
+	<tr><td align="left"> + abdHGenCost : BigDecimal </td></tr>
+	<tr><td align="left"> + abdHTaxes : BigDecimal </td></tr>
+	<tr><td align="left"> + abdHMarges : BigDecimal </td></tr>
+	<tr><td align="left"> + abdHTotal : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchBordDetDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchBordDetDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + abdCNum : String </td></tr>
+	<tr><td align="left"> + abdCArticle : String </td></tr>
+	<tr><td align="left"> + abdDNum : String </td></tr>
+	<tr><td align="left"> + abdDPres : String </td></tr>
+	<tr><td align="left"> + abdENum : String </td></tr>
+	<tr><td align="left"> + abdEPres : String </td></tr>
+	<tr><td align="left"> + abdAabId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchBordDetMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchBordDetMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + abdCNum : String </td></tr>
+	<tr><td align="left"> + abdCArticle : String </td></tr>
+	<tr><td align="left"> + abdCUnit : String </td></tr>
+	<tr><td align="left"> + abdCUnitPrice : String </td></tr>
+	<tr><td align="left"> + abdDNum : String </td></tr>
+	<tr><td align="left"> + abdDPres : String </td></tr>
+	<tr><td align="left"> + abdDUnit : String </td></tr>
+	<tr><td align="left"> + abdDAmt : String </td></tr>
+	<tr><td align="left"> + abdDUnitPrice : String </td></tr>
+	<tr><td align="left"> + abdBNum : String </td></tr>
+	<tr><td align="left"> + abdBPres : String </td></tr>
+	<tr><td align="left"> + abdBUnit : String </td></tr>
+	<tr><td align="left"> + abdBUnitPrice : String </td></tr>
+	<tr><td align="left"> + abdENum : String </td></tr>
+	<tr><td align="left"> + abdEPres : String </td></tr>
+	<tr><td align="left"> + abdEUnit : String </td></tr>
+	<tr><td align="left"> + abdEAmt : String </td></tr>
+	<tr><td align="left"> + abdEUnitPrice : String </td></tr>
+	<tr><td align="left"> + abdDTotalPrice : String </td></tr>
+	<tr><td align="left"> + abdETotalPrice : String </td></tr>
+	<tr><td align="left"> + abdFNum : String </td></tr>
+	<tr><td align="left"> + abdFPres : String </td></tr>
+	<tr><td align="left"> + abdFIncPrice : String </td></tr>
+	<tr><td align="left"> + abdGNum : String </td></tr>
+	<tr><td align="left"> + abdGPres : String </td></tr>
+	<tr><td align="left"> + abdGIncAmt : String </td></tr>
+	<tr><td align="left"> + abdGIncPrice : String </td></tr>
+	<tr><td align="left"> + abdGTotalPrice : String </td></tr>
+	<tr><td align="left"> + abdHNum : String </td></tr>
+	<tr><td align="left"> + abdHMatSuppAmt : String </td></tr>
+	<tr><td align="left"> + abdHLabor : String </td></tr>
+	<tr><td align="left"> + abdHHardOperCost : String </td></tr>
+	<tr><td align="left"> + abdHGenCost : String </td></tr>
+	<tr><td align="left"> + abdHTaxes : String </td></tr>
+	<tr><td align="left"> + abdHMarges : String </td></tr>
+	<tr><td align="left"> + abdHTotal : String </td></tr>
+	<tr><td align="left"> + abdAabId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchBordType [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchBordType </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + abtCode : String </td></tr>
+	<tr><td align="left"> + abtName : String </td></tr>
+	<tr><td align="left"> + abtDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchBordTypeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchBordTypeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + abtCode : String </td></tr>
+	<tr><td align="left"> + abtName : String </td></tr>
+	<tr><td align="left"> + abtDesc : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchBordTypeMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchBordTypeMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + abtCode : String </td></tr>
+	<tr><td align="left"> + abtName : String </td></tr>
+	<tr><td align="left"> + abtDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchCommMember [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchCommMember </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + acmNom : String </td></tr>
+	<tr><td align="left"> + acmPrenom : String </td></tr>
+	<tr><td align="left"> + acmRemarque : String </td></tr>
+	<tr><td align="left"> + acmFct : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchCommMemberDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchCommMemberDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + acmNom : String </td></tr>
+	<tr><td align="left"> + acmPrenom : String </td></tr>
+	<tr><td align="left"> + acmFct : String </td></tr>
+	<tr><td align="left"> + acmAmgId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchCommMemberMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchCommMemberMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + acmNom : String </td></tr>
+	<tr><td align="left"> + acmPrenom : String </td></tr>
+	<tr><td align="left"> + acmRemarque : String </td></tr>
+	<tr><td align="left"> + acmFct : String </td></tr>
+	<tr><td align="left"> + acmAmgId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchCommission [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchCommission </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + acoStatus : String </td></tr>
+	<tr><td align="left"> + acoDecisionDate : Date </td></tr>
+	<tr><td align="left"> + acoDecisionNum : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchCommissionDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchCommissionDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + acoAchId1 : String </td></tr>
+	<tr><td align="left"> + acoStatus : String </td></tr>
+	<tr><td align="left"> + acoDecisionDate : String </td></tr>
+	<tr><td align="left"> + acoDecisionNum : String </td></tr>
+	<tr><td align="left"> + min_acoDecisionDate : String </td></tr>
+	<tr><td align="left"> + acoAchId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchCommissionMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchCommissionMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + acoStatus : String </td></tr>
+	<tr><td align="left"> + acoDecisionDate : String </td></tr>
+	<tr><td align="left"> + acoDecisionNum : String </td></tr>
+	<tr><td align="left"> + acoAchId : String </td></tr>
+	<tr><td align="left"> + idAcoAhmId : String [] </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchConcurent [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchConcurent </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + acrName : String </td></tr>
+	<tr><td align="left"> + acrCnss : String </td></tr>
+	<tr><td align="left"> + acrRc : String </td></tr>
+	<tr><td align="left"> + acrIf : String </td></tr>
+	<tr><td align="left"> + acrIce : String </td></tr>
+	<tr><td align="left"> + acrBank : String </td></tr>
+	<tr><td align="left"> + acrRib : String </td></tr>
+	<tr><td align="left"> + acrAdress : String </td></tr>
+	<tr><td align="left"> + acrTel : String </td></tr>
+	<tr><td align="left"> + acrFax : String </td></tr>
+	<tr><td align="left"> + acrEmail : String </td></tr>
+	<tr><td align="left"> + acrActiv : String </td></tr>
+	<tr><td align="left"> + acrObservation : String </td></tr>
+	<tr><td align="left"> + acrGerant : String </td></tr>
+	<tr><td align="left"> + acrImage : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchConcurentDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchConcurentDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + acrName : String </td></tr>
+	<tr><td align="left"> + acrBank : String </td></tr>
+	<tr><td align="left"> + acrAdress : String </td></tr>
+	<tr><td align="left"> + acrTel : String </td></tr>
+	<tr><td align="left"> + acrEmail : String </td></tr>
+	<tr><td align="left"> + acrActiv : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchConcurentMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchConcurentMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + acrName : String </td></tr>
+	<tr><td align="left"> + acrCnss : String </td></tr>
+	<tr><td align="left"> + acrRc : String </td></tr>
+	<tr><td align="left"> + acrIf : String </td></tr>
+	<tr><td align="left"> + acrIce : String </td></tr>
+	<tr><td align="left"> + acrBank : String </td></tr>
+	<tr><td align="left"> + acrRib : String </td></tr>
+	<tr><td align="left"> + acrAdress : String </td></tr>
+	<tr><td align="left"> + acrTel : String </td></tr>
+	<tr><td align="left"> + acrFax : String </td></tr>
+	<tr><td align="left"> + acrEmail : String </td></tr>
+	<tr><td align="left"> + acrActiv : String </td></tr>
+	<tr><td align="left"> + acrObservation : String </td></tr>
+	<tr><td align="left"> + acrGerant : String </td></tr>
+	<tr><td align="left"> + acrImage : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchDelaiPhase [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchDelaiPhase </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + phaLabel : String </td></tr>
+	<tr><td align="left"> + phaDelaiExe : Integer </td></tr>
+	<tr><td align="left"> + phaDelaiUnit : String </td></tr>
+	<tr><td align="left"> + phaMontant : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchDelaiPhaseDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchDelaiPhaseDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + phaAchId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchDelaiPhaseMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchDelaiPhaseMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + phaLabel : String </td></tr>
+	<tr><td align="left"> + phaDelaiUnit : String </td></tr>
+	<tr><td align="left"> + phaDelaiExe : String </td></tr>
+	<tr><td align="left"> + phaMontant : String </td></tr>
+	<tr><td align="left"> + phaAchId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchDemPub [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchDemPub </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + adpStatus : String </td></tr>
+	<tr><td align="left"> + adpDate : Date </td></tr>
+	<tr><td align="left"> + adpDateLimit : Date </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchDemPubDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchDemPubDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + adpStatus : String </td></tr>
+	<tr><td align="left"> + adpDate : String </td></tr>
+	<tr><td align="left"> + adpDateLimit : String </td></tr>
+	<tr><td align="left"> + min_adpDate : String </td></tr>
+	<tr><td align="left"> + min_adpDateLimit : String </td></tr>
+	<tr><td align="left"> + adpAchId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchDemPubMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchDemPubMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + adpStatus : String </td></tr>
+	<tr><td align="left"> + adpDate : String </td></tr>
+	<tr><td align="left"> + adpDateLimit : String </td></tr>
+	<tr><td align="left"> + adpAchId : String </td></tr>
+	<tr><td align="left"> + idAdpApbId : String [] </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchEntity [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchEntity </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aenName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchEntityDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchEntityDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aenName : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchEntityMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchEntityMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aenName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchHasAcm [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchHasAcm </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ahmStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchHasAcmDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchHasAcmDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ahmStatus : String </td></tr>
+	<tr><td align="left"> + ahmAcmId1 : String </td></tr>
+	<tr><td align="left"> + ahmAcoId1 : String </td></tr>
+	<tr><td align="left"> + ahmAcmId : String </td></tr>
+	<tr><td align="left"> + ahmAcoId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchHasAcmMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchHasAcmMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ahmStatus : String </td></tr>
+	<tr><td align="left"> + ahmAcmId : String </td></tr>
+	<tr><td align="left"> + ahmAcoId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchJournal [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchJournal </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + acjName : String </td></tr>
+	<tr><td align="left"> + acjLang : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchJournalDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchJournalDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + acjName : String </td></tr>
+	<tr><td align="left"> + acjLang : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchJournalMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchJournalMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + acjName : String </td></tr>
+	<tr><td align="left"> + acjLang : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchMemberGroup [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchMemberGroup </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + amgName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchMemberGroupDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchMemberGroupDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + amgName : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchMemberGroupMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchMemberGroupMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + amgName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchModePass [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchModePass </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ampCode : String </td></tr>
+	<tr><td align="left"> + ampName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchModePassDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchModePassDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ampCode : String </td></tr>
+	<tr><td align="left"> + ampName : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchModePassMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchModePassMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ampCode : String </td></tr>
+	<tr><td align="left"> + ampName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchPrestations [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchPrestations </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + presCprId : PlaCreditPrs </td></tr>
+	<tr><td align="left"> + presMprId : BudMorassePres </td></tr>
+	<tr><td align="left"> + presCopId : PlaCreditOp </td></tr>
+	<tr><td align="left"> + presMopId : BudMorasseOp </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchPrestationsDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchPrestationsDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + presCprId : String </td></tr>
+	<tr><td align="left"> + presMprId : String </td></tr>
+	<tr><td align="left"> + presAchId : String </td></tr>
+	<tr><td align="left"> + presCopId : String </td></tr>
+	<tr><td align="left"> + presMopId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchPrestationsMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchPrestationsMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + presCprId : String </td></tr>
+	<tr><td align="left"> + presMprId : String </td></tr>
+	<tr><td align="left"> + presAchId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchProgPrev [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchProgPrev </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + appCode : String </td></tr>
+	<tr><td align="left"> + appName : String </td></tr>
+	<tr><td align="left"> + appPexId : ParExercice </td></tr>
+	<tr><td align="left"> + appOrdId : ParOrdonateur </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchProgPrevDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchProgPrevDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + appCode : String </td></tr>
+	<tr><td align="left"> + appName : String </td></tr>
+	<tr><td align="left"> + appPexId1 : String </td></tr>
+	<tr><td align="left"> + appOrdId1 : String </td></tr>
+	<tr><td align="left"> + appPexId : String </td></tr>
+	<tr><td align="left"> + appOrdId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchProgPrevMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchProgPrevMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + appCode : String </td></tr>
+	<tr><td align="left"> + appName : String </td></tr>
+	<tr><td align="left"> + appPexId : String </td></tr>
+	<tr><td align="left"> + appOrdId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchPublication [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchPublication </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + apbType : String </td></tr>
+	<tr><td align="left"> + apbNumBord : String </td></tr>
+	<tr><td align="left"> + apbDateEnv : Date </td></tr>
+	<tr><td align="left"> + apbUrl : String </td></tr>
+	<tr><td align="left"> + apbIsPub : String </td></tr>
+	<tr><td align="left"> + apbDatePub : Date </td></tr>
+	<tr><td align="left"> + apbRem : String </td></tr>
+	<tr><td align="left"> + apbNumPub : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchPublicationDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchPublicationDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + apbType : String </td></tr>
+	<tr><td align="left"> + apbNumBord : String </td></tr>
+	<tr><td align="left"> + apbDateEnv : String </td></tr>
+	<tr><td align="left"> + apbNumPub : String </td></tr>
+	<tr><td align="left"> + apbAdpId1 : String </td></tr>
+	<tr><td align="left"> + apbAcjId1 : String </td></tr>
+	<tr><td align="left"> + apbDatePub : String </td></tr>
+	<tr><td align="left"> + min_apbDateEnv : String </td></tr>
+	<tr><td align="left"> + min_apbDatePub : String </td></tr>
+	<tr><td align="left"> + apbAdpId : String </td></tr>
+	<tr><td align="left"> + apbAcjId : String </td></tr>
+	<tr><td align="left"> + apbAccId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchPublicationMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchPublicationMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + apbType : String </td></tr>
+	<tr><td align="left"> + apbNumBord : String </td></tr>
+	<tr><td align="left"> + apbDateEnv : String </td></tr>
+	<tr><td align="left"> + apbUrl : String </td></tr>
+	<tr><td align="left"> + apbIsPub : String </td></tr>
+	<tr><td align="left"> + apbDatePub : String </td></tr>
+	<tr><td align="left"> + apbRem : String </td></tr>
+	<tr><td align="left"> + apbNumPub : String </td></tr>
+	<tr><td align="left"> + apbAdpId : String </td></tr>
+	<tr><td align="left"> + apbAcjId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchSeancePv [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchSeancePv </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aspDate : Date </td></tr>
+	<tr><td align="left"> + aspDateDem : Date </td></tr>
+	<tr><td align="left"> + aspDatePre : Date </td></tr>
+	<tr><td align="left"> + aspDatePub : Date </td></tr>
+	<tr><td align="left"> + aspDateLis : Date </td></tr>
+	<tr><td align="left"> + aspDateVer : Date </td></tr>
+	<tr><td align="left"> + aspDateOuv : Date </td></tr>
+	<tr><td align="left"> + aspDateOff : Date </td></tr>
+	<tr><td align="left"> + aspDateFin : Date </td></tr>
+	<tr><td align="left"> + aspNum : String </td></tr>
+	<tr><td align="left"> + aspLocal : String </td></tr>
+	<tr><td align="left"> + aspEtat : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchSeancePvDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchSeancePvDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aspAchId1 : String </td></tr>
+	<tr><td align="left"> + aspEtat : String </td></tr>
+	<tr><td align="left"> + aspDateDem : String </td></tr>
+	<tr><td align="left"> + aspDateOuv : String </td></tr>
+	<tr><td align="left"> + min_aspDateDem : String </td></tr>
+	<tr><td align="left"> + min_aspDateOuv : String </td></tr>
+	<tr><td align="left"> + aspAchId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchSeancePvMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchSeancePvMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aspAchId : String </td></tr>
+	<tr><td align="left"> + aspEtat : String </td></tr>
+	<tr><td align="left"> + aspDateDem : String </td></tr>
+	<tr><td align="left"> + aspDatePre : String </td></tr>
+	<tr><td align="left"> + aspDatePub : String </td></tr>
+	<tr><td align="left"> + aspDateLis : String </td></tr>
+	<tr><td align="left"> + aspDateVer : String </td></tr>
+	<tr><td align="left"> + aspDateOuv : String </td></tr>
+	<tr><td align="left"> + aspDateOff : String </td></tr>
+	<tr><td align="left"> + aspDateFin : String </td></tr>
+	<tr><td align="left"> + idAspAppId : String [] </td></tr>
+	<tr><td align="left"> + idAspAapId : String [] </td></tr>
+	<tr><td align="left"> + idAspAreId : String [] </td></tr>
+	<tr><td align="left"> + idAspAsoId : String [] </td></tr>
+	<tr><td align="left"> + idAspAscId : String [] </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchSoumission [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchSoumission </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + asoType : String </td></tr>
+	<tr><td align="left"> + asoStatus : String </td></tr>
+	<tr><td align="left"> + asoMotifElim : String </td></tr>
+	<tr><td align="left"> + asoReserve : String </td></tr>
+	<tr><td align="left"> + asoMontant : BigDecimal </td></tr>
+	<tr><td align="left"> + asoDate : Date </td></tr>
+	<tr><td align="left"> + asoArchTaux : BigDecimal </td></tr>
+	<tr><td align="left"> + asoEtat : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchSoumissionDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchSoumissionDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + asoDate : String </td></tr>
+	<tr><td align="left"> + asoAchId1 : String </td></tr>
+	<tr><td align="left"> + asoAcrId1 : String </td></tr>
+	<tr><td align="left"> + asoType : String </td></tr>
+	<tr><td align="left"> + asoStatus : String </td></tr>
+	<tr><td align="left"> + min_asoDate : String </td></tr>
+	<tr><td align="left"> + asoAcrId : String </td></tr>
+	<tr><td align="left"> + asoAchId : String </td></tr>
+	<tr><td align="left"> + asoAspId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchSoumissionMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchSoumissionMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + asoAchId : String </td></tr>
+	<tr><td align="left"> + asoAcrId : String </td></tr>
+	<tr><td align="left"> + asoMontant : String </td></tr>
+	<tr><td align="left"> + asoMotifElim : String </td></tr>
+	<tr><td align="left"> + asoAspId : String </td></tr>
+	<tr><td align="left"> + asoDate : String </td></tr>
+	<tr><td align="left"> + asoStatus : String </td></tr>
+	<tr><td align="left"> + asoEtat : String </td></tr>
+	<tr><td align="left"> + asoArchTaux : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchSsCommission [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchSsCommission </font></td></tr>
+	</table></td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchSsCommissionDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchSsCommissionDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ascAspId1 : String </td></tr>
+	<tr><td align="left"> + ascAcmId1 : String </td></tr>
+	<tr><td align="left"> + ascAspId : String </td></tr>
+	<tr><td align="left"> + ascAcmId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchSsCommissionMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchSsCommissionMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ascAspId : String </td></tr>
+	<tr><td align="left"> + ascAcmId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchSstypeDepense [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchSstypeDepense </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + astCode : String </td></tr>
+	<tr><td align="left"> + astName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchSstypeDepenseDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchSstypeDepenseDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + astCode : String </td></tr>
+	<tr><td align="left"> + astName : String </td></tr>
+	<tr><td align="left"> + astAtdId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchSstypeDepenseMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchSstypeDepenseMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + astCode : String </td></tr>
+	<tr><td align="left"> + astName : String </td></tr>
+	<tr><td align="left"> + astAtdId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchTypBen [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchTypBen </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + atbCode : String </td></tr>
+	<tr><td align="left"> + atbName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchTypBenDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchTypBenDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + atbCode : String </td></tr>
+	<tr><td align="left"> + atbName : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchTypBenMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchTypBenMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + atbCode : String </td></tr>
+	<tr><td align="left"> + atbName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchTypeDepense [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchTypeDepense </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + atdCode : String </td></tr>
+	<tr><td align="left"> + atdName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchTypeDepenseDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchTypeDepenseDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + atdCode : String </td></tr>
+	<tr><td align="left"> + atdName : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchTypeDepenseMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchTypeDepenseMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + atdCode : String </td></tr>
+	<tr><td align="left"> + atdName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchTypeDoc [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchTypeDoc </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + atdCode : String </td></tr>
+	<tr><td align="left"> + atdName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchTypeDocDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchTypeDocDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + atdCode : String </td></tr>
+	<tr><td align="left"> + atdName : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchTypeDocMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchTypeDocMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + atdCode : String </td></tr>
+	<tr><td align="left"> + atdName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	chaine [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> chaine </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + nn : Object[] </td></tr>
+	<tr><td align="left"> + nnToString : Object[] </td></tr>
+	<tr><td align="left"> + dto : Object </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+edge [arrowhead = "empty"]
+edge [arrowhead = "none"]
+
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchAaaId" taillabel="aaaAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchAchatAttach
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchAvnId" taillabel="achAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchAchatAvenant
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchAdcId" taillabel="adcAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchAchatDecision
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchAloId" taillabel="aloAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchAchatLot
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchAamId" taillabel="aamAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchAchatMemo
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchAstId" taillabel="astAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchAchatState
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchAalId" taillabel="aalAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchAgrementList
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchAcoId" taillabel="acoAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchCommission
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchPhaId" taillabel="phaAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchDelaiPhase
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchAdpId" taillabel="adpAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchDemPub
+
+edge [arrowtail="none" arrowhead = "open" headlabel="achCurAenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="achAmpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchModePass
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchPresId" taillabel="presAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchPrestations
+
+edge [arrowtail="none" arrowhead = "open" headlabel="achAstId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchSstypeDepense
+
+edge [arrowtail="none" arrowhead = "open" headlabel="achAtdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchTypeDepense
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAvnAloId" taillabel="aloAvnId" labeldistance="2.0" labelangle="-30"]
+
+AchAchatAvenant -> AchAchatLot
+
+edge [arrowtail="none" arrowhead = "open" headlabel="aabAchId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchatBord -> AchAchat
+
+edge [arrowtail="none" arrowhead = "open" headlabel="aabAbtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchatBord -> AchBordType
+
+edge [arrowtail="none" arrowhead = "open" headlabel="adcAenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchatDecision -> AchEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="aaeAchId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchatExel -> AchAchat
+
+edge [arrowtail="none" arrowhead = "open" headlabel="aaeAvnId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchatExel -> AchAchatAvenant
+
+edge [arrowtail="none" arrowhead = "none" headlabel="aaeAloId" taillabel="0..n aloAaeId" labeldistance="2.0" labelangle="-30"]
+
+AchAchatExel -> AchAchatLot
+
+edge [arrowtail="none" arrowhead = "open" headlabel="astAenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchatState -> AchEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="aalAacId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAgrementList -> AchAgrementCat
+
+edge [arrowtail="none" arrowhead = "open" headlabel="appAcmId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAspPresence -> AchCommMember
+
+edge [arrowtail="none" arrowhead = "none" headlabel="appAspId" taillabel="0..n idAspAppId" labeldistance="2.0" labelangle="-30"]
+
+AchAspPresence -> AchSeancePv
+
+edge [arrowtail="none" arrowhead = "open" headlabel="aapApbId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAspPublication -> AchPublication
+
+edge [arrowtail="none" arrowhead = "none" headlabel="aapAspId" taillabel="0..n idAspAapId" labeldistance="2.0" labelangle="-30"]
+
+AchAspPublication -> AchSeancePv
+
+edge [arrowtail="none" arrowhead = "open" headlabel="areAcmId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAspReserve -> AchCommMember
+
+edge [arrowtail="none" arrowhead = "none" headlabel="areAspId" taillabel="0..n idAspAreId" labeldistance="2.0" labelangle="-30"]
+
+AchAspReserve -> AchSeancePv
+
+edge [arrowtail="none" arrowhead = "open" headlabel="achAloId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchBde -> AchAchatLot
+
+edge [arrowtail="none" arrowhead = "open" headlabel="abdAabId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchBordDet -> AchAchatBord
+
+edge [arrowtail="none" arrowhead = "none" headlabel="acmAmgId" taillabel="0..n idAmgAcmId" labeldistance="2.0" labelangle="-30"]
+
+AchCommMember -> AchMemberGroup
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAcoAhmId" taillabel="ahmAcoId" labeldistance="2.0" labelangle="-30"]
+
+AchCommission -> AchHasAcm
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAdpApbId" taillabel="apbAdpId" labeldistance="2.0" labelangle="-30"]
+
+AchDemPub -> AchPublication
+
+edge [arrowtail="none" arrowhead = "open" headlabel="ahmAcmId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchHasAcm -> AchCommMember
+
+edge [arrowtail="none" arrowhead = "open" headlabel="apbAccId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchPublication -> AchConcurent
+
+edge [arrowtail="none" arrowhead = "open" headlabel="apbAcjId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchPublication -> AchJournal
+
+edge [arrowtail="none" arrowhead = "open" headlabel="aspAchId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchSeancePv -> AchAchat
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAspAsoId" taillabel="asoAspId" labeldistance="2.0" labelangle="-30"]
+
+AchSeancePv -> AchSoumission
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAspAscId" taillabel="ascAspId" labeldistance="2.0" labelangle="-30"]
+
+AchSeancePv -> AchSsCommission
+
+edge [arrowtail="none" arrowhead = "open" headlabel="asoAchId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchSoumission -> AchAchat
+
+edge [arrowtail="none" arrowhead = "open" headlabel="asoAcrId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchSoumission -> AchConcurent
+
+edge [arrowtail="none" arrowhead = "open" headlabel="ascAcmId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchSsCommission -> AchCommMember
+
+edge [arrowtail="none" arrowhead = "none" headlabel="astAtdId" taillabel="0..n idAtdAstId" labeldistance="2.0" labelangle="-30"]
+
+AchSstypeDepense -> AchTypeDepense
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchAchatService -> AchAchatDTO
+AchAchatService -> AchAchat
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchAchatExelService -> AchAchatExelDTO
+AchAchatExelService -> AchAchatExel
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchAchatAttachService -> AchAchatAttach
+AchAchatAttachService -> AchAchatAttachDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchAchatDecisionService -> AchAchatDecision
+AchAchatDecisionService -> AchAchatDecisionDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchAchatLotService -> AchAchatLot
+AchAchatLotService -> AchAchatLotDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchAchatMemoService -> AchAchatMemo
+AchAchatMemoService -> AchAchatMemoDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchAchatStateService -> AchAchatStateDTO
+AchAchatStateService -> AchAchatState
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchAgrementCatService -> AchAgrementCatDTO
+AchAgrementCatService -> AchAgrementCat
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchAgrementListService -> AchAgrementList
+AchAgrementListService -> AchAgrementListDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchAspPresenceService -> AchAspPresence
+AchAspPresenceService -> AchAspPresenceDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchAspPublicationService -> AchAspPublicationDTO
+AchAspPublicationService -> AchAspPublication
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchAspReserveService -> AchAspReserve
+AchAspReserveService -> AchAspReserveDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchBdeService -> AchBde
+AchBdeService -> AchBdeDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchCommMemberService -> AchCommMember
+AchCommMemberService -> AchCommMemberDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchCommissionService -> AchCommission
+AchCommissionService -> AchCommissionDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchConcurentService -> AchConcurent
+AchConcurentService -> AchConcurentDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchDemPubService -> AchDemPub
+AchDemPubService -> AchDemPubDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchEntityService -> AchEntityDTO
+AchEntityService -> AchEntity
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchHasAcmService -> AchHasAcm
+AchHasAcmService -> AchHasAcmDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchJournalService -> AchJournal
+AchJournalService -> AchJournalDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchMemberGroupService -> AchMemberGroup
+AchMemberGroupService -> AchMemberGroupDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchModePassService -> AchModePassDTO
+AchModePassService -> AchModePass
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchProgPrevService -> AchProgPrevDTO
+AchProgPrevService -> AchProgPrev
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchPublicationService -> AchPublication
+AchPublicationService -> AchPublicationDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchSeancePvService -> AchSeancePv
+AchSeancePvService -> AchSeancePvDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchSoumissionService -> AchSoumission
+AchSoumissionService -> AchSoumissionDTO
+AchSoumissionService -> AchAchat
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchSsCommissionService -> AchSsCommission
+AchSsCommissionService -> AchSsCommissionDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchSstypeDepenseService -> AchSstypeDepense
+AchSstypeDepenseService -> AchSstypeDepenseDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchTypeDepenseService -> AchTypeDepenseDTO
+AchTypeDepenseService -> AchTypeDepense
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchTypeDocService -> AchTypeDoc
+AchTypeDocService -> AchTypeDocDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchTypBenService -> AchTypBenDTO
+AchTypBenService -> AchTypBen
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchAchatBordService -> AchAchatBord
+AchAchatBordService -> AchAchatBordDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchBordDetService -> AchBordDetDTO
+AchBordDetService -> AchBordDet
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchBordTypeService -> AchBordType
+AchBordTypeService -> AchBordTypeDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchAchatAvenantService -> AchAchatAvenant
+AchAchatAvenantService -> AchAchatAvenantDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchDelaiPhaseService -> AchDelaiPhase
+AchDelaiPhaseService -> AchDelaiPhaseDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+AchPrestationsService -> AchPrestationsDTO
+AchPrestationsService -> AchPrestations
+}

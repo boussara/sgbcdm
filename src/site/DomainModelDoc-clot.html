@@ -1,0 +1,3830 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style type="text/css" media="screen,print">   
+		@import url("DomainModelDoc.css");
+		</style> 
+<title>Summary Documentation of clot module(Sgbcdm)</title> 
+</head>
+<body>
+<div id="wrap">
+		<a name="module_clot"></a>
+<h1>Summary Documentation of clot module <a href="DomainModelDoc.html">(Sgbcdm)</a></h1>
+
+
+<p></p>
+<div id="menu">
+		<ul>
+			<li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a></li>
+			<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a></li>
+			<li><a href="DomainModelDoc-clot.html#ClotTablDepDecision">ClotTablDepDecision</a></li>
+			<li><a href="DomainModelDoc-clot.html#ClotTablDepDecisionDTO">ClotTablDepDecisionDTO</a></li>
+			<li><a href="DomainModelDoc-clot.html#ClotTablDepDecisionMergeDTO">ClotTablDepDecisionMergeDTO</a></li>
+			<li><a href="DomainModelDoc-clot.html#ClotTablDepDecisionService">ClotTablDepDecisionService</a></li>
+			<li><a href="DomainModelDoc-clot.html#ClotTablDepExtra">ClotTablDepExtra</a></li>
+			<li><a href="DomainModelDoc-clot.html#ClotTablDepExtraDTO">ClotTablDepExtraDTO</a></li>
+			<li><a href="DomainModelDoc-clot.html#ClotTablDepExtraDisp">ClotTablDepExtraDisp</a></li>
+			<li><a href="DomainModelDoc-clot.html#ClotTablDepExtraDispDTO">ClotTablDepExtraDispDTO</a></li>
+			<li><a href="DomainModelDoc-clot.html#ClotTablDepExtraDispMergeDTO">ClotTablDepExtraDispMergeDTO</a></li>
+			<li><a href="DomainModelDoc-clot.html#ClotTablDepExtraDispService">ClotTablDepExtraDispService</a></li>
+			<li><a href="DomainModelDoc-clot.html#ClotTablDepExtraMergeDTO">ClotTablDepExtraMergeDTO</a></li>
+			<li><a href="DomainModelDoc-clot.html#ClotTablDepExtraService">ClotTablDepExtraService</a></li>
+			<li><a href="DomainModelDoc-clot.html#ClotTablDepMergeDTO">ClotTablDepMergeDTO</a></li>
+			<li><a href="DomainModelDoc-clot.html#ClotTablDepService">ClotTablDepService</a></li>
+			<li><a href="DomainModelDoc-clot.html#ClotTablDepState">ClotTablDepState</a></li>
+			<li><a href="DomainModelDoc-clot.html#ClotTablDepStateDTO">ClotTablDepStateDTO</a></li>
+			<li><a href="DomainModelDoc-clot.html#ClotTablDepStateMergeDTO">ClotTablDepStateMergeDTO</a></li>
+			<li><a href="DomainModelDoc-clot.html#ClotTablDepStateService">ClotTablDepStateService</a></li>
+		</ul>
+</div>
+<div id="module_graph">
+    <hr/>
+    <p><b>All in clot</b></p>
+	<a href="umlgraph-clot.dot.png">
+	<img src="umlgraph-clot.dot.png" />
+	</a>
+	<hr/>
+	<p><b>Persistent Domain in clot</b></p>
+	<a href="umlgraph-clot-entity.dot.png">
+	<img src="umlgraph-clot-entity.dot.png" />
+	</a>
+</div>
+
+<div id="services">
+<hr/>
+<a name="ClotTablDepDecisionService"></a>
+<h3>ClotTablDepDecisionService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDecision">ClotTablDepDecision</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDecision">ClotTablDepDecision</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-clot.html#ClotTablDepDecision">ClotTablDepDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDepDecision">ClotTablDepDecision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCddCenId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-clot.html#ClotTablDepDecision">ClotTablDepDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCddCtdId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-clot.html#ClotTablDepDecision">ClotTablDepDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCddDate</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ cddDate</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-clot.html#ClotTablDepDecision">ClotTablDepDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCddRem</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cddRem</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-clot.html#ClotTablDepDecision">ClotTablDepDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCddStatus</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cddStatus</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-clot.html#ClotTablDepDecision">ClotTablDepDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDepDecision">ClotTablDepDecision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDecision">ClotTablDepDecision</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDepDecision">ClotTablDepDecision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDecisionDTO">ClotTablDepDecisionDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDepDecision">ClotTablDepDecision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="ClotTablDepExtraDispService"></a>
+<h3>ClotTablDepExtraDispService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepExtraDisp">ClotTablDepExtraDisp</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepExtraDisp">ClotTablDepExtraDisp</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-clot.html#ClotTablDepExtraDisp">ClotTablDepExtraDisp</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDepExtraDisp">ClotTablDepExtraDisp</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDepExtraDisp">ClotTablDepExtraDisp</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepExtraDisp">ClotTablDepExtraDisp</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDepExtraDisp">ClotTablDepExtraDisp</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepExtraDispDTO">ClotTablDepExtraDispDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDepExtraDisp">ClotTablDepExtraDisp</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="ClotTablDepExtraService"></a>
+<h3>ClotTablDepExtraService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepExtra">ClotTablDepExtra</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepExtra">ClotTablDepExtra</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-clot.html#ClotTablDepExtra">ClotTablDepExtra</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDepExtra">ClotTablDepExtra</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDepExtra">ClotTablDepExtra</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepExtra">ClotTablDepExtra</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDepExtra">ClotTablDepExtra</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepExtraDTO">ClotTablDepExtraDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDepExtra">ClotTablDepExtra</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="ClotTablDepService"></a>
+<h3>ClotTablDepService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepAnnCI</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepAnnSB</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepAnnSGM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepAnnTM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepConsCI</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepConsSB</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepConsSGM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepConsTM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepDimCI</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepDimSB</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepDimSGM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepDimTM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepErcCI</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepErcSB</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepErcSGM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepErcTM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepMarkCI</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepMarkSB</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepMarkSGM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepMarkTM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepRrcCI</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepRrcSB</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepRrcSGM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepRrcTM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>getAllDepAnnCI</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepAnnSB</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepAnnSGM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepAnnTM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepConsCI</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepConsSB</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepConsSGM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepConsTM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepDimCI</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepDimSB</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepDimSGM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepDimTM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepErcCI</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepErcSB</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepErcSGM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepErcTM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepMarkCI</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepMarkMarkSGM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepMarkSB</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepMarkTM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepRrcCI</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepRrcSB</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepRrcSGM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepRrcTM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepDTO">ClotTablDepDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="ClotTablDepStateService"></a>
+<h3>ClotTablDepStateService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepState">ClotTablDepState</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepState">ClotTablDepState</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-clot.html#ClotTablDepState">ClotTablDepState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDepState">ClotTablDepState</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdsCenId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-clot.html#ClotTablDepState">ClotTablDepState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdsCtdId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-clot.html#ClotTablDepState">ClotTablDepState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdsDate</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ cdsDate</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-clot.html#ClotTablDepState">ClotTablDepState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdsRem</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cdsRem</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-clot.html#ClotTablDepState">ClotTablDepState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdsStatus</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cdsStatus</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-clot.html#ClotTablDepState">ClotTablDepState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDepState">ClotTablDepState</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepState">ClotTablDepState</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDepState">ClotTablDepState</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-clot.html#ClotTablDepStateDTO">ClotTablDepStateDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-clot.html#ClotTablDepState">ClotTablDepState</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+</div>
+<div id="consumers">
+</div>
+<div id="domainObjects">
+<a name="ClotTablDep"></a>
+<h3>ClotTablDep</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>ctdCddId</td>
+	<td>List&lt;<a href="DomainModelDoc-clot.html#ClotTablDepDecision">ClotTablDepDecision</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctdCdeId</td>
+	<td>List&lt;<a href="DomainModelDoc-clot.html#ClotTablDepExtra">ClotTablDepExtra</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctdCdsId</td>
+	<td>List&lt;<a href="DomainModelDoc-clot.html#ClotTablDepState">ClotTablDepState</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctdCepId</td>
+	<td>List&lt;<a href="DomainModelDoc-clot.html#ClotTablDepExtraDisp">ClotTablDepExtraDisp</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctdCurCenId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctdCurDecision</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctdCurDecisionDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctdCurStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctdCurStatusDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctdDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctdRem</td>
+	<td>String</td>
+	<td>256</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctdType</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ClotTablDepDTO"></a>
+<h3>ClotTablDepDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctdCurCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="ClotTablDepDecision"></a>
+<h3>ClotTablDepDecision</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cddCenId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddCtdId</td>
+	<td><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddRem</td>
+	<td>String</td>
+	<td>256</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ClotTablDepDecisionDTO"></a>
+<h3>ClotTablDepDecisionDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cddCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddCtdId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_cddDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="ClotTablDepDecisionMergeDTO"></a>
+<h3>ClotTablDepDecisionMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cddCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddCtdId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ClotTablDepExtra"></a>
+<h3>ClotTablDepExtra</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cdeCdpId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdeCtdId</td>
+	<td><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdeDelaiReste</td>
+	<td>String</td>
+	<td>20</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdeModActId</td>
+	<td><a href="DomainModelDoc-bud.html#BudMorasseDet">BudMorasseDet</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdeModId</td>
+	<td><a href="DomainModelDoc-bud.html#BudMorasseDet">BudMorasseDet</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdeMontantAn</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdeMontantAn1</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdeMontantCe</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdeMontantCp</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdeMontantRe</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdeMontantReport</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdeSmdActId</td>
+	<td><a href="DomainModelDoc-bud.html#BudSsMorasseDet">BudSsMorasseDet</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdeSmdId</td>
+	<td><a href="DomainModelDoc-bud.html#BudSsMorasseDet">BudSsMorasseDet</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdeStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ClotTablDepExtraDTO"></a>
+<h3>ClotTablDepExtraDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cdeCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdeCtdId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdeModActId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdeModId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdeSmdActId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdeSmdId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="ClotTablDepExtraDisp"></a>
+<h3>ClotTablDepExtraDisp</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cepCdpId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepCtdId</td>
+	<td><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepDispEngagSoumis</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepDispEngagVise</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepOrdonnateur</td>
+	<td>String</td>
+	<td>100</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepTauxEmissionSoumis</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepTauxEmissionVise</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepTauxEngagSoumis</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepTauxEngagVise</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepTotalCreditSoumis</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepTotalCreditVise</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepTotalEmissionSoumis</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepTotalEmissionVise</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepTotalEngagSoumis</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepTotalEngagVise</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ClotTablDepExtraDispDTO"></a>
+<h3>ClotTablDepExtraDispDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cepCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepCtdId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="ClotTablDepExtraDispMergeDTO"></a>
+<h3>ClotTablDepExtraDispMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cepCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepDispEngagSoumis</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepDispEngagVise</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepTauxEmissionSoumis</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepTauxEmissionVise</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepTauxEngagSoumis</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepTauxEngagVise</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepTotalCreditSoumis</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepTotalCreditVise</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepTotalEmissionSoumis</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepTotalEmissionVise</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepTotalEngagSoumis</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cepTotalEngagVise</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ClotTablDepExtraMergeDTO"></a>
+<h3>ClotTablDepExtraMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cdeCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdeMontantCp</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdeMontantRe</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdeStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ClotTablDepMergeDTO"></a>
+<h3>ClotTablDepMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>ctdCurDecision</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctdCurDecisionDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctdCurStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctdCurStatusDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctdDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctdRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctdType</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ClotTablDepState"></a>
+<h3>ClotTablDepState</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cdsCenId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsCtdId</td>
+	<td><a href="DomainModelDoc-clot.html#ClotTablDep">ClotTablDep</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsRem</td>
+	<td>String</td>
+	<td>256</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ClotTablDepStateDTO"></a>
+<h3>ClotTablDepStateDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cdsCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsCtdId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_cdsDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="ClotTablDepStateMergeDTO"></a>
+<h3>ClotTablDepStateMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cdsCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsCtdId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+</div>
+
+</div>
+</body>
+</html>	

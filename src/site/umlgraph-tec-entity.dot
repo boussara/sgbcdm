@@ -1,0 +1,367 @@
+digraph G {
+	fontsize = 10
+	node [
+		fontsize = 10
+		fontname="arial"
+		shape=plaintext
+	]
+
+	edge [
+		fontsize = 10
+	]
+subgraph clustertec {
+	label = "tec"  
+	CalculRevision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CalculRevision </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tcrPeriode : String </td></tr>
+	<tr><td align="left"> + tcrNbrJour : String </td></tr>
+	<tr><td align="left"> + tcrBatUn : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrBatDeux : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrBatTrois : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrBatQuatre : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrBatCinq : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrBatSix : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrBatCof : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrCofRev : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrCoeficient : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrMonTra : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrMonArevi : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrMonRev : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrTotal : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrCdpId : CptDepense </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	Nantissement [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> Nantissement </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tnaNum : String </td></tr>
+	<tr><td align="left"> + tnaName : String </td></tr>
+	<tr><td align="left"> + tnaDate : Date </td></tr>
+	<tr><td align="left"> + tnaRep : String </td></tr>
+	<tr><td align="left"> + tnaCdpId : CptDepense </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PenaliteRetard [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PenaliteRetard </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tprNum : String </td></tr>
+	<tr><td align="left"> + tprName : String </td></tr>
+	<tr><td align="left"> + tprDelaiExe : Integer </td></tr>
+	<tr><td align="left"> + tprDateComm : Date </td></tr>
+	<tr><td align="left"> + tprDateAchev : Date </td></tr>
+	<tr><td align="left"> + tprDateSerFait : Date </td></tr>
+	<tr><td align="left"> + tprNbrJourRetard : Integer </td></tr>
+	<tr><td align="left"> + tprMonIniMar : BigDecimal </td></tr>
+	<tr><td align="left"> + tprMonJourPen : BigDecimal </td></tr>
+	<tr><td align="left"> + tprMonTotPen : BigDecimal </td></tr>
+	<tr><td align="left"> + tprMonPlafPen : BigDecimal </td></tr>
+	<tr><td align="left"> + tprMonOrdRecett : BigDecimal </td></tr>
+	<tr><td align="left"> + tprCdpId : CptDepense </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	RetenueGarantie [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> RetenueGarantie </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + trgNum : String </td></tr>
+	<tr><td align="left"> + trgName : String </td></tr>
+	<tr><td align="left"> + trgDate : Date </td></tr>
+	<tr><td align="left"> + trgCdpId : CptDepense </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	RetenueGarantiePart [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> RetenueGarantiePart </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + rgpNum : String </td></tr>
+	<tr><td align="left"> + rgpName : String </td></tr>
+	<tr><td align="left"> + rgpDate : Date </td></tr>
+	<tr><td align="left"> + rgpBank : String </td></tr>
+	<tr><td align="left"> + rgpMontant : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecAttachement [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecAttachement </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tatNature : String </td></tr>
+	<tr><td align="left"> + tatTypeDecompte : String </td></tr>
+	<tr><td align="left"> + tatCurStatus : String </td></tr>
+	<tr><td align="left"> + tatNum : String </td></tr>
+	<tr><td align="left"> + tatName : String </td></tr>
+	<tr><td align="left"> + tatUrl : String </td></tr>
+	<tr><td align="left"> + tatTauAva : String </td></tr>
+	<tr><td align="left"> + tatAttPro : String </td></tr>
+	<tr><td align="left"> + tatRef : String </td></tr>
+	<tr><td align="left"> + tatObj : String </td></tr>
+	<tr><td align="left"> + tatMotRej : String </td></tr>
+	<tr><td align="left"> + tatMonTrt : BigDecimal </td></tr>
+	<tr><td align="left"> + tatMonTnt : BigDecimal </td></tr>
+	<tr><td align="left"> + tatTotaux : BigDecimal </td></tr>
+	<tr><td align="left"> + tatDepExe : BigDecimal </td></tr>
+	<tr><td align="left"> + tatApprov : String </td></tr>
+	<tr><td align="left"> + tatResPay : BigDecimal </td></tr>
+	<tr><td align="left"> + tatMonRev : BigDecimal </td></tr>
+	<tr><td align="left"> + tatMonPen : BigDecimal </td></tr>
+	<tr><td align="left"> + tatMonAco : BigDecimal </td></tr>
+	<tr><td align="left"> + tatRevPri : BigDecimal </td></tr>
+	<tr><td align="left"> + tatDateDep : Date </td></tr>
+	<tr><td align="left"> + tatDateRea : Date </td></tr>
+	<tr><td align="left"> + tatDateSer : Date </td></tr>
+	<tr><td align="left"> + tatDateRep : Date </td></tr>
+	<tr><td align="left"> + tatDateConFai : Date </td></tr>
+	<tr><td align="left"> + tatDateConFre : Date </td></tr>
+	<tr><td align="left"> + tatDateSoum : Date </td></tr>
+	<tr><td align="left"> + tatDateOrdCom : Date </td></tr>
+	<tr><td align="left"> + tatDateOrdArr : Date </td></tr>
+	<tr><td align="left"> + tatDateOrdRep : Date </td></tr>
+	<tr><td align="left"> + tatDateDpNr : Date </td></tr>
+	<tr><td align="left"> + tatCurStatusDate : Date </td></tr>
+	<tr><td align="left"> + tatCurDecision : String </td></tr>
+	<tr><td align="left"> + tatStatus : String </td></tr>
+	<tr><td align="left"> + tatIdAtt : String </td></tr>
+	<tr><td align="left"> + tatDpCurStatusDate : Date </td></tr>
+	<tr><td align="left"> + tatDpCurDecision : String </td></tr>
+	<tr><td align="left"> + tatDpStatus : String </td></tr>
+	<tr><td align="left"> + tatDpCurStatus : String </td></tr>
+	<tr><td align="left"> + tatNumVisa : String </td></tr>
+	<tr><td align="left"> + tatDateVisa : Date </td></tr>
+	<tr><td align="left"> + tatMonDecoTravaux : BigDecimal </td></tr>
+	<tr><td align="left"> + tatMonDepTravaux : BigDecimal </td></tr>
+	<tr><td align="left"> + tatArchAvan : String </td></tr>
+	<tr><td align="left"> + tatArchDecoTraite : String </td></tr>
+	<tr><td align="left"> + tatGarantie : String </td></tr>
+	<tr><td align="left"> + tatGarantieEsp : BigDecimal </td></tr>
+	<tr><td align="left"> + tatAvancement : BigDecimal </td></tr>
+	<tr><td align="left"> + tatDelaiExe : Integer </td></tr>
+	<tr><td align="left"> + tatDelaiUnit : String </td></tr>
+	<tr><td align="left"> + tatMonTrtTtc : BigDecimal </td></tr>
+	<tr><td align="left"> + tatCdpId : CptDepense </td></tr>
+	<tr><td align="left"> + tatCurTenId : CptEntity </td></tr>
+	<tr><td align="left"> + tatDpCurTenId : CptEntity </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecCatIndex [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecCatIndex </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tciCode : String </td></tr>
+	<tr><td align="left"> + tciName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecDecision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecDecision </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tedStatus : String </td></tr>
+	<tr><td align="left"> + tedDate : Date </td></tr>
+	<tr><td align="left"> + tedRem : String </td></tr>
+	<tr><td align="left"> + tedCenId : CptEntity </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecDpDecision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecDpDecision </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tedStatus : String </td></tr>
+	<tr><td align="left"> + tedDate : Date </td></tr>
+	<tr><td align="left"> + tedRem : String </td></tr>
+	<tr><td align="left"> + tedCenId : CptEntity </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecDpState [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecDpState </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tesStatus : String </td></tr>
+	<tr><td align="left"> + tesDate : Date </td></tr>
+	<tr><td align="left"> + tesRem : String </td></tr>
+	<tr><td align="left"> + tesCenId : CptEntity </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecEtape [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecEtape </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tetNom : String </td></tr>
+	<tr><td align="left"> + tetDelait : String </td></tr>
+	<tr><td align="left"> + tetAvancement : String </td></tr>
+	<tr><td align="left"> + tetPourcentage : String </td></tr>
+	<tr><td align="left"> + tetEcart : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecIndex [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecIndex </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tinMois : String </td></tr>
+	<tr><td align="left"> + tinValPro : String </td></tr>
+	<tr><td align="left"> + tinValDef : String </td></tr>
+	<tr><td align="left"> + tinAnnee : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecPv [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecPv </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tpvNum : String </td></tr>
+	<tr><td align="left"> + tpvName : String </td></tr>
+	<tr><td align="left"> + tpvDate : Date </td></tr>
+	<tr><td align="left"> + tpvPvFile : String </td></tr>
+	<tr><td align="left"> + tpvCdpId : CptDepense </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecPvType [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecPvType </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tptCode : String </td></tr>
+	<tr><td align="left"> + tptName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecState [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecState </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tesStatus : String </td></tr>
+	<tr><td align="left"> + tesDate : Date </td></tr>
+	<tr><td align="left"> + tesRem : String </td></tr>
+	<tr><td align="left"> + tesCenId : CptEntity </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+edge [arrowhead = "empty"]
+edge [arrowhead = "none"]
+
+
+edge [arrowtail="none" arrowhead = "none" headlabel="tcrAttId" taillabel="0..n idAttTcrId" labeldistance="2.0" labelangle="-30"]
+
+CalculRevision -> TecAttachement
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tnaAttId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+Nantissement -> TecAttachement
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tprAttId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PenaliteRetard -> TecAttachement
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n trgRgpId" taillabel="rgpTrgId" labeldistance="2.0" labelangle="-30"]
+
+RetenueGarantie -> RetenueGarantiePart
+
+edge [arrowtail="none" arrowhead = "open" headlabel="trgAttId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+RetenueGarantie -> TecAttachement
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tatCatId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+TecAttachement -> TecCatIndex
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCdpTedId" taillabel="tedCdpId" labeldistance="2.0" labelangle="-30"]
+
+TecAttachement -> TecDecision
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCdpDpdId" taillabel="dpdCdpId" labeldistance="2.0" labelangle="-30"]
+
+TecAttachement -> TecDpDecision
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCdpDpsId" taillabel="dpsCdpId" labeldistance="2.0" labelangle="-30"]
+
+TecAttachement -> TecDpState
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCdpTesId" taillabel="tesCdpId" labeldistance="2.0" labelangle="-30"]
+
+TecAttachement -> TecState
+
+edge [arrowtail="none" arrowhead = "none" headlabel="tetTpvId" taillabel="0..n tpvTetId" labeldistance="2.0" labelangle="-30"]
+
+TecEtape -> TecPv
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tinTciId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+TecIndex -> TecCatIndex
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tpvTptId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+TecPv -> TecPvType
+}

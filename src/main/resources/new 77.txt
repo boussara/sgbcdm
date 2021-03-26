@@ -1,0 +1,18 @@
+CRT
+error LNK2019: unresolved external symbol "
+void __cdecl log4cplus::detail::macro_forced_log(
+	class log4cplus::Logger const &,
+	int,
+	class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > const &,
+	char const *,
+	int,
+	char const *)
+" 
+(?macro_forced_log@detail@log4cplus@@YAXABVLogger@2@HABV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@PBDH2@Z) 
+referenced in function 
+"
+private: unsigned char __thiscall XfsApplicationMgtLog::processLine(
+	class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >
+)
+" 
+(?processLine@XfsApplicationMgtLog@@AAEEV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)

@@ -1,0 +1,172 @@
+				<!DOCTYPE html>
+<html layout:decorate="fragments/general_template"			
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title layout:fragment="title" data-th-text="#{screen_update}+' '+#{cpt.cptDepenseApp}">Welcome</title>
+</head>
+
+<body>
+
+
+	<div layout:fragment="content"  data-ng-app="app" data-ng-controller="ctrl as vm">
+	
+				<ol class="breadcrumb" style="margin: 4px -5px -8px;border-radius: 0px;">
+				  <li><a th:href="@{/rest/}" th:text="#{breadcrumbs_home}">Home</a></li>
+				  <li><a th:href="@{/rest/cptresources/cptDepenseApp/search}" th:text="#{cpt.cptDepenseApp}">Module</a></li>
+				  <li class="active" th:text="#{screen_update}+' '+#{cpt.cptDepenseApp}">Fonction</li>
+				</ol>	
+						
+				<div id="CptDepenseMergeDTODiv" >				
+				
+					<form action="#" id="CptDepenseMergeDTOForm" th:action="@{/rest/cptresources/cptDepenseApp/updateGap}" th:object="${entity}"
+					 method="POST"     data-validate="true">
+					<div class="row" style="margin-right: 7px;">
+					<div class="panel panel-default col-md-12 col-lg-12" id="merge-panel" style="padding: 0px;margin:2px 11px;">
+						<div class="panel-heading">
+							<span th:text="#{screen_update}+' '+#{cpt.cptDepenseApp}"></span>
+							<button type="submit" name="save" 
+							class="btn btn-link pull-right" id="update" style="margin-top:-4px;color: inherit;" ><i class="fa fa-pencil" ></i></button>
+							
+							<a class="btn btn-list pull-right" href="/rest/cptresources/cptDepenseApp/search" 
+								th:href="@{/rest/cptresources/cptDepenseApp/search}"  style="margin-top:-4px;color: inherit;">
+								<i class="fa fa-arrow-left"></i>
+							</a>
+						</div>
+						<div class="panel-body"  layout:fragment="merge_fg">
+					
+					<input type="hidden" th:field="*{id}" />
+					<input type="hidden" th:field="*{version}" />
+					<input type="hidden" th:field="*{cdpNaturPrix}"  />
+					<fieldset class="col-md-12 col-lg-12">
+						
+									<!-- Approbation -->
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpDateApp}">CdpDateApp</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"   type="text" th:field="*{cdpDateApp}"   style="opacity:0"   ng-model="cdpDateApp" />
+													<label for="cdpDateApp" class="form-control date-label-value"  id="__cdpDateApp__" ></label>
+													</div>
+													
+													
+													 
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpOrdId}">CdpOrdId</label></div>
+														<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" >
+														<select class="form-control " data-live-search="true" data-size="10" id="ord"  data-ng-model="vm.dtoOrd" 
+													            data-ng-options="ord.ordNom for ord in vm.ordList" >
+													      <option value='' th:text="#{choose}">- - - -choisir- - - -</option>
+										               </select>
+														</div>
+														
+										<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpSignApp}">CdpSignApp</label></div>						
+										<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="345" 
+										 style="width:400px;"  type="text" th:field="*{cdpSignApp}"   ng-model="vm.dtoOrd.ordNom" /></div>
+														
+											
+									
+									<!-- End Approbation -->
+														
+														<div class="row hidden" style="margin:20px">
+												
+									<!-- Enregistrement -->	
+									
+									<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpNumEnr}">CdpNumEnr</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="45" 
+													 style="width:200px;"  type="text" th:field="*{cdpNumEnr}"    /></div>
+											<!--		
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpDateEng}">CdpDateEng</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"   type="text" th:field="*{cdpDateEng}"   style="opacity:0"   ng-model="cdpDateEng" />
+													<label for="cdpDateEng" class="form-control date-label-value"  id="__cdpDateEng__" ></label>
+													</div>
+											-->				
+									<!-- End Enregistrement -->	
+									
+									<div class="row " style="margin:20px"></div>
+							
+									<!-- Notification --> 
+									
+									<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpNumNoti}">CdpNumNoti</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="45" 
+													 style="width:200px;"  type="text" th:field="*{cdpNumNoti}"    /></div>
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpDateNoti}">CdpDateNoti</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"   type="text" th:field="*{cdpDateNoti}"   style="opacity:0"   ng-model="cdpDateNoti" />
+													<label for="cdpDateNoti" class="form-control date-label-value"  id="__cdpDateNoti__" ></label>
+													</div>
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpNumLett}">CdpNumLett</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="45" 
+													 style="width:200px;"  type="text" th:field="*{cdpNumLett}"    /></div>
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpDateLett}">CdpDateLett</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"   type="text" th:field="*{cdpDateLett}"   style="opacity:0"   ng-model="cdpDateLett" />
+													<label for="cdpDateLett" class="form-control date-label-value"  id="__cdpDateLett__" ></label>
+													</div>
+									<!-- End Notification --> 
+													<div class="row" style="margin:20px"></div>
+									
+									<!-- Engagement -->
+									<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpNumVisa}">CdpNumVisa</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="45" 
+													 style="width:200px;"  type="text" th:field="*{cdpNumVisa}"   /></div>
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpDateVisa}">CdpDateVisa</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"   type="text" th:field="*{cdpDateVisa}"   style="opacity:0"   ng-model="cdpDateVisa" />
+													<label for="cdpDateVisa" class="form-control date-label-value"  id="__cdpDateVisa__" ></label>
+													</div>
+															
+															</div>
+									<div class="row hidden" style="margin:30px"></div>
+									
+						
+																	
+									
+
+<div class="col-md-offset-2 col-lg-offset-2 col-md-10 col-lg-10">
+<table>
+	<tr>						
+		<td>								
+		<button type="submit" name="update" 
+			class="btn btn-actions" id="update"  th:text="#{update}">Modifier</button>
+		</td>
+		<td style="with:100px">&nbsp;</td>
+<td style="with:100px">&nbsp;</td>
+				<td colspan="2">
+				<a class="btn btn-actions" href="/rest/cptresources/cptDepenseApp/search" th:href="@{/rest/cptresources/cptDepenseApp/search}" th:text="#{back}">back</a>
+				</td>
+			</tr>							
+		</table>
+		<br/>		
+		</div>	
+		
+		</fieldset>
+		
+		
+		</div>
+</div>
+</div>
+</form>	
+
+	
+			
+			
+			</div>	
+			
+	</div>
+	
+	<div layout:fragment="js_script" id="script_js">
+	
+		<script th:src="@{/resources/js/main/cptresources/cptDepenseApp/update.js}"></script>
+		<script data-th-src="@{/resources/js/angular-1.4.9/angular.js}"></script>
+
+		<script data-th-src="@{/resources/js/main/module.js}"></script>
+		<script data-th-src="@{/resources/js/main/url.service.js}"></script>
+		<script data-th-src="@{/resources/js/main/cptresources/cptDepenseApp/update/data.service.js}"></script>
+		<script data-th-src="@{/resources/js/main/cptresources/cptDepenseApp/update/ctrl.js}"></script>
+	
+	</div>
+				
+	
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,6 @@
+params.gab1.localdir=C:\\Users\\Administrateur\\Desktop\\easyatm\\Journal
+params.gab1.sftp.destdir=C:\\Users\\Administrateur\\Desktop\\easyatm\\Journal
+params.gab1.sftp.srcdir=/Journal
+params.gab1.sftp.server=192.168.25.201
+params.gab1.sftp.user=EasyATM
+params.gab1.sftp.password=Passw0rd

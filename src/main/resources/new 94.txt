@@ -1,0 +1,4 @@
+select * 
+from pla_credit_op placredito0_ cross join pla_credit_prj_reg placreditp1_ 
+where placredito0_.cop_crp_id=placreditp1_.crp_id and placreditp1_.crp_cpj_id=165938 and placreditp1_.crp_reg_id=165926 
+order by placredito0_.cop_id asc

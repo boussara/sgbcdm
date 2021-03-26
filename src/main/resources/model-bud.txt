@@ -1,0 +1,2294 @@
+import "classpath:/model-par.btdesign"
+import "classpath:/model-pla.btdesign"
+
+ApplicationPart Bud{
+	Module bud{
+		
+		Entity BudArticle{
+			databaseTable="bud_article"
+			hint="idSequence=artelcitra_dub_X"
+			
+			Long id    databaseColumn="art_id" 
+			Integer artCode /* length="24" /* key */ databaseColumn="art_code"  hint="visible=true,toString" 
+			String artName length="256" nullable databaseColumn="art_name"  hint="visible=true,toString" 
+			String artDesc length="256" nullable databaseColumn="art_desc"  hint="visible=true,toString" 
+				
+				- @BudMorasse artMorId  databaseColumn="art_mor_id"  <-> morArts nullable fetch="lazy" cascade="refresh"
+			
+				- @BudChapitre artChpId  databaseColumn="art_chp_id"  <-> idChpArtId nullable fetch="lazy" cascade="refresh"  							
+			
+				- @ParExercice artPexId  databaseColumn="art_pex_id"  /*<-> idPexArtId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @PlaBudgetType artBdtId  databaseColumn="art_bdt_id"  /*<-> idBdtArtId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @BudMorasseDet artModId  databaseColumn="art_mod_id" nullable fetch="lazy" cascade="refresh"
+			
+			- List<@BudParagraphe> idArtPphId <-> pphArtId cascade="refresh"
+			
+			Repository BudArticleRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudArticle> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudArticle> findByCondition(PagingParameter pagingParameter);
+				
+				//List<@BudArticle> findByBdtAndPexAndChp(Long bdtId, Long pexId, Long chpId) condition="artBdtId = :bdtId and artPexId = :pexId and artChpId = :chpId";
+				
+			}
+			
+		}
+		
+		Service BudArticleService {
+			
+			findById => BudArticleRepository.findById;
+			findAll => BudArticleRepository.findAll;
+			save => BudArticleRepository.save;
+			delete => BudArticleRepository.delete;
+			PagedResult<@BudArticle> search(@BudArticleDTO aua);
+			PagedResult<@BudArticle> findAll(PagingParameter pagingParameter);
+			
+			List<@BudArticle> findByBdtAndPexAndChp(Long bdtId, Long pexId, Long chpId)
+			hint="gen,order=asc,prop=id,conditions=[artBdtId.id = $bdtId & [artPexId.id = $pexId & artChpId.id = $chpId]],nullable";
+			
+			
+			List<@BudArticle> findByModId(Long id) hint="gen,order=asc,prop=id,conditions=artModId.id&$id,nullable";
+			
+			List<@BudArticle> findByMorAndChp(Long morId, Long chpId)
+			hint="gen,order=asc,prop=id,conditions=[artMorId.id = $morId & artChpId.id = $chpId ],nullable";
+			
+		}
+		
+		DataTransferObject BudArticleDTO {
+			hint="for=search,entity=BudArticle"
+			String artPexId1 hint="ref=artPexId,view=ComboBox"
+			String artCode hint="" 
+			String artName hint="" 
+			String artDesc hint="" 
+		}
+		
+		DataTransferObject BudArticleMergeDTO {
+			hint="for=merge,entity=BudArticle"
+			String artCode hint="" 
+			String artName hint="" 
+			String artDesc hint="" 
+			String artBdtId hint="type=system,view=ComboBox"
+			String artChpId hint="type=system,view=ComboBox"
+			String artPexId hint="type=system,view=ComboBox"
+			String artMorId hint="type=system,view=ComboBox,LinkedTo=artPexId" 						
+			String artModId hint="type=system,view=ComboBox"
+			
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudChapitre{
+			databaseTable="bud_chapitre"
+			hint="idSequence=chpertipahc_dub_X"
+			
+			Long id    databaseColumn="chp_id" 
+			String chpCode length="124" /* key */ databaseColumn="chp_code"  hint="visible=true,toString" 
+			String chpName length="64" nullable databaseColumn="chp_name"  hint="visible=true,toString" 
+			String chpDesc length="256" nullable databaseColumn="chp_desc"  hint="visible=true,toString" 
+			
+				- @PlaBudgetType chpBdtId  databaseColumn="chp_bdt_id"  /*<-> idBdtChpId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @BudPartie chpPrtId  databaseColumn="chp_prt_id"  /*<-> idPrtChpId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @BudTitre chpTtrId  databaseColumn="chp_ttr_id"  /*<-> idTtrChpId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @BudSsTitre chpStrId  databaseColumn="chp_str_id"  /*<-> idStrChpId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+			- List<@BudArticle> idChpArtId <-> artChpId
+			//- List<@BudMorasse> idChpMorId <-> morChpId
+			
+			Repository BudChapitreRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudChapitre> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudChapitre> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudChapitreService {
+			
+			findById => BudChapitreRepository.findById;
+			findAll => BudChapitreRepository.findAll;
+			save => BudChapitreRepository.save;
+			delete => BudChapitreRepository.delete;
+			PagedResult<@BudChapitre> search(@BudChapitreDTO aua);
+			PagedResult<@BudChapitre> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject BudChapitreDTO {
+			hint="for=search,entity=BudChapitre"
+			String chpCode hint="" 
+			String chpName hint="" 
+			String chpDesc hint="" 
+		}
+		
+		DataTransferObject BudChapitreMergeDTO {
+			hint="for=merge,entity=BudChapitre"
+			String chpCode hint="" 
+			String chpName hint="" 
+			String chpDesc hint="" 
+			String chpBdtId hint="type=system,view=ComboBox"
+			String chpPrtId hint="type=system,view=ComboBox"
+			String chpTtrId hint="type=system,view=ComboBox"
+			String chpStrId hint="type=system,view=ComboBox"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudCodeEco{
+			databaseTable="bud_code_eco"
+			hint="idSequence=cecoce_edoc_dub_X"
+			
+			Long id    databaseColumn="cec_id" 
+			String cecCode length="24" /* key */ databaseColumn="cec_code"  hint="visible=true,toString" 
+			String cecName length="64" nullable databaseColumn="cec_name"  hint="visible=true,toString" 
+			String cecDesc length="256" nullable databaseColumn="cec_desc"  hint="visible=true,toString" 
+			
+			//- List<@BudLigne> idCecLinId <-> linCecId
+			//- List<@BudMorasse> idCecMorId <-> morCecId
+			
+			Repository BudCodeEcoRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudCodeEco> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudCodeEco> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudCodeEcoService {
+			
+			findById => BudCodeEcoRepository.findById;
+			findAll => BudCodeEcoRepository.findAll;
+			save => BudCodeEcoRepository.save;
+			delete => BudCodeEcoRepository.delete;
+			PagedResult<@BudCodeEco> search(@BudCodeEcoDTO aua);
+			PagedResult<@BudCodeEco> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject BudCodeEcoDTO {
+			hint="for=search,entity=BudCodeEco"
+			String cecCode hint="" 
+			String cecName hint="" 
+			String cecDesc hint="" 
+		}
+		
+		DataTransferObject BudCodeEcoMergeDTO {
+			hint="for=merge,entity=BudCodeEco"
+			String cecCode hint="" 
+			String cecName hint="" 
+			String cecDesc hint="" 
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudCodeFnc{
+			databaseTable="bud_code_fnc"
+			hint="idSequence=cfncnf_edoc_dub_X"
+			
+			Long id    databaseColumn="cfn_id" 
+			String cfnCode length="24" /* key */ databaseColumn="cfn_code"  hint="visible=true,toString" 
+			String cfnName length="64" nullable databaseColumn="cfn_name"  hint="visible=true,toString" 
+			String cfnDesc length="256" nullable databaseColumn="cfn_desc"  hint="visible=true,toString" 
+			
+			//- List<@BudMorasse> idCfnMorId <-> morCfnId
+			//- List<@BudParagraphe> idCfnPphId <-> pphCfnId
+			
+			Repository BudCodeFncRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudCodeFnc> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudCodeFnc> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudCodeFncService {
+			
+			findById => BudCodeFncRepository.findById;
+			findAll => BudCodeFncRepository.findAll;
+			save => BudCodeFncRepository.save;
+			delete => BudCodeFncRepository.delete;
+			PagedResult<@BudCodeFnc> search(@BudCodeFncDTO aua);
+			PagedResult<@BudCodeFnc> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject BudCodeFncDTO {
+			hint="for=search,entity=BudCodeFnc"
+			String cfnCode hint="" 
+			String cfnName hint="" 
+			String cfnDesc hint="" 
+		}
+		
+		DataTransferObject BudCodeFncMergeDTO {
+			hint="for=merge,entity=BudCodeFnc"
+			String cfnCode hint="" 
+			String cfnName hint="" 
+			String cfnDesc hint="" 
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudDemModif{
+			databaseTable="bud_dem_modif"
+			hint="idSequence=demfidom_med_dub_X"
+			
+			Long id    databaseColumn="dem_id" 
+			String demStatus length="1" nullable databaseColumn="dem_status"  hint="visible=true,toString" 
+			String demDesc length="256" nullable databaseColumn="dem_desc"  hint="visible=true,toString" 
+			
+				- @BudSsMorasseDet demSmdId  databaseColumn="dem_smd_id"  /*<-> idSmdDemId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+				- @BudMorasseOp demMopId  databaseColumn="dem_mop_id"  /*<-> idMopDemId*/  fetch="lazy" cascade="refresh"  							
+			
+			- List<@BudDemModifMpres> idDemDmpId <-> dmpDemId fetch="lazy" cascade="refresh"
+			
+			Repository BudDemModifRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudDemModif> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudDemModif> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudDemModifService {
+			
+			findById => BudDemModifRepository.findById;
+			findAll => BudDemModifRepository.findAll;
+			save => BudDemModifRepository.save;
+			delete => BudDemModifRepository.delete;
+			PagedResult<@BudDemModif> search(@BudDemModifDTO aua);
+			PagedResult<@BudDemModif> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject BudDemModifDTO {
+			hint="for=search,entity=BudDemModif"
+			String demStatus hint="" 
+			String demDesc hint="" 
+		}
+		
+		DataTransferObject BudDemModifMergeDTO {
+			hint="for=merge,entity=BudDemModif"
+			String demStatus hint="" 
+			String demDesc hint="" 
+			String demSmdId hint="type=system,view=Search"
+			String demMopId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudDemModifMpres{
+			databaseTable="bud_dem_modif_mpres"
+			hint="idSequence=dmpserpm_fidom_med_dub_X"
+			
+			Long id    databaseColumn="dmp_id" 
+			BigDecimal dmpNewCp  nullable databaseColumn="dmp_new_cp"  hint="visible=true,toString" 
+			BigDecimal dmpNewCe  nullable databaseColumn="dmp_new_ce"  hint="visible=true,toString" 
+			BigDecimal dmpOldCp  nullable databaseColumn="dmp_old_cp"  hint="visible=true,toString" 
+			BigDecimal dmpOldCe  nullable databaseColumn="dmp_old_ce" 
+			
+				- @BudDemModif dmpDemId  databaseColumn="dmp_dem_id"  <-> idDemDmpId  fetch="lazy" cascade="refresh"  							
+			
+				- @BudMorassePres dmpMprId  databaseColumn="dmp_mpr_id"  /*<-> idMprDmpId*/  fetch="lazy" cascade="refresh"  							
+			
+				- @BudSsMorasseDet dmpSmdId  databaseColumn="dmp_smd_id"  /*<-> idSmdDmpId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+			- List<@BudDmpHasChp> idDmpDhcId <-> dhcDmpId fetch="lazy" cascade="refresh"
+			
+			Repository BudDemModifMpresRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudDemModifMpres> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudDemModifMpres> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudDemModifMpresService {
+			
+			findById => BudDemModifMpresRepository.findById;
+			findAll => BudDemModifMpresRepository.findAll;
+			save => BudDemModifMpresRepository.save;
+			delete => BudDemModifMpresRepository.delete;
+			PagedResult<@BudDemModifMpres> search(@BudDemModifMpresDTO aua);
+			PagedResult<@BudDemModifMpres> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject BudDemModifMpresDTO {
+			hint="for=search,entity=BudDemModifMpres"
+			String dmpNewCp hint="" 
+			String dmpNewCe hint="" 
+			String dmpOldCp hint="" 
+		}
+		
+		DataTransferObject BudDemModifMpresMergeDTO {
+			hint="for=merge,entity=BudDemModifMpres"
+			String dmpNewCp hint="" 
+			String dmpNewCe hint="" 
+			String dmpOldCp hint="" 
+			String dmpOldCe hint="" 
+			String dmpDemId hint="type=system,view=Search"
+			String dmpMprId hint="type=system,view=Search"
+			String dmpSmdId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudDmpHasChp{
+			databaseTable="bud_dmp_has_chp"
+			hint="idSequence=dhcphc_sah_pmd_dub_X"
+			
+			Long id    databaseColumn="dhc_id" 
+			BigDecimal dhcOldCredit  nullable databaseColumn="dhc_old_credit"  hint="visible=true,toString" 
+			BigDecimal dhcNewCredit  nullable databaseColumn="dhc_new_credit"  hint="visible=true,toString" 
+			
+				- @BudDemModifMpres dhcDmpId  databaseColumn="dhc_dmp_id"  <-> idDmpDhcId  fetch="lazy" cascade="refresh"  							
+			
+				- @PlaCprHasPex dhcChpId  databaseColumn="dhc_chp_id"  /*<-> idChpDhcId*/  fetch="lazy" cascade="refresh"  							
+			
+			
+			Repository BudDmpHasChpRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudDmpHasChp> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudDmpHasChp> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudDmpHasChpService {
+			
+			findById => BudDmpHasChpRepository.findById;
+			findAll => BudDmpHasChpRepository.findAll;
+			save => BudDmpHasChpRepository.save;
+			delete => BudDmpHasChpRepository.delete;
+			PagedResult<@BudDmpHasChp> search(@BudDmpHasChpDTO aua);
+			PagedResult<@BudDmpHasChp> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject BudDmpHasChpDTO {
+			hint="for=search,entity=BudDmpHasChp"
+			String dhcOldCredit hint="" 
+			String dhcNewCredit hint="" 
+		}
+		
+		DataTransferObject BudDmpHasChpMergeDTO {
+			hint="for=merge,entity=BudDmpHasChp"
+			String dhcOldCredit hint="" 
+			String dhcNewCredit hint="" 
+			String dhcDmpId hint="type=system,view=Search"
+			String dhcChpId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudDemMvt{
+			databaseTable="bud_dem_mvt"
+			hint="idSequence=dmvtvm_med_dub_X"
+			
+			Long id    databaseColumn="dmv_id" 
+			String dmvCode length="24" nullable databaseColumn="dmv_code"  
+			String dmvName length="256" nullable databaseColumn="dmv_name"  
+			String dmvDesc length="256" nullable databaseColumn="dmv_desc"  
+			String dmvType length="1"  databaseColumn="dmv_type" 
+			String dmvNum length="24" nullable databaseColumn="dmv_num" hint="visible=true,toString" 
+			Date dmvDate  nullable databaseColumn="dmv_date" hint="visible=true,toString" 
+			String dmvNumCour length="24" nullable databaseColumn="dmv_num_cour" hint="visible=true,toString" 
+			String dmvMorsrcType length="1" nullable databaseColumn="dmv_morsrc_type" hint="visible=true,toString" 
+			Long dmvMorsrcId  nullable databaseColumn="dmv_morsrc_id" 
+			String dmvMordestType length="1" nullable databaseColumn="dmv_mordest_type" 
+			Long dmvMordestId  nullable databaseColumn="dmv_mordest_id" 
+			String dmvMotif length="256" nullable databaseColumn="dmv_motif" 
+			String dmvStatus length="1" nullable databaseColumn="dmv_status" 
+			String dmvObs length="256" nullable databaseColumn="dmv_obs" 
+			
+			String dmvNumVisa length="45" nullable databaseColumn="dmv_num_visa" 
+			Date dmvDateVisa  nullable databaseColumn="dmv_date_visa" 
+			
+				- @BudChapitre dmvChpId  databaseColumn="dmv_chp_id"  /*<-> idChpDmvId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @ParExercice dmvPexId  databaseColumn="dmv_pex_id"  /*<-> idPexDmvId*/ nullable fetch="lazy" cascade="refresh"  hint="visible=true,toString"						
+			
+				- @PlaBudgetType dmvBdtId  databaseColumn="dmv_bdt_id"  /*<-> idBdtDmvId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @BudTypeVir dmvTvrId  databaseColumn="dmv_tvr_id"  /*<-> idTvrDmvId*/ nullable fetch="lazy" cascade="refresh"  							
+				
+				- @ParOrdonateur dmvOrdId  databaseColumn="dmv_ord_id"  /*<-> idOrdDmvId*/ nullable fetch="lazy" cascade="refresh"  hint="visible=true,toString"							
+			
+				- @BudDemPlanif dmvDepId  databaseColumn="dmv_dep_id"  /*<-> idDepDmvId*/  nullable  fetch="lazy" cascade="refresh"  							
+				
+				- @BudDemMvt dmvDmvId  databaseColumn="dmv_dmv_id"  /*<-> idDmvDmvId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+				- @BudMorasse dmvMorSrc  databaseColumn="dmv_mor_src"  /*<-> srcMorDmvId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+				- @BudSsMorasse dmvSmrSrc  databaseColumn="dmv_smr_src"  /*<-> srcSmrDmvId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+				- @BudMorasse dmvMorDest  databaseColumn="dmv_mor_dest"  /*<-> destMorDmvId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+				- @BudSsMorasse dmvSmrDest  databaseColumn="dmv_smr_dest"  /*<-> destSmrDmvId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+			
+			//- List<@BudDemMvt> idDmvDmvId <-> dmvDmvId
+			
+			- List<@BudDemMvtDest> idDmvMddId <-> mddDmvId
+			- List<@BudDemMvtLog> idDmvDmlId <-> dmlDmvId
+			- List<@BudDemMvtMemo> idDmvDmmId <-> dmmDmvId
+			- List<@BudDemMvtSrc> idDmvMdsId <-> mdsDmvId
+			
+			//- List<@BudDvmSmd> idDmvSdvId <-> sdvDmvId
+			- List<@BudDemMvtMpres> dmmIds <-> dmmDmvId fetch="lazy" cascade="refresh"
+			
+			Repository BudDemMvtRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudDemMvt> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudDemMvt> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudDemMvtService {
+			
+			findById => BudDemMvtRepository.findById;
+			findAll => BudDemMvtRepository.findAll;
+			save => BudDemMvtRepository.save;
+			delete => BudDemMvtRepository.delete;
+			PagedResult<@BudDemMvt> search(@BudDemMvtDTO aua);
+			PagedResult<@BudDemMvt> findAll(PagingParameter pagingParameter);
+			
+			List<@BudDemMvt> findByDmvCode(String dmvCode) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDemMvt> findByDmvName(String dmvName) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDemMvt> findByDmvDesc(String dmvDesc) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDemMvt> findByDmvType(String dmvType) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDemMvt> findByDmvNum(String dmvNum) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDemMvt> findByDmvDate(Date dmvDate) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDemMvt> findByDmvNumCour(String dmvNumCour) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDemMvt> findByDmvMorsrcType(String dmvMorsrcType) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDemMvt> findByDmvMorsrcId(Integer dmvMorsrcId) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDemMvt> findByDmvMordestType(String dmvMordestType) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDemMvt> findByDmvMordestId(Integer dmvMordestId) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDemMvt> findByDmvMotif(String dmvMotif) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDemMvt> findByDmvStatus(String dmvStatus) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDemMvt> findByDmvObs(String dmvObs) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDemMvt> findByDmvChpId(Long id) hint="gen,order=asc,prop=id,conditions=dmvChpId.id&$id,nullable";
+			List<@BudDemMvt> findByDmvPexId(Long id) hint="gen,order=asc,prop=id,conditions=dmvPexId.id&$id,nullable";
+			List<@BudDemMvt> findByDmvBdtId(Long id) hint="gen,order=asc,prop=id,conditions=dmvBdtId.id&$id,nullable";
+			List<@BudDemMvt> findByDmvTvrId(Long id) hint="gen,order=asc,prop=id,conditions=dmvTvrId.id&$id,nullable";
+			List<@BudDemMvt> findByDmvOrdId(Long id) hint="gen,order=asc,prop=id,conditions=dmvOrdId.id&$id,nullable";
+			List<@BudDemMvt> findByDmvDepId(Long id) hint="gen,order=asc,prop=id,conditions=dmvDepId.id&$id,nullable";
+			List<@BudDemMvt> findByDmvDmvId(Long id) hint="gen,order=asc,prop=id,conditions=dmvDmvId.id&$id,nullable";
+			List<@BudDemMvt> findByDmvNumVisa(String dmvNumVisa) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDemMvt> findByDmvDateVisa(Date dmvDateVisa) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDemMvt> findByDmvMorSrc(Long id) hint="gen,order=asc,prop=id,conditions=dmvMorSrc.id&$id,nullable";
+			List<@BudDemMvt> findByDmvSmrSrc(Long id) hint="gen,order=asc,prop=id,conditions=dmvSmrSrc.id&$id,nullable";
+			List<@BudDemMvt> findByDmvMorDest(Long id) hint="gen,order=asc,prop=id,conditions=dmvMorDest.id&$id,nullable";
+			List<@BudDemMvt> findByDmvSmrDest(Long id) hint="gen,order=asc,prop=id,conditions=dmvSmrDest.id&$id,nullable";
+			
+			
+			PagedResult<@BudDemMvt> getAllVir(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@BudDemMvt> getAllDeleg(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@BudDemMvt> getAllReduc(PagingParameter pagingParameter) hint="gap";
+			
+			PagedResult<@BudDemMvt> filterVir(@BudDemMvtDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@BudDemMvt> filterDeleg(@BudDemMvtDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@BudDemMvt> filterReduc(@BudDemMvtDTO aua,PagingParameter pagingParameter) hint="gap";
+		
+		}
+		
+		DataTransferObject BudDemMvtDTO {
+			hint="for=search,entity=BudDemMvt"
+			
+			String dmvType hint="" 
+			String dmvNum hint="" 
+			String dmvDate hint="" 
+			String dmvNumCour hint=""
+			String dmvPexId1 hint="ref=dmvPexId,view=ComboBox"
+			String dmvBdtId1 hint="ref=dmvBdtId,view=ComboBox"
+			String dmvOrdId1 hint="ref=dmvOrdId,view=ComboBox"  
+		}
+		
+		DataTransferObject BudDemMvtMergeDTO {
+			hint="for=merge,entity=BudDemMvt"
+			String dmvCode hint="" 
+			String dmvName hint="" 
+			String dmvDesc hint="" 
+			String dmvType hint="" 
+			String dmvNum hint="" 
+			String dmvDate hint="" 
+			String dmvNumCour hint="" 
+			String dmvMorsrcType hint="" 
+			String dmvMorsrcId hint="" 
+			String dmvMordestType hint="" 
+			String dmvMordestId hint="" 
+			String dmvMotif hint="" 
+			String dmvStatus hint="" 
+			String dmvObs hint="" 
+			String dmvChpId hint="type=system,view=ComboBox"
+			String dmvPexId hint="type=system,view=ComboBox"
+			String dmvBdtId hint="type=system,view=ComboBox"
+			String dmvTvrId hint="type=system,view=ComboBox"
+			String dmvOrdId hint="type=system,view=ComboBox"
+			String dmvDepId hint="type=system,view=ComboBox"
+			String dmvDmvId hint="type=system,view=Search"
+			String dmvNumVisa hint="" 
+			String dmvDateVisa hint="" 
+			String dmvMorSrc hint="type=system,view=Search"
+			String dmvSmrSrc hint="type=system,view=Search"
+			String dmvMorDest hint="type=system,view=Search"
+			String dmvSmrDest hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudDemMvtDest{
+			databaseTable="bud_dem_mvt_dest"
+			hint="idSequence=mddtsed_tvm_med_dub_X"
+			
+			Long id    databaseColumn="mdd_id" 
+			String mddMorType length="1" nullable databaseColumn="mdd_mor_type"  hint="visible=true,toString" 
+			Long mddModId   databaseColumn="mdd_mod_id"  hint="visible=true,toString" 
+			BigDecimal mddCreditCe  nullable databaseColumn="mdd_credit_ce"  hint="visible=true,toString" 
+			BigDecimal mddCreditCp  nullable databaseColumn="mdd_credit_cp" 
+			String mddMotif length="512" nullable databaseColumn="mdd_motif" 
+			
+				- @BudDemMvt mddDmvId  databaseColumn="mdd_dmv_id"  <-> idDmvMddId nullable fetch="lazy" cascade="refresh"  							
+				
+				- @BudMorasseDet mddMod  databaseColumn="mdd_mod"  /*<-> modMddId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+				- @BudSsMorasseDet mddSmd  databaseColumn="mdd_smd"  /*<-> smdMddId*/  nullable  fetch="lazy" cascade="refresh"  										
+			
+			
+			Repository BudDemMvtDestRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudDemMvtDest> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudDemMvtDest> findByCondition(PagingParameter pagingParameter);
+		
+				//List<@BudDemMvtDest> findByDmvId(Long id) condition="mddDmvId = :id" ;
+				
+			}
+			
+		}
+		
+		Service BudDemMvtDestService {
+			
+			findById => BudDemMvtDestRepository.findById;
+			findAll => BudDemMvtDestRepository.findAll;
+			save => BudDemMvtDestRepository.save;
+			delete => BudDemMvtDestRepository.delete;
+			PagedResult<@BudDemMvtDest> search(@BudDemMvtDestDTO aua);
+			PagedResult<@BudDemMvtDest> findAll(PagingParameter pagingParameter);
+			List<@BudDemMvtDest> findByDmvId(Long id) hint="gen,order=asc,prop=id,conditions=mddDmvId.id&$id,nullable";
+			
+			
+			List<@BudDemMvtDest> findByMddMod(Long id) hint="gen,order=asc,prop=id,conditions=mddMod.id&$id,nullable";
+			List<@BudDemMvtDest> findByMddSmd(Long id) hint="gen,order=asc,prop=id,conditions=mddSmd.id&$id,nullable";
+					
+		}
+		
+		DataTransferObject BudDemMvtDestDTO {
+			hint="for=search,entity=BudDemMvtDest"
+			String mddMorType hint=""
+			String mddCreditCe hint="" 
+		}
+		
+		DataTransferObject BudDemMvtDestMergeDTO {
+			hint="for=merge,entity=BudDemMvtDest"
+			String mddMorType hint="" 
+			String mddModId hint="" 
+			String mddCreditCe hint="" 
+			String mddCreditCp hint="" 
+			String mddMotif hint="" 
+			String mddDmvId hint="type=system,view=ComboBox"
+			String mddMod hint="type=system,view=Search"
+			String mddSmd hint="type=system,view=Search"
+					
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudDemMvtLog{
+			databaseTable="bud_dem_mvt_log"
+			hint="idSequence=dmlgol_tvm_med_dub_X"
+			
+			Long id    databaseColumn="dml_id" 
+			String dmlTypeAction length="1" nullable databaseColumn="dml_type_action"  hint="visible=true,toString" 
+			String dmlMsg length="512" nullable databaseColumn="dml_msg"  hint="visible=true,toString" 
+			Date dmlDate  nullable databaseColumn="dml_date"  hint="visible=true,toString" 
+			String dmlUser length="45" nullable databaseColumn="dml_user" 
+			
+				- @BudDemMvt dmlDmvId  databaseColumn="dml_dmv_id"  <-> idDmvDmlId nullable fetch="lazy" cascade="refresh"  							
+			
+			Repository BudDemMvtLogRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudDemMvtLog> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudDemMvtLog> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudDemMvtLogService {
+			
+			findById => BudDemMvtLogRepository.findById;
+			findAll => BudDemMvtLogRepository.findAll;
+			save => BudDemMvtLogRepository.save;
+			delete => BudDemMvtLogRepository.delete;
+			PagedResult<@BudDemMvtLog> search(@BudDemMvtLogDTO aua);
+			PagedResult<@BudDemMvtLog> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject BudDemMvtLogDTO {
+			hint="for=search,entity=BudDemMvtLog"
+			String dmlTypeAction hint="" 
+			String dmlMsg hint="" 
+			String dmlDate hint="" 
+		}
+		
+		DataTransferObject BudDemMvtLogMergeDTO {
+			hint="for=merge,entity=BudDemMvtLog"
+			String dmlTypeAction hint="" 
+			String dmlMsg hint="" 
+			String dmlDate hint="" 
+			String dmlUser hint="" 
+			String dmlDmvId hint="type=system,view=ComboBox"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudDemMvtMemo{
+			databaseTable="bud_dem_mvt_memo"
+			hint="idSequence=dmmomem_tvm_med_dub_X"
+			
+			Long id    databaseColumn="dmm_id" 
+			String dmmMemo length="512" nullable databaseColumn="dmm_memo"  hint="visible=true,toString" 
+			String dmmUser length="64" nullable databaseColumn="dmm_user"  hint="visible=true,toString" 
+			Date dmmDate  nullable databaseColumn="dmm_date"  hint="visible=true,toString" 
+			
+				- @BudDemMvt dmmDmvId  databaseColumn="dmm_dmv_id"  <-> idDmvDmmId nullable fetch="lazy" cascade="refresh"  							
+			
+			
+			Repository BudDemMvtMemoRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudDemMvtMemo> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudDemMvtMemo> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudDemMvtMemoService {
+			
+			findById => BudDemMvtMemoRepository.findById;
+			findAll => BudDemMvtMemoRepository.findAll;
+			save => BudDemMvtMemoRepository.save;
+			delete => BudDemMvtMemoRepository.delete;
+			PagedResult<@BudDemMvtMemo> search(@BudDemMvtMemoDTO aua);
+			PagedResult<@BudDemMvtMemo> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject BudDemMvtMemoDTO {
+			hint="for=search,entity=BudDemMvtMemo"
+			String dmmMemo hint="" 
+			String dmmUser hint="" 
+			String dmmDate hint="" 
+		}
+		
+		DataTransferObject BudDemMvtMemoMergeDTO {
+			hint="for=merge,entity=BudDemMvtMemo"
+			String dmmMemo hint="" 
+			String dmmUser hint="" 
+			String dmmDate hint="" 
+			String dmmDmvId hint="type=system,view=ComboBox"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudDemMvtMpres{
+			databaseTable="bud_dem_mvt_mpres"
+			hint="idSequence=dmmserpm_tvm_med_dub_X"
+			
+			Long id    databaseColumn="dmm_id" 
+			BigDecimal dmmNewCp  nullable databaseColumn="dmm_new_cp"  hint="visible=true,toString" 
+			BigDecimal dmmNewCe  nullable databaseColumn="dmm_new_ce"  hint="visible=true,toString" 
+			BigDecimal dmmOldCp  nullable databaseColumn="dmm_old_cp"  hint="visible=true,toString" 
+			BigDecimal dmmOldCe  nullable databaseColumn="dmm_old_ce" 
+			
+				- @BudMorassePres dmmMprId  databaseColumn="dmm_mpr_id"  /*<-> idMprDmmId*/  fetch="lazy" cascade="refresh"  							
+			
+				- @BudSsMorasseDet dmmSmdId  databaseColumn="dmm_smd_id"  /*<-> idSmdDmmId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+				- @BudDemMvt dmmDmvId  databaseColumn="dmm_dmv_id"  <-> dmmIds  fetch="lazy" cascade="refresh"  							
+			
+				- @BudMorasseDet dmmModId  databaseColumn="dmm_mod_id"  /*<-> idModDmmId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+			- List<@BudDmmHasChp> idDmmMhcId <-> mhcDmmId fetch="lazy" cascade="refresh"
+			
+			Repository BudDemMvtMpresRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudDemMvtMpres> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudDemMvtMpres> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudDemMvtMpresService {
+			
+			findById => BudDemMvtMpresRepository.findById;
+			findAll => BudDemMvtMpresRepository.findAll;
+			save => BudDemMvtMpresRepository.save;
+			delete => BudDemMvtMpresRepository.delete;
+			PagedResult<@BudDemMvtMpres> search(@BudDemMvtMpresDTO aua);
+			PagedResult<@BudDemMvtMpres> findAll(PagingParameter pagingParameter);
+			
+			List<@BudDemMvtMpres> findByDmmNewCp(BigDecimal dmmNewCp) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDemMvtMpres> findByDmmNewCe(BigDecimal dmmNewCe) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDemMvtMpres> findByDmmOldCp(BigDecimal dmmOldCp) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDemMvtMpres> findByDmmOldCe(BigDecimal dmmOldCe) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDemMvtMpres> findByDmmMprId(Long id) hint="gen,order=asc,prop=id,conditions=dmmMprId.id&$id,nullable";
+			List<@BudDemMvtMpres> findByDmmSmdId(Long id) hint="gen,order=asc,prop=id,conditions=dmmSmdId.id&$id,nullable";
+			List<@BudDemMvtMpres> findByDmmDmvId(Long id) hint="gen,order=asc,prop=id,conditions=dmmDmvId.id&$id,nullable";
+			List<@BudDemMvtMpres> findByDmmModId(Long id) hint="gen,order=asc,prop=id,conditions=dmmModId.id&$id,nullable";
+		}
+		
+		DataTransferObject BudDemMvtMpresDTO {
+			hint="for=search,entity=BudDemMvtMpres"
+			String dmmNewCp hint="" 
+			String dmmNewCe hint="" 
+			String dmmOldCp hint="" 
+		}
+		
+		DataTransferObject BudDemMvtMpresMergeDTO {
+			hint="for=merge,entity=BudDemMvtMpres"
+			String dmmNewCp hint="" 
+			String dmmNewCe hint="" 
+			String dmmOldCp hint="" 
+			String dmmOldCe hint="" 
+			String dmmMprId hint="type=system,view=Search"
+			String dmmSmdId hint="type=system,view=Search"
+			String dmmDmvId hint="type=system,view=Search"
+			String dmmModId hint="type=system,view=Search"
+		}
+	
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudDmmHasChp{
+			databaseTable="bud_dmm_has_chp"
+			hint="idSequence=mhcphc_sah_mmd_dub_X"
+			
+			Long id    databaseColumn="mhc_id" 
+			BigDecimal mhcOldCredit  nullable databaseColumn="mhc_old_credit"  hint="visible=true,toString" 
+			BigDecimal mhcNewCredit  nullable databaseColumn="mhc_new_credit"  hint="visible=true,toString" 
+			
+				- @BudDemMvtMpres mhcDmmId  databaseColumn="mhc_dmm_id"  <-> idDmmMhcId  fetch="lazy" cascade="refresh"  							
+			
+				- @PlaCprHasPex mhcChpId  databaseColumn="mhc_chp_id"  /*<-> idChpMhcId*/  fetch="lazy" cascade="refresh"  							
+			
+			
+			Repository BudDmmHasChpRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudDmmHasChp> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudDmmHasChp> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudDmmHasChpService {
+			
+			findById => BudDmmHasChpRepository.findById;
+			findAll => BudDmmHasChpRepository.findAll;
+			save => BudDmmHasChpRepository.save;
+			delete => BudDmmHasChpRepository.delete;
+			PagedResult<@BudDmmHasChp> search(@BudDmmHasChpDTO aua);
+			PagedResult<@BudDmmHasChp> findAll(PagingParameter pagingParameter);
+			
+			List<@BudDmmHasChp> findByMhcOldCredit(BigDecimal mhcOldCredit) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDmmHasChp> findByMhcNewCredit(BigDecimal mhcNewCredit) hint="gen,order=asc,prop=id,nullable";
+			List<@BudDmmHasChp> findByMhcDmmId(Long id) hint="gen,order=asc,prop=id,conditions=mhcDmmId.id&$id,nullable";
+			List<@BudDmmHasChp> findByMhcChpId(Long id) hint="gen,order=asc,prop=id,conditions=mhcChpId.id&$id,nullable";
+		}
+		
+		DataTransferObject BudDmmHasChpDTO {
+			hint="for=search,entity=BudDmmHasChp"
+			String mhcOldCredit hint="" 
+			String mhcNewCredit hint="" 
+		}
+		
+		DataTransferObject BudDmmHasChpMergeDTO {
+			hint="for=merge,entity=BudDmmHasChp"
+			String mhcOldCredit hint="" 
+			String mhcNewCredit hint="" 
+			String mhcDmmId hint="type=system,view=Search"
+			String mhcChpId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudDemMvtSrc{
+			databaseTable="bud_dem_mvt_src"
+			hint="idSequence=mdscrs_tvm_med_dub_X"
+			
+			Long id    databaseColumn="mds_id" 
+			String mdsMorType length="1" nullable databaseColumn="mds_mor_type"  hint="visible=true,toString" 
+			Long mdsModId   databaseColumn="mds_mod_id"  hint="visible=true,toString" 
+			BigDecimal mdsCreditCe  nullable databaseColumn="mds_credit_ce"  hint="visible=true,toString" 
+			BigDecimal mdsCreditCp  nullable databaseColumn="mds_credit_cp" 
+			String mdsMotif length="512" nullable databaseColumn="mds_motif" 
+			
+				- @BudDemMvt mdsDmvId  databaseColumn="mds_dmv_id"  <-> idDmvMdsId nullable fetch="lazy" cascade="refresh"  							
+				
+				- @BudMorasseDet mdsMod  databaseColumn="mds_mod"  /*<-> modMdsId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+				- @BudSsMorasseDet mdsSmd  databaseColumn="mds_smd"  /*<-> smdMdsId*/  nullable  fetch="lazy" cascade="refresh"
+			
+			Repository BudDemMvtSrcRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudDemMvtSrc> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudDemMvtSrc> findByCondition(PagingParameter pagingParameter);
+				
+				//List<@BudDemMvtSrc> findByDmvId(Long id) condition="mdsDmvId = :id" ;
+			}
+			
+		}
+		
+		Service BudDemMvtSrcService {
+			
+			findById => BudDemMvtSrcRepository.findById;
+			findAll => BudDemMvtSrcRepository.findAll;
+			save => BudDemMvtSrcRepository.save;
+			delete => BudDemMvtSrcRepository.delete;
+			PagedResult<@BudDemMvtSrc> search(@BudDemMvtSrcDTO aua);
+			PagedResult<@BudDemMvtSrc> findAll(PagingParameter pagingParameter);
+				
+			List<@BudDemMvtSrc> findByDmvId(Long id) hint="gen,order=asc,prop=id,conditions=mdsDmvId.id&$id,nullable";
+			List<@BudDemMvtSrc> findByMdsMod(Long id) hint="gen,order=asc,prop=id,conditions=mdsMod.id&$id,nullable";
+			List<@BudDemMvtSrc> findByMdsSmd(Long id) hint="gen,order=asc,prop=id,conditions=mdsSmd.id&$id,nullable";
+		}
+		
+		DataTransferObject BudDemMvtSrcDTO {
+			hint="for=search,entity=BudDemMvtSrc"
+			String mdsMorType hint=""
+			String mdsCreditCe hint="" 
+		}
+		
+		DataTransferObject BudDemMvtSrcMergeDTO {
+			hint="for=merge,entity=BudDemMvtSrc"
+			String mdsMorType hint="" 
+			String mdsModId hint="" 
+			String mdsCreditCe hint="" 
+			String mdsCreditCp hint="" 
+			String mdsMotif hint="" 
+			String mdsDmvId hint="type=system,view=ComboBox"
+			String mdsMod hint="type=system,view=Search"
+			String mdsSmd hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudDemPlanif{
+			databaseTable="bud_dem_planif"
+			hint="idSequence=depfinalp_med_dub_X"
+			
+			Long id    databaseColumn="dep_id" 
+			String depStatus length="1" nullable databaseColumn="dep_status"  hint="visible=true,toString" 
+			String depDesc length="256" nullable databaseColumn="dep_desc"  hint="visible=true,toString" 
+			
+				- @BudSsMorasseDet depSmdId  databaseColumn="dep_smd_id"  /*<-> idSmdDepId*/  fetch="lazy" cascade="refresh"  							
+			
+				- @PlaCreditOp depCopId  databaseColumn="dep_cop_id" nullable /*<-> idCopDepId*/  fetch="lazy" cascade="refresh"  							
+				- @BudMorasseOp depMopId  databaseColumn="dep_mop_id" nullable /*<-> idMopDepId*/  fetch="lazy" cascade="refresh"  							
+			
+				- @ParAgentExe depAexId  databaseColumn="dep_aex_id"  nullable  fetch="lazy" cascade="refresh"  							
+			
+			
+			
+			- List<@BudDemPlanifMpres> idDepDppId <-> dppDepId fetch="lazy" cascade="refresh"
+			- List<@BudDemPlanifNpres> idDepDpdId <-> dpdDepId fetch="lazy" cascade="refresh"
+			
+			
+			Repository BudDemPlanifRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudDemPlanif> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudDemPlanif> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudDemPlanifService {
+			
+			findById => BudDemPlanifRepository.findById;
+			findAll => BudDemPlanifRepository.findAll;
+			save => BudDemPlanifRepository.save;
+			delete => BudDemPlanifRepository.delete;
+			PagedResult<@BudDemPlanif> search(@BudDemPlanifDTO aua);
+			PagedResult<@BudDemPlanif> findAll(PagingParameter pagingParameter);
+			
+			List<@BudDemPlanif> findByDepAexId(Long id) hint="gen,order=asc,prop=id,conditions=depAexId.id&$id,nullable";
+			
+			migrateOp(@BudDemPlanif dep) hint="gap";
+			linkPrs(@BudDemPlanif dep) hint="gap";
+			createDmmForDpp(@BudDemMvt demVir, @BudDemPlanifMpres dpp) hint="gap";
+			createDmmForDpd(@BudDemPlanifNpres dpd, @BudDemMvt demMvt, @BudDemPlanif dep) hint="gap";
+		}
+		
+		DataTransferObject BudDemPlanifDTO {
+			hint="for=search,entity=BudDemPlanif"
+			String depStatus hint="" 
+			String depDesc hint="" 
+		}
+		
+		DataTransferObject BudDemPlanifMergeDTO {
+			hint="for=merge,entity=BudDemPlanif"
+			String depStatus hint="" 
+			String depDesc hint="" 
+			String depSmdId hint="type=system,view=Search"
+			String depCopId hint="type=system,view=Search"
+			String depMopId hint="type=system,view=Search"
+			String depAexId hint="type=system,view=Search"
+			
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+			
+		Entity BudDemPlanifMpres{
+			databaseTable="bud_dem_planif_mpres"
+			hint="idSequence=dppserpm_finalp_med_dub_X"
+			
+			Long id    databaseColumn="dpp_id" 
+			BigDecimal dppNewCp  nullable databaseColumn="dpp_new_cp"  hint="visible=true,toString" 
+			BigDecimal dppNewCe  nullable databaseColumn="dpp_new_ce"  hint="visible=true,toString" 
+			
+			BigDecimal dppOldCp  nullable databaseColumn="dpp_old_cp"  hint="visible=true,toString" 
+			BigDecimal dppOldCe  nullable databaseColumn="dpp_old_ce"  hint="visible=true,toString" 
+			
+			String planifStatus nullable transient 
+			
+				- @BudDemPlanif dppDepId  databaseColumn="dpp_dep_id"  <-> idDepDppId  fetch="lazy" cascade="refresh"  							
+			
+				- @BudMorassePres dppMprId  databaseColumn="dpp_mpr_id"  /*<-> idMprDppId*/  fetch="lazy" cascade="refresh"  							
+			
+				- @BudSsMorasseDet dppSmdId nullable databaseColumn="dpp_smd_id"  /*<-> idSmdDppId*/  fetch="lazy" cascade="refresh"  							
+			
+			- List<@BudDemPlanifMpresHasPex> idDppMhpId <-> mhpDppId fetch="lazy" cascade="refresh"
+			
+			Repository BudDemPlanifMpresRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudDemPlanifMpres> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudDemPlanifMpres> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudDemPlanifMpresService {
+			
+			findById => BudDemPlanifMpresRepository.findById;
+			findAll => BudDemPlanifMpresRepository.findAll;
+			save => BudDemPlanifMpresRepository.save;
+			delete => BudDemPlanifMpresRepository.delete;
+			PagedResult<@BudDemPlanifMpres> search(@BudDemPlanifMpresDTO aua);
+			PagedResult<@BudDemPlanifMpres> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject BudDemPlanifMpresDTO {
+			hint="for=search,entity=BudDemPlanifMpres"
+			String dppNewCp hint="" 
+			String dppNewCe hint="" 
+		}
+		
+		DataTransferObject BudDemPlanifMpresMergeDTO {
+			hint="for=merge,entity=BudDemPlanifMpres"
+			String dppNewCp hint="" 
+			String dppNewCe hint="" 
+			String dppDepId hint="type=system,view=Search"
+			String dppMprId hint="type=system,view=Search"
+			String dppSmdId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudDemPlanifMpresHasPex{
+			databaseTable="bud_dem_planif_mpres_has_pex"
+			hint="idSequence=mhpxep_sah_serpm_finalp_med_X"
+			
+			Long id    databaseColumn="mhp_id" 
+			BigDecimal mhpNewCredit  nullable databaseColumn="mhp_new_credit"  hint="visible=true,toString" 
+			BigDecimal mhpOldCredit  nullable databaseColumn="mhp_old_credit"  hint="visible=true,toString" 
+			
+			String planifStatus  nullable transient 
+			
+				- @BudDemPlanifMpres mhpDppId  databaseColumn="mhp_dpp_id"  <-> idDppMhpId  fetch="lazy" cascade="refresh"  							
+			
+				- @PlaCprHasPex mhpChpId  databaseColumn="mhp_chp_id"  /*<-> idChpMhpId*/  fetch="lazy" cascade="refresh"  							
+			
+			
+			Repository BudDemPlanifMpresHasPexRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudDemPlanifMpresHasPex> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudDemPlanifMpresHasPex> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudDemPlanifMpresHasPexService {
+			
+			findById => BudDemPlanifMpresHasPexRepository.findById;
+			findAll => BudDemPlanifMpresHasPexRepository.findAll;
+			save => BudDemPlanifMpresHasPexRepository.save;
+			delete => BudDemPlanifMpresHasPexRepository.delete;
+			PagedResult<@BudDemPlanifMpresHasPex> search(@BudDemPlanifMpresHasPexDTO aua);
+			PagedResult<@BudDemPlanifMpresHasPex> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject BudDemPlanifMpresHasPexDTO {
+			hint="for=search,entity=BudDemPlanifMpresHasPex"
+			String mhpNewCredit hint="" 
+			String mhpOldCredit hint="" 
+		}
+		
+		DataTransferObject BudDemPlanifMpresHasPexMergeDTO {
+			hint="for=merge,entity=BudDemPlanifMpresHasPex"
+			String mhpNewCredit hint="" 
+			String mhpOldCredit hint="" 
+			String mhpDppId hint="type=system,view=Search"
+			String mhpChpId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudDemPlanifNpres{
+			databaseTable="bud_dem_planif_npres"
+			hint="idSequence=dpdserpn_finalp_med_dub_X"
+			
+			Long id    databaseColumn="dpd_id" 
+			BigDecimal dpdCreditCp  nullable databaseColumn="dpd_credit_cp"  hint="visible=true,toString" 
+			BigDecimal dpdCreditCe  nullable databaseColumn="dpd_credit_ce"  hint="visible=true,toString" 
+			
+			String planifStatus  nullable transient 
+			
+				- @BudDemPlanif dpdDepId  databaseColumn="dpd_dep_id"  <-> idDepDpdId  fetch="lazy" cascade="refresh"  							
+			
+				- @PlaCreditPrs dpdCprId  databaseColumn="dpd_cpr_id"  /*<-> idCprDpdId*/  fetch="lazy" cascade="refresh"  							
+			
+				- @BudSsMorasseDet dpdSmdId nullable databaseColumn="dpd_smd_id"  /*<-> idSmdDpdId*/  fetch="lazy" cascade="refresh"  							
+			
+			//- List<@BudDemPlanifDestDet> idDpdSrdId <-> srdDpdId
+			
+			- List<@BudDemPlanifNpresHasPex> idDpdNhpId <-> nhpDpdId fetch="lazy" cascade="refresh"
+			
+			Repository BudDemPlanifNpresRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudDemPlanifNpres> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudDemPlanifNpres> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudDemPlanifNpresService {
+			
+			findById => BudDemPlanifNpresRepository.findById;
+			findAll => BudDemPlanifNpresRepository.findAll;
+			save => BudDemPlanifNpresRepository.save;
+			delete => BudDemPlanifNpresRepository.delete;
+			PagedResult<@BudDemPlanifNpres> search(@BudDemPlanifNpresDTO aua);
+			PagedResult<@BudDemPlanifNpres> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject BudDemPlanifNpresDTO {
+			hint="for=search,entity=BudDemPlanifNpres"
+			String dpdCreditCp hint="" 
+			String dpdCreditCe hint="" 
+		}
+		
+		DataTransferObject BudDemPlanifNpresMergeDTO {
+			hint="for=merge,entity=BudDemPlanifNpres"
+			String dpdCreditCp hint="" 
+			String dpdCreditCe hint="" 
+			String dpdDepId hint="type=system,view=Search"
+			String dpdCprId hint="type=system,view=Search"
+			String dpdSmdId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudDemPlanifNpresHasPex{
+			databaseTable="bud_dem_planif_npres_has_pex"
+			hint="idSequence=nhpxep_sah_serpm_finalp_med_X"
+			
+			Long id    databaseColumn="nhp_id" 
+			BigDecimal nhpNewCredit  nullable databaseColumn="nhp_new_credit"  hint="visible=true,toString" 
+			
+			String planifStatus  nullable transient 
+						
+				- @BudDemPlanifNpres nhpDpdId  databaseColumn="nhp_dpd_id"  <-> idDpdNhpId  fetch="lazy" cascade="refresh"  							
+			
+				- @PlaCprHasPex nhpChpId  databaseColumn="nhp_chp_id"  /*<-> idChpMhpId*/  fetch="lazy" cascade="refresh"  							
+			
+			
+			Repository BudDemPlanifNpresHasPexRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudDemPlanifNpresHasPex> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudDemPlanifNpresHasPex> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudDemPlanifNpresHasPexService {
+			
+			findById => BudDemPlanifNpresHasPexRepository.findById;
+			findAll => BudDemPlanifNpresHasPexRepository.findAll;
+			save => BudDemPlanifNpresHasPexRepository.save;
+			delete => BudDemPlanifNpresHasPexRepository.delete;
+			PagedResult<@BudDemPlanifNpresHasPex> search(@BudDemPlanifNpresHasPexDTO aua);
+			PagedResult<@BudDemPlanifNpresHasPex> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject BudDemPlanifNpresHasPexDTO {
+			hint="for=search,entity=BudDemPlanifNpresHasPex"
+			String nhpNewCredit hint="" 
+		}
+		
+		DataTransferObject BudDemPlanifNpresHasPexMergeDTO {
+			hint="for=merge,entity=BudDemPlanifNpresHasPex"
+			String nhpNewCredit hint="" 
+			String nhpDppId hint="type=system,view=Search"
+			String nhpChpId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudLigne{
+			databaseTable="bud_ligne"
+			hint="idSequence=linengil_dub_X"
+			
+			Long id    databaseColumn="lin_id" 
+			Integer linCode /* length="24" /* key */ databaseColumn="lin_code"  hint="visible=true,toString" 
+			String linName length="256" nullable databaseColumn="lin_name"  hint="visible=true,toString" 
+			String linDesc length="256" nullable databaseColumn="lin_desc"  hint="visible=true" 
+			
+				- @ParExercice linPexId  databaseColumn="lin_pex_id"  /*<-> idPexLinId*/ nullable fetch="lazy" cascade="refresh"  hint="visible=true,toString" 
+				
+				- @BudParagraphe linPphId  databaseColumn="lin_pph_id"  <-> idPphLinId nullable fetch="lazy" cascade="refresh"  hint="visible=true,toString" 							
+			
+				- @BudCodeEco linCecId  databaseColumn="lin_cec_id"  /*<-> idCecLinId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @BudLigne linLinId  databaseColumn="lin_lin_id"  <-> idLinLinId nullable fetch="lazy" cascade="refresh" 
+				
+				- @BudMorasseDet linModId  databaseColumn="lin_mod_id" nullable fetch="lazy" cascade="refresh"							
+			
+			- List<@BudLigne> idLinLinId <-> linLinId
+			
+			Repository BudLigneRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudLigne> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudLigne> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudLigneService {
+			
+			findById => BudLigneRepository.findById;
+			findAll => BudLigneRepository.findAll;
+			save => BudLigneRepository.save;
+			delete => BudLigneRepository.delete;
+			PagedResult<@BudLigne> search(@BudLigneDTO aua);
+			PagedResult<@BudLigne> findAll(PagingParameter pagingParameter);
+			
+			
+			List<@BudLigne> findByModId(Long id) hint="gen,order=asc,prop=id,conditions=linModId.id&$id,nullable";
+			
+		}
+		
+		DataTransferObject BudLigneDTO {
+			hint="for=search,entity=BudLigne"
+			String linPexId1 hint="ref=linPexId,view=ComboBox"
+			String linCode hint="" 
+			String linName hint="" 
+			String linDesc hint="" 
+		}
+		
+		DataTransferObject BudLigneMergeDTO {
+			hint="for=merge,entity=BudLigne"
+			String linCode hint="" 
+			String linName hint="" 
+			String linDesc hint="" 
+			String linPexId hint="type=system,view=ComboBox"
+			String linCecId hint="type=system,view=ComboBox"			
+			String linPphId hint="type=system,view=ComboBox,LinkedTo=linPexId"			
+			String linLinId hint="type=system,view=ComboBox,LinkedTo=linPexId"			
+			String linModId hint="type=system,view=ComboBox"
+			
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudMorasse{
+			databaseTable="bud_morasse"
+			hint="idSequence=moressarom_dub_X"
+			
+			Long id    databaseColumn="mor_id" 
+			String morCode length="24" /* key */ databaseColumn="mor_code"  hint="visible=true,toString" 
+			String morName length="64" nullable databaseColumn="mor_name"  hint="visible=true,toString" 
+			String morDesc length="256" nullable databaseColumn="mor_desc"  hint="visible=true,toString" 
+			String morStatus length="1" nullable databaseColumn="mor_status" 
+			
+				- @PlaBudgetType morBdtId  databaseColumn="mor_bdt_id"  /*<-> idBdtMorId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @ParExercice morPexId  databaseColumn="mor_pex_id"  /*<-> idPexMorId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+			- List<@BudMorasseDet> idMorModId <-> modMorId
+			- List<@BudArticle> morArts <-> artMorId
+			
+			Repository BudMorasseRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudMorasse> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudMorasse> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudMorasseService {
+			
+			findById => BudMorasseRepository.findById;
+			findAll => BudMorasseRepository.findAll;
+			save => BudMorasseRepository.save;
+			delete => BudMorasseRepository.delete;
+			PagedResult<@BudMorasse> search(@BudMorasseDTO aua);
+			PagedResult<@BudMorasse> findAll(PagingParameter pagingParameter);
+			
+			
+			List<@BudMorasse> findByBdtAndPex(Long bdtId, Long pexId)
+			hint="gen,order=asc,prop=id,conditions=[morBdtId.id = $bdtId & morPexId.id = $pexId ],nullable";
+			
+			
+		}
+		
+		DataTransferObject BudMorasseDTO {
+			hint="for=search,entity=BudMorasse"
+			String morCode hint="" 
+			String morName hint="" 
+			String morDesc hint="" 
+		}
+		
+		DataTransferObject BudMorasseMergeDTO {
+			hint="for=merge,entity=BudMorasse"
+			String morCode hint="" 
+			String morName hint="" 
+			String morDesc hint="" 
+			String morStatus  hint="hidden,visible=false" 
+			String morBdtId hint="type=system,view=ComboBox"
+			String morPexId hint="type=system,view=ComboBox"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudMorasseDet{
+			databaseTable="bud_morasse_det"
+			hint="idSequence=modted_essarom_dub_X,noJsonIgnore=version"
+			
+			Long id    databaseColumn="mod_id" 
+			Integer modCode /* length="24" /* key */ databaseColumn="mod_code"  hint="visible=true,toString" 
+			String modName length="256" nullable databaseColumn="mod_name"  hint="visible=true,toString" 
+			String modRowType length="1" nullable databaseColumn="mod_row_type"  hint="visible=true,toString" 
+			Integer modArticle  nullable databaseColumn="mod_article" 
+			Integer modParag  nullable databaseColumn="mod_parag" 
+			Integer modSsParag  nullable databaseColumn="mod_ss_parag" 
+			Integer modLigne  nullable databaseColumn="mod_ligne" 
+			Integer modSsLigne  nullable databaseColumn="mod_ss_ligne" 
+			BigDecimal modCreditCp  nullable databaseColumn="mod_credit_cp" 
+			BigDecimal modCreditCe  nullable databaseColumn="mod_credit_ce"
+			String modAsmStatus length="1" nullable databaseColumn="mod_asm_status"  
+			BigDecimal modCpSum  nullable databaseColumn="mod_cp_sum" 
+			BigDecimal modCeSum  nullable databaseColumn="mod_ce_sum" 
+			BigDecimal modCpEng  nullable databaseColumn="mod_cp_eng" 
+			BigDecimal modCeEng  nullable databaseColumn="mod_ce_eng" 
+			BigDecimal modCpPla  nullable databaseColumn="mod_cp_pla" 
+			BigDecimal modCePla  nullable databaseColumn="mod_ce_pla" 
+			BigDecimal modCpBud  nullable databaseColumn="mod_cp_bud" 
+			BigDecimal modCeBud  nullable databaseColumn="mod_ce_bud"
+			
+				- @ParExercice modPexId  databaseColumn="mod_pex_id"  /*<-> idPexModId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @BudChapitre modChpId  databaseColumn="mod_chp_id"  /*<-> idChpModId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @BudCodeFnc modCfnId  databaseColumn="mod_cfn_id"  /*<-> idCfnModId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @BudCodeEco modCecId  databaseColumn="mod_cec_id"  /*<-> idCecModId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @BudMorasse modMorId  databaseColumn="mod_mor_id"  <-> idMorModId nullable fetch="lazy" cascade="refresh"  							
+				
+				- @BudMorasseDet modModId  databaseColumn="mod_mod_id"  <-> idModModId nullable fetch="lazy" cascade="refresh"
+				
+				- List<@BudMorassePres> idModMprId <-> mprModId fetch="lazy" cascade="refresh"
+				- List<@BudMorasseDet> idModModId <-> modModId fetch="lazy" cascade="refresh"
+			Repository BudMorasseDetRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudMorasseDet> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudMorasseDet> findByCondition(PagingParameter pagingParameter);
+				
+				
+				//List<@BudMorasseDet> findByMorId(Long id) condition="modMorId = :id" orderBy="modArticle asc, modParag asc, morSsParag asc, modLigne asc, modSsLigne asc ";
+				
+				
+				//List<@BudMorasseDet> findByArtParLig(Integer artId,Integer parId,Integer ssparId,Integer lineId,Integer sslineId) condition="modArticle = :artId and modParag = :parId and morSsParag = :ssparId and modLigne = :lineId and modSsLigne = :sslineId" orderBy="modArticle asc, modParag asc, morSsParag asc, modLigne asc, modSsLigne asc ";
+			}
+			
+		}
+		
+		Service BudMorasseDetService {
+			
+			findById => BudMorasseDetRepository.findById;
+			findAll => BudMorasseDetRepository.findAll;
+			save => BudMorasseDetRepository.save;
+			delete => BudMorasseDetRepository.delete;
+			PagedResult<@BudMorasseDet> search(@BudMorasseDetDTO aua);
+			PagedResult<@BudMorasseDet> findAll(PagingParameter pagingParameter);
+			
+			List<@BudMorasseDet> findByMorId(Long id)
+			hint="gen,orderBy=modArticle:modParag:modSsParag:modLigne:modSsLigne,conditions=modMorId.id&$id,nullable";
+			
+			List<@BudMorasseDet> findByArtParLig(Integer artId,Integer parId,Integer ssparId,Integer lineId,Integer sslineId) 
+			hint="gen,orderBy=modArticle:modParag:modSsParag:modLigne:modSsLigne,conditions=[modArticle = $artId & [modParag = $parId & [modSsParag = $ssparId & [modLigne = $lineId & modSsLigne = $sslineId]]]],nullable";
+		}
+		
+		DataTransferObject BudMorasseDetDTO {
+			hint="for=search,entity=BudMorasseDet"
+			String modCode hint="" 
+			String modName hint="" 
+			String modRowType hint="" 
+		}
+		
+		DataTransferObject BudMorasseDetMergeDTO {
+			hint="for=merge,entity=BudMorasseDet"
+			String modCode hint="" 
+			String modName hint="" 
+			String modRowType hint="" 
+			String modArticle hint="" 
+			String modParag hint="" 
+			String modSsParag hint="" 
+			String modLigne hint="" 
+			String modSsLigne hint="" 
+			String modCreditCp 
+			String modCreditCe 
+			String modCpSum hint="" 
+			String modCeSum hint="" 
+			String modCpEng hint="" 
+			String modCeEng hint="" 
+			String modAsmStatus hint="" 
+			String modPexId hint="type=system,view=ComboBox"
+			String modChpId hint="type=system,view=ComboBox"
+			String modCfnId hint="type=system,view=ComboBox"
+			String modCecId hint="type=system,view=ComboBox"
+			String modMorId hint="type=system,view=ComboBox"
+			String modModId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudMorasseOp{
+			databaseTable="bud_morasse_op"
+			hint="idSequence=moppo_essarom_dub_X,noJsonIgnore=version"
+			
+			Long id    databaseColumn="mop_id" 
+			BigDecimal mopCredit  nullable databaseColumn="mop_credit"  hint="visible=true,toString" 
+			BigDecimal mopCreditPla  nullable databaseColumn="mop_credit_pla"  hint="visible=true,toString" 
+			BigDecimal mopCreditBud  nullable databaseColumn="mop_credit_bud"  hint="visible=true,toString"
+			
+				- @PlaCreditOp mopCopId  databaseColumn="mop_cop_id"  /*<-> idCopMopId*/ nullable  cascade="refresh"  							
+			
+				- @BudMorasseDet mopModId  databaseColumn="mop_mod_id"  /*<-> idModMopId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+			- List<@BudMorassePres> idMopMprId <-> mprMopId
+			
+			Repository BudMorasseOpRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudMorasseOp> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudMorasseOp> findByCondition(PagingParameter pagingParameter);
+				
+				//List<@BudMorasseOp> findByModId(Long id) condition="mopModId = :id" ;
+			}
+			
+		}
+		
+		Service BudMorasseOpService {
+			
+			findById => BudMorasseOpRepository.findById;
+			findAll => BudMorasseOpRepository.findAll;
+			save => BudMorasseOpRepository.save;
+			delete => BudMorasseOpRepository.delete;
+			PagedResult<@BudMorasseOp> search(@BudMorasseOpDTO aua);
+			PagedResult<@BudMorasseOp> findAll(PagingParameter pagingParameter);
+			
+			List<@BudMorasseOp> findByModId(Long id) hint="gen,order=asc,prop=id,conditions=mopModId.id&$id,nullable";
+			
+		}
+		
+		DataTransferObject BudMorasseOpDTO {
+			hint="for=search,entity=BudMorasseOp"
+			String mopCredit hint="" 
+		}
+		
+		DataTransferObject BudMorasseOpMergeDTO {
+			hint="for=merge,entity=BudMorasseOp"
+			String mopCredit hint="" 
+			String mopCopId hint="type=system,view=Search"
+			String mopModId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudMorassePres{
+			databaseTable="bud_morasse_pres"
+			hint="idSequence=mprserp_essarom_dub_X,noJsonIgnore=version"
+			
+			Long id    databaseColumn="mpr_id" 
+			String mprStatus length="1" nullable databaseColumn="mpr_status"  hint="visible=true,toString" 
+			BigDecimal mprCreditCp  nullable databaseColumn="mpr_credit_cp"  hint="visible=true,toString" 
+			BigDecimal mprCreditCe  nullable databaseColumn="mpr_credit_ce"  hint="visible=true,toString" 	
+			BigDecimal mprCpPla  nullable databaseColumn="mpr_cp_pla" 
+			BigDecimal mprCePla  nullable databaseColumn="mpr_ce_pla" 
+			BigDecimal mprCpBud  nullable databaseColumn="mpr_cp_bud" 
+			BigDecimal mprCeBud  nullable databaseColumn="mpr_ce_bud"		
+			
+				- @PlaCreditPrs mprCprId  databaseColumn="mpr_cpr_id"  /*<-> idCprMprId*/ nullable cascade="refresh"  							
+			
+				- @BudMorasseDet mprModId  databaseColumn="mpr_mod_id"  <-> idModMprId nullable fetch="lazy" cascade="refresh"  							
+			
+				- @BudMorasseOp mprMopId  databaseColumn="mpr_mop_id"  <-> idMopMprId nullable fetch="lazy" cascade="refresh"  hint="visible=true"  							
+			
+				- @ParAgentExe mprAexId  databaseColumn="mpr_aex_id"  /*<-> idAexMprId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+				- @BudMorassePres mprPmprId  databaseColumn="mpr_pmpr_id"  <-> SMprs  nullable  fetch="lazy" cascade="refresh"  						
+			
+				- @BudSsMorasseDet mprSmdId  databaseColumn="mpr_smd_id"  <-> idSmdMprId nullable fetch="lazy" cascade="refresh"  							
+									
+			
+			- List<@BudMorassePres> SMprs <-> mprPmprId fetch="lazy" cascade="refresh"
+			
+			
+			- List<@BudMprHasChp> idMprMhcId <-> mhcMprId fetch="lazy" cascade="refresh"
+			
+			//- List<@BudDemModifMpres> idMprDmpId <-> dmpMprId
+			//- List<@BudDemPlanifMpres> idMprDppId <-> dppMprId
+			//- List<@BudSmdHasMpr> idMprShmId <-> shmMprId
+			
+			//- List<@BudSsMorasseDet> smdIds <-> mprIds databaseJoinTable="bud_smd_has_mpr" databaseColumn="shm_smd_id"
+			
+			Repository BudMorassePresRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudMorassePres> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudMorassePres> findByCondition(PagingParameter pagingParameter);
+				
+				//List<@BudMorassePres> findByModId(Long id)condition="mprModId = :id";
+				//List<@BudMorassePres> findByMopId(Long id)condition="mprMopId = :id";
+			}
+			
+		}
+		
+		Service BudMorassePresService {
+			
+			findById => BudMorassePresRepository.findById;
+			findAll => BudMorassePresRepository.findAll;
+			save => BudMorassePresRepository.save;
+			delete => BudMorassePresRepository.delete;
+			PagedResult<@BudMorassePres> search(@BudMorassePresDTO aua);
+			PagedResult<@BudMorassePres> findAll(PagingParameter pagingParameter);
+			
+			
+			List<@BudMorassePres> findByMprStatus(String mprStatus) hint="gen,order=asc,prop=id,nullable";
+			List<@BudMorassePres> findByModId(Long id) hint="gen,order=asc,prop=id,conditions=mprModId.id&$id,nullable";
+			List<@BudMorassePres> findByMopId(Long id) hint="gen,order=asc,prop=id,conditions=mprMopId.id&$id,nullable";	
+			
+			List<@BudMorassePres> findByMprAexId(Long id) hint="gen,order=asc,prop=id,conditions=mprAexId.id&$id,nullable";
+			
+			List<@BudMorassePres> findByMprPmprId(Long id) hint="gen,order=asc,prop=id,conditions=mprPmprId.id&$id,nullable";
+		
+			List<@BudMorassePres> findBySmdId(Long id) hint="gen,order=asc,prop=id,conditions=mprSmdId.id&$id,nullable";
+			
+			List<@BudMorassePres> findByPmprMopIdAndSmrId(Long mopId, Long smrId)
+			hint="gen,order=asc,prop=id,conditions=[mprPmprId.mprMopId.id = $mopId & mprSmdId.smdSmrId.id = $smrId ],nullable";
+			
+
+		}
+		
+		DataTransferObject BudMorassePresDTO {
+			hint="for=search,entity=BudMorassePres"
+			
+			String mprCreditCp hint="" 
+			String mprCreditCe hint="" 
+		}
+		
+		DataTransferObject BudMorassePresMergeDTO {
+			hint="for=merge,entity=BudMorassePres"
+			
+			String mprCreditCp hint="" 
+			String mprCreditCe hint=""  
+			String mprCprId hint="type=system,view=Search"
+			String mprModId hint="type=system,view=Search"
+			String mprMopId hint="type=system,view=Search"
+			String mprAexId hint="type=system,view=Search"
+			String mprPmprId hint="type=system,view=Search"
+			String mprSmdId hint="type=system,view=Search"
+		
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+    Entity BudMprHasChp{
+      databaseTable="bud_mpr_has_chp"
+      hint="idSequence=mhcphc_sah_mmd_dub_X"
+      
+      Long id    databaseColumn="mhc_id" 
+      BigDecimal mhcOldCredit  nullable databaseColumn="mhc_old_credit"  hint="visible=true,toString" 
+      BigDecimal mhcNewCredit  nullable databaseColumn="mhc_new_credit"  hint="visible=true,toString" 
+      
+        - @BudMorassePres mhcMprId  databaseColumn="mhc_mpr_id"  <-> idMprMhcId  fetch="lazy" cascade="refresh"               
+      
+        - @PlaCprHasPex mhcChpId  databaseColumn="mhc_chp_id"  /*<-> idChpMhcId*/  fetch="lazy" cascade="refresh"               
+      
+      
+      Repository BudMprHasChpRepository {
+        findById;
+        save;
+        delete;
+        findAll;
+        findByCondition;
+        PagedResult<@BudMprHasChp> findAll(PagingParameter pagingParameter);
+        PagedResult<@BudMprHasChp> findByCondition(PagingParameter pagingParameter);
+      }
+      
+    }
+    
+    Service BudMprHasChpService {
+      
+      findById => BudMprHasChpRepository.findById;
+      findAll => BudMprHasChpRepository.findAll;
+      save => BudMprHasChpRepository.save;
+      delete => BudMprHasChpRepository.delete;
+      PagedResult<@BudMprHasChp> search(@BudMprHasChpDTO aua);
+      PagedResult<@BudMprHasChp> findAll(PagingParameter pagingParameter);
+      
+      List<@BudMprHasChp> findByMhcOldCredit(BigDecimal mhcOldCredit) hint="gen,order=asc,prop=id,nullable";
+      List<@BudMprHasChp> findByMhcNewCredit(BigDecimal mhcNewCredit) hint="gen,order=asc,prop=id,nullable";
+      List<@BudMprHasChp> findByMhcMprId(Long id) hint="gen,order=asc,prop=id,conditions=mhcMprId.id&$id,nullable";
+      List<@BudMprHasChp> findByMhcChpId(Long id) hint="gen,order=asc,prop=id,conditions=mhcChpId.id&$id,nullable";
+    }
+    
+    DataTransferObject BudMprHasChpDTO {
+      hint="for=search,entity=BudMprHasChp"
+      String mhcOldCredit hint="" 
+      String mhcNewCredit hint="" 
+    }
+    
+    DataTransferObject BudMprHasChpMergeDTO {
+      hint="for=merge,entity=BudMprHasChp"
+      String mhcOldCredit hint="" 
+      String mhcNewCredit hint="" 
+      String mhcMprId hint="type=system,view=Search"
+      String mhcChpId hint="type=system,view=Search"
+    }
+    
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudParagraphe{
+			databaseTable="bud_paragraphe"
+			hint="idSequence=pphehpargarap_dub_X"
+			
+			Long id    databaseColumn="pph_id" 
+			Integer pphCode /* length="24" /* key */ databaseColumn="pph_code"  hint="visible=true,toString" 
+			String pphName length="256" nullable databaseColumn="pph_name"  hint="visible=true,toString" 
+			String pphDesc length="256" nullable databaseColumn="pph_desc"  hint="visible=true" 
+			
+			
+				- @BudArticle pphArtId  databaseColumn="pph_art_id"  <-> idArtPphId nullable fetch="lazy" cascade="refresh" hint="visible=true,toString"  							
+			
+				- @BudCodeFnc pphCfnId  databaseColumn="pph_cfn_id"  /*<-> idCfnPphId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @BudParagraphe pphPphId  databaseColumn="pph_pph_id"  <-> idPphPphId nullable fetch="lazy" cascade="refresh"  							
+			
+				- @ParExercice pphPexId  databaseColumn="pph_pex_id"  /*<-> idPexPphId*/ nullable fetch="lazy" cascade="refresh" hint="visible=true,toString"  							
+			
+				- @PlaBudgetType pphBdtId  databaseColumn="pph_bdt_id"  /*<-> idBdtPphId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @BudChapitre pphChpId  databaseColumn="pph_chp_id"  /*<-> idChpPphId*/ nullable fetch="lazy" cascade="refresh" 
+				
+				- @BudMorasseDet pphModId  databaseColumn="pph_mod_id" nullable fetch="lazy" cascade="refresh" 							
+			
+			- List<@BudLigne> idPphLinId <-> linPphId cascade="refresh"
+			- List<@BudParagraphe> idPphPphId <-> pphPphId cascade="refresh"
+			
+			Repository BudParagrapheRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudParagraphe> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudParagraphe> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudParagrapheService {
+			
+			findById => BudParagrapheRepository.findById;
+			findAll => BudParagrapheRepository.findAll;
+			save => BudParagrapheRepository.save;
+			delete => BudParagrapheRepository.delete;
+			PagedResult<@BudParagraphe> search(@BudParagrapheDTO aua);
+			PagedResult<@BudParagraphe> findAll(PagingParameter pagingParameter);
+			
+			
+			List<@BudParagraphe> findByModId(Long id) hint="gen,order=asc,prop=id,conditions=pphModId.id&$id,nullable";
+			
+			
+			List<@BudParagraphe> findByPphCode(String pphCode) hint="gen,order=asc,prop=id,nullable";
+			List<@BudParagraphe> findByPphName(String pphName) hint="gen,order=asc,prop=id,nullable";
+			List<@BudParagraphe> findByPphDesc(String pphDesc) hint="gen,order=asc,prop=id,nullable";
+			List<@BudParagraphe> findByPphArtId(Long id) hint="gen,order=asc,prop=id,conditions=pphArtId.id&$id,nullable";
+			List<@BudParagraphe> findByPphCfnId(Long id) hint="gen,order=asc,prop=id,conditions=pphCfnId.id&$id,nullable";
+			List<@BudParagraphe> findByPphPphId(Long id) hint="gen,order=asc,prop=id,conditions=pphPphId.id&$id,nullable";
+			List<@BudParagraphe> findByPphPexId(Long id) hint="gen,order=asc,prop=id,conditions=pphPexId.id&$id,nullable";
+			List<@BudParagraphe> findByPphBdtId(Long id) hint="gen,order=asc,prop=id,conditions=pphBdtId.id&$id,nullable";
+			List<@BudParagraphe> findByPphChpId(Long id) hint="gen,order=asc,prop=id,conditions=pphChpId.id&$id,nullable";
+		}
+		
+		DataTransferObject BudParagrapheDTO {
+			hint="for=search,entity=BudParagraphe"
+			String pphPexId1 hint="ref=pphPexId,view=ComboBox"
+			String pphCode hint="" 
+			String pphName hint="" 
+			String pphDesc hint="" 
+		}
+		
+		DataTransferObject BudParagrapheMergeDTO {
+			hint="for=merge,entity=BudParagraphe"
+			String pphCode hint="" 
+			String pphName hint="" 
+			String pphDesc hint="" 
+			String pphBdtId hint="type=system,view=ComboBox"
+			String pphChpId hint="type=system,view=ComboBox"
+			String pphPexId hint="type=system,view=ComboBox"
+			String pphArtId hint="type=system,view=ComboBox,LinkedTo=pphPexId"
+			String pphPphId hint="type=system,view=ComboBox,LinkedTo=pphPexId"
+			String pphCfnId hint="type=system,view=ComboBox"
+			String pphModId hint="type=system,view=ComboBox"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudPartie{
+			databaseTable="bud_partie"
+			hint="idSequence=prteitrap_dub_X"
+			
+			Long id    databaseColumn="prt_id" 
+			String prtCode length="24" /* key */ databaseColumn="prt_code"  hint="visible=true,toString" 
+			String prtName length="64" nullable databaseColumn="prt_name"  hint="visible=true,toString" 
+			String prtDesc length="256" nullable databaseColumn="prt_desc"  //hint="visible=true" 
+			
+			//- List<@BudChapitre> idPrtChpId <-> chpPrtId
+			
+			Repository BudPartieRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudPartie> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudPartie> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudPartieService {
+			
+			findById => BudPartieRepository.findById;
+			findAll => BudPartieRepository.findAll;
+			save => BudPartieRepository.save;
+			delete => BudPartieRepository.delete;
+			PagedResult<@BudPartie> search(@BudPartieDTO aua);
+			PagedResult<@BudPartie> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject BudPartieDTO {
+			hint="for=search,entity=BudPartie"
+			String prtCode hint="" 
+			String prtName hint="" 
+			String prtDesc hint="" 
+		}
+		
+		DataTransferObject BudPartieMergeDTO {
+			hint="for=merge,entity=BudPartie"
+			String prtCode hint="" 
+			String prtName hint="" 
+			String prtDesc hint="" 
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudRegion{
+			databaseTable="bud_region"
+			hint="idSequence=budregion_dub_X"
+			
+			Long id    databaseColumn="reg_id" 
+			String regCode length="24" /* key */ databaseColumn="reg_code"  hint="visible=true,toString" 
+			String regName length="64" nullable databaseColumn="reg_name"  hint="visible=true,toString" 
+			String regDesc length="256" nullable databaseColumn="reg_desc"  //hint="visible=true" 
+			
+			//- List<@BudChapitre> idPrtChpId <-> chpPrtId
+			
+			Repository BudRegionRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudRegion> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudRegion> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudRegionService {
+			
+			findById => BudRegionRepository.findById;
+			findAll => BudRegionRepository.findAll;
+			save => BudRegionRepository.save;
+			delete => BudRegionRepository.delete;
+			PagedResult<@BudRegion> search(@BudRegionDTO aua);
+			PagedResult<@BudRegion> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject BudRegionDTO {
+			hint="for=search,entity=BudRegion"
+			String regCode hint="" 
+			String regName hint="" 
+			String regDesc hint="" 
+		}
+		
+		DataTransferObject BudRegionMergeDTO {
+			hint="for=merge,entity=BudRegion"
+			String regCode hint="" 
+			String regName hint="" 
+			String regDesc hint="" 
+		}
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudSsMorasse{
+			databaseTable="bud_ss_morasse"
+			hint="idSequence=smressarom_ss_dub_X"
+			
+			Long id    databaseColumn="smr_id" 
+			String smrCode length="24" nullable databaseColumn="smr_code"  hint="visible=true,toString" 
+			String smrName length="64" nullable databaseColumn="smr_name"  hint="visible=true,toString" 
+			String smrDesc length="256" nullable databaseColumn="smr_desc"  hint="visible=true,toString" 
+			String smrStatus length="1" nullable databaseColumn="smr_status" 
+			
+				- @PlaBudgetType smrBdtId  databaseColumn="smr_bdt_id"  /*<-> idBdtSmrId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @ParExercice smrPexId  databaseColumn="smr_pex_id"  /*<-> idPexSmrId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @ParOrdonateur smrOrdId /* key */ <-> idOrdSmrId fetch="lazy" cascade="refresh"  							
+			
+				- @BudMorasse smrMorId /* key */ cascade="refresh"  							
+			
+			- List<@BudSsMorasseDet> idSmrSmdId <-> smdSmrId //orderby="smdModId.modArticle asc,smdModId.modParag asc,smdModId.modSsParag asc,smdModId.modLigne asc,smdModId.modSsLigne asc"
+			
+			Repository BudSsMorasseRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudSsMorasse> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudSsMorasse> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudSsMorasseService {
+			
+			findById => BudSsMorasseRepository.findById;
+			findAll => BudSsMorasseRepository.findAll;
+			save => BudSsMorasseRepository.save;
+			delete => BudSsMorasseRepository.delete;
+			PagedResult<@BudSsMorasse> search(@BudSsMorasseDTO aua);
+			PagedResult<@BudSsMorasse> findAll(PagingParameter pagingParameter);
+			
+			List<@BudSsMorasse> findByBdtAndPex(Long bdtId, Long pexId)
+			hint="gen,order=asc,prop=id,conditions=[smrBdtId.id = $bdtId & smrPexId.id = $pexId ],nullable";
+		}
+		
+		DataTransferObject BudSsMorasseDTO {
+			hint="for=search,entity=BudSsMorasse"
+			String smrCode hint="" 
+			String smrName hint="" 
+			String smrDesc hint="" 
+		}
+		
+		DataTransferObject BudSsMorasseMergeDTO {
+			hint="for=merge,entity=BudSsMorasse"
+			String smrCode hint="" 
+			String smrName hint="" 
+			String smrDesc hint="" 
+			String smrStatus hint="" 
+			String smrBdtId hint="type=system,view=ComboBox"
+			String smrPexId hint="type=system,view=ComboBox"
+			String smrOrdId hint="type=system,view=ComboBox"
+			String smrMorId hint="type=system,view=ComboBox"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudSsMorasseDet{
+			databaseTable="bud_ss_morasse_det"
+			hint="idSequence=smdted_essarom_ss_dub_X,noJsonIgnore=version"
+			
+			Long id    databaseColumn="smd_id" 
+			String smdCode length="24" nullable databaseColumn="smd_code"  hint="visible=true,toString" 
+			String smdName length="256" nullable databaseColumn="smd_name"  hint="visible=true,toString" 
+			BigDecimal smdCreditCp  nullable databaseColumn="smd_credit_cp"  hint="visible=true,toString" 
+			BigDecimal smdCreditCe  nullable databaseColumn="smd_credit_ce" 
+			
+			BigDecimal smdCpSum  nullable databaseColumn="smd_cp_sum" 
+			BigDecimal smdCeSum  nullable databaseColumn="smd_ce_sum" 
+			BigDecimal smdCpEng  nullable databaseColumn="smd_cp_eng" 
+			BigDecimal smdCeEng  nullable databaseColumn="smd_ce_eng" 
+			BigDecimal smdCpPla  nullable databaseColumn="smd_cp_pla" 
+			BigDecimal smdCePla  nullable databaseColumn="smd_ce_pla" 
+			BigDecimal smdCpBud  nullable databaseColumn="smd_cp_bud" 
+			BigDecimal smdCeBud  nullable databaseColumn="smd_ce_bud" 
+			
+				- @BudSsMorasse smdSmrId  databaseColumn="smd_smr_id"  <-> idSmrSmdId nullable fetch="lazy" cascade="refresh"  							
+			
+				- @BudMorasseDet smdModId /* key */ cascade="refresh"  	
+			
+			//- List<@BudMorassePres> mprIds <-> smdIds databaseJoinTable="bud_smd_has_mpr" databaseColumn="shm_mpr_id"
+			
+			- List<@BudMorassePres> idSmdMprId <-> mprSmdId fetch="lazy" cascade="refresh"
+			//- List<@BudDemModif> idSmdDemId <-> demSmdId
+			//- List<@BudDemModifMpres> idSmdDmpId <-> dmpSmdId
+			//- List<@BudDemMvtDest> smdMddId <-> mddSmd
+			//- List<@BudDemMvtSrc> smdMdsId <-> mdsSmd
+			//- List<@BudDemPlanif> idSmdDepId <-> depSmdId
+			//- List<@BudDemPlanifMpres> idSmdDppId <-> dppSmdId
+			//- List<@BudDemPlanifNpres> idSmdDpdId <-> dpdSmdId
+			//- List<@BudSmdHasMpr> idSmdShmId <-> shmSmdId
+			//- List<@BudSmdLog> idSmdSmlId <-> smlSmdId
+			
+			
+			Repository BudSsMorasseDetRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudSsMorasseDet> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudSsMorasseDet> findByCondition(PagingParameter pagingParameter);
+				
+			}
+			
+		}
+		
+		Service BudSsMorasseDetService {
+			
+			findById => BudSsMorasseDetRepository.findById;
+			findAll => BudSsMorasseDetRepository.findAll;
+			save => BudSsMorasseDetRepository.save;
+			delete => BudSsMorasseDetRepository.delete;
+			PagedResult<@BudSsMorasseDet> search(@BudSsMorasseDetDTO aua);
+			PagedResult<@BudSsMorasseDet> findAll(PagingParameter pagingParameter);
+			
+			List<@BudSsMorasseDet> findByMorId(Long id)
+			hint="gen,orderBy=smdModId.modArticle:smdModId.modParag:smdModId.modSsParag:smdModId.modLigne:smdModId.modSsLigne,conditions=smdModId.modMorId.id&$id,nullable";
+			
+			
+			List<@BudSsMorasseDet> findByArtParLig(Integer artId,Integer parId,Integer ssparId,Integer lineId,Integer sslineId) 
+			hint="gen,orderBy=smdModId.modArticle:smdModId.modParag:smdModId.modSsParag:smdModId.modLigne:smdModId.modSsLigne,conditions=[smdModId.modArticle = $artId & [smdModId.modParag = $parId & [smdModId.modSsParag = $ssparId & [smdModId.modLigne = $lineId & smdModId.modSsLigne = $sslineId]]]],nullable";
+			
+			List<@BudSsMorasseDet> findByArtPar(Integer artId,Integer parId,Integer ssparId) 
+			hint="gen,orderBy=smdModId.modArticle:smdModId.modParag:smdModId.modSsParag:smdModId.modLigne:smdModId.modSsLigne,conditions=[smdModId.modArticle = $artId & [smdModId.modParag = $parId & smdModId.modSsParag = $ssparId ]],nullable";
+			
+			
+			
+			List<@BudSsMorasseDet> findBySmdModId(Long id) hint="gen,order=asc,prop=id,conditions=smdModId.id&$id,nullable";
+			
+			List<@BudSsMorasseDet> findBySmrIdModId(Long smrId, Long modId) hint="gen,order=asc,prop=id,conditions=[smdSmrId.id = $smrId & smdModId.id = $modId],nullable";
+			
+			List<@BudSsMorasseDet> findBySmdSmrId(Long id) 
+			hint="gen,order=asc,prop=id,orderBy=smdModId.modArticle:smdModId.modParag:smdModId.modSsParag:smdModId.modLigne:smdModId.modSsLigne,conditions=smdSmrId.id&$id,nullable";
+			
+			assignModToSmd(Long id, List<Long> mordIds) hint="gap";
+			
+		}
+		
+		DataTransferObject BudSsMorasseDetDTO {
+			hint="for=search,entity=BudSsMorasseDet"
+			String smdCode hint="" 
+			String smdName hint="" 
+			String smdCreditCp hint="" 
+		}
+		
+		DataTransferObject BudSsMorasseDetMergeDTO {
+			hint="for=merge,entity=BudSsMorasseDet"
+			String smdCode hint="" 
+			String smdName hint="" 
+			String smdCreditCp hint="" 
+			String smdCreditCe hint="" 
+			String smdCpSum hint="" 
+			String smdCeSum hint="" 
+			String smdCpEng hint="" 
+			String smdCeEng hint="" 
+			String smdSmrId hint="type=system,view=ComboBox"
+			String smdModId hint="type=system,view=Search"
+		}
+	
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+			
+		Entity BudSmdLog{
+			databaseTable="bud_smd_log"
+			hint="idSequence=smlgol_dms_dub_X"
+			
+			Long id    databaseColumn="sml_id" 
+			String smlTypeAction length="1" nullable databaseColumn="sml_type_action"  hint="visible=true,toString" 
+			String smlMsg length="512" nullable databaseColumn="sml_msg"  hint="visible=true,toString" 
+			Date smlDate  nullable databaseColumn="sml_date"  hint="visible=true,toString" 
+			String smlUser length="45" nullable databaseColumn="sml_user" 
+			
+				- @BudSsMorasseDet smlSmdId  databaseColumn="sml_smd_id"  /*<-> idSmdSmlId*/  fetch="lazy" cascade="refresh"  							
+			
+			
+			Repository BudSmdLogRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudSmdLog> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudSmdLog> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudSmdLogService {
+			
+			findById => BudSmdLogRepository.findById;
+			findAll => BudSmdLogRepository.findAll;
+			save => BudSmdLogRepository.save;
+			delete => BudSmdLogRepository.delete;
+			PagedResult<@BudSmdLog> search(@BudSmdLogDTO aua);
+			PagedResult<@BudSmdLog> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject BudSmdLogDTO {
+			hint="for=search,entity=BudSmdLog"
+			String smlTypeAction hint="" 
+			String smlMsg hint="" 
+			String smlDate hint="" 
+		}
+		
+		DataTransferObject BudSmdLogMergeDTO {
+			hint="for=merge,entity=BudSmdLog"
+			String smlTypeAction hint="" 
+			String smlMsg hint="" 
+			String smlDate hint="" 
+			String smlUser hint="" 
+			String smlSmdId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudSsTitre{
+			databaseTable="bud_ss_titre"
+			hint="idSequence=strertit_ss_dub_X"
+			
+			Long id    databaseColumn="str_id" 
+			String strCode length="24" /* key */ databaseColumn="str_code"  hint="visible=true,toString" 
+			String strName length="64" nullable databaseColumn="str_name"  hint="visible=true,toString" 
+			String strDesc length="256" nullable databaseColumn="str_desc"  hint="visible=true,toString" 
+			
+				- @BudTitre strTtrId  databaseColumn="str_ttr_id"  /*<-> idTtrStrId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+			//- List<@BudChapitre> idStrChpId <-> chpStrId
+			
+			Repository BudSsTitreRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudSsTitre> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudSsTitre> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudSsTitreService {
+			
+			findById => BudSsTitreRepository.findById;
+			findAll => BudSsTitreRepository.findAll;
+			save => BudSsTitreRepository.save;
+			delete => BudSsTitreRepository.delete;
+			PagedResult<@BudSsTitre> search(@BudSsTitreDTO aua);
+			PagedResult<@BudSsTitre> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject BudSsTitreDTO {
+			hint="for=search,entity=BudSsTitre"
+			String strCode hint="" 
+			String strName hint="" 
+			String strDesc hint="" 
+		}
+		
+		DataTransferObject BudSsTitreMergeDTO {
+			hint="for=merge,entity=BudSsTitre"
+			String strCode hint="" 
+			String strName hint="" 
+			String strDesc hint="" 
+			String strTtrId hint="type=system,view=ComboBox"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudTitre{
+			databaseTable="bud_titre"
+			hint="idSequence=ttrertit_dub_X"
+			
+			Long id    databaseColumn="ttr_id" 
+			String ttrCode length="24" /* key */ databaseColumn="ttr_code"  hint="visible=true,toString" 
+			String ttrName length="64" nullable databaseColumn="ttr_name"  hint="visible=true,toString" 
+			String ttrDesc length="256" nullable databaseColumn="ttr_desc"  //hint="visible=true" 
+			
+			//- List<@BudChapitre> idTtrChpId <-> chpTtrId
+			//- List<@BudSsTitre> idTtrStrId <-> strTtrId
+			
+			Repository BudTitreRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudTitre> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudTitre> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudTitreService {
+			
+			findById => BudTitreRepository.findById;
+			findAll => BudTitreRepository.findAll;
+			save => BudTitreRepository.save;
+			delete => BudTitreRepository.delete;
+			PagedResult<@BudTitre> search(@BudTitreDTO aua);
+			PagedResult<@BudTitre> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject BudTitreDTO {
+			hint="for=search,entity=BudTitre"
+			String ttrCode hint="" 
+			String ttrName hint="" 
+			String ttrDesc hint="" 
+		}
+		
+		DataTransferObject BudTitreMergeDTO {
+			hint="for=merge,entity=BudTitre"
+			String ttrCode hint="" 
+			String ttrName hint="" 
+			String ttrDesc hint="" 
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity BudTypeVir{
+			databaseTable="bud_type_vir"
+			hint="idSequence=tvrriv_epyt_dub_X"
+			
+			Long id    databaseColumn="tvr_id" 
+			String tvrCode length="24" nullable databaseColumn="tvr_code"  hint="visible=true,toString" 
+			String tvrName length="64" nullable databaseColumn="tvr_name"  hint="visible=true,toString" 
+			String tvrDesc length="256" nullable databaseColumn="tvr_desc"  hint="visible=true,toString" 
+			
+			//- List<@BudDemMvt> idTvrDmvId <-> dmvTvrId
+			
+			Repository BudTypeVirRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@BudTypeVir> findAll(PagingParameter pagingParameter);
+				PagedResult<@BudTypeVir> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service BudTypeVirService {
+			
+			findById => BudTypeVirRepository.findById;
+			findAll => BudTypeVirRepository.findAll;
+			save => BudTypeVirRepository.save;
+			delete => BudTypeVirRepository.delete;
+			PagedResult<@BudTypeVir> search(@BudTypeVirDTO aua);
+			PagedResult<@BudTypeVir> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject BudTypeVirDTO {
+			hint="for=search,entity=BudTypeVir"
+			String tvrCode hint="" 
+			String tvrName hint="" 
+			String tvrDesc hint="" 
+		}
+		
+		DataTransferObject BudTypeVirMergeDTO {
+			hint="for=merge,entity=BudTypeVir"
+			String tvrCode hint="" 
+			String tvrName hint="" 
+			String tvrDesc hint="" 
+		}
+		
+		
+		
+	}
+}

@@ -1,0 +1,1510 @@
+digraph G {
+	fontsize = 10
+	node [
+		fontsize = 10
+		fontname="arial"
+		shape=plaintext
+	]
+
+	edge [
+		fontsize = 10
+	]
+subgraph clustertec {
+	label = "tec"  
+	CalculRevisionService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CalculRevisionService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByTcrCdpId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	NantissementService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> NantissementService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByTnaNum</td></tr>			
+	<tr><td align="left">findByTnaName</td></tr>			
+	<tr><td align="left">findByTnaDate</td></tr>			
+	<tr><td align="left">findByTnaPvFile</td></tr>			
+	<tr><td align="left">findByTnaCdpId</td></tr>			
+	<tr><td align="left">findByTnaAttId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PenaliteRetardService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PenaliteRetardService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByTprNum</td></tr>			
+	<tr><td align="left">findByTprName</td></tr>			
+	<tr><td align="left">findByTprDateComm</td></tr>			
+	<tr><td align="left">findByTprCdpId</td></tr>			
+	<tr><td align="left">findByTprAttId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	RetenueGarantiePartService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> RetenueGarantiePartService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	RetenueGarantieService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> RetenueGarantieService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByTrgNum</td></tr>			
+	<tr><td align="left">findByTrgName</td></tr>			
+	<tr><td align="left">findByTrgDate</td></tr>			
+	<tr><td align="left">findByTrgCdpId</td></tr>			
+	<tr><td align="left">findBytrgAttId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecAttachementService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecAttachementService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByTatNum</td></tr>			
+	<tr><td align="left">findByTatName</td></tr>			
+	<tr><td align="left">findByTatCdpId</td></tr>			
+	<tr><td align="left">filterAttachBen</td></tr>			
+	<tr><td align="left">getAllAttachBen</td></tr>			
+	<tr><td align="left">filterAttachSGM</td></tr>			
+	<tr><td align="left">getAllAttachSGM</td></tr>			
+	<tr><td align="left">filterAttachCer</td></tr>			
+	<tr><td align="left">getAllAttachCer</td></tr>			
+	<tr><td align="left">filterAttachSB</td></tr>			
+	<tr><td align="left">getAllAttachSB</td></tr>			
+	<tr><td align="left">filterAttachCI</td></tr>			
+	<tr><td align="left">getAllAttachCI</td></tr>			
+	<tr><td align="left">filterAttachTM</td></tr>			
+	<tr><td align="left">getAllAttachTM</td></tr>			
+	<tr><td align="left">filterAttachAr</td></tr>			
+	<tr><td align="left">getAllAttachAr</td></tr>			
+	<tr><td align="left">filterAttachPD</td></tr>			
+	<tr><td align="left">getAllAttachPD</td></tr>			
+	<tr><td align="left">filterAttachPDSGM</td></tr>			
+	<tr><td align="left">getAllAttachPDSGM</td></tr>			
+	<tr><td align="left">filterAttachPDTM</td></tr>			
+	<tr><td align="left">getAllAttachPDTM</td></tr>			
+	<tr><td align="left">filterAttachPDCER</td></tr>			
+	<tr><td align="left">getAllAttachPDCER</td></tr>			
+	<tr><td align="left">filterAttachPDSB</td></tr>			
+	<tr><td align="left">getAllAttachPDSB</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecCatIndexService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecCatIndexService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByTciCode</td></tr>			
+	<tr><td align="left">findByTciName</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecDecisionService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecDecisionService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByTedStatus</td></tr>			
+	<tr><td align="left">findByTedDate</td></tr>			
+	<tr><td align="left">findByTedRem</td></tr>			
+	<tr><td align="left">findByTedCenId</td></tr>			
+	<tr><td align="left">findByTedCdpId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecDpDecisionService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecDpDecisionService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByTedStatus</td></tr>			
+	<tr><td align="left">findByTedDate</td></tr>			
+	<tr><td align="left">findByTedRem</td></tr>			
+	<tr><td align="left">findByTedCenId</td></tr>			
+	<tr><td align="left">findByTedCdpId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecDpStateService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecDpStateService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByTesStatus</td></tr>			
+	<tr><td align="left">findByTesDate</td></tr>			
+	<tr><td align="left">findByTesRem</td></tr>			
+	<tr><td align="left">findByTesCenId</td></tr>			
+	<tr><td align="left">findByTesCdpId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecEtapeService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecEtapeService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByTetNom</td></tr>			
+	<tr><td align="left">findByTetDelait</td></tr>			
+	<tr><td align="left">findByTetAvancement</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecIndexService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecIndexService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByTinMois</td></tr>			
+	<tr><td align="left">findByTinAnnee</td></tr>			
+	<tr><td align="left">findByTinValPro</td></tr>			
+	<tr><td align="left">findByTinValDef</td></tr>			
+	<tr><td align="left">findByTinTciId</td></tr>			
+	<tr><td align="left">findByDateCat</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecPvService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecPvService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByTpvNum</td></tr>			
+	<tr><td align="left">findByTpvName</td></tr>			
+	<tr><td align="left">findByTpvDate</td></tr>			
+	<tr><td align="left">findByTpvPvFile</td></tr>			
+	<tr><td align="left">findByTpvCdpId</td></tr>			
+	<tr><td align="left">findByTpvTptId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecPvTypeService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecPvTypeService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByTptCode</td></tr>			
+	<tr><td align="left">findByTptName</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecStateService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecStateService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByTesStatus</td></tr>			
+	<tr><td align="left">findByTesDate</td></tr>			
+	<tr><td align="left">findByTesRem</td></tr>			
+	<tr><td align="left">findByTesCenId</td></tr>			
+	<tr><td align="left">findByTesCdpId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	CalculRevision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CalculRevision </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tcrPeriode : String </td></tr>
+	<tr><td align="left"> + tcrNbrJour : String </td></tr>
+	<tr><td align="left"> + tcrBatUn : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrBatDeux : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrBatTrois : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrBatQuatre : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrBatCinq : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrBatSix : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrBatCof : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrCofRev : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrCoeficient : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrMonTra : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrMonArevi : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrMonRev : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrTotal : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrCdpId : CptDepense </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	CalculRevisionDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CalculRevisionDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tcrCdpId1 : String </td></tr>
+	<tr><td align="left"> + tcrAttId1 : String </td></tr>
+	<tr><td align="left"> + tcrCdpId : String </td></tr>
+	<tr><td align="left"> + tcrAttId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	CalculRevisionMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CalculRevisionMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tcrPeriode : String </td></tr>
+	<tr><td align="left"> + tcrNbrJour : String </td></tr>
+	<tr><td align="left"> + tcrBatUn : String </td></tr>
+	<tr><td align="left"> + tcrBatDeux : String </td></tr>
+	<tr><td align="left"> + tcrBatTrois : String </td></tr>
+	<tr><td align="left"> + tcrBatQuatre : String </td></tr>
+	<tr><td align="left"> + tcrBatCinq : String </td></tr>
+	<tr><td align="left"> + tcrBatSix : String </td></tr>
+	<tr><td align="left"> + tcrBatCof : String </td></tr>
+	<tr><td align="left"> + tcrCofRev : String </td></tr>
+	<tr><td align="left"> + tcrCoeficient : String </td></tr>
+	<tr><td align="left"> + tcrMonTra : String </td></tr>
+	<tr><td align="left"> + tcrMonArevi : String </td></tr>
+	<tr><td align="left"> + tcrMonRev : String </td></tr>
+	<tr><td align="left"> + tcrTotal : String </td></tr>
+	<tr><td align="left"> + tcrCdpId : String </td></tr>
+	<tr><td align="left"> + tcrAttId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	Nantissement [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> Nantissement </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tnaNum : String </td></tr>
+	<tr><td align="left"> + tnaName : String </td></tr>
+	<tr><td align="left"> + tnaDate : Date </td></tr>
+	<tr><td align="left"> + tnaRep : String </td></tr>
+	<tr><td align="left"> + tnaCdpId : CptDepense </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	NantissementDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> NantissementDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tnaNum : String </td></tr>
+	<tr><td align="left"> + tnaName : String </td></tr>
+	<tr><td align="left"> + tnaDate : String </td></tr>
+	<tr><td align="left"> + tnaRep : String </td></tr>
+	<tr><td align="left"> + tnaCdpId1 : String </td></tr>
+	<tr><td align="left"> + tnaAttId1 : String </td></tr>
+	<tr><td align="left"> + min_tnaDate : String </td></tr>
+	<tr><td align="left"> + tnaCdpId : String </td></tr>
+	<tr><td align="left"> + tnaAttId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	NantissementMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> NantissementMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tnaNum : String </td></tr>
+	<tr><td align="left"> + tnaName : String </td></tr>
+	<tr><td align="left"> + tnaDate : String </td></tr>
+	<tr><td align="left"> + tnaRep : String </td></tr>
+	<tr><td align="left"> + tnaCdpId : String </td></tr>
+	<tr><td align="left"> + tnaAttId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PenaliteRetard [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PenaliteRetard </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tprNum : String </td></tr>
+	<tr><td align="left"> + tprName : String </td></tr>
+	<tr><td align="left"> + tprDelaiExe : Integer </td></tr>
+	<tr><td align="left"> + tprDateComm : Date </td></tr>
+	<tr><td align="left"> + tprDateAchev : Date </td></tr>
+	<tr><td align="left"> + tprDateSerFait : Date </td></tr>
+	<tr><td align="left"> + tprNbrJourRetard : Integer </td></tr>
+	<tr><td align="left"> + tprMonIniMar : BigDecimal </td></tr>
+	<tr><td align="left"> + tprMonJourPen : BigDecimal </td></tr>
+	<tr><td align="left"> + tprMonTotPen : BigDecimal </td></tr>
+	<tr><td align="left"> + tprMonPlafPen : BigDecimal </td></tr>
+	<tr><td align="left"> + tprMonOrdRecett : BigDecimal </td></tr>
+	<tr><td align="left"> + tprCdpId : CptDepense </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PenaliteRetardDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PenaliteRetardDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tprNum : String </td></tr>
+	<tr><td align="left"> + tprName : String </td></tr>
+	<tr><td align="left"> + tprDepNum : String </td></tr>
+	<tr><td align="left"> + tprDepNumGid : String </td></tr>
+	<tr><td align="left"> + tprCdpId1 : String </td></tr>
+	<tr><td align="left"> + tprAttId1 : String </td></tr>
+	<tr><td align="left"> + tprDateComm : String </td></tr>
+	<tr><td align="left"> + tprDateAchev : String </td></tr>
+	<tr><td align="left"> + tprDateSerFait : String </td></tr>
+	<tr><td align="left"> + min_tprDateComm : String </td></tr>
+	<tr><td align="left"> + min_tprDateAchev : String </td></tr>
+	<tr><td align="left"> + min_tprDateSerFait : String </td></tr>
+	<tr><td align="left"> + tprCdpId : String </td></tr>
+	<tr><td align="left"> + tprAttId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PenaliteRetardMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PenaliteRetardMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tprNum : String </td></tr>
+	<tr><td align="left"> + tprName : String </td></tr>
+	<tr><td align="left"> + tprDelaiExe : String </td></tr>
+	<tr><td align="left"> + tprDateComm : String </td></tr>
+	<tr><td align="left"> + tprDateAchev : String </td></tr>
+	<tr><td align="left"> + tprDateSerFait : String </td></tr>
+	<tr><td align="left"> + tprNbrJourRetard : String </td></tr>
+	<tr><td align="left"> + tprMonIniMar : String </td></tr>
+	<tr><td align="left"> + tprMonJourPen : String </td></tr>
+	<tr><td align="left"> + tprMonTotPen : String </td></tr>
+	<tr><td align="left"> + tprMonPlafPen : String </td></tr>
+	<tr><td align="left"> + tprMonOrdRecett : String </td></tr>
+	<tr><td align="left"> + tprCdpId : String </td></tr>
+	<tr><td align="left"> + tprAttId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	RetenueGarantie [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> RetenueGarantie </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + trgNum : String </td></tr>
+	<tr><td align="left"> + trgName : String </td></tr>
+	<tr><td align="left"> + trgDate : Date </td></tr>
+	<tr><td align="left"> + trgCdpId : CptDepense </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	RetenueGarantieDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> RetenueGarantieDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + trgNum : String </td></tr>
+	<tr><td align="left"> + trgName : String </td></tr>
+	<tr><td align="left"> + trgDate : String </td></tr>
+	<tr><td align="left"> + trgCdpId1 : String </td></tr>
+	<tr><td align="left"> + trgAttId1 : String </td></tr>
+	<tr><td align="left"> + min_trgDate : String </td></tr>
+	<tr><td align="left"> + trgCdpId : String </td></tr>
+	<tr><td align="left"> + trgAttId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	RetenueGarantieMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> RetenueGarantieMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + trgNum : String </td></tr>
+	<tr><td align="left"> + trgName : String </td></tr>
+	<tr><td align="left"> + trgDate : String </td></tr>
+	<tr><td align="left"> + trgCdpId : String </td></tr>
+	<tr><td align="left"> + trgAttId : String </td></tr>
+	<tr><td align="left"> + trgRgpId : String [] </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	RetenueGarantiePart [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> RetenueGarantiePart </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + rgpNum : String </td></tr>
+	<tr><td align="left"> + rgpName : String </td></tr>
+	<tr><td align="left"> + rgpDate : Date </td></tr>
+	<tr><td align="left"> + rgpBank : String </td></tr>
+	<tr><td align="left"> + rgpMontant : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	RetenueGarantiePartDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> RetenueGarantiePartDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + rgpNum : String </td></tr>
+	<tr><td align="left"> + rgpName : String </td></tr>
+	<tr><td align="left"> + rgpBank : String </td></tr>
+	<tr><td align="left"> + rgpMontant : String </td></tr>
+	<tr><td align="left"> + rgpDate : String </td></tr>
+	<tr><td align="left"> + min_rgpMontant : String </td></tr>
+	<tr><td align="left"> + min_rgpDate : String </td></tr>
+	<tr><td align="left"> + rgpTrgId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	RetenueGarantiePartMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> RetenueGarantiePartMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + rgpNum : String </td></tr>
+	<tr><td align="left"> + rgpName : String </td></tr>
+	<tr><td align="left"> + rgpBank : String </td></tr>
+	<tr><td align="left"> + rgpMontant : String </td></tr>
+	<tr><td align="left"> + rgpDate : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecAttachement [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecAttachement </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tatNature : String </td></tr>
+	<tr><td align="left"> + tatTypeDecompte : String </td></tr>
+	<tr><td align="left"> + tatCurStatus : String </td></tr>
+	<tr><td align="left"> + tatNum : String </td></tr>
+	<tr><td align="left"> + tatName : String </td></tr>
+	<tr><td align="left"> + tatUrl : String </td></tr>
+	<tr><td align="left"> + tatTauAva : String </td></tr>
+	<tr><td align="left"> + tatAttPro : String </td></tr>
+	<tr><td align="left"> + tatRef : String </td></tr>
+	<tr><td align="left"> + tatObj : String </td></tr>
+	<tr><td align="left"> + tatMotRej : String </td></tr>
+	<tr><td align="left"> + tatMonTrt : BigDecimal </td></tr>
+	<tr><td align="left"> + tatMonTnt : BigDecimal </td></tr>
+	<tr><td align="left"> + tatTotaux : BigDecimal </td></tr>
+	<tr><td align="left"> + tatDepExe : BigDecimal </td></tr>
+	<tr><td align="left"> + tatApprov : String </td></tr>
+	<tr><td align="left"> + tatResPay : BigDecimal </td></tr>
+	<tr><td align="left"> + tatMonRev : BigDecimal </td></tr>
+	<tr><td align="left"> + tatMonPen : BigDecimal </td></tr>
+	<tr><td align="left"> + tatMonAco : BigDecimal </td></tr>
+	<tr><td align="left"> + tatRevPri : BigDecimal </td></tr>
+	<tr><td align="left"> + tatDateDep : Date </td></tr>
+	<tr><td align="left"> + tatDateRea : Date </td></tr>
+	<tr><td align="left"> + tatDateSer : Date </td></tr>
+	<tr><td align="left"> + tatDateRep : Date </td></tr>
+	<tr><td align="left"> + tatDateConFai : Date </td></tr>
+	<tr><td align="left"> + tatDateConFre : Date </td></tr>
+	<tr><td align="left"> + tatDateSoum : Date </td></tr>
+	<tr><td align="left"> + tatDateOrdCom : Date </td></tr>
+	<tr><td align="left"> + tatDateOrdArr : Date </td></tr>
+	<tr><td align="left"> + tatDateOrdRep : Date </td></tr>
+	<tr><td align="left"> + tatDateDpNr : Date </td></tr>
+	<tr><td align="left"> + tatCurStatusDate : Date </td></tr>
+	<tr><td align="left"> + tatCurDecision : String </td></tr>
+	<tr><td align="left"> + tatStatus : String </td></tr>
+	<tr><td align="left"> + tatIdAtt : String </td></tr>
+	<tr><td align="left"> + tatDpCurStatusDate : Date </td></tr>
+	<tr><td align="left"> + tatDpCurDecision : String </td></tr>
+	<tr><td align="left"> + tatDpStatus : String </td></tr>
+	<tr><td align="left"> + tatDpCurStatus : String </td></tr>
+	<tr><td align="left"> + tatNumVisa : String </td></tr>
+	<tr><td align="left"> + tatDateVisa : Date </td></tr>
+	<tr><td align="left"> + tatMonDecoTravaux : BigDecimal </td></tr>
+	<tr><td align="left"> + tatMonDepTravaux : BigDecimal </td></tr>
+	<tr><td align="left"> + tatArchAvan : String </td></tr>
+	<tr><td align="left"> + tatArchDecoTraite : String </td></tr>
+	<tr><td align="left"> + tatGarantie : String </td></tr>
+	<tr><td align="left"> + tatGarantieEsp : BigDecimal </td></tr>
+	<tr><td align="left"> + tatAvancement : BigDecimal </td></tr>
+	<tr><td align="left"> + tatDelaiExe : Integer </td></tr>
+	<tr><td align="left"> + tatDelaiUnit : String </td></tr>
+	<tr><td align="left"> + tatMonTrtTtc : BigDecimal </td></tr>
+	<tr><td align="left"> + tatCdpId : CptDepense </td></tr>
+	<tr><td align="left"> + tatCurTenId : CptEntity </td></tr>
+	<tr><td align="left"> + tatDpCurTenId : CptEntity </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecAttachementDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecAttachementDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tatTypeDecompte : String </td></tr>
+	<tr><td align="left"> + tatCurStatus : String </td></tr>
+	<tr><td align="left"> + tatNature : String </td></tr>
+	<tr><td align="left"> + tatNum : String </td></tr>
+	<tr><td align="left"> + tatName : String </td></tr>
+	<tr><td align="left"> + tatCdpId1 : String </td></tr>
+	<tr><td align="left"> + tatObj : String </td></tr>
+	<tr><td align="left"> + tatRef : String </td></tr>
+	<tr><td align="left"> + tatDepNum : String </td></tr>
+	<tr><td align="left"> + tatDepNumGid : String </td></tr>
+	<tr><td align="left"> + tatCdpId : String </td></tr>
+	<tr><td align="left"> + tatCurTenId : String </td></tr>
+	<tr><td align="left"> + tatCatId : String </td></tr>
+	<tr><td align="left"> + tatDpCurTenId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecAttachementMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecAttachementMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tatNature : String </td></tr>
+	<tr><td align="left"> + tatTypeDecompte : String </td></tr>
+	<tr><td align="left"> + tatCurStatus : String </td></tr>
+	<tr><td align="left"> + tatNum : String </td></tr>
+	<tr><td align="left"> + tatName : String </td></tr>
+	<tr><td align="left"> + tatUrl : String </td></tr>
+	<tr><td align="left"> + tatTauAva : String </td></tr>
+	<tr><td align="left"> + tatAttPro : String </td></tr>
+	<tr><td align="left"> + tatRef : String </td></tr>
+	<tr><td align="left"> + tatObj : String </td></tr>
+	<tr><td align="left"> + tatMotRej : String </td></tr>
+	<tr><td align="left"> + tatMonTrt : String </td></tr>
+	<tr><td align="left"> + tatMonTnt : String </td></tr>
+	<tr><td align="left"> + tatTotaux : String </td></tr>
+	<tr><td align="left"> + tatDepExe : String </td></tr>
+	<tr><td align="left"> + tatApprov : String </td></tr>
+	<tr><td align="left"> + tatResPay : String </td></tr>
+	<tr><td align="left"> + tatMonRev : String </td></tr>
+	<tr><td align="left"> + tatMonPen : String </td></tr>
+	<tr><td align="left"> + tatMonAco : String </td></tr>
+	<tr><td align="left"> + tatRevPri : String </td></tr>
+	<tr><td align="left"> + tatDateDep : String </td></tr>
+	<tr><td align="left"> + tatDateRea : String </td></tr>
+	<tr><td align="left"> + tatDateSer : String </td></tr>
+	<tr><td align="left"> + tatDateRep : String </td></tr>
+	<tr><td align="left"> + tatDateConFai : String </td></tr>
+	<tr><td align="left"> + tatDateConFre : String </td></tr>
+	<tr><td align="left"> + tatDateSoum : String </td></tr>
+	<tr><td align="left"> + tatDateOrdCom : String </td></tr>
+	<tr><td align="left"> + tatDateOrdArr : String </td></tr>
+	<tr><td align="left"> + tatDateOrdRep : String </td></tr>
+	<tr><td align="left"> + tatDateDpNr : String </td></tr>
+	<tr><td align="left"> + tatCurStatusDate : String </td></tr>
+	<tr><td align="left"> + tatCurDecision : String </td></tr>
+	<tr><td align="left"> + tatStatus : String </td></tr>
+	<tr><td align="left"> + tatCdpId : String </td></tr>
+	<tr><td align="left"> + tatCurTenId : String </td></tr>
+	<tr><td align="left"> + tatIdAtt : String </td></tr>
+	<tr><td align="left"> + tatCatId : String </td></tr>
+	<tr><td align="left"> + tatDpCurStatusDate : String </td></tr>
+	<tr><td align="left"> + tatDpCurDecision : String </td></tr>
+	<tr><td align="left"> + tatDpStatus : String </td></tr>
+	<tr><td align="left"> + tatDpCurStatus : String </td></tr>
+	<tr><td align="left"> + tatDpCurTenId : String </td></tr>
+	<tr><td align="left"> + tatNumVisa : String </td></tr>
+	<tr><td align="left"> + tatDateVisa : String </td></tr>
+	<tr><td align="left"> + tatMonDecoTravaux : String </td></tr>
+	<tr><td align="left"> + tatMonDepTravaux : String </td></tr>
+	<tr><td align="left"> + tatGarantie : String </td></tr>
+	<tr><td align="left"> + tatGarantieEsp : String </td></tr>
+	<tr><td align="left"> + tatArchAvan : String </td></tr>
+	<tr><td align="left"> + tatArchDecoTraite : String </td></tr>
+	<tr><td align="left"> + tatAvancement : String </td></tr>
+	<tr><td align="left"> + tatDelaiExe : String </td></tr>
+	<tr><td align="left"> + tatDelaiUnit : String </td></tr>
+	<tr><td align="left"> + tatMonTrtTtc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecCatIndex [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecCatIndex </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tciCode : String </td></tr>
+	<tr><td align="left"> + tciName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecCatIndexDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecCatIndexDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tciCode : String </td></tr>
+	<tr><td align="left"> + tciName : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecCatIndexMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecCatIndexMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tciCode : String </td></tr>
+	<tr><td align="left"> + tciName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecDecision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecDecision </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tedStatus : String </td></tr>
+	<tr><td align="left"> + tedDate : Date </td></tr>
+	<tr><td align="left"> + tedRem : String </td></tr>
+	<tr><td align="left"> + tedCenId : CptEntity </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecDecisionDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecDecisionDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tedStatus : String </td></tr>
+	<tr><td align="left"> + tedDate : String </td></tr>
+	<tr><td align="left"> + tedRem : String </td></tr>
+	<tr><td align="left"> + min_tedDate : String </td></tr>
+	<tr><td align="left"> + tedCenId : String </td></tr>
+	<tr><td align="left"> + tedCdpId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecDecisionMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecDecisionMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tedStatus : String </td></tr>
+	<tr><td align="left"> + tedDate : String </td></tr>
+	<tr><td align="left"> + tedRem : String </td></tr>
+	<tr><td align="left"> + tedCenId : String </td></tr>
+	<tr><td align="left"> + tedCdpId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecDpDecision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecDpDecision </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tedStatus : String </td></tr>
+	<tr><td align="left"> + tedDate : Date </td></tr>
+	<tr><td align="left"> + tedRem : String </td></tr>
+	<tr><td align="left"> + tedCenId : CptEntity </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecDpDecisionDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecDpDecisionDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tedStatus : String </td></tr>
+	<tr><td align="left"> + tedDate : String </td></tr>
+	<tr><td align="left"> + tedRem : String </td></tr>
+	<tr><td align="left"> + min_tedDate : String </td></tr>
+	<tr><td align="left"> + tedCenId : String </td></tr>
+	<tr><td align="left"> + dpdCdpId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecDpDecisionMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecDpDecisionMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tedStatus : String </td></tr>
+	<tr><td align="left"> + tedDate : String </td></tr>
+	<tr><td align="left"> + tedRem : String </td></tr>
+	<tr><td align="left"> + tedCenId : String </td></tr>
+	<tr><td align="left"> + dpdCdpId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecDpState [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecDpState </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tesStatus : String </td></tr>
+	<tr><td align="left"> + tesDate : Date </td></tr>
+	<tr><td align="left"> + tesRem : String </td></tr>
+	<tr><td align="left"> + tesCenId : CptEntity </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecDpStateDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecDpStateDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tesStatus : String </td></tr>
+	<tr><td align="left"> + tesDate : String </td></tr>
+	<tr><td align="left"> + tesRem : String </td></tr>
+	<tr><td align="left"> + min_tesDate : String </td></tr>
+	<tr><td align="left"> + tesCenId : String </td></tr>
+	<tr><td align="left"> + dpsCdpId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecDpStateMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecDpStateMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tesStatus : String </td></tr>
+	<tr><td align="left"> + tesDate : String </td></tr>
+	<tr><td align="left"> + tesRem : String </td></tr>
+	<tr><td align="left"> + tesCenId : String </td></tr>
+	<tr><td align="left"> + dpsCdpId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecEtape [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecEtape </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tetNom : String </td></tr>
+	<tr><td align="left"> + tetDelait : String </td></tr>
+	<tr><td align="left"> + tetAvancement : String </td></tr>
+	<tr><td align="left"> + tetPourcentage : String </td></tr>
+	<tr><td align="left"> + tetEcart : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecEtapeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecEtapeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tetNom : String </td></tr>
+	<tr><td align="left"> + tetDelait : String </td></tr>
+	<tr><td align="left"> + tetAvancement : String </td></tr>
+	<tr><td align="left"> + tetPourcentage : String </td></tr>
+	<tr><td align="left"> + tetEcart : String </td></tr>
+	<tr><td align="left"> + tetTpvId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecEtapeMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecEtapeMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tetNom : String </td></tr>
+	<tr><td align="left"> + tetPourcentage : String </td></tr>
+	<tr><td align="left"> + tetAvancement : String </td></tr>
+	<tr><td align="left"> + tetDelait : String </td></tr>
+	<tr><td align="left"> + tetEcart : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecIndex [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecIndex </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tinMois : String </td></tr>
+	<tr><td align="left"> + tinValPro : String </td></tr>
+	<tr><td align="left"> + tinValDef : String </td></tr>
+	<tr><td align="left"> + tinAnnee : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecIndexDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecIndexDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tinAnnee : String </td></tr>
+	<tr><td align="left"> + tinMois : String </td></tr>
+	<tr><td align="left"> + tinValPro : String </td></tr>
+	<tr><td align="left"> + tinValDef : String </td></tr>
+	<tr><td align="left"> + tinTciId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecIndexMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecIndexMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tinAnnee : String </td></tr>
+	<tr><td align="left"> + tinMois : String </td></tr>
+	<tr><td align="left"> + tinValPro : String </td></tr>
+	<tr><td align="left"> + tinValDef : String </td></tr>
+	<tr><td align="left"> + tinTciId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecPv [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecPv </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tpvNum : String </td></tr>
+	<tr><td align="left"> + tpvName : String </td></tr>
+	<tr><td align="left"> + tpvDate : Date </td></tr>
+	<tr><td align="left"> + tpvPvFile : String </td></tr>
+	<tr><td align="left"> + tpvCdpId : CptDepense </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecPvDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecPvDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tpvNum : String </td></tr>
+	<tr><td align="left"> + tpvName : String </td></tr>
+	<tr><td align="left"> + tpvDate : String </td></tr>
+	<tr><td align="left"> + tpvCdpId1 : String </td></tr>
+	<tr><td align="left"> + tpvTptId1 : String </td></tr>
+	<tr><td align="left"> + min_tpvDate : String </td></tr>
+	<tr><td align="left"> + tpvCdpId : String </td></tr>
+	<tr><td align="left"> + tpvTptId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecPvMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecPvMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tpvNum : String </td></tr>
+	<tr><td align="left"> + tpvName : String </td></tr>
+	<tr><td align="left"> + tpvDate : String </td></tr>
+	<tr><td align="left"> + tpvPvFile : String </td></tr>
+	<tr><td align="left"> + tpvCdpId : String </td></tr>
+	<tr><td align="left"> + tpvTptId : String </td></tr>
+	<tr><td align="left"> + tpvTetId : String [] </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecPvType [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecPvType </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tptCode : String </td></tr>
+	<tr><td align="left"> + tptName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecPvTypeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecPvTypeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tptCode : String </td></tr>
+	<tr><td align="left"> + tptName : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecPvTypeMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecPvTypeMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tptCode : String </td></tr>
+	<tr><td align="left"> + tptName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecState [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecState </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tesStatus : String </td></tr>
+	<tr><td align="left"> + tesDate : Date </td></tr>
+	<tr><td align="left"> + tesRem : String </td></tr>
+	<tr><td align="left"> + tesCenId : CptEntity </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecStateDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecStateDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tesStatus : String </td></tr>
+	<tr><td align="left"> + tesDate : String </td></tr>
+	<tr><td align="left"> + tesRem : String </td></tr>
+	<tr><td align="left"> + min_tesDate : String </td></tr>
+	<tr><td align="left"> + tesCenId : String </td></tr>
+	<tr><td align="left"> + tesCdpId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecStateMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecStateMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tesStatus : String </td></tr>
+	<tr><td align="left"> + tesDate : String </td></tr>
+	<tr><td align="left"> + tesRem : String </td></tr>
+	<tr><td align="left"> + tesCenId : String </td></tr>
+	<tr><td align="left"> + tesCdpId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+edge [arrowhead = "empty"]
+edge [arrowhead = "none"]
+
+
+edge [arrowtail="none" arrowhead = "none" headlabel="tcrAttId" taillabel="0..n idAttTcrId" labeldistance="2.0" labelangle="-30"]
+
+CalculRevision -> TecAttachement
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tnaAttId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+Nantissement -> TecAttachement
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tprAttId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PenaliteRetard -> TecAttachement
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n trgRgpId" taillabel="rgpTrgId" labeldistance="2.0" labelangle="-30"]
+
+RetenueGarantie -> RetenueGarantiePart
+
+edge [arrowtail="none" arrowhead = "open" headlabel="trgAttId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+RetenueGarantie -> TecAttachement
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tatCatId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+TecAttachement -> TecCatIndex
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCdpTedId" taillabel="tedCdpId" labeldistance="2.0" labelangle="-30"]
+
+TecAttachement -> TecDecision
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCdpDpdId" taillabel="dpdCdpId" labeldistance="2.0" labelangle="-30"]
+
+TecAttachement -> TecDpDecision
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCdpDpsId" taillabel="dpsCdpId" labeldistance="2.0" labelangle="-30"]
+
+TecAttachement -> TecDpState
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCdpTesId" taillabel="tesCdpId" labeldistance="2.0" labelangle="-30"]
+
+TecAttachement -> TecState
+
+edge [arrowtail="none" arrowhead = "none" headlabel="tetTpvId" taillabel="0..n tpvTetId" labeldistance="2.0" labelangle="-30"]
+
+TecEtape -> TecPv
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tinTciId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+TecIndex -> TecCatIndex
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tpvTptId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+TecPv -> TecPvType
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+TecDecisionService -> TecDecision
+TecDecisionService -> TecDecisionDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+TecStateService -> TecStateDTO
+TecStateService -> TecState
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+TecDpDecisionService -> TecDpDecisionDTO
+TecDpDecisionService -> TecDpDecision
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+TecDpStateService -> TecDpStateDTO
+TecDpStateService -> TecDpState
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+TecAttachementService -> TecAttachement
+TecAttachementService -> TecAttachementDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+TecPvService -> TecPvDTO
+TecPvService -> TecPv
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+TecPvTypeService -> TecPvType
+TecPvTypeService -> TecPvTypeDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+TecCatIndexService -> TecCatIndex
+TecCatIndexService -> TecCatIndexDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+TecIndexService -> TecIndexDTO
+TecIndexService -> TecCatIndex
+TecIndexService -> TecIndex
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+TecEtapeService -> TecEtape
+TecEtapeService -> TecEtapeDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+CalculRevisionService -> CalculRevision
+CalculRevisionService -> CalculRevisionDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+RetenueGarantieService -> RetenueGarantie
+RetenueGarantieService -> RetenueGarantieDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+RetenueGarantiePartService -> RetenueGarantiePart
+RetenueGarantiePartService -> RetenueGarantiePartDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+NantissementService -> Nantissement
+NantissementService -> NantissementDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+PenaliteRetardService -> PenaliteRetard
+PenaliteRetardService -> PenaliteRetardDTO
+}

@@ -1,0 +1,83 @@
+<th th:text="#{pla.plaCreditOp.copCode}" id="copCode"  >-CopCode</th>
+												<th th:text="#{pla.plaCreditOp.copName}" id="copName"  >-CopName</th>
+												<th th:text="#{pla.plaCreditOp.copDesc}" id="copDesc"  >-CopDesc</th>
+												<th th:text="#{pla.plaCreditOp.copCreditType}" id="copCreditType"    style="display:none" >-CopCreditType</th>
+												<th th:text="#{pla.plaCreditOp.copCredit}" id="copCredit"    style="display:none" >-CopCredit</th>
+												<th th:text="#{pla.plaCreditOp.copPlaStart}" id="copPlaStart"    style="display:none" >-CopPlaStart</th>
+												<th th:text="#{pla.plaCreditOp.copPlaEnd}" id="copPlaEnd"    style="display:none" >-CopPlaEnd</th>
+												<th th:text="#{pla.plaCreditOp.copEffStart}" id="copEffStart"    style="display:none" >-CopEffStart</th>
+												<th th:text="#{pla.plaCreditOp.copEffEnd}" id="copEffEnd"    style="display:none" >-CopEffEnd</th>
+												<th th:text="#{pla.plaCreditOp.copStatus}" id="copStatus"    style="display:none" >-CopStatus</th>
+												<th th:text="#{pla.plaCreditOp.copLieu}" id="copLieu"    style="display:none" >-CopLieu</th>
+												<th th:text="#{pla.plaCreditOp.copAdresse}" id="copAdresse"    style="display:none" >-CopAdresse</th>
+												<th th:text="#{pla.plaCreditOp.copIsCvt}" id="copIsCvt"    style="display:none" >-CopIsCvt</th>
+												<th th:text="#{pla.plaCreditOp.copPlanned}" id="copPlanned"    style="display:none" >-CopPlanned</th>
+												<th th:text="#{pla.plaCreditOp.copPriorite}" id="copPriorite"   data-view-type="enum" data-bool-yes="null"  style="display:none" >-CopPriorite</th>
+												<th  style='display:none'   th:text="#{pla.plaCreditOp.copCrpId}" id="copCrpId" >copCrpId</th>
+												<th  style='display:none'   th:text="#{pla.plaCreditOp.copTopId}" id="copTopId" >copTopId</th>
+												<th  style='display:none'   th:text="#{pla.plaCreditOp.copPexId}" id="copPexId" >copPexId</th>
+												<th  style='display:none'   th:text="#{pla.plaCreditOp.copMosId}" id="copMosId" >copMosId</th>
+												<th  style='display:none'   th:text="#{pla.plaCreditOp.copBdtId}" id="copBdtId" >copBdtId</th>
+												<th  style='display:none'   th:text="#{pla.plaCreditOp.copPlaId}" id="copPlaId" >copPlaId</th>
+												<th  style='display:none'   th:text="#{pla.plaCreditOp.copCpjId}" id="copCpjId" >copCpjId</th>
+												<th  style='display:none'   th:text="#{pla.plaCreditOp.copCpgId}" id="copCpgId" >copCpgId</th>
+												<th  style='display:none'   th:text="#{pla.plaCreditOp.copRegBudId}" id="copRegBudId" >copRegBudId</th>
+												<th  style='display:none'   th:text="#{pla.plaCreditOp.copRegTerId}" id="copRegTerId" >copRegTerId</th>
+												<th  style='display:none'   th:text="#{pla.plaCreditOp.copPrvId}" id="copPrvId" >copPrvId</th>
+												<th  style='display:none'   th:text="#{pla.plaCreditOp.copComId}" id="copComId" >copComId</th>
+												<th  style='display:none'   th:text="#{pla.plaCreditOp.copCmdId}" id="copCmdId" >copCmdId</th>
+												<th  style='display:none'   th:text="#{pla.plaCreditOp.copCvtId}" id="copCvtId" >copCvtId</th>
+												<th  style='display:none'   th:text="#{pla.plaCreditOp.copAexId}" id="copAexId" >copAexId</th>
+												<th  style='display:none'   th:text="#{pla.plaCreditOp.copOrdId}" id="copOrdId" >copOrdId</th>
+	
+	
+<td th:text="${sb.copCode}">NULL</td>
+												<td th:text="${sb.copName}">NULL</td>
+												<td th:text="${sb.copDesc}">NULL</td>
+												<td th:text="${sb.copCreditType}"  style="display:none" >NULL</td>
+												<td style="display:none;text-align:right" data-class="bigdecimal" >
+												<span th:if="${sb.copCredit!=null}" th:text="${#numbers.formatDecimal(sb.copCredit, #messages.msg('app.bigDec.mindigits'), #messages.msg('app.bigDec.thousands.separator'), #messages.msg('app.bigDec.decimal.digits'), #messages.msg('app.bigDec.decimal.separator'))}" >NULL</span>
+												<span th:if="${sb.copCredit==null}"  ></span>
+												</td>
+												<td style="display:none;text-align:right" data-class="date"  >
+												<span th:if="${sb.copPlaStart!=null}"  th:text="${#calendars.format(sb.copPlaStart,#messages.msg('app.dateformat'))}" ></span>
+												<span th:if="${sb.copPlaStart==null}" ></span>
+												</td>	
+												<td style="display:none;text-align:right" data-class="date"  >
+												<span th:if="${sb.copPlaEnd!=null}"  th:text="${#calendars.format(sb.copPlaEnd,#messages.msg('app.dateformat'))}" ></span>
+												<span th:if="${sb.copPlaEnd==null}" ></span>
+												</td>	
+												<td style="display:none;text-align:right" data-class="date"  >
+												<span th:if="${sb.copEffStart!=null}"  th:text="${#calendars.format(sb.copEffStart,#messages.msg('app.dateformat'))}" ></span>
+												<span th:if="${sb.copEffStart==null}" ></span>
+												</td>	
+												<td style="display:none;text-align:right" data-class="date"  >
+												<span th:if="${sb.copEffEnd!=null}"  th:text="${#calendars.format(sb.copEffEnd,#messages.msg('app.dateformat'))}" ></span>
+												<span th:if="${sb.copEffEnd==null}" ></span>
+												</td>	
+												<td th:text="${sb.copStatus}"  style="display:none" >NULL</td>
+												<td th:text="${sb.copLieu}"  style="display:none" >NULL</td>
+												<td th:text="${sb.copAdresse}"  style="display:none" >NULL</td>
+												<td th:text="${sb.copIsCvt}"  style="display:none" >NULL</td>
+												<td th:text="${sb.copPlanned}"  style="display:none" >NULL</td>
+												<td th:text="${sb.copPriorite}"  style="display:none" >NULL</td>
+												<td  style='display:none'  th:text="${{sb.copCrpId}}">NULL</td>	
+												<td  style='display:none'  th:text="${{sb.copTopId}}">NULL</td>	
+												<td  style='display:none'  th:text="${{sb.copPexId}}">NULL</td>	
+												<td  style='display:none'  th:text="${{sb.copMosId}}">NULL</td>	
+												<td  style='display:none'  th:text="${{sb.copBdtId}}">NULL</td>	
+												<td  style='display:none'  th:text="${{sb.copPlaId}}">NULL</td>	
+												<td  style='display:none'  th:text="${{sb.copCpjId}}">NULL</td>	
+												<td  style='display:none'  th:text="${{sb.copCpgId}}">NULL</td>	
+												<td  style='display:none'  th:text="${{sb.copRegBudId}}">NULL</td>	
+												<td  style='display:none'  th:text="${{sb.copRegTerId}}">NULL</td>	
+												<td  style='display:none'  th:text="${{sb.copPrvId}}">NULL</td>	
+												<td  style='display:none'  th:text="${{sb.copComId}}">NULL</td>	
+												<td  style='display:none'  th:text="${{sb.copCmdId}}">NULL</td>	
+												<td  style='display:none'  th:text="${{sb.copCvtId}}">NULL</td>	
+												<td  style='display:none'  th:text="${{sb.copAexId}}">NULL</td>	
+												<td  style='display:none'  th:text="${{sb.copOrdId}}">NULL</td>	
+
+												
+												
+												

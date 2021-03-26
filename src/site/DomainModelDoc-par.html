@@ -1,0 +1,7462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style type="text/css" media="screen,print">   
+		@import url("DomainModelDoc.css");
+		</style> 
+<title>Summary Documentation of par module(Sgbcdm)</title> 
+</head>
+<body>
+<div id="wrap">
+		<a name="module_par"></a>
+<h1>Summary Documentation of par module <a href="DomainModelDoc.html">(Sgbcdm)</a></h1>
+
+
+<p></p>
+<div id="menu">
+		<ul>
+			<li><a href="DomainModelDoc-par.html#ParAgentExe">ParAgentExe</a></li>
+			<li><a href="DomainModelDoc-par.html#ParAgentExeDTO">ParAgentExeDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParAgentExeMergeDTO">ParAgentExeMergeDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParAgentExeService">ParAgentExeService</a></li>
+			<li><a href="DomainModelDoc-par.html#ParCommanditaire">ParCommanditaire</a></li>
+			<li><a href="DomainModelDoc-par.html#ParCommanditaireDTO">ParCommanditaireDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParCommanditaireMergeDTO">ParCommanditaireMergeDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParCommanditaireService">ParCommanditaireService</a></li>
+			<li><a href="DomainModelDoc-par.html#ParCommune">ParCommune</a></li>
+			<li><a href="DomainModelDoc-par.html#ParCommuneAnc">ParCommuneAnc</a></li>
+			<li><a href="DomainModelDoc-par.html#ParCommuneAncDTO">ParCommuneAncDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParCommuneAncMergeDTO">ParCommuneAncMergeDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParCommuneAncService">ParCommuneAncService</a></li>
+			<li><a href="DomainModelDoc-par.html#ParCommuneDTO">ParCommuneDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParCommuneMergeDTO">ParCommuneMergeDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParCommuneOld">ParCommuneOld</a></li>
+			<li><a href="DomainModelDoc-par.html#ParCommuneOldDTO">ParCommuneOldDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParCommuneOldMergeDTO">ParCommuneOldMergeDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParCommuneOldService">ParCommuneOldService</a></li>
+			<li><a href="DomainModelDoc-par.html#ParCommuneService">ParCommuneService</a></li>
+			<li><a href="DomainModelDoc-par.html#ParConvention">ParConvention</a></li>
+			<li><a href="DomainModelDoc-par.html#ParConventionDTO">ParConventionDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParConventionMergeDTO">ParConventionMergeDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParConventionService">ParConventionService</a></li>
+			<li><a href="DomainModelDoc-par.html#ParExercice">ParExercice</a></li>
+			<li><a href="DomainModelDoc-par.html#ParExerciceDTO">ParExerciceDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParExerciceMergeDTO">ParExerciceMergeDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParExerciceService">ParExerciceService</a></li>
+			<li><a href="DomainModelDoc-par.html#ParOrdonateur">ParOrdonateur</a></li>
+			<li><a href="DomainModelDoc-par.html#ParOrdonateurDTO">ParOrdonateurDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParOrdonateurMergeDTO">ParOrdonateurMergeDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParOrdonateurService">ParOrdonateurService</a></li>
+			<li><a href="DomainModelDoc-par.html#ParProvince">ParProvince</a></li>
+			<li><a href="DomainModelDoc-par.html#ParProvinceAnc">ParProvinceAnc</a></li>
+			<li><a href="DomainModelDoc-par.html#ParProvinceAncDTO">ParProvinceAncDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParProvinceAncMergeDTO">ParProvinceAncMergeDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParProvinceAncService">ParProvinceAncService</a></li>
+			<li><a href="DomainModelDoc-par.html#ParProvinceDTO">ParProvinceDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParProvinceMergeDTO">ParProvinceMergeDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParProvinceOld">ParProvinceOld</a></li>
+			<li><a href="DomainModelDoc-par.html#ParProvinceOldDTO">ParProvinceOldDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParProvinceOldMergeDTO">ParProvinceOldMergeDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParProvinceOldService">ParProvinceOldService</a></li>
+			<li><a href="DomainModelDoc-par.html#ParProvinceService">ParProvinceService</a></li>
+			<li><a href="DomainModelDoc-par.html#ParRegion">ParRegion</a></li>
+			<li><a href="DomainModelDoc-par.html#ParRegionAnc">ParRegionAnc</a></li>
+			<li><a href="DomainModelDoc-par.html#ParRegionAncDTO">ParRegionAncDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParRegionAncMergeDTO">ParRegionAncMergeDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParRegionAncService">ParRegionAncService</a></li>
+			<li><a href="DomainModelDoc-par.html#ParRegionDTO">ParRegionDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParRegionMergeDTO">ParRegionMergeDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParRegionOld">ParRegionOld</a></li>
+			<li><a href="DomainModelDoc-par.html#ParRegionOldDTO">ParRegionOldDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParRegionOldMergeDTO">ParRegionOldMergeDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParRegionOldService">ParRegionOldService</a></li>
+			<li><a href="DomainModelDoc-par.html#ParRegionService">ParRegionService</a></li>
+			<li><a href="DomainModelDoc-par.html#ParTypeBenif">ParTypeBenif</a></li>
+			<li><a href="DomainModelDoc-par.html#ParTypeBenifDTO">ParTypeBenifDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParTypeBenifMergeDTO">ParTypeBenifMergeDTO</a></li>
+			<li><a href="DomainModelDoc-par.html#ParTypeBenifService">ParTypeBenifService</a></li>
+		</ul>
+</div>
+<div id="module_graph">
+    <hr/>
+    <p><b>All in par</b></p>
+	<a href="umlgraph-par.dot.png">
+	<img src="umlgraph-par.dot.png" />
+	</a>
+	<hr/>
+	<p><b>Persistent Domain in par</b></p>
+	<a href="umlgraph-par-entity.dot.png">
+	<img src="umlgraph-par-entity.dot.png" />
+	</a>
+</div>
+
+<div id="services">
+<hr/>
+<a name="ParAgentExeService"></a>
+<h3>ParAgentExeService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParAgentExe">ParAgentExe</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-par.html#ParAgentExe">ParAgentExe</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParAgentExe">ParAgentExe</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParAgentExe">ParAgentExe</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParAgentExe">ParAgentExe</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByNum</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ num</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParAgentExe">ParAgentExe</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByUserId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParAgentExe">ParAgentExe</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParAgentExe">ParAgentExe</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParAgentExe">ParAgentExe</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParAgentExeDTO">ParAgentExeDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParAgentExe">ParAgentExe</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="ParCommanditaireService"></a>
+<h3>ParCommanditaireService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParCommanditaire">ParCommanditaire</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-par.html#ParCommanditaire">ParCommanditaire</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParCommanditaire">ParCommanditaire</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParCommanditaire">ParCommanditaire</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParCommanditaire">ParCommanditaire</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParCommanditaire">ParCommanditaire</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParCommanditaire">ParCommanditaire</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParCommanditaireDTO">ParCommanditaireDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParCommanditaire">ParCommanditaire</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="ParCommuneAncService"></a>
+<h3>ParCommuneAncService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParCommuneAnc">ParCommuneAnc</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-par.html#ParCommuneAnc">ParCommuneAnc</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParCommuneAnc">ParCommuneAnc</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParCommuneAnc">ParCommuneAnc</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByComPrvId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParCommuneAnc">ParCommuneAnc</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParCommuneAnc">ParCommuneAnc</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParCommuneAnc">ParCommuneAnc</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParCommuneAnc">ParCommuneAnc</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParCommuneAncDTO">ParCommuneAncDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParCommuneAnc">ParCommuneAnc</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="ParCommuneOldService"></a>
+<h3>ParCommuneOldService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParCommuneOld">ParCommuneOld</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-par.html#ParCommuneOld">ParCommuneOld</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParCommuneOld">ParCommuneOld</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParCommuneOld">ParCommuneOld</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByComPrvId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParCommuneOld">ParCommuneOld</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParCommuneOld">ParCommuneOld</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParCommuneOld">ParCommuneOld</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParCommuneOld">ParCommuneOld</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParCommuneOldDTO">ParCommuneOldDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParCommuneOld">ParCommuneOld</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="ParCommuneService"></a>
+<h3>ParCommuneService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParCommune">ParCommune</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-par.html#ParCommune">ParCommune</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParCommune">ParCommune</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParCommune">ParCommune</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByComPrvId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParCommune">ParCommune</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParCommune">ParCommune</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByStatus</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ comStatus</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParCommune">ParCommune</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParCommune">ParCommune</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParCommune">ParCommune</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParCommuneDTO">ParCommuneDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParCommune">ParCommune</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="ParConventionService"></a>
+<h3>ParConventionService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParConvention">ParConvention</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-par.html#ParConvention">ParConvention</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParConvention">ParConvention</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParConvention">ParConvention</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParConvention">ParConvention</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParConvention">ParConvention</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParConvention">ParConvention</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParConventionDTO">ParConventionDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParConvention">ParConvention</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="ParExerciceService"></a>
+<h3>ParExerciceService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParExercice">ParExercice</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-par.html#ParExercice">ParExercice</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParExercice">ParExercice</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParExercice">ParExercice</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCode</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ code</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParExercice">ParExercice</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParExercice">ParExercice</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParExercice">ParExercice</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParExercice">ParExercice</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParExerciceDTO">ParExerciceDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParExercice">ParExercice</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="ParOrdonateurService"></a>
+<h3>ParOrdonateurService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParOrdonateur">ParOrdonateur</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-par.html#ParOrdonateur">ParOrdonateur</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParOrdonateur">ParOrdonateur</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParOrdonateur">ParOrdonateur</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParOrdonateur">ParOrdonateur</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByNum</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ num</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParOrdonateur">ParOrdonateur</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByUserId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParOrdonateur">ParOrdonateur</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParOrdonateur">ParOrdonateur</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParOrdonateur">ParOrdonateur</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParOrdonateurDTO">ParOrdonateurDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParOrdonateur">ParOrdonateur</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="ParProvinceAncService"></a>
+<h3>ParProvinceAncService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParProvinceAnc">ParProvinceAnc</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-par.html#ParProvinceAnc">ParProvinceAnc</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParProvinceAnc">ParProvinceAnc</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParProvinceAnc">ParProvinceAnc</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParProvinceAnc">ParProvinceAnc</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByPrvRegId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParProvinceAnc">ParProvinceAnc</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParProvinceAnc">ParProvinceAnc</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParProvinceAnc">ParProvinceAnc</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParProvinceAncDTO">ParProvinceAncDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParProvinceAnc">ParProvinceAnc</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="ParProvinceOldService"></a>
+<h3>ParProvinceOldService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParProvinceOld">ParProvinceOld</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-par.html#ParProvinceOld">ParProvinceOld</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParProvinceOld">ParProvinceOld</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParProvinceOld">ParProvinceOld</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParProvinceOld">ParProvinceOld</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByPrvRegId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParProvinceOld">ParProvinceOld</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParProvinceOld">ParProvinceOld</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParProvinceOld">ParProvinceOld</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParProvinceOldDTO">ParProvinceOldDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParProvinceOld">ParProvinceOld</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="ParProvinceService"></a>
+<h3>ParProvinceService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParProvince">ParProvince</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-par.html#ParProvince">ParProvince</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParProvince">ParProvince</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParProvince">ParProvince</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParProvince">ParProvince</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByPrvRegId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParProvince">ParProvince</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByStatus</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ prvStatus</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParProvince">ParProvince</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParProvince">ParProvince</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParProvince">ParProvince</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParProvinceDTO">ParProvinceDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParProvince">ParProvince</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="ParRegionAncService"></a>
+<h3>ParRegionAncService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParRegionAnc">ParRegionAnc</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-par.html#ParRegionAnc">ParRegionAnc</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParRegionAnc">ParRegionAnc</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParRegionAnc">ParRegionAnc</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParRegionAnc">ParRegionAnc</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParRegionAnc">ParRegionAnc</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParRegionAnc">ParRegionAnc</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParRegionAncDTO">ParRegionAncDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParRegionAnc">ParRegionAnc</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="ParRegionOldService"></a>
+<h3>ParRegionOldService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParRegionOld">ParRegionOld</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-par.html#ParRegionOld">ParRegionOld</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParRegionOld">ParRegionOld</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParRegionOld">ParRegionOld</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParRegionOld">ParRegionOld</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParRegionOld">ParRegionOld</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParRegionOld">ParRegionOld</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParRegionOldDTO">ParRegionOldDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParRegionOld">ParRegionOld</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="ParRegionService"></a>
+<h3>ParRegionService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParRegion">ParRegion</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-par.html#ParRegion">ParRegion</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParRegion">ParRegion</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParRegion">ParRegion</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParRegion">ParRegion</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByStatus</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ regStatus</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParRegion">ParRegion</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParRegion">ParRegion</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParRegion">ParRegion</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParRegionDTO">ParRegionDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParRegion">ParRegion</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="ParTypeBenifService"></a>
+<h3>ParTypeBenifService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParTypeBenif">ParTypeBenif</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-par.html#ParTypeBenif">ParTypeBenif</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParTypeBenif">ParTypeBenif</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParTypeBenif">ParTypeBenif</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByBenCode</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ benCode</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParTypeBenif">ParTypeBenif</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByBenName</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ benName</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-par.html#ParTypeBenif">ParTypeBenif</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParTypeBenif">ParTypeBenif</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParTypeBenif">ParTypeBenif</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParTypeBenif">ParTypeBenif</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-par.html#ParTypeBenifDTO">ParTypeBenifDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-par.html#ParTypeBenif">ParTypeBenif</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+</div>
+<div id="consumers">
+</div>
+<div id="domainObjects">
+<a name="ParAgentExe"></a>
+<h3>ParAgentExe</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>aexNom</td>
+	<td>String</td>
+	<td>128</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>aexNum</td>
+	<td>String</td>
+	<td>128</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>aexOrdId</td>
+	<td><a href="DomainModelDoc-par.html#ParOrdonateur">ParOrdonateur</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>aexPrenom</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>aexStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>aexUsaId</td>
+	<td><a href="DomainModelDoc-adm.html#AdmUserAccount">AdmUserAccount</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParAgentExeDTO"></a>
+<h3>ParAgentExeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>aexNom</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>aexOrdId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>aexOrdId1</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>aexPrenom</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>aexStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>aexUsaId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParAgentExeMergeDTO"></a>
+<h3>ParAgentExeMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>aexNom</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>aexNum</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>aexOrdId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>aexPrenom</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>aexStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>aexUsaId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParCommanditaire"></a>
+<h3>ParCommanditaire</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cmdCode</td>
+	<td>String</td>
+	<td>15</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cmdDesc</td>
+	<td>String</td>
+	<td>128</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cmdName</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParCommanditaireDTO"></a>
+<h3>ParCommanditaireDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cmdCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cmdDesc</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cmdName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParCommanditaireMergeDTO"></a>
+<h3>ParCommanditaireMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cmdCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cmdDesc</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cmdName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParCommune"></a>
+<h3>ParCommune</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>comCode</td>
+	<td>String</td>
+	<td>15</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comName</td>
+	<td>String</td>
+	<td>255</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comPrvId</td>
+	<td><a href="DomainModelDoc-par.html#ParProvince">ParProvince</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comRegId</td>
+	<td><a href="DomainModelDoc-par.html#ParRegion">ParRegion</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comType</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParCommuneAnc"></a>
+<h3>ParCommuneAnc</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>comCode</td>
+	<td>String</td>
+	<td>15</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comName</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comPrvId</td>
+	<td><a href="DomainModelDoc-par.html#ParProvinceAnc">ParProvinceAnc</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comRegId</td>
+	<td><a href="DomainModelDoc-par.html#ParRegionAnc">ParRegionAnc</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comType</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParCommuneAncDTO"></a>
+<h3>ParCommuneAncDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>comCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comPrvId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comRegId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comType</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParCommuneAncMergeDTO"></a>
+<h3>ParCommuneAncMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>comCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comPrvId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comRegId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comType</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParCommuneDTO"></a>
+<h3>ParCommuneDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>comCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comPrvId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comRegId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comType</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParCommuneMergeDTO"></a>
+<h3>ParCommuneMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>comCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comPrvId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comRegId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comType</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParCommuneOld"></a>
+<h3>ParCommuneOld</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>comCode</td>
+	<td>String</td>
+	<td>15</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comName</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comPrvId</td>
+	<td><a href="DomainModelDoc-par.html#ParProvinceOld">ParProvinceOld</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comRegId</td>
+	<td><a href="DomainModelDoc-par.html#ParRegionOld">ParRegionOld</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comType</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParCommuneOldDTO"></a>
+<h3>ParCommuneOldDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>comCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comPrvId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comRegId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comType</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParCommuneOldMergeDTO"></a>
+<h3>ParCommuneOldMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>comCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comPrvId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comRegId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>comType</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParConvention"></a>
+<h3>ParConvention</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>cvtBeginDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cvtCode</td>
+	<td>String</td>
+	<td>15</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cvtDesc</td>
+	<td>String</td>
+	<td>128</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cvtEndDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cvtName</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParConventionDTO"></a>
+<h3>ParConventionDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cvtCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cvtDesc</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cvtName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParConventionMergeDTO"></a>
+<h3>ParConventionMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>cvtBeginDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cvtCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cvtDesc</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cvtEndDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cvtName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParExercice"></a>
+<h3>ParExercice</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>pexCode</td>
+	<td>String</td>
+	<td>24</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pexDesc</td>
+	<td>String</td>
+	<td>256</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pexEndDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pexName</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pexPlaId</td>
+	<td>List&lt;<a href="DomainModelDoc-pla.html#PlaPlan">PlaPlan</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pexStartDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pexStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParExerciceDTO"></a>
+<h3>ParExerciceDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pexCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pexDesc</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pexName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParExerciceMergeDTO"></a>
+<h3>ParExerciceMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>pexCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pexDesc</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pexEndDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pexName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pexStartDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pexStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParOrdonateur"></a>
+<h3>ParOrdonateur</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>idOrdAexId</td>
+	<td>List&lt;<a href="DomainModelDoc-par.html#ParAgentExe">ParAgentExe</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>idOrdOrdId</td>
+	<td>List&lt;<a href="DomainModelDoc-par.html#ParOrdonateur">ParOrdonateur</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>idOrdSmrId</td>
+	<td>List&lt;<a href="DomainModelDoc-bud.html#BudSsMorasse">BudSsMorasse</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>ordNature</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ordNom</td>
+	<td>String</td>
+	<td>128</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ordOrdId</td>
+	<td><a href="DomainModelDoc-par.html#ParOrdonateur">ParOrdonateur</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ordPrenom</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ordRegId</td>
+	<td><a href="DomainModelDoc-par.html#ParRegion">ParRegion</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ordStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ordType</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ordUsaId</td>
+	<td><a href="DomainModelDoc-adm.html#AdmUserAccount">AdmUserAccount</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParOrdonateurDTO"></a>
+<h3>ParOrdonateurDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ordNom</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ordOrdId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ordPrenom</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ordRegId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ordType</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ordUsaId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParOrdonateurMergeDTO"></a>
+<h3>ParOrdonateurMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>ordNature</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ordNom</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ordOrdId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ordPrenom</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ordRegId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ordStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ordType</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ordUsaId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParProvince"></a>
+<h3>ParProvince</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>idPrvComId</td>
+	<td>List&lt;<a href="DomainModelDoc-par.html#ParCommune">ParCommune</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>prvCode</td>
+	<td>String</td>
+	<td>15</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvName</td>
+	<td>String</td>
+	<td>255</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvRegId</td>
+	<td><a href="DomainModelDoc-par.html#ParRegion">ParRegion</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParProvinceAnc"></a>
+<h3>ParProvinceAnc</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>idPrvComId</td>
+	<td>List&lt;<a href="DomainModelDoc-par.html#ParCommuneAnc">ParCommuneAnc</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>prvCode</td>
+	<td>String</td>
+	<td>15</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvName</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvRegId</td>
+	<td><a href="DomainModelDoc-par.html#ParRegionAnc">ParRegionAnc</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParProvinceAncDTO"></a>
+<h3>ParProvinceAncDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvRegId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParProvinceAncMergeDTO"></a>
+<h3>ParProvinceAncMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>prvCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvRegId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParProvinceDTO"></a>
+<h3>ParProvinceDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvRegId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParProvinceMergeDTO"></a>
+<h3>ParProvinceMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>prvCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvRegId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParProvinceOld"></a>
+<h3>ParProvinceOld</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>idPrvComId</td>
+	<td>List&lt;<a href="DomainModelDoc-par.html#ParCommuneOld">ParCommuneOld</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>prvCode</td>
+	<td>String</td>
+	<td>15</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvName</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvRegId</td>
+	<td><a href="DomainModelDoc-par.html#ParRegionOld">ParRegionOld</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParProvinceOldDTO"></a>
+<h3>ParProvinceOldDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvRegId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParProvinceOldMergeDTO"></a>
+<h3>ParProvinceOldMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>prvCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvRegId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>prvStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParRegion"></a>
+<h3>ParRegion</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>idRegOrdId</td>
+	<td>List&lt;<a href="DomainModelDoc-par.html#ParOrdonateur">ParOrdonateur</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>regCode</td>
+	<td>String</td>
+	<td>15</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>regName</td>
+	<td>String</td>
+	<td>255</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>regStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParRegionAnc"></a>
+<h3>ParRegionAnc</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>regCode</td>
+	<td>String</td>
+	<td>15</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>regName</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>regStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParRegionAncDTO"></a>
+<h3>ParRegionAncDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>regCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>regName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>regStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParRegionAncMergeDTO"></a>
+<h3>ParRegionAncMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>regCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>regName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>regStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParRegionDTO"></a>
+<h3>ParRegionDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>regCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>regName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>regStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParRegionMergeDTO"></a>
+<h3>ParRegionMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>regCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>regName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>regStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParRegionOld"></a>
+<h3>ParRegionOld</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>regCode</td>
+	<td>String</td>
+	<td>15</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>regName</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>regStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParRegionOldDTO"></a>
+<h3>ParRegionOldDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>regCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>regName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>regStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParRegionOldMergeDTO"></a>
+<h3>ParRegionOldMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>regCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>regName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>regStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParTypeBenif"></a>
+<h3>ParTypeBenif</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>benCode</td>
+	<td>String</td>
+	<td>15</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>benName</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParTypeBenifDTO"></a>
+<h3>ParTypeBenifDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>benCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>benName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="ParTypeBenifMergeDTO"></a>
+<h3>ParTypeBenifMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>benCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>benName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+</div>
+
+</div>
+</body>
+</html>	

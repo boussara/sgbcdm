@@ -1,0 +1,1 @@
+ --database=mysql --user=root --password=123456 --default-character-set=latin1 --execute="C:\scripts\mysql_creation_user_db_donnees.sql"

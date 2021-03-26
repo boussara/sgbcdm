@@ -1,0 +1,22 @@
+delete from bud_ligne where lin_id=214147 and VERSION=1
+delete from bud_mpr_has_chp where mhc_id=214156 and VERSION=0
+delete from bud_morasse_pres where mpr_id=214155 and VERSION=1
+delete from bud_morasse_det where mod_id=214148 and VERSION=1
+delete from bud_ligne where lin_id=214149 and VERSION=1
+delete from bud_morasse_det where mod_id=214150 and VERSION=0
+delete from bud_paragraphe where pph_id=214145 and VERSION=1
+commit
+
+
+
+
+delete from bud_ligne where lin_id=214159 and VERSION=1
+delete from bud_mpr_has_chp where mhc_id=214168 and VERSION=0
+delete from bud_morasse_pres where mpr_id=214167 and VERSION=1
+delete from bud_morasse_det where mod_id=214160 and VERSION=1
+delete from bud_ligne where lin_id=214161 and VERSION=1
+delete from bud_morasse_det where mod_id=214162 and VERSION=0
+delete from bud_paragraphe where pph_id=214157 and VERSION=1
+delete from bud_morasse_op where mop_id=214166 and VERSION=0
+delete from bud_morasse_det where mod_id=214158 and VERSION=0
+commit

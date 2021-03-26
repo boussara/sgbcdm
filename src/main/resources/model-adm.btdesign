@@ -1,0 +1,549 @@
+import "classpath:/model-comPar.btdesign"
+import "classpath:/model-par.btdesign"
+
+	ApplicationPart Adm{
+		Module adm{
+			
+			Entity AdmAppFunction{
+				databaseTable="ADM_APP_FUNCTION"
+				hint="idSequence=NOITCNUF_PPA_MDAAPF_X"
+				
+				Long id    databaseColumn="APF_ID" 
+				String apfName length="64" nullable databaseColumn="APF_NAME"  hint="visible=true,toString" 
+				Long apfActive  nullable databaseColumn="APF_ACTIVE"  hint="visible=true"
+				Long apfPci  nullable databaseColumn="APF_PCI"  hint="visible=true" 
+				String apfCode length="64" nullable databaseColumn="APF_CODE"  hint="visible=true,toString" 
+				String apfUrl length="128" nullable databaseColumn="APF_URL" 
+				Long apfMenuId   databaseColumn="APF_MENU_ID" 
+				
+					- @AdmAppModule apfApmId  <-> apmApfId fetch="lazy" 							
+				
+					- @AdmAppFuncGrp apfAfgId  <-> afgApfId nullable fetch="lazy" 							
+				
+				- List<@AdmUsrApf> apfUspId <-> uspApfId fetch="lazy" hint="visible=false"
+				
+				Repository AdmAppFunctionRepository {
+					findById;
+					save;
+					delete;
+					findAll;
+					findByCondition;
+					PagedResult<@AdmAppFunction> findAll(PagingParameter pagingParameter);
+					PagedResult<@AdmAppFunction> findByCondition(PagingParameter pagingParameter);
+					
+					@AdmAppFunction findByUrl(String uri) condition="apfUrl = :uri";
+					@AdmAppFunction findByApfCode(String code) condition="apfCode = :code";
+					List<@AdmAppFunction> findByApfApmId(@AdmAppModule apmId) condition="apfApmId = :apmId";
+					List<@AdmAppFunction> findByApfAfgId(@AdmAppFuncGrp afgId) condition="apfAfgId = :afgId";
+				}
+				
+			}
+			
+			Service AdmAppFunctionService {
+				
+				findById => AdmAppFunctionRepository.findById;
+				findAll => AdmAppFunctionRepository.findAll;
+				save => AdmAppFunctionRepository.save;
+				delete => AdmAppFunctionRepository.delete;
+				PagedResult<@AdmAppFunction> search(@AdmAppFunctionDTO aua);
+				PagedResult<@AdmAppFunction> findAll(PagingParameter pagingParameter);
+				@AdmAppFunction findByUrl(String uri) => AdmAppFunctionRepository.findByUrl;
+				@AdmAppFunction findByApfCode(String code) => AdmAppFunctionRepository.findByApfCode;
+				List<@AdmAppFunction> findByApfApmId(@AdmAppModule apmId) => AdmAppFunctionRepository.findByApfApmId;
+				List<@AdmAppFunction> findByApfAfgId(@AdmAppFuncGrp afgId) => AdmAppFunctionRepository.findByApfAfgId;
+			}
+			
+			DataTransferObject AdmAppFunctionDTO {
+				hint="for=search,entity=AdmAppFunction"
+				String apfName hint="" 				
+				String apfCode hint="" 
+				String apfApmId1 hint="ref=apfApmId,view=ComboBox"
+			}
+			
+			DataTransferObject AdmAppFunctionMergeDTO {
+				hint="for=merge,entity=AdmAppFunction"
+				String apfName hint="" 
+				String apfPci hint="type=boolean";  
+				String apfActive hint="type=boolean";  
+				String apfCode hint="" 
+				String apfUrl hint="" 
+				String apfMenuId hint="" 
+				String apfApmId hint="type=system,view=ComboBox"
+				String apfAfgId hint="type=system,view=ComboBox,LinkedTo=apfApmId"
+			}
+			
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+			Entity AdmAppFuncGrp{
+				databaseTable="ADM_APP_FUNC_GRP"
+				hint="idSequence=PRG_CNUF_PPA_MDAAFG_X"
+				
+				Long id    databaseColumn="AFG_ID" 
+				String afgName length="64" nullable databaseColumn="AFG_NAME"  hint="visible=true,toString" 
+				String afgCode length="64" nullable databaseColumn="AFG_CODE"  hint="visible=true,toString" 
+				Long afgMenuId   databaseColumn="AFG_MENU_ID"  hint="visible=true" 
+				
+					- @AdmAppModule afgApmId  <-> apmAfgId  							
+				
+					- List<@AdmAppFunction> afgApfId <-> apfAfgId
+				
+				Repository AdmAppFuncGrpRepository {
+					findById;
+					save;
+					delete;
+					findAll;
+					findByCondition;
+					PagedResult<@AdmAppFuncGrp> findAll(PagingParameter pagingParameter);
+					PagedResult<@AdmAppFuncGrp> findByCondition(PagingParameter pagingParameter);
+					
+					
+					List<@AdmAppFuncGrp> findByAfgApmId(@AdmAppModule apmId) condition="afgApmId = :apmId";
+				}
+				
+			}
+			
+			Service AdmAppFuncGrpService {
+				
+				findById => AdmAppFuncGrpRepository.findById;
+				findAll => AdmAppFuncGrpRepository.findAll;
+				save => AdmAppFuncGrpRepository.save;
+				delete => AdmAppFuncGrpRepository.delete;
+				PagedResult<@AdmAppFuncGrp> search(@AdmAppFuncGrpDTO aua);
+				PagedResult<@AdmAppFuncGrp> findAll(PagingParameter pagingParameter);
+				
+				List<@AdmAppFuncGrp> findByAfgApmId(@AdmAppModule apmId) => AdmAppFuncGrpRepository.findByAfgApmId;
+			}
+			
+			DataTransferObject AdmAppFuncGrpDTO {
+				hint="for=search,entity=AdmAppFuncGrp"
+				String afgName hint="" 
+				String afgCode hint="" 
+				String afgMenuId hint="" 
+			}
+			
+			DataTransferObject AdmAppFuncGrpMergeDTO {
+				hint="for=merge,entity=AdmAppFuncGrp"
+				String afgName hint="" 
+				String afgCode hint="" 
+				String afgMenuId hint="" 
+				String afgApmId hint="type=system,view=ComboBox"
+			}
+			
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+			Entity AdmAppModule{
+				databaseTable="ADM_APP_MODULE"
+				hint="idSequence=ELUDOM_PPA_MDAAPM_X"
+				
+				Long id    databaseColumn="APM_ID" 
+				String apmName length="64" nullable databaseColumn="APM_NAME"  hint="visible=true,toString" 
+				String apmCode length="64" nullable databaseColumn="APM_CODE"  hint="visible=true,toString" 
+				Long apmMenuId   databaseColumn="APM_MENU_ID"  hint="visible=true" 
+				
+				- List<@AdmAppFuncGrp> apmAfgId <-> afgApmId
+				- List<@AdmAppFunction> apmApfId <-> apfApmId
+				//- List<@ParProcessor> apmPrcId <-> prcApmId
+				//- List<@ParReport> apmRepId <-> repApmId
+				
+				Repository AdmAppModuleRepository {
+					findById;
+					save;
+					delete;
+					findAll;
+					findByCondition;
+					PagedResult<@AdmAppModule> findAll(PagingParameter pagingParameter);
+					PagedResult<@AdmAppModule> findByCondition(PagingParameter pagingParameter);
+				}
+				
+			}
+			
+			Service AdmAppModuleService {
+				
+				findById => AdmAppModuleRepository.findById;
+				findAll => AdmAppModuleRepository.findAll;
+				save => AdmAppModuleRepository.save;
+				delete => AdmAppModuleRepository.delete;
+				PagedResult<@AdmAppModule> search(@AdmAppModuleDTO aua);
+				PagedResult<@AdmAppModule> findAll(PagingParameter pagingParameter);
+			}
+			
+			DataTransferObject AdmAppModuleDTO {
+				hint="for=search,entity=AdmAppModule"
+				String apmName hint="" 
+				String apmCode hint="" 				 
+			}
+			
+			DataTransferObject AdmAppModuleMergeDTO {
+				hint="for=merge,entity=AdmAppModule"
+				String apmName hint="" 
+				String apmCode hint="" 
+				String apmMenuId hint="" 
+			}
+			
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+			Entity AdmParameters{
+				databaseTable="ADM_PARAMETERS"
+				hint="idSequence=SRETEMARAP_MDAPAR_X"
+				
+				Long id    databaseColumn="PAR_ID" 
+				BigDecimal parPassExpr  nullable databaseColumn="PAR_PASS_EXPR"  hint="visible=true,toString" 
+				Long parPassHistNbr  nullable databaseColumn="PAR_PASS_HIST_NBR"  hint="visible=true,toString" 
+				Long parAttemptNbr  nullable databaseColumn="PAR_ATTEMPT_NBR"  hint="visible=true,toString" 
+				BigDecimal parLockTime  nullable databaseColumn="PAR_LOCK_TIME" hint="visible=true,toString" 
+				BigDecimal parSesTime  nullable databaseColumn="PAR_SES_TIME" 
+				
+				
+				Repository AdmParametersRepository {
+					findById;
+					save;
+					delete;
+					findAll;
+					findByCondition;
+					PagedResult<@AdmParameters> findAll(PagingParameter pagingParameter);
+					PagedResult<@AdmParameters> findByCondition(PagingParameter pagingParameter);
+				}
+				
+			}
+			
+			Service AdmParametersService {
+				
+				findById => AdmParametersRepository.findById;
+				findAll => AdmParametersRepository.findAll;
+				save => AdmParametersRepository.save;
+				delete => AdmParametersRepository.delete;
+				PagedResult<@AdmParameters> search(@AdmParametersDTO aua);
+				PagedResult<@AdmParameters> findAll(PagingParameter pagingParameter);
+			}
+			
+			DataTransferObject AdmParametersDTO {
+				hint="for=search,entity=AdmParameters"
+				String parPassExpr hint="" 
+				String parPassHistNbr hint="" 
+				String parAttemptNbr hint="" 
+			}
+			
+			DataTransferObject AdmParametersMergeDTO {
+				hint="for=merge,entity=AdmParameters"
+				String parPassExpr hint="" 
+				String parPassHistNbr hint="" 
+				String parAttemptNbr hint="" 
+				String parLockTime hint="" 
+				String parSesTime hint="" 
+			}
+			
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+			Entity AdmUserAccount{
+				databaseTable="ADM_USER_ACCOUNT"
+				hint="idSequence=TNUOCCA_RESU_MDAUSA_X"
+				
+				Long id    databaseColumn="USA_ID" 
+				String usaFirst length="128" nullable databaseColumn="USA_FIRST"  hint="visible=true,toString" 
+				String usaLast length="64" nullable databaseColumn="USA_LAST"  hint="visible=true,toString" 
+				String usaLogin length="32"  databaseColumn="USA_LOGIN"  hint="visible=true,toString" 
+				String usaPassword length="128" nullable databaseColumn="USA_PASSWORD" 
+				Long usaActif  nullable databaseColumn="USA_ACTIF" 
+				Long usaPci  nullable databaseColumn="USA_PCI" 
+				Date usaPassDate  nullable databaseColumn="USA_PASS_DATE" 
+				Long usaLocked  nullable databaseColumn="USA_LOCKED" 
+				Date usaLockDate  nullable databaseColumn="USA_LOCK_DATE" 
+				String usaCivility length="5" nullable databaseColumn="USA_CIVILITY" 
+				Long usaUnsucLog  nullable databaseColumn="USA_UNSUC_LOG" 
+				Blob usaPbk  nullable databaseColumn="USA_PBK" 
+				Blob usaPvk  nullable databaseColumn="USA_PVK" 
+				
+					- @ParEntity usaEntId  /*<-> entUsaId*/ nullable							
+											
+				
+				- List<@AdmUserRole> usaUsr <-> usrUsa fetch="lazy" hint="visible=true"//cascade="persist,merge"				
+				databaseColumn="UAR_USR_ID"
+				
+				
+				
+				Repository AdmUserAccountRepository {
+					findById;
+					save;
+					delete;
+					findAll;
+					findByCondition;
+					PagedResult<@AdmUserAccount> findAll(PagingParameter pagingParameter);
+					PagedResult<@AdmUserAccount> findByCondition(PagingParameter pagingParameter);
+
+				}
+				
+			}
+			
+			Service AdmUserAccountService {
+				
+				findById => AdmUserAccountRepository.findById;
+				findAll => AdmUserAccountRepository.findAll;
+				save => AdmUserAccountRepository.save;
+				delete => AdmUserAccountRepository.delete;
+				PagedResult<@AdmUserAccount> search(@AdmUserAccountDTO aua);
+				PagedResult<@AdmUserAccount> findAll(PagingParameter pagingParameter);
+				
+				@AdmUserAccount findUserAccountByUsaLogin(String usaLogin) hint="gen, order=asc, prop=usaLogin(), nullable";
+			}
+			
+			DataTransferObject AdmUserAccountDTO {
+				hint="for=search,entity=AdmUserAccount"
+				String usaCivility hint="" 
+				String usaFirst hint="" 
+				String usaLast hint="" 
+				String usaActif hint="" 								
+			}
+			
+			DataTransferObject AdmUserAccountMergeDTO {
+				hint="for=merge,entity=AdmUserAccount"
+				String usaEntId hint="type=system,view=ComboBox,endLine"
+				String usaCivility hint="type=enum,values=allCivilities,items=M&M:Mlle&Mlle:Mme&Mme,endLine"; 
+				String usaFirst hint="" 
+				String usaLast hint="" 
+				String usaLogin hint="endLine" 
+				String usaPassword hint="type=password"  
+				String usaActif hint="type=boolean"; 
+				String usaPci hint="type=boolean"; 
+				//String usaPassDate hint="" 
+				String usaLocked hint="type=boolean";
+				//String usaLockDate hint="" 				
+				//String usaUnsucLog hint="" 
+				//String usaPbk hint="" 
+				//String usaPvk hint="" 
+				String usaUsr hint="type=system,view=DragDrop"				
+			}
+			
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+			Entity AdmUserEntity{
+				databaseTable="ADM_USER_ENTITY"
+				hint="idSequence=YTITNE_RESU_MDAUEN_X"
+				
+				Long id    databaseColumn="UEN_ID" 
+				String uenType length="32" nullable databaseColumn="UEN_TYPE"  hint="visible=true" 
+				Long uenEntId  nullable databaseColumn="UEN_ENT_ID"  hint="visible=true,toString" 
+				
+					- @AdmUserAccount uenUsaId  /*<-> usaUenId*/ nullable fetch="lazy" 							
+				
+				
+				Repository AdmUserEntityRepository {
+					findById;
+					save;
+					delete;
+					findAll;
+					findByCondition;
+					PagedResult<@AdmUserEntity> findAll(PagingParameter pagingParameter);
+					PagedResult<@AdmUserEntity> findByCondition(PagingParameter pagingParameter);
+				}
+				
+			}
+			
+			Service AdmUserEntityService {
+				
+				findById => AdmUserEntityRepository.findById;
+				findAll => AdmUserEntityRepository.findAll;
+				save => AdmUserEntityRepository.save;
+				delete => AdmUserEntityRepository.delete;
+				PagedResult<@AdmUserEntity> search(@AdmUserEntityDTO aua);
+				PagedResult<@AdmUserEntity> findAll(PagingParameter pagingParameter);
+			}
+			
+			DataTransferObject AdmUserEntityDTO {
+				hint="for=search,entity=AdmUserEntity"
+				String uenType hint="" 
+				String uenEntId hint="" 
+			}
+			
+			DataTransferObject AdmUserEntityMergeDTO {
+				hint="for=merge,entity=AdmUserEntity"
+				String uenType hint="" 
+				String uenEntId hint="" 
+				String uenUsaId hint="type=system,view=ComboBox"
+			}
+			
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+			Entity AdmUserPassHist{
+				databaseTable="ADM_USER_PASS_HIST"
+				hint="idSequence=TSIH_SSAP_RESU_MDAUPH_X"
+				
+				Long id    databaseColumn="UPH_ID" 
+				String uphPassword length="64" nullable databaseColumn="UPH_PASSWORD"  hint="visible=true,toString" 
+				Date uphDate  nullable databaseColumn="UPH_DATE"  hint="visible=true,toString" 
+				
+					- @AdmUserAccount uphUsaId  /*<-> usaUphId*/ nullable fetch="lazy" 							
+				
+				
+				Repository AdmUserPassHistRepository {
+					findById;
+					save;
+					delete;
+					findAll;
+					findByCondition;
+					PagedResult<@AdmUserPassHist> findAll(PagingParameter pagingParameter);
+					PagedResult<@AdmUserPassHist> findByCondition(PagingParameter pagingParameter);
+				}
+				
+			}
+			
+			Service AdmUserPassHistService {
+				
+				findById => AdmUserPassHistRepository.findById;
+				findAll => AdmUserPassHistRepository.findAll;
+				save => AdmUserPassHistRepository.save;
+				delete => AdmUserPassHistRepository.delete;
+				PagedResult<@AdmUserPassHist> search(@AdmUserPassHistDTO aua);
+				PagedResult<@AdmUserPassHist> findAll(PagingParameter pagingParameter);
+			}
+			
+			DataTransferObject AdmUserPassHistDTO {
+				hint="for=search,entity=AdmUserPassHist"
+				String uphPassword hint="" 
+				String uphDate hint="" 
+			}
+			
+			DataTransferObject AdmUserPassHistMergeDTO {
+				hint="for=merge,entity=AdmUserPassHist"
+				String uphPassword hint="" 
+				String uphDate hint="" 
+				String uphUsaId hint="type=system,view=ComboBox"
+			}
+			
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+			Entity AdmUserRole{
+				databaseTable="ADM_USER_ROLE"
+				hint="idSequence=ELOR_RESU_MDAUSR_X"
+				
+				Long id    databaseColumn="USR_ID" 
+				String usrName length="64" nullable databaseColumn="USR_NAME"  hint="visible=true,toString" 
+				String usrDescription length="128" nullable databaseColumn="USR_DESCRIPTION"  hint="visible=true" 
+				
+				
+				- List<@AdmUserAccount> usrUsa inverse <-> usaUsr fetch="lazy"	hint="visible=false"							
+				databaseJoinTable="ADM_USER_ACC_ROLE"
+				databaseColumn="UAR_USA_ID"							
+				
+				- List<@AdmUsrApf> usrUspId <-> uspUsrId  fetch="lazy" cascade="remove" hint="visible=false"
+				
+				Repository AdmUserRoleRepository {
+					findById;
+					save;
+					delete;
+					findAll;
+					findByCondition;
+					PagedResult<@AdmUserRole> findAll(PagingParameter pagingParameter);
+					PagedResult<@AdmUserRole> findByCondition(PagingParameter pagingParameter);
+				}
+				
+			}
+			
+			Service AdmUserRoleService {
+				
+				findById => AdmUserRoleRepository.findById;
+				findAll => AdmUserRoleRepository.findAll;
+				save => AdmUserRoleRepository.save;
+				delete => AdmUserRoleRepository.delete;
+				PagedResult<@AdmUserRole> search(@AdmUserRoleDTO aua);
+				PagedResult<@AdmUserRole> findAll(PagingParameter pagingParameter);
+			}
+			
+			DataTransferObject AdmUserRoleDTO {
+				hint="for=search,entity=AdmUserRole"
+				String usrName hint="" 				
+			}
+			
+			DataTransferObject AdmUserRoleMergeDTO {
+				hint="for=merge,entity=AdmUserRole"
+				String usrName hint="" 
+				String usrDescription hint="" 
+				String usrUspId hint="type=system,view=tabs"		
+			}
+			
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+			Entity AdmUsrApf{
+				! optimisticLocking
+				! auditable
+				scaffold
+				databaseTable="ADM_USR_APF"
+				hint="idSequence=FPA_RSU_MDAUSP_X"
+				
+				Long id    databaseColumn="USP_ID" 
+				Integer uspCreate  nullable databaseColumn="USP_CREATE"  hint="visible=true,toString" 
+				Integer uspRead  nullable databaseColumn="USP_READ"  hint="visible=true,toString" 
+				Integer uspUpdate  nullable databaseColumn="USP_UPDATE"  hint="visible=true,toString" 
+				Integer uspDelete  nullable databaseColumn="USP_DELETE" hint="visible=true,toString" 
+				Integer uspVerify  nullable databaseColumn="USP_VERIFY" hint="visible=true,toString" 
+				Integer uspValidate  nullable databaseColumn="USP_VALIDATE" hint="visible=true,toString" 
+				Integer uspExport  nullable databaseColumn="USP_EXPORT" hint="visible=true,toString" 
+				Integer uspAsPDF  nullable databaseColumn="USP_ASPDF" hint="visible=true,toString" 
+				Integer uspReport  nullable databaseColumn="USP_REPORT" hint="visible=true,toString"
+				Long uspApfMenuId  nullable databaseColumn="USP_APF_MENU_ID" 
+				
+					- @AdmAppFunction uspApfId  <-> apfUspId nullable fetch="lazy" 							
+				
+					- @AdmUserRole uspUsrId  <-> usrUspId nullable fetch="lazy" 							
+				
+				
+				Repository AdmUsrApfRepository {
+					findById;
+					save;
+					delete;
+					findAll;
+					findByCondition;
+					PagedResult<@AdmUsrApf> findAll(PagingParameter pagingParameter);
+					PagedResult<@AdmUsrApf> findByCondition(PagingParameter pagingParameter);
+					
+					List<@AdmUsrApf> findByuspUsr(@AdmUserRole usrId) condition="uspUsrId = :usrId";
+					@AdmUsrApf findByuspUsrUspApfId(@AdmUserRole usrId,@AdmAppFunction apfId) condition="uspUsrId = :usrId and uspApfId = :apfId";
+				}
+				
+			}
+			
+			Service AdmUsrApfService {
+				
+				findById => AdmUsrApfRepository.findById;
+				findAll => AdmUsrApfRepository.findAll;
+				save => AdmUsrApfRepository.save;
+				delete => AdmUsrApfRepository.delete;
+				PagedResult<@AdmUsrApf> search(@AdmUsrApfDTO aua);
+				PagedResult<@AdmUsrApf> findAll(PagingParameter pagingParameter);
+				
+				List<@AdmUsrApf> findByuspUsr(@AdmUserRole usrId) => AdmUsrApfRepository.findByuspUsr;
+				@AdmUsrApf findByuspUsrUspApfId(@AdmUserRole usrId,@AdmAppFunction apfId) => AdmUsrApfRepository.findByuspUsrUspApfId;
+			}
+			
+			DataTransferObject AdmUsrApfDTO {
+				hint="for=search,entity=AdmUsrApf"
+				String uspCreate hint="" 
+				String uspRead hint="" 
+				String uspUpdate hint="" 
+			}
+			
+			DataTransferObject AdmUsrApfMergeDTO {
+				hint="for=merge,entity=AdmUsrApf,type=Association"			
+				String uspCreate hint="type=boolean";
+				String uspRead hint="type=boolean";
+				String uspUpdate hint="type=boolean";	
+				String uspDelete hint="type=boolean";
+				String uspVerify hint="type=boolean";	
+				String uspValidate hint="type=boolean";
+				String uspExport hint="type=boolean";
+				String uspAsPDF hint="type=boolean";
+				String uspReport hint="type=boolean";
+				String all hint="type=boolean";
+				String uspApfId  hint="groupBy=apfApmId.apmName,show=apfAfgId.afgName:apfName";
+				String uspUsrId
+			}
+			
+		}
+	}

@@ -1,0 +1,7252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style type="text/css" media="screen,print">   
+		@import url("DomainModelDoc.css");
+		</style> 
+<title>Summary Documentation of cpt module(Sgbcdm)</title> 
+</head>
+<body>
+<div id="wrap">
+		<a name="module_cpt"></a>
+<h1>Summary Documentation of cpt module <a href="DomainModelDoc.html">(Sgbcdm)</a></h1>
+
+
+<p></p>
+<div id="menu">
+		<ul>
+			<li><a href="DomainModelDoc-cpt.html#CptDepDecision">CptDepDecision</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptDepDecisionDTO">CptDepDecisionDTO</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptDepDecisionMergeDTO">CptDepDecisionMergeDTO</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptDepDecisionService">CptDepDecisionService</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptDepMemo">CptDepMemo</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptDepMemoDTO">CptDepMemoDTO</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptDepMemoMergeDTO">CptDepMemoMergeDTO</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptDepMemoService">CptDepMemoService</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptDepState">CptDepState</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptDepStateDTO">CptDepStateDTO</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptDepStateMergeDTO">CptDepStateMergeDTO</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptDepStateService">CptDepStateService</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptDepenseDTO">CptDepenseDTO</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptDepenseMergeDTO">CptDepenseMergeDTO</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptDepenseService">CptDepenseService</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptEntityDTO">CptEntityDTO</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptEntityMergeDTO">CptEntityMergeDTO</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptEntityService">CptEntityService</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptOrdreService">CptOrdreService</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptOrdreServiceDTO">CptOrdreServiceDTO</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptOrdreServiceMergeDTO">CptOrdreServiceMergeDTO</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptOrdreServiceService">CptOrdreServiceService</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptRpDecision">CptRpDecision</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptRpDecisionDTO">CptRpDecisionDTO</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptRpDecisionMergeDTO">CptRpDecisionMergeDTO</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptRpDecisionService">CptRpDecisionService</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptRpState">CptRpState</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptRpStateDTO">CptRpStateDTO</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptRpStateMergeDTO">CptRpStateMergeDTO</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptRpStateService">CptRpStateService</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptTypeOrdre">CptTypeOrdre</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptTypeOrdreDTO">CptTypeOrdreDTO</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptTypeOrdreMergeDTO">CptTypeOrdreMergeDTO</a></li>
+			<li><a href="DomainModelDoc-cpt.html#CptTypeOrdreService">CptTypeOrdreService</a></li>
+		</ul>
+</div>
+<div id="module_graph">
+    <hr/>
+    <p><b>All in cpt</b></p>
+	<a href="umlgraph-cpt.dot.png">
+	<img src="umlgraph-cpt.dot.png" />
+	</a>
+	<hr/>
+	<p><b>Persistent Domain in cpt</b></p>
+	<a href="umlgraph-cpt-entity.dot.png">
+	<img src="umlgraph-cpt-entity.dot.png" />
+	</a>
+</div>
+
+<div id="services">
+<hr/>
+<a name="CptDepDecisionService"></a>
+<h3>CptDepDecisionService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepDecision">CptDepDecision</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-cpt.html#CptDepDecision">CptDepDecision</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepDecision">CptDepDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepDecision">CptDepDecision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCddCdpId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepDecision">CptDepDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCddCenId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepDecision">CptDepDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCddDate</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ cddDate</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepDecision">CptDepDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCddRem</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cddRem</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepDecision">CptDepDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCddStatus</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cddStatus</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepDecision">CptDepDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepDecision">CptDepDecision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepDecision">CptDepDecision</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepDecision">CptDepDecision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepDecisionDTO">CptDepDecisionDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepDecision">CptDepDecision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="CptDepMemoService"></a>
+<h3>CptDepMemoService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepMemo">CptDepMemo</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-cpt.html#CptDepMemo">CptDepMemo</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepMemo">CptDepMemo</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepMemo">CptDepMemo</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepMemo">CptDepMemo</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepMemo">CptDepMemo</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepMemo">CptDepMemo</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepMemoDTO">CptDepMemoDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepMemo">CptDepMemo</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="CptDepStateService"></a>
+<h3>CptDepStateService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepState">CptDepState</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-cpt.html#CptDepState">CptDepState</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepState">CptDepState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepState">CptDepState</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdsCdpId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepState">CptDepState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdsCenId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepState">CptDepState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdsDate</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ cdsDate</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepState">CptDepState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdsRem</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cdsRem</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepState">CptDepState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdsStatus</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cdsStatus</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepState">CptDepState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepState">CptDepState</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepState">CptDepState</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepState">CptDepState</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepStateDTO">CptDepStateDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepState">CptDepState</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="CptDepenseService"></a>
+<h3>CptDepenseService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepApp</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepenseDTO">CptDepenseDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepAr</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepenseDTO">CptDepenseDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepCI</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepenseDTO">CptDepenseDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepDemande</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepenseDTO">CptDepenseDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepEng</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepenseDTO">CptDepenseDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepEnr</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepenseDTO">CptDepenseDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepSB</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepenseDTO">CptDepenseDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepSGM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepenseDTO">CptDepenseDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepSM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepenseDTO">CptDepenseDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepTM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepenseDTO">CptDepenseDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterDepenceRP</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepenseDTO">CptDepenseDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterOrdreService</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepenseDTO">CptDepenseDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterOrdreServiceSB</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepenseDTO">CptDepenseDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterOrdreServiceSGM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepenseDTO">CptDepenseDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCcdpDateLett</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ cdpDateLett</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpAchId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpAloId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpBenId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpCnss</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cdpCnss</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpDateApp</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ cdpDateApp</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpDateEng</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ cdpDateEng</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpDateEnr</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ cdpDateEnr</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpDateNoti</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ cdpDateNoti</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpDateRem</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ cdpDateRem</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpDateRevision</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ cdpDateRevision</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpIce</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cdpIce</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpIf</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cdpIf</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpInterMor</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>BigDecimal
+ cdpInterMor</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpNaturPrix</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ cdpNaturPrix</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpNumEnr</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cdpNumEnr</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpNumGid</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cdpNumGid</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpNumLett</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cdpNumLett</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpNumNoti</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ cdpNumNoti</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpOrdId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpPdf</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cdpPdf</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpRc</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cdpRc</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpRevPrix</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>BigDecimal
+ cdpRevPrix</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpRevPrixDate</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ cdpRevPrixDate</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpRevisionPrix</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cdpRevisionPrix</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpRib</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cdpRib</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpSignApp</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cdpSignApp</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpSignEng</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cdpSignEng</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpStatus</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cdpStatus</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdpTyoId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByDepId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ num</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findBycdpConcurent</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cdpConcurent</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>getAllDepApp</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepAr</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepCI</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepDemande</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepEng</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepEnr</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepSB</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepSGM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepSM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepTM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllDepenceRP</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllOrdreService</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllOrdreServiceSB</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllOrdreServiceSGM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptDepenseDTO">CptDepenseDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="CptEntityService"></a>
+<h3>CptEntityService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCenName</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cenName</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptEntityDTO">CptEntityDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="CptOrdreServiceService"></a>
+<h3>CptOrdreServiceService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptOrdreService">CptOrdreService</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-cpt.html#CptOrdreService">CptOrdreService</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptOrdreService">CptOrdreService</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptOrdreService">CptOrdreService</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCosCdpId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptOrdreService">CptOrdreService</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCosCdpIdCosCtoId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ cdpId</li>
+<li>Long
+ ctoId</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptOrdreService">CptOrdreService</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCosCode</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cosCode</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptOrdreService">CptOrdreService</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCosCtoId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptOrdreService">CptOrdreService</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCosDate</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ cosDate</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptOrdreService">CptOrdreService</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCosDateEff</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ cosDateEff</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptOrdreService">CptOrdreService</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCosName</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cosName</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptOrdreService">CptOrdreService</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCosPhaId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptOrdreService">CptOrdreService</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCosRem</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cosRem</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptOrdreService">CptOrdreService</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptOrdreService">CptOrdreService</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptOrdreService">CptOrdreService</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptOrdreService">CptOrdreService</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptOrdreServiceDTO">CptOrdreServiceDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptOrdreService">CptOrdreService</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="CptRpDecisionService"></a>
+<h3>CptRpDecisionService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptRpDecision">CptRpDecision</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-cpt.html#CptRpDecision">CptRpDecision</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptRpDecision">CptRpDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptRpDecision">CptRpDecision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCddCenId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptRpDecision">CptRpDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCddDate</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ cddDate</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptRpDecision">CptRpDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCddRem</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cddRem</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptRpDecision">CptRpDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCddStatus</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cddStatus</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptRpDecision">CptRpDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptRpDecision">CptRpDecision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptRpDecision">CptRpDecision</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptRpDecision">CptRpDecision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptRpDecisionDTO">CptRpDecisionDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptRpDecision">CptRpDecision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="CptRpStateService"></a>
+<h3>CptRpStateService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptRpState">CptRpState</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-cpt.html#CptRpState">CptRpState</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptRpState">CptRpState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptRpState">CptRpState</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdsCenId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptRpState">CptRpState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdsDate</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ cdsDate</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptRpState">CptRpState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdsRem</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cdsRem</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptRpState">CptRpState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCdsStatus</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ cdsStatus</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptRpState">CptRpState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptRpState">CptRpState</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptRpState">CptRpState</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptRpState">CptRpState</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptRpStateDTO">CptRpStateDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptRpState">CptRpState</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="CptTypeOrdreService"></a>
+<h3>CptTypeOrdreService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptTypeOrdre">CptTypeOrdre</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-cpt.html#CptTypeOrdre">CptTypeOrdre</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptTypeOrdre">CptTypeOrdre</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptTypeOrdre">CptTypeOrdre</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCtoCode</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ ctoCode</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptTypeOrdre">CptTypeOrdre</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByCtoName</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ ctoName</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-cpt.html#CptTypeOrdre">CptTypeOrdre</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptTypeOrdre">CptTypeOrdre</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptTypeOrdre">CptTypeOrdre</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptTypeOrdre">CptTypeOrdre</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-cpt.html#CptTypeOrdreDTO">CptTypeOrdreDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-cpt.html#CptTypeOrdre">CptTypeOrdre</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+</div>
+<div id="consumers">
+</div>
+<div id="domainObjects">
+<a name="CptDepDecision"></a>
+<h3>CptDepDecision</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cddCdpId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddCenId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddRem</td>
+	<td>String</td>
+	<td>256</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptDepDecisionDTO"></a>
+<h3>CptDepDecisionDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cddCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_cddDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptDepDecisionMergeDTO"></a>
+<h3>CptDepDecisionMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cddCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptDepMemo"></a>
+<h3>CptDepMemo</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cdmCdpId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdmDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdmMemo</td>
+	<td>String</td>
+	<td>512</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdmUser</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptDepMemoDTO"></a>
+<h3>CptDepMemoDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cdmCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdmDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdmMemo</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdmUser</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_cdmDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptDepMemoMergeDTO"></a>
+<h3>CptDepMemoMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cdmDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdmDepId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdmMemo</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdmUser</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptDepState"></a>
+<h3>CptDepState</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cdsCdpId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsCenId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsRem</td>
+	<td>String</td>
+	<td>256</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptDepStateDTO"></a>
+<h3>CptDepStateDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cdsCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_cdsDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptDepStateMergeDTO"></a>
+<h3>CptDepStateMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cdsCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptDepense"></a>
+<h3>CptDepense</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cdpAchId</td>
+	<td><a href="DomainModelDoc-ach.html#AchAchat">AchAchat</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpAloId</td>
+	<td><a href="DomainModelDoc-ach.html#AchAchatLot">AchAchatLot</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpAmpId</td>
+	<td><a href="DomainModelDoc-ach.html#AchModePass">AchModePass</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpArtId</td>
+	<td><a href="DomainModelDoc-bud.html#BudArticle">BudArticle</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpAstId</td>
+	<td><a href="DomainModelDoc-ach.html#AchSstypeDepense">AchSstypeDepense</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpAtdId</td>
+	<td><a href="DomainModelDoc-ach.html#AchTypeDepense">AchTypeDepense</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpBdtId</td>
+	<td><a href="DomainModelDoc-pla.html#PlaBudgetType">PlaBudgetType</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpBenId</td>
+	<td><a href="DomainModelDoc-par.html#ParTypeBenif">ParTypeBenif</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpCe</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpClotStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpCnss</td>
+	<td>String</td>
+	<td>24</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpConcurent</td>
+	<td>String</td>
+	<td>255</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpCp</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpCurAenId</td>
+	<td><a href="DomainModelDoc-ach.html#AchEntity">AchEntity</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpCurCenId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpCurDecision</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpCurStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpCurStatusDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDatDem</td>
+	<td>String</td>
+	<td>45</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDatOuvPli</td>
+	<td>String</td>
+	<td>45</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateApp</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateEng</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateEnr</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateLett</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateNoti</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateOrderService</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateRem</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateRevision</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateVisa</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDepCon</td>
+	<td>String</td>
+	<td>45</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpEntId</td>
+	<td><a href="DomainModelDoc-communPar.html#ParEntity">ParEntity</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpFluTau</td>
+	<td>String</td>
+	<td>45</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpIce</td>
+	<td>String</td>
+	<td>24</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpId</td>
+	<td>String</td>
+	<td>24</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpIf</td>
+	<td>String</td>
+	<td>255</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpInterMor</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpLinId</td>
+	<td><a href="DomainModelDoc-bud.html#BudLigne">BudLigne</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpMc</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpMom</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpMpr</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNaturPrix</td>
+	<td>String</td>
+	<td>15</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNature</td>
+	<td>String</td>
+	<td>24</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNrCon</td>
+	<td>String</td>
+	<td>45</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNrDemAch</td>
+	<td>String</td>
+	<td>45</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNrDep</td>
+	<td>String</td>
+	<td>45</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNumDep</td>
+	<td>String</td>
+	<td>45</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNumEnr</td>
+	<td>String</td>
+	<td>45</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNumGid</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNumLett</td>
+	<td>String</td>
+	<td>45</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNumNoti</td>
+	<td>String</td>
+	<td>45</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNumVisa</td>
+	<td>String</td>
+	<td>45</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpOrdId</td>
+	<td><a href="DomainModelDoc-par.html#ParOrdonateur">ParOrdonateur</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpParId</td>
+	<td><a href="DomainModelDoc-bud.html#BudParagraphe">BudParagraphe</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpPdf</td>
+	<td>String</td>
+	<td>45</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpPexId</td>
+	<td><a href="DomainModelDoc-par.html#ParExercice">ParExercice</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpPres</td>
+	<td>String</td>
+	<td>45</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpPrtId</td>
+	<td><a href="DomainModelDoc-pla.html#PlaTypePrestation">PlaTypePrestation</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpRc</td>
+	<td>String</td>
+	<td>24</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpRevPrix</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpRevPrixDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpRevisionPrix</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpRib</td>
+	<td>String</td>
+	<td>255</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpSignApp</td>
+	<td>String</td>
+	<td>345</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpSignEng</td>
+	<td>String</td>
+	<td>45</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpTyoId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptTypeOrdre">CptTypeOrdre</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cprPrcId</td>
+	<td><a href="DomainModelDoc-pla.html#PlaClassPrestation">PlaClassPrestation</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>idCdpCddId</td>
+	<td>List&lt;<a href="DomainModelDoc-cpt.html#CptDepDecision">CptDepDecision</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>idCdpCdmId</td>
+	<td>List&lt;<a href="DomainModelDoc-cpt.html#CptDepMemo">CptDepMemo</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>idCdpCdsId</td>
+	<td>List&lt;<a href="DomainModelDoc-cpt.html#CptDepState">CptDepState</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>idCdpCosId</td>
+	<td>List&lt;<a href="DomainModelDoc-cpt.html#CptOrdreService">CptOrdreService</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptDepenseDTO"></a>
+<h3>CptDepenseDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>achNumCon</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpAchId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpAchId1</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpAloId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpAloId1</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpAmpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpArtId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpAstId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpAtdId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpBdtId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpBdtId1</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpBenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpClotStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpConcurent</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpCurAenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpCurCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateApp</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateEng</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateEnr</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateVisa</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDepCon</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpEntId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpLinId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNature</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNrCon</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNrDemAch</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNrDep</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNumDep</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNumGid</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNumVisa</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpOrdId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpParId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpPexId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpPexId1</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpPres</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpPrtId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpPrtId1</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpTyoId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cprPrcId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_cdpDateApp</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_cdpDateEng</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_cdpDateEnr</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_cdpDateVisa</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptDepenseMergeDTO"></a>
+<h3>CptDepenseMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cdpAchId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpAloId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpAmpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpArtId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpAstId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpAtdId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpBdtId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpBenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpCe</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpCnss</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpConcurent</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpCp</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpCurAenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpCurCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpCurDecision</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpCurStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpCurStatusDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDatDem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDatOuvPli</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateApp</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateEng</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateEnr</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateLett</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateNoti</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateOrderService</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateRevision</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDateVisa</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpDepCon</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpEntId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpFluTau</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpIce</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpIf</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpInterMor</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpLinId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpMc</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpMom</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpMpr</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNaturPrix</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNature</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNrCon</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNrDemAch</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNrDep</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNumDep</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNumEnr</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNumGid</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNumLett</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNumNoti</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpNumVisa</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpOrdId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpParId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpPdf</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpPexId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpPres</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpPrtId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpRc</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpRevPrix</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpRevPrixDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpRevisionPrix</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpRib</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpSignApp</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpSignEng</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdpTyoId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cprPrcId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>idCdpCosId</td>
+	<td>String []</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptEntity"></a>
+<h3>CptEntity</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cenName</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptEntityDTO"></a>
+<h3>CptEntityDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cenName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptEntityMergeDTO"></a>
+<h3>CptEntityMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cenName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptOrdreService"></a>
+<h3>CptOrdreService</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cosCdpId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cosCode</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cosCtoId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptTypeOrdre">CptTypeOrdre</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cosDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cosDateEff</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cosName</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cosPhaId</td>
+	<td><a href="DomainModelDoc-ach.html#AchDelaiPhase">AchDelaiPhase</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cosRem</td>
+	<td>String</td>
+	<td>256</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptOrdreServiceDTO"></a>
+<h3>CptOrdreServiceDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cosCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cosCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cosCtoId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cosDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cosName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cosPhaId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_cosDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptOrdreServiceMergeDTO"></a>
+<h3>CptOrdreServiceMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cosCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cosCtoId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cosDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cosDateEff</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cosName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cosPhaId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cosRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptRpDecision"></a>
+<h3>CptRpDecision</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cddCenId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddRem</td>
+	<td>String</td>
+	<td>256</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptRpDecisionDTO"></a>
+<h3>CptRpDecisionDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cddCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_cddDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptRpDecisionMergeDTO"></a>
+<h3>CptRpDecisionMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cddCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cddStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptRpState"></a>
+<h3>CptRpState</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cdsCenId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsRem</td>
+	<td>String</td>
+	<td>256</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptRpStateDTO"></a>
+<h3>CptRpStateDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cdsCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_cdsDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptRpStateMergeDTO"></a>
+<h3>CptRpStateMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>cdsCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>cdsStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptTypeOrdre"></a>
+<h3>CptTypeOrdre</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>ctoCode</td>
+	<td>String</td>
+	<td>16</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctoName</td>
+	<td>String</td>
+	<td>64</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptTypeOrdreDTO"></a>
+<h3>CptTypeOrdreDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctoCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctoName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="CptTypeOrdreMergeDTO"></a>
+<h3>CptTypeOrdreMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>ctoCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ctoName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+</div>
+
+</div>
+</body>
+</html>	

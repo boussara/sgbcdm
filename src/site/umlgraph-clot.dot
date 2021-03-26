@@ -1,0 +1,517 @@
+digraph G {
+	fontsize = 10
+	node [
+		fontsize = 10
+		fontname="arial"
+		shape=plaintext
+	]
+
+	edge [
+		fontsize = 10
+	]
+subgraph clusterclot {
+	label = "clot"  
+	ClotTablDepDecisionService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepDecisionService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByCddStatus</td></tr>			
+	<tr><td align="left">findByCddDate</td></tr>			
+	<tr><td align="left">findByCddRem</td></tr>			
+	<tr><td align="left">findByCddCenId</td></tr>			
+	<tr><td align="left">findByCddCtdId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepExtraDispService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepExtraDispService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepExtraService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepExtraService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">getAllDepMarkMarkSGM</td></tr>			
+	<tr><td align="left">getAllDepMarkSB</td></tr>			
+	<tr><td align="left">getAllDepMarkCI</td></tr>			
+	<tr><td align="left">getAllDepMarkTM</td></tr>			
+	<tr><td align="left">filterDepMarkSGM</td></tr>			
+	<tr><td align="left">filterDepMarkSB</td></tr>			
+	<tr><td align="left">filterDepMarkCI</td></tr>			
+	<tr><td align="left">filterDepMarkTM</td></tr>			
+	<tr><td align="left">getAllDepAnnSGM</td></tr>			
+	<tr><td align="left">getAllDepAnnSB</td></tr>			
+	<tr><td align="left">getAllDepAnnCI</td></tr>			
+	<tr><td align="left">getAllDepAnnTM</td></tr>			
+	<tr><td align="left">filterDepAnnSGM</td></tr>			
+	<tr><td align="left">filterDepAnnSB</td></tr>			
+	<tr><td align="left">filterDepAnnCI</td></tr>			
+	<tr><td align="left">filterDepAnnTM</td></tr>			
+	<tr><td align="left">getAllDepDimSGM</td></tr>			
+	<tr><td align="left">getAllDepDimSB</td></tr>			
+	<tr><td align="left">getAllDepDimCI</td></tr>			
+	<tr><td align="left">getAllDepDimTM</td></tr>			
+	<tr><td align="left">filterDepDimSGM</td></tr>			
+	<tr><td align="left">filterDepDimSB</td></tr>			
+	<tr><td align="left">filterDepDimCI</td></tr>			
+	<tr><td align="left">filterDepDimTM</td></tr>			
+	<tr><td align="left">getAllDepConsSGM</td></tr>			
+	<tr><td align="left">getAllDepConsSB</td></tr>			
+	<tr><td align="left">getAllDepConsCI</td></tr>			
+	<tr><td align="left">getAllDepConsTM</td></tr>			
+	<tr><td align="left">filterDepConsSGM</td></tr>			
+	<tr><td align="left">filterDepConsSB</td></tr>			
+	<tr><td align="left">filterDepConsCI</td></tr>			
+	<tr><td align="left">filterDepConsTM</td></tr>			
+	<tr><td align="left">getAllDepErcSGM</td></tr>			
+	<tr><td align="left">getAllDepErcSB</td></tr>			
+	<tr><td align="left">getAllDepErcCI</td></tr>			
+	<tr><td align="left">getAllDepErcTM</td></tr>			
+	<tr><td align="left">filterDepErcSGM</td></tr>			
+	<tr><td align="left">filterDepErcSB</td></tr>			
+	<tr><td align="left">filterDepErcCI</td></tr>			
+	<tr><td align="left">filterDepErcTM</td></tr>			
+	<tr><td align="left">getAllDepRrcSGM</td></tr>			
+	<tr><td align="left">getAllDepRrcSB</td></tr>			
+	<tr><td align="left">getAllDepRrcCI</td></tr>			
+	<tr><td align="left">getAllDepRrcTM</td></tr>			
+	<tr><td align="left">filterDepRrcSGM</td></tr>			
+	<tr><td align="left">filterDepRrcSB</td></tr>			
+	<tr><td align="left">filterDepRrcCI</td></tr>			
+	<tr><td align="left">filterDepRrcTM</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepStateService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#CCFF99" >
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Service&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepStateService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left">findById</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">save</td></tr>			
+	<tr><td align="left">delete</td></tr>			
+	<tr><td align="left">search</td></tr>			
+	<tr><td align="left">findAll</td></tr>			
+	<tr><td align="left">findByCdsStatus</td></tr>			
+	<tr><td align="left">findByCdsDate</td></tr>			
+	<tr><td align="left">findByCdsRem</td></tr>			
+	<tr><td align="left">findByCdsCenId</td></tr>			
+	<tr><td align="left">findByCdsCtdId</td></tr>			
+	<tr><td align="left">clear</td></tr>			
+	<tr><td align="left">flush</td></tr>			
+	<tr><td align="left">truncate</td></tr>			
+	<tr><td align="left">detach</td></tr>			
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDep [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDep </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ctdDate : Date </td></tr>
+	<tr><td align="left"> + ctdCurStatus : String </td></tr>
+	<tr><td align="left"> + ctdCurStatusDate : Date </td></tr>
+	<tr><td align="left"> + ctdCurDecision : String </td></tr>
+	<tr><td align="left"> + ctdCurDecisionDate : Date </td></tr>
+	<tr><td align="left"> + ctdRem : String </td></tr>
+	<tr><td align="left"> + ctdType : String </td></tr>
+	<tr><td align="left"> + ctdCurCenId : CptEntity </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ctdCurCenId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepDecision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepDecision </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cddStatus : String </td></tr>
+	<tr><td align="left"> + cddDate : Date </td></tr>
+	<tr><td align="left"> + cddRem : String </td></tr>
+	<tr><td align="left"> + cddCenId : CptEntity </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepDecisionDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepDecisionDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cddStatus : String </td></tr>
+	<tr><td align="left"> + cddDate : String </td></tr>
+	<tr><td align="left"> + cddRem : String </td></tr>
+	<tr><td align="left"> + min_cddDate : String </td></tr>
+	<tr><td align="left"> + cddCenId : String </td></tr>
+	<tr><td align="left"> + cddCtdId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepDecisionMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepDecisionMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cddStatus : String </td></tr>
+	<tr><td align="left"> + cddDate : String </td></tr>
+	<tr><td align="left"> + cddRem : String </td></tr>
+	<tr><td align="left"> + cddCenId : String </td></tr>
+	<tr><td align="left"> + cddCtdId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepExtra [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepExtra </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdeStatus : String </td></tr>
+	<tr><td align="left"> + cdeMontantCp : BigDecimal </td></tr>
+	<tr><td align="left"> + cdeMontantRe : BigDecimal </td></tr>
+	<tr><td align="left"> + cdeMontantCe : BigDecimal </td></tr>
+	<tr><td align="left"> + cdeMontantReport : BigDecimal </td></tr>
+	<tr><td align="left"> + cdeMontantAn : BigDecimal </td></tr>
+	<tr><td align="left"> + cdeMontantAn1 : BigDecimal </td></tr>
+	<tr><td align="left"> + cdeDelaiReste : String </td></tr>
+	<tr><td align="left"> + cdeCdpId : CptDepense </td></tr>
+	<tr><td align="left"> + cdeModId : BudMorasseDet </td></tr>
+	<tr><td align="left"> + cdeSmdId : BudSsMorasseDet </td></tr>
+	<tr><td align="left"> + cdeModActId : BudMorasseDet </td></tr>
+	<tr><td align="left"> + cdeSmdActId : BudSsMorasseDet </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepExtraDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepExtraDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdeCtdId : String </td></tr>
+	<tr><td align="left"> + cdeCdpId : String </td></tr>
+	<tr><td align="left"> + cdeModId : String </td></tr>
+	<tr><td align="left"> + cdeSmdId : String </td></tr>
+	<tr><td align="left"> + cdeModActId : String </td></tr>
+	<tr><td align="left"> + cdeSmdActId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepExtraDisp [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepExtraDisp </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cepStatus : String </td></tr>
+	<tr><td align="left"> + cepOrdonnateur : String </td></tr>
+	<tr><td align="left"> + cepTotalCreditVise : BigDecimal </td></tr>
+	<tr><td align="left"> + cepTotalCreditSoumis : BigDecimal </td></tr>
+	<tr><td align="left"> + cepTotalEngagVise : BigDecimal </td></tr>
+	<tr><td align="left"> + cepTotalEngagSoumis : BigDecimal </td></tr>
+	<tr><td align="left"> + cepDispEngagVise : BigDecimal </td></tr>
+	<tr><td align="left"> + cepDispEngagSoumis : BigDecimal </td></tr>
+	<tr><td align="left"> + cepTauxEngagVise : BigDecimal </td></tr>
+	<tr><td align="left"> + cepTauxEngagSoumis : BigDecimal </td></tr>
+	<tr><td align="left"> + cepTotalEmissionVise : BigDecimal </td></tr>
+	<tr><td align="left"> + cepTotalEmissionSoumis : BigDecimal </td></tr>
+	<tr><td align="left"> + cepTauxEmissionVise : BigDecimal </td></tr>
+	<tr><td align="left"> + cepTauxEmissionSoumis : BigDecimal </td></tr>
+	<tr><td align="left"> + cepCdpId : CptDepense </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepExtraDispDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepExtraDispDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cepCtdId : String </td></tr>
+	<tr><td align="left"> + cepCdpId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepExtraDispMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepExtraDispMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cepStatus : String </td></tr>
+	<tr><td align="left"> + cepTotalCreditVise : String </td></tr>
+	<tr><td align="left"> + cepTotalCreditSoumis : String </td></tr>
+	<tr><td align="left"> + cepTotalEngagVise : String </td></tr>
+	<tr><td align="left"> + cepTotalEngagSoumis : String </td></tr>
+	<tr><td align="left"> + cepDispEngagVise : String </td></tr>
+	<tr><td align="left"> + cepDispEngagSoumis : String </td></tr>
+	<tr><td align="left"> + cepTauxEngagVise : String </td></tr>
+	<tr><td align="left"> + cepTauxEngagSoumis : String </td></tr>
+	<tr><td align="left"> + cepTotalEmissionVise : String </td></tr>
+	<tr><td align="left"> + cepTotalEmissionSoumis : String </td></tr>
+	<tr><td align="left"> + cepTauxEmissionVise : String </td></tr>
+	<tr><td align="left"> + cepTauxEmissionSoumis : String </td></tr>
+	<tr><td align="left"> + cepCdpId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepExtraMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepExtraMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdeStatus : String </td></tr>
+	<tr><td align="left"> + cdeMontantCp : String </td></tr>
+	<tr><td align="left"> + cdeMontantRe : String </td></tr>
+	<tr><td align="left"> + cdeCdpId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ctdDate : String </td></tr>
+	<tr><td align="left"> + ctdCurStatus : String </td></tr>
+	<tr><td align="left"> + ctdCurStatusDate : String </td></tr>
+	<tr><td align="left"> + ctdCurDecision : String </td></tr>
+	<tr><td align="left"> + ctdCurDecisionDate : String </td></tr>
+	<tr><td align="left"> + ctdRem : String </td></tr>
+	<tr><td align="left"> + ctdType : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepState [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepState </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdsStatus : String </td></tr>
+	<tr><td align="left"> + cdsDate : Date </td></tr>
+	<tr><td align="left"> + cdsRem : String </td></tr>
+	<tr><td align="left"> + cdsCenId : CptEntity </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepStateDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepStateDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdsStatus : String </td></tr>
+	<tr><td align="left"> + cdsDate : String </td></tr>
+	<tr><td align="left"> + cdsRem : String </td></tr>
+	<tr><td align="left"> + min_cdsDate : String </td></tr>
+	<tr><td align="left"> + cdsCenId : String </td></tr>
+	<tr><td align="left"> + cdsCtdId : String </td></tr>
+	<tr><td align="left"> + page : Integer </td></tr>
+	<tr><td align="left"> + total : Integer </td></tr>
+	<tr><td align="left"> + itemsByPage : Integer </td></tr>
+	<tr><td align="left"> + orderByInfo : String[] </td></tr>
+	<tr><td align="left"> + orderByList : java.util.List<ma.brs.common.serviceapi.OrderByInfo> </td></tr>
+	<tr><td align="left"> + criteriaInfo : String[] </td></tr>
+	<tr><td align="left"> + criteriaList : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+	<tr><td align="left"> + criteriaListBG : java.util.List<ma.brs.common.serviceapi.CriteriaInfo> </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepStateMergeDTO [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC99">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;DataTransferObject&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepStateMergeDTO </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdsStatus : String </td></tr>
+	<tr><td align="left"> + cdsDate : String </td></tr>
+	<tr><td align="left"> + cdsRem : String </td></tr>
+	<tr><td align="left"> + cdsCenId : String </td></tr>
+	<tr><td align="left"> + cdsCtdId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+edge [arrowhead = "empty"]
+edge [arrowhead = "none"]
+
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n ctdCddId" taillabel="cddCtdId" labeldistance="2.0" labelangle="-30"]
+
+ClotTablDep -> ClotTablDepDecision
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n ctdCdeId" taillabel="cdeCtdId" labeldistance="2.0" labelangle="-30"]
+
+ClotTablDep -> ClotTablDepExtra
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n ctdCepId" taillabel="cepCtdId" labeldistance="2.0" labelangle="-30"]
+
+ClotTablDep -> ClotTablDepExtraDisp
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n ctdCdsId" taillabel="cdsCtdId" labeldistance="2.0" labelangle="-30"]
+
+ClotTablDep -> ClotTablDepState
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ClotTablDepService -> ClotTablDep
+ClotTablDepService -> ClotTablDepDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ClotTablDepExtraService -> ClotTablDepExtraDTO
+ClotTablDepExtraService -> ClotTablDepExtra
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ClotTablDepExtraDispService -> ClotTablDepExtraDispDTO
+ClotTablDepExtraDispService -> ClotTablDepExtraDisp
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ClotTablDepDecisionService -> ClotTablDepDecision
+ClotTablDepDecisionService -> ClotTablDepDecisionDTO
+edge [arrowtail="none" arrowhead = "open" headlabel = "" taillabel = "" style = "dashed"]
+ClotTablDepStateService -> ClotTablDepState
+ClotTablDepStateService -> ClotTablDepStateDTO
+}

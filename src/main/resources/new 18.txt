@@ -1,0 +1,1 @@
+rm -rf /root/server/apache-tomcat-8.5.16/webapps/sgbcdm-web/*

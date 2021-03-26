@@ -1,0 +1,31 @@
+
+import "classpath:/model-adm.btdesign"
+import "classpath:/model-log.btdesign"
+import "classpath:/model-comPar.btdesign"
+import "classpath:/model-par.btdesign"
+import "classpath:/model-bud.btdesign"
+import "classpath:/model-pla.btdesign"
+import "classpath:/model-mhai.btdesign"
+import "classpath:/model-ach.btdesign"
+import "classpath:/model-cpt.btdesign"
+import "classpath:/model-tec.btdesign"
+import "classpath:/model-clot.btdesign"
+
+Application Sgbcdm {
+	basePackage=ma.brs.sgbcdm
+
+	Module common {
+		basePackage=ma.brs.common DataTransferObject OrderByInfo {
+			String order;
+			org.sculptor.framework.domain.Property p;
+		}
+
+		DataTransferObject CriteriaInfo {
+			String operator;
+			org.sculptor.framework.domain.Property p;
+			Object value;
+		}
+	}
+
+
+}

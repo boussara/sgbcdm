@@ -1,0 +1,215 @@
+<tr>
+		<td>&nbsp;</td>
+		<td>NOT</td>
+		<td colspan="3">&nbsp; </td>
+	</tr>
+	<tr class="">
+			
+	<td>
+		Parc
+	</td>
+	<td>
+		<input type="checkbox" id="not_1_Fleet">
+	</td>
+	<td>
+		<span id="searchType_1_Fleet"><select class="form-control" id="srchOpt_1_Fleet" name="srchOpt_1_Fleet" size="1"><option value="Contient">Contient</option><option value="Starts with">Starts with</option><option value="Est égal à" selected="" data-default-option="true">Est égal à</option><option value="Empty">Empty</option></select></span>
+	</td>
+	<td>
+		<span id="edit1_Fleet_0" class="rnr-nowrap "><input id="value_Fleet_1_simpleSearchBox" type="text" value="" autocomplete="off" class="rnr-hiddenControlSubelem" style="width: 200px;"><select size="1" id="value_Fleet_1" name="value_Fleet_1" data-usesuggests="true" style="width: 207px"><option value="">Veuillez choisir</option><option value="Cargo Carriers">Cargo Carriers</option><option value="Porte-conteneurs">Porte-conteneurs</option><option value="Transporteurs de ciment">Transporteurs de ciment</option></select></span>&nbsp;
+	</td>
+	<td>
+		&nbsp;
+	</td>
+
+	</tr>
+	<tr class="">
+			
+	<td>
+		ID
+	</td>
+	<td>
+		<input type="checkbox" id="not_1_ID">
+	</td>
+	<td>
+		<span id="searchType_1_ID"><select class="form-control" id="srchOpt_1_ID" name="srchOpt_1_ID" size="1"><option value="Contient" selected="" data-default-option="true">Contient</option><option value="Est égal à">Est égal à</option><option value="Starts with">Starts with</option><option value="More than">More than</option><option value="Less than">Less than</option><option value="Between">Between</option><option value="Empty">Empty</option></select></span>
+	</td>
+	<td>
+		<span id="edit1_ID_0" class="rnr-nowrap "><input id="value_ID_1" style="width: 200px;" type="number" autocomplete="off" name="value_ID_1" value=""></span>&nbsp;
+	</td>
+	<td>
+		<span id="edit1_ID_1" class="rnr-nowrap " style="display: none;"><input id="value1_ID_1" style="width: 200px;" type="number" autocomplete="off" name="value1_ID_1" value=""></span>&nbsp;
+	</td>
+
+	</tr>
+	<tr class="">
+			
+	<td>
+		Type
+	</td>
+	<td>
+		<input type="checkbox" id="not_1_Type">
+	</td>
+	<td>
+		<span id="searchType_1_Type"><select class="form-control" id="srchOpt_1_Type" name="srchOpt_1_Type" size="1"><option value="Contient">Contient</option><option value="Starts with">Starts with</option><option value="Est égal à" selected="" data-default-option="true">Est égal à</option><option value="Empty">Empty</option></select></span>
+	</td>
+	<td>
+		<span id="edit1_Type_0" class="rnr-nowrap "><input id="value_Type_1_simpleSearchBox" type="text" value="" autocomplete="off" class="rnr-hiddenControlSubelem" style="width: 200px;"><select size="1" id="value_Type_1" name="value_Type_1" data-usesuggests="true" style="width: 207px"><option value="">Veuillez choisir</option><option value="Camion">Camion</option><option value="Machine">Machine</option><option value="Remorque">Remorque</option><option value="Wagon-citerne">Wagon-citerne</option></select></span>&nbsp;
+	</td>
+	<td>
+		&nbsp;
+	</td>
+
+	</tr>
+	<tr class="">
+			
+	<td>
+		Date d'achat
+	</td>
+	<td>
+		<input type="checkbox" id="not_1_RegDate">
+	</td>
+	<td>
+		<span id="searchType_1_RegDate"><select class="form-control" id="srchOpt_1_RegDate" name="srchOpt_1_RegDate" size="1"><option value="Est égal à">Est égal à</option><option value="More than">More than</option><option value="Less than">Less than</option><option value="Between">Between</option><option value="Empty">Empty</option></select></span>
+	</td>
+	<td>
+		<span id="edit1_RegDate_0" class="rnr-nowrap "><input id="type_RegDate_1" type="hidden" name="type_RegDate_1" value="date2"><input id="value_RegDate_1" style="width: 200px;" class="hasDatepicker" type="Text" name="value_RegDate_1" value=""><input id="tsvalue_RegDate_1" type="Hidden" name="tsvalue_RegDate_1" value="0-0-0"></span>&nbsp;
+	</td>
+	<td>
+		<span id="edit1_RegDate_1" class="rnr-nowrap " style="display: none;"><input id="type1_RegDate_1" type="hidden" name="type1_RegDate_1" value="date2"><input id="value1_RegDate_1" style="width: 200px;" class="hasDatepicker" type="Text" name="value1_RegDate_1" value=""><input id="tsvalue1_RegDate_1" type="Hidden" name="tsvalue1_RegDate_1" value="0-0-0"></span>&nbsp;
+	</td>
+
+	</tr>
+	<tr class="">
+			
+	<td>
+		Matricule
+	</td>
+	<td>
+		<input type="checkbox" id="not_1_RegNo">
+	</td>
+	<td>
+		<span id="searchType_1_RegNo"><select class="form-control" id="srchOpt_1_RegNo" name="srchOpt_1_RegNo" size="1"><option value="Contient" selected="" data-default-option="true">Contient</option><option value="Est égal à">Est égal à</option><option value="Starts with">Starts with</option><option value="More than">More than</option><option value="Less than">Less than</option><option value="Between">Between</option><option value="Empty">Empty</option></select></span>
+	</td>
+	<td>
+		<span id="edit1_RegNo_0" class="rnr-nowrap "><input id="value_RegNo_1" style="width: 200px;" type="text" autocomplete="off" name="value_RegNo_1" maxlength="50" value=""></span>&nbsp;
+	</td>
+	<td>
+		<span id="edit1_RegNo_1" class="rnr-nowrap " style="display: none;"><input id="value1_RegNo_1" style="width: 200px;" type="text" autocomplete="off" name="value1_RegNo_1" maxlength="50" value=""></span>&nbsp;
+	</td>
+
+	</tr>
+	<tr class="">
+			
+	<td>
+		Marque
+	</td>
+	<td>
+		<input type="checkbox" id="not_1_Make">
+	</td>
+	<td>
+		<span id="searchType_1_Make"><select class="form-control" id="srchOpt_1_Make" name="srchOpt_1_Make" size="1"><option value="Contient" selected="" data-default-option="true">Contient</option><option value="Est égal à">Est égal à</option><option value="Starts with">Starts with</option><option value="More than">More than</option><option value="Less than">Less than</option><option value="Between">Between</option><option value="Empty">Empty</option></select></span>
+	</td>
+	<td>
+		<span id="edit1_Make_0" class="rnr-nowrap "><input id="value_Make_1" style="width: 200px;" type="text" autocomplete="off" name="value_Make_1" maxlength="50" value=""></span>&nbsp;
+	</td>
+	<td>
+		<span id="edit1_Make_1" class="rnr-nowrap " style="display: none;"><input id="value1_Make_1" style="width: 200px;" type="text" autocomplete="off" name="value1_Make_1" maxlength="50" value=""></span>&nbsp;
+	</td>
+
+	</tr>
+	<tr class="">
+			
+	<td>
+		Modèle
+	</td>
+	<td>
+		<input type="checkbox" id="not_1_Model">
+	</td>
+	<td>
+		<span id="searchType_1_Model"><select class="form-control" id="srchOpt_1_Model" name="srchOpt_1_Model" size="1"><option value="Contient" selected="" data-default-option="true">Contient</option><option value="Est égal à">Est égal à</option><option value="Starts with">Starts with</option><option value="More than">More than</option><option value="Less than">Less than</option><option value="Between">Between</option><option value="Empty">Empty</option></select></span>
+	</td>
+	<td>
+		<span id="edit1_Model_0" class="rnr-nowrap "><input id="value_Model_1" style="width: 200px;" type="text" autocomplete="off" name="value_Model_1" maxlength="50" value=""></span>&nbsp;
+	</td>
+	<td>
+		<span id="edit1_Model_1" class="rnr-nowrap " style="display: none;"><input id="value1_Model_1" style="width: 200px;" type="text" autocomplete="off" name="value1_Model_1" maxlength="50" value=""></span>&nbsp;
+	</td>
+
+	</tr>
+	<tr class="">
+			
+	<td>
+		CoÛt
+	</td>
+	<td>
+		<input type="checkbox" id="not_1_Cost">
+	</td>
+	<td>
+		<span id="searchType_1_Cost"><select class="form-control" id="srchOpt_1_Cost" name="srchOpt_1_Cost" size="1"><option value="Contient" selected="" data-default-option="true">Contient</option><option value="Est égal à">Est égal à</option><option value="Starts with">Starts with</option><option value="More than">More than</option><option value="Less than">Less than</option><option value="Between">Between</option><option value="Empty">Empty</option></select></span>
+	</td>
+	<td>
+		<span id="edit1_Cost_0" class="rnr-nowrap "><input id="value_Cost_1" style="width: 200px;" type="text" autocomplete="off" name="value_Cost_1" maxlength="50" value=""></span>&nbsp;
+	</td>
+	<td>
+		<span id="edit1_Cost_1" class="rnr-nowrap " style="display: none;"><input id="value1_Cost_1" style="width: 200px;" type="text" autocomplete="off" name="value1_Cost_1" maxlength="50" value=""></span>&nbsp;
+	</td>
+
+	</tr>
+	<tr class="">
+			
+	<td>
+		Chauffeur
+	</td>
+	<td>
+		<input type="checkbox" id="not_1_DriverAsigned">
+	</td>
+	<td>
+		<span id="searchType_1_DriverAsigned"><select class="form-control" id="srchOpt_1_DriverAsigned" name="srchOpt_1_DriverAsigned" size="1"><option value="Contient" selected="" data-default-option="true">Contient</option><option value="Est égal à">Est égal à</option><option value="Starts with">Starts with</option><option value="More than">More than</option><option value="Less than">Less than</option><option value="Between">Between</option><option value="Empty">Empty</option></select></span>
+	</td>
+	<td>
+		<span id="edit1_DriverAsigned_0" class="rnr-nowrap "><input id="value_DriverAsigned_1" style="width: 200px;" type="text" autocomplete="off" name="value_DriverAsigned_1" maxlength="50" value=""></span>&nbsp;
+	</td>
+	<td>
+		<span id="edit1_DriverAsigned_1" class="rnr-nowrap " style="display: none;"><input id="value1_DriverAsigned_1" style="width: 200px;" type="text" autocomplete="off" name="value1_DriverAsigned_1" maxlength="50" value=""></span>&nbsp;
+	</td>
+
+	</tr>
+	<tr class="">
+			
+	<td>
+		Renouvellement
+	</td>
+	<td>
+		<input type="checkbox" id="not_1_InsuranceDue">
+	</td>
+	<td>
+		<span id="searchType_1_InsuranceDue"><select class="form-control" id="srchOpt_1_InsuranceDue" name="srchOpt_1_InsuranceDue" size="1"><option value="Contient" selected="" data-default-option="true">Contient</option><option value="Est égal à">Est égal à</option><option value="Starts with">Starts with</option><option value="More than">More than</option><option value="Less than">Less than</option><option value="Between">Between</option><option value="Empty">Empty</option></select></span>
+	</td>
+	<td>
+		<span id="edit1_InsuranceDue_0" class="rnr-nowrap "><input id="value_InsuranceDue_1" style="width: 200px;" type="text" autocomplete="off" name="value_InsuranceDue_1" maxlength="50" value=""></span>&nbsp;
+	</td>
+	<td>
+		<span id="edit1_InsuranceDue_1" class="rnr-nowrap " style="display: none;"><input id="value1_InsuranceDue_1" style="width: 200px;" type="text" autocomplete="off" name="value1_InsuranceDue_1" maxlength="50" value=""></span>&nbsp;
+	</td>
+
+	</tr>
+	<tr class="">
+			
+	<td>
+		Dernier kilométrage
+	</td>
+	<td>
+		<input type="checkbox" id="not_1_Last_Mileage">
+	</td>
+	<td>
+		<span id="searchType_1_Last_Mileage"><select class="form-control" id="srchOpt_1_Last_Mileage" name="srchOpt_1_Last_Mileage" size="1"><option value="Contient" selected="" data-default-option="true">Contient</option><option value="Est égal à">Est égal à</option><option value="Starts with">Starts with</option><option value="More than">More than</option><option value="Less than">Less than</option><option value="Between">Between</option><option value="Empty">Empty</option></select></span>
+	</td>
+	<td>
+		<span id="edit1_Last_Mileage_0" class="rnr-nowrap "><input id="value_Last_Mileage_1" style="width: 200px;" type="text" autocomplete="off" name="value_Last_Mileage_1" value=""></span>&nbsp;
+	</td>
+	<td>
+		<span id="edit1_Last_Mileage_1" class="rnr-nowrap " style="display: none;"><input id="value1_Last_Mileage_1" style="width: 200px;" type="text" autocomplete="off" name="value1_Last_Mileage_1" value=""></span>&nbsp;
+	</td>
+
+	</tr>
+

@@ -1,0 +1,2 @@
+delete from mon_ne_subdevice;
+delete from mon_ne_device where nde_ne_id=234050;

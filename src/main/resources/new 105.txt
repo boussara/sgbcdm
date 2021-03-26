@@ -1,0 +1,53 @@
+select cpg_id from pla_credit_prg where cpg_pex_id=21;
+
+delete from pla_credit_prj_reg where crp_cpg_id in (select cpg_id from pla_credit_prg where cpg_pex_id=21);
+delete from pla_credit_op where cop_crp_id in (select crp_id from pla_credit_prj_reg where crp_cpg_id in (select cpg_id from pla_credit_prg where cpg_pex_id=21));
+
+delete from pla_credit_prs where cpr_cop_id in (select cop_id from pla_credit_op where cop_crp_id in (select crp_id from pla_credit_prj_reg where crp_cpg_id in (select cpg_id from pla_credit_prg where cpg_pex_id=21)));
+
+delete from pla_cpr_has_pex where chp_cpr_id in (select cpr_id from pla_credit_prs where cpr_cop_id in (select cop_id from pla_credit_op where cop_crp_id in (select crp_id from pla_credit_prj_reg where crp_cpg_id in (select cpg_id from pla_credit_prg where cpg_pex_id=21))));
+
+delete from bud_mpr_has_chp where mhc_chp_id in (select chp_id from pla_cpr_has_pex where chp_cpr_id in (select cpr_id from pla_credit_prs where cpr_cop_id in (select cop_id from pla_credit_op where cop_crp_id in (select crp_id from pla_credit_prj_reg where crp_cpg_id in (select cpg_id from pla_credit_prg where cpg_pex_id=21)))));
+
+delete from bud_morasse_pres where mpr_cpr_id in (select cpr_id from pla_credit_prs where cpr_cop_id in (select cop_id from pla_credit_op where cop_crp_id in (select crp_id from pla_credit_prj_reg where crp_cpg_id in (select cpg_id from pla_credit_prg where cpg_pex_id=21))));
+
+delete from bud_morasse_op where mop_cop_id in (select cop_id from pla_credit_op where cop_crp_id in (select crp_id from pla_credit_prj_reg where crp_cpg_id in (select cpg_id from pla_credit_prg where cpg_pex_id=21)));
+
+
+
+
+
+delete from bud_morasse_op;
+delete from bud_dem_modif;
+delete from pla_credit_op;
+delete from pla_credit_op_demande;
+delete from pla_dem_cop_decision;
+delete from pla_dem_cop_state;
+delete from pla_cop_has_mos;
+delete from pla_credit_prs;
+delete from pla_cpr_has_pex;
+delete from bud_mpr_has_chp;
+delete from bud_dmp_has_chp;
+delete from bud_dmm_has_chp;
+delete from bud_morasse_pres;
+delete from bud_dem_modif_mpres;
+delete from bud_dem_mvt_mpres;
+delete from ach_achat;
+delete from ach_achat_decision ;
+delete from ach_achat_state;
+delete from ach_achat_lot;
+delete from ach_achat_exel;
+delete from ach_soumission;
+delete from cpt_depense;
+delete from cpt_ordre_service;
+delete from cpt_dep_decision;
+delete from cpt_dep_state;
+delete from tec_pv;
+delete from tec_etape;
+delete from tec_attachement;
+delete from tec_decision;
+delete from tec_state;
+delete from tec_penalite_retard;
+delete from tec_nantissement;
+delete from tec_retenue_garantie;
+delete from tec_retenue_garantie_part;

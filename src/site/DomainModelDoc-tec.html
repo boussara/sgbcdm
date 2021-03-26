@@ -1,0 +1,10264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style type="text/css" media="screen,print">   
+		@import url("DomainModelDoc.css");
+		</style> 
+<title>Summary Documentation of tec module(Sgbcdm)</title> 
+</head>
+<body>
+<div id="wrap">
+		<a name="module_tec"></a>
+<h1>Summary Documentation of tec module <a href="DomainModelDoc.html">(Sgbcdm)</a></h1>
+
+
+<p></p>
+<div id="menu">
+		<ul>
+			<li><a href="DomainModelDoc-tec.html#CalculRevision">CalculRevision</a></li>
+			<li><a href="DomainModelDoc-tec.html#CalculRevisionDTO">CalculRevisionDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#CalculRevisionMergeDTO">CalculRevisionMergeDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#CalculRevisionService">CalculRevisionService</a></li>
+			<li><a href="DomainModelDoc-tec.html#Nantissement">Nantissement</a></li>
+			<li><a href="DomainModelDoc-tec.html#NantissementDTO">NantissementDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#NantissementMergeDTO">NantissementMergeDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#NantissementService">NantissementService</a></li>
+			<li><a href="DomainModelDoc-tec.html#PenaliteRetard">PenaliteRetard</a></li>
+			<li><a href="DomainModelDoc-tec.html#PenaliteRetardDTO">PenaliteRetardDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#PenaliteRetardMergeDTO">PenaliteRetardMergeDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#PenaliteRetardService">PenaliteRetardService</a></li>
+			<li><a href="DomainModelDoc-tec.html#RetenueGarantie">RetenueGarantie</a></li>
+			<li><a href="DomainModelDoc-tec.html#RetenueGarantieDTO">RetenueGarantieDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#RetenueGarantieMergeDTO">RetenueGarantieMergeDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#RetenueGarantiePart">RetenueGarantiePart</a></li>
+			<li><a href="DomainModelDoc-tec.html#RetenueGarantiePartDTO">RetenueGarantiePartDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#RetenueGarantiePartMergeDTO">RetenueGarantiePartMergeDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#RetenueGarantiePartService">RetenueGarantiePartService</a></li>
+			<li><a href="DomainModelDoc-tec.html#RetenueGarantieService">RetenueGarantieService</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecAttachementDTO">TecAttachementDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecAttachementMergeDTO">TecAttachementMergeDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecAttachementService">TecAttachementService</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecCatIndex">TecCatIndex</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecCatIndexDTO">TecCatIndexDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecCatIndexMergeDTO">TecCatIndexMergeDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecCatIndexService">TecCatIndexService</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecDecision">TecDecision</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecDecisionDTO">TecDecisionDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecDecisionMergeDTO">TecDecisionMergeDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecDecisionService">TecDecisionService</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecDpDecision">TecDpDecision</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecDpDecisionDTO">TecDpDecisionDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecDpDecisionMergeDTO">TecDpDecisionMergeDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecDpDecisionService">TecDpDecisionService</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecDpState">TecDpState</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecDpStateDTO">TecDpStateDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecDpStateMergeDTO">TecDpStateMergeDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecDpStateService">TecDpStateService</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecEtape">TecEtape</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecEtapeDTO">TecEtapeDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecEtapeMergeDTO">TecEtapeMergeDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecEtapeService">TecEtapeService</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecIndex">TecIndex</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecIndexDTO">TecIndexDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecIndexMergeDTO">TecIndexMergeDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecIndexService">TecIndexService</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecPv">TecPv</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecPvDTO">TecPvDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecPvMergeDTO">TecPvMergeDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecPvService">TecPvService</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecPvType">TecPvType</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecPvTypeDTO">TecPvTypeDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecPvTypeMergeDTO">TecPvTypeMergeDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecPvTypeService">TecPvTypeService</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecState">TecState</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecStateDTO">TecStateDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecStateMergeDTO">TecStateMergeDTO</a></li>
+			<li><a href="DomainModelDoc-tec.html#TecStateService">TecStateService</a></li>
+		</ul>
+</div>
+<div id="module_graph">
+    <hr/>
+    <p><b>All in tec</b></p>
+	<a href="umlgraph-tec.dot.png">
+	<img src="umlgraph-tec.dot.png" />
+	</a>
+	<hr/>
+	<p><b>Persistent Domain in tec</b></p>
+	<a href="umlgraph-tec-entity.dot.png">
+	<img src="umlgraph-tec-entity.dot.png" />
+	</a>
+</div>
+
+<div id="services">
+<hr/>
+<a name="CalculRevisionService"></a>
+<h3>CalculRevisionService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#CalculRevision">CalculRevision</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-tec.html#CalculRevision">CalculRevision</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#CalculRevision">CalculRevision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#CalculRevision">CalculRevision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#CalculRevision">CalculRevision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTcrCdpId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#CalculRevision">CalculRevision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#CalculRevision">CalculRevision</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#CalculRevision">CalculRevision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#CalculRevisionDTO">CalculRevisionDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#CalculRevision">CalculRevision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="NantissementService"></a>
+<h3>NantissementService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#Nantissement">Nantissement</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-tec.html#Nantissement">Nantissement</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#Nantissement">Nantissement</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#Nantissement">Nantissement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#Nantissement">Nantissement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTnaAttId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#Nantissement">Nantissement</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTnaCdpId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#Nantissement">Nantissement</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTnaDate</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ tnaDate</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#Nantissement">Nantissement</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTnaName</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tnaName</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#Nantissement">Nantissement</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTnaNum</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tnaNum</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#Nantissement">Nantissement</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTnaPvFile</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tnaRep</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#Nantissement">Nantissement</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#Nantissement">Nantissement</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#Nantissement">Nantissement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#NantissementDTO">NantissementDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#Nantissement">Nantissement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="PenaliteRetardService"></a>
+<h3>PenaliteRetardService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#PenaliteRetard">PenaliteRetard</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-tec.html#PenaliteRetard">PenaliteRetard</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#PenaliteRetard">PenaliteRetard</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#PenaliteRetard">PenaliteRetard</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#PenaliteRetard">PenaliteRetard</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTprAttId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#PenaliteRetard">PenaliteRetard</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTprCdpId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#PenaliteRetard">PenaliteRetard</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTprDateComm</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ tprDateComm</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#PenaliteRetard">PenaliteRetard</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTprName</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tprName</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#PenaliteRetard">PenaliteRetard</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTprNum</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tprNum</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#PenaliteRetard">PenaliteRetard</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#PenaliteRetard">PenaliteRetard</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#PenaliteRetard">PenaliteRetard</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#PenaliteRetardDTO">PenaliteRetardDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#PenaliteRetard">PenaliteRetard</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="RetenueGarantiePartService"></a>
+<h3>RetenueGarantiePartService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#RetenueGarantiePart">RetenueGarantiePart</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-tec.html#RetenueGarantiePart">RetenueGarantiePart</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#RetenueGarantiePart">RetenueGarantiePart</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#RetenueGarantiePart">RetenueGarantiePart</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#RetenueGarantiePart">RetenueGarantiePart</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#RetenueGarantiePart">RetenueGarantiePart</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#RetenueGarantiePart">RetenueGarantiePart</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#RetenueGarantiePartDTO">RetenueGarantiePartDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#RetenueGarantiePart">RetenueGarantiePart</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="RetenueGarantieService"></a>
+<h3>RetenueGarantieService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#RetenueGarantie">RetenueGarantie</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-tec.html#RetenueGarantie">RetenueGarantie</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#RetenueGarantie">RetenueGarantie</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#RetenueGarantie">RetenueGarantie</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#RetenueGarantie">RetenueGarantie</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTrgCdpId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#RetenueGarantie">RetenueGarantie</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTrgDate</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ trgDate</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#RetenueGarantie">RetenueGarantie</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTrgName</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ trgName</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#RetenueGarantie">RetenueGarantie</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTrgNum</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ trgNum</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#RetenueGarantie">RetenueGarantie</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findBytrgAttId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#RetenueGarantie">RetenueGarantie</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#RetenueGarantie">RetenueGarantie</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#RetenueGarantie">RetenueGarantie</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#RetenueGarantieDTO">RetenueGarantieDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#RetenueGarantie">RetenueGarantie</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="TecAttachementService"></a>
+<h3>TecAttachementService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>filterAttachAr</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecAttachementDTO">TecAttachementDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterAttachBen</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecAttachementDTO">TecAttachementDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterAttachCI</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecAttachementDTO">TecAttachementDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterAttachCer</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecAttachementDTO">TecAttachementDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterAttachPD</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecAttachementDTO">TecAttachementDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterAttachPDCER</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecAttachementDTO">TecAttachementDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterAttachPDSB</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecAttachementDTO">TecAttachementDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterAttachPDSGM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecAttachementDTO">TecAttachementDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterAttachPDTM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecAttachementDTO">TecAttachementDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterAttachSB</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecAttachementDTO">TecAttachementDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterAttachSGM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecAttachementDTO">TecAttachementDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>filterAttachTM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecAttachementDTO">TecAttachementDTO</a>
+ aua</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTatCdpId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTatName</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tatName</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTatNum</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tatNum</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>getAllAttachAr</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllAttachBen</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllAttachCI</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllAttachCer</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllAttachPD</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllAttachPDCER</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllAttachPDSB</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllAttachPDSGM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllAttachPDTM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllAttachSB</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllAttachSGM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>getAllAttachTM</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecAttachementDTO">TecAttachementDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="TecCatIndexService"></a>
+<h3>TecCatIndexService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecCatIndex">TecCatIndex</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-tec.html#TecCatIndex">TecCatIndex</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecCatIndex">TecCatIndex</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecCatIndex">TecCatIndex</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecCatIndex">TecCatIndex</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTciCode</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tciCode</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecCatIndex">TecCatIndex</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTciName</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tciName</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecCatIndex">TecCatIndex</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecCatIndex">TecCatIndex</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecCatIndex">TecCatIndex</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecCatIndexDTO">TecCatIndexDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecCatIndex">TecCatIndex</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="TecDecisionService"></a>
+<h3>TecDecisionService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecDecision">TecDecision</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-tec.html#TecDecision">TecDecision</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecDecision">TecDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecDecision">TecDecision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecDecision">TecDecision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTedCdpId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecDecision">TecDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTedCenId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecDecision">TecDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTedDate</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ tedDate</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecDecision">TecDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTedRem</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tedRem</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecDecision">TecDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTedStatus</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tedStatus</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecDecision">TecDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecDecision">TecDecision</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecDecision">TecDecision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecDecisionDTO">TecDecisionDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecDecision">TecDecision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="TecDpDecisionService"></a>
+<h3>TecDpDecisionService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecDpDecision">TecDpDecision</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-tec.html#TecDpDecision">TecDpDecision</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecDpDecision">TecDpDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecDpDecision">TecDpDecision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecDpDecision">TecDpDecision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTedCdpId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecDpDecision">TecDpDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTedCenId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecDpDecision">TecDpDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTedDate</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ tedDate</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecDpDecision">TecDpDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTedRem</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tedRem</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecDpDecision">TecDpDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTedStatus</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tedStatus</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecDpDecision">TecDpDecision</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecDpDecision">TecDpDecision</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecDpDecision">TecDpDecision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecDpDecisionDTO">TecDpDecisionDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecDpDecision">TecDpDecision</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="TecDpStateService"></a>
+<h3>TecDpStateService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecDpState">TecDpState</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-tec.html#TecDpState">TecDpState</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecDpState">TecDpState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecDpState">TecDpState</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecDpState">TecDpState</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTesCdpId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecDpState">TecDpState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTesCenId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecDpState">TecDpState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTesDate</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ tesDate</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecDpState">TecDpState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTesRem</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tesRem</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecDpState">TecDpState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTesStatus</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tesStatus</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecDpState">TecDpState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecDpState">TecDpState</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecDpState">TecDpState</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecDpStateDTO">TecDpStateDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecDpState">TecDpState</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="TecEtapeService"></a>
+<h3>TecEtapeService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecEtape">TecEtape</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-tec.html#TecEtape">TecEtape</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecEtape">TecEtape</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecEtape">TecEtape</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecEtape">TecEtape</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTetAvancement</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ tetAvancement</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecEtape">TecEtape</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTetDelait</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tetDelait</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecEtape">TecEtape</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTetNom</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tetNom</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecEtape">TecEtape</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecEtape">TecEtape</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecEtape">TecEtape</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecEtapeDTO">TecEtapeDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecEtape">TecEtape</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="TecIndexService"></a>
+<h3>TecIndexService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecIndex">TecIndex</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-tec.html#TecIndex">TecIndex</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecIndex">TecIndex</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecIndex">TecIndex</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByDateCat</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tinMois</li>
+<li>String
+ tinAnnee</li>
+<li><a href="DomainModelDoc-tec.html#TecCatIndex">TecCatIndex</a>
+ tinTciId</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecIndex">TecIndex</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecIndex">TecIndex</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTinAnnee</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tinAnnee</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecIndex">TecIndex</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTinMois</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tinMois</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecIndex">TecIndex</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTinTciId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecIndex">TecIndex</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTinValDef</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ tinValDef</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecIndex">TecIndex</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTinValPro</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tinValPro</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecIndex">TecIndex</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecIndex">TecIndex</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecIndex">TecIndex</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecIndexDTO">TecIndexDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecIndex">TecIndex</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="TecPvService"></a>
+<h3>TecPvService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecPv">TecPv</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-tec.html#TecPv">TecPv</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecPv">TecPv</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecPv">TecPv</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecPv">TecPv</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTpvCdpId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecPv">TecPv</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTpvDate</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ tpvDate</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecPv">TecPv</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTpvName</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tpvName</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecPv">TecPv</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTpvNum</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tpvNum</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecPv">TecPv</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTpvPvFile</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tpvPvFile</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecPv">TecPv</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTpvTptId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecPv">TecPv</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecPv">TecPv</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecPv">TecPv</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecPvDTO">TecPvDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecPv">TecPv</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="TecPvTypeService"></a>
+<h3>TecPvTypeService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecPvType">TecPvType</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-tec.html#TecPvType">TecPvType</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecPvType">TecPvType</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecPvType">TecPvType</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecPvType">TecPvType</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTptCode</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tptCode</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecPvType">TecPvType</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTptName</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tptName</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecPvType">TecPvType</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecPvType">TecPvType</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecPvType">TecPvType</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecPvTypeDTO">TecPvTypeDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecPvType">TecPvType</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+<a name="TecStateService"></a>
+<h3>TecStateService</h3>
+<p></p>
+<div id="operation">
+<b>clear</b>
+<p></p>
+</div>
+<div id="operation">
+<b>delete</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecState">TecState</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>detach</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li><a href="DomainModelDoc-tec.html#TecState">TecState</a>
+ entity</li>
+</ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecState">TecState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findAll</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>PagingParameter
+ pagingParameter</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecState">TecState</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findById</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+<li>String
+ AssoToFetch</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecState">TecState</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTesCdpId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecState">TecState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTesCenId</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Long
+ id</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecState">TecState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTesDate</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>Date
+ tesDate</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecState">TecState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTesRem</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tesRem</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecState">TecState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>findByTesStatus</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li>String
+ tesStatus</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li>List&lt;<a href="DomainModelDoc-tec.html#TecState">TecState</a>&gt;
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>flush</b>
+<p></p>
+</div>
+<div id="operation">
+<b>save</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecState">TecState</a>
+ entity</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecState">TecState</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>search</b>
+<p></p>
+<div id="operation_parameters">
+<p>Parameters:</p>
+<ul>
+<li>org.sculptor.framework.context.ServiceContext
+ ctx</li>
+<li><a href="DomainModelDoc-tec.html#TecStateDTO">TecStateDTO</a>
+ aua</li>
+</ul>
+</div>
+<div id="operation_returns">
+<p>Returns:</p>
+<ul><li><a href="DomainModelDoc-tec.html#TecState">TecState</a>
+ </li></ul>
+</div>
+</div>
+<div id="operation">
+<b>truncate</b>
+<p></p>
+</div>
+<hr/>
+</div>
+<div id="consumers">
+</div>
+<div id="domainObjects">
+<a name="CalculRevision"></a>
+<h3>CalculRevision</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tcrAttId</td>
+	<td><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrBatCinq</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrBatCof</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrBatDeux</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrBatQuatre</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrBatSix</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrBatTrois</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrBatUn</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrCdpId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrCoeficient</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrCofRev</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrMonArevi</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrMonRev</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrMonTra</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrNbrJour</td>
+	<td>String</td>
+	<td>12</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrPeriode</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrTotal</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="CalculRevisionDTO"></a>
+<h3>CalculRevisionDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrAttId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrAttId1</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrCdpId1</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="CalculRevisionMergeDTO"></a>
+<h3>CalculRevisionMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tcrAttId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrBatCinq</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrBatCof</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrBatDeux</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrBatQuatre</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrBatSix</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrBatTrois</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrBatUn</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrCoeficient</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrCofRev</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrMonArevi</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrMonRev</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrMonTra</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrNbrJour</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrPeriode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tcrTotal</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="Nantissement"></a>
+<h3>Nantissement</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tnaAttId</td>
+	<td><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tnaCdpId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tnaDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tnaName</td>
+	<td>String</td>
+	<td>128</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tnaNum</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tnaRep</td>
+	<td>String</td>
+	<td>264</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="NantissementDTO"></a>
+<h3>NantissementDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_tnaDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tnaAttId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tnaAttId1</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tnaCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tnaCdpId1</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tnaDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tnaName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tnaNum</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tnaRep</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="NantissementMergeDTO"></a>
+<h3>NantissementMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tnaAttId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tnaCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tnaDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tnaName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tnaNum</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tnaRep</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="PenaliteRetard"></a>
+<h3>PenaliteRetard</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tprAttId</td>
+	<td><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprCdpId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprDateAchev</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprDateComm</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprDateSerFait</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprDelaiExe</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprMonIniMar</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprMonJourPen</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprMonOrdRecett</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprMonPlafPen</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprMonTotPen</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprName</td>
+	<td>String</td>
+	<td>128</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprNbrJourRetard</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprNum</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="PenaliteRetardDTO"></a>
+<h3>PenaliteRetardDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_tprDateAchev</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_tprDateComm</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_tprDateSerFait</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprAttId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprAttId1</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprCdpId1</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprDateAchev</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprDateComm</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprDateSerFait</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprDepNum</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprDepNumGid</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprNum</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="PenaliteRetardMergeDTO"></a>
+<h3>PenaliteRetardMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tprAttId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprDateAchev</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprDateComm</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprDateSerFait</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprDelaiExe</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprMonIniMar</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprMonJourPen</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprMonOrdRecett</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprMonPlafPen</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprMonTotPen</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprNbrJourRetard</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tprNum</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="RetenueGarantie"></a>
+<h3>RetenueGarantie</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>trgAttId</td>
+	<td><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>trgCdpId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>trgDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>trgName</td>
+	<td>String</td>
+	<td>128</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>trgNum</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>trgRgpId</td>
+	<td>List&lt;<a href="DomainModelDoc-tec.html#RetenueGarantiePart">RetenueGarantiePart</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="RetenueGarantieDTO"></a>
+<h3>RetenueGarantieDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_trgDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>trgAttId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>trgAttId1</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>trgCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>trgCdpId1</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>trgDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>trgName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>trgNum</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="RetenueGarantieMergeDTO"></a>
+<h3>RetenueGarantieMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>trgAttId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>trgCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>trgDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>trgName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>trgNum</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>trgRgpId</td>
+	<td>String []</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="RetenueGarantiePart"></a>
+<h3>RetenueGarantiePart</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>rgpBank</td>
+	<td>String</td>
+	<td>65</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>rgpDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>rgpMontant</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>rgpName</td>
+	<td>String</td>
+	<td>128</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>rgpNum</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>rgpTrgId</td>
+	<td><a href="DomainModelDoc-tec.html#RetenueGarantie">RetenueGarantie</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="RetenueGarantiePartDTO"></a>
+<h3>RetenueGarantiePartDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_rgpDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_rgpMontant</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>rgpBank</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>rgpDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>rgpMontant</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>rgpName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>rgpNum</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>rgpTrgId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="RetenueGarantiePartMergeDTO"></a>
+<h3>RetenueGarantiePartMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>rgpBank</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>rgpDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>rgpMontant</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>rgpName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>rgpNum</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecAttachement"></a>
+<h3>TecAttachement</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>idAttTcrId</td>
+	<td>List&lt;<a href="DomainModelDoc-tec.html#CalculRevision">CalculRevision</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>idCdpDpdId</td>
+	<td>List&lt;<a href="DomainModelDoc-tec.html#TecDpDecision">TecDpDecision</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>idCdpDpsId</td>
+	<td>List&lt;<a href="DomainModelDoc-tec.html#TecDpState">TecDpState</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>idCdpTedId</td>
+	<td>List&lt;<a href="DomainModelDoc-tec.html#TecDecision">TecDecision</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>idCdpTesId</td>
+	<td>List&lt;<a href="DomainModelDoc-tec.html#TecState">TecState</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tatApprov</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatArchAvan</td>
+	<td>String</td>
+	<td>15</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatArchDecoTraite</td>
+	<td>String</td>
+	<td>200</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatAttPro</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatAvancement</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatCatId</td>
+	<td><a href="DomainModelDoc-tec.html#TecCatIndex">TecCatIndex</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatCdpId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatCurDecision</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatCurStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatCurStatusDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatCurTenId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateConFai</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateConFre</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateDep</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateDpNr</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateOrdArr</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateOrdCom</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateOrdRep</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateRea</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateRep</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateSer</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateSoum</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateVisa</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDelaiExe</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDelaiUnit</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDepExe</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDpCurDecision</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDpCurStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDpCurStatusDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDpCurTenId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDpStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatGarantie</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatGarantieEsp</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatIdAtt</td>
+	<td>String</td>
+	<td>24</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatMonAco</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatMonDecoTravaux</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatMonDepTravaux</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatMonPen</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatMonRev</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatMonTnt</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatMonTrt</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatMonTrtTtc</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatMotRej</td>
+	<td>String</td>
+	<td>128</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatName</td>
+	<td>String</td>
+	<td>128</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatNature</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatNum</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatNumVisa</td>
+	<td>String</td>
+	<td>45</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatObj</td>
+	<td>String</td>
+	<td>400</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatRef</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatResPay</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatRevPri</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatTauAva</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatTotaux</td>
+	<td>BigDecimal</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatTypeDecompte</td>
+	<td>String</td>
+	<td>2</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatUrl</td>
+	<td>String</td>
+	<td>128</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecAttachementDTO"></a>
+<h3>TecAttachementDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatCatId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatCdpId1</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatCurStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatCurTenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDepNum</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDepNumGid</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDpCurTenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatNature</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatNum</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatObj</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatRef</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatTypeDecompte</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecAttachementMergeDTO"></a>
+<h3>TecAttachementMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tatApprov</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatArchAvan</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatArchDecoTraite</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatAttPro</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatAvancement</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatCatId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatCurDecision</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatCurStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatCurStatusDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatCurTenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateConFai</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateConFre</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateDep</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateDpNr</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateOrdArr</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateOrdCom</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateOrdRep</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateRea</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateRep</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateSer</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateSoum</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDateVisa</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDelaiExe</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDelaiUnit</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDepExe</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDpCurDecision</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDpCurStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDpCurStatusDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDpCurTenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatDpStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatGarantie</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatGarantieEsp</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatIdAtt</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatMonAco</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatMonDecoTravaux</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatMonDepTravaux</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatMonPen</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatMonRev</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatMonTnt</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatMonTrt</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatMonTrtTtc</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatMotRej</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatNature</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatNum</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatNumVisa</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatObj</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatRef</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatResPay</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatRevPri</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatTauAva</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatTotaux</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatTypeDecompte</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tatUrl</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecCatIndex"></a>
+<h3>TecCatIndex</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tciCode</td>
+	<td>String</td>
+	<td>8</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tciName</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecCatIndexDTO"></a>
+<h3>TecCatIndexDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tciCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tciName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecCatIndexMergeDTO"></a>
+<h3>TecCatIndexMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tciCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tciName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecDecision"></a>
+<h3>TecDecision</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tedCdpId</td>
+	<td><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedCenId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedRem</td>
+	<td>String</td>
+	<td>256</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecDecisionDTO"></a>
+<h3>TecDecisionDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_tedDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecDecisionMergeDTO"></a>
+<h3>TecDecisionMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tedCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecDpDecision"></a>
+<h3>TecDpDecision</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>dpdCdpId</td>
+	<td><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tedCenId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedRem</td>
+	<td>String</td>
+	<td>256</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecDpDecisionDTO"></a>
+<h3>TecDpDecisionDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>dpdCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_tedDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecDpDecisionMergeDTO"></a>
+<h3>TecDpDecisionMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>dpdCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tedCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tedStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecDpState"></a>
+<h3>TecDpState</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>dpsCdpId</td>
+	<td><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tesCenId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesRem</td>
+	<td>String</td>
+	<td>256</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecDpStateDTO"></a>
+<h3>TecDpStateDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>dpsCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_tesDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecDpStateMergeDTO"></a>
+<h3>TecDpStateMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>dpsCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tesCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecEtape"></a>
+<h3>TecEtape</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tetAvancement</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tetDelait</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tetEcart</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tetNom</td>
+	<td>String</td>
+	<td>16</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tetPourcentage</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tetTpvId</td>
+	<td><a href="DomainModelDoc-tec.html#TecPv">TecPv</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecEtapeDTO"></a>
+<h3>TecEtapeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tetAvancement</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tetDelait</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tetEcart</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tetNom</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tetPourcentage</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tetTpvId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecEtapeMergeDTO"></a>
+<h3>TecEtapeMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tetAvancement</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tetDelait</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tetEcart</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tetNom</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tetPourcentage</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecIndex"></a>
+<h3>TecIndex</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tinAnnee</td>
+	<td>String</td>
+	<td>4</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tinMois</td>
+	<td>String</td>
+	<td>16</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tinTciId</td>
+	<td><a href="DomainModelDoc-tec.html#TecCatIndex">TecCatIndex</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tinValDef</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tinValPro</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecIndexDTO"></a>
+<h3>TecIndexDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tinAnnee</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tinMois</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tinTciId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tinValDef</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tinValPro</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecIndexMergeDTO"></a>
+<h3>TecIndexMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tinAnnee</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tinMois</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tinTciId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tinValDef</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tinValPro</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecPv"></a>
+<h3>TecPv</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tpvCdpId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptDepense">CptDepense</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tpvDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tpvName</td>
+	<td>String</td>
+	<td>128</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tpvNum</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tpvPvFile</td>
+	<td>String</td>
+	<td>264</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tpvTetId</td>
+	<td>List&lt;<a href="DomainModelDoc-tec.html#TecEtape">TecEtape</a>&gt;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tpvTptId</td>
+	<td><a href="DomainModelDoc-tec.html#TecPvType">TecPvType</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecPvDTO"></a>
+<h3>TecPvDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_tpvDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tpvCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tpvCdpId1</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tpvDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tpvName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tpvNum</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tpvTptId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tpvTptId1</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecPvMergeDTO"></a>
+<h3>TecPvMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tpvCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tpvDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tpvName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tpvNum</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tpvPvFile</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tpvTetId</td>
+	<td>String []</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tpvTptId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecPvType"></a>
+<h3>TecPvType</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tptCode</td>
+	<td>String</td>
+	<td>8</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tptName</td>
+	<td>String</td>
+	<td>32</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecPvTypeDTO"></a>
+<h3>TecPvTypeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tptCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tptName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecPvTypeMergeDTO"></a>
+<h3>TecPvTypeMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tptCode</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tptName</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecState"></a>
+<h3>TecState</h3>
+<p><i>Entity</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>&nbsp;</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>50</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tesCdpId</td>
+	<td><a href="DomainModelDoc-tec.html#TecAttachement">TecAttachement</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesCenId</td>
+	<td><a href="DomainModelDoc-cpt.html#CptEntity">CptEntity</a></td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesDate</td>
+	<td>Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesRem</td>
+	<td>String</td>
+	<td>256</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesStatus</td>
+	<td>String</td>
+	<td>1</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecStateDTO"></a>
+<h3>TecStateDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>criteriaInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>criteriaListBG</td>
+	<td>java.util.List<ma.brs.common.serviceapi.CriteriaInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>itemsByPage</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>min_tesDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByInfo</td>
+	<td>String[]</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orderByList</td>
+	<td>java.util.List<ma.brs.common.serviceapi.OrderByInfo></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>page</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>total</td>
+	<td>Integer</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+
+</table>
+<hr/>
+<a name="TecStateMergeDTO"></a>
+<h3>TecStateMergeDTO</h3>
+<p><i> DTO</i></p>
+<p></p>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Length</th>
+		<th>Mandatory</th>
+		<th>Changeable</th>
+		<th>Description</th>
+	</thead>
+
+<tr>
+	<td>createdBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who created the object
+	</td>
+</tr>
+<tr>
+	<td>createdDate</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Creation timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>id</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Generated unique id (GID pk)
+	</td>
+</tr>
+<tr>
+	<td>lastUpdated</td>
+	<td>java.util.Date</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Last updated timestamp of the object
+	</td>
+</tr>
+<tr>
+	<td>lastUpdatedBy</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Information about who last updated the object
+	</td>
+</tr>
+<tr>
+	<td>tesCdpId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesCenId</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesDate</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesRem</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tesStatus</td>
+	<td>String</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td></td>
+</tr>
+<tr>
+	<td>version</td>
+	<td>Long</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>X</td>
+	<td>Update counter used for optimistic locking
+	</td>
+</tr>
+
+</table>
+<hr/>
+</div>
+
+</div>
+</body>
+</html>	

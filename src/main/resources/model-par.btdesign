@@ -1,0 +1,934 @@
+import "classpath:/model-mhai.btdesign"
+import "classpath:/model-pla.btdesign"
+import "classpath:/model-adm.btdesign"
+import "classpath:/model-bud.btdesign"
+
+ApplicationPart Par {
+	Module par {
+		
+//		Entity ParBudgetType{
+//			databaseTable="par_budget_type"
+//			hint="idSequence=bdtepyt_tegdub_rap_X"
+//			
+//			Long id    databaseColumn="bdt_id" 
+//			String bdtCode length="24" nullable databaseColumn="bdt_code"  hint="visible=true,toString" 
+//			String bdtName length="64" nullable databaseColumn="bdt_name"  hint="visible=true,toString" 
+//			
+//			//- List<@PlaCreditPrg> idBdtCpgId <-> cpgBdtId
+//			
+//			Repository ParBudgetTypeRepository {
+//				findById;
+//				save;
+//				delete;
+//				findAll;
+//				findByCondition;
+//				PagedResult<@ParBudgetType> findAll(PagingParameter pagingParameter);
+//				PagedResult<@ParBudgetType> findByCondition(PagingParameter pagingParameter);
+//			}
+//			
+//		}
+//		
+//		Service ParBudgetTypeService {
+//			
+//			findById => ParBudgetTypeRepository.findById;
+//			findAll => ParBudgetTypeRepository.findAll;
+//			save => ParBudgetTypeRepository.save;
+//			delete => ParBudgetTypeRepository.delete;
+//			PagedResult<@ParBudgetType> search(@ParBudgetTypeDTO aua);
+//			PagedResult<@ParBudgetType> findAll(PagingParameter pagingParameter);
+//
+//		}
+//		
+//		DataTransferObject ParBudgetTypeDTO {
+//			hint="for=search,entity=ParBudgetType"
+//			String bdtCode hint="" 
+//			String bdtName hint="" 
+//		}
+//		
+//		DataTransferObject ParBudgetTypeMergeDTO {
+//			hint="for=merge,entity=ParBudgetType"
+//			String bdtCode hint="" 
+//			String bdtName hint="" 
+//		}
+		
+		
+		Entity ParAgentExe{
+			databaseTable="par_agent_exe"
+			hint="idSequence=aexexe_tnega_rap_X"
+			
+			Long id    databaseColumn="aex_id" 
+			String aexNom length="128" nullable databaseColumn="aex_nom"  hint="visible=true,toString" 
+			String aexPrenom length="32" nullable databaseColumn="aex_prenom"  hint="visible=true,toString" 
+			String aexStatus length="1" nullable databaseColumn="aex_status"  hint="visible=true,toString" 
+			
+			- @ParOrdonateur aexOrdId  databaseColumn="aex_ord_id"  <-> idOrdAexId nullable fetch="lazy" cascade="refresh" hint="visible=true" 							
+			
+			- @AdmUserAccount aexUsaId /* key */ fetch="lazy" cascade="refresh"
+			
+			String aexNum length="128" nullable databaseColumn="aex_num"   
+			
+			//- List<@PlaCreditOp> idAexCopId <-> copAexId
+			
+			Repository ParAgentExeRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ParAgentExe> findAll(PagingParameter pagingParameter);
+				PagedResult<@ParAgentExe> findByCondition(PagingParameter pagingParameter);
+				List<@ParAgentExe> findByUserId(Long id) condition="aexUsaId = :id";
+				@ParAgentExe findByNum(String num) condition="aexNum = :num";
+			}
+			
+		}
+		
+		Service ParAgentExeService {
+			
+			findById => ParAgentExeRepository.findById;
+			findAll => ParAgentExeRepository.findAll;
+			save => ParAgentExeRepository.save;
+			delete => ParAgentExeRepository.delete;
+			PagedResult<@ParAgentExe> search(@ParAgentExeDTO aua);
+			PagedResult<@ParAgentExe> findAll(PagingParameter pagingParameter);
+				
+			List<@ParAgentExe> findByUserId(Long id)=> ParAgentExeRepository.findByUserId;
+			@ParAgentExe findByNum(String num)=> ParAgentExeRepository.findByNum;
+		}
+		
+		DataTransferObject ParAgentExeDTO {
+			hint="for=search,entity=ParAgentExe"
+			String aexOrdId1 hint="ref=aexOrdId,view=ComboBox"
+			String aexNom hint="" 
+			String aexPrenom hint="" 
+			String aexStatus hint="" 
+		}
+		
+		DataTransferObject ParAgentExeMergeDTO {
+			hint="for=merge,entity=ParAgentExe"
+			String aexNom hint="" 
+			String aexPrenom hint="" 
+			String aexStatus hint="type=enum,items=A&Actif:I&Inactif" 
+			String aexOrdId hint="type=system,view=ComboBox"
+			String aexUsaId hint="type=system,view=ComboBox"
+			String aexNum
+		}
+		
+/********************************************************************************** */
+
+		Entity ParCommanditaire{
+			databaseTable="par_commanditaire"
+			hint="idSequence=cmderiatidnammoc_rap_X"
+			
+			Long id    databaseColumn="cmd_id" 
+			String cmdCode length="15" nullable databaseColumn="cmd_code"  hint="visible=true,toString" 
+			String cmdName length="64" nullable databaseColumn="cmd_name"  hint="visible=true,toString" 
+			String cmdDesc length="128" nullable databaseColumn="cmd_desc"  hint="visible=true,toString" 
+			
+			//- List<@PlaCreditOp> idCmdCopId <-> copCmdId
+			
+			Repository ParCommanditaireRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ParCommanditaire> findAll(PagingParameter pagingParameter);
+				PagedResult<@ParCommanditaire> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service ParCommanditaireService {
+			
+			findById => ParCommanditaireRepository.findById;
+			findAll => ParCommanditaireRepository.findAll;
+			save => ParCommanditaireRepository.save;
+			delete => ParCommanditaireRepository.delete;
+			PagedResult<@ParCommanditaire> search(@ParCommanditaireDTO aua);
+			PagedResult<@ParCommanditaire> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject ParCommanditaireDTO {
+			hint="for=search,entity=ParCommanditaire"
+			String cmdCode hint="" 
+			String cmdName hint="" 
+			String cmdDesc hint="" 
+		}
+		
+		DataTransferObject ParCommanditaireMergeDTO {
+			hint="for=merge,entity=ParCommanditaire"
+			String cmdCode hint="" 
+			String cmdName hint="" 
+			String cmdDesc hint="" 
+		}
+		
+/* ************************************************************************************************    */		
+		
+		Entity ParCommune{
+			databaseTable="par_commune"
+			hint="idSequence=comenummoc_rap_X"
+			
+			Long id    databaseColumn="com_id" 
+			String comCode length="15" nullable databaseColumn="com_code"  hint="visible=true,toString" 
+			String comName length="255" nullable databaseColumn="com_name"  hint="visible=true,toString" 
+			String comType length="1" nullable databaseColumn="com_type"  hint="visible=true,toString" 
+			String comStatus length="1" nullable databaseColumn="com_status" 
+			
+				- @ParRegion comRegId  databaseColumn="com_reg_id"  /*<-> idRegComId*/  fetch="lazy" cascade="refresh"  							
+			
+				- @ParProvince comPrvId  databaseColumn="com_prv_id"  <-> idPrvComId  fetch="lazy" cascade="refresh"  							
+			
+			//- List<@MhaiMosque> idComMosId <-> mosComId
+			//- List<@PlaCreditOp> idComCopId <-> copComId
+			
+			Repository ParCommuneRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ParCommune> findAll(PagingParameter pagingParameter);
+				PagedResult<@ParCommune> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service ParCommuneService {
+			
+			findById => ParCommuneRepository.findById;
+			findAll => ParCommuneRepository.findAll;
+			save => ParCommuneRepository.save;
+			delete => ParCommuneRepository.delete;
+			PagedResult<@ParCommune> search(@ParCommuneDTO aua);
+			PagedResult<@ParCommune> findAll(PagingParameter pagingParameter);
+			
+			List<@ParCommune> findByComPrvId(Long id) hint="gen,order=asc,prop=id,conditions=comPrvId.id&$id,nullable";
+			List<@ParCommune> findByStatus(String comStatus) hint="gen,order=asc,prop=id,nullable";
+			
+		}
+		
+		DataTransferObject ParCommuneDTO {
+			hint="for=search,entity=ParCommune"
+			String comCode hint="" 
+			String comName hint="" 
+			String comType hint="" 
+		}
+		
+		DataTransferObject ParCommuneMergeDTO {
+			hint="for=merge,entity=ParCommune"
+			String comCode hint="" 
+			String comName hint="" 
+			String comType hint="" 
+			String comStatus hint="" 
+			String comRegId hint="type=system,view=Search"
+			String comPrvId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity ParCommuneAnc{
+			databaseTable="par_commune_anc"
+			hint="idSequence=comenuancmmoc_rap_X"
+			
+			Long id    databaseColumn="com_id" 
+			String comCode length="15" nullable databaseColumn="com_code"  hint="visible=true,toString" 
+			String comName length="64" nullable databaseColumn="com_name"  hint="visible=true,toString" 
+			String comType length="1" nullable databaseColumn="com_type"  hint="visible=true,toString" 
+			String comStatus length="1" nullable databaseColumn="com_status" 
+			
+				- @ParRegionAnc comRegId  databaseColumn="com_reg_id"  /*<-> idRegComId*/  fetch="lazy" cascade="refresh"  							
+			
+				- @ParProvinceAnc comPrvId  databaseColumn="com_prv_id"  <-> idPrvComId  fetch="lazy" cascade="refresh"  							
+			
+			//- List<@MhaiMosque> idComMosId <-> mosComId
+			//- List<@PlaCreditOp> idComCopId <-> copComId
+			
+			Repository ParCommuneAncRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ParCommuneAnc> findAll(PagingParameter pagingParameter);
+				PagedResult<@ParCommuneAnc> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service ParCommuneAncService {
+			
+			findById => ParCommuneAncRepository.findById;
+			findAll => ParCommuneAncRepository.findAll;
+			save => ParCommuneAncRepository.save;
+			delete => ParCommuneAncRepository.delete;
+			PagedResult<@ParCommuneAnc> search(@ParCommuneAncDTO aua);
+			PagedResult<@ParCommuneAnc> findAll(PagingParameter pagingParameter);
+			
+			List<@ParCommuneAnc> findByComPrvId(Long id) hint="gen,order=asc,prop=id,conditions=comPrvId.id&$id,nullable";
+			
+		}
+		
+		DataTransferObject ParCommuneAncDTO {
+			hint="for=search,entity=ParCommuneAnc"
+			String comCode hint="" 
+			String comName hint="" 
+			String comType hint="" 
+		}
+		
+		DataTransferObject ParCommuneAncMergeDTO {
+			hint="for=merge,entity=ParCommuneAnc"
+			String comCode hint="" 
+			String comName hint="" 
+			String comType hint="" 
+			String comStatus hint="" 
+			String comRegId hint="type=system,view=Search"
+			String comPrvId hint="type=system,view=Search"
+		}
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity ParConvention{
+			databaseTable="par_convention"
+			hint="idSequence=cvtnoitnevnoc_rap_X"
+			
+			Long id    databaseColumn="cvt_id" 
+			String cvtCode length="15" nullable databaseColumn="cvt_code"  hint="visible=true,toString" 
+			String cvtName length="64" nullable databaseColumn="cvt_name"  hint="visible=true,toString" 
+			String cvtDesc length="128" nullable databaseColumn="cvt_desc"  hint="visible=true,toString" 
+			Date cvtBeginDate  nullable databaseColumn="cvt_begin_date" 
+			Date cvtEndDate  nullable databaseColumn="cvt_end_date" 
+			
+			//- List<@PlaCreditOp> idCvtCopId <-> copCvtId
+			
+			Repository ParConventionRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ParConvention> findAll(PagingParameter pagingParameter);
+				PagedResult<@ParConvention> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service ParConventionService {
+			
+			findById => ParConventionRepository.findById;
+			findAll => ParConventionRepository.findAll;
+			save => ParConventionRepository.save;
+			delete => ParConventionRepository.delete;
+			PagedResult<@ParConvention> search(@ParConventionDTO aua);
+			PagedResult<@ParConvention> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject ParConventionDTO {
+			hint="for=search,entity=ParConvention"
+			String cvtCode hint="" 
+			String cvtName hint="" 
+			String cvtDesc hint="" 
+		}
+		
+		DataTransferObject ParConventionMergeDTO {
+			hint="for=merge,entity=ParConvention"
+			String cvtCode hint="" 
+			String cvtName hint="" 
+			String cvtDesc hint="" 
+			String cvtBeginDate hint="" 
+			String cvtEndDate hint="" 
+		}
+		
+/************************************************************************************************************************ */
+		
+		Entity ParOrdonateur{
+			databaseTable="par_ordonateur"
+			hint="idSequence=ordruetanodro_rap_X"
+			
+			Long id    databaseColumn="ord_id" 
+			String ordNom length="128" nullable databaseColumn="ord_nom"  hint="visible=true,toString" 
+			String ordPrenom length="32" nullable databaseColumn="ord_prenom"  hint="visible=true,toString" 
+			String ordType length="1" nullable databaseColumn="ord_type"  hint="visible=true,toString" 
+			String ordStatus length="1" nullable databaseColumn="ord_status" 
+			String ordNature length="1" nullable databaseColumn="ord_nature"   hint="visible=true,toString" 
+			
+				- @ParRegion ordRegId  databaseColumn="ord_reg_id"  <-> idRegOrdId nullable fetch="lazy" cascade="refresh"  							
+			
+				- @ParOrdonateur ordOrdId  databaseColumn="ord_ord_id"  <-> idOrdOrdId nullable fetch="lazy" cascade="refresh"  							
+			
+				- @AdmUserAccount ordUsaId /* key */ fetch="lazy" cascade="refresh"
+			
+			//- List<@BudDemMvt> idOrdDmvId <-> dmvOrdId
+			- List<@BudSsMorasse> idOrdSmrId <-> smrOrdId
+			- List<@ParAgentExe> idOrdAexId <-> aexOrdId
+			- List<@ParOrdonateur> idOrdOrdId <-> ordOrdId
+			//- List<@PlaCreditOp> idOrdCopId <-> copOrdId
+			
+			Repository ParOrdonateurRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ParOrdonateur> findAll(PagingParameter pagingParameter);
+				PagedResult<@ParOrdonateur> findByCondition(PagingParameter pagingParameter);
+				List<@ParOrdonateur> findByUserId(Long id) condition="ordUsaId = :id";
+				@ParOrdonateur findByNum(String num) condition="ordPrenom = :num";
+			}
+			
+		}
+		
+		Service ParOrdonateurService {
+			
+			findById => ParOrdonateurRepository.findById;
+			findAll => ParOrdonateurRepository.findAll;
+			save => ParOrdonateurRepository.save;
+			delete => ParOrdonateurRepository.delete;
+			PagedResult<@ParOrdonateur> search(@ParOrdonateurDTO aua);
+			PagedResult<@ParOrdonateur> findAll(PagingParameter pagingParameter);
+			
+			List<@ParOrdonateur> findByUserId(Long id)=> ParOrdonateurRepository.findByUserId;
+			@ParOrdonateur findByNum(String num)=> ParOrdonateurRepository.findByNum;
+		}
+		
+		DataTransferObject ParOrdonateurDTO {
+			hint="for=search,entity=ParOrdonateur"
+			String ordNom hint="" 
+			String ordPrenom hint="" 
+			String ordType hint="" 
+		}
+		
+		DataTransferObject ParOrdonateurMergeDTO {
+			hint="for=merge,entity=ParOrdonateur"
+			String ordNom hint="" 
+			String ordPrenom hint="" 
+			String ordType hint="type=enum,items=O&Ordonnateur:D&Ordonateur D�l�gu�:S&Sous Ordonateur" 
+			String ordStatus hint="type=enum,items=A&Actif:I&Inactif" 
+			String ordRegId hint="type=system,view=ComboBox"
+			String ordOrdId hint="type=system,view=ComboBox"
+			String ordUsaId hint="type=system,view=ComboBox"
+			String ordNature hint="type=enum,items=N&Centrale:A&DAI:G&GOU:E&DEP" 
+			
+		}
+/******************************************************************************************************************** */		
+		
+		Entity ParProvince{
+			databaseTable="par_province"
+			hint="idSequence=prvecnivorp_rap_X"
+			
+			Long id    databaseColumn="prv_id" 
+			String prvCode length="15" nullable databaseColumn="prv_code"  hint="visible=true,toString" 
+			String prvName length="255" nullable databaseColumn="prv_name"  hint="visible=true,toString" 
+			String prvStatus length="1" nullable databaseColumn="prv_status"  hint="visible=true,toString" 
+			
+				- @ParRegion prvRegId  databaseColumn="prv_reg_id"  /*<-> idRegPrvId*/  fetch="lazy" cascade="refresh"  							
+			
+			- List<@ParCommune> idPrvComId <-> comPrvId
+			//- List<@PlaCreditOp> idPrvCopId <-> copPrvId
+			
+			Repository ParProvinceRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ParProvince> findAll(PagingParameter pagingParameter);
+				PagedResult<@ParProvince> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service ParProvinceService {
+			
+			findById => ParProvinceRepository.findById;
+			findAll => ParProvinceRepository.findAll;
+			save => ParProvinceRepository.save;
+			delete => ParProvinceRepository.delete;
+			PagedResult<@ParProvince> search(@ParProvinceDTO aua);
+			PagedResult<@ParProvince> findAll(PagingParameter pagingParameter);
+			
+			List<@ParProvince> findByPrvRegId(Long id) hint="gen,order=asc,prop=id,conditions=prvRegId.id&$id,nullable";
+			List<@ParProvince> findByStatus(String prvStatus) hint="gen,order=asc,prop=id,nullable";
+			
+		}
+		
+		DataTransferObject ParProvinceDTO {
+			hint="for=search,entity=ParProvince"
+			String prvCode hint="" 
+			String prvName hint="" 
+			String prvStatus hint="" 
+		}
+		
+		DataTransferObject ParProvinceMergeDTO {
+			hint="for=merge,entity=ParProvince"
+			String prvCode hint="" 
+			String prvName hint="" 
+			String prvStatus hint="" 
+			String prvRegId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity ParProvinceAnc{
+			databaseTable="par_province_anc"
+			hint="idSequence=prvecnancivorp_rap_X"
+			
+			Long id    databaseColumn="prv_id" 
+			String prvCode length="15" nullable databaseColumn="prv_code"  hint="visible=true,toString" 
+			String prvName length="64" nullable databaseColumn="prv_name"  hint="visible=true,toString" 
+			String prvStatus length="1" nullable databaseColumn="prv_status"  hint="visible=true,toString" 
+			
+				- @ParRegionAnc prvRegId  databaseColumn="prv_reg_id"  /*<-> idRegPrvId*/  fetch="lazy" cascade="refresh"  							
+			
+			- List<@ParCommuneAnc> idPrvComId <-> comPrvId
+			//- List<@PlaCreditOp> idPrvCopId <-> copPrvId
+			
+			Repository ParProvinceAncRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ParProvinceAnc> findAll(PagingParameter pagingParameter);
+				PagedResult<@ParProvinceAnc> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service ParProvinceAncService {
+			
+			findById => ParProvinceAncRepository.findById;
+			findAll => ParProvinceAncRepository.findAll;
+			save => ParProvinceAncRepository.save;
+			delete => ParProvinceAncRepository.delete;
+			PagedResult<@ParProvinceAnc> search(@ParProvinceAncDTO aua);
+			PagedResult<@ParProvinceAnc> findAll(PagingParameter pagingParameter);
+			
+			List<@ParProvinceAnc> findByPrvRegId(Long id) hint="gen,order=asc,prop=id,conditions=prvRegId.id&$id,nullable";
+			
+		}
+		
+		DataTransferObject ParProvinceAncDTO {
+			hint="for=search,entity=ParProvinceAnc"
+			String prvCode hint="" 
+			String prvName hint="" 
+			String prvStatus hint="" 
+		}
+		
+		DataTransferObject ParProvinceAncMergeDTO {
+			hint="for=merge,entity=ParProvinceAnc"
+			String prvCode hint="" 
+			String prvName hint="" 
+			String prvStatus hint="" 
+			String prvRegId hint="type=system,view=Search"
+		}
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity ParRegion{
+			databaseTable="par_region"
+			hint="idSequence=regnoiger_rap_X"
+			
+			Long id    databaseColumn="reg_id" 
+			String regCode length="15" nullable databaseColumn="reg_code"  hint="visible=true,toString" 
+			String regName length="255" nullable databaseColumn="reg_name"  hint="visible=true,toString" 
+			String regStatus length="1" nullable databaseColumn="reg_status"  hint="visible=true"
+			
+			//- List<@MhaiMosque> idRegMosId <-> mosRegId
+			//- List<@ParCommune> idRegComId <-> comRegId
+			//- List<@ParEntity> idRegEntId <-> entRegId
+			//- List<@PlaCreditPrjReg> idRegCrpId <-> crpRegId
+			//- List<@PlaCreditReg> idRegCreId <-> creRegId
+			- List<@ParOrdonateur> idRegOrdId <-> ordRegId
+			
+			Repository ParRegionRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ParRegion> findAll(PagingParameter pagingParameter);
+				PagedResult<@ParRegion> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service ParRegionService {
+			
+			findById => ParRegionRepository.findById;
+			findAll => ParRegionRepository.findAll;
+			save => ParRegionRepository.save;
+			delete => ParRegionRepository.delete;
+			PagedResult<@ParRegion> search(@ParRegionDTO aua);
+			PagedResult<@ParRegion> findAll(PagingParameter pagingParameter);
+			
+			List<@ParRegion> findByStatus(String regStatus) hint="gen,order=asc,prop=id,nullable";
+
+		}
+		
+		DataTransferObject ParRegionDTO {
+			hint="for=search,entity=ParRegion"
+			String regCode hint="" 
+			String regName hint="" 
+			String regStatus hint="" 
+		}
+		
+		DataTransferObject ParRegionMergeDTO {
+			hint="for=merge,entity=ParRegion"
+			String regCode hint="" 
+			String regName hint="" 
+			String regStatus hint="" 
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity ParRegionAnc{
+			databaseTable="par_region_anc"
+			hint="idSequence=regnoigeranc_rap_X"
+			
+			Long id    databaseColumn="reg_id" 
+			String regCode length="15" nullable databaseColumn="reg_code"  hint="visible=true,toString" 
+			String regName length="64" nullable databaseColumn="reg_name"  hint="visible=true,toString" 
+			String regStatus length="1" nullable databaseColumn="reg_status"  hint="visible=true"
+			
+			//- List<@ParOrdonateur> idRegOrdId <-> ordRegId
+			
+			Repository ParRegionAncRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ParRegionAnc> findAll(PagingParameter pagingParameter);
+				PagedResult<@ParRegionAnc> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service ParRegionAncService {
+			
+			findById => ParRegionAncRepository.findById;
+			findAll => ParRegionAncRepository.findAll;
+			save => ParRegionAncRepository.save;
+			delete => ParRegionAncRepository.delete;
+			PagedResult<@ParRegionAnc> search(@ParRegionAncDTO aua);
+			PagedResult<@ParRegionAnc> findAll(PagingParameter pagingParameter);
+
+		}
+		
+		DataTransferObject ParRegionAncDTO {
+			hint="for=search,entity=ParRegionAnc"
+			String regCode hint="" 
+			String regName hint="" 
+			String regStatus hint="" 
+		}
+		
+		DataTransferObject ParRegionAncMergeDTO {
+			hint="for=merge,entity=ParRegionAnc"
+			String regCode hint="" 
+			String regName hint="" 
+			String regStatus hint="" 
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity ParExercice{
+			databaseTable="par_exercice"
+			hint="idSequence=pexecicrexe_rap_X"
+			
+			Long id    databaseColumn="pex_id" 
+			String pexCode length="24" nullable databaseColumn="pex_code"  hint="visible=true,toString" 
+			String pexName length="64" nullable databaseColumn="pex_name"  hint="visible=true,toString" 
+			String pexDesc length="256" nullable databaseColumn="pex_desc"  hint="visible=true" 
+			Date pexStartDate  nullable databaseColumn="pex_start_date" 
+			Date pexEndDate  nullable databaseColumn="pex_end_date" 
+			String pexStatus length="1" nullable databaseColumn="pex_status" 
+			
+			//- List<@BudBudget> idPexBdgId <-> bdgPexId
+			//- List<@PlaCreditOp> idPexCopId <-> copPexId
+			//- List<@PlaCreditPrg> idPexCpgId <-> cpgPexId
+			//- List<@PlaCreditPrj> idPexCpjId <-> cpjPexId
+			//- List<@PlaCreditPrjReg> idPexCrpId <-> crpPexId
+			//- List<@PlaCreditPrs> idPexCprId <-> cprPexId
+			//- List<@PlaCreditReg> idPexCreId <-> crePexId
+			//- List<@PlaPlanHasExe> idPexPleId <-> plePexId
+			
+			//MTI manyToMany Plan-Exercice
+			- List<@PlaPlan> pexPlaId inverse <-> plaPexId fetch="lazy"	hint="visible=false"							
+				databaseJoinTable="pla_plan_exercice"
+				databaseColumn="pex_pla_id"	
+			//End
+			
+			Repository ParExerciceRepository {
+				findById;
+				save;
+				delete;
+				findAll orderBy="pexStartDate asc, pexCode asc";
+				findByCondition;
+				PagedResult<@ParExercice> findAll(PagingParameter pagingParameter) orderBy="pexStartDate asc, pexCode asc";
+				PagedResult<@ParExercice> findByCondition(PagingParameter pagingParameter);
+				@ParExercice findByCode(String code) condition="pexCode = :code";
+			}
+			
+		}
+		
+		Service ParExerciceService {
+			
+			findById => ParExerciceRepository.findById;
+			findAll => ParExerciceRepository.findAll;
+			save => ParExerciceRepository.save;
+			delete => ParExerciceRepository.delete;
+			PagedResult<@ParExercice> search(@ParExerciceDTO aua);
+			PagedResult<@ParExercice> findAll(PagingParameter pagingParameter);
+			@ParExercice findByCode(String code)=> ParExerciceRepository.findByCode;
+
+		}
+		
+		DataTransferObject ParExerciceDTO {
+			hint="for=search,entity=ParExercice"
+			String pexCode hint="" 
+			String pexName hint="" 
+			String pexDesc hint="" 
+		}
+		
+		DataTransferObject ParExerciceMergeDTO {
+			hint="for=merge,entity=ParExercice"
+			String pexCode hint="" 
+			String pexName hint="" 
+			String pexDesc hint="" 
+			String pexStartDate hint="" 
+			String pexEndDate hint="" 
+			String pexStatus hint="hidden" 
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity ParTypeBenif{
+			databaseTable="par_type_benif"
+			hint="idSequence=benfineb_epyt_rap_X"
+			
+			Long id    databaseColumn="ben_id" 
+			String benCode length="15" nullable databaseColumn="ben_code"  hint="visible=true,toString" 
+			String benName length="64" nullable databaseColumn="ben_name"  hint="visible=true,toString" 
+			
+			//- List<@CptDepense> idBenCdpId <-> cdpBenId
+			
+			Repository ParTypeBenifRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ParTypeBenif> findAll(PagingParameter pagingParameter);
+				PagedResult<@ParTypeBenif> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service ParTypeBenifService {
+			
+			findById => ParTypeBenifRepository.findById;
+			findAll => ParTypeBenifRepository.findAll;
+			save => ParTypeBenifRepository.save;
+			delete => ParTypeBenifRepository.delete;
+			PagedResult<@ParTypeBenif> search(@ParTypeBenifDTO aua);
+			PagedResult<@ParTypeBenif> findAll(PagingParameter pagingParameter);
+			
+			List<@ParTypeBenif> findByBenCode(String benCode) hint="gen,order=asc,prop=id,nullable";
+			List<@ParTypeBenif> findByBenName(String benName) hint="gen,order=asc,prop=id,nullable";
+		}
+		
+		DataTransferObject ParTypeBenifDTO {
+			hint="for=search,entity=ParTypeBenif"
+			String benCode hint="" 
+			String benName hint="" 
+		}
+		
+		DataTransferObject ParTypeBenifMergeDTO {
+			hint="for=merge,entity=ParTypeBenif"
+			String benCode hint="" 
+			String benName hint="" 
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity ParCommuneOld{
+			databaseTable="par_commune_old"
+			hint="idSequence=comenoldmmoc_rap_X"
+			
+			Long id    databaseColumn="com_id" 
+			String comCode length="15" nullable databaseColumn="com_code"  hint="visible=true,toString" 
+			String comName length="64" nullable databaseColumn="com_name"  hint="visible=true,toString" 
+			String comType length="1" nullable databaseColumn="com_type"  hint="visible=true,toString" 
+			String comStatus length="1" nullable databaseColumn="com_status" 
+			
+				- @ParRegionOld comRegId  databaseColumn="com_reg_id"  /*<-> idRegComId*/  fetch="lazy" cascade="refresh"  							
+			
+				- @ParProvinceOld comPrvId  databaseColumn="com_prv_id"  <-> idPrvComId  fetch="lazy" cascade="refresh"  							
+			
+			//- List<@MhaiMosque> idComMosId <-> mosComId
+			//- List<@PlaCreditOp> idComCopId <-> copComId
+			
+			Repository ParCommuneOldRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ParCommuneOld> findAll(PagingParameter pagingParameter);
+				PagedResult<@ParCommuneOld> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service ParCommuneOldService {
+			
+			findById => ParCommuneOldRepository.findById;
+			findAll => ParCommuneOldRepository.findAll;
+			save => ParCommuneOldRepository.save;
+			delete => ParCommuneOldRepository.delete;
+			PagedResult<@ParCommuneOld> search(@ParCommuneOldDTO aua);
+			PagedResult<@ParCommuneOld> findAll(PagingParameter pagingParameter);
+			
+			List<@ParCommuneOld> findByComPrvId(Long id) hint="gen,order=asc,prop=id,conditions=comPrvId.id&$id,nullable";
+			
+		}
+		
+		DataTransferObject ParCommuneOldDTO {
+			hint="for=search,entity=ParCommuneOld"
+			String comCode hint="" 
+			String comName hint="" 
+			String comType hint="" 
+		}
+		
+		DataTransferObject ParCommuneOldMergeDTO {
+			hint="for=merge,entity=ParCommuneOld"
+			String comCode hint="" 
+			String comName hint="" 
+			String comType hint="" 
+			String comStatus hint="" 
+			String comRegId hint="type=system,view=Search"
+			String comPrvId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity ParRegionOld{
+			databaseTable="par_region_old"
+			hint="idSequence=regnoigerold_rap_X"
+			
+			Long id    databaseColumn="reg_id" 
+			String regCode length="15" nullable databaseColumn="reg_code"  hint="visible=true,toString" 
+			String regName length="64" nullable databaseColumn="reg_name"  hint="visible=true,toString" 
+			String regStatus length="1" nullable databaseColumn="reg_status"  hint="visible=true"
+			
+			//- List<@ParOrdonateur> idRegOrdId <-> ordRegId
+			
+			Repository ParRegionOldRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ParRegionOld> findAll(PagingParameter pagingParameter);
+				PagedResult<@ParRegionOld> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service ParRegionOldService {
+			
+			findById => ParRegionOldRepository.findById;
+			findAll => ParRegionOldRepository.findAll;
+			save => ParRegionOldRepository.save;
+			delete => ParRegionOldRepository.delete;
+			PagedResult<@ParRegionOld> search(@ParRegionOldDTO aua);
+			PagedResult<@ParRegionOld> findAll(PagingParameter pagingParameter);
+
+		}
+		
+		DataTransferObject ParRegionOldDTO {
+			hint="for=search,entity=ParRegionOld"
+			String regCode hint="" 
+			String regName hint="" 
+			String regStatus hint="" 
+		}
+		
+		DataTransferObject ParRegionOldMergeDTO {
+			hint="for=merge,entity=ParRegionOld"
+			String regCode hint="" 
+			String regName hint="" 
+			String regStatus hint="" 
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity ParProvinceOld{
+			databaseTable="par_province_old"
+			hint="idSequence=prvecnivorpold_rap_X"
+			
+			Long id    databaseColumn="prv_id" 
+			String prvCode length="15" nullable databaseColumn="prv_code"  hint="visible=true,toString" 
+			String prvName length="64" nullable databaseColumn="prv_name"  hint="visible=true,toString" 
+			String prvStatus length="1" nullable databaseColumn="prv_status"  hint="visible=true,toString" 
+			
+				- @ParRegionOld prvRegId  databaseColumn="prv_reg_id"  /*<-> idRegPrvId*/  fetch="lazy" cascade="refresh"  							
+			
+			- List<@ParCommuneOld> idPrvComId <-> comPrvId
+			//- List<@PlaCreditOp> idPrvCopId <-> copPrvId
+			
+			Repository ParProvinceOldRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ParProvinceOld> findAll(PagingParameter pagingParameter);
+				PagedResult<@ParProvinceOld> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service ParProvinceOldService {
+			
+			findById => ParProvinceOldRepository.findById;
+			findAll => ParProvinceOldRepository.findAll;
+			save => ParProvinceOldRepository.save;
+			delete => ParProvinceOldRepository.delete;
+			PagedResult<@ParProvinceOld> search(@ParProvinceOldDTO aua);
+			PagedResult<@ParProvinceOld> findAll(PagingParameter pagingParameter);
+			
+			List<@ParProvinceOld> findByPrvRegId(Long id) hint="gen,order=asc,prop=id,conditions=prvRegId.id&$id,nullable";
+			
+		}
+		
+		DataTransferObject ParProvinceOldDTO {
+			hint="for=search,entity=ParProvinceOld"
+			String prvCode hint="" 
+			String prvName hint="" 
+			String prvStatus hint="" 
+		}
+		
+		DataTransferObject ParProvinceOldMergeDTO {
+			hint="for=merge,entity=ParProvinceOld"
+			String prvCode hint="" 
+			String prvName hint="" 
+			String prvStatus hint="" 
+			String prvRegId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+	}
+}

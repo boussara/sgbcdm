@@ -1,0 +1,25 @@
+
+select * from tec_attachement tecattache0_ where tecattache0_.tat_cdp_id=199120 and tecattache0_.CREATED_DATE<'25-juin-19' order by tecattache0_.CREATED_DATE desc
+select * from ach_achat achachat0_ where achachat0_.ach_id=199061
+select * from ach_dem_pub idachadpid0_ where idachadpid0_.adp_ach_id=199061 order by idachadpid0_.CREATED_DATE asc
+select * from ach_commission idachacoid0_ where idachacoid0_.aco_ach_id=199061
+select * from ach_achat_lot idachaloid0_ where idachaloid0_.alo_ach_id=199061
+select * from ach_achat_exel achachatex0_ where achachatex0_.aae_att_id=199122
+select * from ach_achat_exel achachatex0_ where achachatex0_.aae_alo_id=199066
+select * from ach_achat_exel achachatex0_ where achachatex0_.aae_att_id=199122
+select * from cpt_entity cptentity0_ where cptentity0_.cen_id=7
+select * from tec_attachement tecattache0_ where tecattache0_.tat_id=199122
+select * from tec_decision idcdptedid0_ where idcdptedid0_.ted_cdp_id=199122 order by idcdptedid0_.CREATED_DATE asc
+select * from tec_attachement tecattache0_ where tecattache0_.tat_id=199122
+select * from tec_state idcdptesid0_ where idcdptesid0_.tes_cdp_id=199122 order by idcdptesid0_.CREATED_DATE asc
+select * from cpt_entity cptentity0_ where cptentity0_.cen_id=7
+
+
+
+select * from tec_attachement tecattache0_ where tecattache0_.tat_id=199122
+
+select * from ach_achat_exel achachatex0_ where achachatex0_.aae_att_id=199122
+
+select distinct * from cpt_depense cptdepense0_
+select * from cpt_entity cptentity0_
+select * from ach_achat achachat0_ where achachat0_.ach_id=199061

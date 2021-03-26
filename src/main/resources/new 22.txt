@@ -1,0 +1,1 @@
+pg_dump -U sgbcdm -h localhost -d habous -F p -f /root/server/habous24042019.sql --inserts --column-inserts

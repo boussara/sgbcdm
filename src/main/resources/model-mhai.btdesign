@@ -1,0 +1,208 @@
+import "classpath:/model-comPar.btdesign"
+import "classpath:/model-par.btdesign"
+import "classpath:/model-pla.btdesign"
+
+ApplicationPart Mhai{
+	Module mhai{
+		
+		Entity MhaiMosque{
+			databaseTable="mhai_mosque"
+			hint="idSequence=moseuqsom_iahm_X"
+			
+			Long id    databaseColumn="mos_id" 
+			String mosCode length="255" nullable databaseColumn="mos_code"  hint="visible=true,toString" 
+			String mosName length="255" nullable databaseColumn="mos_name"  hint="visible=true,toString" 
+			String mosType length="1" nullable databaseColumn="mos_type"  hint="visible=true,toString" 
+			
+				- @ParRegion mosRegId  databaseColumn="mos_reg_id"  /*<-> idRegMosId*/ nullable fetch="lazy" cascade="refresh" 
+				
+				- @ParProvince mosDelProvId  databaseColumn="mos_del_prov_id"  /*<-> idProvDelMosId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @ParCommune mosComId  databaseColumn="mos_com_id"  /*<-> idComMosId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				//- @ParEntity mosDelRegId  databaseColumn="mos_del_reg_id"  /*<-> idRegDelMosId*/ nullable fetch="lazy" cascade="refresh" 
+			
+			//- List<@PlaCreditOp> idMosCopId <-> copMosId
+			//- List<@PlaCreditPrs> idMosCprId <-> cprMosId
+			
+			Repository MhaiMosqueRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@MhaiMosque> findAll(PagingParameter pagingParameter);
+				PagedResult<@MhaiMosque> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service MhaiMosqueService {
+			
+			findById => MhaiMosqueRepository.findById;
+			findAll => MhaiMosqueRepository.findAll;
+			save => MhaiMosqueRepository.save;
+			delete => MhaiMosqueRepository.delete;
+			PagedResult<@MhaiMosque> search(@MhaiMosqueDTO aua);
+			PagedResult<@MhaiMosque> findAll(PagingParameter pagingParameter);
+
+		}
+		
+		DataTransferObject MhaiMosqueDTO {
+			hint="for=search,entity=MhaiMosque"
+			String mosCode hint="" 
+			String mosName hint="" 
+			String mosType hint=""
+			String mosRegId1 hint="ref=mosRegId,view=ComboBox"
+			String mosDelProvId1 hint="ref=mosDelProvId,view=ComboBox,LinkedTo=mosRegId1"
+			String mosComId1 hint="ref=mosComId,view=ComboBox,LinkedTo=mosDelProvId1"
+		}
+		
+		DataTransferObject MhaiMosqueMergeDTO {
+			hint="for=merge,entity=MhaiMosque"
+			String mosCode hint="" 
+			String mosName hint="" 
+			String mosType hint="type=enum,items=M&Mosquee:T&Terrain"
+			String mosRegId hint="type=system,view=ComboBox"
+			String mosDelProvId hint="type=system,view=ComboBox,LinkedTo=mosRegId"
+			String mosComId hint="type=system,view=ComboBox,LinkedTo=mosDelProvId"
+			//String mosDelRegId hint="type=system,view=ComboBox"
+		}
+		
+		//**************************************************************************************************************************************************
+		
+		Entity MhaiMosqueOld{
+			databaseTable="mhai_mosque_old"
+			hint="idSequence=moseuqsom_old_iahm_X"
+			
+			Long id    databaseColumn="mos_id" 
+			String mosCode length="15" nullable databaseColumn="mos_code"  hint="visible=true,toString" 
+			String mosName length="64" nullable databaseColumn="mos_name"  hint="visible=true,toString" 
+			String mosType length="1" nullable databaseColumn="mos_type"  hint="visible=true,toString" 
+			
+				- @ParRegionOld mosRegId  databaseColumn="mos_reg_id"  /*<-> idRegMosId*/ nullable fetch="lazy" cascade="refresh" 
+				
+				- @ParProvinceOld mosDelProvId  databaseColumn="mos_del_prov_id"  /*<-> idProvDelMosId*/ nullable fetch="lazy" cascade="refresh" 							
+			
+				- @ParCommuneOld mosComId  databaseColumn="mos_com_id"  /*<-> idComMosId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				//- @ParEntity mosDelRegId  databaseColumn="mos_del_reg_id"  /*<-> idRegDelMosId*/ nullable fetch="lazy" cascade="refresh"  							
+				  							
+			
+			//- List<@PlaCreditOp> idMosCopId <-> copMosId
+			//- List<@PlaCreditPrs> idMosCprId <-> cprMosId
+			
+			Repository MhaiMosqueOldRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@MhaiMosqueOld> findAll(PagingParameter pagingParameter);
+				PagedResult<@MhaiMosqueOld> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service MhaiMosqueOldService {
+			
+			findById => MhaiMosqueOldRepository.findById;
+			findAll => MhaiMosqueOldRepository.findAll;
+			save => MhaiMosqueOldRepository.save;
+			delete => MhaiMosqueOldRepository.delete;
+			PagedResult<@MhaiMosqueOld> search(@MhaiMosqueOldDTO aua);
+			PagedResult<@MhaiMosqueOld> findAll(PagingParameter pagingParameter);
+
+		}
+		
+		DataTransferObject MhaiMosqueOldDTO {
+			hint="for=search,entity=MhaiMosqueOld"
+			String mosCode hint="" 
+			String mosName hint="" 
+			String mosType hint=""
+			String mosRegId1 hint="ref=mosRegId,view=ComboBox"
+			String mosDelProvId1 hint="ref=mosDelProvId,view=ComboBox,LinkedTo=mosRegId1"
+			String mosComId1 hint="ref=mosComId,view=ComboBox,LinkedTo=mosDelProvId1"
+		}
+		
+		DataTransferObject MhaiMosqueOldMergeDTO {
+			hint="for=merge,entity=MhaiMosqueOld"
+			String mosCode hint="" 
+			String mosName hint="" 
+			String mosType hint="type=enum,items=M&Mosquee:T&Terrain"
+			String mosRegId hint="type=system,view=ComboBox"
+			String mosDelProvId hint="type=system,view=ComboBox,LinkedTo=mosRegId"
+			String mosComId hint="type=system,view=ComboBox,LinkedTo=mosDelProvId"
+			//String mosDelRegId hint="type=system,view=ComboBox"
+		}
+		
+		//**************************************************************************************************************************************************
+		
+		
+		Entity MhaiMosqueAnc{
+			databaseTable="mhai_mosque_anc"
+			hint="idSequence=moseuqsomanc_iahm_X"
+			
+			Long id    databaseColumn="mos_id" 
+			String mosCode length="15" nullable databaseColumn="mos_code"  hint="visible=true,toString" 
+			String mosName length="64" nullable databaseColumn="mos_name"  hint="visible=true,toString" 
+			String mosType length="1" nullable databaseColumn="mos_type"  hint="visible=true,toString" 
+			
+				- @ParRegionAnc mosRegId  databaseColumn="mos_reg_id"  /*<-> idRegMosId*/ nullable fetch="lazy" cascade="refresh" 
+				
+				- @ParProvinceAnc mosDelProvId  databaseColumn="mos_del_prov_id"  /*<-> idProvDelMosId*/ nullable fetch="lazy" cascade="refresh"  							 							
+			
+				- @ParCommuneAnc mosComId  databaseColumn="mos_com_id"  /*<-> idComMosId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				//- @ParEntity mosDelRegId  databaseColumn="mos_del_reg_id"  /*<-> idRegDelMosId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+			//- List<@PlaCreditOp> idMosCopId <-> copMosId
+			//- List<@PlaCreditPrs> idMosCprId <-> cprMosId
+			
+			Repository MhaiMosqueAncRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@MhaiMosqueAnc> findAll(PagingParameter pagingParameter);
+				PagedResult<@MhaiMosqueAnc> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service MhaiMosqueAncService {
+			
+			findById => MhaiMosqueAncRepository.findById;
+			findAll => MhaiMosqueAncRepository.findAll;
+			save => MhaiMosqueAncRepository.save;
+			delete => MhaiMosqueAncRepository.delete;
+			PagedResult<@MhaiMosqueAnc> search(@MhaiMosqueAncDTO aua);
+			PagedResult<@MhaiMosqueAnc> findAll(PagingParameter pagingParameter);
+
+		}
+		
+		DataTransferObject MhaiMosqueAncDTO {
+			hint="for=search,entity=MhaiMosqueAnc"
+			String mosCode hint="" 
+			String mosName hint="" 
+			String mosType hint=""
+			String mosRegId1 hint="ref=mosRegId,view=ComboBox"
+			String mosDelProvId1 hint="ref=mosDelProvId,view=ComboBox,LinkedTo=mosRegId1"
+			String mosComId1 hint="ref=mosComId,view=ComboBox,LinkedTo=mosDelProvId1"
+		}
+		
+		DataTransferObject MhaiMosqueAncMergeDTO {
+			hint="for=merge,entity=MhaiMosqueAnc"
+			String mosCode hint="" 
+			String mosName hint="" 
+			String mosType hint="type=enum,items=M&Mosquee:T&Terrain"
+			String mosRegId hint="type=system,view=ComboBox"
+			String mosDelProvId hint="type=system,view=ComboBox,LinkedTo=mosRegId"
+			String mosComId hint="type=system,view=ComboBox,LinkedTo=mosDelProvId"
+			//String mosDelRegId hint="type=system,view=ComboBox"
+		}
+		
+		
+	}
+}

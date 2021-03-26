@@ -1,0 +1,9 @@
+val_pro_id=1603
+
+
+delete from mon_ne_subdevice;
+delete from mon_ne_device;
+
+
+update mon_xfs_value set val_sev_id=5 where val_code='xfsDevNoDevice';
+update mon_xfs_value set val_sev_id=4 where val_code='xfsDevOnline';

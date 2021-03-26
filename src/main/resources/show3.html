@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html layout:decorate="fragments/general_show_template"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title layout:fragment="title" data-th-text="#{screen_show}+' '+#{cpt.cptDepenseCI}">Welcome</title>
+<style layout:fragment="style">
+.modal-dialog>.modal-content>.modal-body {
+	height: 300px;
+}
+</style>
+
+<link data-th-href="@{/resources/js/angular-datepicker-master/dist/angular-datepicker.min.css}"
+rel="stylesheet" type="text/css" />
+</head>
+<style>
+.table > tbody > tr > td{
+border:0px;
+}
+</style>
+<body>
+	
+	<div layout:fragment="content"  data-ng-app="app" data-ng-controller="ctrl as vm" >	
+				
+				<ol class="breadcrumb" style="margin: 4px -5px -8px;border-radius: 0px;">
+				  <li><a th:href="@{/rest/}" th:text="#{breadcrumbs_home}">Home</a></li>
+				  <li><a th:href="@{/rest/cptresources/cptDepenseCI/search}" th:text="#{cpt.cptDepenseCI}">Module</a></li>
+				  <li class="active" th:text="#{screen_show}+' '+#{cpt.cptDepenseCI}">Fonction</li>
+				</ol>	
+				
+				<div class="row" style="margin-right: 7px;">
+				
+				<div class="panel panel-default col-md-12 col-lg-12" id="merge-panel" style="padding: 0px;margin:2px 11px;">
+					<div class="panel-heading">
+						<span th:text="#{screen_show}+' '+#{cpt.cptDepenseCI}" ></span>	
+						
+						<div th:if="${uspaspdf}"  class="btn btn-list pull-right" id="uspAsPDF" onclick="return saveToPdf();" data-toggle="modal" data-target="#myModalPdfViewer"  
+							style="margin-top:-4px;color: inherit;">
+							<i class="fa fa-file-pdf-o"></i>
+						</div>		
+						<a th:if="${uspcreate}"  class="btn btn-list pull-right"  
+							th:href="@{/rest/cptresources/cptDepenseCI/create}"  style="margin-top:-4px;color: inherit;">
+							<i class="fa fa-plus"></i>
+						</a>
+						<div th:if="${uspdelete}"  class="btn btn-list pull-right" onclick="return verifieDelete(this);" 
+							th:attr="data-url=${#httpServletRequest.requestURI}+'/delete'"  style="margin-top:-4px;color: inherit;">
+							<i class="fa fa-times"></i>
+						</div>
+						<a  th:if="${uspupdate}" class="btn btn-list pull-right"  
+							th:href="${#httpServletRequest.requestURI}+'/update'"  style="margin-top:-4px;color: inherit;">
+							<i class="fa fa-pencil"></i>
+						</a>
+						<a class="btn btn-list pull-right" href="/rest/cptresources/cptDepenseCI/search" 
+							th:href="@{/rest/cptresources/cptDepenseCI/search}"  style="margin-top:-4px;color: inherit;">
+							<i class="fa fa-arrow-left"></i>
+						</a>
+					
+						
+					</div>
+					<div class="panel-body">					
+					<div th:unless="${#lists.isEmpty(result)}" id="showTable"  layout:fragment="showTable_fg">  
+					<input type="hidden" id="id" th:value="${result.id}" />
+					
+					
+					
+					<fieldset class="col-md-12 col-lg-12">
+					
+					
+					
+					<div class="row" id="form-row" style="margin:10px">
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpAchId}">CdpAchId</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpAchId!=null}" th:text="${{result.cdpAchId}}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpAchId==null}" th:text="NULL" ></div>
+							
+							<!-- Entite demander-->
+						    <div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{ach.achAchatMergeDTO.dem}">CdpAchId</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpEntId!=null}" th:text="${{result.cdpEntId}}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpEntId==null}" th:text="NULL" ></div>
+							
+							
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpConcurent}">CdpConcurent</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpConcurent}" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpRc}">CdpRc</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpRc}" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpIce}">CdpIce</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpIce}" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpIf}">CdpIf</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpIf}" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpCnss}">CdpCnss</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpCnss}" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpRib}">CdpRib</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpRib}" ></div>
+						
+						
+						    <div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpCp}">CdpCp</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:if="${result.cdpCp!=null}"  th:text="${#numbers.formatDecimal(result.cdpCp, #messages.msg('app.bigDec.mindigits'), #messages.msg('app.bigDec.thousands.separator'), #messages.msg('app.bigDec.decimal.digits'), #messages.msg('app.bigDec.decimal.separator'))}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  data-class="String" th:if="${result.cdpCp==null}"  ></div>
+							
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpCe}">CdpCe</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:if="${result.cdpCe!=null}"  th:text="${#numbers.formatDecimal(result.cdpCe, #messages.msg('app.bigDec.mindigits'), #messages.msg('app.bigDec.thousands.separator'), #messages.msg('app.bigDec.decimal.digits'), #messages.msg('app.bigDec.decimal.separator'))}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  data-class="String" th:if="${result.cdpCe==null}"  ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpInterMor}">CdpInterMor</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:if="${result.cdpInterMor!=null}"  th:text="${#numbers.formatDecimal(result.cdpInterMor, #messages.msg('app.bigDec.mindigits'), #messages.msg('app.bigDec.thousands.separator'), #messages.msg('app.bigDec.decimal.digits'), #messages.msg('app.bigDec.decimal.separator'))}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  data-class="String" th:if="${result.cdpInterMor==null}"  ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpRevPrix}">CdpRevPrix</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:if="${result.cdpRevPrix!=null}"  th:text="${#numbers.formatDecimal(result.cdpRevPrix, #messages.msg('app.bigDec.mindigits'), #messages.msg('app.bigDec.thousands.separator'), #messages.msg('app.bigDec.decimal.digits'), #messages.msg('app.bigDec.decimal.separator'))}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  data-class="String" th:if="${result.cdpRevPrix==null}"  ></div>
+							
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpMc}">CdpMc</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:if="${result.cdpMc!=null}"  th:text="${#numbers.formatDecimal(result.cdpMc, #messages.msg('app.bigDec.mindigits'), #messages.msg('app.bigDec.thousands.separator'), #messages.msg('app.bigDec.decimal.digits'), #messages.msg('app.bigDec.decimal.separator'))}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  data-class="String" th:if="${result.cdpMc==null}"  ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpMom}">CdpMom</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:if="${result.cdpMom!=null}"  th:text="${#numbers.formatDecimal(result.cdpMom, #messages.msg('app.bigDec.mindigits'), #messages.msg('app.bigDec.thousands.separator'), #messages.msg('app.bigDec.decimal.digits'), #messages.msg('app.bigDec.decimal.separator'))}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  data-class="String" th:if="${result.cdpMom==null}"  ></div>
+							
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpNumDep}">cdpNumDep</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpNumDep}" ></div>
+							
+							
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpNrCon}">CdpNrCon</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpNrCon}" ></div>
+							
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpRevPrixDate}">CdpRevPrixDate</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  data-class="date"  th:if="${result.cdpRevPrixDate!=null}"  th:text="${#calendars.format(result.cdpRevPrixDate,#messages.msg('app.dateformat'))}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpRevPrixDate==null}" ></div>
+							
+							
+							
+							
+							<!-- 
+						<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpNumDep}">CdpNumDep</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpNumDep}" ></div>
+							
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpStatus}">CdpStatus</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpStatus}" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpDateRem}">CdpDateRem</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  data-class="date"  th:if="${result.cdpDateRem!=null}"  th:text="${#calendars.format(result.cdpDateRem,#messages.msg('app.dateformat'))}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpDateRem==null}" ></div>
+							
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpDateEnr}">CdpDateEnr</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  data-class="date"  th:if="${result.cdpDateEnr!=null}"  th:text="${#calendars.format(result.cdpDateEnr,#messages.msg('app.dateformat'))}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpDateEnr==null}" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpNumEnr}">CdpNumEnr</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpNumEnr}" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpDateEng}">CdpDateEng</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  data-class="date"  th:if="${result.cdpDateEng!=null}"  th:text="${#calendars.format(result.cdpDateEng,#messages.msg('app.dateformat'))}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpDateEng==null}" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpSignEng}">CdpSignEng</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpSignEng}" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpDateApp}">CdpDateApp</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  data-class="date"  th:if="${result.cdpDateApp!=null}"  th:text="${#calendars.format(result.cdpDateApp,#messages.msg('app.dateformat'))}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpDateApp==null}" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpSignApp}">CdpSignApp</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpSignApp}" ></div>
+						
+						    <div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpNumGid}">CdpNumGid</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpNumGid}" ></div>
+						
+						    <div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpNumVisa}">CdpNumVisa</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpNumVisa}" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpDateVisa}">CdpDateVisa</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  data-class="date"  th:if="${result.cdpDateVisa!=null}"  th:text="${#calendars.format(result.cdpDateVisa,#messages.msg('app.dateformat'))}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpDateVisa==null}" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpCurStatusDate}">CdpCurStatusDate</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  data-class="date"  th:if="${result.cdpCurStatusDate!=null}"  th:text="${#calendars.format(result.cdpCurStatusDate,#messages.msg('app.dateformat'))}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpCurStatusDate==null}" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpCurDecision}">CdpCurDecision</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpCurDecision}" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpMpr}">CdpMpr</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="bigdecimal" th:if="${result.cdpMpr!=null}"  th:text="${#numbers.formatDecimal(result.cdpMpr, #messages.msg('app.bigDec.mindigits'), #messages.msg('app.bigDec.thousands.separator'), #messages.msg('app.bigDec.decimal.digits'), #messages.msg('app.bigDec.decimal.separator'))}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  data-class="bigdecimal" th:if="${result.cdpMpr==null}"  ></div>
+							
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpParId}">CdpParId</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpParId!=null}" th:text="${{result.cdpParId}}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpParId==null}" th:text="NULL" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpLinId}">CdpLinId</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpLinId!=null}" th:text="${{result.cdpLinId}}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpLinId==null}" th:text="NULL" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpArtId}">CdpArtId</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpArtId!=null}" th:text="${{result.cdpArtId}}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpArtId==null}" th:text="NULL" ></div>
+							
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpAloId}">CdpAloId</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpAloId!=null}" th:text="${{result.cdpAloId}}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpAloId==null}" th:text="NULL" ></div>
+							
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpBenId}">CdpBenId</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpBenId!=null}" th:text="${{result.cdpBenId}}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpBenId==null}" th:text="NULL" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpOrdId}">CdpOrdId</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpOrdId!=null}" th:text="${{result.cdpOrdId}}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpOrdId==null}" th:text="NULL" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpEntId}">CdpEntId</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpEntId!=null}" th:text="${{result.cdpEntId}}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpEntId==null}" th:text="NULL" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpCurAenId}">CdpCurAenId</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpCurAenId!=null}" th:text="${{result.cdpCurAenId}}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpCurAenId==null}" th:text="NULL" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpCurCenId}">CdpCurCenId</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpCurCenId!=null}" th:text="${{result.cdpCurCenId}}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpCurCenId==null}" th:text="NULL" ></div>
+						-->
+						<!--  	
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpDatDem}">CdpDatDem</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpDatDem}" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpDatOuvPli}">CdpDatOuvPli</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpDatOuvPli}" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpNrDemAch}">CdpNrDemAch</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpNrDemAch}" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpPres}">CdpPres</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpPres}" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpBdtId}">CdpBdtId</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpBdtId!=null}" th:text="${{result.cdpBdtId}}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpBdtId==null}" th:text="NULL" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpPrtId}">CdpPrtId</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpPrtId!=null}" th:text="${{result.cdpPrtId}}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpPrtId==null}" th:text="NULL" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpAmpId}">CdpAmpId</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpAmpId!=null}" th:text="${{result.cdpAmpId}}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpAmpId==null}" th:text="NULL" ></div>
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpAtdId}">CdpAtdId</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpAtdId!=null}" th:text="${{result.cdpAtdId}}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpAtdId==null}" th:text="NULL" ></div>
+						
+						
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpAstId}">CdpAstId</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpAstId!=null}" th:text="${{result.cdpAstId}}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpAstId==null}" th:text="NULL" ></div>
+							
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpPexId}">CdpPexId</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpPexId!=null}" th:text="${{result.cdpPexId}}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cdpPexId==null}" th:text="NULL" ></div>
+							
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cprPrcId}">CprPrcId</label></div>												
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cprPrcId!=null}" th:text="${{result.cprPrcId}}" ></div>
+							<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;"  th:if="${result.cprPrcId==null}" th:text="NULL" ></div>	
+						-->
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpFluTau}">CdpFluTau</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpFluTau}" ></div>
+							
+							<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpDepCon}">CdpDepCon</label></div>												
+							<div   class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" data-class="String" th:text="${result.cdpDepCon}" ></div>
+												
+					</div>
+					
+					<br/>
+					
+					
+					</fieldset>
+				</div>
+				</div>
+			</div>
+			
+				</br>
+				
+			 
+				<div class="row"
+					th:if="${result.cdpCurCenId?.id == T(ma.brs.sgbcdm.cpt.serviceapi.CptEntityCts).CI_ID  || result.cdpCurCenId?.id == T(ma.brs.sgbcdm.cpt.serviceapi.CptEntityCts).SGM_CI_ID }">
+
+					<div class="row">
+						<a class="btn btn-actions"
+							th:if="${uspverify  && ( result.cdpCurStatus == T(ma.brs.sgbcdm.cpt.serviceapi.CptDepenseCts).ON_GOING )}"
+							th:href="@{/rest/cptresources/cptDepenseCI/__${result.id}__/sendVerfication}">
+							Envoyer pour verification </a>
+								
+						<a class="btn btn-actions"
+							th:if="${uspverify  && result.cdpCurStatus == T(ma.brs.sgbcdm.cpt.serviceapi.CptDepenseCts).MADE}"
+							data-ng-click="vm.addStatus('A')"> Valider </a>
+						<a
+							class="btn btn-actions"
+							th:if="${uspverify  && result.cdpCurStatus == T(ma.brs.sgbcdm.cpt.serviceapi.CptDepenseCts).MADE}"
+							data-ng-click="vm.addStatus('R')"> Rejeter </a>
+						
+						<a
+							class="btn btn-actions"
+							th:if="${uspverify  && ( result.cdpCurStatus == T(ma.brs.sgbcdm.cpt.serviceapi.CptDepenseCts).APPROVED || result.cdpCurStatus == T(ma.brs.sgbcdm.cpt.serviceapi.CptDepenseCts).REJECTED )}"
+							data-ng-click="vm.addDecision('sb')"> Envoyer SB </a>
+							<!-- 
+							<a
+							class="btn btn-actions"
+							th:if="${uspverify  && result.cdpCurStatus == T(ma.brs.sgbcdm.cpt.serviceapi.CptDepenseCts).APPROVED}"
+							data-ng-click="vm.addDecision('sm')"> Envoyer SM </a>
+							<a
+							class="btn btn-actions"
+							th:if="${uspverify  && result.cdpCurStatus == T(ma.brs.sgbcdm.cpt.serviceapi.CptDepenseCts).APPROVED}"
+							data-ng-click="vm.addDecision('tm')"> Envoyer TM </a>
+							-->
+					</div>
+				</div>
+			
+				
+				</div>
+				<div th:if="${#lists.isEmpty(result)}">					
+					No CptDepenseCI found with this id.
+				</div>
+				
+				<div data-th-replace="main/cptresources/cptDepState/statuRemModal :: body "></div>
+
+		<div data-th-replace="main/cptresources/cptDepDecision/decisionModal :: body(true, false) "></div>
+
+	<!-- 	<div data-th-replace="main/achresources/achAchatMemo/memoModal :: body "></div> -->
+
+				
+				</div>
+<div layout:fragment="js_script" id="script_js">
+
+		<script th:src="@{/resources/js/main/cptresources/cptDepenseCI/show.js}"></script>
+
+		<div data-th-replace="main/importAngular :: body "></div>
+
+		<div data-th-replace="main/importAngularDatepicker :: body "></div>
+		
+		<script data-th-src="@{/resources/js/main/module.js}"></script>
+		<script data-th-src="@{/resources/js/main/require-720kb-datepicker.js}"></script>
+		
+		<script data-th-src="@{/resources/js/main/url.service.js}"></script>
+		<script data-th-src="@{/resources/js/main/swal.service.js}"></script>
+		<script data-th-src="@{/resources/js/main/cptresources/cptDepenseCI/show/data.service.js}"></script>
+		<script data-th-src="@{/resources/js/main/cptresources/cptDepenseCI/show/ctrl.js}"></script>
+		
+		<script data-th-src="@{/resources/js/main/cptresources/cptDepDecision/listTab/data.service.js}"></script>
+		<script data-th-src="@{/resources/js/main/cptresources/cptDepDecision/listTab/ctrl.js}"></script>
+		
+		<script data-th-src="@{/resources/js/main/cptresources/cptDepState/listTab/data.service.js}"></script>
+		<script data-th-src="@{/resources/js/main/cptresources/cptDepState/listTab/ctrl.js}"></script>
+		<!-- 
+		<script data-th-src="@{/resources/js/main/cptresources/cptDepenseMemo/modal/data.service.js}"></script>
+		<script data-th-src="@{/resources/js/main/cptresources/cptDepenseMemo/modal/ctrl.js}"></script>
+		-->
+	
+</div>
+
+			
+</body>
+</html>
+										

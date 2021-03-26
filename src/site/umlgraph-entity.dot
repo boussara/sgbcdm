@@ -1,0 +1,4024 @@
+digraph G {
+	fontsize = 10
+	node [
+		fontsize = 10
+		fontname="arial"
+		shape=plaintext
+	]
+
+	edge [
+		fontsize = 10
+	]
+subgraph clusterach {
+	label = "ach"  
+	AchAchat [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchat </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + achNature : String </td></tr>
+	<tr><td align="left"> + achCode : String </td></tr>
+	<tr><td align="left"> + achName : String </td></tr>
+	<tr><td align="left"> + achDemDate : Date </td></tr>
+	<tr><td align="left"> + achIsAlloti : String </td></tr>
+	<tr><td align="left"> + achLotNbr : Integer </td></tr>
+	<tr><td align="left"> + achDateDebut : Date </td></tr>
+	<tr><td align="left"> + achDateFin : Date </td></tr>
+	<tr><td align="left"> + achDelaiExe : Integer </td></tr>
+	<tr><td align="left"> + achDelaiUnit : String </td></tr>
+	<tr><td align="left"> + achVisite : String </td></tr>
+	<tr><td align="left"> + achLieuVisite : String </td></tr>
+	<tr><td align="left"> + achDateVisite : Date </td></tr>
+	<tr><td align="left"> + achEnvTrait : Date </td></tr>
+	<tr><td align="left"> + achCurStatus : String </td></tr>
+	<tr><td align="left"> + achCurStatusDate : Date </td></tr>
+	<tr><td align="left"> + achCurDecision : String </td></tr>
+	<tr><td align="left"> + achNumAo : String </td></tr>
+	<tr><td align="left"> + achDateOuv : Date </td></tr>
+	<tr><td align="left"> + achLieuOuv : String </td></tr>
+	<tr><td align="left"> + achLieuRetDos : String </td></tr>
+	<tr><td align="left"> + achLieuDepPlis : String </td></tr>
+	<tr><td align="left"> + achLieuDepEch : String </td></tr>
+	<tr><td align="left"> + achDateDep : Date </td></tr>
+	<tr><td align="left"> + achPubUrl1 : String </td></tr>
+	<tr><td align="left"> + achPubUrl2 : String </td></tr>
+	<tr><td align="left"> + achPrixAquis : BigDecimal </td></tr>
+	<tr><td align="left"> + achIsQc : String </td></tr>
+	<tr><td align="left"> + achNumRc : String </td></tr>
+	<tr><td align="left"> + achTrvSecteur : String </td></tr>
+	<tr><td align="left"> + achTrvClasse : String </td></tr>
+	<tr><td align="left"> + achTrvQualif : String </td></tr>
+	<tr><td align="left"> + achGeoActivite : String </td></tr>
+	<tr><td align="left"> + achGeoQualif : String </td></tr>
+	<tr><td align="left"> + achGeoCategorie : String </td></tr>
+	<tr><td align="left"> + achPlafond : BigDecimal </td></tr>
+	<tr><td align="left"> + achMonPenJou : BigDecimal </td></tr>
+	<tr><td align="left"> + achMethode : String </td></tr>
+	<tr><td align="left"> + achNumCon : String </td></tr>
+	<tr><td align="left"> + achEnvPub : String </td></tr>
+	<tr><td align="left"> + achArchTaux : BigDecimal </td></tr>
+	<tr><td align="left"> + achMontEstimation : BigDecimal </td></tr>
+	<tr><td align="left"> + achTVA : BigDecimal </td></tr>
+	<tr><td align="left"> + achRevisionPrix : BigDecimal </td></tr>
+	<tr><td align="left"> + achNaturePrix : String </td></tr>
+	<tr><td align="left"> + achAvecPenalite : String </td></tr>
+	<tr><td align="left"> + achRetenueGaran : String </td></tr>
+	<tr><td align="left"> + achMontCautProv : BigDecimal </td></tr>
+	<tr><td align="left"> + achDeductibleDecompte : String </td></tr>
+	<tr><td align="left"> + achTypeBord : String </td></tr>
+	<tr><td align="left"> + achIndicSupp : String </td></tr>
+	<tr><td align="left"> + achInitiPar : String </td></tr>
+	<tr><td align="left"> + achAvancement : String </td></tr>
+	<tr><td align="left"> + achMontAvancement : BigDecimal </td></tr>
+	<tr><td align="left"> + achHeureOuv : String </td></tr>
+	<tr><td align="left"> + achHeureVisite : String </td></tr>
+	<tr><td align="left"> + achDateDepEch : Date </td></tr>
+	<tr><td align="left"> + achContAgreAssu : String </td></tr>
+	<tr><td align="left"> + achObesevation : String </td></tr>
+	<tr><td align="left"> + achHeureDep : String </td></tr>
+	<tr><td align="left"> + achNbrPhases : Integer </td></tr>
+	<tr><td align="left"> + achDepId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatAttach [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatAttach </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aaaName : String </td></tr>
+	<tr><td align="left"> + aaaUser : String </td></tr>
+	<tr><td align="left"> + aaaDate : Date </td></tr>
+	<tr><td align="left"> + aaaDoc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatAvenant [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatAvenant </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + achNumAvenant : String </td></tr>
+	<tr><td align="left"> + achLoiFin : String </td></tr>
+	<tr><td align="left"> + achDateEff : Date </td></tr>
+	<tr><td align="left"> + achObjet : String </td></tr>
+	<tr><td align="left"> + achSomVal : String </td></tr>
+	<tr><td align="left"> + achBenif : String </td></tr>
+	<tr><td align="left"> + achModRegl : String </td></tr>
+	<tr><td align="left"> + achDelai : String </td></tr>
+	<tr><td align="left"> + achBord : String </td></tr>
+	<tr><td align="left"> + achErrMat : String </td></tr>
+	<tr><td align="left"> + achSomValAct : String </td></tr>
+	<tr><td align="left"> + achBenifAct : String </td></tr>
+	<tr><td align="left"> + achModReglAct : String </td></tr>
+	<tr><td align="left"> + achDelaiAct : String </td></tr>
+	<tr><td align="left"> + achBordAct : String </td></tr>
+	<tr><td align="left"> + achErrMatAct : String </td></tr>
+	<tr><td align="left"> + achSomValMod : String </td></tr>
+	<tr><td align="left"> + achBenifMod : String </td></tr>
+	<tr><td align="left"> + achModReglMod : String </td></tr>
+	<tr><td align="left"> + achDelaiMod : String </td></tr>
+	<tr><td align="left"> + achBordMod : String </td></tr>
+	<tr><td align="left"> + achErrMatMod : String </td></tr>
+	<tr><td align="left"> + achNumDecision : String </td></tr>
+	<tr><td align="left"> + achMotifAug : String </td></tr>
+	<tr><td align="left"> + achAvenantType : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatBord [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatBord </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aabName : String </td></tr>
+	<tr><td align="left"> + aabUser : String </td></tr>
+	<tr><td align="left"> + aabDate : Date </td></tr>
+	<tr><td align="left"> + aabDoc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatDecision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatDecision </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + adcStatus : String </td></tr>
+	<tr><td align="left"> + adcDate : Date </td></tr>
+	<tr><td align="left"> + adcRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatExel [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatExel </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aaeNr : String </td></tr>
+	<tr><td align="left"> + aaeDesignation : String </td></tr>
+	<tr><td align="left"> + aaeUnite : String </td></tr>
+	<tr><td align="left"> + aaeQuantite : BigDecimal </td></tr>
+	<tr><td align="left"> + aaeQuantiteBen : BigDecimal </td></tr>
+	<tr><td align="left"> + aaeQuantiteMod : BigDecimal </td></tr>
+	<tr><td align="left"> + aaeQuantiteRet : BigDecimal </td></tr>
+	<tr><td align="left"> + aaeQuantitePay : BigDecimal </td></tr>
+	<tr><td align="left"> + aaeQuantiteRea : BigDecimal </td></tr>
+	<tr><td align="left"> + aaePuHt : BigDecimal </td></tr>
+	<tr><td align="left"> + aaePrixTotal : BigDecimal </td></tr>
+	<tr><td align="left"> + aaeMarges : BigDecimal </td></tr>
+	<tr><td align="left"> + aaeFraisFct : BigDecimal </td></tr>
+	<tr><td align="left"> + aaeFraisGen : BigDecimal </td></tr>
+	<tr><td align="left"> + aaeMainOeuvre : Integer </td></tr>
+	<tr><td align="left"> + aaeMntMatFr : BigDecimal </td></tr>
+	<tr><td align="left"> + aaeTaxes : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatLot [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatLot </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aloCode : String </td></tr>
+	<tr><td align="left"> + aloName : String </td></tr>
+	<tr><td align="left"> + aloOrder : Integer </td></tr>
+	<tr><td align="left"> + aloAmtEstim : BigDecimal </td></tr>
+	<tr><td align="left"> + aloAmtCaut : BigDecimal </td></tr>
+	<tr><td align="left"> + aloBdeFile : String </td></tr>
+	<tr><td align="left"> + aloConcurent : String </td></tr>
+	<tr><td align="left"> + aloMontant : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatMemo [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatMemo </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aamMemo : String </td></tr>
+	<tr><td align="left"> + aamUser : String </td></tr>
+	<tr><td align="left"> + aamDate : Date </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAchatState [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAchatState </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + astStatus : String </td></tr>
+	<tr><td align="left"> + astDate : Date </td></tr>
+	<tr><td align="left"> + astRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAgrementCat [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAgrementCat </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aacCode : String </td></tr>
+	<tr><td align="left"> + aacName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAgrementList [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAgrementList </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aalCertif : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAspPresence [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAspPresence </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + appPresent : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAspPublication [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAspPublication </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aapRem : String </td></tr>
+	<tr><td align="left"> + aapInserted : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchAspReserve [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchAspReserve </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + areObjet : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchBde [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchBde </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + abeNum : Integer </td></tr>
+	<tr><td align="left"> + abeLabel : String </td></tr>
+	<tr><td align="left"> + abeUnit : String </td></tr>
+	<tr><td align="left"> + abeQte : Integer </td></tr>
+	<tr><td align="left"> + abePuHt : BigDecimal </td></tr>
+	<tr><td align="left"> + abeTva : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchBordDet [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchBordDet </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + abdCNum : String </td></tr>
+	<tr><td align="left"> + abdCArticle : String </td></tr>
+	<tr><td align="left"> + abdCUnit : String </td></tr>
+	<tr><td align="left"> + abdCUnitPrice : BigDecimal </td></tr>
+	<tr><td align="left"> + abdDNum : String </td></tr>
+	<tr><td align="left"> + abdDPres : String </td></tr>
+	<tr><td align="left"> + abdDUnit : String </td></tr>
+	<tr><td align="left"> + abdDAmt : String </td></tr>
+	<tr><td align="left"> + abdDUnitPrice : BigDecimal </td></tr>
+	<tr><td align="left"> + abdBNum : String </td></tr>
+	<tr><td align="left"> + abdBPres : String </td></tr>
+	<tr><td align="left"> + abdBUnit : String </td></tr>
+	<tr><td align="left"> + abdBUnitPrice : BigDecimal </td></tr>
+	<tr><td align="left"> + abdENum : String </td></tr>
+	<tr><td align="left"> + abdEPres : String </td></tr>
+	<tr><td align="left"> + abdEUnit : String </td></tr>
+	<tr><td align="left"> + abdEAmt : String </td></tr>
+	<tr><td align="left"> + abdEUnitPrice : BigDecimal </td></tr>
+	<tr><td align="left"> + abdDTotalPrice : BigDecimal </td></tr>
+	<tr><td align="left"> + abdETotalPrice : BigDecimal </td></tr>
+	<tr><td align="left"> + abdFNum : String </td></tr>
+	<tr><td align="left"> + abdFPres : String </td></tr>
+	<tr><td align="left"> + abdFIncPrice : BigDecimal </td></tr>
+	<tr><td align="left"> + abdGNum : String </td></tr>
+	<tr><td align="left"> + abdGPres : String </td></tr>
+	<tr><td align="left"> + abdGIncAmt : BigDecimal </td></tr>
+	<tr><td align="left"> + abdGIncPrice : BigDecimal </td></tr>
+	<tr><td align="left"> + abdGTotalPrice : BigDecimal </td></tr>
+	<tr><td align="left"> + abdHNum : String </td></tr>
+	<tr><td align="left"> + abdHMatSuppAmt : BigDecimal </td></tr>
+	<tr><td align="left"> + abdHLabor : String </td></tr>
+	<tr><td align="left"> + abdHHardOperCost : BigDecimal </td></tr>
+	<tr><td align="left"> + abdHGenCost : BigDecimal </td></tr>
+	<tr><td align="left"> + abdHTaxes : BigDecimal </td></tr>
+	<tr><td align="left"> + abdHMarges : BigDecimal </td></tr>
+	<tr><td align="left"> + abdHTotal : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchBordType [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchBordType </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + abtCode : String </td></tr>
+	<tr><td align="left"> + abtName : String </td></tr>
+	<tr><td align="left"> + abtDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchCommMember [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchCommMember </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + acmNom : String </td></tr>
+	<tr><td align="left"> + acmPrenom : String </td></tr>
+	<tr><td align="left"> + acmRemarque : String </td></tr>
+	<tr><td align="left"> + acmFct : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchCommission [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchCommission </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + acoStatus : String </td></tr>
+	<tr><td align="left"> + acoDecisionDate : Date </td></tr>
+	<tr><td align="left"> + acoDecisionNum : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchConcurent [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchConcurent </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + acrName : String </td></tr>
+	<tr><td align="left"> + acrCnss : String </td></tr>
+	<tr><td align="left"> + acrRc : String </td></tr>
+	<tr><td align="left"> + acrIf : String </td></tr>
+	<tr><td align="left"> + acrIce : String </td></tr>
+	<tr><td align="left"> + acrBank : String </td></tr>
+	<tr><td align="left"> + acrRib : String </td></tr>
+	<tr><td align="left"> + acrAdress : String </td></tr>
+	<tr><td align="left"> + acrTel : String </td></tr>
+	<tr><td align="left"> + acrFax : String </td></tr>
+	<tr><td align="left"> + acrEmail : String </td></tr>
+	<tr><td align="left"> + acrActiv : String </td></tr>
+	<tr><td align="left"> + acrObservation : String </td></tr>
+	<tr><td align="left"> + acrGerant : String </td></tr>
+	<tr><td align="left"> + acrImage : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchDelaiPhase [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchDelaiPhase </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + phaLabel : String </td></tr>
+	<tr><td align="left"> + phaDelaiExe : Integer </td></tr>
+	<tr><td align="left"> + phaDelaiUnit : String </td></tr>
+	<tr><td align="left"> + phaMontant : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchDemPub [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchDemPub </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + adpStatus : String </td></tr>
+	<tr><td align="left"> + adpDate : Date </td></tr>
+	<tr><td align="left"> + adpDateLimit : Date </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchEntity [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchEntity </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aenName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchHasAcm [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchHasAcm </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ahmStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchJournal [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchJournal </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + acjName : String </td></tr>
+	<tr><td align="left"> + acjLang : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchMemberGroup [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchMemberGroup </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + amgName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchModePass [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchModePass </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ampCode : String </td></tr>
+	<tr><td align="left"> + ampName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchPrestations [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchPrestations </font></td></tr>
+	</table></td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchProgPrev [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchProgPrev </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + appCode : String </td></tr>
+	<tr><td align="left"> + appName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchPublication [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchPublication </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + apbType : String </td></tr>
+	<tr><td align="left"> + apbNumBord : String </td></tr>
+	<tr><td align="left"> + apbDateEnv : Date </td></tr>
+	<tr><td align="left"> + apbUrl : String </td></tr>
+	<tr><td align="left"> + apbIsPub : String </td></tr>
+	<tr><td align="left"> + apbDatePub : Date </td></tr>
+	<tr><td align="left"> + apbRem : String </td></tr>
+	<tr><td align="left"> + apbNumPub : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchSeancePv [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchSeancePv </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aspDate : Date </td></tr>
+	<tr><td align="left"> + aspDateDem : Date </td></tr>
+	<tr><td align="left"> + aspDatePre : Date </td></tr>
+	<tr><td align="left"> + aspDatePub : Date </td></tr>
+	<tr><td align="left"> + aspDateLis : Date </td></tr>
+	<tr><td align="left"> + aspDateVer : Date </td></tr>
+	<tr><td align="left"> + aspDateOuv : Date </td></tr>
+	<tr><td align="left"> + aspDateOff : Date </td></tr>
+	<tr><td align="left"> + aspDateFin : Date </td></tr>
+	<tr><td align="left"> + aspNum : String </td></tr>
+	<tr><td align="left"> + aspLocal : String </td></tr>
+	<tr><td align="left"> + aspEtat : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchSoumission [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchSoumission </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + asoType : String </td></tr>
+	<tr><td align="left"> + asoStatus : String </td></tr>
+	<tr><td align="left"> + asoMotifElim : String </td></tr>
+	<tr><td align="left"> + asoReserve : String </td></tr>
+	<tr><td align="left"> + asoMontant : BigDecimal </td></tr>
+	<tr><td align="left"> + asoDate : Date </td></tr>
+	<tr><td align="left"> + asoArchTaux : BigDecimal </td></tr>
+	<tr><td align="left"> + asoEtat : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchSsCommission [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchSsCommission </font></td></tr>
+	</table></td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchSstypeDepense [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchSstypeDepense </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + astCode : String </td></tr>
+	<tr><td align="left"> + astName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchTypBen [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchTypBen </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + atbCode : String </td></tr>
+	<tr><td align="left"> + atbName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchTypeDepense [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchTypeDepense </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + atdCode : String </td></tr>
+	<tr><td align="left"> + atdName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AchTypeDoc [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AchTypeDoc </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + atdCode : String </td></tr>
+	<tr><td align="left"> + atdName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+subgraph clusteradm {
+	label = "adm"  
+	AdmAppFuncGrp [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AdmAppFuncGrp </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + afgName : String </td></tr>
+	<tr><td align="left"> + afgCode : String </td></tr>
+	<tr><td align="left"> + afgMenuId : Long </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AdmAppFunction [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AdmAppFunction </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + apfName : String </td></tr>
+	<tr><td align="left"> + apfActive : Long </td></tr>
+	<tr><td align="left"> + apfPci : Long </td></tr>
+	<tr><td align="left"> + apfCode : String </td></tr>
+	<tr><td align="left"> + apfUrl : String </td></tr>
+	<tr><td align="left"> + apfMenuId : Long </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AdmAppModule [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AdmAppModule </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + apmName : String </td></tr>
+	<tr><td align="left"> + apmCode : String </td></tr>
+	<tr><td align="left"> + apmMenuId : Long </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AdmParameters [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AdmParameters </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + parPassExpr : BigDecimal </td></tr>
+	<tr><td align="left"> + parPassHistNbr : Long </td></tr>
+	<tr><td align="left"> + parAttemptNbr : Long </td></tr>
+	<tr><td align="left"> + parLockTime : BigDecimal </td></tr>
+	<tr><td align="left"> + parSesTime : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AdmUserAccount [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AdmUserAccount </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + usaFirst : String </td></tr>
+	<tr><td align="left"> + usaLast : String </td></tr>
+	<tr><td align="left"> + usaLogin : String </td></tr>
+	<tr><td align="left"> + usaPassword : String </td></tr>
+	<tr><td align="left"> + usaActif : Long </td></tr>
+	<tr><td align="left"> + usaPci : Long </td></tr>
+	<tr><td align="left"> + usaPassDate : Date </td></tr>
+	<tr><td align="left"> + usaLocked : Long </td></tr>
+	<tr><td align="left"> + usaLockDate : Date </td></tr>
+	<tr><td align="left"> + usaCivility : String </td></tr>
+	<tr><td align="left"> + usaUnsucLog : Long </td></tr>
+	<tr><td align="left"> + usaPbk : Blob </td></tr>
+	<tr><td align="left"> + usaPvk : Blob </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AdmUserEntity [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AdmUserEntity </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + uenType : String </td></tr>
+	<tr><td align="left"> + uenEntId : Long </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AdmUserPassHist [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AdmUserPassHist </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + uphPassword : String </td></tr>
+	<tr><td align="left"> + uphDate : Date </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AdmUserRole [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AdmUserRole </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + usrName : String </td></tr>
+	<tr><td align="left"> + usrDescription : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AdmUsrApf [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AdmUsrApf </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + uspCreate : Integer </td></tr>
+	<tr><td align="left"> + uspRead : Integer </td></tr>
+	<tr><td align="left"> + uspUpdate : Integer </td></tr>
+	<tr><td align="left"> + uspDelete : Integer </td></tr>
+	<tr><td align="left"> + uspVerify : Integer </td></tr>
+	<tr><td align="left"> + uspValidate : Integer </td></tr>
+	<tr><td align="left"> + uspExport : Integer </td></tr>
+	<tr><td align="left"> + uspAsPDF : Integer </td></tr>
+	<tr><td align="left"> + uspReport : Integer </td></tr>
+	<tr><td align="left"> + uspApfMenuId : Long </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+subgraph clusterbud {
+	label = "bud"  
+	BudArticle [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudArticle </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + artCode : Integer </td></tr>
+	<tr><td align="left"> + artName : String </td></tr>
+	<tr><td align="left"> + artDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudChapitre [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudChapitre </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + chpCode : String </td></tr>
+	<tr><td align="left"> + chpName : String </td></tr>
+	<tr><td align="left"> + chpDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudCodeEco [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudCodeEco </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cecCode : String </td></tr>
+	<tr><td align="left"> + cecName : String </td></tr>
+	<tr><td align="left"> + cecDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudCodeFnc [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudCodeFnc </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cfnCode : String </td></tr>
+	<tr><td align="left"> + cfnName : String </td></tr>
+	<tr><td align="left"> + cfnDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemModif [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemModif </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + demStatus : String </td></tr>
+	<tr><td align="left"> + demDesc : String </td></tr>
+	<tr><td align="left"> + demDate : Date </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemModifMpres [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemModifMpres </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dmpNewCp : BigDecimal </td></tr>
+	<tr><td align="left"> + dmpNewCe : BigDecimal </td></tr>
+	<tr><td align="left"> + dmpOldCp : BigDecimal </td></tr>
+	<tr><td align="left"> + dmpOldCe : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvt [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvt </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dmvCode : String </td></tr>
+	<tr><td align="left"> + dmvName : String </td></tr>
+	<tr><td align="left"> + dmvDesc : String </td></tr>
+	<tr><td align="left"> + dmvType : String </td></tr>
+	<tr><td align="left"> + dmvNum : String </td></tr>
+	<tr><td align="left"> + dmvDate : Date </td></tr>
+	<tr><td align="left"> + dmvNumCour : String </td></tr>
+	<tr><td align="left"> + dmvMorsrcType : String </td></tr>
+	<tr><td align="left"> + dmvMorsrcId : Long </td></tr>
+	<tr><td align="left"> + dmvMordestType : String </td></tr>
+	<tr><td align="left"> + dmvMordestId : Long </td></tr>
+	<tr><td align="left"> + dmvMotif : String </td></tr>
+	<tr><td align="left"> + dmvStatus : String </td></tr>
+	<tr><td align="left"> + dmvObs : String </td></tr>
+	<tr><td align="left"> + dmvNumVisa : String </td></tr>
+	<tr><td align="left"> + dmvDateVisa : Date </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtDest [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtDest </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mddMorType : String </td></tr>
+	<tr><td align="left"> + mddModId : Long </td></tr>
+	<tr><td align="left"> + mddCreditCe : BigDecimal </td></tr>
+	<tr><td align="left"> + mddCreditCp : BigDecimal </td></tr>
+	<tr><td align="left"> + mddMotif : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtLog [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtLog </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dmlTypeAction : String </td></tr>
+	<tr><td align="left"> + dmlMsg : String </td></tr>
+	<tr><td align="left"> + dmlDate : Date </td></tr>
+	<tr><td align="left"> + dmlUser : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtMemo [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtMemo </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dmmMemo : String </td></tr>
+	<tr><td align="left"> + dmmUser : String </td></tr>
+	<tr><td align="left"> + dmmDate : Date </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtMpres [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtMpres </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dmmNewCp : BigDecimal </td></tr>
+	<tr><td align="left"> + dmmNewCe : BigDecimal </td></tr>
+	<tr><td align="left"> + dmmOldCp : BigDecimal </td></tr>
+	<tr><td align="left"> + dmmOldCe : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemMvtSrc [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemMvtSrc </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mdsMorType : String </td></tr>
+	<tr><td align="left"> + mdsModId : Long </td></tr>
+	<tr><td align="left"> + mdsCreditCe : BigDecimal </td></tr>
+	<tr><td align="left"> + mdsCreditCp : BigDecimal </td></tr>
+	<tr><td align="left"> + mdsMotif : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanif [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanif </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + depStatus : String </td></tr>
+	<tr><td align="left"> + depDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifMpres [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifMpres </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dppNewCp : BigDecimal </td></tr>
+	<tr><td align="left"> + dppNewCe : BigDecimal </td></tr>
+	<tr><td align="left"> + dppOldCp : BigDecimal </td></tr>
+	<tr><td align="left"> + dppOldCe : BigDecimal </td></tr>
+	<tr><td align="left"> + planifStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifMpresHasPex [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifMpresHasPex </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mhpNewCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + mhpOldCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + planifStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifNpres [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifNpres </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dpdCreditCp : BigDecimal </td></tr>
+	<tr><td align="left"> + dpdCreditCe : BigDecimal </td></tr>
+	<tr><td align="left"> + planifStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDemPlanifNpresHasPex [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDemPlanifNpresHasPex </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + nhpNewCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + planifStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDmmHasChp [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDmmHasChp </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mhcOldCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + mhcNewCredit : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudDmpHasChp [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudDmpHasChp </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + dhcOldCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + dhcNewCredit : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudLigne [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudLigne </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + linCode : Integer </td></tr>
+	<tr><td align="left"> + linName : String </td></tr>
+	<tr><td align="left"> + linDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorasse [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorasse </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + morCode : String </td></tr>
+	<tr><td align="left"> + morName : String </td></tr>
+	<tr><td align="left"> + morDesc : String </td></tr>
+	<tr><td align="left"> + morStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorasseDet [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorasseDet </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + modCode : Integer </td></tr>
+	<tr><td align="left"> + modName : String </td></tr>
+	<tr><td align="left"> + modRowType : String </td></tr>
+	<tr><td align="left"> + modArticle : Integer </td></tr>
+	<tr><td align="left"> + modParag : Integer </td></tr>
+	<tr><td align="left"> + modSsParag : Integer </td></tr>
+	<tr><td align="left"> + modLigne : Integer </td></tr>
+	<tr><td align="left"> + modSsLigne : Integer </td></tr>
+	<tr><td align="left"> + modRegion : String </td></tr>
+	<tr><td align="left"> + modCreditCp : BigDecimal </td></tr>
+	<tr><td align="left"> + modCreditCe : BigDecimal </td></tr>
+	<tr><td align="left"> + modAsmStatus : String </td></tr>
+	<tr><td align="left"> + modCpSum : BigDecimal </td></tr>
+	<tr><td align="left"> + modCeSum : BigDecimal </td></tr>
+	<tr><td align="left"> + modCpEng : BigDecimal </td></tr>
+	<tr><td align="left"> + modCeEng : BigDecimal </td></tr>
+	<tr><td align="left"> + modCpPla : BigDecimal </td></tr>
+	<tr><td align="left"> + modCePla : BigDecimal </td></tr>
+	<tr><td align="left"> + modCpBud : BigDecimal </td></tr>
+	<tr><td align="left"> + modCeBud : BigDecimal </td></tr>
+	<tr><td align="left"> + modOrder : Long </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorasseMvmDet [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorasseMvmDet </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + modCode : Integer </td></tr>
+	<tr><td align="left"> + modName : String </td></tr>
+	<tr><td align="left"> + modRowType : String </td></tr>
+	<tr><td align="left"> + modArticle : Integer </td></tr>
+	<tr><td align="left"> + modParag : Integer </td></tr>
+	<tr><td align="left"> + modSsParag : Integer </td></tr>
+	<tr><td align="left"> + modLigne : Integer </td></tr>
+	<tr><td align="left"> + modSsLigne : Integer </td></tr>
+	<tr><td align="left"> + modRegion : String </td></tr>
+	<tr><td align="left"> + modCreditCp : BigDecimal </td></tr>
+	<tr><td align="left"> + modCreditCe : BigDecimal </td></tr>
+	<tr><td align="left"> + modAsmStatus : String </td></tr>
+	<tr><td align="left"> + modCpSum : BigDecimal </td></tr>
+	<tr><td align="left"> + modCeSum : BigDecimal </td></tr>
+	<tr><td align="left"> + modCpEng : BigDecimal </td></tr>
+	<tr><td align="left"> + modCeEng : BigDecimal </td></tr>
+	<tr><td align="left"> + modCpPla : BigDecimal </td></tr>
+	<tr><td align="left"> + modCePla : BigDecimal </td></tr>
+	<tr><td align="left"> + modCpBud : BigDecimal </td></tr>
+	<tr><td align="left"> + modCeBud : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorasseOp [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorasseOp </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mopCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + mopCreditPla : BigDecimal </td></tr>
+	<tr><td align="left"> + mopCreditBud : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMorassePres [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMorassePres </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mprStatus : String </td></tr>
+	<tr><td align="left"> + mprCreditCp : BigDecimal </td></tr>
+	<tr><td align="left"> + mprCreditCe : BigDecimal </td></tr>
+	<tr><td align="left"> + mprCpPla : BigDecimal </td></tr>
+	<tr><td align="left"> + mprCePla : BigDecimal </td></tr>
+	<tr><td align="left"> + mprCpBud : BigDecimal </td></tr>
+	<tr><td align="left"> + mprCeBud : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMprHasChp [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMprHasChp </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mhcOldCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + mhcNewCredit : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMvtDecision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMvtDecision </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cddStatus : String </td></tr>
+	<tr><td align="left"> + cddDate : Date </td></tr>
+	<tr><td align="left"> + cddRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudMvtState [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudMvtState </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdsStatus : String </td></tr>
+	<tr><td align="left"> + cdsDate : Date </td></tr>
+	<tr><td align="left"> + cdsRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudParagraphe [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudParagraphe </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + pphCode : Integer </td></tr>
+	<tr><td align="left"> + pphName : String </td></tr>
+	<tr><td align="left"> + pphDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudPartie [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudPartie </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prtCode : String </td></tr>
+	<tr><td align="left"> + prtName : String </td></tr>
+	<tr><td align="left"> + prtDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudRegion [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudRegion </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + regCode : String </td></tr>
+	<tr><td align="left"> + regName : String </td></tr>
+	<tr><td align="left"> + regDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudSmdLog [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudSmdLog </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + smlTypeAction : String </td></tr>
+	<tr><td align="left"> + smlMsg : String </td></tr>
+	<tr><td align="left"> + smlDate : Date </td></tr>
+	<tr><td align="left"> + smlUser : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudSsMorasse [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudSsMorasse </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + smrCode : String </td></tr>
+	<tr><td align="left"> + smrName : String </td></tr>
+	<tr><td align="left"> + smrDesc : String </td></tr>
+	<tr><td align="left"> + smrStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudSsMorasseDet [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudSsMorasseDet </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + smdCode : String </td></tr>
+	<tr><td align="left"> + smdName : String </td></tr>
+	<tr><td align="left"> + smdCreditCp : BigDecimal </td></tr>
+	<tr><td align="left"> + smdCreditCe : BigDecimal </td></tr>
+	<tr><td align="left"> + smdCpSum : BigDecimal </td></tr>
+	<tr><td align="left"> + smdCeSum : BigDecimal </td></tr>
+	<tr><td align="left"> + smdCpEng : BigDecimal </td></tr>
+	<tr><td align="left"> + smdCeEng : BigDecimal </td></tr>
+	<tr><td align="left"> + smdCpPla : BigDecimal </td></tr>
+	<tr><td align="left"> + smdCePla : BigDecimal </td></tr>
+	<tr><td align="left"> + smdCpBud : BigDecimal </td></tr>
+	<tr><td align="left"> + smdCeBud : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudSsTitre [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudSsTitre </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + strCode : String </td></tr>
+	<tr><td align="left"> + strName : String </td></tr>
+	<tr><td align="left"> + strDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudTitre [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudTitre </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ttrCode : String </td></tr>
+	<tr><td align="left"> + ttrName : String </td></tr>
+	<tr><td align="left"> + ttrDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	BudTypeVir [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> BudTypeVir </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tvrCode : String </td></tr>
+	<tr><td align="left"> + tvrName : String </td></tr>
+	<tr><td align="left"> + tvrDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+subgraph clusterclot {
+	label = "clot"  
+	ClotTablDep [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDep </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ctdDate : Date </td></tr>
+	<tr><td align="left"> + ctdCurStatus : String </td></tr>
+	<tr><td align="left"> + ctdCurStatusDate : Date </td></tr>
+	<tr><td align="left"> + ctdCurDecision : String </td></tr>
+	<tr><td align="left"> + ctdCurDecisionDate : Date </td></tr>
+	<tr><td align="left"> + ctdRem : String </td></tr>
+	<tr><td align="left"> + ctdType : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepDecision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepDecision </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cddStatus : String </td></tr>
+	<tr><td align="left"> + cddDate : Date </td></tr>
+	<tr><td align="left"> + cddRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepExtra [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepExtra </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdeStatus : String </td></tr>
+	<tr><td align="left"> + cdeMontantCp : BigDecimal </td></tr>
+	<tr><td align="left"> + cdeMontantRe : BigDecimal </td></tr>
+	<tr><td align="left"> + cdeMontantCe : BigDecimal </td></tr>
+	<tr><td align="left"> + cdeMontantReport : BigDecimal </td></tr>
+	<tr><td align="left"> + cdeMontantAn : BigDecimal </td></tr>
+	<tr><td align="left"> + cdeMontantAn1 : BigDecimal </td></tr>
+	<tr><td align="left"> + cdeDelaiReste : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepExtraDisp [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepExtraDisp </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cepStatus : String </td></tr>
+	<tr><td align="left"> + cepOrdonnateur : String </td></tr>
+	<tr><td align="left"> + cepTotalCreditVise : BigDecimal </td></tr>
+	<tr><td align="left"> + cepTotalCreditSoumis : BigDecimal </td></tr>
+	<tr><td align="left"> + cepTotalEngagVise : BigDecimal </td></tr>
+	<tr><td align="left"> + cepTotalEngagSoumis : BigDecimal </td></tr>
+	<tr><td align="left"> + cepDispEngagVise : BigDecimal </td></tr>
+	<tr><td align="left"> + cepDispEngagSoumis : BigDecimal </td></tr>
+	<tr><td align="left"> + cepTauxEngagVise : BigDecimal </td></tr>
+	<tr><td align="left"> + cepTauxEngagSoumis : BigDecimal </td></tr>
+	<tr><td align="left"> + cepTotalEmissionVise : BigDecimal </td></tr>
+	<tr><td align="left"> + cepTotalEmissionSoumis : BigDecimal </td></tr>
+	<tr><td align="left"> + cepTauxEmissionVise : BigDecimal </td></tr>
+	<tr><td align="left"> + cepTauxEmissionSoumis : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ClotTablDepState [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ClotTablDepState </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdsStatus : String </td></tr>
+	<tr><td align="left"> + cdsDate : Date </td></tr>
+	<tr><td align="left"> + cdsRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+subgraph clustercommon {
+	label = "common"  
+}
+subgraph clustercommunPar {
+	label = "communPar"  
+	ParEntity [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParEntity </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + entAbrevName : String </td></tr>
+	<tr><td align="left"> + entName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParEntityType [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParEntityType </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + etyName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParJRParameters [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParJRParameters </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + pjrName : String </td></tr>
+	<tr><td align="left"> + pjrCode : String </td></tr>
+	<tr><td align="left"> + pjrClass : String </td></tr>
+	<tr><td align="left"> + pjrLst : String </td></tr>
+	<tr><td align="left"> + pjrObl : String </td></tr>
+	<tr><td align="left"> + pjrComment : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParParameters [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParParameters </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + parKey : String </td></tr>
+	<tr><td align="left"> + parValue : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParReport [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParReport </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + repCode : String </td></tr>
+	<tr><td align="left"> + repTitle : String </td></tr>
+	<tr><td align="left"> + repFile : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+subgraph clustercpt {
+	label = "cpt"  
+	CptDepDecision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CptDepDecision </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cddStatus : String </td></tr>
+	<tr><td align="left"> + cddDate : Date </td></tr>
+	<tr><td align="left"> + cddRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	CptDepMemo [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CptDepMemo </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdmMemo : String </td></tr>
+	<tr><td align="left"> + cdmUser : String </td></tr>
+	<tr><td align="left"> + cdmDate : Date </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	CptDepState [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CptDepState </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdsStatus : String </td></tr>
+	<tr><td align="left"> + cdsDate : Date </td></tr>
+	<tr><td align="left"> + cdsRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	CptDepense [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CptDepense </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdpConcurent : String </td></tr>
+	<tr><td align="left"> + cdpClotStatus : String </td></tr>
+	<tr><td align="left"> + cdpNature : String </td></tr>
+	<tr><td align="left"> + cdpRc : String </td></tr>
+	<tr><td align="left"> + cdpIce : String </td></tr>
+	<tr><td align="left"> + cdpIf : String </td></tr>
+	<tr><td align="left"> + cdpCnss : String </td></tr>
+	<tr><td align="left"> + cdpRib : String </td></tr>
+	<tr><td align="left"> + cdpPdf : String </td></tr>
+	<tr><td align="left"> + cdpCurStatusDate : Date </td></tr>
+	<tr><td align="left"> + cdpCurDecision : String </td></tr>
+	<tr><td align="left"> + cdpStatus : String </td></tr>
+	<tr><td align="left"> + cdpDateRem : Date </td></tr>
+	<tr><td align="left"> + cdpDateEnr : Date </td></tr>
+	<tr><td align="left"> + cdpNumEnr : String </td></tr>
+	<tr><td align="left"> + cdpDateEng : Date </td></tr>
+	<tr><td align="left"> + cdpSignEng : String </td></tr>
+	<tr><td align="left"> + cdpDateApp : Date </td></tr>
+	<tr><td align="left"> + cdpSignApp : String </td></tr>
+	<tr><td align="left"> + cdpInterMor : BigDecimal </td></tr>
+	<tr><td align="left"> + cdpRevPrix : BigDecimal </td></tr>
+	<tr><td align="left"> + cdpRevPrixDate : Date </td></tr>
+	<tr><td align="left"> + cdpNumGid : String </td></tr>
+	<tr><td align="left"> + cdpNumDep : String </td></tr>
+	<tr><td align="left"> + cdpNumVisa : String </td></tr>
+	<tr><td align="left"> + cdpDateVisa : Date </td></tr>
+	<tr><td align="left"> + cdpNumNoti : String </td></tr>
+	<tr><td align="left"> + cdpDateNoti : Date </td></tr>
+	<tr><td align="left"> + cdpNumLett : String </td></tr>
+	<tr><td align="left"> + cdpDateLett : Date </td></tr>
+	<tr><td align="left"> + cdpCurStatus : String </td></tr>
+	<tr><td align="left"> + cdpDatDem : String </td></tr>
+	<tr><td align="left"> + cdpDatOuvPli : String </td></tr>
+	<tr><td align="left"> + cdpMpr : BigDecimal </td></tr>
+	<tr><td align="left"> + cdpCp : BigDecimal </td></tr>
+	<tr><td align="left"> + cdpCe : BigDecimal </td></tr>
+	<tr><td align="left"> + cdpMc : BigDecimal </td></tr>
+	<tr><td align="left"> + cdpMom : BigDecimal </td></tr>
+	<tr><td align="left"> + cdpFluTau : String </td></tr>
+	<tr><td align="left"> + cdpDepCon : String </td></tr>
+	<tr><td align="left"> + cdpNrDep : String </td></tr>
+	<tr><td align="left"> + cdpPres : String </td></tr>
+	<tr><td align="left"> + cdpNrCon : String </td></tr>
+	<tr><td align="left"> + cdpNrDemAch : String </td></tr>
+	<tr><td align="left"> + cdpDateRevision : Date </td></tr>
+	<tr><td align="left"> + cdpNaturPrix : String </td></tr>
+	<tr><td align="left"> + cdpRevisionPrix : BigDecimal </td></tr>
+	<tr><td align="left"> + cdpDateOrderService : Date </td></tr>
+	<tr><td align="left"> + cdpId : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	CptEntity [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CptEntity </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cenName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	CptOrdreService [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CptOrdreService </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cosName : String </td></tr>
+	<tr><td align="left"> + cosCode : String </td></tr>
+	<tr><td align="left"> + cosDate : Date </td></tr>
+	<tr><td align="left"> + cosDateEff : Date </td></tr>
+	<tr><td align="left"> + cosRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	CptRpDecision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CptRpDecision </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cddStatus : String </td></tr>
+	<tr><td align="left"> + cddDate : Date </td></tr>
+	<tr><td align="left"> + cddRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	CptRpState [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CptRpState </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdsStatus : String </td></tr>
+	<tr><td align="left"> + cdsDate : Date </td></tr>
+	<tr><td align="left"> + cdsRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	CptTypeOrdre [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CptTypeOrdre </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ctoCode : String </td></tr>
+	<tr><td align="left"> + ctoName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+subgraph clusterlog {
+	label = "log"  
+	LogLogType [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> LogLogType </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + lotCode : String </td></tr>
+	<tr><td align="left"> + lotName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	LogMsgDetail [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> LogMsgDetail </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + lmdMsg : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	LogNwsLog [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> LogNwsLog </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + logDate : Date </td></tr>
+	<tr><td align="left"> + logModCode : String </td></tr>
+	<tr><td align="left"> + logFuncCode : String </td></tr>
+	<tr><td align="left"> + logMsgDetail : String </td></tr>
+	<tr><td align="left"> + logUpdData : String </td></tr>
+	<tr><td align="left"> + logUpdRef : String </td></tr>
+	<tr><td align="left"> + logUpdOld : String </td></tr>
+	<tr><td align="left"> + logUpdNew : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	LogNwsSession [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> LogNwsSession </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + sesUser : String </td></tr>
+	<tr><td align="left"> + sesIp : String </td></tr>
+	<tr><td align="left"> + sesStart : Date </td></tr>
+	<tr><td align="left"> + sesEnd : Date </td></tr>
+	<tr><td align="left"> + sesStatus : Long </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+subgraph clustermhai {
+	label = "mhai"  
+	MhaiMosque [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> MhaiMosque </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mosCode : String </td></tr>
+	<tr><td align="left"> + mosName : String </td></tr>
+	<tr><td align="left"> + mosType : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	MhaiMosqueAnc [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> MhaiMosqueAnc </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mosCode : String </td></tr>
+	<tr><td align="left"> + mosName : String </td></tr>
+	<tr><td align="left"> + mosType : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	MhaiMosqueOld [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> MhaiMosqueOld </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + mosCode : String </td></tr>
+	<tr><td align="left"> + mosName : String </td></tr>
+	<tr><td align="left"> + mosType : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+subgraph clusterpar {
+	label = "par"  
+	ParAgentExe [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParAgentExe </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + aexNom : String </td></tr>
+	<tr><td align="left"> + aexPrenom : String </td></tr>
+	<tr><td align="left"> + aexStatus : String </td></tr>
+	<tr><td align="left"> + aexNum : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommanditaire [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommanditaire </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cmdCode : String </td></tr>
+	<tr><td align="left"> + cmdName : String </td></tr>
+	<tr><td align="left"> + cmdDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommune [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommune </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + comCode : String </td></tr>
+	<tr><td align="left"> + comName : String </td></tr>
+	<tr><td align="left"> + comType : String </td></tr>
+	<tr><td align="left"> + comStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommuneAnc [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommuneAnc </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + comCode : String </td></tr>
+	<tr><td align="left"> + comName : String </td></tr>
+	<tr><td align="left"> + comType : String </td></tr>
+	<tr><td align="left"> + comStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParCommuneOld [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParCommuneOld </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + comCode : String </td></tr>
+	<tr><td align="left"> + comName : String </td></tr>
+	<tr><td align="left"> + comType : String </td></tr>
+	<tr><td align="left"> + comStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParConvention [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParConvention </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cvtCode : String </td></tr>
+	<tr><td align="left"> + cvtName : String </td></tr>
+	<tr><td align="left"> + cvtDesc : String </td></tr>
+	<tr><td align="left"> + cvtBeginDate : Date </td></tr>
+	<tr><td align="left"> + cvtEndDate : Date </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParExercice [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParExercice </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + pexCode : String </td></tr>
+	<tr><td align="left"> + pexName : String </td></tr>
+	<tr><td align="left"> + pexDesc : String </td></tr>
+	<tr><td align="left"> + pexStartDate : Date </td></tr>
+	<tr><td align="left"> + pexEndDate : Date </td></tr>
+	<tr><td align="left"> + pexStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParOrdonateur [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParOrdonateur </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + ordNom : String </td></tr>
+	<tr><td align="left"> + ordPrenom : String </td></tr>
+	<tr><td align="left"> + ordType : String </td></tr>
+	<tr><td align="left"> + ordStatus : String </td></tr>
+	<tr><td align="left"> + ordNature : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParProvince [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParProvince </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prvCode : String </td></tr>
+	<tr><td align="left"> + prvName : String </td></tr>
+	<tr><td align="left"> + prvStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParProvinceAnc [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParProvinceAnc </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prvCode : String </td></tr>
+	<tr><td align="left"> + prvName : String </td></tr>
+	<tr><td align="left"> + prvStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParProvinceOld [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParProvinceOld </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prvCode : String </td></tr>
+	<tr><td align="left"> + prvName : String </td></tr>
+	<tr><td align="left"> + prvStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParRegion [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParRegion </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + regCode : String </td></tr>
+	<tr><td align="left"> + regName : String </td></tr>
+	<tr><td align="left"> + regStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParRegionAnc [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParRegionAnc </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + regCode : String </td></tr>
+	<tr><td align="left"> + regName : String </td></tr>
+	<tr><td align="left"> + regStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParRegionOld [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParRegionOld </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + regCode : String </td></tr>
+	<tr><td align="left"> + regName : String </td></tr>
+	<tr><td align="left"> + regStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	ParTypeBenif [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> ParTypeBenif </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + benCode : String </td></tr>
+	<tr><td align="left"> + benName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+subgraph clusterpla {
+	label = "pla"  
+	PlaBudgetType [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaBudgetType </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + bdtCode : String </td></tr>
+	<tr><td align="left"> + bdtName : String </td></tr>
+	<tr><td align="left"> + bdtOrdre : Float </td></tr>
+	<tr><td align="left"> + bdtStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaClassPrestation [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaClassPrestation </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prcCode : String </td></tr>
+	<tr><td align="left"> + prcName : String </td></tr>
+	<tr><td align="left"> + prcDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaCopHasMos [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaCopHasMos </font></td></tr>
+	</table></td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaCprHasPex [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaCprHasPex </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + chpCredit : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaCreditOp [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaCreditOp </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + copCode : String </td></tr>
+	<tr><td align="left"> + copName : String </td></tr>
+	<tr><td align="left"> + copDesc : String </td></tr>
+	<tr><td align="left"> + copCreditType : String </td></tr>
+	<tr><td align="left"> + copCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + copPlaStart : Date </td></tr>
+	<tr><td align="left"> + copPlaEnd : Date </td></tr>
+	<tr><td align="left"> + copEffStart : Date </td></tr>
+	<tr><td align="left"> + copEffEnd : Date </td></tr>
+	<tr><td align="left"> + copStatus : String </td></tr>
+	<tr><td align="left"> + copLieu : String </td></tr>
+	<tr><td align="left"> + copAdresse : String </td></tr>
+	<tr><td align="left"> + copIsCvt : String </td></tr>
+	<tr><td align="left"> + copPlanned : String </td></tr>
+	<tr><td align="left"> + copPriorite : String </td></tr>
+	<tr><td align="left"> + copNum : String </td></tr>
+	<tr><td align="left"> + copIntitule : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaCreditOpDemande [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaCreditOpDemande </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + codValidationDate : Date </td></tr>
+	<tr><td align="left"> + codStatus : String </td></tr>
+	<tr><td align="left"> + codNotes : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaCreditPrg [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaCreditPrg </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cpgCreditInv : BigDecimal </td></tr>
+	<tr><td align="left"> + cpgAllocInv : BigDecimal </td></tr>
+	<tr><td align="left"> + cpgCreditFct : BigDecimal </td></tr>
+	<tr><td align="left"> + cpgAllocFct : BigDecimal </td></tr>
+	<tr><td align="left"> + cpgStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaCreditPrj [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaCreditPrj </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cpjCreditInv : BigDecimal </td></tr>
+	<tr><td align="left"> + cpjAllocInv : BigDecimal </td></tr>
+	<tr><td align="left"> + cpjCreditFct : BigDecimal </td></tr>
+	<tr><td align="left"> + cpjAllocFct : BigDecimal </td></tr>
+	<tr><td align="left"> + cpjStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaCreditPrjReg [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaCreditPrjReg </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + crpCreditInv : BigDecimal </td></tr>
+	<tr><td align="left"> + crpCreditFct : BigDecimal </td></tr>
+	<tr><td align="left"> + crpStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaCreditPrs [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaCreditPrs </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cprCode : String </td></tr>
+	<tr><td align="left"> + cprName : String </td></tr>
+	<tr><td align="left"> + cprDesc : String </td></tr>
+	<tr><td align="left"> + cprCreditType : String </td></tr>
+	<tr><td align="left"> + cprCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + cprPlaStart : Date </td></tr>
+	<tr><td align="left"> + cprPlaEnd : Date </td></tr>
+	<tr><td align="left"> + cprEffStart : Date </td></tr>
+	<tr><td align="left"> + cprEffEnd : Date </td></tr>
+	<tr><td align="left"> + cprNbrPex : Integer </td></tr>
+	<tr><td align="left"> + cprTaux : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaCreditReg [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaCreditReg </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + creCreditInv : BigDecimal </td></tr>
+	<tr><td align="left"> + creAllocInv : BigDecimal </td></tr>
+	<tr><td align="left"> + creCreditFct : BigDecimal </td></tr>
+	<tr><td align="left"> + creAllocFct : BigDecimal </td></tr>
+	<tr><td align="left"> + creStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaDemCopDecision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaDemCopDecision </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cddStatus : String </td></tr>
+	<tr><td align="left"> + cddDate : Date </td></tr>
+	<tr><td align="left"> + cddRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaDemCopState [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaDemCopState </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdsStatus : String </td></tr>
+	<tr><td align="left"> + cdsDate : Date </td></tr>
+	<tr><td align="left"> + cdsRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaPlan [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaPlan </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + plaCode : String </td></tr>
+	<tr><td align="left"> + plaName : String </td></tr>
+	<tr><td align="left"> + plaDesc : String </td></tr>
+	<tr><td align="left"> + plaDateBegin : Date </td></tr>
+	<tr><td align="left"> + plaDateEnd : Date </td></tr>
+	<tr><td align="left"> + plaStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaPlanHasExe [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaPlanHasExe </font></td></tr>
+	</table></td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaProgram [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaProgram </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prgCode : String </td></tr>
+	<tr><td align="left"> + prgName : String </td></tr>
+	<tr><td align="left"> + prgDesc : String </td></tr>
+	<tr><td align="left"> + prgStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaProject [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaProject </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prjCode : String </td></tr>
+	<tr><td align="left"> + prjName : String </td></tr>
+	<tr><td align="left"> + prjDesc : String </td></tr>
+	<tr><td align="left"> + prjStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaRecette [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaRecette </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + rctNum : String </td></tr>
+	<tr><td align="left"> + rctRef : String </td></tr>
+	<tr><td align="left"> + rctCreditInv : BigDecimal </td></tr>
+	<tr><td align="left"> + rctCreditFct : BigDecimal </td></tr>
+	<tr><td align="left"> + rctDate : Date </td></tr>
+	<tr><td align="left"> + rctObservation : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaSrcFinance [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaSrcFinance </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + srfCode : String </td></tr>
+	<tr><td align="left"> + srfName : String </td></tr>
+	<tr><td align="left"> + srfDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaTypeOperation [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaTypeOperation </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + topCode : String </td></tr>
+	<tr><td align="left"> + topName : String </td></tr>
+	<tr><td align="left"> + topDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaTypePrestation [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaTypePrestation </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prtCode : String </td></tr>
+	<tr><td align="left"> + prtName : String </td></tr>
+	<tr><td align="left"> + prtDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+subgraph clustertec {
+	label = "tec"  
+	CalculRevision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> CalculRevision </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tcrPeriode : String </td></tr>
+	<tr><td align="left"> + tcrNbrJour : String </td></tr>
+	<tr><td align="left"> + tcrBatUn : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrBatDeux : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrBatTrois : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrBatQuatre : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrBatCinq : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrBatSix : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrBatCof : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrCofRev : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrCoeficient : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrMonTra : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrMonArevi : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrMonRev : BigDecimal </td></tr>
+	<tr><td align="left"> + tcrTotal : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	Nantissement [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> Nantissement </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tnaNum : String </td></tr>
+	<tr><td align="left"> + tnaName : String </td></tr>
+	<tr><td align="left"> + tnaDate : Date </td></tr>
+	<tr><td align="left"> + tnaRep : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PenaliteRetard [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PenaliteRetard </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tprNum : String </td></tr>
+	<tr><td align="left"> + tprName : String </td></tr>
+	<tr><td align="left"> + tprDelaiExe : Integer </td></tr>
+	<tr><td align="left"> + tprDateComm : Date </td></tr>
+	<tr><td align="left"> + tprDateAchev : Date </td></tr>
+	<tr><td align="left"> + tprDateSerFait : Date </td></tr>
+	<tr><td align="left"> + tprNbrJourRetard : Integer </td></tr>
+	<tr><td align="left"> + tprMonIniMar : BigDecimal </td></tr>
+	<tr><td align="left"> + tprMonJourPen : BigDecimal </td></tr>
+	<tr><td align="left"> + tprMonTotPen : BigDecimal </td></tr>
+	<tr><td align="left"> + tprMonPlafPen : BigDecimal </td></tr>
+	<tr><td align="left"> + tprMonOrdRecett : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	RetenueGarantie [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> RetenueGarantie </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + trgNum : String </td></tr>
+	<tr><td align="left"> + trgName : String </td></tr>
+	<tr><td align="left"> + trgDate : Date </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	RetenueGarantiePart [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> RetenueGarantiePart </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + rgpNum : String </td></tr>
+	<tr><td align="left"> + rgpName : String </td></tr>
+	<tr><td align="left"> + rgpDate : Date </td></tr>
+	<tr><td align="left"> + rgpBank : String </td></tr>
+	<tr><td align="left"> + rgpMontant : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecAttachement [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecAttachement </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tatNature : String </td></tr>
+	<tr><td align="left"> + tatTypeDecompte : String </td></tr>
+	<tr><td align="left"> + tatCurStatus : String </td></tr>
+	<tr><td align="left"> + tatNum : String </td></tr>
+	<tr><td align="left"> + tatName : String </td></tr>
+	<tr><td align="left"> + tatUrl : String </td></tr>
+	<tr><td align="left"> + tatTauAva : String </td></tr>
+	<tr><td align="left"> + tatAttPro : String </td></tr>
+	<tr><td align="left"> + tatRef : String </td></tr>
+	<tr><td align="left"> + tatObj : String </td></tr>
+	<tr><td align="left"> + tatMotRej : String </td></tr>
+	<tr><td align="left"> + tatMonTrt : BigDecimal </td></tr>
+	<tr><td align="left"> + tatMonTnt : BigDecimal </td></tr>
+	<tr><td align="left"> + tatTotaux : BigDecimal </td></tr>
+	<tr><td align="left"> + tatDepExe : BigDecimal </td></tr>
+	<tr><td align="left"> + tatApprov : String </td></tr>
+	<tr><td align="left"> + tatResPay : BigDecimal </td></tr>
+	<tr><td align="left"> + tatMonRev : BigDecimal </td></tr>
+	<tr><td align="left"> + tatMonPen : BigDecimal </td></tr>
+	<tr><td align="left"> + tatMonAco : BigDecimal </td></tr>
+	<tr><td align="left"> + tatRevPri : BigDecimal </td></tr>
+	<tr><td align="left"> + tatDateDep : Date </td></tr>
+	<tr><td align="left"> + tatDateRea : Date </td></tr>
+	<tr><td align="left"> + tatDateSer : Date </td></tr>
+	<tr><td align="left"> + tatDateRep : Date </td></tr>
+	<tr><td align="left"> + tatDateConFai : Date </td></tr>
+	<tr><td align="left"> + tatDateConFre : Date </td></tr>
+	<tr><td align="left"> + tatDateSoum : Date </td></tr>
+	<tr><td align="left"> + tatDateOrdCom : Date </td></tr>
+	<tr><td align="left"> + tatDateOrdArr : Date </td></tr>
+	<tr><td align="left"> + tatDateOrdRep : Date </td></tr>
+	<tr><td align="left"> + tatDateDpNr : Date </td></tr>
+	<tr><td align="left"> + tatCurStatusDate : Date </td></tr>
+	<tr><td align="left"> + tatCurDecision : String </td></tr>
+	<tr><td align="left"> + tatStatus : String </td></tr>
+	<tr><td align="left"> + tatIdAtt : String </td></tr>
+	<tr><td align="left"> + tatDpCurStatusDate : Date </td></tr>
+	<tr><td align="left"> + tatDpCurDecision : String </td></tr>
+	<tr><td align="left"> + tatDpStatus : String </td></tr>
+	<tr><td align="left"> + tatDpCurStatus : String </td></tr>
+	<tr><td align="left"> + tatNumVisa : String </td></tr>
+	<tr><td align="left"> + tatDateVisa : Date </td></tr>
+	<tr><td align="left"> + tatMonDecoTravaux : BigDecimal </td></tr>
+	<tr><td align="left"> + tatMonDepTravaux : BigDecimal </td></tr>
+	<tr><td align="left"> + tatArchAvan : String </td></tr>
+	<tr><td align="left"> + tatArchDecoTraite : String </td></tr>
+	<tr><td align="left"> + tatGarantie : String </td></tr>
+	<tr><td align="left"> + tatGarantieEsp : BigDecimal </td></tr>
+	<tr><td align="left"> + tatAvancement : BigDecimal </td></tr>
+	<tr><td align="left"> + tatDelaiExe : Integer </td></tr>
+	<tr><td align="left"> + tatDelaiUnit : String </td></tr>
+	<tr><td align="left"> + tatMonTrtTtc : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecCatIndex [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecCatIndex </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tciCode : String </td></tr>
+	<tr><td align="left"> + tciName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecDecision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecDecision </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tedStatus : String </td></tr>
+	<tr><td align="left"> + tedDate : Date </td></tr>
+	<tr><td align="left"> + tedRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecDpDecision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecDpDecision </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tedStatus : String </td></tr>
+	<tr><td align="left"> + tedDate : Date </td></tr>
+	<tr><td align="left"> + tedRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecDpState [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecDpState </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tesStatus : String </td></tr>
+	<tr><td align="left"> + tesDate : Date </td></tr>
+	<tr><td align="left"> + tesRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecEtape [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecEtape </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tetNom : String </td></tr>
+	<tr><td align="left"> + tetDelait : String </td></tr>
+	<tr><td align="left"> + tetAvancement : String </td></tr>
+	<tr><td align="left"> + tetPourcentage : String </td></tr>
+	<tr><td align="left"> + tetEcart : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecIndex [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecIndex </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tinMois : String </td></tr>
+	<tr><td align="left"> + tinValPro : String </td></tr>
+	<tr><td align="left"> + tinValDef : String </td></tr>
+	<tr><td align="left"> + tinAnnee : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecPv [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecPv </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tpvNum : String </td></tr>
+	<tr><td align="left"> + tpvName : String </td></tr>
+	<tr><td align="left"> + tpvDate : Date </td></tr>
+	<tr><td align="left"> + tpvPvFile : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecPvType [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecPvType </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tptCode : String </td></tr>
+	<tr><td align="left"> + tptName : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	TecState [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> TecState </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + tesStatus : String </td></tr>
+	<tr><td align="left"> + tesDate : Date </td></tr>
+	<tr><td align="left"> + tesRem : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+edge [arrowhead = "empty"]
+edge [arrowhead = "none"]
+
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchAaaId" taillabel="aaaAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchAchatAttach
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchAvnId" taillabel="achAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchAchatAvenant
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchAdcId" taillabel="adcAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchAchatDecision
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchAloId" taillabel="aloAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchAchatLot
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchAamId" taillabel="aamAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchAchatMemo
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchAstId" taillabel="astAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchAchatState
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchAalId" taillabel="aalAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchAgrementList
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchAcoId" taillabel="acoAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchCommission
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchPhaId" taillabel="phaAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchDelaiPhase
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchAdpId" taillabel="adpAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchDemPub
+
+edge [arrowtail="none" arrowhead = "open" headlabel="achCurAenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="achAmpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchModePass
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAchPresId" taillabel="presAchId" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchPrestations
+
+edge [arrowtail="none" arrowhead = "open" headlabel="achAstId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchSstypeDepense
+
+edge [arrowtail="none" arrowhead = "open" headlabel="achAtdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> AchTypeDepense
+
+edge [arrowtail="none" arrowhead = "open" headlabel="achMopId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> BudMorasseOp
+
+edge [arrowtail="none" arrowhead = "open" headlabel="achMprId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> BudMorassePres
+
+edge [arrowtail="none" arrowhead = "open" headlabel="achEntId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> ParEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="achPexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> ParExercice
+
+edge [arrowtail="none" arrowhead = "open" headlabel="achBdtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> PlaBudgetType
+
+edge [arrowtail="none" arrowhead = "open" headlabel="achCopId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> PlaCreditOp
+
+edge [arrowtail="none" arrowhead = "open" headlabel="achCprId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> PlaCreditPrs
+
+edge [arrowtail="none" arrowhead = "open" headlabel="achCatId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchat -> TecCatIndex
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAvnAloId" taillabel="aloAvnId" labeldistance="2.0" labelangle="-30"]
+
+AchAchatAvenant -> AchAchatLot
+
+edge [arrowtail="none" arrowhead = "open" headlabel="aabAchId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchatBord -> AchAchat
+
+edge [arrowtail="none" arrowhead = "open" headlabel="aabAbtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchatBord -> AchBordType
+
+edge [arrowtail="none" arrowhead = "open" headlabel="adcAenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchatDecision -> AchEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="aaeAchId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchatExel -> AchAchat
+
+edge [arrowtail="none" arrowhead = "open" headlabel="aaeAvnId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchatExel -> AchAchatAvenant
+
+edge [arrowtail="none" arrowhead = "none" headlabel="aaeAloId" taillabel="0..n aloAaeId" labeldistance="2.0" labelangle="-30"]
+
+AchAchatExel -> AchAchatLot
+
+edge [arrowtail="none" arrowhead = "open" headlabel="aaeAttId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchatExel -> TecAttachement
+
+edge [arrowtail="none" arrowhead = "open" headlabel="astAenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAchatState -> AchEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="aalAacId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAgrementList -> AchAgrementCat
+
+edge [arrowtail="none" arrowhead = "open" headlabel="appAcmId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAspPresence -> AchCommMember
+
+edge [arrowtail="none" arrowhead = "none" headlabel="appAspId" taillabel="0..n idAspAppId" labeldistance="2.0" labelangle="-30"]
+
+AchAspPresence -> AchSeancePv
+
+edge [arrowtail="none" arrowhead = "open" headlabel="aapApbId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAspPublication -> AchPublication
+
+edge [arrowtail="none" arrowhead = "none" headlabel="aapAspId" taillabel="0..n idAspAapId" labeldistance="2.0" labelangle="-30"]
+
+AchAspPublication -> AchSeancePv
+
+edge [arrowtail="none" arrowhead = "open" headlabel="areAcmId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchAspReserve -> AchCommMember
+
+edge [arrowtail="none" arrowhead = "none" headlabel="areAspId" taillabel="0..n idAspAreId" labeldistance="2.0" labelangle="-30"]
+
+AchAspReserve -> AchSeancePv
+
+edge [arrowtail="none" arrowhead = "open" headlabel="achAloId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchBde -> AchAchatLot
+
+edge [arrowtail="none" arrowhead = "open" headlabel="abdAabId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchBordDet -> AchAchatBord
+
+edge [arrowtail="none" arrowhead = "none" headlabel="acmAmgId" taillabel="0..n idAmgAcmId" labeldistance="2.0" labelangle="-30"]
+
+AchCommMember -> AchMemberGroup
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAcoAhmId" taillabel="ahmAcoId" labeldistance="2.0" labelangle="-30"]
+
+AchCommission -> AchHasAcm
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAdpApbId" taillabel="apbAdpId" labeldistance="2.0" labelangle="-30"]
+
+AchDemPub -> AchPublication
+
+edge [arrowtail="none" arrowhead = "open" headlabel="ahmAcmId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchHasAcm -> AchCommMember
+
+edge [arrowtail="none" arrowhead = "open" headlabel="presMopId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchPrestations -> BudMorasseOp
+
+edge [arrowtail="none" arrowhead = "open" headlabel="presMprId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchPrestations -> BudMorassePres
+
+edge [arrowtail="none" arrowhead = "open" headlabel="presCopId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchPrestations -> PlaCreditOp
+
+edge [arrowtail="none" arrowhead = "open" headlabel="presCprId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchPrestations -> PlaCreditPrs
+
+edge [arrowtail="none" arrowhead = "open" headlabel="appPexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchProgPrev -> ParExercice
+
+edge [arrowtail="none" arrowhead = "open" headlabel="appOrdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchProgPrev -> ParOrdonateur
+
+edge [arrowtail="none" arrowhead = "open" headlabel="apbAccId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchPublication -> AchConcurent
+
+edge [arrowtail="none" arrowhead = "open" headlabel="apbAcjId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchPublication -> AchJournal
+
+edge [arrowtail="none" arrowhead = "open" headlabel="aspAchId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchSeancePv -> AchAchat
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAspAsoId" taillabel="asoAspId" labeldistance="2.0" labelangle="-30"]
+
+AchSeancePv -> AchSoumission
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idAspAscId" taillabel="ascAspId" labeldistance="2.0" labelangle="-30"]
+
+AchSeancePv -> AchSsCommission
+
+edge [arrowtail="none" arrowhead = "open" headlabel="asoAchId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchSoumission -> AchAchat
+
+edge [arrowtail="none" arrowhead = "open" headlabel="asoAcrId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchSoumission -> AchConcurent
+
+edge [arrowtail="none" arrowhead = "open" headlabel="ascAcmId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AchSsCommission -> AchCommMember
+
+edge [arrowtail="none" arrowhead = "none" headlabel="astAtdId" taillabel="0..n idAtdAstId" labeldistance="2.0" labelangle="-30"]
+
+AchSstypeDepense -> AchTypeDepense
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n afgApfId" taillabel="apfAfgId" labeldistance="2.0" labelangle="-30"]
+
+AdmAppFuncGrp -> AdmAppFunction
+
+edge [arrowtail="none" arrowhead = "none" headlabel="afgApmId" taillabel="0..n apmAfgId" labeldistance="2.0" labelangle="-30"]
+
+AdmAppFuncGrp -> AdmAppModule
+
+edge [arrowtail="none" arrowhead = "none" headlabel="apfApmId" taillabel="0..n apmApfId" labeldistance="2.0" labelangle="-30"]
+
+AdmAppFunction -> AdmAppModule
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n apfUspId" taillabel="uspApfId" labeldistance="2.0" labelangle="-30"]
+
+AdmAppFunction -> AdmUsrApf
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n usaUsr" taillabel="0..n usrUsa" labeldistance="2.0" labelangle="-30"]
+
+AdmUserAccount -> AdmUserRole
+
+edge [arrowtail="none" arrowhead = "open" headlabel="usaEntId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AdmUserAccount -> ParEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="uenUsaId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AdmUserEntity -> AdmUserAccount
+
+edge [arrowtail="none" arrowhead = "open" headlabel="uphUsaId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AdmUserPassHist -> AdmUserAccount
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n usrUspId" taillabel="uspUsrId" labeldistance="2.0" labelangle="-30"]
+
+AdmUserRole -> AdmUsrApf
+
+edge [arrowtail="none" arrowhead = "none" headlabel="artChpId" taillabel="0..n idChpArtId" labeldistance="2.0" labelangle="-30"]
+
+BudArticle -> BudChapitre
+
+edge [arrowtail="none" arrowhead = "none" headlabel="artMorId" taillabel="0..n morArts" labeldistance="2.0" labelangle="-30"]
+
+BudArticle -> BudMorasse
+
+edge [arrowtail="none" arrowhead = "open" headlabel="artModId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudArticle -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idArtRegId" taillabel="regArtId" labeldistance="2.0" labelangle="-30"]
+
+BudArticle -> BudRegion
+
+edge [arrowtail="none" arrowhead = "open" headlabel="artPexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudArticle -> ParExercice
+
+edge [arrowtail="none" arrowhead = "open" headlabel="artBdtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudArticle -> PlaBudgetType
+
+edge [arrowtail="none" arrowhead = "open" headlabel="chpPrtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudChapitre -> BudPartie
+
+edge [arrowtail="none" arrowhead = "open" headlabel="chpStrId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudChapitre -> BudSsTitre
+
+edge [arrowtail="none" arrowhead = "open" headlabel="chpTtrId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudChapitre -> BudTitre
+
+edge [arrowtail="none" arrowhead = "open" headlabel="chpBdtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudChapitre -> PlaBudgetType
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDemDmpId" taillabel="dmpDemId" labeldistance="2.0" labelangle="-30"]
+
+BudDemModif -> BudDemModifMpres
+
+edge [arrowtail="none" arrowhead = "open" headlabel="demMopId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemModif -> BudMorasseOp
+
+edge [arrowtail="none" arrowhead = "open" headlabel="demSmdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemModif -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDmpDhcId" taillabel="dhcDmpId" labeldistance="2.0" labelangle="-30"]
+
+BudDemModifMpres -> BudDmpHasChp
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmpMprId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemModifMpres -> BudMorassePres
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmpSmdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemModifMpres -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmvChpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudChapitre
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmvDmvId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudDemMvt
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDmvMddId" taillabel="mddDmvId" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudDemMvtDest
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDmvDmlId" taillabel="dmlDmvId" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudDemMvtLog
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDmvDmmId" taillabel="dmmDmvId" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudDemMvtMemo
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n dmmIds" taillabel="dmmDmvId" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudDemMvtMpres
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDmvMdsId" taillabel="mdsDmvId" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudDemMvtSrc
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmvDepId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudDemPlanif
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmvMorDest" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudMorasse
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmvMorSrc" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudMorasse
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDmvModId" taillabel="modDmvId" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudMorasseMvmDet
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDmvCddId" taillabel="cddDmvId" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudMvtDecision
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDmvCdsId" taillabel="cdsDmvId" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudMvtState
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmvSmrDest" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudSsMorasse
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmvSmrSrc" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudSsMorasse
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmvTvrId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> BudTypeVir
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmvEntId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> ParEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmvPexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> ParExercice
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmvOrdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> ParOrdonateur
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmvBdtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvt -> PlaBudgetType
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mddMod" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvtDest -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mddSmd" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvtDest -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDmmMhcId" taillabel="mhcDmmId" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvtMpres -> BudDmmHasChp
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmmModId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvtMpres -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmmMprId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvtMpres -> BudMorassePres
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dmmSmdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvtMpres -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mdsMod" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvtSrc -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mdsSmd" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemMvtSrc -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDepDppId" taillabel="dppDepId" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanif -> BudDemPlanifMpres
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDepDpdId" taillabel="dpdDepId" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanif -> BudDemPlanifNpres
+
+edge [arrowtail="none" arrowhead = "open" headlabel="depMopId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanif -> BudMorasseOp
+
+edge [arrowtail="none" arrowhead = "open" headlabel="depSmdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanif -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="depAexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanif -> ParAgentExe
+
+edge [arrowtail="none" arrowhead = "open" headlabel="depCopId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanif -> PlaCreditOp
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDppMhpId" taillabel="mhpDppId" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanifMpres -> BudDemPlanifMpresHasPex
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dppMprId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanifMpres -> BudMorassePres
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dppSmdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanifMpres -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mhpChpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanifMpresHasPex -> PlaCprHasPex
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idDpdNhpId" taillabel="nhpDpdId" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanifNpres -> BudDemPlanifNpresHasPex
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dpdSmdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanifNpres -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dpdCprId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanifNpres -> PlaCreditPrs
+
+edge [arrowtail="none" arrowhead = "open" headlabel="nhpChpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDemPlanifNpresHasPex -> PlaCprHasPex
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mhcChpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDmmHasChp -> PlaCprHasPex
+
+edge [arrowtail="none" arrowhead = "open" headlabel="dhcChpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudDmpHasChp -> PlaCprHasPex
+
+edge [arrowtail="none" arrowhead = "open" headlabel="linCecId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudLigne -> BudCodeEco
+
+edge [arrowtail="none" arrowhead = "none" headlabel="linLinId" taillabel="0..n idLinLinId" labeldistance="2.0" labelangle="-30"]
+
+BudLigne -> BudLigne
+
+edge [arrowtail="none" arrowhead = "open" headlabel="linModId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudLigne -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "none" headlabel="linPphId" taillabel="0..n idPphLinId" labeldistance="2.0" labelangle="-30"]
+
+BudLigne -> BudParagraphe
+
+edge [arrowtail="none" arrowhead = "open" headlabel="linPexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudLigne -> ParExercice
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idMorModId" taillabel="modMorId" labeldistance="2.0" labelangle="-30"]
+
+BudMorasse -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="morPexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudMorasse -> ParExercice
+
+edge [arrowtail="none" arrowhead = "open" headlabel="morBdtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudMorasse -> PlaBudgetType
+
+edge [arrowtail="none" arrowhead = "open" headlabel="modChpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudMorasseDet -> BudChapitre
+
+edge [arrowtail="none" arrowhead = "open" headlabel="modCecId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudMorasseDet -> BudCodeEco
+
+edge [arrowtail="none" arrowhead = "open" headlabel="modCfnId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudMorasseDet -> BudCodeFnc
+
+edge [arrowtail="none" arrowhead = "none" headlabel="modModId" taillabel="0..n idModModId" labeldistance="2.0" labelangle="-30"]
+
+BudMorasseDet -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idModMopId" taillabel="mopModId" labeldistance="2.0" labelangle="-30"]
+
+BudMorasseDet -> BudMorasseOp
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idModMprId" taillabel="mprModId" labeldistance="2.0" labelangle="-30"]
+
+BudMorasseDet -> BudMorassePres
+
+edge [arrowtail="none" arrowhead = "open" headlabel="modPexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudMorasseDet -> ParExercice
+
+edge [arrowtail="none" arrowhead = "open" headlabel="modModId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudMorasseMvmDet -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="modSmdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudMorasseMvmDet -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idMopMprId" taillabel="mprMopId" labeldistance="2.0" labelangle="-30"]
+
+BudMorasseOp -> BudMorassePres
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mopCopId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudMorasseOp -> PlaCreditOp
+
+edge [arrowtail="none" arrowhead = "none" headlabel="mprPmprId" taillabel="0..n SMprs" labeldistance="2.0" labelangle="-30"]
+
+BudMorassePres -> BudMorassePres
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idMprMhcId" taillabel="mhcMprId" labeldistance="2.0" labelangle="-30"]
+
+BudMorassePres -> BudMprHasChp
+
+edge [arrowtail="none" arrowhead = "none" headlabel="mprSmdId" taillabel="0..n idSmdMprId" labeldistance="2.0" labelangle="-30"]
+
+BudMorassePres -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mprAexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudMorassePres -> ParAgentExe
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mprCprId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudMorassePres -> PlaCreditPrs
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mhcChpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudMprHasChp -> PlaCprHasPex
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cddEntId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudMvtDecision -> ParEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdsEntId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudMvtState -> ParEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="pphArtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudParagraphe -> BudArticle
+
+edge [arrowtail="none" arrowhead = "open" headlabel="pphChpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudParagraphe -> BudChapitre
+
+edge [arrowtail="none" arrowhead = "open" headlabel="pphCfnId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudParagraphe -> BudCodeFnc
+
+edge [arrowtail="none" arrowhead = "open" headlabel="pphModId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudParagraphe -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "none" headlabel="pphPphId" taillabel="0..n idPphPphId" labeldistance="2.0" labelangle="-30"]
+
+BudParagraphe -> BudParagraphe
+
+edge [arrowtail="none" arrowhead = "none" headlabel="pphRegId" taillabel="0..n idRegPphId" labeldistance="2.0" labelangle="-30"]
+
+BudParagraphe -> BudRegion
+
+edge [arrowtail="none" arrowhead = "open" headlabel="pphPexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudParagraphe -> ParExercice
+
+edge [arrowtail="none" arrowhead = "open" headlabel="pphBdtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudParagraphe -> PlaBudgetType
+
+edge [arrowtail="none" arrowhead = "open" headlabel="regModId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudRegion -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="regPexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudRegion -> ParExercice
+
+edge [arrowtail="none" arrowhead = "open" headlabel="smlSmdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudSmdLog -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="smrMorId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudSsMorasse -> BudMorasse
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idSmrSmdId" taillabel="smdSmrId" labeldistance="2.0" labelangle="-30"]
+
+BudSsMorasse -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="smrPexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudSsMorasse -> ParExercice
+
+edge [arrowtail="none" arrowhead = "none" headlabel="smrOrdId" taillabel="0..n idOrdSmrId" labeldistance="2.0" labelangle="-30"]
+
+BudSsMorasse -> ParOrdonateur
+
+edge [arrowtail="none" arrowhead = "open" headlabel="smrBdtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudSsMorasse -> PlaBudgetType
+
+edge [arrowtail="none" arrowhead = "open" headlabel="smdModId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudSsMorasseDet -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="strTtrId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+BudSsTitre -> BudTitre
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tcrCdpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CalculRevision -> CptDepense
+
+edge [arrowtail="none" arrowhead = "none" headlabel="tcrAttId" taillabel="0..n idAttTcrId" labeldistance="2.0" labelangle="-30"]
+
+CalculRevision -> TecAttachement
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n ctdCddId" taillabel="cddCtdId" labeldistance="2.0" labelangle="-30"]
+
+ClotTablDep -> ClotTablDepDecision
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n ctdCdeId" taillabel="cdeCtdId" labeldistance="2.0" labelangle="-30"]
+
+ClotTablDep -> ClotTablDepExtra
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n ctdCepId" taillabel="cepCtdId" labeldistance="2.0" labelangle="-30"]
+
+ClotTablDep -> ClotTablDepExtraDisp
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n ctdCdsId" taillabel="cdsCtdId" labeldistance="2.0" labelangle="-30"]
+
+ClotTablDep -> ClotTablDepState
+
+edge [arrowtail="none" arrowhead = "open" headlabel="ctdCurCenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ClotTablDep -> CptEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cddCenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ClotTablDepDecision -> CptEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdeModActId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ClotTablDepExtra -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdeModId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ClotTablDepExtra -> BudMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdeSmdActId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ClotTablDepExtra -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdeSmdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ClotTablDepExtra -> BudSsMorasseDet
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdeCdpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ClotTablDepExtra -> CptDepense
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cepCdpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ClotTablDepExtraDisp -> CptDepense
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdsCenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ClotTablDepState -> CptEntity
+
+edge [arrowtail="none" arrowhead = "none" headlabel="cddCdpId" taillabel="0..n idCdpCddId" labeldistance="2.0" labelangle="-30"]
+
+CptDepDecision -> CptDepense
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cddCenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepDecision -> CptEntity
+
+edge [arrowtail="none" arrowhead = "none" headlabel="cdmCdpId" taillabel="0..n idCdpCdmId" labeldistance="2.0" labelangle="-30"]
+
+CptDepMemo -> CptDepense
+
+edge [arrowtail="none" arrowhead = "none" headlabel="cdsCdpId" taillabel="0..n idCdpCdsId" labeldistance="2.0" labelangle="-30"]
+
+CptDepState -> CptDepense
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdsCenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepState -> CptEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdpAchId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> AchAchat
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdpAloId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> AchAchatLot
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdpCurAenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> AchEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdpAmpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> AchModePass
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdpAstId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> AchSstypeDepense
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdpAtdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> AchTypeDepense
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdpArtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> BudArticle
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdpLinId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> BudLigne
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdpParId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> BudParagraphe
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdpCurCenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> CptEntity
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCdpCosId" taillabel="cosCdpId" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> CptOrdreService
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdpTyoId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> CptTypeOrdre
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdpEntId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> ParEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdpPexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> ParExercice
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdpOrdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> ParOrdonateur
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdpBenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> ParTypeBenif
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdpBdtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> PlaBudgetType
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cprPrcId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> PlaClassPrestation
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdpPrtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptDepense -> PlaTypePrestation
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cosPhaId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptOrdreService -> AchDelaiPhase
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cosCtoId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptOrdreService -> CptTypeOrdre
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cddCenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptRpDecision -> CptEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdsCenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+CptRpState -> CptEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="lmdLogId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+LogMsgDetail -> LogNwsLog
+
+edge [arrowtail="none" arrowhead = "open" headlabel="logLotId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+LogNwsLog -> LogLogType
+
+edge [arrowtail="none" arrowhead = "none" headlabel="logSesId" taillabel="0..n sesLogId" labeldistance="2.0" labelangle="-30"]
+
+LogNwsLog -> LogNwsSession
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mosComId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+MhaiMosque -> ParCommune
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mosDelProvId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+MhaiMosque -> ParProvince
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mosRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+MhaiMosque -> ParRegion
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mosComId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+MhaiMosqueAnc -> ParCommuneAnc
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mosDelProvId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+MhaiMosqueAnc -> ParProvinceAnc
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mosRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+MhaiMosqueAnc -> ParRegionAnc
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mosComId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+MhaiMosqueOld -> ParCommuneOld
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mosDelProvId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+MhaiMosqueOld -> ParProvinceOld
+
+edge [arrowtail="none" arrowhead = "open" headlabel="mosRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+MhaiMosqueOld -> ParRegionOld
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tnaCdpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+Nantissement -> CptDepense
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tnaAttId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+Nantissement -> TecAttachement
+
+edge [arrowtail="none" arrowhead = "open" headlabel="aexUsaId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParAgentExe -> AdmUserAccount
+
+edge [arrowtail="none" arrowhead = "none" headlabel="aexOrdId" taillabel="0..n idOrdAexId" labeldistance="2.0" labelangle="-30"]
+
+ParAgentExe -> ParOrdonateur
+
+edge [arrowtail="none" arrowhead = "none" headlabel="comPrvId" taillabel="0..n idPrvComId" labeldistance="2.0" labelangle="-30"]
+
+ParCommune -> ParProvince
+
+edge [arrowtail="none" arrowhead = "open" headlabel="comRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParCommune -> ParRegion
+
+edge [arrowtail="none" arrowhead = "none" headlabel="comPrvId" taillabel="0..n idPrvComId" labeldistance="2.0" labelangle="-30"]
+
+ParCommuneAnc -> ParProvinceAnc
+
+edge [arrowtail="none" arrowhead = "open" headlabel="comRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParCommuneAnc -> ParRegionAnc
+
+edge [arrowtail="none" arrowhead = "none" headlabel="comPrvId" taillabel="0..n idPrvComId" labeldistance="2.0" labelangle="-30"]
+
+ParCommuneOld -> ParProvinceOld
+
+edge [arrowtail="none" arrowhead = "open" headlabel="comRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParCommuneOld -> ParRegionOld
+
+edge [arrowtail="none" arrowhead = "open" headlabel="entEntId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParEntity -> ParEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="entEtyId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParEntity -> ParEntityType
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n pexPlaId" taillabel="0..n plaPexId" labeldistance="2.0" labelangle="-30"]
+
+ParExercice -> PlaPlan
+
+edge [arrowtail="none" arrowhead = "none" headlabel="pjrRepId" taillabel="0..n repPjrId" labeldistance="2.0" labelangle="-30"]
+
+ParJRParameters -> ParReport
+
+edge [arrowtail="none" arrowhead = "open" headlabel="ordUsaId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParOrdonateur -> AdmUserAccount
+
+edge [arrowtail="none" arrowhead = "none" headlabel="ordOrdId" taillabel="0..n idOrdOrdId" labeldistance="2.0" labelangle="-30"]
+
+ParOrdonateur -> ParOrdonateur
+
+edge [arrowtail="none" arrowhead = "none" headlabel="ordRegId" taillabel="0..n idRegOrdId" labeldistance="2.0" labelangle="-30"]
+
+ParOrdonateur -> ParRegion
+
+edge [arrowtail="none" arrowhead = "open" headlabel="parEntId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParParameters -> ParEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="prvRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParProvince -> ParRegion
+
+edge [arrowtail="none" arrowhead = "open" headlabel="prvRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParProvinceAnc -> ParRegionAnc
+
+edge [arrowtail="none" arrowhead = "open" headlabel="prvRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParProvinceOld -> ParRegionOld
+
+edge [arrowtail="none" arrowhead = "open" headlabel="repApmId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+ParReport -> AdmAppModule
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tprCdpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PenaliteRetard -> CptDepense
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tprAttId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PenaliteRetard -> TecAttachement
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idPrcPrtId" taillabel="prtPrcId" labeldistance="2.0" labelangle="-30"]
+
+PlaClassPrestation -> PlaTypePrestation
+
+edge [arrowtail="none" arrowhead = "open" headlabel="chmMosId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCopHasMos -> MhaiMosque
+
+edge [arrowtail="none" arrowhead = "none" headlabel="chmCopId" taillabel="0..n idCopChmId" labeldistance="2.0" labelangle="-30"]
+
+PlaCopHasMos -> PlaCreditOp
+
+edge [arrowtail="none" arrowhead = "open" headlabel="chpPexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCprHasPex -> ParExercice
+
+edge [arrowtail="none" arrowhead = "none" headlabel="chpCprId" taillabel="0..n idCprChpId" labeldistance="2.0" labelangle="-30"]
+
+PlaCprHasPex -> PlaCreditPrs
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copMosId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> MhaiMosque
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copAexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> ParAgentExe
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copCmdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> ParCommanditaire
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copComId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> ParCommune
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copCvtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> ParConvention
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copPexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> ParExercice
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copOrdId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> ParOrdonateur
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copPrvId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> ParProvince
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copRegBudId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> ParRegion
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copRegTerId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> ParRegion
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copBdtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> PlaBudgetType
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copCpgId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> PlaCreditPrg
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copCpjId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> PlaCreditPrj
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copCrpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> PlaCreditPrjReg
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCopCprId" taillabel="cprCopId" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> PlaCreditPrs
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copPlaId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> PlaPlan
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copTopId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> PlaTypeOperation
+
+edge [arrowtail="none" arrowhead = "open" headlabel="codEntId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOpDemande -> ParEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="codCopId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOpDemande -> PlaCreditOp
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCodCddId" taillabel="cddCodId" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOpDemande -> PlaDemCopDecision
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCodCdsId" taillabel="cdsCodId" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOpDemande -> PlaDemCopState
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cpgPexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrg -> ParExercice
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cpgBdtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrg -> PlaBudgetType
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCpgCpjId" taillabel="cpjCpgId" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrg -> PlaCreditPrj
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cpgPlaId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrg -> PlaPlan
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cpgPrgId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrg -> PlaProgram
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cpjPexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrj -> ParExercice
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cpjBdtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrj -> PlaBudgetType
+
+edge [arrowtail="none" arrowhead = "none" headlabel="cpjCpjId" taillabel="0..n cpjCpjsId" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrj -> PlaCreditPrj
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCpjCrpId" taillabel="crpCpjId" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrj -> PlaCreditPrjReg
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cpjPlaId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrj -> PlaPlan
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cpjPrjId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrj -> PlaProject
+
+edge [arrowtail="none" arrowhead = "open" headlabel="crpPexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrjReg -> ParExercice
+
+edge [arrowtail="none" arrowhead = "open" headlabel="crpRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrjReg -> ParRegion
+
+edge [arrowtail="none" arrowhead = "open" headlabel="crpBdtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrjReg -> PlaBudgetType
+
+edge [arrowtail="none" arrowhead = "open" headlabel="crpCpgId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrjReg -> PlaCreditPrg
+
+edge [arrowtail="none" arrowhead = "open" headlabel="crpCreId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrjReg -> PlaCreditReg
+
+edge [arrowtail="none" arrowhead = "open" headlabel="crpPlaId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrjReg -> PlaPlan
+
+edge [arrowtail="none" arrowhead = "open" headlabel="crpPrjId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrjReg -> PlaProject
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cprMosId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrs -> MhaiMosque
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cprAexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrs -> ParAgentExe
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cprPexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrs -> ParExercice
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cprPrcId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrs -> PlaClassPrestation
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cprPrtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrs -> PlaTypePrestation
+
+edge [arrowtail="none" arrowhead = "open" headlabel="crePexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditReg -> ParExercice
+
+edge [arrowtail="none" arrowhead = "open" headlabel="creRegId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditReg -> ParRegion
+
+edge [arrowtail="none" arrowhead = "open" headlabel="creBdtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditReg -> PlaBudgetType
+
+edge [arrowtail="none" arrowhead = "open" headlabel="creCpgId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditReg -> PlaCreditPrg
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cddEntId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaDemCopDecision -> ParEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cdsEntId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaDemCopState -> ParEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="plePexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaPlanHasExe -> ParExercice
+
+edge [arrowtail="none" arrowhead = "open" headlabel="plePlaId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaPlanHasExe -> PlaPlan
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idPrgPrjId" taillabel="prjPrgId" labeldistance="2.0" labelangle="-30"]
+
+PlaProgram -> PlaProject
+
+edge [arrowtail="none" arrowhead = "none" headlabel="prjPrjId" taillabel="0..n prjPrjsId" labeldistance="2.0" labelangle="-30"]
+
+PlaProject -> PlaProject
+
+edge [arrowtail="none" arrowhead = "open" headlabel="rctPexId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaRecette -> ParExercice
+
+edge [arrowtail="none" arrowhead = "open" headlabel="rctBdtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaRecette -> PlaBudgetType
+
+edge [arrowtail="none" arrowhead = "open" headlabel="rctSrfId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaRecette -> PlaSrcFinance
+
+edge [arrowtail="none" arrowhead = "open" headlabel="trgCdpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+RetenueGarantie -> CptDepense
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n trgRgpId" taillabel="rgpTrgId" labeldistance="2.0" labelangle="-30"]
+
+RetenueGarantie -> RetenueGarantiePart
+
+edge [arrowtail="none" arrowhead = "open" headlabel="trgAttId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+RetenueGarantie -> TecAttachement
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tatCdpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+TecAttachement -> CptDepense
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tatCurTenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+TecAttachement -> CptEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tatDpCurTenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+TecAttachement -> CptEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tatCatId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+TecAttachement -> TecCatIndex
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCdpTedId" taillabel="tedCdpId" labeldistance="2.0" labelangle="-30"]
+
+TecAttachement -> TecDecision
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCdpDpdId" taillabel="dpdCdpId" labeldistance="2.0" labelangle="-30"]
+
+TecAttachement -> TecDpDecision
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCdpDpsId" taillabel="dpsCdpId" labeldistance="2.0" labelangle="-30"]
+
+TecAttachement -> TecDpState
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCdpTesId" taillabel="tesCdpId" labeldistance="2.0" labelangle="-30"]
+
+TecAttachement -> TecState
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tedCenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+TecDecision -> CptEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tedCenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+TecDpDecision -> CptEntity
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tesCenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+TecDpState -> CptEntity
+
+edge [arrowtail="none" arrowhead = "none" headlabel="tetTpvId" taillabel="0..n tpvTetId" labeldistance="2.0" labelangle="-30"]
+
+TecEtape -> TecPv
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tinTciId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+TecIndex -> TecCatIndex
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tpvCdpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+TecPv -> CptDepense
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tpvTptId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+TecPv -> TecPvType
+
+edge [arrowtail="none" arrowhead = "open" headlabel="tesCenId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+TecState -> CptEntity
+}

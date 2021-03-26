@@ -1,0 +1,27 @@
+public class HelloWorld{
+
+     public static void main(String []args){
+        System.out.println("Hello World");
+        String line="2019-12-09 13:14:21 | INFO  | svcLogger            | XFSGenericService::Creation du service :BillAcceptor1 : CIM : GBRU-GBNA : CIM|";
+        String str=line.substring(line.indexOf("| XFSGenericService::Creation du service :"));
+		str=str.replaceFirst("| XFSGenericService::Creation du service :","");
+		
+		System.out.println(str);
+     }
+}
+
+
+System.out.println("Hello World");
+		String line="2019-12-09 13:14:21 | INFO  | svcLogger            | XFSGenericService::Creation du service :BillAcceptor1 : CIM : GBRU-GBNA : CIM|";
+        String str=line.substring(line.indexOf("| XFSGenericService::Creation du service :"));
+		
+		str=str.replace("| XFSGenericService::Creation du service :","");
+		
+		System.out.println(str);
+		System.out.println(str);
+		
+		String[] table=str.split(":");
+		
+		System.out.println(table[0].trim());
+		System.out.println(table[1].trim());
+		System.out.println(table[2].trim());

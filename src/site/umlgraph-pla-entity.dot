@@ -1,0 +1,512 @@
+digraph G {
+	fontsize = 10
+	node [
+		fontsize = 10
+		fontname="arial"
+		shape=plaintext
+	]
+
+	edge [
+		fontsize = 10
+	]
+subgraph clusterpla {
+	label = "pla"  
+	PlaBudgetType [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaBudgetType </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + bdtCode : String </td></tr>
+	<tr><td align="left"> + bdtName : String </td></tr>
+	<tr><td align="left"> + bdtOrdre : Float </td></tr>
+	<tr><td align="left"> + bdtStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaClassPrestation [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaClassPrestation </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prcCode : String </td></tr>
+	<tr><td align="left"> + prcName : String </td></tr>
+	<tr><td align="left"> + prcDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaCopHasMos [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaCopHasMos </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + chmMosId : MhaiMosque </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaCprHasPex [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaCprHasPex </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + chpCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + chpPexId : ParExercice </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaCreditOp [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaCreditOp </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + copCode : String </td></tr>
+	<tr><td align="left"> + copName : String </td></tr>
+	<tr><td align="left"> + copDesc : String </td></tr>
+	<tr><td align="left"> + copCreditType : String </td></tr>
+	<tr><td align="left"> + copCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + copPlaStart : Date </td></tr>
+	<tr><td align="left"> + copPlaEnd : Date </td></tr>
+	<tr><td align="left"> + copEffStart : Date </td></tr>
+	<tr><td align="left"> + copEffEnd : Date </td></tr>
+	<tr><td align="left"> + copStatus : String </td></tr>
+	<tr><td align="left"> + copLieu : String </td></tr>
+	<tr><td align="left"> + copAdresse : String </td></tr>
+	<tr><td align="left"> + copIsCvt : String </td></tr>
+	<tr><td align="left"> + copPlanned : String </td></tr>
+	<tr><td align="left"> + copPriorite : String </td></tr>
+	<tr><td align="left"> + copNum : String </td></tr>
+	<tr><td align="left"> + copIntitule : String </td></tr>
+	<tr><td align="left"> + copPexId : ParExercice </td></tr>
+	<tr><td align="left"> + copMosId : MhaiMosque </td></tr>
+	<tr><td align="left"> + copRegBudId : ParRegion </td></tr>
+	<tr><td align="left"> + copRegTerId : ParRegion </td></tr>
+	<tr><td align="left"> + copPrvId : ParProvince </td></tr>
+	<tr><td align="left"> + copComId : ParCommune </td></tr>
+	<tr><td align="left"> + copCmdId : ParCommanditaire </td></tr>
+	<tr><td align="left"> + copCvtId : ParConvention </td></tr>
+	<tr><td align="left"> + copAexId : ParAgentExe </td></tr>
+	<tr><td align="left"> + copOrdId : ParOrdonateur </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaCreditOpDemande [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaCreditOpDemande </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + codValidationDate : Date </td></tr>
+	<tr><td align="left"> + codStatus : String </td></tr>
+	<tr><td align="left"> + codNotes : String </td></tr>
+	<tr><td align="left"> + codEntId : ParEntity </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaCreditPrg [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaCreditPrg </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cpgCreditInv : BigDecimal </td></tr>
+	<tr><td align="left"> + cpgAllocInv : BigDecimal </td></tr>
+	<tr><td align="left"> + cpgCreditFct : BigDecimal </td></tr>
+	<tr><td align="left"> + cpgAllocFct : BigDecimal </td></tr>
+	<tr><td align="left"> + cpgStatus : String </td></tr>
+	<tr><td align="left"> + cpgPexId : ParExercice </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaCreditPrj [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaCreditPrj </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cpjCreditInv : BigDecimal </td></tr>
+	<tr><td align="left"> + cpjAllocInv : BigDecimal </td></tr>
+	<tr><td align="left"> + cpjCreditFct : BigDecimal </td></tr>
+	<tr><td align="left"> + cpjAllocFct : BigDecimal </td></tr>
+	<tr><td align="left"> + cpjStatus : String </td></tr>
+	<tr><td align="left"> + cpjPexId : ParExercice </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaCreditPrjReg [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaCreditPrjReg </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + crpCreditInv : BigDecimal </td></tr>
+	<tr><td align="left"> + crpCreditFct : BigDecimal </td></tr>
+	<tr><td align="left"> + crpStatus : String </td></tr>
+	<tr><td align="left"> + crpRegId : ParRegion </td></tr>
+	<tr><td align="left"> + crpPexId : ParExercice </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaCreditPrs [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaCreditPrs </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cprCode : String </td></tr>
+	<tr><td align="left"> + cprName : String </td></tr>
+	<tr><td align="left"> + cprDesc : String </td></tr>
+	<tr><td align="left"> + cprCreditType : String </td></tr>
+	<tr><td align="left"> + cprCredit : BigDecimal </td></tr>
+	<tr><td align="left"> + cprPlaStart : Date </td></tr>
+	<tr><td align="left"> + cprPlaEnd : Date </td></tr>
+	<tr><td align="left"> + cprEffStart : Date </td></tr>
+	<tr><td align="left"> + cprEffEnd : Date </td></tr>
+	<tr><td align="left"> + cprNbrPex : Integer </td></tr>
+	<tr><td align="left"> + cprTaux : BigDecimal </td></tr>
+	<tr><td align="left"> + cprPexId : ParExercice </td></tr>
+	<tr><td align="left"> + cprMosId : MhaiMosque </td></tr>
+	<tr><td align="left"> + cprAexId : ParAgentExe </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaCreditReg [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaCreditReg </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + creCreditInv : BigDecimal </td></tr>
+	<tr><td align="left"> + creAllocInv : BigDecimal </td></tr>
+	<tr><td align="left"> + creCreditFct : BigDecimal </td></tr>
+	<tr><td align="left"> + creAllocFct : BigDecimal </td></tr>
+	<tr><td align="left"> + creStatus : String </td></tr>
+	<tr><td align="left"> + creRegId : ParRegion </td></tr>
+	<tr><td align="left"> + crePexId : ParExercice </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaDemCopDecision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaDemCopDecision </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cddStatus : String </td></tr>
+	<tr><td align="left"> + cddDate : Date </td></tr>
+	<tr><td align="left"> + cddRem : String </td></tr>
+	<tr><td align="left"> + cddEntId : ParEntity </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaDemCopState [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaDemCopState </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + cdsStatus : String </td></tr>
+	<tr><td align="left"> + cdsDate : Date </td></tr>
+	<tr><td align="left"> + cdsRem : String </td></tr>
+	<tr><td align="left"> + cdsEntId : ParEntity </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaPlan [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaPlan </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + plaCode : String </td></tr>
+	<tr><td align="left"> + plaName : String </td></tr>
+	<tr><td align="left"> + plaDesc : String </td></tr>
+	<tr><td align="left"> + plaDateBegin : Date </td></tr>
+	<tr><td align="left"> + plaDateEnd : Date </td></tr>
+	<tr><td align="left"> + plaStatus : String </td></tr>
+	<tr><td align="left"> + plaPexId : List&lt;ParExercice&gt; </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaPlanHasExe [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaPlanHasExe </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + plePexId : ParExercice </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaProgram [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaProgram </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prgCode : String </td></tr>
+	<tr><td align="left"> + prgName : String </td></tr>
+	<tr><td align="left"> + prgDesc : String </td></tr>
+	<tr><td align="left"> + prgStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaProject [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaProject </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prjCode : String </td></tr>
+	<tr><td align="left"> + prjName : String </td></tr>
+	<tr><td align="left"> + prjDesc : String </td></tr>
+	<tr><td align="left"> + prjStatus : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaRecette [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaRecette </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + rctNum : String </td></tr>
+	<tr><td align="left"> + rctRef : String </td></tr>
+	<tr><td align="left"> + rctCreditInv : BigDecimal </td></tr>
+	<tr><td align="left"> + rctCreditFct : BigDecimal </td></tr>
+	<tr><td align="left"> + rctDate : Date </td></tr>
+	<tr><td align="left"> + rctObservation : String </td></tr>
+	<tr><td align="left"> + rctPexId : ParExercice </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaSrcFinance [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaSrcFinance </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + srfCode : String </td></tr>
+	<tr><td align="left"> + srfName : String </td></tr>
+	<tr><td align="left"> + srfDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaTypeOperation [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaTypeOperation </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + topCode : String </td></tr>
+	<tr><td align="left"> + topName : String </td></tr>
+	<tr><td align="left"> + topDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	PlaTypePrestation [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> PlaTypePrestation </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + prtCode : String </td></tr>
+	<tr><td align="left"> + prtName : String </td></tr>
+	<tr><td align="left"> + prtDesc : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+edge [arrowhead = "empty"]
+edge [arrowhead = "none"]
+
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idPrcPrtId" taillabel="prtPrcId" labeldistance="2.0" labelangle="-30"]
+
+PlaClassPrestation -> PlaTypePrestation
+
+edge [arrowtail="none" arrowhead = "none" headlabel="chmCopId" taillabel="0..n idCopChmId" labeldistance="2.0" labelangle="-30"]
+
+PlaCopHasMos -> PlaCreditOp
+
+edge [arrowtail="none" arrowhead = "none" headlabel="chpCprId" taillabel="0..n idCprChpId" labeldistance="2.0" labelangle="-30"]
+
+PlaCprHasPex -> PlaCreditPrs
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copBdtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> PlaBudgetType
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copCpgId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> PlaCreditPrg
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copCpjId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> PlaCreditPrj
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copCrpId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> PlaCreditPrjReg
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCopCprId" taillabel="cprCopId" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> PlaCreditPrs
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copPlaId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> PlaPlan
+
+edge [arrowtail="none" arrowhead = "open" headlabel="copTopId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOp -> PlaTypeOperation
+
+edge [arrowtail="none" arrowhead = "open" headlabel="codCopId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOpDemande -> PlaCreditOp
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCodCddId" taillabel="cddCodId" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOpDemande -> PlaDemCopDecision
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCodCdsId" taillabel="cdsCodId" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditOpDemande -> PlaDemCopState
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cpgBdtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrg -> PlaBudgetType
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCpgCpjId" taillabel="cpjCpgId" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrg -> PlaCreditPrj
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cpgPlaId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrg -> PlaPlan
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cpgPrgId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrg -> PlaProgram
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cpjBdtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrj -> PlaBudgetType
+
+edge [arrowtail="none" arrowhead = "none" headlabel="cpjCpjId" taillabel="0..n cpjCpjsId" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrj -> PlaCreditPrj
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idCpjCrpId" taillabel="crpCpjId" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrj -> PlaCreditPrjReg
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cpjPlaId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrj -> PlaPlan
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cpjPrjId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrj -> PlaProject
+
+edge [arrowtail="none" arrowhead = "open" headlabel="crpBdtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrjReg -> PlaBudgetType
+
+edge [arrowtail="none" arrowhead = "open" headlabel="crpCpgId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrjReg -> PlaCreditPrg
+
+edge [arrowtail="none" arrowhead = "open" headlabel="crpCreId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrjReg -> PlaCreditReg
+
+edge [arrowtail="none" arrowhead = "open" headlabel="crpPlaId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrjReg -> PlaPlan
+
+edge [arrowtail="none" arrowhead = "open" headlabel="crpPrjId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrjReg -> PlaProject
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cprPrcId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrs -> PlaClassPrestation
+
+edge [arrowtail="none" arrowhead = "open" headlabel="cprPrtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditPrs -> PlaTypePrestation
+
+edge [arrowtail="none" arrowhead = "open" headlabel="creBdtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditReg -> PlaBudgetType
+
+edge [arrowtail="none" arrowhead = "open" headlabel="creCpgId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaCreditReg -> PlaCreditPrg
+
+edge [arrowtail="none" arrowhead = "open" headlabel="plePlaId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaPlanHasExe -> PlaPlan
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n idPrgPrjId" taillabel="prjPrgId" labeldistance="2.0" labelangle="-30"]
+
+PlaProgram -> PlaProject
+
+edge [arrowtail="none" arrowhead = "none" headlabel="prjPrjId" taillabel="0..n prjPrjsId" labeldistance="2.0" labelangle="-30"]
+
+PlaProject -> PlaProject
+
+edge [arrowtail="none" arrowhead = "open" headlabel="rctBdtId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaRecette -> PlaBudgetType
+
+edge [arrowtail="none" arrowhead = "open" headlabel="rctSrfId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+PlaRecette -> PlaSrcFinance
+}

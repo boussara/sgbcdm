@@ -1,0 +1,1109 @@
+import "classpath:/model-cpt.btdesign"
+
+ApplicationPart Tec{
+	Module tec{
+	
+	/****************************************************************************************************************************************************** */	
+	/****************************************************************************************************************************************************** */
+		Entity TecDecision{
+			databaseTable="tec_decision"
+			hint="idSequence=cddnoisiced_tec_tpc_X"
+			
+			Long id    databaseColumn="ted_id" 
+			String tedStatus length="1" nullable databaseColumn="ted_status"  hint="visible=true,toString" 
+			Date tedDate  nullable databaseColumn="ted_date"  hint="visible=true,toString" 
+			String tedRem length="256" nullable databaseColumn="ted_rem"  hint="visible=true,toString" 
+			
+				//- @TecEntity tedCenId  databaseColumn="ted_cen_id"  /*<-> idCenTedId*/  fetch="lazy" cascade="refresh" 
+				- @CptEntity tedCenId  databaseColumn="ted_cen_id"  /*<-> idCenTedId*/  fetch="lazy" cascade="refresh"  							
+			
+				- @TecAttachement tedCdpId  databaseColumn="ted_cdp_id"  <-> idCdpTedId  fetch="lazy" cascade="refresh"  							
+			
+			
+			Repository TecDecisionRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@TecDecision> findAll(PagingParameter pagingParameter);
+				PagedResult<@TecDecision> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service TecDecisionService {
+			
+			findById => TecDecisionRepository.findById;
+			findAll => TecDecisionRepository.findAll;
+			save => TecDecisionRepository.save;
+			delete => TecDecisionRepository.delete;
+			PagedResult<@TecDecision> search(@TecDecisionDTO aua);
+			PagedResult<@TecDecision> findAll(PagingParameter pagingParameter);
+			
+			List<@TecDecision> findByTedStatus(String tedStatus) hint="gen,order=asc,prop=id,nullable";
+			List<@TecDecision> findByTedDate(Date tedDate) hint="gen,order=asc,prop=id,nullable";
+			List<@TecDecision> findByTedRem(String tedRem) hint="gen,order=asc,prop=id,nullable";
+			List<@TecDecision> findByTedCenId(Long id) hint="gen,order=asc,prop=id,conditions=tedCenId.id&$id,nullable";
+			List<@TecDecision> findByTedCdpId(Long id) hint="gen,order=asc,prop=id,conditions=tedCdpId.id&$id,nullable";
+		}
+		
+		DataTransferObject TecDecisionDTO {
+			hint="for=search,entity=TecDecision"
+			String tedStatus hint="" 
+			String tedDate hint="" 
+			String tedRem hint="" 
+		}
+		
+		DataTransferObject TecDecisionMergeDTO {
+			hint="for=merge,entity=TecDecision"
+			String tedStatus hint="" 
+			String tedDate hint="" 
+			String tedRem hint="" 
+			String tedCenId hint="type=system,view=Search"
+			String tedCdpId hint="type=system,view=Search"
+		}
+		/****************************************************************************************************************************************************** */
+		Entity TecState{
+			databaseTable="tec_state"
+			hint="idSequence=cdsetats_tec_tpc_X"
+			
+			Long id    databaseColumn="tes_id" 
+			String tesStatus length="1" nullable databaseColumn="tes_status"  hint="visible=true,toString" 
+			Date tesDate  nullable databaseColumn="tes_date"  hint="visible=true,toString" 
+			String tesRem length="256" nullable databaseColumn="tes_rem"  hint="visible=true,toString" 
+			
+				//- @CptEntity cdsCenId  databaseColumn="cds_cen_id"  /*<-> idCenCdsId*/  fetch="lazy" cascade="refresh"  
+				- @CptEntity tesCenId  databaseColumn="tes_cen_id"  /*<-> idCenTesId*/  fetch="lazy" cascade="refresh"
+				//- @TecEntity tesCenId  databaseColumn="tes_cen_id"  /*<-> idCenTesId*/  fetch="lazy" cascade="refresh"							
+			
+				- @TecAttachement tesCdpId <-> idCdpTesId databaseColumn="tes_cdp_id"  /*<-> idCdpTesId*/  fetch="lazy" cascade="refresh"  							
+			
+			
+			Repository TecStateRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@TecState> findAll(PagingParameter pagingParameter);
+				PagedResult<@TecState> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service TecStateService {
+			
+			findById => TecStateRepository.findById;
+			findAll => TecStateRepository.findAll;
+			save => TecStateRepository.save;
+			delete => TecStateRepository.delete;
+			PagedResult<@TecState> search(@TecStateDTO aua);
+			PagedResult<@TecState> findAll(PagingParameter pagingParameter);
+			
+			List<@TecState> findByTesStatus(String tesStatus) hint="gen,order=asc,prop=id,nullable";
+			List<@TecState> findByTesDate(Date tesDate) hint="gen,order=asc,prop=id,nullable";
+			List<@TecState> findByTesRem(String tesRem) hint="gen,order=asc,prop=id,nullable";
+			List<@TecState> findByTesCenId(Long id) hint="gen,order=asc,prop=id,conditions=tesCenId.id&$id,nullable";
+			List<@TecState> findByTesCdpId(Long id) hint="gen,order=asc,prop=id,conditions=tesCdpId.id&$id,nullable";
+		}
+		
+		DataTransferObject TecStateDTO {
+			hint="for=search,entity=TecState"
+			String tesStatus hint="" 
+			String tesDate hint="" 
+			String tesRem hint="" 
+		}
+		
+		DataTransferObject TecStateMergeDTO {
+			hint="for=merge,entity=TecState"
+			String tesStatus hint="" 
+			String tesDate hint="" 
+			String tesRem hint="" 
+			String tesCenId hint="type=system,view=Search"
+			String tesCdpId hint="type=system,view=Search"
+		}
+		/****************************************************************************************************************************************************** */
+		/****************************************************************************************************************************************************** */
+		/****************************************************************************************************************************************************** */
+		
+		Entity TecDpDecision{
+			databaseTable="tec_dp_decision"
+			hint="idSequence=cddnoisiced_tdp_dp_X"
+			
+			Long id    databaseColumn="ted_id" 
+			String tedStatus length="1" nullable databaseColumn="ted_status"  hint="visible=true,toString" 
+			Date tedDate  nullable databaseColumn="ted_date"  hint="visible=true,toString" 
+			String tedRem length="256" nullable databaseColumn="ted_rem"  hint="visible=true,toString" 
+			
+				//- @TecEntity tedCenId  databaseColumn="ted_cen_id"  /*<-> idCenTedId*/  fetch="lazy" cascade="refresh" 
+				- @CptEntity tedCenId  databaseColumn="ted_cen_id"  /*<-> idCenTedId*/  fetch="lazy" cascade="refresh"  							
+			
+				- @TecAttachement dpdCdpId  databaseColumn="dpd_cdp_id"  <-> idCdpDpdId  fetch="lazy" cascade="refresh"  							
+			
+			
+			Repository TecDpDecisionRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@TecDpDecision> findAll(PagingParameter pagingParameter);
+				PagedResult<@TecDpDecision> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service TecDpDecisionService {
+			
+			findById => TecDpDecisionRepository.findById;
+			findAll => TecDpDecisionRepository.findAll;
+			save => TecDpDecisionRepository.save;
+			delete => TecDpDecisionRepository.delete;
+			PagedResult<@TecDpDecision> search(@TecDpDecisionDTO aua);
+			PagedResult<@TecDpDecision> findAll(PagingParameter pagingParameter);
+			
+			List<@TecDpDecision> findByTedStatus(String tedStatus) hint="gen,order=asc,prop=id,nullable";
+			List<@TecDpDecision> findByTedDate(Date tedDate) hint="gen,order=asc,prop=id,nullable";
+			List<@TecDpDecision> findByTedRem(String tedRem) hint="gen,order=asc,prop=id,nullable";
+			List<@TecDpDecision> findByTedCenId(Long id) hint="gen,order=asc,prop=id,conditions=tedCenId.id&$id,nullable";
+			List<@TecDpDecision> findByTedCdpId(Long id) hint="gen,order=asc,prop=id,conditions=dpdCdpId.id&$id,nullable";
+		}
+		
+		DataTransferObject TecDpDecisionDTO {
+			hint="for=search,entity=TecDpDecision"
+			String tedStatus hint="" 
+			String tedDate hint="" 
+			String tedRem hint="" 
+		}
+		
+		DataTransferObject TecDpDecisionMergeDTO {
+			hint="for=merge,entity=TecDpDecision"
+			String tedStatus hint="" 
+			String tedDate hint="" 
+			String tedRem hint="" 
+			String tedCenId hint="type=system,view=Search"
+			String dpdCdpId hint="type=system,view=Search"
+		}
+		/****************************************************************************************************************************************************** */
+		Entity TecDpState{
+			databaseTable="tec_dp_state"
+			hint="idSequence=cdsetats_tec_dp_X"
+			
+			Long id    databaseColumn="tes_id" 
+			String tesStatus length="1" nullable databaseColumn="tes_status"  hint="visible=true,toString" 
+			Date tesDate  nullable databaseColumn="tes_date"  hint="visible=true,toString" 
+			String tesRem length="256" nullable databaseColumn="tes_rem"  hint="visible=true,toString" 
+			
+				//- @CptEntity cdsCenId  databaseColumn="cds_cen_id"  /*<-> idCenCdsId*/  fetch="lazy" cascade="refresh"  
+				- @CptEntity tesCenId  databaseColumn="tes_cen_id"  /*<-> idCenTesId*/  fetch="lazy" cascade="refresh"
+				//- @TecEntity tesCenId  databaseColumn="tes_cen_id"  /*<-> idCenTesId*/  fetch="lazy" cascade="refresh"							
+			
+				- @TecAttachement dpsCdpId <-> idCdpDpsId databaseColumn="dps_cdp_id"  /*<-> idCdpTesId*/  fetch="lazy" cascade="refresh"  							
+			
+			
+			Repository TecDpStateRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@TecDpState> findAll(PagingParameter pagingParameter);
+				PagedResult<@TecDpState> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service TecDpStateService {
+			
+			findById => TecDpStateRepository.findById;
+			findAll => TecDpStateRepository.findAll;
+			save => TecDpStateRepository.save;
+			delete => TecDpStateRepository.delete;
+			PagedResult<@TecDpState> search(@TecDpStateDTO aua);
+			PagedResult<@TecDpState> findAll(PagingParameter pagingParameter);
+			
+			List<@TecDpState> findByTesStatus(String tesStatus) hint="gen,order=asc,prop=id,nullable";
+			List<@TecDpState> findByTesDate(Date tesDate) hint="gen,order=asc,prop=id,nullable";
+			List<@TecDpState> findByTesRem(String tesRem) hint="gen,order=asc,prop=id,nullable";
+			List<@TecDpState> findByTesCenId(Long id) hint="gen,order=asc,prop=id,conditions=tesCenId.id&$id,nullable";
+			List<@TecDpState> findByTesCdpId(Long id) hint="gen,order=asc,prop=id,conditions=dpsCdpId.id&$id,nullable";
+		}
+		
+		DataTransferObject TecDpStateDTO {
+			hint="for=search,entity=TecDpState"
+			String tesStatus hint="" 
+			String tesDate hint="" 
+			String tesRem hint="" 
+		}
+		
+		DataTransferObject TecDpStateMergeDTO {
+			hint="for=merge,entity=TecDpState"
+			String tesStatus hint="" 
+			String tesDate hint="" 
+			String tesRem hint="" 
+			String tesCenId hint="type=system,view=Search"
+			String dpsCdpId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */
+		/****************************************************************************************************************************************************** */
+		/****************************************************************************************************************************************************** */
+		
+		
+		Entity TecAttachement{
+			databaseTable="tec_attachement"
+			hint="idSequence=tattnemehcatta_cet_X"
+			
+			Long id    databaseColumn="tat_id" 
+			String tatNature length="32" nullable databaseColumn="tat_nature"  hint="visible=true,toString" 
+			String tatTypeDecompte length="2" nullable databaseColumn="tat_type_decompte" hint="visible=true"
+			String tatCurStatus length="1" nullable databaseColumn="tat_cur_status" hint="visible=true"
+			String tatNum length="32" nullable databaseColumn="tat_num"  hint="visible=true,toString" 
+			String tatName length="128" nullable databaseColumn="tat_name"  hint="visible=true,toString"
+			String tatUrl length="128" nullable databaseColumn="tat_url"
+			String tatTauAva length="32" nullable databaseColumn="tat_tau_ava" // Taux d’avancement physique
+			String tatAttPro length="32" nullable databaseColumn="tat_att_pro" // Attachement provisoire N°
+			String tatRef length="32" nullable databaseColumn="tat_ref" hint="visible=true,toString" //Référence
+			String tatObj length="400" nullable databaseColumn="tat_obj"  hint="visible=true,toString" //Objet
+			String tatMotRej length="128" nullable databaseColumn="tat_mot_rej"  //Motif de rejet
+			BigDecimal tatMonTrt  nullable databaseColumn="tat_mon_trt" //Montant de travaux terminés
+			BigDecimal tatMonTnt  nullable databaseColumn="tat_mon_tnt" //Montant de travaux non terminés
+			BigDecimal tatTotaux  nullable databaseColumn="tat_totaux" //Totaux (All montants)
+			BigDecimal tatDepExe  nullable databaseColumn="tat_dep_exe" //A déduire les dépenses sur les exercices antérieures
+			String tatApprov length="32" nullable databaseColumn="tat_approv"  //Approvisionnement
+			BigDecimal tatResPay  nullable databaseColumn="tat_res_pay" //Reste à payer sur l'exercice en cours
+			BigDecimal tatMonRev  nullable databaseColumn="tat_mon_rev" 		//Montant de la révision des prix (TTC)
+			BigDecimal tatMonPen  nullable databaseColumn="tat_mon_pen"  		//Montant de la pénalité de retard
+			BigDecimal tatMonAco  nullable databaseColumn="tat_mon_aco" 	//Révision de prix (note de calcul)
+			BigDecimal tatRevPri  nullable databaseColumn="tat_rev_pri"  		//Révision de prix (note de calcul)
+			Date tatDateDep  nullable databaseColumn="tat_date_dep"  hint="visible=true"		 //Date de dépôt
+			Date tatDateRea  nullable databaseColumn="tat_date_rea" //Date de réalisation de prestation
+			Date tatDateSer  nullable databaseColumn="tat_date_ser"  hint="visible=true"		 //Date service fait 
+			Date tatDateRep  nullable databaseColumn="tat_date_rep" //Date et réponse du Bénéficiaire -> 	attach
+			Date tatDateConFai  nullable databaseColumn="tat_date_con_fai" //Date de constatation du service fait
+			Date tatDateConFre  nullable databaseColumn="tat_date_con_fre" //Date de constatation du service fait retenu
+			Date tatDateSoum  nullable databaseColumn="tat_date_soum" //Date soumission
+			Date tatDateOrdCom  nullable databaseColumn="tat_date_ord_com" //Date ordre commencement
+			Date tatDateOrdArr  nullable databaseColumn="tat_date_ord_arr" //Date ordre d'arret
+			Date tatDateOrdRep  nullable databaseColumn="tat_date_ord_rep" //Date ordre de reprise
+			Date tatDateDpNr  nullable databaseColumn="tat_date_dp_nr" //Date D.P Nr:01 
+			
+			Date tatCurStatusDate  nullable databaseColumn="tat_cur_status_date" hint="visible=true" 
+			String tatCurDecision length="1" nullable databaseColumn="tat_cur_decision" hint="visible=true"	
+			String tatStatus length="1" nullable databaseColumn="tat_status" 
+			
+			
+			
+			- List<@TecDecision> idCdpTedId <-> tedCdpId orderby="createdDate asc" cascade="refresh,remove"
+			//- List<@CptDepMemo> idCdpCdmId <-> cdmCdpId orderby="createdDate asc"
+			
+			- List<@TecState> idCdpTesId <-> tesCdpId orderby="createdDate asc" cascade="refresh,remove"
+			
+				- @CptDepense tatCdpId  databaseColumn="tat_cdp_id"  /*<-> idCdpTatId*/  fetch="lazy" cascade="refresh"   hint="visible=true"			
+				- @CptEntity tatCurTenId  databaseColumn="tat_cur_ten_id"  /*<-> idAenCurAchId*/  nullable  fetch="lazy" cascade="refresh"  hint="visible=true"						
+			
+			String tatIdAtt length="24" nullable databaseColumn="tat_id_att" 
+			
+			- @TecCatIndex tatCatId databaseColumn="tat_cat_id" nullable  fetch="lazy" cascade="refresh"
+			
+			Date tatDpCurStatusDate  nullable databaseColumn="tat_dp_cur_status_date" hint="visible=true" 
+			String tatDpCurDecision length="1" nullable databaseColumn="tat_dp_cur_decision" hint="visible=true"	
+			String tatDpStatus length="1" nullable databaseColumn="tat_dp_status" 
+			String tatDpCurStatus length="1" nullable databaseColumn="tat_dp_cur_status" hint="visible=true"
+			
+			- @CptEntity tatDpCurTenId  databaseColumn="tat_dp_cur_ten_id"  /*<-> idAenCurAchId*/  nullable  fetch="lazy" cascade="refresh"  hint="visible=true"						
+			
+			- List<@TecDpDecision> idCdpDpdId <-> dpdCdpId orderby="createdDate asc"
+			//- List<@CptDepMemo> idCdpCdmId <-> cdmCdpId orderby="createdDate asc"
+			
+			- List<@TecDpState> idCdpDpsId <-> dpsCdpId orderby="createdDate asc"  
+			
+			String tatNumVisa length="45" nullable databaseColumn="tat_num_visa" 
+			Date tatDateVisa  nullable databaseColumn="tat_date_visa"
+			
+			
+			BigDecimal tatMonDecoTravaux  nullable databaseColumn="tat_mon_deco_travaux" //Montant de decompte travaux provisoire/definitive
+			BigDecimal tatMonDepTravaux  nullable databaseColumn="tat_mon_dep_travaux" //Montant de depense travaux provisoire/definitive
+			String tatArchAvan length="15" nullable databaseColumn="tat_arch_avan" 
+			String tatArchDecoTraite length="200" nullable databaseColumn="tat_arch_deco_traite" 
+			
+			String tatGarantie length="1" nullable databaseColumn="tat_garantie" hint="visible=true"
+			BigDecimal tatGarantieEsp nullable databaseColumn="tat_garantie_esp" hint="visible=true"
+			
+			- List<@CalculRevision> idAttTcrId <-> tcrAttId
+			
+			BigDecimal tatAvancement  nullable databaseColumn="tat_avancement"  		//Avancement
+			
+			Integer tatDelaiExe  nullable databaseColumn="tat_delai_exe" 
+			String tatDelaiUnit length="1" nullable databaseColumn="tat_delai_unit" 
+			
+			BigDecimal tatMonTrtTtc  nullable databaseColumn="tat_mon_trt_ttc" //Montant de travaux terminés TTC
+			
+			Repository TecAttachementRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@TecAttachement> findAll(PagingParameter pagingParameter);
+				PagedResult<@TecAttachement> findByCondition(PagingParameter pagingParameter);
+				
+				
+			}
+			
+		}
+		
+		Service TecAttachementService {
+			
+			findById => TecAttachementRepository.findById;
+			findAll => TecAttachementRepository.findAll;
+			save => TecAttachementRepository.save;
+			delete => TecAttachementRepository.delete;
+			PagedResult<@TecAttachement> search(@TecAttachementDTO aua);
+			PagedResult<@TecAttachement> findAll(PagingParameter pagingParameter);
+				
+			
+			List<@TecAttachement> findByTatNum(String tatNum) hint="gen,order=asc,prop=id,nullable";
+			List<@TecAttachement> findByTatName(String tatName) hint="gen,order=asc,prop=id,nullable";
+			List<@TecAttachement> findByTatCdpId(Long id) hint="gen,order=asc,prop=id,conditions=tatCdpId.id&$id,nullable";
+			List<@TecAttachement> findByTatIdAtt(String tatIdAtt) hint="gen,order=asc,prop=id,nullable";
+			
+			PagedResult<@TecAttachement> filterAttachBen(@TecAttachementDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@TecAttachement> getAllAttachBen(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@TecAttachement> filterAttachSGM(@TecAttachementDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@TecAttachement> getAllAttachSGM(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@TecAttachement> filterAttachCer(@TecAttachementDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@TecAttachement> getAllAttachCer(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@TecAttachement> filterAttachSB(@TecAttachementDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@TecAttachement> getAllAttachSB(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@TecAttachement> filterAttachCI(@TecAttachementDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@TecAttachement> getAllAttachCI(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@TecAttachement> filterAttachTM(@TecAttachementDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@TecAttachement> getAllAttachTM(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@TecAttachement> filterAttachAr(@TecAttachementDTO aua,PagingParameter pagingParameter) hint="gap";//archive
+			PagedResult<@TecAttachement> getAllAttachAr(PagingParameter pagingParameter) hint="gap";//archive
+			PagedResult<@TecAttachement> filterAttachPD(@TecAttachementDTO aua,PagingParameter pagingParameter) hint="gap";//ProjetDeDecompte
+			PagedResult<@TecAttachement> getAllAttachPD(PagingParameter pagingParameter) hint="gap";//ProjetDeDecompte
+			PagedResult<@TecAttachement> filterAttachPDSGM(@TecAttachementDTO aua,PagingParameter pagingParameter) hint="gap";//ProjetDeDecompte
+			PagedResult<@TecAttachement> getAllAttachPDSGM(PagingParameter pagingParameter) hint="gap";//ProjetDeDecompte
+			PagedResult<@TecAttachement> filterAttachPDTM(@TecAttachementDTO aua,PagingParameter pagingParameter) hint="gap";//ProjetDeDecompte
+			PagedResult<@TecAttachement> getAllAttachPDTM(PagingParameter pagingParameter) hint="gap";//ProjetDeDecompte
+			PagedResult<@TecAttachement> filterAttachPDCER(@TecAttachementDTO aua,PagingParameter pagingParameter) hint="gap";//ProjetDeDecompte
+			PagedResult<@TecAttachement> getAllAttachPDCER(PagingParameter pagingParameter) hint="gap";//ProjetDeDecompte
+			PagedResult<@TecAttachement> filterAttachPDSB(@TecAttachementDTO aua,PagingParameter pagingParameter) hint="gap";//ProjetDeDecompte
+			PagedResult<@TecAttachement> getAllAttachPDSB(PagingParameter pagingParameter) hint="gap";//ProjetDeDecompte
+		}
+		
+		DataTransferObject TecAttachementDTO {
+			hint="for=search,entity=TecAttachement"
+			String tatTypeDecompte
+			String tatCurStatus
+			String tatNature
+			String tatNum hint="" 
+			String tatName hint=""
+			String tatCdpId1 hint="ref=tatCdpId,view=ComboBox"
+			String tatObj hint=""
+			String tatRef hint=""  
+			String tatDepNum hint="ref=tatCdpId,field=cdpNumDep"
+			String tatDepNumGid hint="ref=tatCdpId,field=cdpNumGid"
+		}
+		
+		DataTransferObject TecAttachementMergeDTO {
+			hint="for=merge,entity=TecAttachement"
+			String tatNature hint="type=enum,items=N&Centrale:A&DAI:G&GOU:E&DEP"
+			String tatTypeDecompte hint="type=enum,items=pn&PenaliteRetard:gn&Garantie:av&Avance:pr&Provisoire:dr&Provisoire et Dernier:df&Definitif"			
+			String tatCurStatus hint="type=enum,items=O&On going:M&Made:R&Rejected:A&Approved:C&Canceled:D&Demande"
+			String tatNum hint="" 
+			String tatName hint=""
+			String tatUrl hint="" 
+			String tatTauAva hint=""
+			String tatAttPro hint="" 
+			String tatRef hint=""
+			String tatObj hint="" 
+			String tatMotRej hint=""
+			String tatMonTrt hint="" 
+			String tatMonTnt hint=""
+			String tatTotaux hint="" 
+			String tatDepExe hint=""
+			String tatApprov hint="" 
+			String tatResPay hint=""
+			String tatMonRev hint="" 
+			String tatMonPen hint=""
+			String tatMonAco hint="" 
+			String tatRevPri hint=""
+			String tatDateDep hint="" 
+			String tatDateRea hint=""
+			String tatDateSer hint="" 
+			String tatDateRep hint=""
+			String tatDateConFai hint="" 
+			String tatDateConFre hint=""
+			String tatDateSoum hint=""
+			String tatDateOrdCom hint="" 
+			String tatDateOrdArr hint=""
+			String tatDateOrdRep hint="" 
+			String tatDateDpNr hint=""
+			String tatCurStatusDate hint="" 
+			String tatCurDecision hint="type=enum,items=O&OK:N&NOK,hidden"
+			String tatStatus hint="type=enum,items=O&On going:M&Made:R&Rejected:A&Approved:C&Canceled:D&Demande,hidden" 			
+			String tatCdpId hint="type=system,view=ComboBox"
+			String tatCurTenId hint="type=system,view=ComboBox"
+			String tatIdAtt
+			String tatCatId hint="type=system,view=ComboBox"
+			String tatDpCurStatusDate hint="" 
+			String tatDpCurDecision hint="type=enum,items=R&Rejected:A&Approved,hidden"
+			String tatDpStatus hint="type=enum,items=O&On going:M&Made:R&Rejected:A&Approved:C&Canceled:D&Demande,hidden" 
+			String tatDpCurStatus hint="type=enum,items=O&On going:M&Made:R&Rejected:A&Approved:C&Canceled:D&Demande,hidden" 
+			String tatDpCurTenId hint="type=system,view=ComboBox"
+			String tatNumVisa
+			String tatDateVisa
+			String tatMonDecoTravaux
+			String tatMonDepTravaux
+			String tatGarantie hint="type=enum,items=C&CB:E&Espece:M&Mixte"
+			String tatGarantieEsp 
+			String tatArchAvan
+			String tatArchDecoTraite
+			String tatAvancement
+			String tatDelaiExe
+			String tatDelaiUnit
+			String tatMonTrtTtc
+		}
+		/****************************************************************************************************************************************************** */
+		
+		Entity TecPv{
+			databaseTable="tec_pv"
+			hint="idSequence=tpvvp_cet_X"
+			
+			Long id    databaseColumn="tpv_id" 
+			String tpvNum length="32" nullable databaseColumn="tpv_num"  hint="visible=true,toString" 
+			String tpvName length="128" nullable databaseColumn="tpv_name"  hint="visible=true,toString" 
+			Date tpvDate  nullable databaseColumn="tpv_date"  hint="visible=true,toString" 
+			String tpvPvFile length="264" nullable databaseColumn="tpv_pv_file" 
+			
+				- @CptDepense tpvCdpId  databaseColumn="tpv_cdp_id"  /*<-> idCdpTpvId*/  fetch="lazy" cascade="refresh"
+				- @TecPvType tpvTptId  databaseColumn="tpv_tpt_id"  /*<-> idTptTpvId*/  fetch="lazy" cascade="refresh"
+				
+				- List<@TecEtape> tpvTetId <-> tetTpvId orderby="createdDate asc" 						
+			
+			
+			Repository TecPvRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@TecPv> findAll(PagingParameter pagingParameter);
+				PagedResult<@TecPv> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service TecPvService {
+			
+			findById => TecPvRepository.findById;
+			findAll => TecPvRepository.findAll;
+			save => TecPvRepository.save;
+			delete => TecPvRepository.delete;
+			PagedResult<@TecPv> search(@TecPvDTO aua);
+			PagedResult<@TecPv> findAll(PagingParameter pagingParameter);
+			
+			List<@TecPv> findByTpvNum(String tpvNum) hint="gen,order=asc,prop=id,nullable";
+			List<@TecPv> findByTpvName(String tpvName) hint="gen,order=asc,prop=id,nullable";
+			List<@TecPv> findByTpvDate(Date tpvDate) hint="gen,order=asc,prop=id,nullable";
+			List<@TecPv> findByTpvPvFile(String tpvPvFile) hint="gen,order=asc,prop=id,nullable";
+			List<@TecPv> findByTpvCdpId(Long id) hint="gen,order=asc,prop=id,conditions=tpvCdpId.id&$id,nullable";
+			List<@TecPv> findByTpvTptId(Long id) hint="gen,order=asc,prop=id,conditions=tpvTptId.id&$id,nullable";
+		}
+		
+		DataTransferObject TecPvDTO {
+			hint="for=search,entity=TecPv"
+			String tpvNum hint="" 
+			String tpvName hint="" 
+			String tpvDate hint=""
+			String tpvCdpId1 hint="ref=tpvCdpId,view=ComboBox" 
+			String tpvTptId1 hint="ref=tpvTptId,view=ComboBox"
+		}
+		
+		DataTransferObject TecPvMergeDTO {
+			hint="for=merge,entity=TecPv"
+			String tpvNum hint="" 
+			String tpvName hint="" 
+			String tpvDate hint="" 
+			String tpvPvFile hint="" 
+			String tpvCdpId hint="type=system,view=ComboBox"
+			String tpvTptId hint="type=system,view=ComboBox"
+			String tpvTetId hint="tab=Travaux,type=system,view=InModal"
+		}
+		/****************************************************************************************************************************************************** */
+		Entity TecPvType{
+			databaseTable="tec_pv_type"
+			hint="idSequence=tptepyt_vp_cet_X"
+			
+			Long id    databaseColumn="tpt_id" 
+			String tptCode length="8" nullable databaseColumn="tpt_code"  hint="visible=true,toString" 
+			String tptName length="32" nullable databaseColumn="tpt_name"  hint="visible=true,toString" 
+			
+			//- List<@TecPv> idTptTpvId <-> tpvTptId
+			
+			Repository TecPvTypeRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@TecPvType> findAll(PagingParameter pagingParameter);
+				PagedResult<@TecPvType> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service TecPvTypeService {
+			
+			findById => TecPvTypeRepository.findById;
+			findAll => TecPvTypeRepository.findAll;
+			save => TecPvTypeRepository.save;
+			delete => TecPvTypeRepository.delete;
+			PagedResult<@TecPvType> search(@TecPvTypeDTO aua);
+			PagedResult<@TecPvType> findAll(PagingParameter pagingParameter);
+			
+			List<@TecPvType> findByTptCode(String tptCode) hint="gen,order=asc,prop=id,nullable";
+			List<@TecPvType> findByTptName(String tptName) hint="gen,order=asc,prop=id,nullable";
+		}
+		
+		DataTransferObject TecPvTypeDTO {
+			hint="for=search,entity=TecPvType"
+			String tptCode hint="" 
+			String tptName hint="" 
+		}
+		
+		DataTransferObject TecPvTypeMergeDTO {
+			hint="for=merge,entity=TecPvType"
+			String tptCode hint="" 
+			String tptName hint="" 
+		}
+		
+		/****************************************************************************************************************************************************** */
+		
+		Entity TecCatIndex{
+			databaseTable="tec_cat_index"
+			hint="idSequence=tptepyt_vp_cet_X"
+			
+			Long id    databaseColumn="tci_id" 
+			String tciCode length="8" nullable databaseColumn="tci_code"  hint="visible=true,toString" 
+			String tciName length="32" nullable databaseColumn="tci_name"  hint="visible=true,toString" 
+			
+			//- List<@TecPv> idTptTpvId <-> tpvTptId
+			
+			Repository TecCatIndexRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@TecCatIndex> findAll(PagingParameter pagingParameter);
+				PagedResult<@TecCatIndex> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service TecCatIndexService {
+			
+			findById => TecCatIndexRepository.findById;
+			findAll => TecCatIndexRepository.findAll;
+			save => TecCatIndexRepository.save;
+			delete => TecCatIndexRepository.delete;
+			PagedResult<@TecCatIndex> search(@TecCatIndexDTO aua);
+			PagedResult<@TecCatIndex> findAll(PagingParameter pagingParameter);
+			
+			List<@TecCatIndex> findByTciCode(String tciCode) hint="gen,order=asc,prop=id,nullable";
+			List<@TecCatIndex> findByTciName(String tciName) hint="gen,order=asc,prop=id,nullable";
+		}
+		
+		DataTransferObject TecCatIndexDTO {
+			hint="for=search,entity=TecCatIndex"
+			String tciCode hint="" 
+			String tciName hint="" 
+		}
+		
+		DataTransferObject TecCatIndexMergeDTO {
+			hint="for=merge,entity=TecCatIndex"
+			String tciCode hint="" 
+			String tciName hint="" 
+		}
+		/****************************************************************************************************************************************************** */
+		
+		Entity TecIndex{
+			databaseTable="tec_index"
+			hint="idSequence=tin_cet_X"
+			
+			Long id    databaseColumn="tin_id" 
+			String tinMois length="16" nullable databaseColumn="tin_mois"  hint="visible=true,toString" 
+			String tinValPro length="32" nullable databaseColumn="tin_val_pro"  hint="visible=true,toString" 
+			String tinValDef length="32" nullable databaseColumn="tin_val_def"  hint="visible=true,toString"
+			String tinAnnee length="4" nullable databaseColumn="tin_annee"  hint="visible=true,toString"  
+									
+			- @TecCatIndex tinTciId  databaseColumn="tin_tci_id"  /*<-> idTciTinId*/  fetch="lazy" cascade="refresh"
+			
+			Repository TecIndexRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@TecIndex> findAll(PagingParameter pagingParameter);
+				PagedResult<@TecIndex> findByCondition(PagingParameter pagingParameter);
+			}
+		}
+		
+		Service TecIndexService {
+			
+			findById => TecIndexRepository.findById;
+			findAll => TecIndexRepository.findAll;
+			save => TecIndexRepository.save;
+			delete => TecIndexRepository.delete;
+			PagedResult<@TecIndex> search(@TecIndexDTO aua);
+			PagedResult<@TecIndex> findAll(PagingParameter pagingParameter);
+			
+			List<@TecIndex> findByTinMois(String tinMois) hint="gen,order=asc,prop=id,nullable";
+			List<@TecIndex> findByTinAnnee(String tinAnnee) hint="gen,order=asc,prop=id,nullable";
+			List<@TecIndex> findByTinValPro(String tinValPro) hint="gen,order=asc,prop=id,nullable";
+			List<@TecIndex> findByTinValDef(Date tinValDef) hint="gen,order=asc,prop=id,nullable";
+			List<@TecIndex> findByTinTciId(Long id) hint="gen,order=asc,prop=id,conditions=tinTciId.id&$id,nullable";
+			@TecIndex findByDateCat(String tinMois,String tinAnnee,@TecCatIndex tinTciId) hint="gen,order=asc,prop=id,nullable";
+		}
+		
+		DataTransferObject TecIndexDTO {
+			hint="for=search,entity=TecIndex"
+			String tinAnnee hint=""
+			String tinMois hint="" 
+			String tinValPro hint="" 
+			String tinValDef hint="" 
+		}
+		
+		DataTransferObject TecIndexMergeDTO {
+			hint="for=merge,entity=TecIndex"
+			String tinAnnee hint=""
+			String tinMois hint="" 
+			String tinValPro hint="" 
+			String tinValDef hint="" 
+			String tinTciId hint="type=system,view=ComboBox"
+		}
+		
+		/****************************************************************************************************************************************************** */
+		
+		Entity TecEtape{
+			databaseTable="tec_etape"
+			hint="idSequence=ten_cet_X"
+			
+			Long id    databaseColumn="ten_id" 
+			String tetNom length="16" nullable databaseColumn="tet_nom"  hint="visible=true,toString" 
+			String tetDelait length="32" nullable databaseColumn="tet_delait"  hint="visible=true,toString" 
+			String tetAvancement length="32" nullable databaseColumn="tet_avancement"  hint="visible=true,toString"
+			String tetPourcentage length="32" nullable databaseColumn="tet_pourcentage"  hint="visible=true,toString"
+			String tetEcart length="32" nullable databaseColumn="tet_ecart"  hint="visible=true,toString"
+			
+			- @TecPv tetTpvId <-> tpvTetId  databaseColumn="tet_etp_id"   fetch="lazy" cascade="refresh"
+			
+			Repository TecEtapeRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@TecEtape> findAll(PagingParameter pagingParameter);
+				PagedResult<@TecEtape> findByCondition(PagingParameter pagingParameter);
+			}
+		}
+		
+		Service TecEtapeService {
+			findById => TecEtapeRepository.findById;
+			findAll => TecEtapeRepository.findAll;
+			save => TecEtapeRepository.save;
+			delete => TecEtapeRepository.delete;
+			PagedResult<@TecEtape> search(@TecEtapeDTO aua);
+			PagedResult<@TecEtape> findAll(PagingParameter pagingParameter);
+			
+			List<@TecEtape> findByTetNom(String tetNom) hint="gen,order=asc,prop=id,nullable";
+			List<@TecEtape> findByTetDelait(String tetDelait) hint="gen,order=asc,prop=id,nullable";
+			List<@TecEtape> findByTetAvancement(Date tetAvancement) hint="gen,order=asc,prop=id,nullable";
+		}
+		
+		DataTransferObject TecEtapeDTO {
+			hint="for=search,entity=TecEtape"
+			String tetNom hint="" 
+			String tetDelait hint="" 
+			String tetAvancement hint=""
+			String tetPourcentage hint="" 
+			String tetEcart hint="" 
+		}
+		
+		DataTransferObject TecEtapeMergeDTO {
+			hint="for=merge,entity=TecEtape"
+			String tetNom hint=""
+			String tetPourcentage hint=""  			
+			String tetAvancement hint=""
+			String tetDelait hint="" 
+			String tetEcart hint="" 
+		}
+		/****************************************************************************************************************************************************** */
+		
+		
+		Entity CalculRevision{
+			databaseTable="tec_cal_rev"
+			hint="idSequence=clcrevcatta_cet_X"
+			
+			Long id    databaseColumn="tcr_id" 
+			String tcrPeriode length="32" nullable databaseColumn="tcr_periode"  hint="visible=true,toString" 
+			String tcrNbrJour length="12" nullable databaseColumn="tcr_nbr_jour"  hint="visible=true,toString"
+			BigDecimal tcrBatUn  nullable databaseColumn="tcr_bat_un" // BAT1
+			BigDecimal tcrBatDeux  nullable databaseColumn="tcr_bat_deux" // BAT2
+			BigDecimal tcrBatTrois  nullable databaseColumn="tcr_bat_trois" // BAT3
+			BigDecimal tcrBatQuatre  nullable databaseColumn="tcr_bat_quatre"  //BAT4
+			BigDecimal tcrBatCinq  nullable databaseColumn="tcr_bat_cinq"  //BAT5
+			BigDecimal tcrBatSix nullable databaseColumn="tcr_bat_six"  //BAT6
+			BigDecimal tcrBatCof  nullable databaseColumn="tcr_bat_cof" //0.85xBat/Bat
+			BigDecimal tcrCofRev  nullable databaseColumn="tcr_cof_rev" //P/P°
+			BigDecimal tcrCoeficient  nullable databaseColumn="tcr_coeficient" //Totaux (All montants)
+			BigDecimal tcrMonTra  nullable databaseColumn="tcr_mon_tra" //A déduire les dépenses sur les exercices antérieures
+			BigDecimal tcrMonArevi nullable databaseColumn="tcr_mon_arevi"  //Approvisionnement
+			BigDecimal tcrMonRev  nullable databaseColumn="tcr_mon_rev" //Reste à payer sur l'exercice en cours
+			BigDecimal tcrTotal  nullable databaseColumn="tcr_total" //Montant de la révision des prix (TTC)
+			
+			
+				- @CptDepense tcrCdpId  databaseColumn="tcr_cdp_id"    fetch="lazy" cascade="refresh"
+				- @TecAttachement tcrAttId  databaseColumn="tcr_att_id" nullable <-> idAttTcrId  fetch="lazy" cascade="refresh"					
+			
+			Repository CalculRevisionRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@CalculRevision> findAll(PagingParameter pagingParameter);
+				PagedResult<@CalculRevision> findByCondition(PagingParameter pagingParameter);
+				
+				
+			}
+			
+		}
+		
+		Service CalculRevisionService {
+			
+			findById => CalculRevisionRepository.findById;
+			findAll => CalculRevisionRepository.findAll;
+			save => CalculRevisionRepository.save;
+			delete => CalculRevisionRepository.delete;
+			PagedResult<@CalculRevision> search(@CalculRevisionDTO aua);
+			PagedResult<@CalculRevision> findAll(PagingParameter pagingParameter);
+				
+			
+			List<@CalculRevision> findByTcrCdpId(Long id) hint="gen,order=asc,prop=id,conditions=tcrCdpId.id&$id,nullable";
+			
+		}
+		
+		DataTransferObject CalculRevisionDTO {
+			hint="for=search,entity=CalculRevision"
+			String tcrCdpId1 hint="ref=tcrCdpId,view=ComboBox" 
+			String tcrAttId1 hint="ref=tcrAttId,view=ComboBox" 
+		}
+		
+		DataTransferObject CalculRevisionMergeDTO {
+			hint="for=merge,entity=CalculRevision"
+			String tcrPeriode hint="" 
+			String tcrNbrJour hint=""
+			String tcrBatUn hint="" 
+			String tcrBatDeux hint=""
+			String tcrBatTrois hint="" 
+			String tcrBatQuatre hint=""
+			String tcrBatCinq hint="" 
+			String tcrBatSix hint=""
+			String tcrBatCof hint="" 
+			String tcrCofRev hint=""
+			String tcrCoeficient hint="" 
+			String tcrMonTra hint=""
+			String tcrMonArevi hint=""
+			String tcrMonRev hint=""
+			String tcrTotal hint="" 
+					
+			String tcrCdpId hint="type=system,view=ComboBox"
+			String tcrAttId hint="type=system,view=ComboBox"
+		}
+	
+		/****************************************************************************************************************************************************** */
+		//retenue de garantie
+		/****************************************************************************************************************************************************** */
+		
+		Entity RetenueGarantie{
+			databaseTable="tec_retenue_garantie"
+			hint="idSequence=trgtenu_cet_X"
+			
+			Long id    databaseColumn="trg_id" 
+			String trgNum length="32" nullable databaseColumn="trg_num"  hint="visible=true,toString" 
+			String trgName length="128" nullable databaseColumn="trg_name"  hint="visible=true,toString" 
+			Date trgDate  nullable databaseColumn="trg_date"  hint="visible=true,toString" 						
+			
+				- @CptDepense trgCdpId  databaseColumn="trg_cdp_id"  /*<-> idCdpTrgId*/  fetch="lazy" cascade="refresh"  hint="visible=true"		
+				- @TecAttachement trgAttId  databaseColumn="trg_att_id"  /*<-> idAttTnaId*/  fetch="lazy" cascade="refresh"  hint="visible=true"		
+			
+			-List<@RetenueGarantiePart> trgRgpId <-> rgpTrgId fetch="lazy" cascade="refresh"
+				
+			
+			
+			Repository RetenueGarantieRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@RetenueGarantie> findAll(PagingParameter pagingParameter);
+				PagedResult<@RetenueGarantie> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service RetenueGarantieService {
+			
+			findById => RetenueGarantieRepository.findById;
+			findAll => RetenueGarantieRepository.findAll;
+			save => RetenueGarantieRepository.save;
+			delete => RetenueGarantieRepository.delete;
+			PagedResult<@RetenueGarantie> search(@RetenueGarantieDTO aua);
+			PagedResult<@RetenueGarantie> findAll(PagingParameter pagingParameter);
+			
+			List<@RetenueGarantie> findByTrgNum(String trgNum) hint="gen,order=asc,prop=id,nullable";
+			List<@RetenueGarantie> findByTrgName(String trgName) hint="gen,order=asc,prop=id,nullable";
+			List<@RetenueGarantie> findByTrgDate(Date trgDate) hint="gen,order=asc,prop=id,nullable";						
+			List<@RetenueGarantie> findByTrgCdpId(Long id) hint="gen,order=asc,prop=id,conditions=trgCdpId.id&$id,nullable";
+			List<@RetenueGarantie> findBytrgAttId(Long id) hint="gen,order=asc,prop=id,conditions=trgAttId.id&$id,nullable";
+		}
+		
+		DataTransferObject RetenueGarantieDTO {
+			hint="for=search,entity=RetenueGarantie"
+			String trgNum hint="" 
+			String trgName hint=""  
+			String trgDate hint=""
+			String trgCdpId1 hint="ref=trgCdpId,view=ComboBox"
+			String trgAttId1 hint="ref=trgAttId,view=ComboBox" 
+		}
+		
+		DataTransferObject RetenueGarantieMergeDTO {
+			hint="for=merge,entity=RetenueGarantie"
+			String trgNum hint="" 
+			String trgName hint="" 			
+			String trgDate hint="" 			
+			String trgCdpId hint="type=system,view=ComboBox"
+			String trgAttId hint="type=system,view=ComboBox,LinkedTo=trgCdpId"
+			String trgRgpId hint="type=system,view=InModal,tab=Detail"
+		}
+		
+		/****************************************************************************************************************************************************** */
+		//retenue de garantie extra
+		/****************************************************************************************************************************************************** */
+		
+		Entity RetenueGarantiePart{
+			databaseTable="tec_retenue_garantie_part"
+			hint="idSequence=traptrgtenu_cet_X"
+			
+			Long id    databaseColumn="rgp_id" 
+			String rgpNum length="32" nullable databaseColumn="rgp_num"  hint="visible=true,toString" 
+			String rgpName length="128" nullable databaseColumn="rgp_name"  hint="visible=true,toString" 
+			Date rgpDate  nullable databaseColumn="rgp_date"  hint="visible=true,toString" 
+			String rgpBank length="65" nullable databaseColumn="rgp_bank" hint="visible=true,"
+			BigDecimal rgpMontant nullable databaseColumn="rgp_montant"	hint="visible=true,"	
+			
+			-@RetenueGarantie rgpTrgId <-> trgRgpId	nullable	
+			
+			Repository RetenueGarantiePartRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@RetenueGarantiePart> findAll(PagingParameter pagingParameter);
+				PagedResult<@RetenueGarantiePart> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service RetenueGarantiePartService {
+			
+			findById => RetenueGarantiePartRepository.findById;
+			findAll => RetenueGarantiePartRepository.findAll;
+			save => RetenueGarantiePartRepository.save;
+			delete => RetenueGarantiePartRepository.delete;
+			PagedResult<@RetenueGarantiePart> search(@RetenueGarantiePartDTO aua);
+			PagedResult<@RetenueGarantiePart> findAll(PagingParameter pagingParameter);
+			
+			
+		}
+		
+		DataTransferObject RetenueGarantiePartDTO {
+			hint="for=search,entity=RetenueGarantiePart"
+			String rgpNum hint="" 
+			String rgpName hint="" 
+			String rgpBank hint="" 
+			String rgpMontant hint="" 
+			String rgpDate hint="" 
+		}
+		
+		DataTransferObject RetenueGarantiePartMergeDTO {
+			hint="for=merge,entity=RetenueGarantiePart"
+			String rgpNum hint="" 
+			String rgpName hint="" 
+			String rgpBank hint="" 
+			String rgpMontant hint="" 
+			String rgpDate hint="" 
+		}
+		/****************************************************************************************************************************************************** */
+		//Nantissement
+		/****************************************************************************************************************************************************** */
+		
+		Entity Nantissement{
+			databaseTable="tec_nantissement"
+			hint="idSequence=nantissement_cet_X"
+			
+			Long id    databaseColumn="tna_id" 
+			String tnaNum length="32" nullable databaseColumn="tna_num"  hint="visible=true,toString" 
+			String tnaName length="128" nullable databaseColumn="tna_name"  hint="visible=true,toString" 
+			Date tnaDate  nullable databaseColumn="tna_date"  hint="visible=true,toString" 
+			String tnaRep length="264" nullable databaseColumn="tna_rep"   hint="visible=true"		
+			
+				- @CptDepense tnaCdpId  databaseColumn="tna_cdp_id"  /*<-> idCdpTnaId*/  fetch="lazy" cascade="refresh"  hint="visible=true"		
+				- @TecAttachement tnaAttId  databaseColumn="tna_att_id"  /*<-> idAttTnaId*/  fetch="lazy" cascade="refresh"  hint="visible=true"		
+			
+			Repository NantissementRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@Nantissement> findAll(PagingParameter pagingParameter);
+				PagedResult<@Nantissement> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service NantissementService {
+			
+			findById => NantissementRepository.findById;
+			findAll => NantissementRepository.findAll;
+			save => NantissementRepository.save;
+			delete => NantissementRepository.delete;
+			PagedResult<@Nantissement> search(@NantissementDTO aua);
+			PagedResult<@Nantissement> findAll(PagingParameter pagingParameter);
+			
+			List<@Nantissement> findByTnaNum(String tnaNum) hint="gen,order=asc,prop=id,nullable";
+			List<@Nantissement> findByTnaName(String tnaName) hint="gen,order=asc,prop=id,nullable";
+			List<@Nantissement> findByTnaDate(Date tnaDate) hint="gen,order=asc,prop=id,nullable";
+			List<@Nantissement> findByTnaPvFile(String tnaRep) hint="gen,order=asc,prop=id,nullable";
+			List<@Nantissement> findByTnaCdpId(Long id) hint="gen,order=asc,prop=id,conditions=tnaCdpId.id&$id,nullable";
+			List<@Nantissement> findByTnaAttId(Long id) hint="gen,order=asc,prop=id,conditions=tnaAttId.id&$id,nullable";
+		}
+		
+		DataTransferObject NantissementDTO {
+			hint="for=search,entity=Nantissement"
+			String tnaNum hint="" 
+			String tnaName hint="" 
+			String tnaDate hint=""
+			String tnaRep hint="" 
+			String tnaCdpId1 hint="ref=tnaCdpId,view=ComboBox"
+			String tnaAttId1 hint="ref=tnaAttId,view=ComboBox"
+		}
+		
+		DataTransferObject NantissementMergeDTO {
+			hint="for=merge,entity=Nantissement"
+			String tnaNum hint="" 
+			String tnaName hint="" 
+			String tnaDate hint="" 
+			String tnaRep hint="" 
+			String tnaCdpId hint="type=system,view=ComboBox"
+			String tnaAttId hint="type=system,view=ComboBox,LinkedTo=tnaCdpId"
+		}
+		
+		/****************************************************************************************************************************************************** */
+		//PenaliteRetard
+		/****************************************************************************************************************************************************** */
+		
+		Entity PenaliteRetard{
+			databaseTable="tec_penalite_retard"
+			hint="idSequence=penalite_retard_cet_X"
+			
+			Long id    databaseColumn="tpr_id" 
+			String tprNum length="32" nullable databaseColumn="tpr_num"  hint="visible=true,toString" 
+			String tprName length="128" nullable databaseColumn="tpr_name"  hint="visible=true,toString"
+			Integer tprDelaiExe  nullable databaseColumn="tpr_delai_exe" 
+			Date tprDateComm  nullable databaseColumn="tpr_date_comm"  hint="visible=true,toString"
+			Date tprDateAchev  nullable databaseColumn="tpr_date_achev"  hint="visible=true,toString"
+			Date tprDateSerFait  nullable databaseColumn="tpr_date_ser_fait"  hint="visible=true,toString" 
+			Integer tprNbrJourRetard  nullable databaseColumn="tpr_nbr_jour_retard"  hint="visible=true"		
+			BigDecimal tprMonIniMar nullable databaseColumn="tpr_mon_ini_mar"
+			BigDecimal tprMonJourPen nullable databaseColumn="tpr_mon_jour_pen"
+			BigDecimal tprMonTotPen nullable databaseColumn="tpr_mon_tot_pen"  hint="visible=true"		
+			BigDecimal tprMonPlafPen nullable databaseColumn="tpr_mon_plaf_pen" 
+			BigDecimal tprMonOrdRecett nullable databaseColumn="tpr_mon_ord_recett"
+			
+				- @CptDepense tprCdpId  databaseColumn="tpr_cdp_id"  /*<-> idCdpTprId*/  fetch="lazy" cascade="refresh" hint="visible=true"		
+				- @TecAttachement tprAttId  databaseColumn="tpr_att_id"  /*<-> idAttTprId*/  fetch="lazy" cascade="refresh"  hint="visible=true"		
+			
+			Repository PenaliteRetardRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@PenaliteRetard> findAll(PagingParameter pagingParameter);
+				PagedResult<@PenaliteRetard> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service PenaliteRetardService {
+			
+			findById => PenaliteRetardRepository.findById;
+			findAll => PenaliteRetardRepository.findAll;
+			save => PenaliteRetardRepository.save;
+			delete => PenaliteRetardRepository.delete;
+			PagedResult<@PenaliteRetard> search(@PenaliteRetardDTO aua);
+			PagedResult<@PenaliteRetard> findAll(PagingParameter pagingParameter);
+			
+			List<@PenaliteRetard> findByTprNum(String tprNum) hint="gen,order=asc,prop=id,nullable";
+			List<@PenaliteRetard> findByTprName(String tprName) hint="gen,order=asc,prop=id,nullable";
+			List<@PenaliteRetard> findByTprDateComm(Date tprDateComm) hint="gen,order=asc,prop=id,nullable";
+			List<@PenaliteRetard> findByTprCdpId(Long id) hint="gen,order=asc,prop=id,conditions=tprCdpId.id&$id,nullable";
+			List<@PenaliteRetard> findByTprAttId(Long id) hint="gen,order=asc,prop=id,conditions=tprAttId.id&$id,nullable";
+		}
+		
+		DataTransferObject PenaliteRetardDTO {
+			hint="for=search,entity=PenaliteRetard"
+			String tprNum hint="" 
+			String tprName hint=""
+			String tprDepNum hint="ref=tprCdpId,field=cdpNumDep"
+			String tprDepNumGid hint="ref=tprCdpId,field=cdpNumGid"
+			String tprCdpId1 hint="ref=tprCdpId,view=ComboBox"
+			String tprAttId1 hint="ref=tprAttId,view=ComboBox"
+			String tprDateComm hint=""
+			String tprDateAchev hint="" 
+			String tprDateSerFait hint=""
+		}
+		
+		DataTransferObject PenaliteRetardMergeDTO {
+			hint="for=merge,entity=PenaliteRetard"
+			String tprNum hint="" 
+			String tprName hint="" 
+			String tprDelaiExe hint="" 
+			String tprDateComm hint=""
+			String tprDateAchev hint="" 
+			String tprDateSerFait hint="" 
+			String tprNbrJourRetard hint="" 
+			String tprMonIniMar hint=""
+			String tprMonJourPen hint="" 
+			String tprMonTotPen hint="" 
+			String tprMonPlafPen hint="" 
+			String tprMonOrdRecett hint=""
+			String tprCdpId hint="type=system,view=ComboBox"
+			String tprAttId hint="type=system,view=ComboBox"
+		}
+		/****************************************************************************************************************************************************** */
+		
+	}
+}

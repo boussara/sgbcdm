@@ -1,0 +1,32 @@
+1===indexBuffer=20==Primary Account Number                        2 16
+2===indexBuffer=38==Processing Code                               0 6
+3===indexBuffer=44==Transaction Amount                            0 12
+4===indexBuffer=56==Reconciliation Amount                         0 12
+5===indexBuffer=68==Cardholder Billing Amount                     0 12
+8===indexBuffer=80==Conversion Rate Reconciliation                0 8
+9===indexBuffer=88==Conversion Rate Cardholder Billing            0 8
+11===indexBuffer=96==Date and Time, Local Transaction              0 12
+13===indexBuffer=108==Expiry Date                                   0 4
+21===indexBuffer=112==Point of Service Data Code                    0 12
+22===indexBuffer=124==Card Sequence Number                          0 3
+23===indexBuffer=127==Function Code                                 0 3
+25===indexBuffer=130==MCC                                           0 4
+30===indexBuffer=134==Acquirer Reference Data                       2 23
+31===indexBuffer=159==Acquiring Institution Identification Code     2 6
+32===indexBuffer=167==Forwarding Institution Identification Code    2 6
+36===indexBuffer=175==Retrieval Reference Number                    0 12
+37===indexBuffer=187==Approval Code                                 0 6
+39===indexBuffer=193==Service Code                                  0 3
+40===indexBuffer=196==Card Acceptor Terminal ID                     0 8
+41===indexBuffer=204==Card Acceptor ID Code                         0 15
+42===indexBuffer=219==Card Acceptor Location                        2 84
+47===indexBuffer=305==Additional Data                               3 237
+48===indexBuffer=545==Currency Code Transaction                     0 3
+49===indexBuffer=548==Currency Code Reconciliation                  0 3
+50===indexBuffer=551==Currency Code Billing                         0 3
+54===indexBuffer=554==ICC System Related Data                       3 119
+62===indexBuffer=676==Transaction Life Cycle ID                     3 16
+70===indexBuffer=695==Message Number                                0 8
+92===indexBuffer=703==Transaction Dest Inst ID Code                 2 6
+93===indexBuffer=711==Transaction Orig Inst Id Code                 2 6
+99===indexBuffer=719==Receiving Institution ID                      2 6

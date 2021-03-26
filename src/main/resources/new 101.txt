@@ -1,0 +1,41 @@
+update pla_credit_op set cop_top_id=7 where cop_top_id=15;
+
+update pla_credit_prs set cpr_prt_id=9 where cpr_prt_id=125891;
+
+update cpt_depense set cdp_prt_id=8  where cdp_prt_id=20;
+
+
+update ach_achat set ach_ast_id=201  where ach_ast_id=36137;
+
+
+update ach_achat set ach_amp_id=1  where ach_amp_id=11;
+
+
+update pla_plan_exercice set pex_pla_id=3 where pex_pla_id=188311;
+
+update pla_credit_op set cop_pla_id=3 where cop_pla_id=211026;
+update pla_credit_prg set cpg_pla_id=3 where cpg_pla_id=211026;
+update pla_credit_prj set cpj_pla_id=3 where cpj_pla_id=211026;
+update pla_credit_prj_reg set crp_pla_id=3 where crp_pla_id=211026;
+
+
+update pla_credit_op set cop_pla_id=3 where cop_pla_id=181887;
+update pla_credit_prg set cpg_pla_id=3 where cpg_pla_id=181887;
+update pla_credit_prj set cpj_pla_id=3 where cpj_pla_id=181887;
+update pla_credit_prj_reg set crp_pla_id=3 where crp_pla_id=181887;
+
+update pla_credit_op set cop_pla_id=3 where cop_pla_id=165922;
+update pla_credit_prg set cpg_pla_id=3 where cpg_pla_id=165922;
+update pla_credit_prj set cpj_pla_id=3 where cpj_pla_id=165922;
+update pla_credit_prj_reg set crp_pla_id=3 where crp_pla_id=165922;
+
+
+update pla_credit_op set cop_pla_id=3 where cop_pla_id=181887;
+update pla_credit_prg set cpg_pla_id=3 where cpg_pla_id=181887;
+update pla_credit_prj set cpj_pla_id=3 where cpj_pla_id=181887;
+update pla_credit_prj_reg set crp_pla_id=3 where crp_pla_id=181887;
+
+update pla_credit_op set cop_pla_id=3 where cop_pla_id=176276;
+update pla_credit_prg set cpg_pla_id=3 where cpg_pla_id=176276;
+update pla_credit_prj set cpj_pla_id=3 where cpj_pla_id=176276;
+update pla_credit_prj_reg set crp_pla_id=3 where crp_pla_id=176276;

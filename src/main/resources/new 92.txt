@@ -1,0 +1,8 @@
+nsd_nde_id=20001
+val_code like '%PIN%'
+
+
+val_code like '%IDC%'
+
+
+val_code like '%PTR%'

@@ -1,0 +1,270 @@
+import "classpath:/model-adm.btdesign"
+
+ApplicationPart communPar{
+	Module communPar{
+		basePackage=ma.brs.common.par
+		
+		Entity ParEntity{
+			databaseTable="par_entity"
+			hint="idSequence=entytitne_rap_X"
+			
+			Long id    databaseColumn="ent_id" 
+			String entAbrevName length="32" nullable databaseColumn="ent_abrev_name"  hint="visible=true,toString" 
+			String entName length="128" nullable databaseColumn="ent_name"  hint="visible=true,toString" 
+			
+				- @ParEntityType entEtyId  databaseColumn="ent_ety_id"  /*<-> idEtyEntId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				//- @ParRegion entRegId  databaseColumn="ent_reg_id"  /*<-> idRegEntId*/ nullable fetch="lazy" cascade="refresh"  
+				
+				- @ParEntity entEntId  /*<-> entEntId*/ nullable fetch="lazy" cascade="refresh" 							
+			
+			
+			
+			Repository ParEntityRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ParEntity> findAll(PagingParameter pagingParameter);
+				PagedResult<@ParEntity> findByCondition(PagingParameter pagingParameter);
+				List<@ParEntity> findByParEntityType(@ParEntityType parEntityType) condition="entEtyId = :parEntityType";
+				List<@ParEntity> findByParEntityParent(@ParEntity parent) condition="entEntId = :parent";
+			}
+			
+		}
+		
+		Service ParEntityService {
+			
+			findById => ParEntityRepository.findById;
+			findAll => ParEntityRepository.findAll;
+			save => ParEntityRepository.save;
+			delete => ParEntityRepository.delete;
+			PagedResult<@ParEntity> search(@ParEntityDTO aua);
+			PagedResult<@ParEntity> findAll(PagingParameter pagingParameter);
+
+			
+			List<Integer> findChildIds4ParEntity(@ParEntity parEntity) hint="gap"; 
+			List<@ParEntity> findAllParEntitys4Ety(@ParEntityType entEtyId) hint="gen, order=asc,prop=entEtyId,nullable";
+		}
+		
+		DataTransferObject ParEntityDTO {
+			hint="for=search,entity=ParEntity"
+			String entAbrevName hint="" 
+			String entName hint="" 
+		}
+		
+		DataTransferObject ParEntityMergeDTO {
+			hint="for=merge,entity=ParEntity"
+			String entAbrevName hint="" 
+			String entName hint="" 
+			String entEtyId hint="type=system,view=ComboBox"
+			String entEntId hint="type=system,view=ComboBox"
+		}
+		
+		Entity ParEntityType{
+			databaseTable="par_entity_type"
+			hint="idSequence=etyepyt_ytitne_rap_X"
+			
+			Long id    databaseColumn="ety_id" 
+			String etyName length="32" nullable databaseColumn="ety_name"  hint="visible=true,toString" 
+			
+			//- List<@ParEntity> idEtyEntId <-> entEtyId
+			
+			Repository ParEntityTypeRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ParEntityType> findAll(PagingParameter pagingParameter);
+				PagedResult<@ParEntityType> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service ParEntityTypeService {
+			
+			findById => ParEntityTypeRepository.findById;
+			findAll => ParEntityTypeRepository.findAll;
+			save => ParEntityTypeRepository.save;
+			delete => ParEntityTypeRepository.delete;
+			PagedResult<@ParEntityType> search(@ParEntityTypeDTO aua);
+			PagedResult<@ParEntityType> findAll(PagingParameter pagingParameter);
+
+		}
+		
+		DataTransferObject ParEntityTypeDTO {
+			hint="for=search,entity=ParEntityType"
+			String etyName hint="" 
+		}
+		
+		DataTransferObject ParEntityTypeMergeDTO {
+			hint="for=merge,entity=ParEntityType"
+			String etyName hint="" 
+		}
+		
+			
+		Entity ParJRParameters{
+			databaseTable="PAR_JRPARAMETERS"
+			hint="idSequence=SRETEMARAPRJ_RAPPAR_X"
+			
+			Long id    databaseColumn="PJR_ID" 
+			String pjrName length="32"  databaseColumn="PJR_NAME"  hint="visible=true,toString" 
+			String pjrCode length="32"  databaseColumn="PJR_CODE"  hint="visible=true,toString" 
+			String pjrClass length="30"  databaseColumn="PJR_CLASS"  hint="visible=true,toString" 
+			String pjrLst length="1"  databaseColumn="PJR_LST"  hint="visible=true,toString"
+			String pjrObl length="1"  databaseColumn="PJR_OBL"  hint="visible=true,toString"
+			String pjrComment length="300" databaseColumn="PJR_COMMENT" hint="visible=true,toString"
+											
+			-@ParReport pjrRepId <-> repPjrId nullable fetch="lazy" 				 
+			
+			Repository ParJRParametersRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ParJRParameters> findAll(PagingParameter pagingParameter);
+				PagedResult<@ParJRParameters> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+			
+		Service ParJRParametersService {
+			
+			findById => ParJRParametersRepository.findById;
+			findAll => ParJRParametersRepository.findAll;
+			save => ParJRParametersRepository.save;
+			delete => ParJRParametersRepository.delete;
+			PagedResult<@ParJRParameters> search(@ParJRParametersDTO aua);
+			PagedResult<@ParJRParameters> findAll(PagingParameter pagingParameter);				
+		}
+		
+		DataTransferObject ParJRParametersDTO {
+			hint="for=search,entity=ParJRParameters"
+			String pjrName hint="" 
+			String pjrClass hint="" 
+		}
+		
+		DataTransferObject ParJRParametersMergeDTO {
+			hint="for=merge,entity=ParJRParameters"				
+			String pjrName hint="" 
+			String pjrComment
+			String pjrClass hint="type=enum,values=allTypes" 
+			String pjrLst  hint="type=boolean" 
+			String pjrObl  hint="type=boolean" 
+			
+		}
+		
+		Entity ParReport{
+				databaseTable="PAR_REPORT"
+				hint="idSequence=TROPER_RAPREP_X"
+				
+				Long id    databaseColumn="REP_ID" 
+				String repCode length="10"  databaseColumn="REP_CODE"  hint="visible=true" 
+				String repTitle length="64" databaseColumn="REP_TITLE"  hint="visible=true,toString" 
+				String repFile length="64" nullable databaseColumn="REP_FILE"  hint="visible=true" 
+				
+					- @AdmAppModule repApmId  /*<-> apmRepId*/ nullable fetch="lazy"  cascade="refresh"	
+					
+				- List<@ParJRParameters> repPjrId <-> pjrRepId cascade="remove"
+				
+				Repository ParReportRepository {
+					findById;
+					save;
+					delete;
+					findAll;
+					findByCondition;
+					PagedResult<@ParReport> findAll(PagingParameter pagingParameter);
+					PagedResult<@ParReport> findByCondition(PagingParameter pagingParameter);
+				}
+				
+			}
+			
+		Service ParReportService {
+			
+			findById => ParReportRepository.findById;
+			findAll => ParReportRepository.findAll;
+			save => ParReportRepository.save;
+			delete => ParReportRepository.delete;
+			PagedResult<@ParReport> search(@ParReportDTO aua);
+			PagedResult<@ParReport> findAll(PagingParameter pagingParameter);
+		}
+		
+		DataTransferObject ParReportDTO {
+			hint="for=search,entity=ParReport"
+			String repCode hint="" 
+			String repTitle hint="" 
+			String repFile hint="" 
+		}
+		
+		DataTransferObject ParReportMergeDTO {
+			hint="for=merge,entity=ParReport"
+			String repApmId hint="type=system,view=ComboBox"
+			String repCode hint="" 
+			String repTitle hint="" 
+			String repFile hint="" 				
+			String repPjrId hint="type=system,view=InModal,tab=Liste_des_parameters"
+		}
+		
+		Entity ParParameters{
+			databaseTable="PAR_PARAMETERS"
+			hint="idSequence=SRETEMARAP_RAPPAR_X"
+			
+			Long id    databaseColumn="PAR_ID" 
+			String parKey length="64" nullable databaseColumn="PAR_KEY"  hint="visible=true,toString" 
+			String parValue length="128" nullable databaseColumn="PAR_VALUE"  hint="visible=true,toString" 
+			
+				- @ParEntity parEntId  /*<-> entParId*/ nullable fetch="lazy" 	 cascade="refresh"							
+			
+			
+			Repository ParParametersRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ParParameters> findAll(PagingParameter pagingParameter);
+				PagedResult<@ParParameters> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+			
+		Service ParParametersService {
+			
+			findById => ParParametersRepository.findById;
+			findAll => ParParametersRepository.findAll;
+			save => ParParametersRepository.save;
+			delete => ParParametersRepository.delete;
+			PagedResult<@ParParameters> search(@ParParametersDTO aua);
+			PagedResult<@ParParameters> findAll(PagingParameter pagingParameter);
+			@ParParameters getParParameters4Key(@ParEntity parEntity, String cle) hint="gap";
+			
+			@ParParameters findByParKey(String parKey) hint="gen,order=asc,prop=id,nullable";
+			
+			
+		}
+		
+		DataTransferObject ParParametersDTO {
+			hint="for=search,entity=ParParameters"
+			String parKey hint="" 
+			String parValue hint="" 
+		}
+		
+		DataTransferObject ParParametersMergeDTO {
+			hint="for=merge,entity=ParParameters"
+			String parEntId hint="type=system,view=ComboBox"
+			String parKey hint="" 
+			String parValue hint="" 
+			
+		}
+		
+		
+		
+		
+		
+	}
+	
+	
+}

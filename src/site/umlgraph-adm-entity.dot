@@ -1,0 +1,196 @@
+digraph G {
+	fontsize = 10
+	node [
+		fontsize = 10
+		fontname="arial"
+		shape=plaintext
+	]
+
+	edge [
+		fontsize = 10
+	]
+subgraph clusteradm {
+	label = "adm"  
+	AdmAppFuncGrp [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AdmAppFuncGrp </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + afgName : String </td></tr>
+	<tr><td align="left"> + afgCode : String </td></tr>
+	<tr><td align="left"> + afgMenuId : Long </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AdmAppFunction [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AdmAppFunction </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + apfName : String </td></tr>
+	<tr><td align="left"> + apfActive : Long </td></tr>
+	<tr><td align="left"> + apfPci : Long </td></tr>
+	<tr><td align="left"> + apfCode : String </td></tr>
+	<tr><td align="left"> + apfUrl : String </td></tr>
+	<tr><td align="left"> + apfMenuId : Long </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AdmAppModule [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AdmAppModule </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + apmName : String </td></tr>
+	<tr><td align="left"> + apmCode : String </td></tr>
+	<tr><td align="left"> + apmMenuId : Long </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AdmParameters [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AdmParameters </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + parPassExpr : BigDecimal </td></tr>
+	<tr><td align="left"> + parPassHistNbr : Long </td></tr>
+	<tr><td align="left"> + parAttemptNbr : Long </td></tr>
+	<tr><td align="left"> + parLockTime : BigDecimal </td></tr>
+	<tr><td align="left"> + parSesTime : BigDecimal </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AdmUserAccount [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AdmUserAccount </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + usaFirst : String </td></tr>
+	<tr><td align="left"> + usaLast : String </td></tr>
+	<tr><td align="left"> + usaLogin : String </td></tr>
+	<tr><td align="left"> + usaPassword : String </td></tr>
+	<tr><td align="left"> + usaActif : Long </td></tr>
+	<tr><td align="left"> + usaPci : Long </td></tr>
+	<tr><td align="left"> + usaPassDate : Date </td></tr>
+	<tr><td align="left"> + usaLocked : Long </td></tr>
+	<tr><td align="left"> + usaLockDate : Date </td></tr>
+	<tr><td align="left"> + usaCivility : String </td></tr>
+	<tr><td align="left"> + usaUnsucLog : Long </td></tr>
+	<tr><td align="left"> + usaPbk : Blob </td></tr>
+	<tr><td align="left"> + usaPvk : Blob </td></tr>
+	<tr><td align="left"> + usaEntId : ParEntity </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AdmUserEntity [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AdmUserEntity </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + uenType : String </td></tr>
+	<tr><td align="left"> + uenEntId : Long </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AdmUserPassHist [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AdmUserPassHist </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + uphPassword : String </td></tr>
+	<tr><td align="left"> + uphDate : Date </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AdmUserRole [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AdmUserRole </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + usrName : String </td></tr>
+	<tr><td align="left"> + usrDescription : String </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+	AdmUsrApf [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="0" port="p" bgcolor="#FFCC33">
+	<tr><td>
+	<table border="0" cellspacing="1" cellpadding="1">
+		<tr><td> &laquo;Entity&raquo; </td></tr>
+		<tr><td><font face="arialbd"  point-size="12.0"> AdmUsrApf </font></td></tr>
+	</table></td></tr>
+	<tr><td>
+		<table border="0" cellspacing="0" cellpadding="1">	
+	<tr><td align="left"> + uspCreate : Integer </td></tr>
+	<tr><td align="left"> + uspRead : Integer </td></tr>
+	<tr><td align="left"> + uspUpdate : Integer </td></tr>
+	<tr><td align="left"> + uspDelete : Integer </td></tr>
+	<tr><td align="left"> + uspVerify : Integer </td></tr>
+	<tr><td align="left"> + uspValidate : Integer </td></tr>
+	<tr><td align="left"> + uspExport : Integer </td></tr>
+	<tr><td align="left"> + uspAsPDF : Integer </td></tr>
+	<tr><td align="left"> + uspReport : Integer </td></tr>
+	<tr><td align="left"> + uspApfMenuId : Long </td></tr>
+		</table>		
+	</td></tr>
+	</table>>, fontname="arial", fontcolor="black", fontsize=9.0];
+}
+edge [arrowhead = "empty"]
+edge [arrowhead = "none"]
+
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n afgApfId" taillabel="apfAfgId" labeldistance="2.0" labelangle="-30"]
+
+AdmAppFuncGrp -> AdmAppFunction
+
+edge [arrowtail="none" arrowhead = "none" headlabel="afgApmId" taillabel="0..n apmAfgId" labeldistance="2.0" labelangle="-30"]
+
+AdmAppFuncGrp -> AdmAppModule
+
+edge [arrowtail="none" arrowhead = "none" headlabel="apfApmId" taillabel="0..n apmApfId" labeldistance="2.0" labelangle="-30"]
+
+AdmAppFunction -> AdmAppModule
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n apfUspId" taillabel="uspApfId" labeldistance="2.0" labelangle="-30"]
+
+AdmAppFunction -> AdmUsrApf
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n usaUsr" taillabel="0..n usrUsa" labeldistance="2.0" labelangle="-30"]
+
+AdmUserAccount -> AdmUserRole
+
+edge [arrowtail="none" arrowhead = "open" headlabel="uenUsaId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AdmUserEntity -> AdmUserAccount
+
+edge [arrowtail="none" arrowhead = "open" headlabel="uphUsaId" taillabel="" labeldistance="2.0" labelangle="-30"]
+
+AdmUserPassHist -> AdmUserAccount
+
+edge [arrowtail="none" arrowhead = "none" headlabel="0..n usrUspId" taillabel="uspUsrId" labeldistance="2.0" labelangle="-30"]
+
+AdmUserRole -> AdmUsrApf
+}

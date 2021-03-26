@@ -1,0 +1,8 @@
+#2019!*BGFI
+
+
+
+
+
+
+--database=mysql --user=root --password=123456 --default-character-set=latin1 --execute="source $INSTDIR\scripts\mysql_creation_user_db_donnees.sql"

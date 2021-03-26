@@ -1,0 +1,53 @@
+Entity EjrCountClear{
+			databaseTable="ejr_count_clear"
+			hint="idSequence=coc_raelc_tnouc_rje_X"
+			
+			Long id    databaseColumn="coc_id" 
+			Date cocDate nullable databaseColumn="can_date"  hint="visible=true,toString" 
+			Integer cocType nullable databaseColumn="coc_type"  hint="visible=true,toString" 			
+			Integer cocNombre nullable databaseColumn="coc_nombre"  hint="visible=true,toString" 
+			Date cocClearDate nullable databaseColumn="can_date"  hint="visible=true,toString" 
+			
+			- @TopNe cocNeId  databaseColumn="coc_ne_id"   nullable fetch="lazy" cascade="refresh"  									
+			
+			
+			Repository EjrCountClearRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@EjrCountClear> findAll(PagingParameter pagingParameter);
+				PagedResult<@EjrCountClear> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service EjrCountClearService {
+			
+			findById => EjrCountClearRepository.findById;
+			findAll => EjrCountClearRepository.findAll;
+			save => EjrCountClearRepository.save;
+			delete => EjrCountClearRepository.delete;
+			PagedResult<@EjrCountClear> search(@EjrCountClearDTO aua);
+			PagedResult<@EjrCountClear> findAll(PagingParameter pagingParameter);
+		}
+		
+		DataTransferObject EjrCountClearDTO {
+			hint="for=search,entity=EjrCountClear"						
+			String cocDate
+			String cocType
+			String cocNombre
+			String cocClearDate			
+			String cocNeId1 hint="ref=cocNeId,view=ComboBox"
+		}
+		
+		DataTransferObject EjrCountClearMergeDTO {
+			hint="for=merge,entity=EjrCountClear"								
+			String cocDate
+			String cocType
+			String cocNombre
+			String cocClearDate			
+			String cocNeId hint="type=system,view=ComboBox"	
+		}
+		

@@ -1,0 +1,463 @@
+				<!DOCTYPE html>
+<html layout:decorate="fragments/general_template"			
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title layout:fragment="title" data-th-text="#{screen_update}+' '+#{cpt.cptDepenseSM}">Welcome</title>
+</head>
+
+<body>
+
+
+	<div layout:fragment="content"  data-ng-app="app" data-ng-controller="ctrl as vm">
+	
+				<ol class="breadcrumb" style="margin: 4px -5px -8px;border-radius: 0px;">
+				  <li><a th:href="@{/rest/}" th:text="#{breadcrumbs_home}">Home</a></li>
+				  <li><a th:href="@{/rest/cptresources/cptDepenseSM/search}" th:text="#{cpt.cptDepenseSM}">Module</a></li>
+				  <li class="active" th:text="#{screen_update}+' '+#{cpt.cptDepenseSM}">Fonction</li>
+				</ol>	
+						
+				<div id="CptDepenseMergeDTODiv" >				
+				
+					<form action="#" id="CptDepenseMergeDTOForm" th:action="@{/rest/cptresources/cptDepenseSM/updateGap}" th:object="${entity}"
+					 method="POST"     data-validate="true">
+					<div class="row" style="margin-right: 7px;">
+					<div class="panel panel-default col-md-12 col-lg-12" id="merge-panel" style="padding: 0px;margin:2px 11px;">
+						<div class="panel-heading">
+							<span th:text="#{screen_update}+' '+#{cpt.cptDepenseSM}"></span>
+							<button type="submit" name="save" 
+							class="btn btn-link pull-right" id="update" style="margin-top:-4px;color: inherit;" ><i class="fa fa-pencil" ></i></button>
+							
+							<a class="btn btn-list pull-right" href="/rest/cptresources/cptDepenseSM/search" 
+								th:href="@{/rest/cptresources/cptDepenseSM/search}"  style="margin-top:-4px;color: inherit;">
+								<i class="fa fa-arrow-left"></i>
+							</a>
+						</div>
+						<div class="panel-body"  layout:fragment="merge_fg">
+					
+					<input type="hidden" th:field="*{id}" />
+					<input type="hidden" th:field="*{version}" />
+					<input type="hidden" th:field="*{cdpNaturPrix}"  />
+					<fieldset class="col-md-12 col-lg-12">
+			
+											
+										<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpNumDep}">CdpNumDep</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="45" 
+													 style="width:200px;"  type="text" th:field="*{cdpNumDep}"   ng-model="cdpNumDep" /></div>	
+													 
+										<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpNumGid}">CdpNumGid</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="32" 
+													 style="width:200px;"  type="text" th:field="*{cdpNumGid}"   ng-model="cdpNumGid" /></div>
+													
+									<div class="row hidden" id="form-row" style="margin:10px">
+										
+													
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpCp}">CdpCp</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"  style="width:200px;"   data-rule-number="true"  type="text" th:field="*{cdpCp}"  ng-model="cdpCp" />
+													</div>
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpCe}">CdpCe</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"  style="width:200px;"   data-rule-number="true"  type="text" th:field="*{cdpCe}"  ng-model="cdpCe" />
+													</div>
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpConcurent}">CdpConcurent</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="45" 
+													 style="width:200px;"  type="text" th:field="*{cdpConcurent}"   /></div>
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpRc}">CdpRc</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="24" 
+													 style="width:200px;"  type="text" th:field="*{cdpRc}"   ng-model="cdpRc" /></div>
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpIce}">CdpIce</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="24" 
+													 style="width:200px;"  type="text" th:field="*{cdpIce}"   ng-model="cdpIce" /></div>
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpIf}">CdpIf</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="24" 
+													 style="width:200px;"  type="text" th:field="*{cdpIf}"   ng-model="cdpIf" /></div>
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpCnss}">CdpCnss</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="24" 
+													 style="width:200px;"  type="text" th:field="*{cdpCnss}"   ng-model="cdpCnss" /></div>
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpRib}">CdpRib</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="24" 
+													 style="width:200px;"  type="text" th:field="*{cdpRib}"   ng-model="cdpRib" /></div>
+													
+													
+													
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpStatus}">CdpStatus</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="1" 
+													th:style="${'width:'+__${1*35}__+'px;'}" type="text" th:field="*{cdpStatus}"   ng-model="cdpStatus" /></div>
+													
+													
+													
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpDateRem}">CdpDateRem</label></div>
+													
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"   type="text" th:field="*{cdpDateRem}"   style="opacity:0"   ng-model="cdpDateRem" />
+													<label for="cdpDateRem" class="form-control date-label-value"  id="__cdpDateRem__" ></label>
+													</div>
+															
+													
+													
+													
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpDateEnr}">CdpDateEnr</label></div>
+													
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"   type="text" th:field="*{cdpDateEnr}"   style="opacity:0"   ng-model="cdpDateEnr" />
+													<label for="cdpDateEnr" class="form-control date-label-value"  id="__cdpDateEnr__" ></label>
+													</div>
+													
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpSignEng}">CdpSignEng</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="45" 
+													 style="width:200px;"  type="text" th:field="*{cdpSignEng}"   ng-model="cdpSignEng" /></div>
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpInterMor}">CdpInterMor</label></div>
+													
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"  style="width:200px;"   data-rule-number="true"  type="text" th:field="*{cdpInterMor}"  ng-model="cdpInterMor" />
+													</div>
+															
+													
+													
+													
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpRevPrix}">CdpRevPrix</label></div>
+													
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"  style="width:200px;"   data-rule-number="true"  type="text" th:field="*{cdpRevPrix}"  ng-model="cdpRevPrix" />
+													</div>
+															
+													
+													
+													
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpRevPrixDate}">CdpRevPrixDate</label></div>
+													
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"   type="text" th:field="*{cdpRevPrixDate}"   style="opacity:0"   ng-model="cdpRevPrixDate" />
+													<label for="cdpRevPrixDate" class="form-control date-label-value"  id="__cdpRevPrixDate__" ></label>
+													</div>
+															
+													
+													
+													
+													
+													
+													
+													
+													
+												
+													
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpCurStatus}">CdpCurStatus</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="1" 
+													th:style="${'width:'+__${1*35}__+'px;'}" type="text" th:field="*{cdpCurStatus}"   ng-model="cdpCurStatus" /></div>
+													
+													
+													
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpCurStatusDate}">CdpCurStatusDate</label></div>
+													
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"   type="text" th:field="*{cdpCurStatusDate}"   style="opacity:0"   ng-model="cdpCurStatusDate" />
+													<label for="cdpCurStatusDate" class="form-control date-label-value"  id="__cdpCurStatusDate__" ></label>
+													</div>
+															
+													
+													
+													
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpCurDecision}">CdpCurDecision</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="1" 
+													th:style="${'width:'+__${1*35}__+'px;'}" type="text" th:field="*{cdpCurDecision}"   ng-model="cdpCurDecision" /></div>
+													
+													
+													
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpMpr}">CdpMpr</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"  style="width:200px;"   data-rule-number="true"  type="text" th:field="*{cdpMpr}"  ng-model="cdpMpr" />
+													</div>
+													
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpMc}">CdpMc</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"  style="width:200px;"   data-rule-number="true"  type="text" th:field="*{cdpMc}"  ng-model="cdpMc" />
+													</div>
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpMom}">CdpMom</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"  style="width:200px;"   data-rule-number="true"  type="text" th:field="*{cdpMom}"  ng-model="cdpMom" />
+													</div>
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpFluTau}">CdpFluTau</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="45" 
+													 style="width:200px;"  type="text" th:field="*{cdpFluTau}"   ng-model="cdpFluTau" /></div>
+													
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpDepCon}">CdpDepCon</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="45" 
+													 style="width:200px;"  type="text" th:field="*{cdpDepCon}"   ng-model="cdpDepCon" /></div>
+													 
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpDatDem}">CdpDatDem</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="45" 
+													 style="width:200px;"  type="text" th:field="*{cdpDatDem}"   ng-model="cdpDatDem" /></div>
+													
+													
+													
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpDatOuvPli}">CdpDatOuvPli</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="45" 
+													 style="width:200px;"  type="text" th:field="*{cdpDatOuvPli}"   ng-model="cdpDatOuvPli" /></div>
+													
+													
+													
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpNrDemAch}">CdpNrDemAch</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="45" 
+													 style="width:200px;"  type="text" th:field="*{cdpNrDemAch}"   ng-model="cdpNrDemAch" /></div>
+													
+													
+													
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpNrCon}">CdpNrCon</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="45" 
+													 style="width:200px;"  type="text" th:field="*{cdpNrCon}"   ng-model="cdpNrCon" /></div>
+													
+													
+													
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpPres}">CdpPres</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="45" 
+													 style="width:200px;"  type="text" th:field="*{cdpPres}"   ng-model="cdpPres" /></div>
+													
+													
+													
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpNrDep}">CdpNrDep</label></div>						
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" ><input class="form-control"    maxlength="45" 
+													 style="width:200px;"  type="text" th:field="*{cdpNrDep}"   ng-model="cdpNrDep" /></div>
+															
+													
+													
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpAchId}">CdpAchId</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" >
+													<select th:field="*{cdpAchId}"  class="form-control selectpicker show-menu-arrow"   data-rule-required="true"   data-view-type="ComboBox"  ng-model="cdpAchId"  data-live-search="true"  data-size="5"   >												
+														<option value='' th:text="#{choose}">- - - -choisir - - - -</option>
+														<option th:each="item:${AllAchAchat}" th:value="${item.id}" th:text="${{item}}"/>
+													</select>
+													</div>											
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpAloId}">CdpAloId</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" >
+													
+													<span id="lCdpAloId" th:text="${{CdpAloId}}" style="width:60%"></span>
+													 <a href="#"  id="CdpAloIdBtn" class="btn btn-large "
+														data-toggle="modal" data-target="#myModalCdpAloId" >
+																<button 
+																type="button" id="CdpAloIdBtnBtn" class="btn btn-sm btn-default">
+																	<span class="glyphicon glyphicon-check"></span>
+																</button>											
+														</a>	
+													</div>
+													<input type="hidden" th:field="*{cdpAloId}"     data-view-type="Search" ng-model="cdpAloId" />											
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpBenId}">CdpBenId</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" >
+													
+													<span id="lCdpBenId" th:text="${{CdpBenId}}" style="width:60%"></span>
+													 <a href="#"  id="CdpBenIdBtn" class="btn btn-large "
+														data-toggle="modal" data-target="#myModalCdpBenId" >
+																<button 
+																type="button" id="CdpBenIdBtnBtn" class="btn btn-sm btn-default">
+																	<span class="glyphicon glyphicon-check"></span>
+																</button>											
+														</a>	
+													</div>
+													<input type="hidden" th:field="*{cdpBenId}"     data-view-type="Search" ng-model="cdpBenId" />											
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpOrdId}">CdpOrdId</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" >
+													
+													<span id="lCdpOrdId" th:text="${{CdpOrdId}}" style="width:60%"></span>
+													 <a href="#"  id="CdpOrdIdBtn" class="btn btn-large "
+														data-toggle="modal" data-target="#myModalCdpOrdId" >
+																<button 
+																type="button" id="CdpOrdIdBtnBtn" class="btn btn-sm btn-default">
+																	<span class="glyphicon glyphicon-check"></span>
+																</button>											
+														</a>	
+													</div>
+													<input type="hidden" th:field="*{cdpOrdId}"     data-view-type="Search" ng-model="cdpOrdId" />											
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpEntId}">CdpEntId</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" >
+													
+													<span id="lCdpEntId" th:text="${{CdpEntId}}" style="width:60%"></span>
+													 <a href="#"  id="CdpEntIdBtn" class="btn btn-large "
+														data-toggle="modal" data-target="#myModalCdpEntId" >
+																<button 
+																type="button" id="CdpEntIdBtnBtn" class="btn btn-sm btn-default">
+																	<span class="glyphicon glyphicon-check"></span>
+																</button>											
+														</a>	
+													</div>
+													<input type="hidden" th:field="*{cdpEntId}"     data-view-type="Search" ng-model="cdpEntId" />											
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpCurAenId}">CdpCurAenId</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" >
+													
+													<span id="lCdpCurAenId" th:text="${{CdpCurAenId}}" style="width:60%"></span>
+													 <a href="#"  id="CdpCurAenIdBtn" class="btn btn-large "
+														data-toggle="modal" data-target="#myModalCdpCurAenId" >
+																<button 
+																type="button" id="CdpCurAenIdBtnBtn" class="btn btn-sm btn-default">
+																	<span class="glyphicon glyphicon-check"></span>
+																</button>											
+														</a>	
+													</div>
+													<input type="hidden" th:field="*{cdpCurAenId}"     data-view-type="Search" ng-model="cdpCurAenId" />											
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpCurCenId}">CdpCurCenId</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" >
+													
+													<span id="lCdpCurCenId" th:text="${{CdpCurCenId}}" style="width:60%"></span>
+													 <a href="#"  id="CdpCurCenIdBtn" class="btn btn-large "
+														data-toggle="modal" data-target="#myModalCdpCurCenId" >
+																<button 
+																type="button" id="CdpCurCenIdBtnBtn" class="btn btn-sm btn-default">
+																	<span class="glyphicon glyphicon-check"></span>
+																</button>											
+														</a>	
+													</div>
+													<input type="hidden" th:field="*{cdpCurCenId}"     data-view-type="Search" ng-model="cdpCurCenId" />											
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpBdtId}">CdpBdtId</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" >
+													<select th:field="*{cdpBdtId}"  class="form-control selectpicker show-menu-arrow"    data-view-type="ComboBox"  ng-model="cdpBdtId"  data-live-search="true"  data-size="5"   >												
+														<option value='' th:text="#{choose}">- - - -choisir - - - -</option>
+														<option th:each="item:${AllPlaBudgetType}" th:value="${item.id}" th:text="${{item}}"/>
+													</select>
+													</div>											
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpParId}">CdpParId</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" >
+													<select th:field="*{cdpParId}"  class="form-control selectpicker show-menu-arrow"    data-view-type="ComboBox"  ng-model="cdpParId"  data-live-search="true"  data-size="5"   >												
+														<option value='' th:text="#{choose}">- - - -choisir - - - -</option>
+														<option th:each="item:${AllBudParagraphe}" th:value="${item.id}" th:text="${{item}}"/>
+													</select>
+													</div>											
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpLinId}">CdpLinId</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" >
+													<select th:field="*{cdpLinId}"  class="form-control selectpicker show-menu-arrow"    data-view-type="ComboBox"  ng-model="cdpLinId"  data-live-search="true"  data-size="5"   >												
+														<option value='' th:text="#{choose}">- - - -choisir - - - -</option>
+														<option th:each="item:${AllBudLigne}" th:value="${item.id}" th:text="${{item}}"/>
+													</select>
+													</div>											
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpArtId}">CdpArtId</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" >
+													<select th:field="*{cdpArtId}"  class="form-control selectpicker show-menu-arrow"    data-view-type="ComboBox"  ng-model="cdpArtId"  data-live-search="true"  data-size="5"   >												
+														<option value='' th:text="#{choose}">- - - -choisir - - - -</option>
+														<option th:each="item:${AllBudArticle}" th:value="${item.id}" th:text="${{item}}"/>
+													</select>
+													</div>											
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpPrtId}">CdpPrtId</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" >
+													<select th:field="*{cdpPrtId}"  class="form-control selectpicker show-menu-arrow"    data-view-type="ComboBox"  ng-model="cdpPrtId"  data-live-search="true"  data-size="5"   >												
+														<option value='' th:text="#{choose}">- - - -choisir - - - -</option>
+														<option th:each="item:${AllPlaTypePrestation}" th:value="${item.id}" th:text="${{item}}"/>
+													</select>
+													</div>											
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpAmpId}">CdpAmpId</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" >
+													<select th:field="*{cdpAmpId}"  class="form-control selectpicker show-menu-arrow"    data-view-type="ComboBox"  ng-model="cdpAmpId"  data-live-search="true"  data-size="5"   >												
+														<option value='' th:text="#{choose}">- - - -choisir - - - -</option>
+														<option th:each="item:${AllAchModePass}" th:value="${item.id}" th:text="${{item}}"/>
+													</select>
+													</div>											
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpAtdId}">CdpAtdId</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" >
+													<select th:field="*{cdpAtdId}"  class="form-control selectpicker show-menu-arrow"    data-view-type="ComboBox"  ng-model="cdpAtdId"  data-live-search="true"  data-size="5"   >												
+														<option value='' th:text="#{choose}">- - - -choisir - - - -</option>
+														<option th:each="item:${AllAchTypeDepense}" th:value="${item.id}" th:text="${{item}}"/>
+													</select>
+													</div>											
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpAstId}">CdpAstId</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" >
+													<select th:field="*{cdpAstId}"  class="form-control selectpicker show-menu-arrow"    data-view-type="ComboBox"  ng-model="cdpAstId"  data-live-search="true"  data-size="5"   >												
+														<option value='' th:text="#{choose}">- - - -choisir - - - -</option>
+														<option th:each="item:${AllAchSstypeDepense}" th:value="${item.id}"data-ng-show="vm.dto.cdpNaturPrix == 'Y'" th:text="${{item}}"/>
+													</select>
+													</div>											
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cdpPexId}">CdpPexId</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" >
+													<select th:field="*{cdpPexId}"  class="form-control selectpicker show-menu-arrow"    data-view-type="ComboBox"  ng-model="cdpPexId"  data-live-search="true"  data-size="5"   >												
+														<option value='' th:text="#{choose}">- - - -choisir - - - -</option>
+														<option th:each="item:${AllParExercice}" th:value="${item.id}" th:text="${{item}}"/>
+													</select>
+													</div>											
+													<div  class="col-md-3 col-sm-3 col-xs-12 form-lb"  style="padding:4px 0px;" ><label th:text="#{cpt.cptDepenseMergeDTO.cprPrcId}">CprPrcId</label></div>
+													<div  class="col-md-3 col-sm-7 col-xs-12 form-content"  style="padding:4px 0px;" >
+													<select th:field="*{cprPrcId}"  class="form-control selectpicker show-menu-arrow"    data-view-type="ComboBox"  ng-model="cprPrcId"  data-live-search="true"  data-size="5"   >												
+														<option value='' th:text="#{choose}">- - - -choisir - - - -</option>
+														<option th:each="item:${AllPlaClassPrestation}" th:value="${item.id}" th:text="${{item}}"/>
+													</select>
+													</div>											
+										
+																	
+										<div class="col-lg-6 col-md-6 col-sm-10 col-xs-12 td-vide" style="padding:8px 0px;"  ></div>
+										</div>
+						
+						
+																	
+									
+
+<div class="col-md-offset-2 col-lg-offset-2 col-md-10 col-lg-10">
+<table>
+	<tr>						
+		<td>								
+		<button type="submit" name="update" 
+			class="btn btn-actions" id="update"  th:text="#{update}">Modifier</button>
+		</td>
+		<td style="with:100px">&nbsp;</td>
+<td style="with:100px">&nbsp;</td>
+				<td colspan="2">
+				<a class="btn btn-actions" href="/rest/cptresources/cptDepenseSM/search" th:href="@{/rest/cptresources/cptDepenseSM/search}" th:text="#{back}">back</a>
+				</td>
+			</tr>							
+		</table>
+		<br/>		
+		</div>	
+		
+		</fieldset>
+		
+		
+		</div>
+</div>
+</div>
+</form>	
+
+	
+			
+			
+			</div>	
+			
+	</div>
+	
+	<div layout:fragment="js_script" id="script_js">
+	
+		<script th:src="@{/resources/js/main/cptresources/cptDepenseSM/update.js}"></script>
+		<script data-th-src="@{/resources/js/angular-1.4.9/angular.js}"></script>
+
+		<script data-th-src="@{/resources/js/main/module.js}"></script>
+		<script data-th-src="@{/resources/js/main/url.service.js}"></script>
+		<script data-th-src="@{/resources/js/main/cptresources/cptDepenseSM/update/data.service.js}"></script>
+		<script data-th-src="@{/resources/js/main/cptresources/cptDepenseSM/update/ctrl.js}"></script>
+	
+	</div>
+				
+	
+
+
+
+</body>
+</html>
+

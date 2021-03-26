@@ -1,0 +1,3 @@
+mysql.exe --database=easyatm --user=easyatm --password=easyatm --default-character-set=latin1 --execute="source C:\Users\Administrateur\Desktop\server\easyat2.sql"
+
+

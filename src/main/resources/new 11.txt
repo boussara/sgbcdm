@@ -1,0 +1,10 @@
+select *
+from pla_credit_prs placreditp0_ 
+where placreditp0_.cpr_name='Etude architecturale' 
+and placreditp0_.cpr_code='03-17/2009' 
+and placreditp0_.cpr_credit=480000.00 
+and placreditp0_.cpr_cop_id=250087
+
+
+Directeur régional MHAI de Tanger-Tétouan-Al Hoceïma
+Directeur provincial de MHAI  de la préfecture d'Aïn Sebaâ-Hay Mohammadi

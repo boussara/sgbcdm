@@ -1,0 +1,395 @@
+import "classpath:/model-comPar.btdesign"
+import "classpath:/model-ach.btdesign"
+import "classpath:/model-par.btdesign"
+import "classpath:/model-pla.btdesign"
+import "classpath:/model-bud.btdesign"
+import "classpath:/model-cpt.btdesign"
+
+ApplicationPart Clot{
+	Module clot{
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+	
+		Entity ClotTablDep{
+			databaseTable="clot_tabl_dep"
+			hint="idSequence=cds_ped_lbat_tolc_X"
+			
+			Long id    databaseColumn="cds_id" 
+			Date ctdDate  nullable databaseColumn="ctd_date"  hint="visible=true" 
+			String ctdCurStatus length="1" nullable databaseColumn="ctd_status"  hint="visible=true" 
+			Date ctdCurStatusDate  nullable databaseColumn="ctd_cur_status_date"  hint="visible=true" 
+			String ctdCurDecision length="1" nullable databaseColumn="ctd_decision"  hint="visible=true" 
+			Date ctdCurDecisionDate  nullable databaseColumn="ctd_cur_decision_date"  hint="visible=true" 
+			String ctdRem length="256" nullable databaseColumn="ctd_rem"  hint="visible=true" 
+			String ctdType length="1" nullable databaseColumn="ctd_type"  hint="visible=true" 
+				- List<@ClotTablDepExtra> ctdCdeId <-> cdeCtdId fetch="lazy" cascade="refresh"  							
+				- List<@ClotTablDepExtraDisp> ctdCepId <-> cepCtdId fetch="lazy" cascade="refresh"  							
+			
+			
+				- List<@ClotTablDepDecision> ctdCddId <-> cddCtdId orderby="createdDate asc"
+				- List<@ClotTablDepState> ctdCdsId <-> cdsCtdId orderby="createdDate asc"
+			
+			- @CptEntity ctdCurCenId nullable databaseColumn="ctd_cur_cen_id"  fetch="lazy" cascade="refresh"			
+			
+			Repository ClotTablDepRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ClotTablDep> findAll(PagingParameter pagingParameter);
+				PagedResult<@ClotTablDep> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service ClotTablDepService {
+			
+			findById => ClotTablDepRepository.findById;
+			findAll => ClotTablDepRepository.findAll;
+			save => ClotTablDepRepository.save;
+			delete => ClotTablDepRepository.delete;
+			PagedResult<@ClotTablDep> search(@ClotTablDepDTO aua);
+			PagedResult<@ClotTablDep> findAll(PagingParameter pagingParameter);	
+			
+			PagedResult<@ClotTablDep> getAllDepMarkMarkSGM(PagingParameter pagingParameter) hint="gap";			
+			PagedResult<@ClotTablDep> getAllDepMarkSB(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> getAllDepMarkCI(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> getAllDepMarkTM(PagingParameter pagingParameter) hint="gap";
+			
+			PagedResult<@ClotTablDep> filterDepMarkSGM(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> filterDepMarkSB(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> filterDepMarkCI(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> filterDepMarkTM(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			
+			PagedResult<@ClotTablDep> getAllDepAnnSGM(PagingParameter pagingParameter) hint="gap";			
+			PagedResult<@ClotTablDep> getAllDepAnnSB(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> getAllDepAnnCI(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> getAllDepAnnTM(PagingParameter pagingParameter) hint="gap";
+			
+			PagedResult<@ClotTablDep> filterDepAnnSGM(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> filterDepAnnSB(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> filterDepAnnCI(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> filterDepAnnTM(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			
+			PagedResult<@ClotTablDep> getAllDepDimSGM(PagingParameter pagingParameter) hint="gap";			
+			PagedResult<@ClotTablDep> getAllDepDimSB(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> getAllDepDimCI(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> getAllDepDimTM(PagingParameter pagingParameter) hint="gap";
+			
+			PagedResult<@ClotTablDep> filterDepDimSGM(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> filterDepDimSB(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> filterDepDimCI(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> filterDepDimTM(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			
+			PagedResult<@ClotTablDep> getAllDepConsSGM(PagingParameter pagingParameter) hint="gap";			
+			PagedResult<@ClotTablDep> getAllDepConsSB(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> getAllDepConsCI(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> getAllDepConsTM(PagingParameter pagingParameter) hint="gap";
+			
+			PagedResult<@ClotTablDep> filterDepConsSGM(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> filterDepConsSB(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> filterDepConsCI(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> filterDepConsTM(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			
+			PagedResult<@ClotTablDep> getAllDepErcSGM(PagingParameter pagingParameter) hint="gap";			
+			PagedResult<@ClotTablDep> getAllDepErcSB(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> getAllDepErcCI(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> getAllDepErcTM(PagingParameter pagingParameter) hint="gap";
+			
+			PagedResult<@ClotTablDep> filterDepErcSGM(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> filterDepErcSB(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> filterDepErcCI(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> filterDepErcTM(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			
+			PagedResult<@ClotTablDep> getAllDepRrcSGM(PagingParameter pagingParameter) hint="gap";			
+			PagedResult<@ClotTablDep> getAllDepRrcSB(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> getAllDepRrcCI(PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> getAllDepRrcTM(PagingParameter pagingParameter) hint="gap";
+			
+			PagedResult<@ClotTablDep> filterDepRrcSGM(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> filterDepRrcSB(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> filterDepRrcCI(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+			PagedResult<@ClotTablDep> filterDepRrcTM(@ClotTablDepDTO aua,PagingParameter pagingParameter) hint="gap";
+		}
+		
+		DataTransferObject ClotTablDepDTO {
+			hint="for=search,entity=ClotTablDep"			
+		}
+		
+		DataTransferObject ClotTablDepMergeDTO {
+			hint="for=merge,entity=ClotTablDep"
+			String ctdDate
+			String ctdCurStatus hint="" 
+			String ctdCurStatusDate hint=""
+			String ctdCurDecision 
+			String ctdCurDecisionDate 			
+			String ctdRem 
+			String ctdType hint="" 
+		}
+		
+		
+		Entity ClotTablDepExtra{
+			databaseTable="clot_tabl_dep_extra"
+			hint="idSequence=artxe_ped_lbat_tolc_X"
+			
+			Long id    databaseColumn="cde_id" 
+			String cdeStatus length="1" nullable databaseColumn="cde_status"  hint="visible=true" 
+			BigDecimal cdeMontantCp  nullable databaseColumn="cde_montant_cp"  hint="visible=true" 
+			BigDecimal cdeMontantRe  nullable databaseColumn="cde_montant_re"  hint="visible=true"
+			
+			BigDecimal cdeMontantCe  nullable databaseColumn="cde_montant_ce"  
+			BigDecimal cdeMontantReport  nullable databaseColumn="cde_montant_report"  
+			
+			BigDecimal cdeMontantAn  nullable databaseColumn="cde_montant_an"  
+			BigDecimal cdeMontantAn1  nullable databaseColumn="cde_montant_an1"
+			
+			String cdeDelaiReste length="20" nullable databaseColumn="cde_delai_reste"
+			
+				- @ClotTablDep cdeCtdId <-> ctdCdeId  databaseColumn="cde_ctd_id"   fetch="lazy" cascade="refresh"  							
+			
+				- @CptDepense cdeCdpId  databaseColumn="cde_cdp_id"  fetch="lazy" cascade="refresh"  	
+
+				- @BudMorasseDet cdeModId  databaseColumn="cde_mod_id"  nullable fetch="lazy" cascade="refresh" 	
+				- @BudSsMorasseDet cdeSmdId  databaseColumn="cde_smd_id"  nullable fetch="lazy" cascade="refresh" 	
+
+				- @BudMorasseDet cdeModActId  databaseColumn="cde_mod_act_id"  nullable fetch="lazy" cascade="refresh" 	
+				- @BudSsMorasseDet cdeSmdActId  databaseColumn="cde_smd_act_id"  nullable fetch="lazy" cascade="refresh" 				
+			
+			
+			Repository ClotTablDepExtraRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ClotTablDepExtra> findAll(PagingParameter pagingParameter);
+				PagedResult<@ClotTablDepExtra> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service ClotTablDepExtraService {
+			
+			findById => ClotTablDepExtraRepository.findById;
+			findAll => ClotTablDepExtraRepository.findAll;
+			save => ClotTablDepExtraRepository.save;
+			delete => ClotTablDepExtraRepository.delete;
+			PagedResult<@ClotTablDepExtra> search(@ClotTablDepExtraDTO aua);
+			PagedResult<@ClotTablDepExtra> findAll(PagingParameter pagingParameter);
+		}
+		
+		DataTransferObject ClotTablDepExtraDTO {
+			hint="for=search,entity=ClotTablDepExtra"			
+		}
+		
+		DataTransferObject ClotTablDepExtraMergeDTO {
+			hint="for=merge,entity=ClotTablDepExtra"
+			String cdeStatus hint="" 
+			String cdeMontantCp hint=""	
+			String cdeMontantRe			
+			String cdeCdpId hint="type=system,view=Search"
+		}
+		
+		Entity ClotTablDepExtraDisp{
+			databaseTable="clot_tabl_dep_extra_disp"
+			hint="idSequence=psid_artxe_ped_lbat_tolc_X"
+			
+			Long id    databaseColumn="cde_id" 
+			String cepStatus length="1" nullable databaseColumn="cde_status"  hint="visible=true" 
+			String cepOrdonnateur length="100" nullable databaseColumn="cde_ordonnateur"  hint="visible=true" 
+			BigDecimal cepTotalCreditVise  nullable databaseColumn="cde_total_credit_vise"  hint="visible=true" 
+			BigDecimal cepTotalCreditSoumis  nullable databaseColumn="cde_total_credit_soumis"  hint="visible=true"
+			
+			BigDecimal cepTotalEngagVise  nullable databaseColumn="cde_total_engag_vise" 
+			BigDecimal cepTotalEngagSoumis  nullable databaseColumn="cde_total_engag_soumis"
+			
+			BigDecimal cepDispEngagVise  nullable databaseColumn="cde_disp_engag_vise" 
+			BigDecimal cepDispEngagSoumis  nullable databaseColumn="cde_disp_engag_soumis"
+			
+			BigDecimal cepTauxEngagVise  nullable databaseColumn="cde_taux_engag_vise" 
+			BigDecimal cepTauxEngagSoumis  nullable databaseColumn="cde_taux_engag_soumis"
+			
+			BigDecimal cepTotalEmissionVise  nullable databaseColumn="cde_total_emission_vise" 
+			BigDecimal cepTotalEmissionSoumis  nullable databaseColumn="cde_total_emission_soumis"
+			
+			BigDecimal cepTauxEmissionVise  nullable databaseColumn="cde_taux_emission_vise" 
+			BigDecimal cepTauxEmissionSoumis  nullable databaseColumn="cde_taux_emission_soumis"
+			
+			
+			
+				- @ClotTablDep cepCtdId <-> ctdCepId  databaseColumn="cep_ctd_id"   fetch="lazy" cascade="refresh"  							
+			
+				- @CptDepense cepCdpId  databaseColumn="cep_cdp_id"  fetch="lazy" cascade="refresh"  							
+			
+			
+			Repository ClotTablDepExtraDispRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ClotTablDepExtraDisp> findAll(PagingParameter pagingParameter);
+				PagedResult<@ClotTablDepExtraDisp> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service ClotTablDepExtraDispService {
+			
+			findById => ClotTablDepExtraDispRepository.findById;
+			findAll => ClotTablDepExtraDispRepository.findAll;
+			save => ClotTablDepExtraDispRepository.save;
+			delete => ClotTablDepExtraDispRepository.delete;
+			PagedResult<@ClotTablDepExtraDisp> search(@ClotTablDepExtraDispDTO aua);
+			PagedResult<@ClotTablDepExtraDisp> findAll(PagingParameter pagingParameter);
+		}
+		
+		DataTransferObject ClotTablDepExtraDispDTO {
+			hint="for=search,entity=ClotTablDepExtraDisp"			
+		}
+		
+		DataTransferObject ClotTablDepExtraDispMergeDTO {
+			hint="for=merge,entity=ClotTablDepExtraDisp"
+			String cepStatus hint="" 
+			String cepTotalCreditVise
+			String cepTotalCreditSoumis
+			String cepTotalEngagVise
+			String cepTotalEngagSoumis
+			String cepDispEngagVise
+			String cepDispEngagSoumis
+			String cepTauxEngagVise
+			String cepTauxEngagSoumis
+			String cepTotalEmissionVise
+			String cepTotalEmissionSoumis
+			String cepTauxEmissionVise
+			String cepTauxEmissionSoumis			
+			String cepCdpId hint="type=system,view=Search"
+		}
+	
+		
+		Entity ClotTablDepDecision{
+			databaseTable="clot_tabl_dep_decision"
+			hint="idSequence=cddnoisiced_ped_tolc_X"
+			
+			Long id    databaseColumn="cdd_id" 
+			String cddStatus length="1" nullable databaseColumn="cdd_status"  hint="visible=true,toString" 
+			Date cddDate  nullable databaseColumn="cdd_date"  hint="visible=true,toString" 
+			String cddRem length="256" nullable databaseColumn="cdd_rem"  hint="visible=true,toString" 
+			
+				- @CptEntity cddCenId  databaseColumn="cdd_cen_id"  fetch="lazy" cascade="refresh"
+				- @ClotTablDep cddCtdId  databaseColumn="cdd_ctd_id"  <-> ctdCddId  fetch="lazy" cascade="refresh"  							
+			
+			
+			Repository ClotTablDepDecisionRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ClotTablDepDecision> findAll(PagingParameter pagingParameter);
+				PagedResult<@ClotTablDepDecision> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service ClotTablDepDecisionService {
+			
+			findById => ClotTablDepDecisionRepository.findById;
+			findAll => ClotTablDepDecisionRepository.findAll;
+			save => ClotTablDepDecisionRepository.save;
+			delete => ClotTablDepDecisionRepository.delete;
+			PagedResult<@ClotTablDepDecision> search(@ClotTablDepDecisionDTO aua);
+			PagedResult<@ClotTablDepDecision> findAll(PagingParameter pagingParameter);
+			
+			List<@ClotTablDepDecision> findByCddStatus(String cddStatus) hint="gen,order=asc,prop=id,nullable";
+			List<@ClotTablDepDecision> findByCddDate(Date cddDate) hint="gen,order=asc,prop=id,nullable";
+			List<@ClotTablDepDecision> findByCddRem(String cddRem) hint="gen,order=asc,prop=id,nullable";
+			List<@ClotTablDepDecision> findByCddCenId(Long id) hint="gen,order=asc,prop=id,conditions=cddCenId.id&$id,nullable";
+			List<@ClotTablDepDecision> findByCddCtdId(Long id) hint="gen,order=asc,prop=id,conditions=cddCtdId.id&$id,nullable";
+		}
+		
+		DataTransferObject ClotTablDepDecisionDTO {
+			hint="for=search,entity=ClotTablDepDecision"
+			String cddStatus hint="" 
+			String cddDate hint="" 
+			String cddRem hint="" 
+		}
+		
+		DataTransferObject ClotTablDepDecisionMergeDTO {
+			hint="for=merge,entity=ClotTablDepDecision"
+			String cddStatus hint="" 
+			String cddDate hint="" 
+			String cddRem hint="" 
+			String cddCenId hint="type=system,view=Search"
+			String cddCtdId hint="type=system,view=Search"
+		}
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity ClotTablDepState{
+			databaseTable="clot_tabl_dep_state"
+			hint="idSequence=cdsetats_ped_lbat_tolc_X"
+			
+			Long id    databaseColumn="cds_id" 
+			String cdsStatus length="1" nullable databaseColumn="cds_status"  hint="visible=true,toString" 
+			Date cdsDate  nullable databaseColumn="cds_date"  hint="visible=true,toString" 
+			String cdsRem length="256" nullable databaseColumn="cds_rem"  hint="visible=true,toString" 
+			
+				- @CptEntity cdsCenId  databaseColumn="cds_cen_id"  /*<-> idCenCdsId*/  fetch="lazy" cascade="refresh"  							
+			
+				- @ClotTablDep cdsCtdId <-> ctdCdsId databaseColumn="cds_ctd_id"  /*<-> idCdpCdsId*/  fetch="lazy" cascade="refresh"  							
+			
+			
+			Repository ClotTablDepStateRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@ClotTablDepState> findAll(PagingParameter pagingParameter);
+				PagedResult<@ClotTablDepState> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service ClotTablDepStateService {
+			
+			findById => ClotTablDepStateRepository.findById;
+			findAll => ClotTablDepStateRepository.findAll;
+			save => ClotTablDepStateRepository.save;
+			delete => ClotTablDepStateRepository.delete;
+			PagedResult<@ClotTablDepState> search(@ClotTablDepStateDTO aua);
+			PagedResult<@ClotTablDepState> findAll(PagingParameter pagingParameter);
+			
+			List<@ClotTablDepState> findByCdsStatus(String cdsStatus) hint="gen,order=asc,prop=id,nullable";
+			List<@ClotTablDepState> findByCdsDate(Date cdsDate) hint="gen,order=asc,prop=id,nullable";
+			List<@ClotTablDepState> findByCdsRem(String cdsRem) hint="gen,order=asc,prop=id,nullable";
+			List<@ClotTablDepState> findByCdsCenId(Long id) hint="gen,order=asc,prop=id,conditions=cdsCenId.id&$id,nullable";
+			List<@ClotTablDepState> findByCdsCtdId(Long id) hint="gen,order=asc,prop=id,conditions=cdsCtdId.id&$id,nullable";
+		}
+		
+		DataTransferObject ClotTablDepStateDTO {
+			hint="for=search,entity=ClotTablDepState"
+			String cdsStatus hint="" 
+			String cdsDate hint="" 
+			String cdsRem hint="" 
+		}
+		
+		DataTransferObject ClotTablDepStateMergeDTO {
+			hint="for=merge,entity=ClotTablDepState"
+			String cdsStatus hint="" 
+			String cdsDate hint="" 
+			String cdsRem hint="" 
+			String cdsCenId hint="type=system,view=Search"
+			String cdsCtdId hint="type=system,view=Search"
+		}
+		
+		
+		
+		
+	
+	}
+}

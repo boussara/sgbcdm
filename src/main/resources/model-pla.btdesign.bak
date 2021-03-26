@@ -1,0 +1,1318 @@
+
+import "classpath:/model-mhai.btdesign"
+import "classpath:/model-par.btdesign"
+
+ApplicationPart Pla{
+	Module pla{
+		
+		Entity PlaBudgetType{
+			databaseTable="pla_budget_type"
+			hint="idSequence=bdtepyt_tegdub_alp_X"
+			
+			Long id    databaseColumn="bdt_id" 
+			String bdtCode length="24" nullable databaseColumn="bdt_code"  hint="visible=true,toString" 
+			String bdtName length="64" nullable databaseColumn="bdt_name"  hint="visible=true,toString" 
+			Integer bdtOrdre  nullable databaseColumn="bdt_ordre"  hint="visible=true,toString" 
+			String bdtStatus length="1" nullable databaseColumn="bdt_status" 
+			
+			//- List<@BudArticle> idBdtArtId <-> artBdtId
+			//- List<@BudChapitre> idBdtChpId <-> chpBdtId
+			//- List<@BudMorasse> idBdtMorId <-> morBdtId
+			//- List<@BudParagraphe> idBdtPphId <-> pphBdtId
+			//- List<@PlaCreditOp> idBdtCopId <-> copBdtId
+			//- List<@PlaCreditPrg> idBdtCpgId <-> cpgBdtId
+			//- List<@PlaCreditPrj> idBdtCpjId <-> cpjBdtId
+			//- List<@PlaCreditPrjReg> idBdtCrpId <-> crpBdtId
+			//- List<@PlaCreditReg> idBdtCreId <-> creBdtId
+			//- List<@PlaCreditOp> idBdtCopId <-> copBdtId
+			
+			Repository PlaBudgetTypeRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@PlaBudgetType> findAll(PagingParameter pagingParameter);
+				PagedResult<@PlaBudgetType> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service PlaBudgetTypeService {
+			
+			findById => PlaBudgetTypeRepository.findById;
+			findAll => PlaBudgetTypeRepository.findAll;
+			save => PlaBudgetTypeRepository.save;
+			delete => PlaBudgetTypeRepository.delete;
+			PagedResult<@PlaBudgetType> search(@PlaBudgetTypeDTO aua);
+			PagedResult<@PlaBudgetType> findAll(PagingParameter pagingParameter);
+
+			
+			List<@PlaBudgetType> findByBdtCode(String bdtCode) hint="gen,order=asc,prop=id,nullable";
+			List<@PlaBudgetType> findByBdtName(String bdtName) hint="gen,order=asc,prop=id,nullable";
+			List<@PlaBudgetType> findByBdtOrdre(Integer bdtOrdre) hint="gen,order=asc,prop=id,nullable";
+			List<@PlaBudgetType> findByBdtStatus(String bdtStatus) hint="gen,order=asc,prop=id,nullable";
+		
+		}
+		
+		DataTransferObject PlaBudgetTypeDTO {
+			hint="for=search,entity=PlaBudgetType"
+			String bdtCode hint="" 
+			String bdtName hint="" 
+			String bdtOrdre hint="" 
+		}
+		
+		DataTransferObject PlaBudgetTypeMergeDTO {
+			hint="for=merge,entity=PlaBudgetType"
+			String bdtCode hint="" 
+			String bdtName hint="" 
+			String bdtOrdre hint="endLine" 
+			String bdtStatus hint="type=enum,items=A&Actif:I&Inactif"// hint="type=boolean,yes=Y,no=N" 
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity PlaClassPrestation{
+			databaseTable="pla_class_prestation"
+			hint="idSequence=prcnoitatserp_ssalc_alp_X"
+			
+			Long id    databaseColumn="prc_id" 
+			String prcCode length="24" nullable databaseColumn="prc_code"  hint="visible=true,toString" 
+			String prcName length="64" nullable databaseColumn="prc_name"  hint="visible=true,toString" 
+			String prcDesc length="128" nullable databaseColumn="prc_desc"  hint="visible=true,toString" 
+			
+			//- List<@PlaCreditPrs> idPrcCprId <-> cprPrcId
+			- List<@PlaTypePrestation> idPrcPrtId <-> prtPrcId cascade="persist,merge,refresh"
+			
+			Repository PlaClassPrestationRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@PlaClassPrestation> findAll(PagingParameter pagingParameter);
+				PagedResult<@PlaClassPrestation> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service PlaClassPrestationService {
+			
+			findById => PlaClassPrestationRepository.findById;
+			findAll => PlaClassPrestationRepository.findAll;
+			save => PlaClassPrestationRepository.save;
+			delete => PlaClassPrestationRepository.delete;
+			PagedResult<@PlaClassPrestation> search(@PlaClassPrestationDTO aua);
+			PagedResult<@PlaClassPrestation> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject PlaClassPrestationDTO {
+			hint="for=search,entity=PlaClassPrestation"
+			String prcCode hint="" 
+			String prcName hint="" 
+			String prcDesc hint="" 
+		}
+		
+		DataTransferObject PlaClassPrestationMergeDTO {
+			hint="for=merge,entity=PlaClassPrestation"
+			String prcCode hint="" 
+			String prcName hint="" 
+			String prcDesc hint="" 
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity PlaCopHasMos{
+			databaseTable="pla_cop_has_mos"
+			hint="idSequence=chmsom_sah_poc_alp_X"
+			
+			Long id    databaseColumn="chm_id" 
+			
+				- @PlaCreditOp chmCopId  databaseColumn="chm_cop_id"  <-> idCopChmId nullable  cascade="refresh"  							
+			
+				- @MhaiMosque chmMosId  databaseColumn="chm_mos_id"  /*<-> idMosChmId*/ nullable  cascade="refresh"  							
+			
+			
+			Repository PlaCopHasMosRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@PlaCopHasMos> findAll(PagingParameter pagingParameter);
+				PagedResult<@PlaCopHasMos> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service PlaCopHasMosService {
+			
+			findById => PlaCopHasMosRepository.findById;
+			findAll => PlaCopHasMosRepository.findAll;
+			save => PlaCopHasMosRepository.save;
+			delete => PlaCopHasMosRepository.delete;
+			PagedResult<@PlaCopHasMos> search(@PlaCopHasMosDTO aua);
+			PagedResult<@PlaCopHasMos> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject PlaCopHasMosDTO {
+			hint="for=search,entity=PlaCopHasMos"
+		}
+		
+		DataTransferObject PlaCopHasMosMergeDTO {
+			hint="for=merge,entity=PlaCopHasMos"
+			String chmCopId hint="type=system,view=Search"
+			String chmMosId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity PlaCprHasPex{
+			databaseTable="pla_cpr_has_pex"
+			hint="idSequence=chpxep_sah_rpc_alp_X,noJsonIgnore=version"
+			
+			Long id    databaseColumn="chp_id" 
+			BigDecimal chpCredit  nullable databaseColumn="chp_credit"  hint="visible=true,toString" 
+			
+				- @PlaCreditPrs chpCprId  databaseColumn="chp_cpr_id"  <-> idCprChpId nullable fetch="lazy" cascade="refresh"  							
+			
+				- @ParExercice chpPexId  databaseColumn="chp_pex_id"  /*<-> idPexChpId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+			
+			Repository PlaCprHasPexRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@PlaCprHasPex> findAll(PagingParameter pagingParameter);
+				PagedResult<@PlaCprHasPex> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service PlaCprHasPexService {
+			
+			findById => PlaCprHasPexRepository.findById;
+			findAll => PlaCprHasPexRepository.findAll;
+			save => PlaCprHasPexRepository.save;
+			delete => PlaCprHasPexRepository.delete;
+			PagedResult<@PlaCprHasPex> search(@PlaCprHasPexDTO aua);
+			PagedResult<@PlaCprHasPex> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject PlaCprHasPexDTO {
+			hint="for=search,entity=PlaCprHasPex"
+			String chpCredit hint="" 
+		}
+		
+		DataTransferObject PlaCprHasPexMergeDTO {
+			hint="for=merge,entity=PlaCprHasPex"
+			String chpCredit hint="" 
+			String chpCprId hint="type=system,view=Search"
+			String chpPexId hint="type=system,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity PlaCreditOp{
+			databaseTable="pla_credit_op"
+			hint="idSequence=coppo_tiderc_alp_X,noJsonIgnore=version"
+			
+			Long id    databaseColumn="cop_id" 
+			String copCode length="24" nullable databaseColumn="cop_code"  hint="visible=true,toString" 
+			String copName length="255" nullable databaseColumn="cop_name"  hint="visible=true,toString" 
+			String copDesc length="255" nullable databaseColumn="cop_desc"  hint="visible=true,toString" 
+			String copCreditType length="1" nullable databaseColumn="cop_credit_type" 
+			BigDecimal copCredit  nullable databaseColumn="cop_credit" 
+			Date copPlaStart  nullable databaseColumn="cop_pla_start" 
+			Date copPlaEnd  nullable databaseColumn="cop_pla_end" 
+			Date copEffStart  nullable databaseColumn="cop_eff_start" 
+			Date copEffEnd  nullable databaseColumn="cop_eff_end" 
+			String copStatus length="1" nullable databaseColumn="cop_status" 
+			String copLieu length="1" nullable databaseColumn="cop_lieu" 
+			String copAdresse length="128" nullable databaseColumn="cop_adresse" 
+			String copIsCvt length="1" nullable databaseColumn="cop_is_cvt" 
+			String copPlanned length="1" nullable databaseColumn="cop_planned" 
+			String copPriorite length="1" nullable databaseColumn="cop_priorite" 
+			
+				- @PlaCreditPrjReg copCrpId  databaseColumn="cop_crp_id"  /*<-> idCrpCopId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @PlaTypeOperation copTopId  databaseColumn="cop_top_id"  /*<-> idTopCopId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @ParExercice copPexId  databaseColumn="cop_pex_id"  /*<-> idPexCopId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @MhaiMosque copMosId  databaseColumn="cop_mos_id"  /*<-> idMosCopId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @PlaBudgetType copBdtId  databaseColumn="cop_bdt_id"  /*<-> idBdtCopId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @PlaPlan copPlaId  databaseColumn="cop_pla_id"  /*<-> idPlaCopId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @PlaCreditPrj copCpjId  databaseColumn="cop_cpj_id"  /*<-> idCpjCopId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @PlaCreditPrg copCpgId  databaseColumn="cop_cpg_id"  /*<-> idCpgCopId*/ nullable fetch="lazy" cascade="refresh"  							
+						
+				- @ParRegion copRegBudId  databaseColumn="cop_reg_bud_id"  /*<-> idBudRegCopId*/ nullable   fetch="lazy" cascade="refresh"  							
+			
+				- @ParRegion copRegTerId  databaseColumn="cop_reg_ter_id"  /*<-> idTerRegCopId*/ nullable   fetch="lazy" cascade="refresh"  							
+			
+				- @ParProvince copPrvId  databaseColumn="cop_prv_id"  /*<-> idPrvCopId*/  nullable fetch="lazy" cascade="refresh"  							
+			
+				- @ParCommune copComId  databaseColumn="cop_com_id"  /*<-> idComCopId*/  nullable  fetch="lazy" cascade="refresh"  							
+			
+				- @ParCommanditaire copCmdId  databaseColumn="cop_cmd_id"  /*<-> idCmdCopId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @ParConvention copCvtId  databaseColumn="cop_cvt_id"  /*<-> idCvtCopId*/ nullable fetch="lazy" cascade="refresh"  							
+				
+				- @ParAgentExe copAexId  databaseColumn="cop_aex_id"  /*<-> idAexCopId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @ParOrdonateur copOrdId  databaseColumn="cop_ord_id"  /*<-> idOrdCopId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+			- List<@PlaCopHasMos> idCopChmId <-> chmCopId fetch="lazy"
+			- List<@PlaCreditPrs> idCopCprId <-> cprCopId fetch="lazy"
+			
+			
+			String copNum length="24" nullable databaseColumn="cop_num"  hint="visible=true,toString" 
+			
+			String copIntitule length="328" nullable databaseColumn="cop_intitule"
+			
+			Repository PlaCreditOpRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@PlaCreditOp> findAll(PagingParameter pagingParameter);
+				PagedResult<@PlaCreditOp> findByCondition(PagingParameter pagingParameter);
+				
+				//List<@PlaCreditOp> findByCrpId(Long id) condition="copCrpId = :id";
+				//List<@PlaCreditOp> findByCpjId(Long id) condition="copCrpId.crpCpjId = :id";
+				//List<@PlaCreditOp> findByCpjAndReg(Long cpj, Long reg) condition="copCrpId.crpCpjId = :cpj and copCrpId.crpRegId = :reg";
+			}
+			
+		}
+		
+		Service PlaCreditOpService {
+			
+			findById => PlaCreditOpRepository.findById;
+			findAll => PlaCreditOpRepository.findAll;
+			save => PlaCreditOpRepository.save;
+			delete => PlaCreditOpRepository.delete;
+			PagedResult<@PlaCreditOp> search(@PlaCreditOpDTO aua);
+			PagedResult<@PlaCreditOp> findAll(PagingParameter pagingParameter);
+			
+			List<@PlaCreditOp> findByCrpId(Long copCrpId) hint="gen,order=asc,prop=id,conditions=copCrpId.id&$copCrpId,nullable";
+			List<@PlaCreditOp> findByCpjAndReg(Long cpj, Long reg) hint="gen,order=asc,prop=id,conditions=[copCrpId.crpCpjId.id = $cpj & copCrpId.crpRegId.id = $reg],nullable";
+			
+			List<@PlaCreditOp> findByOrdId(Long id ) hint="gen,order=asc,prop=id,conditions=copOrdId.id&id,nullable";
+			List<@PlaCreditOp> findByOrdUserId(Long id) hint="gen,order=asc,prop=id,conditions=copOrdId.ordUsaId.id&id,nullable";
+			
+			List<@PlaCreditOp> findByPlannedStatus(String planned, String status) hint="gen,order=asc,prop=id,conditions=[copPlanned = $planned & copStatus = $status],nullable";
+			
+			List<@PlaCreditOp> findByCopCpgId(Long id) hint="gen,order=asc,prop=id,conditions=copCpgId.id&$id";
+			
+			
+		}
+		
+		DataTransferObject PlaCreditOpDTO {
+			hint="for=search,entity=PlaCreditOp"
+			String copTopId1 hint="ref=copTopId,view=ComboBox"
+			String copPlaId1 hint="ref=copPlaId,view=ComboBox"
+			String copPexId1 hint="ref=copPexId,view=ComboBox"
+			String copBdtId1 hint="ref=copBdtId,view=ComboBox"
+			String copCpgId1 hint="ref=copCpgId,view=ComboBox"
+			String copCpjId1 hint="ref=copCpjId,view=ComboBox"
+			String copCrpId1 hint="ref=copCrpId,view=ComboBox"
+			
+			String copRegBudId1 hint="ref=copRegBudId,view=ComboBox"
+			String copRegTerId1 hint="ref=copRegTerId,view=ComboBox"
+
+		}
+		
+		DataTransferObject PlaCreditOpMergeDTO {
+			hint="for=merge,entity=PlaCreditOp"
+			String copNum
+			String copCode hint="" 
+			String copName hint="" 
+			String copDesc hint="" 
+			String copCreditType hint="" 
+			String copCredit hint="" 
+			String copPlaStart hint="" 
+			String copPlaEnd hint="" 
+			String copEffStart hint="" 
+			String copEffEnd hint="" 
+			String copStatus hint="" 
+			String copLieu hint="" 
+			String copAdresse hint="" 
+			String copIsCvt hint="" 
+			String copPlanned hint="" 
+			String copPriorite hint="type=enum,items=O&Ordinaire:U&Urgent:T&Tres Urgent"
+			String copBdtId hint="type=system,view=ComboBox"
+			String copTopId hint="type=system,view=ComboBox"
+			String copPexId hint="type=system,view=ComboBox"			
+			String copRegBudId hint="type=system,view=ComboBox"
+			String copRegTerId hint="type=system,view=ComboBox"
+			String copPrvId hint="type=system,view=ComboBox,LinkedTo=copRegTerId"
+			String copComId hint="type=system,view=ComboBox,LinkedTo=copPrvId"
+			String copMosId hint="type=system,view=ComboBox,LinkedTo=copComId"
+			String copCrpId hint="type=system,view=ComboBox,LinkedTo=copRegTerId"									
+			String copCpgId hint="type=system,view=ComboBox,LinkedTo=copBdtId"
+			String copCpjId hint="type=system,view=ComboBox,LinkedTo=copCpgId"					
+			String copCmdId hint="type=system,view=ComboBox"
+			String copCvtId hint="type=system,view=ComboBox"			
+			String copOrdId hint="type=system,view=ComboBox,LinkedTo=copRegTerId"
+			String copAexId hint="type=system,view=ComboBox,LinkedTo=copOrdId"
+			String copPlaId hint="type=system,view=ComboBox"
+			String copIntitule
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity PlaCreditOpDemande{
+			databaseTable="pla_credit_op_demande"
+			hint="idSequence=codednamed_po_tiderc_alp_X"
+			
+			Long id    databaseColumn="cod_id" 
+			Date codValidationDate  nullable databaseColumn="cod_validation_date"  hint="visible=true,toString" 
+			String codStatus length="1" nullable databaseColumn="cod_status"  hint="visible=true,toString" 
+			String codNotes length="245" nullable databaseColumn="cod_notes"  hint="visible=true,toString" 
+			
+				- @PlaCreditOp codCopId  databaseColumn="cod_cop_id"  /*<-> idCopCodId*/  fetch="lazy" cascade="refresh" hint="visible=true,toString" 						
+			
+			
+			Repository PlaCreditOpDemandeRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@PlaCreditOpDemande> findAll(PagingParameter pagingParameter);
+				PagedResult<@PlaCreditOpDemande> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service PlaCreditOpDemandeService {
+			
+			findById => PlaCreditOpDemandeRepository.findById;
+			findAll => PlaCreditOpDemandeRepository.findAll;
+			save => PlaCreditOpDemandeRepository.save;
+			delete => PlaCreditOpDemandeRepository.delete;
+			PagedResult<@PlaCreditOpDemande> search(@PlaCreditOpDemandeDTO aua);
+			PagedResult<@PlaCreditOpDemande> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject PlaCreditOpDemandeDTO {
+			hint="for=search,entity=PlaCreditOpDemande"
+			String codValidationDate hint="" 
+			String codStatus hint="" 
+			String codNotes hint="" 
+		}
+		
+		DataTransferObject PlaCreditOpDemandeMergeDTO {
+			hint="for=merge,entity=PlaCreditOpDemande"
+			String codValidationDate hint="" 
+			String codStatus hint="" 
+			String codNotes hint="" 
+			String codCopId hint="type=system,view=Search"
+		}
+		//--------------------------------------------------------------------------------------------------------------------------------
+		//---  Entity PlaCreditPrg  ------------------------------------------------------------------------------------------------------
+		//--------------------------------------------------------------------------------------------------------------------------------
+		Entity PlaCreditPrg {
+			databaseTable="pla_credit_prg"
+			hint="idSequence=cpggrp_tiderc_alp_X"
+			
+			Long id    databaseColumn="cpg_id" 
+			BigDecimal cpgCreditInv  nullable databaseColumn="cpg_credit_inv"  hint="visible=true" 
+			BigDecimal cpgAllocInv  nullable databaseColumn="cpg_alloc_inv"  hint="visible=true" 
+			BigDecimal cpgCreditFct  nullable databaseColumn="cpg_credit_fct"  hint="visible=true" 
+			BigDecimal cpgAllocFct  nullable databaseColumn="cpg_alloc_fct" hint="visible=true" 
+			String cpgStatus length="1" nullable databaseColumn="cpg_status"  hint="visible=true" 
+			
+				- @ParExercice cpgPexId  databaseColumn="cpg_pex_id"  /*<-> idPexCpgId*/ nullable fetch="lazy" cascade="refresh" hint="visible=true"  							
+			
+				- @PlaPlan cpgPlaId  databaseColumn="cpg_pla_id"  /*<-> idPlaCpgId*/ nullable fetch="lazy" cascade="refresh"  hint="visible=true"							
+			
+				- @PlaBudgetType cpgBdtId  databaseColumn="cpg_bdt_id"  /*<-> idBdtCpgId*/ nullable fetch="lazy" cascade="refresh" hint="visible=true" 							
+			
+				- @PlaProgram cpgPrgId  databaseColumn="cpg_prg_id"  /*<-> idPrgCpgId*/ nullable cascade="refresh" hint="visible=true,toString" 							
+			
+			- List<@PlaCreditPrj> idCpgCpjId <-> cpjCpgId //cascade="persist,merge,refresh"
+			//- List<@PlaCreditPrjReg> idCpgCrpId <-> crpCpgId
+			//- List<@PlaCreditReg> idCpgCreId <-> creCpgId
+			
+			Repository PlaCreditPrgRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@PlaCreditPrg> findAll(PagingParameter pagingParameter);
+				PagedResult<@PlaCreditPrg> findByCondition(PagingParameter pagingParameter);
+				
+				//List<@PlaCreditPrg> findByBdtAndPex(Long bdtId, Long pexId) condition="cpgBdtId = :bdtId and cpgPexId = :pexId";
+				//List<@PlaCreditPrg> findByBdtAndPexAndPla(Long bdtId, Long pexId, Long plaId) condition="cpgBdtId = :bdtId and cpgPexId = :pexId and cpgPlaId = :plaId";
+				
+			}
+			
+		}
+		
+		Service PlaCreditPrgService {
+			
+			findById => PlaCreditPrgRepository.findById;
+			findAll => PlaCreditPrgRepository.findAll;
+			save => PlaCreditPrgRepository.save;
+			delete => PlaCreditPrgRepository.delete;
+			PagedResult<@PlaCreditPrg> search(@PlaCreditPrgDTO aua);
+			PagedResult<@PlaCreditPrg> findAll(PagingParameter pagingParameter);
+			
+			List<@PlaCreditPrg> findByBdtAndPex(Long bdtId, Long pexId) hint="gen,order=asc,prop=id,conditions=[cpgBdtId.id = $bdtId & cpgPexId.id = $pexId],nullable";
+			
+			List<@PlaCreditPrg> findByBdtAndPla(Long bdtId, Long plaId) hint="gen,order=asc,prop=id,conditions=[cpgBdtId.id = $bdtId & cpgPlaId.id = $plaId],nullable";
+			List<@PlaCreditPrg> findByPexAndPla(Long pexId, Long plaId) hint="gen,order=asc,prop=id,conditions=[cpgPexId.id = $pexId & cpgPlaId.id = $plaId],nullable";
+			
+
+			List<@PlaCreditPrg> findByBdtAndPexAndPla(Long bdtId, Long pexId, Long plaId)
+			hint="gen,order=asc,prop=id,conditions=[cpgBdtId.id = $bdtId & [cpgPexId.id = $pexId & cpgPlaId.id = $plaId]],nullable";
+		
+		}
+		
+		DataTransferObject PlaCreditPrgDTO {
+			hint="for=search,entity=PlaCreditPrg"
+			String cpgPlaId1 hint="ref=cpgPlaId,view=ComboBox"
+			String cpgPexId1 hint="ref=cpgPexId,view=ComboBox"
+			String cpgBdtId1 hint="ref=cpgBdtId,view=ComboBox" 
+		}
+		
+		DataTransferObject PlaCreditPrgMergeDTO {
+			hint="for=merge,entity=PlaCreditPrg"
+			String cpgPlaId hint="type=system,view=ComboBox,state=readOnly"
+			String cpgPexId hint="type=system,view=ComboBox,state=readOnly"
+			String cpgBdtId hint="type=system,view=ComboBox,state=readOnly"
+			String cpgPrgId hint="type=system,view=ComboBox,state=readOnly,orderBy=prgCode&asc"
+			String cpgCreditInv hint="" 
+			String cpgAllocInv hint="hidden,state=readOnly" 
+			String cpgCreditFct hint="" 
+			String cpgAllocFct hint="hidden,state=readOnly" 
+			String cpgStatus hint="hidden" 
+		}
+		
+		//--------------------------------------------------------------------------------------------------------------------------------
+		//---  Entity PlaCreditPrj  ------------------------------------------------------------------------------------------------------
+		//--------------------------------------------------------------------------------------------------------------------------------
+		
+		Entity PlaCreditPrj{
+			databaseTable="pla_credit_prj"
+			hint="idSequence=cpjjrp_tiderc_alp_X"
+			
+			Long id    databaseColumn="cpj_id" 
+			BigDecimal cpjCreditInv  nullable databaseColumn="cpj_credit_inv"  hint="visible=true" 
+			BigDecimal cpjAllocInv  nullable databaseColumn="cpj_alloc_inv"  hint="visible=true" 
+			BigDecimal cpjCreditFct  nullable databaseColumn="cpj_credit_fct" 
+			BigDecimal cpjAllocFct  nullable databaseColumn="cpj_alloc_fct" 
+			String cpjStatus length="1" nullable databaseColumn="cpj_status" 
+			
+				- @PlaCreditPrg cpjCpgId  databaseColumn="cpj_cpg_id"  <-> idCpgCpjId nullable fetch="lazy" cascade="refresh" hint="visible=true"
+			
+				- @PlaProject cpjPrjId  databaseColumn="cpj_prj_id"  /*<-> idPrjCpjId*/ nullable fetch="lazy" cascade="refresh" hint="visible=true,toString"
+				
+				- @PlaPlan cpjPlaId databaseColumn="cpj_pla_id"  /*<-> idPlaCpjId*/ nullable fetch="lazy" cascade="refresh" hint="visible=true"
+			
+				- @ParExercice cpjPexId  databaseColumn="cpj_pex_id"  /*<-> idPexCpjId*/ nullable fetch="lazy" cascade="refresh" hint="visible=true"
+				
+				- @PlaBudgetType cpjBdtId  databaseColumn="cpj_bdt_id"  /*<-> idBdtCpjId*/ nullable fetch="lazy" cascade="refresh" 
+				
+				- @PlaCreditPrj cpjCpjId  databaseColumn="cpj_cpj_id"  <-> cpjCpjsId nullable fetch="lazy" cascade="refresh"  	
+				
+			
+			- List<@PlaCreditPrjReg> idCpjCrpId <-> crpCpjId fetch="lazy"
+			- List<@PlaCreditPrj> cpjCpjsId <-> cpjCpjId //cascade="persist,merge,refresh"
+			
+			Repository PlaCreditPrjRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@PlaCreditPrj> findAll(PagingParameter pagingParameter);
+				PagedResult<@PlaCreditPrj> findByCondition(PagingParameter pagingParameter);
+				
+				//List<@PlaCreditPrj> findMainCpjByCpjCpgId(Long id) condition="cpjCpgId = :id and cpjCpjId is null"; 	//get only projects for a program
+				//List<@PlaCreditPrj> findByCpjCpgId(Long id) condition="cpjCpgId = :id";								//get projects and sub projects for a program
+				//List<@PlaCreditPrj> findByCpjCpjId(Long id) condition="cpjCpjId = :id";
+				
+			}
+			
+		}
+		
+		Service PlaCreditPrjService {
+			
+			findById => PlaCreditPrjRepository.findById;
+			findAll => PlaCreditPrjRepository.findAll;
+			save => PlaCreditPrjRepository.save;
+			delete => PlaCreditPrjRepository.delete;
+			PagedResult<@PlaCreditPrj> search(@PlaCreditPrjDTO aua);
+			PagedResult<@PlaCreditPrj> findAll(PagingParameter pagingParameter);
+			
+			List<@PlaCreditPrj> findByCpjCpjId(Long id) hint="gen,order=asc,prop=id,conditions=[cpjCpgId.id = $id & cpjCpjId #Null ],nullable";
+			List<@PlaCreditPrj> findMainCpjByCpjCpgId(Long id) hint="gen,order=asc,prop=id,conditions=cpjCpgId.id&$id,nullable";
+			List<@PlaCreditPrj> findByCpjCpgId(Long id) hint="gen,order=asc,prop=id,conditions=cpjCpjId.id&$id,nullable";
+		}
+		
+		DataTransferObject PlaCreditPrjDTO {
+			hint="for=search,entity=PlaCreditPrj"
+			String cpjPlaId1 hint="ref=cpjPlaId,view=ComboBox"
+			String cpjPexId1 hint="ref=cpjPexId,view=ComboBox"
+			String cpjBdtId1 hint="ref=cpjBdtId,view=ComboBox" 
+			String cpjCpgId1 hint="ref=cpjCpgId,view=ComboBox" 
+		}
+		
+		DataTransferObject PlaCreditPrjMergeDTO {
+			hint="for=merge,entity=PlaCreditPrj"
+			String cpjPlaId hint="type=system,view=ComboBox"
+			String cpjPexId hint="type=system,view=ComboBox"
+			String cpjBdtId hint="type=system,view=ComboBox"
+			String cpjCpgId hint="type=system,view=ComboBox"
+			String cpjPrjId hint="type=system,view=ComboBox,orderBy=prjCode&asc"
+			String cpjCpjId hint="hidden"
+			String cpjCreditInv hint="" 
+			String cpjAllocInv hint="" 
+			String cpjCreditFct hint="" 
+			String cpjAllocFct hint="" 
+			String cpjStatus hint="hidden" 
+			String cpjCpjsId hint="type=system,view=InModal,tab=subcreditprojects_list"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity PlaCreditPrjReg{
+			databaseTable="pla_credit_prj_reg"
+			hint="idSequence=crpger_jrp_tiderc_alp_X"
+			
+			Long id    databaseColumn="crp_id" 
+			BigDecimal crpCreditInv  nullable databaseColumn="crp_credit_inv"  hint="visible=true" 
+			BigDecimal crpCreditFct  nullable databaseColumn="crp_credit_fct"  hint="visible=true" 
+			String crpStatus length="1" nullable databaseColumn="crp_status" 
+			
+				- @PlaBudgetType crpBdtId  databaseColumn="crp_bdt_id"  /*<-> idBdtCrpId*/ nullable fetch="lazy" cascade="refresh" hint="visible=true,toString" 
+				
+				- @PlaCreditPrg crpCpgId  databaseColumn="crp_cpg_id"  /*<-> idCpgCrpId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @ParRegion crpRegId  databaseColumn="crp_reg_id"  /*<-> idRegCrpId*/ nullable fetch="lazy" cascade="refresh" hint="visible=true,toString"  							
+			
+				- @PlaProject crpPrjId  databaseColumn="crp_prj_id"  /*<-> idPrjCrpId*/ nullable fetch="lazy" cascade="refresh" hint="visible=true,toString"  							
+			
+				- @PlaCreditPrj crpCpjId  databaseColumn="crp_cpj_id"  <-> idCpjCrpId nullable fetch="lazy" cascade="refresh"  							
+			
+				- @PlaCreditReg crpCreId  databaseColumn="crp_cre_id"  /*<-> idCreCrpId*/ nullable fetch="lazy" cascade="refresh"  		
+				
+				- @PlaPlan crpPlaId  databaseColumn="crp_pla_id"  /*<-> idPlaCrpId*/ nullable fetch="lazy" cascade="refresh" hint="visible=true,toString"					
+			
+				- @ParExercice crpPexId  databaseColumn="crp_pex_id"  /*<-> idPexCrpId*/ nullable fetch="lazy" cascade="refresh" hint="visible=true,toString"  
+				
+				//- @PlaCreditPrjReg crpCrpId  databaseColumn="crp_crp_id"  /*<-> idCrpCrpId*/ nullable fetch="lazy" cascade="refresh"  								
+			
+			//- List<@PlaCreditOp> idCrpCopId <-> copCrpId
+			//- List<@PlaCreditPrjReg> idCrpCrpId <-> crpCrpId
+			
+			Repository PlaCreditPrjRegRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@PlaCreditPrjReg> findAll(PagingParameter pagingParameter);
+				PagedResult<@PlaCreditPrjReg> findByCondition(PagingParameter pagingParameter);
+
+				//List<@PlaCreditPrjReg> findByCpjId(Long id) condition="crpCpjId = :id";
+			}
+			
+		}
+		
+		Service PlaCreditPrjRegService {
+			
+			findById => PlaCreditPrjRegRepository.findById;
+			findAll => PlaCreditPrjRegRepository.findAll;
+			save => PlaCreditPrjRegRepository.save;
+			delete => PlaCreditPrjRegRepository.delete;
+			PagedResult<@PlaCreditPrjReg> search(@PlaCreditPrjRegDTO aua);
+			PagedResult<@PlaCreditPrjReg> findAll(PagingParameter pagingParameter);
+
+			List<@PlaCreditPrjReg> findByCpjId(Long id) hint="gen,order=asc,prop=id,conditions=crpCpjId.id&$id,nullable";
+			
+		}
+		
+		DataTransferObject PlaCreditPrjRegDTO {
+			hint="for=search,entity=PlaCreditPrjReg"
+			String crpPlaId1 hint="ref=crpPlaId,view=ComboBox"
+			String crpPexId1 hint="ref=crpPexId,view=ComboBox"
+			String crpBdtId1 hint="ref=crpBdtId,view=ComboBox"
+			String crpCpgId1 hint="ref=crpCpgId,view=ComboBox"
+			String crpCpjId1 hint="ref=crpCpjId,view=ComboBox"
+			String crpRegId1 hint="ref=crpRegId,view=ComboBox"
+			/*String crpCreditInv hint="" 
+			String crpCreditFct hint="" */
+		}
+		
+		DataTransferObject PlaCreditPrjRegMergeDTO {
+			hint="for=merge,entity=PlaCreditPrjReg"
+			String crpPlaId hint="type=system,view=ComboBox"
+			String crpPexId hint="type=system,view=ComboBox"
+			String crpBdtId hint="type=system,view=ComboBox"
+			String crpPrjId hint="type=system,view=ComboBox"
+			String crpRegId hint="type=system,view=ComboBox"
+			String crpCreditInv hint="" 
+			String crpCreditFct hint="" 
+			String crpStatus hint="hidden" 
+			String crpCpgId hint="type=system,view=ComboBox"
+			String crpCpjId hint="type=system,view=ComboBox"
+			String crpCreId hint="type=system,view=ComboBox"
+			//String crpCrpId hint="type=system,view=ComboBox"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		
+		Entity PlaCreditPrs{
+			databaseTable="pla_credit_prs"
+			hint="idSequence=cprsrp_tiderc_alp_X,noJsonIgnore=version"
+			
+			Long id    databaseColumn="cpr_id" 
+			String cprCode length="24" nullable databaseColumn="cpr_code"  hint="visible=true,toString" 
+			String cprName length="64" nullable databaseColumn="cpr_name"  hint="visible=true,toString" 
+			String cprDesc length="128" nullable databaseColumn="cpr_desc"  hint="visible=true,toString" 
+			String cprCreditType length="1" nullable databaseColumn="cpr_credit_type" 
+			BigDecimal cprCredit  nullable databaseColumn="cpr_credit" 
+			Date cprPlaStart  nullable databaseColumn="cpr_pla_start" 
+			Date cprPlaEnd  nullable databaseColumn="cpr_pla_end" 
+			Date cprEffStart  nullable databaseColumn="cpr_eff_start" 
+			Date cprEffEnd  nullable databaseColumn="cpr_eff_end" 
+			Integer cprNbrPex  nullable databaseColumn="cpr_nbr_pex" 
+			
+				- @ParExercice cprPexId  databaseColumn="cpr_pex_id"  /*<-> idPexCprId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @PlaCreditOp cprCopId  databaseColumn="cpr_cop_id"  <-> idCopCprId nullable fetch="lazy" cascade="refresh"  							
+			
+				- @MhaiMosque cprMosId  databaseColumn="cpr_mos_id"  /*<-> idMosCprId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @PlaClassPrestation cprPrcId  databaseColumn="cpr_prc_id"  /*<-> idPrcCprId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @PlaTypePrestation cprPrtId  databaseColumn="cpr_prt_id"  /*<-> idPrtCprId*/ nullable fetch="lazy" cascade="refresh"  							
+				
+				- @ParAgentExe cprAexId  databaseColumn="cpr_aex_id"  /*<-> idAexCprId*/ nullable fetch="lazy" cascade="refresh"
+				
+			- List<@PlaCprHasPex> idCprChpId <-> chpCprId fetch="lazy" 
+			
+			Repository PlaCreditPrsRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@PlaCreditPrs> findAll(PagingParameter pagingParameter);
+				PagedResult<@PlaCreditPrs> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service PlaCreditPrsService {
+			
+			findById => PlaCreditPrsRepository.findById;
+			findAll => PlaCreditPrsRepository.findAll;
+			save => PlaCreditPrsRepository.save;
+			delete => PlaCreditPrsRepository.delete;
+			PagedResult<@PlaCreditPrs> search(@PlaCreditPrsDTO aua);
+			PagedResult<@PlaCreditPrs> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject PlaCreditPrsDTO {
+			hint="for=search,entity=PlaCreditPrs"
+			String cprCode hint="" 
+			String cprName hint=""
+			String cprPrcId1 hint="ref=cprPrcId,view=ComboBox"
+			String cprPrtId1 hint="ref=cprPrtId,view=ComboBox" 
+			//String cprPexId1 hint="ref=cprPexId,view=ComboBox"
+			String cprCopId1 hint="ref=cprCopId,view=ComboBox"			
+		}
+		
+		DataTransferObject PlaCreditPrsMergeDTO {
+			hint="for=merge,entity=PlaCreditPrs"
+			String cprCode hint="" 
+			String cprName hint="" 
+			String cprDesc hint="" 
+			String cprCreditType hint="" 
+			String cprCredit hint="" 
+			String cprPlaStart hint="" 
+			String cprPlaEnd hint="" 
+			String cprEffStart hint="" 
+			String cprEffEnd hint="" 
+			String cprNbrPex hint="" 
+			String cprPexId hint="type=system,view=ComboBox"
+			String cprCopId hint="type=system,view=ComboBox"
+			String cprMosId hint="type=system,view=ComboBox"
+			String cprPrcId hint="type=system,view=ComboBox"
+			String cprPrtId hint="type=system,view=ComboBox"
+			String cprAexId hint="type=system,view=ComboBox"
+			
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity PlaCreditReg{
+			databaseTable="pla_credit_reg"
+			hint="idSequence=creger_tiderc_alp_X"
+			
+			Long id    databaseColumn="cre_id" 
+			BigDecimal creCreditInv  nullable databaseColumn="cre_credit_inv"  hint="visible=true,toString" 
+			BigDecimal creAllocInv  nullable databaseColumn="cre_alloc_inv"  hint="visible=true,toString" 
+			BigDecimal creCreditFct  nullable databaseColumn="cre_credit_fct"  hint="visible=true" 
+			BigDecimal creAllocFct  nullable databaseColumn="cre_alloc_fct" 
+			String creStatus length="1" nullable databaseColumn="cre_status" 
+			
+				- @PlaCreditPrg creCpgId  databaseColumn="cre_cpg_id"  /*<-> idCpgCreId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @ParRegion creRegId  databaseColumn="cre_reg_id"  /*<-> idRegCreId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @ParExercice crePexId  databaseColumn="cre_pex_id"  /*<-> idPexCreId*/ nullable fetch="lazy" cascade="refresh"
+				
+				- @PlaBudgetType creBdtId  databaseColumn="cre_bdt_id"  /*<-> idBdtCreId*/ nullable fetch="lazy" cascade="refresh"  							
+			  							
+			
+			//- List<@PlaCreditPrjReg> idCreCrpId <-> crpCreId
+			
+			Repository PlaCreditRegRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@PlaCreditReg> findAll(PagingParameter pagingParameter);
+				PagedResult<@PlaCreditReg> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service PlaCreditRegService {
+			
+			findById => PlaCreditRegRepository.findById;
+			findAll => PlaCreditRegRepository.findAll;
+			save => PlaCreditRegRepository.save;
+			delete => PlaCreditRegRepository.delete;
+			PagedResult<@PlaCreditReg> search(@PlaCreditRegDTO aua);
+			PagedResult<@PlaCreditReg> findAll(PagingParameter pagingParameter);
+
+		}
+		
+		DataTransferObject PlaCreditRegDTO {
+			hint="for=search,entity=PlaCreditReg"
+			String creCreditInv hint="" 
+			String creAllocInv hint="" 
+			String creCreditFct hint="" 
+		}
+		
+		DataTransferObject PlaCreditRegMergeDTO {
+			hint="for=merge,entity=PlaCreditReg"
+			String creCreditInv hint="" 
+			String creAllocInv hint="" 
+			String creCreditFct hint="" 
+			String creAllocFct hint="" 
+			String creStatus hint="" 
+			String creCpgId hint="type=system,view=ComboBox"
+			String creRegId hint="type=system,view=ComboBox"
+			String crePexId hint="type=system,view=ComboBox"
+			String creBdtId hint="type=system,view=ComboBox"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+		
+		Entity PlaPlan{
+			databaseTable="pla_plan"
+			hint="idSequence=planalp_alp_X"
+			
+			Long id    databaseColumn="pla_id" 
+			String plaCode length="24" nullable databaseColumn="pla_code"  hint="visible=true,toString" 
+			String plaName length="64" nullable databaseColumn="pla_name"  hint="visible=true,toString" 
+			String plaDesc length="128" nullable databaseColumn="pla_desc"  hint="visible=true" 
+			Date plaDateBegin  nullable databaseColumn="pla_date_begin" 
+			Date plaDateEnd  nullable databaseColumn="pla_date_end" 
+			String plaStatus length="1" nullable databaseColumn="pla_status" 
+			
+			//- List<@PlaCreditOp> idPlaCopId <-> copPlaId
+			//- List<@PlaCreditPrg> idPlaCpgId <-> cpgPlaId
+			//- List<@PlaCreditPrj> idPlaCpjId <-> cpjPlaId
+			//- List<@PlaCreditPrjReg> idPlaCrpId <-> crpPlaId
+			//- List<@PlaPlanHasExe> idPlaPleId <-> plePlaId
+			
+			//MTI manyToMany Plan-Exercice
+			- List<@ParExercice> plaPexId <-> pexPlaId fetch="lazy" hint="visible=true"//cascade="persist,merge"				
+				databaseColumn="pla_pex_id"  orderby="pexStartDate asc, pexCode asc"
+			//End
+			
+			Repository PlaPlanRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@PlaPlan> findAll(PagingParameter pagingParameter);
+				PagedResult<@PlaPlan> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service PlaPlanService {
+			
+			findById => PlaPlanRepository.findById;
+			findAll => PlaPlanRepository.findAll;
+			save  hint="gap" => PlaPlanRepository.save ;
+			delete => PlaPlanRepository.delete;
+			PagedResult<@PlaPlan> search(@PlaPlanDTO aua);
+			PagedResult<@PlaPlan> findAll(PagingParameter pagingParameter);
+
+		}
+		
+		DataTransferObject PlaPlanDTO {
+			hint="for=search,entity=PlaPlan"
+			String plaCode hint="" 
+			String plaName hint="" 
+			String plaDesc hint="" 
+		}
+		
+		DataTransferObject PlaPlanMergeDTO {
+			hint="for=merge,entity=PlaPlan"
+			String plaCode hint="" 
+			String plaName hint="" 
+			String plaDesc hint="" 
+			String plaDateBegin hint="hidden" 
+			String plaDateEnd hint="hidden" 
+			String plaStatus hint="hidden" 
+			//MTI
+			String plaPexId hint="type=system,view=DragDrop"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity PlaPlanHasExe{
+			databaseTable="pla_plan_has_exe"
+			hint="idSequence=pleexe_sah_nalp_alp_X"
+			
+			Long id    databaseColumn="ple_id" 
+			
+				- @PlaPlan plePlaId  databaseColumn="ple_pla_id"  /*<-> idPlaPleId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+				- @ParExercice plePexId  databaseColumn="ple_pex_id"  /*<-> idPexPleId*/ nullable fetch="lazy" cascade="refresh"  							
+			
+			
+			Repository PlaPlanHasExeRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@PlaPlanHasExe> findAll(PagingParameter pagingParameter);
+				PagedResult<@PlaPlanHasExe> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service PlaPlanHasExeService {
+			
+			findById => PlaPlanHasExeRepository.findById;
+			findAll => PlaPlanHasExeRepository.findAll;
+			save => PlaPlanHasExeRepository.save;
+			delete => PlaPlanHasExeRepository.delete;
+			PagedResult<@PlaPlanHasExe> search(@PlaPlanHasExeDTO aua);
+			PagedResult<@PlaPlanHasExe> findAll(PagingParameter pagingParameter);
+
+		}
+		
+		DataTransferObject PlaPlanHasExeDTO {
+			hint="for=search,entity=PlaPlanHasExe"
+		}
+		
+		DataTransferObject PlaPlanHasExeMergeDTO {
+			hint="for=merge,entity=PlaPlanHasExe"
+			String plePlaId hint="type=system,view=ComboBox"
+			String plePexId hint="type=system,view=ComboBox"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity PlaProgram{
+			databaseTable="pla_program"
+			hint="idSequence=prgmargorp_alp_X"
+			
+			Long id    databaseColumn="prg_id" 
+			String prgCode length="24" nullable databaseColumn="prg_code"  hint="unique,visible=true,toString" 
+			String prgName length="64" nullable databaseColumn="prg_name"  hint="visible=true,toString" 
+			String prgDesc length="128" nullable databaseColumn="prg_desc"  hint="visible=false" 
+			String prgStatus length="1" nullable databaseColumn="prg_status" 
+			
+			//- List<@PlaCreditPrg> idPrgCpgId <-> cpgPrgId
+			- List<@PlaProject> idPrgPrjId <-> prjPrgId cascade="persist,merge,refresh"
+			
+			Repository PlaProgramRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@PlaProgram> findAll(PagingParameter pagingParameter);
+				PagedResult<@PlaProgram> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service PlaProgramService {
+			
+			findById => PlaProgramRepository.findById;
+			findAll => PlaProgramRepository.findAll;
+			save => PlaProgramRepository.save;
+			delete => PlaProgramRepository.delete;
+			PagedResult<@PlaProgram> search(@PlaProgramDTO aua);
+			PagedResult<@PlaProgram> findAll(PagingParameter pagingParameter);
+
+			
+			List<@PlaProgram> findByPrgCode(String prgCode) hint="gen,order=asc,prop=id,nullable";
+			List<@PlaProgram> findByPrgName(String prgName) hint="gen,order=asc,prop=id,nullable";
+			List<@PlaProgram> findByPrgDesc(String prgDesc) hint="gen,order=asc,prop=id,nullable";
+			List<@PlaProgram> findByPrgStatus(String prgStatus) hint="gen,order=asc,prop=id,nullable";
+		
+		}
+		
+		DataTransferObject PlaProgramDTO {
+			hint="for=search,entity=PlaProgram"
+			String prgCode hint="" 
+			String prgName hint="" 
+			String prgDesc hint="" 
+		}
+		
+		DataTransferObject PlaProgramMergeDTO {
+			hint="for=merge,entity=PlaProgram"
+			String prgCode hint="" 
+			String prgName hint="" 
+			String prgDesc hint="" 
+			String prgStatus hint="hidden" 
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity PlaProject {
+			databaseTable="pla_project"
+			hint="idSequence=prjtcejorp_alp_X"
+			
+			Long id    databaseColumn="prj_id" 
+			String prjCode length="24" nullable databaseColumn="prj_code"  hint="visible=true,toString" 
+			String prjName length="128" nullable databaseColumn="prj_name"  hint="visible=true,toString" 
+			String prjDesc length="128" nullable databaseColumn="prj_desc"  hint="visible=false" 
+			String prjStatus length="1" nullable databaseColumn="prj_status" 
+			
+				- @PlaProgram prjPrgId <-> idPrgPrjId databaseColumn="prj_prg_id" nullable fetch="lazy" cascade="refresh"  hint="visible=true,"							
+			
+				- @PlaProject prjPrjId  databaseColumn="prj_prj_id"  <-> prjPrjsId nullable fetch="lazy" cascade="refresh"  	
+				
+				
+			//- List<@PlaCreditPrj> idPrjCpjId <-> cpjPrjId
+			//- List<@PlaCreditPrjReg> idPrjCrpId <-> crpPrjId
+			- List<@PlaProject> prjPrjsId <-> prjPrjId cascade="persist,merge,refresh"
+			
+			Repository PlaProjectRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@PlaProject> findAll(PagingParameter pagingParameter);
+				PagedResult<@PlaProject> findByCondition(PagingParameter pagingParameter);
+				
+				//List<@PlaProject> findMainPrjByPrjPrgId(Long id) condition="prjPrgId = :id and prjPrjId is null";
+				//List<@PlaProject> findByPrjPrgId(Long id) condition="prjPrgId = :id";
+				//List<@PlaProject> findByPrjPrjId(Long id) condition="prjPrjId = :id";
+			}
+			
+		}
+		
+		Service PlaProjectService {
+			
+			findById => PlaProjectRepository.findById;
+			findAll => PlaProjectRepository.findAll;
+			save => PlaProjectRepository.save;
+			delete => PlaProjectRepository.delete;
+			PagedResult<@PlaProject> search(@PlaProjectDTO aua);
+			PagedResult<@PlaProject> findAll(PagingParameter pagingParameter);
+			
+			List<@PlaProject> findByPrjCode(String prjCode) hint="gen,order=asc,prop=id,nullable";
+			List<@PlaProject> findByPrjName(String prjName) hint="gen,order=asc,prop=id,nullable";
+			List<@PlaProject> findByPrjDesc(String prjDesc) hint="gen,order=asc,prop=id,nullable";
+			List<@PlaProject> findByPrjStatus(String prjStatus) hint="gen,order=asc,prop=id,nullable";
+			
+			List<@PlaProject> findMainPrjByPrjPrgId(Long id) hint="gen,order=asc,prop=id,conditions=[prjPrgId.id = $id & prjPrjId #Null ],nullable";
+			List<@PlaProject> findByPrjPrgId(Long id) hint="gen,order=asc,prop=id,conditions=prjPrgId.id&$id,nullable";
+			List<@PlaProject> findByPrjPrjId(Long id) hint="gen,order=asc,prop=id,conditions=prjPrjId.id&$id,nullable";
+		}
+		
+		DataTransferObject PlaProjectDTO {
+			hint="for=search,entity=PlaProject"
+			String prjCode hint="" 
+			String prjName hint="" 
+			String prjDesc hint="" 
+		}
+		
+		DataTransferObject PlaProjectMergeDTO {
+			hint="for=merge,entity=PlaProject"
+			
+			String prjPrgId hint="type=system,view=ComboBox,endLine,orderBy=prgCode&asc"
+			String prjPrjId hint="type=system,view=ComboBox,endLine"
+			
+			String prjCode hint="" 
+			String prjName hint="" 
+			String prjDesc hint="" 
+			String prjStatus hint="hidden" 
+			
+			String prjPrjsId hint="type=system,view=InModal,tab=subprojects_list"
+		}
+		
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity PlaRecette{
+			databaseTable="pla_recette"
+			hint="idSequence=rctettecer_alp_X"
+			
+			Long id    databaseColumn="rct_id" 
+			String rctNum length="32" nullable databaseColumn="rct_num"  hint="visible=true,toString"
+			String rctRef length="32" nullable databaseColumn="rct_ref"  hint="visible=true,toString" 
+			BigDecimal rctCreditInv  nullable databaseColumn="rct_credit_inv"  hint="visible=true,toString" 
+			BigDecimal rctCreditFct  nullable databaseColumn="rct_credit_fct"  hint="visible=true,toString" 
+			Date rctDate  nullable databaseColumn="rct_date"
+			String rctObservation length="256" nullable databaseColumn="rct_observation"
+			
+				- @PlaSrcFinance rctSrfId  databaseColumn="rct_srf_id"  /*<-> idSrfRctId*/  fetch="lazy" cascade="refresh"  							
+			
+				- @PlaBudgetType rctBdtId  databaseColumn="rct_bdt_id"  /*<-> idBdtRctId*/  fetch="lazy" cascade="refresh"  							
+			
+				- @ParExercice rctPexId  databaseColumn="rct_pex_id"  /*<-> idPexRctId*/  fetch="lazy" cascade="refresh"  							
+			
+			
+			Repository PlaRecetteRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@PlaRecette> findAll(PagingParameter pagingParameter);
+				PagedResult<@PlaRecette> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service PlaRecetteService {
+			
+			findById => PlaRecetteRepository.findById;
+			findAll => PlaRecetteRepository.findAll;
+			save => PlaRecetteRepository.save;
+			delete => PlaRecetteRepository.delete;
+			PagedResult<@PlaRecette> search(@PlaRecetteDTO aua);
+			PagedResult<@PlaRecette> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject PlaRecetteDTO {
+			hint="for=search,entity=PlaRecette"
+			String rctNum hint="" 
+			String rctCreditInv hint="" 
+			String rctCreditFct hint="" 
+		}
+		
+		DataTransferObject PlaRecetteMergeDTO {
+			hint="for=merge,entity=PlaRecette"
+			String rctNum hint=""
+			String rctRef hint=""
+			String rctCreditInv hint="" 
+			String rctCreditFct hint="" 
+			String rctDate hint=""
+			String rctObservation hint="" 
+			String rctSrfId hint="type=system,view=ComboBox,view=Search"
+			String rctBdtId hint="type=system,view=ComboBox,view=Search"
+			String rctPexId hint="type=system,view=ComboBox,view=Search"
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity PlaSrcFinance{
+			databaseTable="pla_src_finance"
+			hint="idSequence=srfecnanif_crs_alp_X"
+			
+			Long id    databaseColumn="srf_id" 
+			String srfCode length="24" nullable databaseColumn="srf_code"  hint="visible=true,toString" 
+			String srfName length="64" nullable databaseColumn="srf_name"  hint="visible=true,toString" 
+			String srfDesc length="128" nullable databaseColumn="srf_desc"  hint="visible=true,toString" 
+			
+			//- List<@PlaRecette> idSrfRctId <-> rctSrfId
+			
+			Repository PlaSrcFinanceRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@PlaSrcFinance> findAll(PagingParameter pagingParameter);
+				PagedResult<@PlaSrcFinance> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service PlaSrcFinanceService {
+			
+			findById => PlaSrcFinanceRepository.findById;
+			findAll => PlaSrcFinanceRepository.findAll;
+			save => PlaSrcFinanceRepository.save;
+			delete => PlaSrcFinanceRepository.delete;
+			PagedResult<@PlaSrcFinance> search(@PlaSrcFinanceDTO aua);
+			PagedResult<@PlaSrcFinance> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject PlaSrcFinanceDTO {
+			hint="for=search,entity=PlaSrcFinance"
+			String srfCode hint="" 
+			String srfName hint="" 
+			String srfDesc hint="" 
+		}
+		
+		DataTransferObject PlaSrcFinanceMergeDTO {
+			hint="for=merge,entity=PlaSrcFinance"
+			String srfCode hint="" 
+			String srfName hint="" 
+			String srfDesc hint="" 
+		}
+		
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		
+		Entity PlaTypeOperation{
+			databaseTable="pla_type_operation"
+			hint="idSequence=topnoitarepo_epyt_alp_X"
+			
+			Long id    databaseColumn="top_id" 
+			String topCode length="24" nullable databaseColumn="top_code"  hint="visible=true,toString" 
+			String topName length="64" nullable databaseColumn="top_name"  hint="visible=true,toString" 
+			String topDesc length="128" nullable databaseColumn="top_desc"  hint="visible=true,toString" 
+			
+			//- List<@PlaCreditOp> idTopCopId <-> copTopId
+			
+			Repository PlaTypeOperationRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@PlaTypeOperation> findAll(PagingParameter pagingParameter);
+				PagedResult<@PlaTypeOperation> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service PlaTypeOperationService {
+			
+			findById => PlaTypeOperationRepository.findById;
+			findAll => PlaTypeOperationRepository.findAll;
+			save => PlaTypeOperationRepository.save;
+			delete => PlaTypeOperationRepository.delete;
+			PagedResult<@PlaTypeOperation> search(@PlaTypeOperationDTO aua);
+			PagedResult<@PlaTypeOperation> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject PlaTypeOperationDTO {
+			hint="for=search,entity=PlaTypeOperation"
+			String topCode hint="" 
+			String topName hint="" 
+			String topDesc hint="" 
+		}
+		
+		DataTransferObject PlaTypeOperationMergeDTO {
+			hint="for=merge,entity=PlaTypeOperation"
+			String topCode hint="" 
+			String topName hint="" 
+			String topDesc hint="" 
+		}
+		
+		/****************************************************************************************************************************************************** */	
+		/****************************************************************************************************************************************************** */
+	
+		Entity PlaTypePrestation{
+			databaseTable="pla_type_prestation"
+			hint="idSequence=prtnoitatserp_epyt_alp_X"
+			
+			Long id    databaseColumn="prt_id" 
+			String prtCode length="24" nullable databaseColumn="prt_code"  hint="visible=true,toString" 
+			String prtName length="64" nullable databaseColumn="prt_name"  hint="visible=true,toString" 
+			String prtDesc length="128" nullable databaseColumn="prt_desc"  hint="visible=true,toString" 
+			
+				- @PlaClassPrestation prtPrcId  databaseColumn="prt_prc_id"  <-> idPrcPrtId nullable fetch="lazy" cascade="refresh"  							
+			
+			//- List<@PlaCreditPrs> idPrtCprId <-> cprPrtId
+			
+			Repository PlaTypePrestationRepository {
+				findById;
+				save;
+				delete;
+				findAll;
+				findByCondition;
+				PagedResult<@PlaTypePrestation> findAll(PagingParameter pagingParameter);
+				PagedResult<@PlaTypePrestation> findByCondition(PagingParameter pagingParameter);
+			}
+			
+		}
+		
+		Service PlaTypePrestationService {
+			
+			findById => PlaTypePrestationRepository.findById;
+			findAll => PlaTypePrestationRepository.findAll;
+			save => PlaTypePrestationRepository.save;
+			delete => PlaTypePrestationRepository.delete;
+			PagedResult<@PlaTypePrestation> search(@PlaTypePrestationDTO aua);
+			PagedResult<@PlaTypePrestation> findAll(PagingParameter pagingParameter);
+			
+		}
+		
+		DataTransferObject PlaTypePrestationDTO {
+			hint="for=search,entity=PlaTypePrestation"
+			String prtCode hint="" 
+			String prtName hint="" 
+			String prtDesc hint="" 
+		}
+		
+		DataTransferObject PlaTypePrestationMergeDTO {
+			hint="for=merge,entity=PlaTypePrestation"
+			String prtPrcId hint="type=system,view=ComboBox,endLine"
+			String prtCode hint="" 
+			String prtName hint="" 
+			String prtDesc hint="" 
+		}
+		
+	}
+}

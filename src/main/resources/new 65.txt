@@ -1,0 +1,57 @@
+delete from bud_mpr_has_chp where created_date between '2019-10-26' and '2019-10-31';
+delete from bud_morasse_pres where created_date between '2019-10-26' and '2019-10-31';
+delete from bud_morasse_op where created_date between '2019-10-26' and '2019-10-31';
+
+update cpt_depense set cdp_cp=0 where last_updated between '2019-10-26' and '2019-10-31';
+update ach_achat set ach_mpr_id=null where last_updated between '2019-10-26' and '2019-10-31';
+
+update bud_morasse_det set mod_credit_cp=0,mod_credit_ce=0,mod_cp_pla=0,mod_cp_bud=0 where last_updated between '2019-10-26' and '2019-10-31';
+
+delete from cpt_depense where created_date between '2019-10-26' and '2019-10-31';
+
+
+delete from bud_ligne where (lin_pex_id>=1 and lin_pex_id<=18) or (lin_pex_id>=94 and lin_pex_id<=99) or lin_pex_id=2000;
+delete from bud_paragraphe where (pph_pex_id>=1 and pph_pex_id<=18) or (pph_pex_id>=94 and pph_pex_id<=99) or pph_pex_id=2000;
+delete from bud_region where (reg_pex_id>=1 and reg_pex_id<=18) or (reg_pex_id>=94 and reg_pex_id<=99) or reg_pex_id=2000;
+delete from bud_article where (art_pex_id>=1 and art_pex_id<=18) or (art_pex_id>=94 and art_pex_id<=99) or art_pex_id=2000;
+delete from bud_region where reg_art_id in (select art_id from bud_article where (art_pex_id>=1 and art_pex_id<=18) or (art_pex_id>=94 and art_pex_id<=99) or art_pex_id=2000);
+delete from bud_morasse_det where mod_mod_id is not null and mod_mor_id in (select mor_id from bud_morasse where (mor_pex_id>=1 and mor_pex_id<=18) or (mor_pex_id>=94 and mor_pex_id<=99) or mor_pex_id=2000);
+delete from bud_morasse_det where mod_mor_id in (select mor_id from bud_morasse where (mor_pex_id>=1 and mor_pex_id<=18) or (mor_pex_id>=94 and mor_pex_id<=99) or mor_pex_id=2000);
+delete from bud_morasse_det where mod_mod_id in (select mod_id from bud_morasse_det where mod_mor_id in (select mor_id from bud_morasse where (mor_pex_id>=1 and mor_pex_id<=18) or (mor_pex_id>=94 and mor_pex_id<=99) or mor_pex_id=2000)); 
+
+select distinct mod_mor_id from bud_morasse_det where mod_mod_id=71068;
+
+
+
+delete from bud_mpr_has_chp  where mhc_mpr_id in (select mpr_id from bud_morasse_pres where mpr_mop_id in (select mop_id from bud_morasse_op where mop_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000)));
+delete from bud_morasse_pres where mpr_mop_id in (select mop_id from bud_morasse_op where mop_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000));
+delete from bud_morasse_op where mop_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000);
+delete from pla_cpr_has_pex where chp_cpr_id in (select cpr_id from pla_credit_prs where cpr_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000));
+delete from pla_credit_prs where cpr_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000);
+delete from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000;
+delete from pla_cop_has_mos where chm_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000);
+
+delete from tec_attachement where tat_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_cpr_id in (select cpr_id from pla_credit_prs where cpr_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000))));
+delete from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_cpr_id in (select cpr_id from pla_credit_prs where cpr_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000)));
+delete from ach_achat where ach_cpr_id in (select cpr_id from pla_credit_prs where cpr_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000));
+
+delete from tec_attachement where tat_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000)));
+delete from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000));
+delete from ach_achat where ach_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000);
+
+delete from ach_achat_exel where aae_att_id in (select tat_id from tec_attachement where tat_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_cpr_id in (select cpr_id from pla_credit_prs where cpr_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000)))));
+delete from tec_decision where ted_cdp_id in (select tat_id from tec_attachement where tat_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_cpr_id in (select cpr_id from pla_credit_prs where cpr_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000)))));
+delete from tec_state where tes_cdp_id in (select tat_id from tec_attachement where tat_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_cpr_id in (select cpr_id from pla_credit_prs where cpr_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000)))));
+
+delete from tec_nantissement where tna_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_cpr_id in (select cpr_id from pla_credit_prs where cpr_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000))));
+delete from tec_pv where tpv_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_cpr_id in (select cpr_id from pla_credit_prs where cpr_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000))));
+delete from tec_etape where tet_etp_id in (select tpv_id from tec_pv where tpv_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_cpr_id in (select cpr_id from pla_credit_prs where cpr_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000)))));
+
+delete from ach_soumission where aso_ach_id in (select ach_id from ach_achat where ach_cpr_id in (select cpr_id from pla_credit_prs where cpr_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000)));
+delete from ach_achat_lot where alo_ach_id in (select ach_id from ach_achat where ach_cpr_id in (select cpr_id from pla_credit_prs where cpr_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000)));
+delete from ach_achat_exel where aae_alo_id in (select alo_id from ach_achat_lot where alo_ach_id in (select ach_id from ach_achat where ach_cpr_id in (select cpr_id from pla_credit_prs where cpr_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000))));
+
+
+
+delete from tec_decision where ted_cdp_id in (select tat_id from tec_attachement where tat_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000))));
+delete from tec_state where tes_cdp_id in (select tat_id from tec_attachement where tat_cdp_id in (select cdp_id from cpt_depense where cdp_ach_id in (select ach_id from ach_achat where ach_cop_id in (select cop_id from pla_credit_op where (cop_pex_id>=1 and cop_pex_id<=18) or (cop_pex_id>=94 and cop_pex_id<=99) or cop_pex_id=2000))));
